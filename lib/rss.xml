@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[ComputerScience]]></title><description><![CDATA[Obsidian digital garden]]></description><link>http://github.com/dylang/node-rss</link><image><url>lib\media\favicon.png</url><title>ComputerScience</title><link></link></image><generator>Webpage HTML Export plugin for Obsidian</generator><lastBuildDate>Sun, 15 Sep 2024 15:32:15 GMT</lastBuildDate><atom:link href="lib\rss.xml" rel="self" type="application/rss+xml"/><pubDate>Sun, 15 Sep 2024 15:32:14 GMT</pubDate><ttl>60</ttl><dc:creator></dc:creator><item><title><![CDATA[文件结构]]></title><description><![CDATA[ 
+ <br><img alt="cover_tea.png" src="lib\media\cover_tea.png" style="width: 675px; max-width: 100%;"><br><br>Obsidian采取库的数据存储结构，不同的内容可以存储在不同的库中，不同的库的设置、插件也完全独立，所有文件都以本地存储的，这是Obsidian领先于其他笔记软件的优点之一。<br>创建库之后会自动生成.obsidian文件夹，用于存放插件和数据库的配置文件。其他空间都留给用户自己配置。<br><br>主要设定新建文档保存的位置和插入附件保存的位置。<br><br>Obsidian本体就提供了具有丰富功能的插件，部分插件默认关闭，需要自行打开。<br><br>双链是Obsidian的核心内容，支持各种文件形式之间的互相链接，比如在文档与附件之间、文档与文档之间，尤其是文档之间的互连。<br>
+<br>全文链接
+<br>[[文档名称|链接显示名称]]
+复制<br>
+<br>全文链接并显示原文
+<br>![[文档名称|链接显示名称]]
+复制<br>
+<br>段落链接
+<br>[[文档名称#段落名称|链接显示名称]]
+复制<br>
+<br>指定链接
+<br>[[文档名称^指定编号|链接显示名称]]
+复制<br><br>可以为文档添加不同的标签以进行多维分类，建议添加在文档末尾。<br>文档&lt;空格&gt;#tag
+复制<br><br>可以用---将文档分为不同的部分，然后在工作区右上角的菜单选择放映。<br><br>可以快速以今天的日期创建一篇日记。<br><br>可以专门写一个文档用作模板，后续创建新文档可以套用，这对于日记而言尤其有用。<br><br>可以根据需求下载和使用不同的主题。<br><br><br>Recent Files
+添加一个按钮显示最近文件，好像移动端没有。
+<br>Quick Explorer
+快速访问文件列表，一个很小的功能，移动端似乎不适用。
+<br>Image Toolkit
+允许Preview模式下点击查看大图。
+<br>Mousewheel Image Zoom
+允许通过Alt+鼠标滚轮快速调节图片大小。
+<br><br> Suite
+提供更加丰富的指令补全，大大提高公式的输入速度。
+<br>-like Theorem &amp; Equation Referencer
+提供更多Callout定理环境、证明环境，并提供数学环境和公式的引用、自动编号等。
+<br>Math Links
+-like Theorem &amp; Equation Referencer的前置插件。
+<br>Extended MathJax
+提供类似.sty文件的设定方式，可以提供一些自定义的指令，但移动端不适用。
+<br>Desmos
+提供Desmos作图，在代码环境用desmos-graph索引。
+<br>TikZJax
+提供Tikz作图,在代码环境用tikz索引。
+<br>Obsidian Functionplot
+提供一种函数绘制方法。
+<br><br>Mind Map
+为文档提供思维导图的渲染方式。
+<br>Excalidraw
+提供一种画流程图、思维导图的简便方案，并支持双链。
+<br><br>Calendar
+提供日历，与日记绑定。
+<br>Thino
+提供便捷笔记和时间记录。
+<br><br>Custom Font Loader
+强制字体加载，适配移动端。
+<br>Minimal Theme Settings
+Minimal主题的配套插件。
+<br><br>Local GPT
+结合Ollama提供本地的AI写作辅助。
+<br><br><br>目前试下来最好用、最快的云同步方案，初始iCloud提供5GB的云储存空间，对于文档而言完全足够，而且速度非常便捷，也支持插件和各种配置文件的瞬间同步，付费方案50GB的云盘空间￥6/月也完全能接受，唯一的缺陷是不支持Android设备。另外其稳定性和安全性还有待测试。<br><br>
+<br>One Drive<br>
+One Drive也是一个相对不错的方案，其支持各种平台的互连同步，但在目前使用的地区速度较慢，并且Remotely Save插件手动同步总让人感觉容易把数据弄混，配置和插件的同步较iCloud而言也不够便捷，所以不算太放心。但三端同步真的很诱人。
+<br>坚果云<br>
+相对于One Drive而言，坚果云的同步速度更快，但其免费的方案只有1GB/月的上传流量，且付费方案较为昂贵，对于一些有图片上传又不愿意建立图床的人而言并不友好。
+<br><br>
+目前是采用iCloud来同步学术类型的数据库，用One Drive同步日常记录类型的数据库。
+<br><br>
+<br>插入行间数学公式dm
+<br>插入行内数学公式mk
+<br>插入定理环境Alt+T
+<br>插入证明环境Alt+P
+<br>命令行Ctrl+P
+<br>调用本地AIAlt+G
+<br>数据库搜索Ctrl+Alt+F
+]]></description><link>main\obsidian\obsidian基础.html</link><guid isPermaLink="false">Main/Obsidian/Obsidian基础.md</guid><pubDate>Sun, 15 Sep 2024 14:52:59 GMT</pubDate><enclosure url="lib\media\cover_tea.png" length="0" type="image/png"/><content:encoded>&lt;figure&gt;&lt;img src=&quot;lib\media\cover_tea.png&quot;&gt;&lt;/figure&gt;</content:encoded></item></channel></rss>
