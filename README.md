@@ -1,2 +1,2 @@
-# AlbusGuo.github.io
-[[main/]]
+# AlbusGuo.github.io  
+[](main/obsidian/obsidian基础.html)  
