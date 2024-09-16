@@ -1,3 +1,3 @@
-Albus's Personal Website - Demo
+Albus's Personal Website - Demo  
 
-[你好]()    
+[Cilck here to visit my notes.](Web/computer-science/obsidian/obsidian.html)      
