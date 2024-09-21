@@ -1,0 +1,1377 @@
+{
+  "vaultName": "Mathematics",
+  "lastExport": 1726894174310,
+  "pluginVersion": "1.8.01",
+  "validBodyClasses": "publish css-settings-manager show-ribbon links-int-on theme-light",
+  "useCustomHeadContent": false,
+  "useCustomFavicon": false,
+  "files": [
+    "Diary/Day/2024-09-17 星期二.md",
+    "Diary/Day/2024-09-18 星期三.md",
+    "Diary/Day/2024-09-19 星期四.md",
+    "Document/Dictionary/Definition/集合.md",
+    "Document/Dictionary/Theorem/Test Theorem.md",
+    "Document/Main/抽象代数.md",
+    "Document/Main/代数学.md",
+    "Document/Main/集合论基础.md",
+    "Document/Main/几何与拓扑.md",
+    "Document/Main/矩阵计算.md",
+    "Document/Main/人工智能的数学方法.md",
+    "Document/Main/实分析与复分析.md",
+    "Document/Main/数学分析.md",
+    "Document/Main/拓扑学基础.md",
+    "Document/Main/线性代数.md",
+    "Document/Main/Obsidian个人教程.md",
+    "Document/Other/新时代中国特色社会主义理论与实践.md",
+    "Document/Other/学术英语.md",
+    "Document/Tool/test.md",
+    "File/Banner/mount-fuji-g707b221b0_1920.jpg",
+    "File/Banner/mountain.png",
+    "File/Banner/Obsidian.png",
+    "File/Cover/fli.png",
+    "File/Cover/jctpxjy.png",
+    "File/Cover/nhhu.png",
+    "File/Cover/rphuang.png",
+    "File/Cover/yfxue.png",
+    "File/Excalidraw/人工智能的数学方法 240916 16.30.35.excalidraw.md",
+    "File/Excalidraw/人工智能的数学方法 240916 16.42.21.excalidraw.md",
+    "File/Excalidraw/人工智能的数学方法 240917 00.17.55.excalidraw.md",
+    "File/Figure/人工智能的数学方法 240916 16.30.35.excalidraw.png",
+    "File/Figure/人工智能的数学方法 240916 16.42.21.excalidraw.png",
+    "File/Figure/人工智能的数学方法 240917 00.17.55.excalidraw.png",
+    "File/Figure/Pasted Image 20240916164356_374.png",
+    "File/Figure/Pasted image 20240916214359.png",
+    "File/Figure/Pasted image 20240916222440.png",
+    "File/Figure/Pasted image 20240917181852.png",
+    "File/Figure/Pasted image 20240918131420.png",
+    "File/Figure/Pasted image 20240918132636.png",
+    "File/Image/cover_tea.png",
+    "File/Image/head.JPG",
+    "File/Image/IMG_20240919_110829_edit_558038444713807.jpeg",
+    "File/Image/IMG_20240919_111115_edit_558024093441413.jpeg",
+    "File/Image/IMG_20240919_111201_edit_557982783792982.jpeg",
+    "File/Mathematician/陈省身.png",
+    "File/Mathematician/Abel.png",
+    "File/Mathematician/Cantor.png",
+    "File/Mathematician/Cauchy.png",
+    "File/Mathematician/Descartes.png",
+    "File/Mathematician/Dirichlet.png",
+    "File/Mathematician/Euler.png",
+    "File/Mathematician/Fermat.png",
+    "File/Mathematician/Galileo.png",
+    "File/Mathematician/Galois.png",
+    "File/Mathematician/Gauss.png",
+    "File/Mathematician/Godel.png",
+    "File/Mathematician/Grothendieck.png",
+    "File/Mathematician/Hesse.png",
+    "File/Mathematician/Jacobi.png",
+    "File/Mathematician/Kelly.png",
+    "File/Mathematician/Lagrange.png",
+    "File/Mathematician/Laplace.png",
+    "File/Mathematician/Lebesgue.png",
+    "File/Mathematician/Leibniz.png",
+    "File/Mathematician/Michael.png",
+    "File/Mathematician/Newton.png",
+    "File/Mathematician/Pascal.png",
+    "File/Mathematician/Peano.png",
+    "File/Mathematician/Picard.png",
+    "File/Mathematician/Poincaré.png",
+    "File/Mathematician/Riemann.png",
+    "File/Mathematician/Tao.png",
+    "File/Mathematician/Taylor.png",
+    "File/Mathematician/Weierstrass.png",
+    "File/Mathematician/Zermelo.png",
+    "File/Mathematician/Пафнутий.png",
+    "File/Wallpaper/阿米娅.png",
+    "Index/Dictionary.md",
+    "Index/Main.md",
+    "Index/Other.md",
+    "Index/Tool.md",
+    "Online/Book/代数学(I)讲义.md",
+    "Online/Book/基础拓扑学讲义.md",
+    "Online/Book/几何与拓扑讲义.md",
+    "Online/Book/矩阵计算.md",
+    "Online/Book/实分析与复分析讲义.md",
+    "Online/iFrame/Color.md",
+    "Online/iFrame/Emoji.md",
+    "Online/iFrame/gLibrary.md",
+    "Online/iFrame/LaTeXOnline.md",
+    "Online/iFrame/MaiPDF.md",
+    "Online/iFrame/SimpleTeX.md",
+    "Template/Tikz/点线图.md",
+    "Template/Tikz/电路图.md",
+    "Template/Tikz/二元显函数图像.md",
+    "Template/Tikz/关系图.md",
+    "Template/Tikz/化学物质结构图.md",
+    "Template/Tikz/一元显函数图像.md",
+    "Template/Diary-Day.md",
+    "Template/Diary-Week.md",
+    "Template/Tags.md",
+    "Home.md",
+    "lib/media/pasted-image-20240917181852.png",
+    "lib/media/人工智能的数学方法-240916-16.30.35.excalidraw.png",
+    "lib/media/人工智能的数学方法-240916-16.42.21.excalidraw.png",
+    "lib/media/pasted-image-20240916214359.png",
+    "lib/media/pasted-image-20240916222440.png",
+    "lib/media/人工智能的数学方法-240917-00.17.55.excalidraw.png",
+    "lib/media/pasted-image-20240918131420.png",
+    "lib/media/pasted-image-20240918132636.png",
+    "lib/media/img_20240919_111201_edit_557982783792982.jpeg",
+    "lib/media/img_20240919_110829_edit_558038444713807.jpeg",
+    "lib/media/img_20240919_111115_edit_558024093441413.jpeg",
+    "lib/media/obsidian.png",
+    "lib/media/cantor.png",
+    "lib/media/laplace.png",
+    "lib/media/kelly.png",
+    "lib/media/cauchy.png",
+    "lib/media/galois.png",
+    "lib/media/lebesgue.png",
+    "lib/media/michael.png",
+    "lib/media/euler.png",
+    "lib/media/陈省身.png",
+    "lib/media/grothendieck.png",
+    "lib/scripts/graph-wasm.wasm",
+    "lib/fonts/94f2f163d4b698242fef.otf",
+    "lib/fonts/72505e6a122c6acd5471.woff2",
+    "lib/fonts/2d5198822ab091ce4305.woff2",
+    "lib/fonts/c8ba52b05a9ef10f4758.woff2",
+    "lib/fonts/cb10ffd7684cd9836a05.woff2",
+    "lib/fonts/b5f0f109bc88052d4000.woff2",
+    "lib/fonts/cbe0ae49c52c920fd563.woff2",
+    "lib/fonts/535a6cf662596b3bd6a6.woff2",
+    "lib/fonts/70cc7ff27245e82ad414.ttf",
+    "lib/fonts/454577c22304619db035.ttf",
+    "lib/fonts/52ac8f3034507f1d9e53.ttf",
+    "lib/fonts/05b618077343fbbd92b7.ttf",
+    "lib/fonts/4bb6ac751d1c5478ff3a.woff2",
+    "lib/media/874d8b8e340f75575caa.svg",
+    "lib/media/3d6c1bdc4d87cde4de67.svg",
+    "lib/fonts/mathjax_zero.woff",
+    "lib/fonts/mathjax_main-regular.woff",
+    "lib/fonts/mathjax_main-bold.woff",
+    "lib/fonts/mathjax_math-italic.woff",
+    "lib/fonts/mathjax_main-italic.woff",
+    "lib/fonts/mathjax_math-bolditalic.woff",
+    "lib/fonts/mathjax_size1-regular.woff",
+    "lib/fonts/mathjax_size2-regular.woff",
+    "lib/fonts/mathjax_size3-regular.woff",
+    "lib/fonts/mathjax_size4-regular.woff",
+    "lib/fonts/mathjax_ams-regular.woff",
+    "lib/fonts/mathjax_calligraphic-regular.woff",
+    "lib/fonts/mathjax_calligraphic-bold.woff",
+    "lib/fonts/mathjax_fraktur-regular.woff",
+    "lib/fonts/mathjax_fraktur-bold.woff",
+    "lib/fonts/mathjax_sansserif-regular.woff",
+    "lib/fonts/mathjax_sansserif-bold.woff",
+    "lib/fonts/mathjax_sansserif-italic.woff",
+    "lib/fonts/mathjax_script-regular.woff",
+    "lib/fonts/mathjax_typewriter-regular.woff",
+    "lib/fonts/mathjax_vector-regular.woff",
+    "lib/fonts/mathjax_vector-bold.woff",
+    "lib/html/file-tree.html",
+    "lib/scripts/webpage.js",
+    "lib/scripts/graph-view.js",
+    "lib/scripts/graph-wasm.js",
+    "lib/scripts/graph-render-worker.js",
+    "lib/scripts/tinycolor.js",
+    "lib/scripts/pixi.js",
+    "lib/scripts/minisearch.js",
+    "lib/media/favicon.png",
+    "lib/scripts/graph-data.js",
+    "lib/styles/obsidian.css",
+    "lib/styles/theme.css",
+    "lib/styles/global-variable-styles.css",
+    "lib/styles/supported-plugins.css",
+    "lib/styles/main-styles.css",
+    "lib/styles/snippets.css"
+  ],
+  "mainDependencies": [
+    "lib/scripts/graph-wasm.wasm",
+    "lib/fonts/94f2f163d4b698242fef.otf",
+    "lib/fonts/72505e6a122c6acd5471.woff2",
+    "lib/fonts/2d5198822ab091ce4305.woff2",
+    "lib/fonts/c8ba52b05a9ef10f4758.woff2",
+    "lib/fonts/cb10ffd7684cd9836a05.woff2",
+    "lib/fonts/b5f0f109bc88052d4000.woff2",
+    "lib/fonts/cbe0ae49c52c920fd563.woff2",
+    "lib/fonts/535a6cf662596b3bd6a6.woff2",
+    "lib/fonts/70cc7ff27245e82ad414.ttf",
+    "lib/fonts/454577c22304619db035.ttf",
+    "lib/fonts/52ac8f3034507f1d9e53.ttf",
+    "lib/fonts/05b618077343fbbd92b7.ttf",
+    "lib/fonts/4bb6ac751d1c5478ff3a.woff2",
+    "lib/media/874d8b8e340f75575caa.svg",
+    "lib/media/3d6c1bdc4d87cde4de67.svg",
+    "lib/fonts/mathjax_zero.woff",
+    "lib/fonts/mathjax_main-regular.woff",
+    "lib/fonts/mathjax_main-bold.woff",
+    "lib/fonts/mathjax_math-italic.woff",
+    "lib/fonts/mathjax_main-italic.woff",
+    "lib/fonts/mathjax_math-bolditalic.woff",
+    "lib/fonts/mathjax_size1-regular.woff",
+    "lib/fonts/mathjax_size2-regular.woff",
+    "lib/fonts/mathjax_size3-regular.woff",
+    "lib/fonts/mathjax_size4-regular.woff",
+    "lib/fonts/mathjax_ams-regular.woff",
+    "lib/fonts/mathjax_calligraphic-regular.woff",
+    "lib/fonts/mathjax_calligraphic-bold.woff",
+    "lib/fonts/mathjax_fraktur-regular.woff",
+    "lib/fonts/mathjax_fraktur-bold.woff",
+    "lib/fonts/mathjax_sansserif-regular.woff",
+    "lib/fonts/mathjax_sansserif-bold.woff",
+    "lib/fonts/mathjax_sansserif-italic.woff",
+    "lib/fonts/mathjax_script-regular.woff",
+    "lib/fonts/mathjax_typewriter-regular.woff",
+    "lib/fonts/mathjax_vector-regular.woff",
+    "lib/fonts/mathjax_vector-bold.woff",
+    "lib/html/file-tree.html",
+    "lib/scripts/webpage.js",
+    "lib/scripts/graph-view.js",
+    "lib/scripts/graph-wasm.js",
+    "lib/scripts/graph-render-worker.js",
+    "lib/scripts/tinycolor.js",
+    "lib/scripts/pixi.js",
+    "lib/scripts/minisearch.js",
+    "lib/media/favicon.png",
+    "lib/scripts/graph-data.js",
+    "lib/styles/obsidian.css",
+    "lib/styles/theme.css",
+    "lib/styles/global-variable-styles.css",
+    "lib/styles/supported-plugins.css",
+    "lib/styles/main-styles.css",
+    "lib/styles/snippets.css"
+  ],
+  "fileInfo": {
+    "Diary/Day/2024-09-17 星期二.md": {
+      "modifiedTime": 1726894174310,
+      "sourceSize": 148,
+      "exportedPath": "diary/day/2024-09-17-星期二.html",
+      "dependencies": []
+    },
+    "Diary/Day/2024-09-18 星期三.md": {
+      "modifiedTime": 1726894174310,
+      "sourceSize": 345,
+      "exportedPath": "diary/day/2024-09-18-星期三.html",
+      "dependencies": []
+    },
+    "Diary/Day/2024-09-19 星期四.md": {
+      "modifiedTime": 1726894174310,
+      "sourceSize": 176,
+      "exportedPath": "diary/day/2024-09-19-星期四.html",
+      "dependencies": []
+    },
+    "Document/Dictionary/Definition/集合.md": {
+      "modifiedTime": 1726894174310,
+      "sourceSize": 289,
+      "exportedPath": "document/dictionary/definition/集合.html",
+      "dependencies": []
+    },
+    "Document/Dictionary/Theorem/Test Theorem.md": {
+      "modifiedTime": 1726894174310,
+      "sourceSize": 5,
+      "exportedPath": "document/dictionary/theorem/test-theorem.html",
+      "dependencies": []
+    },
+    "Document/Main/抽象代数.md": {
+      "modifiedTime": 1726894174310,
+      "sourceSize": 157,
+      "exportedPath": "document/main/抽象代数.html",
+      "dependencies": []
+    },
+    "Document/Main/代数学.md": {
+      "modifiedTime": 1726894174310,
+      "sourceSize": 938,
+      "exportedPath": "document/main/代数学.html",
+      "dependencies": []
+    },
+    "Document/Main/集合论基础.md": {
+      "modifiedTime": 1726894174310,
+      "sourceSize": 17791,
+      "exportedPath": "document/main/集合论基础.html",
+      "dependencies": [
+        "lib/media/pasted-image-20240917181852.png"
+      ]
+    },
+    "Document/Main/几何与拓扑.md": {
+      "modifiedTime": 1726894174310,
+      "sourceSize": 5419,
+      "exportedPath": "document/main/几何与拓扑.html",
+      "dependencies": []
+    },
+    "Document/Main/矩阵计算.md": {
+      "modifiedTime": 1726894174310,
+      "sourceSize": 926,
+      "exportedPath": "document/main/矩阵计算.html",
+      "dependencies": []
+    },
+    "Document/Main/人工智能的数学方法.md": {
+      "modifiedTime": 1726894174310,
+      "sourceSize": 14534,
+      "exportedPath": "document/main/人工智能的数学方法.html",
+      "dependencies": [
+        "lib/media/人工智能的数学方法-240916-16.30.35.excalidraw.png",
+        "lib/media/人工智能的数学方法-240916-16.42.21.excalidraw.png",
+        "lib/media/pasted-image-20240916214359.png",
+        "lib/media/pasted-image-20240916222440.png",
+        "lib/media/人工智能的数学方法-240917-00.17.55.excalidraw.png"
+      ]
+    },
+    "Document/Main/实分析与复分析.md": {
+      "modifiedTime": 1726894174310,
+      "sourceSize": 4083,
+      "exportedPath": "document/main/实分析与复分析.html",
+      "dependencies": []
+    },
+    "Document/Main/数学分析.md": {
+      "modifiedTime": 1726894174310,
+      "sourceSize": 917,
+      "exportedPath": "document/main/数学分析.html",
+      "dependencies": []
+    },
+    "Document/Main/拓扑学基础.md": {
+      "modifiedTime": 1726894174310,
+      "sourceSize": 4817,
+      "exportedPath": "document/main/拓扑学基础.html",
+      "dependencies": [
+        "lib/media/pasted-image-20240918131420.png",
+        "lib/media/pasted-image-20240918132636.png"
+      ]
+    },
+    "Document/Main/线性代数.md": {
+      "modifiedTime": 1726894174310,
+      "sourceSize": 144,
+      "exportedPath": "document/main/线性代数.html",
+      "dependencies": []
+    },
+    "Document/Main/Obsidian个人教程.md": {
+      "modifiedTime": 1726894174310,
+      "sourceSize": 11597,
+      "exportedPath": "document/main/obsidian个人教程.html",
+      "dependencies": []
+    },
+    "Document/Other/新时代中国特色社会主义理论与实践.md": {
+      "modifiedTime": 1726894174310,
+      "sourceSize": 410,
+      "exportedPath": "document/other/新时代中国特色社会主义理论与实践.html",
+      "dependencies": []
+    },
+    "Document/Other/学术英语.md": {
+      "modifiedTime": 1726894174310,
+      "sourceSize": 429,
+      "exportedPath": "document/other/学术英语.html",
+      "dependencies": [
+        "lib/media/img_20240919_111201_edit_557982783792982.jpeg",
+        "lib/media/img_20240919_110829_edit_558038444713807.jpeg",
+        "lib/media/img_20240919_111115_edit_558024093441413.jpeg"
+      ]
+    },
+    "Document/Tool/test.md": {
+      "modifiedTime": 1726894174310,
+      "sourceSize": 32,
+      "exportedPath": "document/tool/test.html",
+      "dependencies": []
+    },
+    "File/Banner/mount-fuji-g707b221b0_1920.jpg": {
+      "modifiedTime": 1726894174310,
+      "sourceSize": 239622,
+      "exportedPath": "file/banner/mount-fuji-g707b221b0_1920.jpg",
+      "dependencies": []
+    },
+    "File/Banner/mountain.png": {
+      "modifiedTime": 1726894174310,
+      "sourceSize": 1635886,
+      "exportedPath": "file/banner/mountain.png",
+      "dependencies": []
+    },
+    "File/Banner/Obsidian.png": {
+      "modifiedTime": 1726894174310,
+      "sourceSize": 120067,
+      "exportedPath": "file/banner/obsidian.png",
+      "dependencies": []
+    },
+    "File/Cover/fli.png": {
+      "modifiedTime": 1726894174310,
+      "sourceSize": 71233,
+      "exportedPath": "file/cover/fli.png",
+      "dependencies": []
+    },
+    "File/Cover/jctpxjy.png": {
+      "modifiedTime": 1726894174310,
+      "sourceSize": 757918,
+      "exportedPath": "file/cover/jctpxjy.png",
+      "dependencies": []
+    },
+    "File/Cover/nhhu.png": {
+      "modifiedTime": 1726894174310,
+      "sourceSize": 70713,
+      "exportedPath": "file/cover/nhhu.png",
+      "dependencies": []
+    },
+    "File/Cover/rphuang.png": {
+      "modifiedTime": 1726894174310,
+      "sourceSize": 90812,
+      "exportedPath": "file/cover/rphuang.png",
+      "dependencies": []
+    },
+    "File/Cover/yfxue.png": {
+      "modifiedTime": 1726894174310,
+      "sourceSize": 73302,
+      "exportedPath": "file/cover/yfxue.png",
+      "dependencies": []
+    },
+    "File/Excalidraw/人工智能的数学方法 240916 16.30.35.excalidraw.md": {
+      "modifiedTime": 1726894174310,
+      "sourceSize": 6917,
+      "exportedPath": "file/excalidraw/人工智能的数学方法-240916-16.30.35.excalidraw.html",
+      "dependencies": []
+    },
+    "File/Excalidraw/人工智能的数学方法 240916 16.42.21.excalidraw.md": {
+      "modifiedTime": 1726894174310,
+      "sourceSize": 7449,
+      "exportedPath": "file/excalidraw/人工智能的数学方法-240916-16.42.21.excalidraw.html",
+      "dependencies": []
+    },
+    "File/Excalidraw/人工智能的数学方法 240917 00.17.55.excalidraw.md": {
+      "modifiedTime": 1726894174310,
+      "sourceSize": 9372,
+      "exportedPath": "file/excalidraw/人工智能的数学方法-240917-00.17.55.excalidraw.html",
+      "dependencies": []
+    },
+    "File/Figure/人工智能的数学方法 240916 16.30.35.excalidraw.png": {
+      "modifiedTime": 1726894174310,
+      "sourceSize": 19075,
+      "exportedPath": "file/figure/人工智能的数学方法-240916-16.30.35.excalidraw.png",
+      "dependencies": []
+    },
+    "File/Figure/人工智能的数学方法 240916 16.42.21.excalidraw.png": {
+      "modifiedTime": 1726894174310,
+      "sourceSize": 66888,
+      "exportedPath": "file/figure/人工智能的数学方法-240916-16.42.21.excalidraw.png",
+      "dependencies": []
+    },
+    "File/Figure/人工智能的数学方法 240917 00.17.55.excalidraw.png": {
+      "modifiedTime": 1726894174310,
+      "sourceSize": 14950,
+      "exportedPath": "file/figure/人工智能的数学方法-240917-00.17.55.excalidraw.png",
+      "dependencies": []
+    },
+    "File/Figure/Pasted Image 20240916164356_374.png": {
+      "modifiedTime": 1726894174310,
+      "sourceSize": 42743,
+      "exportedPath": "file/figure/pasted-image-20240916164356_374.png",
+      "dependencies": []
+    },
+    "File/Figure/Pasted image 20240916214359.png": {
+      "modifiedTime": 1726894174310,
+      "sourceSize": 146380,
+      "exportedPath": "file/figure/pasted-image-20240916214359.png",
+      "dependencies": []
+    },
+    "File/Figure/Pasted image 20240916222440.png": {
+      "modifiedTime": 1726894174310,
+      "sourceSize": 97618,
+      "exportedPath": "file/figure/pasted-image-20240916222440.png",
+      "dependencies": []
+    },
+    "File/Figure/Pasted image 20240917181852.png": {
+      "modifiedTime": 1726894174310,
+      "sourceSize": 57277,
+      "exportedPath": "file/figure/pasted-image-20240917181852.png",
+      "dependencies": []
+    },
+    "File/Figure/Pasted image 20240918131420.png": {
+      "modifiedTime": 1726894174310,
+      "sourceSize": 118949,
+      "exportedPath": "file/figure/pasted-image-20240918131420.png",
+      "dependencies": []
+    },
+    "File/Figure/Pasted image 20240918132636.png": {
+      "modifiedTime": 1726894174310,
+      "sourceSize": 57363,
+      "exportedPath": "file/figure/pasted-image-20240918132636.png",
+      "dependencies": []
+    },
+    "File/Image/cover_tea.png": {
+      "modifiedTime": 1726894174310,
+      "sourceSize": 1541768,
+      "exportedPath": "file/image/cover_tea.png",
+      "dependencies": []
+    },
+    "File/Image/head.JPG": {
+      "modifiedTime": 1726894174310,
+      "sourceSize": 97442,
+      "exportedPath": "file/image/head.jpg",
+      "dependencies": []
+    },
+    "File/Image/IMG_20240919_110829_edit_558038444713807.jpeg": {
+      "modifiedTime": 1726894174310,
+      "sourceSize": 466050,
+      "exportedPath": "file/image/img_20240919_110829_edit_558038444713807.jpeg",
+      "dependencies": []
+    },
+    "File/Image/IMG_20240919_111115_edit_558024093441413.jpeg": {
+      "modifiedTime": 1726894174310,
+      "sourceSize": 347983,
+      "exportedPath": "file/image/img_20240919_111115_edit_558024093441413.jpeg",
+      "dependencies": []
+    },
+    "File/Image/IMG_20240919_111201_edit_557982783792982.jpeg": {
+      "modifiedTime": 1726894174310,
+      "sourceSize": 361974,
+      "exportedPath": "file/image/img_20240919_111201_edit_557982783792982.jpeg",
+      "dependencies": []
+    },
+    "File/Mathematician/陈省身.png": {
+      "modifiedTime": 1726894174310,
+      "sourceSize": 845377,
+      "exportedPath": "file/mathematician/陈省身.png",
+      "dependencies": []
+    },
+    "File/Mathematician/Abel.png": {
+      "modifiedTime": 1726894174310,
+      "sourceSize": 529125,
+      "exportedPath": "file/mathematician/abel.png",
+      "dependencies": []
+    },
+    "File/Mathematician/Cantor.png": {
+      "modifiedTime": 1726894174310,
+      "sourceSize": 1026129,
+      "exportedPath": "file/mathematician/cantor.png",
+      "dependencies": []
+    },
+    "File/Mathematician/Cauchy.png": {
+      "modifiedTime": 1726894174310,
+      "sourceSize": 500970,
+      "exportedPath": "file/mathematician/cauchy.png",
+      "dependencies": []
+    },
+    "File/Mathematician/Descartes.png": {
+      "modifiedTime": 1726894174310,
+      "sourceSize": 1080273,
+      "exportedPath": "file/mathematician/descartes.png",
+      "dependencies": []
+    },
+    "File/Mathematician/Dirichlet.png": {
+      "modifiedTime": 1726894174310,
+      "sourceSize": 1003723,
+      "exportedPath": "file/mathematician/dirichlet.png",
+      "dependencies": []
+    },
+    "File/Mathematician/Euler.png": {
+      "modifiedTime": 1726894174310,
+      "sourceSize": 1263768,
+      "exportedPath": "file/mathematician/euler.png",
+      "dependencies": []
+    },
+    "File/Mathematician/Fermat.png": {
+      "modifiedTime": 1726894174310,
+      "sourceSize": 2287512,
+      "exportedPath": "file/mathematician/fermat.png",
+      "dependencies": []
+    },
+    "File/Mathematician/Galileo.png": {
+      "modifiedTime": 1726894174310,
+      "sourceSize": 1463452,
+      "exportedPath": "file/mathematician/galileo.png",
+      "dependencies": []
+    },
+    "File/Mathematician/Galois.png": {
+      "modifiedTime": 1726894174310,
+      "sourceSize": 863554,
+      "exportedPath": "file/mathematician/galois.png",
+      "dependencies": []
+    },
+    "File/Mathematician/Gauss.png": {
+      "modifiedTime": 1726894174310,
+      "sourceSize": 1025584,
+      "exportedPath": "file/mathematician/gauss.png",
+      "dependencies": []
+    },
+    "File/Mathematician/Godel.png": {
+      "modifiedTime": 1726894174310,
+      "sourceSize": 412102,
+      "exportedPath": "file/mathematician/godel.png",
+      "dependencies": []
+    },
+    "File/Mathematician/Grothendieck.png": {
+      "modifiedTime": 1726894174310,
+      "sourceSize": 651477,
+      "exportedPath": "file/mathematician/grothendieck.png",
+      "dependencies": []
+    },
+    "File/Mathematician/Hesse.png": {
+      "modifiedTime": 1726894174310,
+      "sourceSize": 1310644,
+      "exportedPath": "file/mathematician/hesse.png",
+      "dependencies": []
+    },
+    "File/Mathematician/Jacobi.png": {
+      "modifiedTime": 1726894174310,
+      "sourceSize": 964090,
+      "exportedPath": "file/mathematician/jacobi.png",
+      "dependencies": []
+    },
+    "File/Mathematician/Kelly.png": {
+      "modifiedTime": 1726894174310,
+      "sourceSize": 1010330,
+      "exportedPath": "file/mathematician/kelly.png",
+      "dependencies": []
+    },
+    "File/Mathematician/Lagrange.png": {
+      "modifiedTime": 1726894174310,
+      "sourceSize": 732878,
+      "exportedPath": "file/mathematician/lagrange.png",
+      "dependencies": []
+    },
+    "File/Mathematician/Laplace.png": {
+      "modifiedTime": 1726894174310,
+      "sourceSize": 1715533,
+      "exportedPath": "file/mathematician/laplace.png",
+      "dependencies": []
+    },
+    "File/Mathematician/Lebesgue.png": {
+      "modifiedTime": 1726894174310,
+      "sourceSize": 945971,
+      "exportedPath": "file/mathematician/lebesgue.png",
+      "dependencies": []
+    },
+    "File/Mathematician/Leibniz.png": {
+      "modifiedTime": 1726894174310,
+      "sourceSize": 630207,
+      "exportedPath": "file/mathematician/leibniz.png",
+      "dependencies": []
+    },
+    "File/Mathematician/Michael.png": {
+      "modifiedTime": 1726894174310,
+      "sourceSize": 332725,
+      "exportedPath": "file/mathematician/michael.png",
+      "dependencies": []
+    },
+    "File/Mathematician/Newton.png": {
+      "modifiedTime": 1726894174310,
+      "sourceSize": 1261336,
+      "exportedPath": "file/mathematician/newton.png",
+      "dependencies": []
+    },
+    "File/Mathematician/Pascal.png": {
+      "modifiedTime": 1726894174310,
+      "sourceSize": 1540952,
+      "exportedPath": "file/mathematician/pascal.png",
+      "dependencies": []
+    },
+    "File/Mathematician/Peano.png": {
+      "modifiedTime": 1726894174310,
+      "sourceSize": 608927,
+      "exportedPath": "file/mathematician/peano.png",
+      "dependencies": []
+    },
+    "File/Mathematician/Picard.png": {
+      "modifiedTime": 1726894174310,
+      "sourceSize": 1351119,
+      "exportedPath": "file/mathematician/picard.png",
+      "dependencies": []
+    },
+    "File/Mathematician/Poincaré.png": {
+      "modifiedTime": 1726894174310,
+      "sourceSize": 807883,
+      "exportedPath": "file/mathematician/poincaré.png",
+      "dependencies": []
+    },
+    "File/Mathematician/Riemann.png": {
+      "modifiedTime": 1726894174310,
+      "sourceSize": 668857,
+      "exportedPath": "file/mathematician/riemann.png",
+      "dependencies": []
+    },
+    "File/Mathematician/Tao.png": {
+      "modifiedTime": 1726894174310,
+      "sourceSize": 586982,
+      "exportedPath": "file/mathematician/tao.png",
+      "dependencies": []
+    },
+    "File/Mathematician/Taylor.png": {
+      "modifiedTime": 1726894174310,
+      "sourceSize": 1160911,
+      "exportedPath": "file/mathematician/taylor.png",
+      "dependencies": []
+    },
+    "File/Mathematician/Weierstrass.png": {
+      "modifiedTime": 1726894174310,
+      "sourceSize": 347041,
+      "exportedPath": "file/mathematician/weierstrass.png",
+      "dependencies": []
+    },
+    "File/Mathematician/Zermelo.png": {
+      "modifiedTime": 1726894174310,
+      "sourceSize": 477742,
+      "exportedPath": "file/mathematician/zermelo.png",
+      "dependencies": []
+    },
+    "File/Mathematician/Пафнутий.png": {
+      "modifiedTime": 1726894174310,
+      "sourceSize": 684816,
+      "exportedPath": "file/mathematician/пафнутий.png",
+      "dependencies": []
+    },
+    "File/Wallpaper/阿米娅.png": {
+      "modifiedTime": 1726894174310,
+      "sourceSize": 2524048,
+      "exportedPath": "file/wallpaper/阿米娅.png",
+      "dependencies": []
+    },
+    "Index/Dictionary.md": {
+      "modifiedTime": 1726894174310,
+      "sourceSize": 555,
+      "exportedPath": "index/dictionary.html",
+      "dependencies": []
+    },
+    "Index/Main.md": {
+      "modifiedTime": 1726894174310,
+      "sourceSize": 260,
+      "exportedPath": "index/main.html",
+      "dependencies": [
+        "lib/media/obsidian.png",
+        "lib/media/cantor.png",
+        "lib/media/laplace.png",
+        "lib/media/kelly.png",
+        "lib/media/cauchy.png",
+        "lib/media/galois.png",
+        "lib/media/lebesgue.png",
+        "lib/media/michael.png",
+        "lib/media/euler.png",
+        "lib/media/陈省身.png",
+        "lib/media/grothendieck.png"
+      ]
+    },
+    "Index/Other.md": {
+      "modifiedTime": 1726894174310,
+      "sourceSize": 253,
+      "exportedPath": "index/other.html",
+      "dependencies": []
+    },
+    "Index/Tool.md": {
+      "modifiedTime": 1726894174310,
+      "sourceSize": 282,
+      "exportedPath": "index/tool.html",
+      "dependencies": []
+    },
+    "Online/Book/代数学(I)讲义.md": {
+      "modifiedTime": 1726894174310,
+      "sourceSize": 402,
+      "exportedPath": "online/book/代数学(i)讲义.html",
+      "dependencies": []
+    },
+    "Online/Book/基础拓扑学讲义.md": {
+      "modifiedTime": 1726894174310,
+      "sourceSize": 405,
+      "exportedPath": "online/book/基础拓扑学讲义.html",
+      "dependencies": []
+    },
+    "Online/Book/几何与拓扑讲义.md": {
+      "modifiedTime": 1726894174310,
+      "sourceSize": 405,
+      "exportedPath": "online/book/几何与拓扑讲义.html",
+      "dependencies": []
+    },
+    "Online/Book/矩阵计算.md": {
+      "modifiedTime": 1726894174310,
+      "sourceSize": 398,
+      "exportedPath": "online/book/矩阵计算.html",
+      "dependencies": []
+    },
+    "Online/Book/实分析与复分析讲义.md": {
+      "modifiedTime": 1726894174310,
+      "sourceSize": 403,
+      "exportedPath": "online/book/实分析与复分析讲义.html",
+      "dependencies": []
+    },
+    "Online/iFrame/Color.md": {
+      "modifiedTime": 1726894174310,
+      "sourceSize": 415,
+      "exportedPath": "online/iframe/color.html",
+      "dependencies": []
+    },
+    "Online/iFrame/Emoji.md": {
+      "modifiedTime": 1726894174310,
+      "sourceSize": 401,
+      "exportedPath": "online/iframe/emoji.html",
+      "dependencies": []
+    },
+    "Online/iFrame/gLibrary.md": {
+      "modifiedTime": 1726894174310,
+      "sourceSize": 461,
+      "exportedPath": "online/iframe/glibrary.html",
+      "dependencies": []
+    },
+    "Online/iFrame/LaTeXOnline.md": {
+      "modifiedTime": 1726894174310,
+      "sourceSize": 395,
+      "exportedPath": "online/iframe/latexonline.html",
+      "dependencies": []
+    },
+    "Online/iFrame/MaiPDF.md": {
+      "modifiedTime": 1726894174310,
+      "sourceSize": 389,
+      "exportedPath": "online/iframe/maipdf.html",
+      "dependencies": []
+    },
+    "Online/iFrame/SimpleTeX.md": {
+      "modifiedTime": 1726894174310,
+      "sourceSize": 390,
+      "exportedPath": "online/iframe/simpletex.html",
+      "dependencies": []
+    },
+    "Template/Tikz/点线图.md": {
+      "modifiedTime": 1726894174310,
+      "sourceSize": 7876,
+      "exportedPath": "template/tikz/点线图.html",
+      "dependencies": []
+    },
+    "Template/Tikz/电路图.md": {
+      "modifiedTime": 1726894174310,
+      "sourceSize": 645,
+      "exportedPath": "template/tikz/电路图.html",
+      "dependencies": []
+    },
+    "Template/Tikz/二元显函数图像.md": {
+      "modifiedTime": 1726894174310,
+      "sourceSize": 481,
+      "exportedPath": "template/tikz/二元显函数图像.html",
+      "dependencies": []
+    },
+    "Template/Tikz/关系图.md": {
+      "modifiedTime": 1726894174310,
+      "sourceSize": 1469,
+      "exportedPath": "template/tikz/关系图.html",
+      "dependencies": []
+    },
+    "Template/Tikz/化学物质结构图.md": {
+      "modifiedTime": 1726894174310,
+      "sourceSize": 1320,
+      "exportedPath": "template/tikz/化学物质结构图.html",
+      "dependencies": []
+    },
+    "Template/Tikz/一元显函数图像.md": {
+      "modifiedTime": 1726894174310,
+      "sourceSize": 1041,
+      "exportedPath": "template/tikz/一元显函数图像.html",
+      "dependencies": []
+    },
+    "Template/Diary-Day.md": {
+      "modifiedTime": 1726894174310,
+      "sourceSize": 8,
+      "exportedPath": "template/diary-day.html",
+      "dependencies": []
+    },
+    "Template/Diary-Week.md": {
+      "modifiedTime": 1726894174310,
+      "sourceSize": 8,
+      "exportedPath": "template/diary-week.html",
+      "dependencies": []
+    },
+    "Template/Tags.md": {
+      "modifiedTime": 1726894174310,
+      "sourceSize": 1590,
+      "exportedPath": "template/tags.html",
+      "dependencies": []
+    },
+    "Home.md": {
+      "modifiedTime": 1726894174310,
+      "sourceSize": 3216,
+      "exportedPath": "home.html",
+      "dependencies": [
+        "file/cover/nhhu.png",
+        "file/cover/rphuang.png",
+        "file/cover/jctpxjy.png",
+        "file/cover/yfxue.png",
+        "file/cover/fli.png"
+      ]
+    },
+    "lib/media/pasted-image-20240917181852.png": {
+      "modifiedTime": 1726894174310,
+      "sourceSize": 57277,
+      "exportedPath": "lib/media/pasted-image-20240917181852.png",
+      "dependencies": []
+    },
+    "lib/media/人工智能的数学方法-240916-16.30.35.excalidraw.png": {
+      "modifiedTime": 1726894174310,
+      "sourceSize": 19075,
+      "exportedPath": "lib/media/人工智能的数学方法-240916-16.30.35.excalidraw.png",
+      "dependencies": []
+    },
+    "lib/media/人工智能的数学方法-240916-16.42.21.excalidraw.png": {
+      "modifiedTime": 1726894174310,
+      "sourceSize": 66888,
+      "exportedPath": "lib/media/人工智能的数学方法-240916-16.42.21.excalidraw.png",
+      "dependencies": []
+    },
+    "lib/media/pasted-image-20240916214359.png": {
+      "modifiedTime": 1726894174310,
+      "sourceSize": 146380,
+      "exportedPath": "lib/media/pasted-image-20240916214359.png",
+      "dependencies": []
+    },
+    "lib/media/pasted-image-20240916222440.png": {
+      "modifiedTime": 1726894174310,
+      "sourceSize": 97618,
+      "exportedPath": "lib/media/pasted-image-20240916222440.png",
+      "dependencies": []
+    },
+    "lib/media/人工智能的数学方法-240917-00.17.55.excalidraw.png": {
+      "modifiedTime": 1726894174310,
+      "sourceSize": 14950,
+      "exportedPath": "lib/media/人工智能的数学方法-240917-00.17.55.excalidraw.png",
+      "dependencies": []
+    },
+    "lib/media/pasted-image-20240918131420.png": {
+      "modifiedTime": 1726894174310,
+      "sourceSize": 118949,
+      "exportedPath": "lib/media/pasted-image-20240918131420.png",
+      "dependencies": []
+    },
+    "lib/media/pasted-image-20240918132636.png": {
+      "modifiedTime": 1726894174310,
+      "sourceSize": 57363,
+      "exportedPath": "lib/media/pasted-image-20240918132636.png",
+      "dependencies": []
+    },
+    "lib/media/img_20240919_111201_edit_557982783792982.jpeg": {
+      "modifiedTime": 1726894174310,
+      "sourceSize": 361974,
+      "exportedPath": "lib/media/img_20240919_111201_edit_557982783792982.jpeg",
+      "dependencies": []
+    },
+    "lib/media/img_20240919_110829_edit_558038444713807.jpeg": {
+      "modifiedTime": 1726894174310,
+      "sourceSize": 466050,
+      "exportedPath": "lib/media/img_20240919_110829_edit_558038444713807.jpeg",
+      "dependencies": []
+    },
+    "lib/media/img_20240919_111115_edit_558024093441413.jpeg": {
+      "modifiedTime": 1726894174310,
+      "sourceSize": 347983,
+      "exportedPath": "lib/media/img_20240919_111115_edit_558024093441413.jpeg",
+      "dependencies": []
+    },
+    "lib/media/obsidian.png": {
+      "modifiedTime": 1726894174310,
+      "sourceSize": 120067,
+      "exportedPath": "lib/media/obsidian.png",
+      "dependencies": []
+    },
+    "lib/media/cantor.png": {
+      "modifiedTime": 1726894174310,
+      "sourceSize": 1026129,
+      "exportedPath": "lib/media/cantor.png",
+      "dependencies": []
+    },
+    "lib/media/laplace.png": {
+      "modifiedTime": 1726894174310,
+      "sourceSize": 1715533,
+      "exportedPath": "lib/media/laplace.png",
+      "dependencies": []
+    },
+    "lib/media/kelly.png": {
+      "modifiedTime": 1726894174310,
+      "sourceSize": 1010330,
+      "exportedPath": "lib/media/kelly.png",
+      "dependencies": []
+    },
+    "lib/media/cauchy.png": {
+      "modifiedTime": 1726894174310,
+      "sourceSize": 500970,
+      "exportedPath": "lib/media/cauchy.png",
+      "dependencies": []
+    },
+    "lib/media/galois.png": {
+      "modifiedTime": 1726894174310,
+      "sourceSize": 863554,
+      "exportedPath": "lib/media/galois.png",
+      "dependencies": []
+    },
+    "lib/media/lebesgue.png": {
+      "modifiedTime": 1726894174310,
+      "sourceSize": 945971,
+      "exportedPath": "lib/media/lebesgue.png",
+      "dependencies": []
+    },
+    "lib/media/michael.png": {
+      "modifiedTime": 1726894174310,
+      "sourceSize": 332725,
+      "exportedPath": "lib/media/michael.png",
+      "dependencies": []
+    },
+    "lib/media/euler.png": {
+      "modifiedTime": 1726894174310,
+      "sourceSize": 1263768,
+      "exportedPath": "lib/media/euler.png",
+      "dependencies": []
+    },
+    "lib/media/陈省身.png": {
+      "modifiedTime": 1726894174310,
+      "sourceSize": 845377,
+      "exportedPath": "lib/media/陈省身.png",
+      "dependencies": []
+    },
+    "lib/media/grothendieck.png": {
+      "modifiedTime": 1726894174310,
+      "sourceSize": 651477,
+      "exportedPath": "lib/media/grothendieck.png",
+      "dependencies": []
+    },
+    "file/cover/nhhu.png": {
+      "modifiedTime": 1726894174310,
+      "sourceSize": 70713,
+      "exportedPath": "file/cover/nhhu.png",
+      "dependencies": []
+    },
+    "file/cover/rphuang.png": {
+      "modifiedTime": 1726894174310,
+      "sourceSize": 90812,
+      "exportedPath": "file/cover/rphuang.png",
+      "dependencies": []
+    },
+    "file/cover/jctpxjy.png": {
+      "modifiedTime": 1726894174310,
+      "sourceSize": 757918,
+      "exportedPath": "file/cover/jctpxjy.png",
+      "dependencies": []
+    },
+    "file/cover/yfxue.png": {
+      "modifiedTime": 1726894174310,
+      "sourceSize": 73302,
+      "exportedPath": "file/cover/yfxue.png",
+      "dependencies": []
+    },
+    "file/cover/fli.png": {
+      "modifiedTime": 1726894174310,
+      "sourceSize": 71233,
+      "exportedPath": "file/cover/fli.png",
+      "dependencies": []
+    },
+    "lib/scripts/graph-wasm.wasm": {
+      "modifiedTime": 1726894174310,
+      "sourceSize": 23377,
+      "exportedPath": "lib/scripts/graph-wasm.wasm",
+      "dependencies": []
+    },
+    "lib/fonts/94f2f163d4b698242fef.otf": {
+      "modifiedTime": 1726894174310,
+      "sourceSize": 66800,
+      "exportedPath": "lib/fonts/94f2f163d4b698242fef.otf",
+      "dependencies": []
+    },
+    "lib/fonts/72505e6a122c6acd5471.woff2": {
+      "modifiedTime": 1726894174310,
+      "sourceSize": 104232,
+      "exportedPath": "lib/fonts/72505e6a122c6acd5471.woff2",
+      "dependencies": []
+    },
+    "lib/fonts/2d5198822ab091ce4305.woff2": {
+      "modifiedTime": 1726894174310,
+      "sourceSize": 104332,
+      "exportedPath": "lib/fonts/2d5198822ab091ce4305.woff2",
+      "dependencies": []
+    },
+    "lib/fonts/c8ba52b05a9ef10f4758.woff2": {
+      "modifiedTime": 1726894174310,
+      "sourceSize": 98868,
+      "exportedPath": "lib/fonts/c8ba52b05a9ef10f4758.woff2",
+      "dependencies": []
+    },
+    "lib/fonts/cb10ffd7684cd9836a05.woff2": {
+      "modifiedTime": 1726894174310,
+      "sourceSize": 106876,
+      "exportedPath": "lib/fonts/cb10ffd7684cd9836a05.woff2",
+      "dependencies": []
+    },
+    "lib/fonts/b5f0f109bc88052d4000.woff2": {
+      "modifiedTime": 1726894174310,
+      "sourceSize": 105804,
+      "exportedPath": "lib/fonts/b5f0f109bc88052d4000.woff2",
+      "dependencies": []
+    },
+    "lib/fonts/cbe0ae49c52c920fd563.woff2": {
+      "modifiedTime": 1726894174310,
+      "sourceSize": 106108,
+      "exportedPath": "lib/fonts/cbe0ae49c52c920fd563.woff2",
+      "dependencies": []
+    },
+    "lib/fonts/535a6cf662596b3bd6a6.woff2": {
+      "modifiedTime": 1726894174310,
+      "sourceSize": 111708,
+      "exportedPath": "lib/fonts/535a6cf662596b3bd6a6.woff2",
+      "dependencies": []
+    },
+    "lib/fonts/70cc7ff27245e82ad414.ttf": {
+      "modifiedTime": 1726894174310,
+      "sourceSize": 192740,
+      "exportedPath": "lib/fonts/70cc7ff27245e82ad414.ttf",
+      "dependencies": []
+    },
+    "lib/fonts/454577c22304619db035.ttf": {
+      "modifiedTime": 1726894174310,
+      "sourceSize": 161376,
+      "exportedPath": "lib/fonts/454577c22304619db035.ttf",
+      "dependencies": []
+    },
+    "lib/fonts/52ac8f3034507f1d9e53.ttf": {
+      "modifiedTime": 1726894174310,
+      "sourceSize": 191568,
+      "exportedPath": "lib/fonts/52ac8f3034507f1d9e53.ttf",
+      "dependencies": []
+    },
+    "lib/fonts/05b618077343fbbd92b7.ttf": {
+      "modifiedTime": 1726894174310,
+      "sourceSize": 155288,
+      "exportedPath": "lib/fonts/05b618077343fbbd92b7.ttf",
+      "dependencies": []
+    },
+    "lib/fonts/4bb6ac751d1c5478ff3a.woff2": {
+      "modifiedTime": 1726894174310,
+      "sourceSize": 7876,
+      "exportedPath": "lib/fonts/4bb6ac751d1c5478ff3a.woff2",
+      "dependencies": []
+    },
+    "lib/media/874d8b8e340f75575caa.svg": {
+      "modifiedTime": 1726894174310,
+      "sourceSize": 317,
+      "exportedPath": "lib/media/874d8b8e340f75575caa.svg",
+      "dependencies": []
+    },
+    "lib/media/3d6c1bdc4d87cde4de67.svg": {
+      "modifiedTime": 1726894174310,
+      "sourceSize": 279,
+      "exportedPath": "lib/media/3d6c1bdc4d87cde4de67.svg",
+      "dependencies": []
+    },
+    "lib/fonts/mathjax_zero.woff": {
+      "modifiedTime": 1726894174310,
+      "sourceSize": 1368,
+      "exportedPath": "lib/fonts/mathjax_zero.woff",
+      "dependencies": []
+    },
+    "lib/fonts/mathjax_main-regular.woff": {
+      "modifiedTime": 1726894174310,
+      "sourceSize": 34160,
+      "exportedPath": "lib/fonts/mathjax_main-regular.woff",
+      "dependencies": []
+    },
+    "lib/fonts/mathjax_main-bold.woff": {
+      "modifiedTime": 1726894174310,
+      "sourceSize": 34464,
+      "exportedPath": "lib/fonts/mathjax_main-bold.woff",
+      "dependencies": []
+    },
+    "lib/fonts/mathjax_math-italic.woff": {
+      "modifiedTime": 1726894174310,
+      "sourceSize": 19360,
+      "exportedPath": "lib/fonts/mathjax_math-italic.woff",
+      "dependencies": []
+    },
+    "lib/fonts/mathjax_main-italic.woff": {
+      "modifiedTime": 1726894174310,
+      "sourceSize": 20832,
+      "exportedPath": "lib/fonts/mathjax_main-italic.woff",
+      "dependencies": []
+    },
+    "lib/fonts/mathjax_math-bolditalic.woff": {
+      "modifiedTime": 1726894174310,
+      "sourceSize": 19776,
+      "exportedPath": "lib/fonts/mathjax_math-bolditalic.woff",
+      "dependencies": []
+    },
+    "lib/fonts/mathjax_size1-regular.woff": {
+      "modifiedTime": 1726894174310,
+      "sourceSize": 5792,
+      "exportedPath": "lib/fonts/mathjax_size1-regular.woff",
+      "dependencies": []
+    },
+    "lib/fonts/mathjax_size2-regular.woff": {
+      "modifiedTime": 1726894174310,
+      "sourceSize": 5464,
+      "exportedPath": "lib/fonts/mathjax_size2-regular.woff",
+      "dependencies": []
+    },
+    "lib/fonts/mathjax_size3-regular.woff": {
+      "modifiedTime": 1726894174310,
+      "sourceSize": 3244,
+      "exportedPath": "lib/fonts/mathjax_size3-regular.woff",
+      "dependencies": []
+    },
+    "lib/fonts/mathjax_size4-regular.woff": {
+      "modifiedTime": 1726894174310,
+      "sourceSize": 5148,
+      "exportedPath": "lib/fonts/mathjax_size4-regular.woff",
+      "dependencies": []
+    },
+    "lib/fonts/mathjax_ams-regular.woff": {
+      "modifiedTime": 1726894174310,
+      "sourceSize": 40808,
+      "exportedPath": "lib/fonts/mathjax_ams-regular.woff",
+      "dependencies": []
+    },
+    "lib/fonts/mathjax_calligraphic-regular.woff": {
+      "modifiedTime": 1726894174310,
+      "sourceSize": 9600,
+      "exportedPath": "lib/fonts/mathjax_calligraphic-regular.woff",
+      "dependencies": []
+    },
+    "lib/fonts/mathjax_calligraphic-bold.woff": {
+      "modifiedTime": 1726894174310,
+      "sourceSize": 9908,
+      "exportedPath": "lib/fonts/mathjax_calligraphic-bold.woff",
+      "dependencies": []
+    },
+    "lib/fonts/mathjax_fraktur-regular.woff": {
+      "modifiedTime": 1726894174310,
+      "sourceSize": 21480,
+      "exportedPath": "lib/fonts/mathjax_fraktur-regular.woff",
+      "dependencies": []
+    },
+    "lib/fonts/mathjax_fraktur-bold.woff": {
+      "modifiedTime": 1726894174310,
+      "sourceSize": 22340,
+      "exportedPath": "lib/fonts/mathjax_fraktur-bold.woff",
+      "dependencies": []
+    },
+    "lib/fonts/mathjax_sansserif-regular.woff": {
+      "modifiedTime": 1726894174310,
+      "sourceSize": 12660,
+      "exportedPath": "lib/fonts/mathjax_sansserif-regular.woff",
+      "dependencies": []
+    },
+    "lib/fonts/mathjax_sansserif-bold.woff": {
+      "modifiedTime": 1726894174310,
+      "sourceSize": 15944,
+      "exportedPath": "lib/fonts/mathjax_sansserif-bold.woff",
+      "dependencies": []
+    },
+    "lib/fonts/mathjax_sansserif-italic.woff": {
+      "modifiedTime": 1726894174310,
+      "sourceSize": 14628,
+      "exportedPath": "lib/fonts/mathjax_sansserif-italic.woff",
+      "dependencies": []
+    },
+    "lib/fonts/mathjax_script-regular.woff": {
+      "modifiedTime": 1726894174310,
+      "sourceSize": 11852,
+      "exportedPath": "lib/fonts/mathjax_script-regular.woff",
+      "dependencies": []
+    },
+    "lib/fonts/mathjax_typewriter-regular.woff": {
+      "modifiedTime": 1726894174310,
+      "sourceSize": 17604,
+      "exportedPath": "lib/fonts/mathjax_typewriter-regular.woff",
+      "dependencies": []
+    },
+    "lib/fonts/mathjax_vector-regular.woff": {
+      "modifiedTime": 1726894174310,
+      "sourceSize": 1136,
+      "exportedPath": "lib/fonts/mathjax_vector-regular.woff",
+      "dependencies": []
+    },
+    "lib/fonts/mathjax_vector-bold.woff": {
+      "modifiedTime": 1726894174310,
+      "sourceSize": 1116,
+      "exportedPath": "lib/fonts/mathjax_vector-bold.woff",
+      "dependencies": []
+    },
+    "lib/html/file-tree.html": {
+      "modifiedTime": 1726894174310,
+      "sourceSize": 50900,
+      "exportedPath": "lib/html/file-tree.html",
+      "dependencies": []
+    },
+    "lib/scripts/webpage.js": {
+      "modifiedTime": 1726894174310,
+      "sourceSize": 47290,
+      "exportedPath": "lib/scripts/webpage.js",
+      "dependencies": []
+    },
+    "lib/scripts/graph-view.js": {
+      "modifiedTime": 1726894174310,
+      "sourceSize": 15519,
+      "exportedPath": "lib/scripts/graph-view.js",
+      "dependencies": []
+    },
+    "lib/scripts/graph-wasm.js": {
+      "modifiedTime": 1726894174310,
+      "sourceSize": 14021,
+      "exportedPath": "lib/scripts/graph-wasm.js",
+      "dependencies": []
+    },
+    "lib/scripts/graph-render-worker.js": {
+      "modifiedTime": 1726894174310,
+      "sourceSize": 5179,
+      "exportedPath": "lib/scripts/graph-render-worker.js",
+      "dependencies": []
+    },
+    "lib/scripts/tinycolor.js": {
+      "modifiedTime": 1726894174310,
+      "sourceSize": 29832,
+      "exportedPath": "lib/scripts/tinycolor.js",
+      "dependencies": []
+    },
+    "lib/scripts/pixi.js": {
+      "modifiedTime": 1726894174310,
+      "sourceSize": 449509,
+      "exportedPath": "lib/scripts/pixi.js",
+      "dependencies": []
+    },
+    "lib/scripts/minisearch.js": {
+      "modifiedTime": 1726894174310,
+      "sourceSize": 29422,
+      "exportedPath": "lib/scripts/minisearch.js",
+      "dependencies": []
+    },
+    "lib/media/favicon.png": {
+      "modifiedTime": 1726894174310,
+      "sourceSize": 1105,
+      "exportedPath": "lib/media/favicon.png",
+      "dependencies": []
+    },
+    "lib/scripts/graph-data.js": {
+      "modifiedTime": 1726894174310,
+      "sourceSize": 2628,
+      "exportedPath": "lib/scripts/graph-data.js",
+      "dependencies": []
+    },
+    "lib/styles/obsidian.css": {
+      "modifiedTime": 1726894174310,
+      "sourceSize": 130471,
+      "exportedPath": "lib/styles/obsidian.css",
+      "dependencies": []
+    },
+    "lib/styles/theme.css": {
+      "modifiedTime": 1726894174310,
+      "sourceSize": 10337,
+      "exportedPath": "lib/styles/theme.css",
+      "dependencies": []
+    },
+    "lib/styles/global-variable-styles.css": {
+      "modifiedTime": 1726894174310,
+      "sourceSize": 384,
+      "exportedPath": "lib/styles/global-variable-styles.css",
+      "dependencies": []
+    },
+    "lib/styles/supported-plugins.css": {
+      "modifiedTime": 1726894174310,
+      "sourceSize": 3882,
+      "exportedPath": "lib/styles/supported-plugins.css",
+      "dependencies": []
+    },
+    "lib/styles/main-styles.css": {
+      "modifiedTime": 1726894174310,
+      "sourceSize": 23130,
+      "exportedPath": "lib/styles/main-styles.css",
+      "dependencies": []
+    },
+    "lib/styles/snippets.css": {
+      "modifiedTime": 1726894174310,
+      "sourceSize": 6862,
+      "exportedPath": "lib/styles/snippets.css",
+      "dependencies": []
+    }
+  }
+}
