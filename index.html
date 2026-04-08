@@ -50,37 +50,15 @@
         ▶ 了解更多
       </a>
     </div>
-    <div class="hero-screenshot">
-      <div style="padding:48px 32px;text-align:center;">
-        <div style="display:inline-flex;gap:8px;margin-bottom:24px;">
-          <span style="width:12px;height:12px;border-radius:50%;background:#ef4444;display:inline-block;"></span>
-          <span style="width:12px;height:12px;border-radius:50%;background:#eab308;display:inline-block;"></span>
-          <span style="width:12px;height:12px;border-radius:50%;background:#22c55e;display:inline-block;"></span>
-        </div>
-        <div style="background:#1e1b2e;border-radius:12px;padding:28px 32px;text-align:left;font-family:'JetBrains Mono',monospace;font-size:13px;line-height:2;color:#e2e8f0;">
-<span style="color:#64748b;">## Schur 引理</span>
-<br>
-<span style="color:#64748b;">&gt; [!theorem]</span> <span style="color:#c084fc;">定理 1.1</span> <span style="color:#94a3b8;">(Schur 引理)</span>
-<br>
-<span style="color:#64748b;">&gt;</span> <span style="color:#e2e8f0;">设 $V, W$ 为不可约表示，若 $f: V \to W$ 为模同态，</span>
-<br>
-<span style="color:#64748b;">&gt;</span> <span style="color:#e2e8f0;">则 $f$ 要么是同构，要么是零映射。</span>
-<br><br>
-<span style="color:#64748b;">```tikz</span>
-<br>
-<span style="color:#c084fc;">\begin</span><span style="color:#86efac;">{tikzpicture}</span>
-<br>
-&nbsp;&nbsp;<span style="color:#c084fc;">\draw</span>[<span style="color:#fbbf24;">thick</span>, ->] (0,0) -- (3,0) node[right] {$x$};
-<br>
-&nbsp;&nbsp;<span style="color:#c084fc;">\draw</span>[<span style="color:#fbbf24;">thick</span>, ->] (0,0) -- (0,3) node[above] {$y$};
-<br>
-&nbsp;&nbsp;<span style="color:#c084fc;">\draw</span>[<span style="color:#93c5fd;">domain=0:2.5</span>, smooth] plot (<span style="color:#c084fc;">\x</span>, {<span style="color:#c084fc;">\x</span>*<span style="color:#c084fc;">\x</span>/2});
-<br>
-<span style="color:#c084fc;">\end</span><span style="color:#86efac;">{tikzpicture}</span>
-<br>
-<span style="color:#64748b;">```</span>
-        </div>
-      </div>
+    <div class="hero-video">
+      <iframe
+        src="//player.bilibili.com/player.html?bvid=BV1QfrWBsE9s&autoplay=0&high_quality=1"
+        allowfullscreen
+        border="0"
+        frameborder="no"
+        framespacing="0"
+        scrolling="no"
+      ></iframe>
     </div>
   </div>
 </section>
@@ -162,7 +140,7 @@
   <div class="container">
     <div class="section-header">
       <h2>功能演示</h2>
-      <p>点击左侧示例，感受 MathCraft 如何赋能数学笔记</p>
+      <p>点击选项卡切换不同功能的效果展示</p>
     </div>
 
     <div class="showcase-layout">
@@ -185,20 +163,11 @@
         </div>
       </div>
 
-      <div class="showcase-preview">
-        <div class="code-demo" id="codeDemo">
-<span class="cm">%% 定理编号 — Card 风格</span>
-<span class="cm">> [!theorem]</span> <span class="kw">定理 1.1</span> (Cauchy 积分公式)
-<span class="cm">></span> 设 $f$ 在单连通域 $D$ 上全纯，$\gamma$ 为
-<span class="cm">></span> $D$ 内的简单闭曲线，则对 $\gamma$ 内部任意点 $z_0$,
-<span class="cm">></span>
-<span class="cm">></span> $$f(z_0) = \frac{<span class="num">1</span>}{<span class="num">2</span>\pi i}\oint_\gamma \frac{f(z)}{z-z_0}\,dz$$
-
-<span class="cm">> [!corollary]</span> <span class="kw">推论 1.2</span>
-<span class="cm">></span> 全纯函数是无穷次可微的。
-
-<span class="cm">> [!definition]</span> <span class="kw">定义 1.3</span> (Laurent 级数)
-<span class="cm">></span> 设 $f$ 在环域 $r &lt; |z-a| &lt; R$ 上全纯...</div>
+      <div class="showcase-preview" id="showcasePreview">
+        <img class="showcase-img active" data-demo="theorem" src="https://placehold.co/800x500/1e1b2e/c084fc?text=定理编号+%26+样式&font=Noto+Sans+SC" alt="定理编号与样式">
+        <img class="showcase-img" data-demo="tikz" src="https://placehold.co/800x500/1e1b2e/93c5fd?text=TikZ+渲染&font=Noto+Sans+SC" alt="TikZ 代码渲染">
+        <img class="showcase-img" data-demo="geogebra" src="https://placehold.co/800x500/1e1b2e/86efac?text=GeoGebra+→+TikZ&font=Noto+Sans+SC" alt="GeoGebra → TikZ">
+        <img class="showcase-img" data-demo="cd" src="https://placehold.co/800x500/1e1b2e/fbbf24?text=交换图编辑器&font=Noto+Sans+SC" alt="交换图编辑器">
       </div>
     </div>
   </div>
@@ -212,46 +181,20 @@
       <p>无论学生还是研究者，MathCraft 都能为你的数学写作保驾护航</p>
     </div>
 
-    <div class="pricing-grid">
-      <!-- Free -->
-      <div class="pricing-card">
-        <div class="pricing-icon">
-          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2L2 7l10 5 10-5-10-5z"/><path d="M2 17l10 5 10-5"/><path d="M2 12l10 5 10-5"/></svg>
-        </div>
-        <div class="pricing-name">体验版</div>
-        <div class="pricing-desc">探索 MathCraft 核心能力</div>
-        <div class="pricing-price"><span class="currency">¥</span>0</div>
-        <div class="pricing-period">永久免费</div>
-        <ul class="pricing-features">
-          <li class="pricing-feat">
-            <span class="check-icon">✓</span>
-            基础定理编号（统一模式）
-          </li>
-          <li class="pricing-feat">
-            <span class="check-icon">✓</span>
-            公式编号（顺序模式）
-          </li>
-          <li class="pricing-feat">
-            <span class="check-icon">✓</span>
-            Plain 定理样式
-          </li>
-        </ul>
-        <div class="pricing-btn" style="opacity:.5;pointer-events:none;">当前版本</div>
-      </div>
-
+    <div class="pricing-grid two-col">
       <!-- Version -->
       <div class="pricing-card">
         <div class="pricing-icon">
           <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 9H4.5a2.5 2.5 0 0 1 0-5C7 4 6.5 7 6.5 7"/><path d="M18 9h1.5a2.5 2.5 0 0 0 0-5C17 4 17.5 7 17.5 7"/><path d="M4 22h16"/><path d="M10 14.66V17c0 .55-.47.98-.97 1.21C7.85 18.75 7 20.24 7 22"/><path d="M14 14.66V17c0 .55.47.98.97 1.21C16.15 18.75 17 20.24 17 22"/><path d="M18 2H6v7a6 6 0 0 0 12 0V2Z"/></svg>
         </div>
         <div class="pricing-name">版本买断</div>
-        <div class="pricing-desc">当前大版本永久使用</div>
+        <div class="pricing-desc">解锁全部功能，覆盖当前大版本所有更新</div>
         <div class="pricing-price"><span class="currency">¥</span>29</div>
-        <div class="pricing-period">一次性 / 当前大版本</div>
+        <div class="pricing-period">一次性付费 · 当前大版本内永久有效</div>
         <ul class="pricing-features">
           <li class="pricing-feat">
             <span class="check-icon">✓</span>
-            全部编号模式
+            全部功能完整解锁，无任何阉割
           </li>
           <li class="pricing-feat">
             <span class="check-icon">✓</span>
@@ -259,11 +202,15 @@
           </li>
           <li class="pricing-feat">
             <span class="check-icon">✓</span>
-            TikZ 渲染 + GeoGebra 集成
+            TikZ 渲染 · GeoGebra · 交换图编辑器
           </li>
           <li class="pricing-feat">
             <span class="check-icon">✓</span>
-            交换图编辑器
+            当前大版本内所有后续更新
+          </li>
+          <li class="pricing-feat">
+            <span class="check-icon">✓</span>
+            数学链接 · 公式编号 · 标题编号
           </li>
         </ul>
         <a href="mailto:albusguo@gmail.com?subject=MathCraft 版本买断" class="pricing-btn">获取激活码</a>
@@ -276,17 +223,17 @@
           <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M13 2 3 14h9l-1 8 10-12h-9l1-8z"/></svg>
         </div>
         <div class="pricing-name">永久买断</div>
-        <div class="pricing-desc">一次购买，所有版本终身可用</div>
+        <div class="pricing-desc">一次购买，终身享有所有版本全部功能</div>
         <div class="pricing-price"><span class="currency">¥</span>49</div>
-        <div class="pricing-period">一次性 / 终身所有版本</div>
+        <div class="pricing-period">一次性付费 · 终身所有版本永久有效</div>
         <ul class="pricing-features">
           <li class="pricing-feat">
             <span class="check-icon">✓</span>
-            版本买断全部功能
+            版本买断的全部功能
           </li>
           <li class="pricing-feat">
             <span class="check-icon">✓</span>
-            未来所有大版本更新
+            未来所有大版本更新自动覆盖
           </li>
           <li class="pricing-feat">
             <span class="check-icon">✓</span>
