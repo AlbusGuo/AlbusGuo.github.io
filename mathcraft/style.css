@@ -273,10 +273,6 @@ button { cursor: pointer; font-family: inherit; }
 
 .showcase-preview {
   flex: 1; min-width: 0;
-  border-radius: var(--radius);
-  overflow: hidden;
-  border: 1px solid var(--border);
-  background: #1e1b2e;
 }
 .showcase-preview .showcase-img {
   width: 100%;
@@ -469,7 +465,6 @@ html.dark body { background: var(--bg); }
 html.dark .nav { background: rgba(15,13,26,.85); border-bottom-color: var(--border); }
 html.dark .feature-card { background: #1a1528; }
 html.dark .showcase-tab { background: #1a1528; }
-html.dark .showcase-preview { background: #0a0814; }
 html.dark .pricing-card:not(.featured) { background: #1a1528; }
 html.dark .pricing-btn { background: #1a1528; }
 html.dark .btn-secondary { background: #1a1528; border-color: var(--border); }
