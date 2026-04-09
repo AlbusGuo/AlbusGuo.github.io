@@ -163,6 +163,23 @@ button { cursor: pointer; font-family: inherit; }
 }
 .btn-secondary:hover { background: #f9fafb; border-color: #d1d5db; }
 
+/* ── Hero video ── */
+.hero-video {
+  max-width: 960px; margin: 60px auto 0;
+  border-radius: var(--radius);
+  box-shadow: 0 20px 60px rgba(13,148,136,.15), 0 6px 24px rgba(0,0,0,.08);
+  border: 2px solid rgba(13,148,136,.2);
+  overflow: hidden;
+  background: #000;
+  aspect-ratio: 16/9;
+  position: relative;
+}
+.hero-video iframe {
+  position: absolute; top: 0; left: 0;
+  width: 100%; height: 100%;
+  border: none;
+}
+
 /* ── Section common ── */
 .section { padding: 100px 0; }
 .section-alt { background: var(--bg-section-alt); }
@@ -414,3 +431,48 @@ button { cursor: pointer; font-family: inherit; }
   .showcase-tabs { flex-direction: column; }
   .showcase-tab { min-width: 0; }
 }
+
+/* ── Theme Toggle ── */
+.theme-toggle {
+  width: 36px; height: 36px;
+  border-radius: 50%;
+  border: 1px solid var(--border);
+  background: transparent;
+  color: var(--text-secondary);
+  display: flex; align-items: center; justify-content: center;
+  cursor: pointer;
+  transition: background .3s, border-color .3s, color .3s, transform .15s;
+  flex-shrink: 0;
+  margin-left: 8px;
+}
+.theme-toggle:hover {
+  border-color: var(--accent);
+  color: var(--accent);
+  transform: scale(1.08);
+}
+.theme-toggle .icon-moon { display: none; }
+html.dark .theme-toggle .icon-sun { display: none; }
+html.dark .theme-toggle .icon-moon { display: block; }
+
+/* ── Dark Mode ── */
+html.dark {
+  --bg: #0c1117;
+  --bg-hero: linear-gradient(160deg, #0f1d1b 0%, #0c1117 50%, #151208 100%);
+  --bg-section-alt: #0f1d1b;
+  --text: #e5e7eb;
+  --text-secondary: #9ca3af;
+  --border: #1f3330;
+  --card-shadow: 0 1px 3px rgba(0,0,0,.2);
+  --card-shadow-hover: 0 10px 25px rgba(13,148,136,.15), 0 4px 10px rgba(0,0,0,.1);
+}
+html.dark body { background: var(--bg); }
+html.dark .nav { background: rgba(12,17,23,.85); border-bottom-color: var(--border); }
+html.dark .feature-card { background: #111d1b; }
+html.dark .showcase-tab { background: #111d1b; }
+html.dark .showcase-preview { background: #071210; }
+html.dark .pricing-card:not(.featured) { background: #111d1b; }
+html.dark .pricing-btn { background: #111d1b; }
+html.dark .btn-secondary { background: #111d1b; border-color: var(--border); }
+html.dark .footer { border-top-color: var(--border); }
+html.dark .time-deco { opacity: 0.04; }
+html.dark .hero-video { border-color: rgba(13,148,136,.3); }

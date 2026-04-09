@@ -433,3 +433,47 @@ button { cursor: pointer; font-family: inherit; }
   .showcase-tabs { flex-direction: column; }
   .showcase-tab { min-width: 0; }
 }
+
+/* ── Theme Toggle ── */
+.theme-toggle {
+  width: 36px; height: 36px;
+  border-radius: 50%;
+  border: 1px solid var(--border);
+  background: transparent;
+  color: var(--text-secondary);
+  display: flex; align-items: center; justify-content: center;
+  cursor: pointer;
+  transition: background .3s, border-color .3s, color .3s, transform .15s;
+  flex-shrink: 0;
+  margin-left: 8px;
+}
+.theme-toggle:hover {
+  border-color: var(--accent);
+  color: var(--accent);
+  transform: scale(1.08);
+}
+.theme-toggle .icon-moon { display: none; }
+html.dark .theme-toggle .icon-sun { display: none; }
+html.dark .theme-toggle .icon-moon { display: block; }
+
+/* ── Dark Mode ── */
+html.dark {
+  --bg: #0f0d1a;
+  --bg-hero: linear-gradient(160deg, #1a1528 0%, #0f0d1a 50%, #161024 100%);
+  --bg-section-alt: #161024;
+  --text: #e5e7eb;
+  --text-secondary: #9ca3af;
+  --border: #2d2640;
+  --card-shadow: 0 1px 3px rgba(0,0,0,.2);
+  --card-shadow-hover: 0 10px 25px rgba(124,58,237,.15), 0 4px 10px rgba(0,0,0,.1);
+}
+html.dark body { background: var(--bg); }
+html.dark .nav { background: rgba(15,13,26,.85); border-bottom-color: var(--border); }
+html.dark .feature-card { background: #1a1528; }
+html.dark .showcase-tab { background: #1a1528; }
+html.dark .showcase-preview { background: #0a0814; }
+html.dark .pricing-card:not(.featured) { background: #1a1528; }
+html.dark .pricing-btn { background: #1a1528; }
+html.dark .btn-secondary { background: #1a1528; border-color: var(--border); }
+html.dark .footer { border-top-color: var(--border); }
+html.dark .math-deco { opacity: 0.04; }
