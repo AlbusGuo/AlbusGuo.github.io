@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>MathCraft – Obsidian 数学增强插件</title>
+  <meta name="description" content="MathCraft 是一款 Obsidian 插件，为你的数学笔记提供定理编号、公式编号、TikZ 渲染、GeoGebra 绘图与交换图编辑器，让学术写作如呼吸般自然。">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css?v=3">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect rx='18' width='100' height='100' fill='%237c3aed'/><text x='50' y='72' font-size='62' font-weight='800' text-anchor='middle' fill='white'>M</text></svg>">
+</head>
+<body>
+
+<!-- ═══ Nav ═══ -->
+<nav class="nav" id="nav">
+  <div class="nav-inner">
+    <a href="#" class="nav-logo">
+      <span class="logo-icon">M</span>
+      MathCraft
+    </a>
+    <div class="nav-links">
+      <a href="#features">功能特性</a>
+      <a href="#showcase">使用演示</a>
+      <a href="#pricing">价格方案</a>
+    </div>
+    <a href="https://github.com/AlbusGuo/obsidian-mathcraft/releases" target="_blank" class="nav-cta">
+      GitHub →
+    </a>
+  </div>
+</nav>
+
+<!-- ═══ Hero ═══ -->
+<section class="hero">
+  <span class="math-deco" style="top:8%;left:-1%;font-size:80px;transform:rotate(-12deg)">∫</span>
+  <span class="math-deco" style="top:4%;right:5%;font-size:48px;transform:rotate(18deg)">∑</span>
+  <span class="math-deco" style="top:28%;left:2%;font-size:40px;transform:rotate(-20deg)">π</span>
+  <span class="math-deco" style="top:22%;right:-1%;font-size:56px;transform:rotate(8deg)">∞</span>
+  <span class="math-deco" style="top:52%;left:4%;font-size:44px;transform:rotate(15deg)">∂</span>
+  <span class="math-deco" style="top:48%;right:3%;font-size:36px;transform:rotate(-10deg)">∇</span>
+  <span class="math-deco" style="top:72%;left:-0.5%;font-size:38px;transform:rotate(22deg)">α</span>
+  <span class="math-deco" style="top:76%;right:6%;font-size:50px;transform:rotate(-15deg)">θ</span>
+
+  <div class="container">
+    <div class="hero-badge">✦ Obsidian 数学增强插件</div>
+    <h1>让数学笔记，<br><em>优雅且专业</em></h1>
+    <p class="hero-sub">
+      一款为学术写作量身打造的 Obsidian 插件。从定理编号到 TikZ 渲染，
+      从 GeoGebra 绘图到交换图编辑器，让抽象的数学语言在笔记中绽放。
+    </p>
+    <div class="hero-buttons">
+      <a href="https://github.com/AlbusGuo/obsidian-mathcraft/releases" target="_blank" class="btn-primary">
+        下载插件 →
+      </a>
+      <a href="#features" class="btn-secondary">
+        ▶ 了解更多
+      </a>
+    </div>
+    <div class="hero-video">
+      <iframe
+        src="//player.bilibili.com/player.html?bvid=BV1QfrWBsE9s&autoplay=0&high_quality=1"
+        allowfullscreen
+        border="0"
+        frameborder="no"
+        framespacing="0"
+        scrolling="no"
+      ></iframe>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ Tagline ═══ -->
+<section class="section" id="features">
+  <div class="container">
+    <div class="section-header">
+      <h2>不仅是工具，<br>更是学术写作的基石</h2>
+      <p>六大核心能力，重塑 Obsidian 数学笔记体验</p>
+    </div>
+
+    <div class="features-grid">
+      <!-- 定理系统 -->
+      <div class="feature-card">
+        <div class="feature-icon purple">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 19.5v-15A2.5 2.5 0 0 1 6.5 2H20v20H6.5a2.5 2.5 0 0 1 0-5H20"/></svg>
+        </div>
+        <h3>定理编号系统</h3>
+        <p>支持统一编号、按类型编号、按章节编号三种模式，覆盖 9 种定理类型。搭配 Card、LaTeX、Framed、Plain、Beamer 五种视觉风格和自定义颜色。</p>
+      </div>
+
+      <!-- 公式编号 -->
+      <div class="feature-card">
+        <div class="feature-icon green">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m18 16 4-4-4-4"/><path d="m6 8-4 4 4 4"/><path d="m14.5 4-5 16"/></svg>
+        </div>
+        <h3>公式与标题编号</h3>
+        <p>一键为 display math 添加 \tag 编号，支持顺序编号和按章节编号。标记模式精细控制哪些公式需要编号。同时支持多级标题自动编号。</p>
+      </div>
+
+      <!-- TikZ -->
+      <div class="feature-card">
+        <div class="feature-icon blue">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"/></svg>
+        </div>
+        <h3>TikZ 实时渲染</h3>
+        <p>在 Obsidian 中直接书写 TikZ 代码，通过 TikZJax 引擎实时渲染为高质量 SVG。内置暗色模式适配、SVG 缓存优化，支持弹出窗口。</p>
+      </div>
+
+      <!-- GeoGebra -->
+      <div class="feature-card">
+        <div class="feature-icon orange">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M12 2a14.5 14.5 0 0 0 0 20 14.5 14.5 0 0 0 0-20"/><path d="M2 12h20"/></svg>
+        </div>
+        <h3>GeoGebra 绘图集成</h3>
+        <p>自定义 .mcg 文件格式，在 Obsidian 中嵌入 GeoGebra 交互画布。支持一键导出为 TikZ 代码，动态几何与静态排版无缝衔接。</p>
+      </div>
+
+      <!-- 交换图 -->
+      <div class="feature-card">
+        <div class="feature-icon pink">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="18" height="18" x="3" y="3" rx="2" ry="2"/><path d="M3 9h18"/><path d="M3 15h18"/><path d="M9 3v18"/><path d="M15 3v18"/></svg>
+        </div>
+        <h3>交换图编辑器</h3>
+        <p>可视化网格编辑器，通过拖拽和键盘快捷键快速构建交换图。自动生成 tikzcd 代码，支持自定义节点和箭头标签。</p>
+      </div>
+
+      <!-- MathLinks -->
+      <div class="feature-card">
+        <div class="feature-icon purple">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"/><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"/></svg>
+        </div>
+        <h3>数学链接渲染</h3>
+        <p>将内部链接文本中的 LaTeX 公式实时渲染。引用定理自动显示编号与名称，引用公式自动显示标号，支持 Outline 视图数学渲染。</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ Showcase ═══ -->
+<section class="section section-alt" id="showcase">
+  <div class="container">
+    <div class="section-header">
+      <h2>功能演示</h2>
+      <p>点击选项卡切换不同功能的效果展示</p>
+    </div>
+
+    <div class="showcase-layout">
+      <div class="showcase-tabs">
+        <div class="showcase-tab active" data-demo="theorem">
+          <h4>定理编号与样式</h4>
+          <p>一键编号，五种视觉风格自由切换</p>
+        </div>
+        <div class="showcase-tab" data-demo="tikz">
+          <h4>TikZ 代码渲染</h4>
+          <p>在笔记中直接书写并实时预览 TikZ</p>
+        </div>
+        <div class="showcase-tab" data-demo="geogebra">
+          <h4>GeoGebra → TikZ</h4>
+          <p>动态几何导出为出版级矢量图</p>
+        </div>
+        <div class="showcase-tab" data-demo="cd">
+          <h4>交换图编辑器</h4>
+          <p>可视化构建范畴论交换图</p>
+        </div>
+      </div>
+
+      <div class="showcase-preview" id="showcasePreview">
+        <img class="showcase-img active" data-demo="theorem" src="https://placehold.co/800x500/1e1b2e/c084fc?text=定理编号+%26+样式&font=Noto+Sans+SC" alt="定理编号与样式">
+        <img class="showcase-img" data-demo="tikz" src="https://placehold.co/800x500/1e1b2e/93c5fd?text=TikZ+渲染&font=Noto+Sans+SC" alt="TikZ 代码渲染">
+        <img class="showcase-img" data-demo="geogebra" src="https://placehold.co/800x500/1e1b2e/86efac?text=GeoGebra+→+TikZ&font=Noto+Sans+SC" alt="GeoGebra → TikZ">
+        <img class="showcase-img" data-demo="cd" src="https://placehold.co/800x500/1e1b2e/fbbf24?text=交换图编辑器&font=Noto+Sans+SC" alt="交换图编辑器">
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ Pricing ═══ -->
+<section class="section" id="pricing">
+  <div class="container">
+    <div class="section-header">
+      <h2>选择适合你的方案</h2>
+      <p>无论学生还是研究者，MathCraft 都能为你的数学写作保驾护航</p>
+    </div>
+
+    <div class="pricing-grid two-col">
+      <!-- Version -->
+      <div class="pricing-card">
+        <div class="pricing-icon">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M13 2 3 14h9l-1 8 10-12h-9l1-8z"/></svg>
+        </div>
+        <div class="pricing-name">大版本买断</div>
+        <div class="pricing-desc">当前版本全功能，轻量起步无负担</div>
+        <div class="pricing-price">
+          <span class="currency">¥</span>18.8
+          <span class="pricing-future">¥28.8</span>
+        </div>
+        <div class="pricing-period">下一版本更新后售价提高至 ¥28.8</div>
+        <ul class="pricing-features">
+          <li class="pricing-feat">
+            <span class="check-icon">✓</span>
+            当前大版本所有功能
+          </li>
+        </ul>
+        <a href="https://pay.ldxp.cn/item/kt7vds" target="_blank" class="pricing-btn">获取激活码</a>
+      </div>
+
+      <!-- Lifetime -->
+      <div class="pricing-card featured">
+        <span class="popular-badge">⚡ 推荐方案</span>
+        <div class="pricing-icon">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 9H4.5a2.5 2.5 0 0 1 0-5C7 4 6.5 7 6.5 7"/><path d="M18 9h1.5a2.5 2.5 0 0 0 0-5C17 4 17.5 7 17.5 7"/><path d="M4 22h16"/><path d="M10 14.66V17c0 .55-.47.98-.97 1.21C7.85 18.75 7 20.24 7 22"/><path d="M14 14.66V17c0 .55.47.98.97 1.21C16.15 18.75 17 20.24 17 22"/><path d="M18 2H6v7a6 6 0 0 0 12 0V2Z"/></svg>
+        </div>
+        <div class="pricing-name">永久买断</div>
+        <div class="pricing-desc">一步到位，全功能终身升级</div>
+        <div class="pricing-price">
+          <span class="currency">¥</span>38.8
+          <span class="pricing-future">¥48.8</span>
+        </div>
+        <div class="pricing-period">下一版本更新后售价提高至 ¥48.8</div>
+        <ul class="pricing-features">
+          <li class="pricing-feat">
+            <span class="check-icon">✓</span>
+            所有功能完整解锁
+          </li>
+          <li class="pricing-feat">
+            <span class="check-icon">✓</span>
+            一次买断，永久更新
+          </li>
+          <li class="pricing-feat">
+            <span class="check-icon">✓</span>
+            专属会员群，即时响应
+          </li>
+        </ul>
+        <a href="https://pay.ldxp.cn/item/x8tivg" target="_blank" class="pricing-btn">获取激活码 →</a>
+      </div>
+    </div>
+    <p class="pricing-disclaimer">由于虚拟商品的特殊性，交易一旦成功后不支持退款，感谢理解。当用户（买方）支付完成，作者（卖方）将软件授权码发给购买用户（买方）后即表示交易成功。</p>
+  </div>
+</section>
+
+<!-- ═══ Footer ═══ -->
+<footer class="footer">
+  <div class="footer-inner">
+    <div class="footer-brand">
+      <span class="logo-icon">M</span>
+      MathCraft
+    </div>
+    <div class="footer-copy">© 2025 – 2026 by AlbusGuo</div>
+  </div>
+</footer>
+
+<script src="main.js"></script>
+</body>
+</html>
