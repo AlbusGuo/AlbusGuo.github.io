@@ -6,30 +6,33 @@
   <title>Albus</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
   <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect rx='18' width='100' height='100' fill='%231a1a2e'/><text x='50' y='72' font-size='62' font-weight='800' text-anchor='middle' fill='white'>A</text></svg>">
 </head>
 <body>
+  <canvas id="bgMesh"></canvas>
   <button class="theme-toggle" id="themeToggle" aria-label="切换深色模式">
     <svg class="icon-sun" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg>
     <svg class="icon-moon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
   </button>
   <div class="page">
     <header class="header">
-      <div class="avatar">A</div>
-      <h1>Albus</h1>
-      <p class="bio">Obsidian 插件开发者，专注数学与学术写作工具</p>
-      <div class="social-links">
-        <a href="https://github.com/AlbusGuo" target="_blank" rel="noopener" class="social-btn">
-          <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
-          GitHub
-        </a>
+      <div class="avatar"><img src="albus.svg" alt="Albus" class="avatar-img"></div>
+      <div class="header-body">
+        <h1><span class="prompt">&gt;</span> Albus<span class="cursor">_</span></h1>
+        <p class="bio"><span class="comment">#</span> Obsidian 插件开发者 · 数学与学术写作工具</p>
+        <div class="social-links">
+          <a href="https://github.com/AlbusGuo" target="_blank" rel="noopener" class="social-btn">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
+            github/AlbusGuo
+          </a>
+        </div>
       </div>
     </header>
 
     <section class="projects">
-      <h2 class="section-label">作品</h2>
+      <h2 class="section-label">Projects</h2>
       <div class="project-list">
         <a href="/mathcraft/" class="project-card">
           <div class="project-icon" style="background:#ede9fe;color:#7c3aed">M</div>
@@ -37,7 +40,6 @@
             <h3>MathCraft</h3>
             <p>Obsidian 数学增强插件 — 定理编号 · 公式编号 · TikZ 渲染 · GeoGebra 集成</p>
           </div>
-          <span class="project-arrow">→</span>
         </a>
         <a href="/super-daily-notes/" class="project-card">
           <div class="project-icon" style="background:#ccfbf1;color:#0d9488">S</div>
@@ -45,14 +47,48 @@
             <h3>Super Daily Notes</h3>
             <p>Obsidian 日程管理增强插件 — 日程规划 · 事件管理 · 习惯打卡 · 悬浮计时器</p>
           </div>
-          <span class="project-arrow">→</span>
+        </a>
+        <a href="https://github.com/AlbusGuo/albus-imagine" target="_blank" rel="noopener" class="project-card">
+          <div class="project-icon" style="background:#fff7ed;color:#ea580c">I</div>
+          <div class="project-body">
+            <h3>Albus Imagine</h3>
+            <p>Obsidian 图片综合管理插件 — 浏览、插入、排版、拖拽调整、全屏查看的完整图片工作流</p>
+          </div>
+        </a>
+        <a href="https://github.com/AlbusGuo/albus-status-bar-music" target="_blank" rel="noopener" class="project-card">
+          <div class="project-icon" style="background:#ffe4e6;color:#e11d48">M</div>
+          <div class="project-body">
+            <h3>Albus Status Bar Music</h3>
+            <p>Obsidian 状态栏音乐播放器 — 黑胶唱片风格，歌词显示、歌单管理、专辑封面</p>
+          </div>
+        </a>
+        <a href="https://github.com/AlbusGuo/albus-custom-buttons" target="_blank" rel="noopener" class="project-card">
+          <div class="project-icon" style="background:#dbeafe;color:#2563eb">B</div>
+          <div class="project-body">
+            <h3>Albus Custom Buttons</h3>
+            <p>Obsidian 功能区自定义插件 — 自定义按钮、拖拽排序、图标切换、SVG 图标支持</p>
+          </div>
+        </a>
+        <a href="https://github.com/AlbusGuo/albus-custom-about-blank" target="_blank" rel="noopener" class="project-card">
+          <div class="project-icon" style="background:#f1f5f9;color:#475569">A</div>
+          <div class="project-body">
+            <h3>Albus Custom About Blank</h3>
+            <p>Obsidian 新标签页自定义插件 — 快捷方式、搜索框、Logo、统计与热力图</p>
+          </div>
+        </a>
+        <a href="https://github.com/AlbusGuo/albus-plugins-and-styles-manager" target="_blank" rel="noopener" class="project-card">
+          <div class="project-icon" style="background:#dcfce7;color:#16a34a">P</div>
+          <div class="project-body">
+            <h3>Albus Plugins &amp; Styles Manager</h3>
+            <p>Obsidian 插件与样式集中管理 — 分组、搜索、批量切换插件和 CSS 代码片段</p>
+          </div>
         </a>
       </div>
     </section>
   </div>
 
   <footer class="footer">
-    <p>© 2025 – 2026 Albus</p>
+    <p><span class="footer-prompt">~</span> © 2026 – 2027 Albus</p>
   </footer>
 
   <script>
@@ -60,12 +96,121 @@
     var html = document.documentElement;
     var btn = document.getElementById('themeToggle');
     var stored = localStorage.getItem('theme');
-    if (stored === 'dark' || (!stored && window.matchMedia('(prefers-color-scheme:dark)').matches)) {
-      html.classList.add('dark');
+    if (stored === 'light' || (!stored && window.matchMedia('(prefers-color-scheme:light)').matches)) {
+      html.classList.add('light');
     }
     if (btn) btn.addEventListener('click', function(){
-      html.classList.toggle('dark');
-      localStorage.setItem('theme', html.classList.contains('dark') ? 'dark' : 'light');
+      html.classList.toggle('light');
+      localStorage.setItem('theme', html.classList.contains('light') ? 'light' : 'dark');
+    });
+  })();
+  </script>
+  <script>
+  (function(){
+    var canvas = document.getElementById('bgMesh');
+    var ctx = canvas.getContext('2d');
+    var mx = -1000, my = -1000;
+    var smx = -1000, smy = -1000;
+    var points = [];
+    var spacing = 72;
+    var w, h, cols, rows;
+
+    function resize() {
+      w = canvas.width = window.innerWidth;
+      h = canvas.height = window.innerHeight;
+      cols = Math.ceil(w / spacing) + 1;
+      rows = Math.ceil(h / spacing) + 1;
+      points = [];
+      for (var r = 0; r < rows; r++) {
+        for (var c = 0; c < cols; c++) {
+          points.push({
+            bx: c * spacing,
+            by: r * spacing,
+            x: c * spacing,
+            y: r * spacing
+          });
+        }
+      }
+    }
+
+    window.addEventListener('resize', resize);
+    document.addEventListener('mousemove', function(e) { mx = e.clientX; my = e.clientY; });
+
+    resize();
+
+    function draw() {
+      smx += (mx - smx) * 0.08;
+      smy += (my - smy) * 0.08;
+
+      var isLight = document.documentElement.classList.contains('light');
+      var lineColor = isLight ? '180,190,210' : '50,55,70';
+      var maxDist = spacing * 1.6;
+      var influenceRadius = 180;
+
+      ctx.clearRect(0, 0, w, h);
+
+      for (var i = 0; i < points.length; i++) {
+        var p = points[i];
+        var dx = smx - p.bx;
+        var dy = smy - p.by;
+        var dist = Math.sqrt(dx * dx + dy * dy);
+
+        if (dist < influenceRadius) {
+          var force = (1 - dist / influenceRadius) * spacing * 0.5;
+          var angle = Math.atan2(dy, dx);
+          p.x += (p.bx - Math.cos(angle) * force - p.x) * 0.12;
+          p.y += (p.by - Math.sin(angle) * force - p.y) * 0.12;
+        } else {
+          p.x += (p.bx - p.x) * 0.06;
+          p.y += (p.by - p.y) * 0.06;
+        }
+      }
+
+      ctx.strokeStyle = 'rgba(' + lineColor + ',.25)';
+      ctx.lineWidth = .6;
+      for (var i = 0; i < points.length; i++) {
+        var a = points[i];
+        var right = i + 1;
+        if (right < points.length && right % cols !== 0) {
+          var b = points[right];
+          var md = Math.sqrt(Math.pow((a.x - b.x),2) + Math.pow((a.y - b.y),2));
+          if (md < maxDist) {
+            var d1 = Math.sqrt(Math.pow(smx - (a.x+b.x)/2, 2) + Math.pow(smy - (a.y+b.y)/2, 2));
+            var alpha = d1 < influenceRadius ? .45 + (1 - d1/influenceRadius) * .3 : .25;
+            ctx.strokeStyle = 'rgba(' + lineColor + ',' + alpha + ')';
+            var lw = d1 < influenceRadius ? .6 + (1 - d1/influenceRadius) * 1.2 : .6;
+            ctx.lineWidth = lw;
+            ctx.beginPath();
+            ctx.moveTo(a.x, a.y);
+            ctx.lineTo(b.x, b.y);
+            ctx.stroke();
+          }
+        }
+        var below = i + cols;
+        if (below < points.length) {
+          var b2 = points[below];
+          var md2 = Math.sqrt(Math.pow((a.x - b2.x),2) + Math.pow((a.y - b2.y),2));
+          if (md2 < maxDist) {
+            var d2 = Math.sqrt(Math.pow(smx - (a.x+b2.x)/2, 2) + Math.pow(smy - (a.y+b2.y)/2, 2));
+            var alpha2 = d2 < influenceRadius ? .45 + (1 - d2/influenceRadius) * .3 : .25;
+            ctx.strokeStyle = 'rgba(' + lineColor + ',' + alpha2 + ')';
+            var lw2 = d2 < influenceRadius ? .6 + (1 - d2/influenceRadius) * 1.2 : .6;
+            ctx.lineWidth = lw2;
+            ctx.beginPath();
+            ctx.moveTo(a.x, a.y);
+            ctx.lineTo(b2.x, b2.y);
+            ctx.stroke();
+          }
+        }
+      }
+
+      requestAnimationFrame(draw);
+    }
+
+    draw();
+  })();
+  </script>
+      localStorage.setItem('theme', html.classList.contains('light') ? 'light' : 'dark');
     });
   })();
   </script>
