@@ -111,25 +111,27 @@
     var ctx = canvas.getContext('2d');
     var mx = -1000, my = -1000;
     var smx = -1000, smy = -1000;
-    var points = [];
-    var spacing = 72;
-    var w, h, cols, rows;
+    var particles = [];
+    var w, h;
+    var PARTICLE_COUNT = 150;
 
     function resize() {
       w = canvas.width = window.innerWidth;
       h = canvas.height = window.innerHeight;
-      cols = Math.ceil(w / spacing) + 1;
-      rows = Math.ceil(h / spacing) + 1;
-      points = [];
-      for (var r = 0; r < rows; r++) {
-        for (var c = 0; c < cols; c++) {
-          points.push({
-            bx: c * spacing,
-            by: r * spacing,
-            x: c * spacing,
-            y: r * spacing
-          });
-        }
+      initParticles();
+    }
+
+    function initParticles() {
+      particles = [];
+      for (var i = 0; i < PARTICLE_COUNT; i++) {
+        particles.push({
+          x: Math.random() * w,
+          y: Math.random() * h,
+          vx: (Math.random() - .5) * .2,
+          vy: (Math.random() - .5) * .2,
+          r: .7 + Math.random() * 1.6,
+          pulse: Math.random() * Math.PI * 2
+        });
       }
     }
 
@@ -139,69 +141,97 @@
     resize();
 
     function draw() {
-      smx += (mx - smx) * 0.08;
-      smy += (my - smy) * 0.08;
+      smx += (mx - smx) * .04;
+      smy += (my - smy) * .04;
 
       var isLight = document.documentElement.classList.contains('light');
-      var lineColor = isLight ? '180,190,210' : '50,55,70';
-      var maxDist = spacing * 1.6;
-      var influenceRadius = 180;
+      var lineBase = isLight ? '148,163,184' : '75,75,95';
+      var dotBase = isLight ? '100,116,139' : '110,110,130';
+      var glowColor = isLight ? '59,130,246' : '59,130,246';
+      var MAX_DIST = 200;
+      var MOUSE_RADIUS = 280;
 
       ctx.clearRect(0, 0, w, h);
 
-      for (var i = 0; i < points.length; i++) {
-        var p = points[i];
-        var dx = smx - p.bx;
-        var dy = smy - p.by;
-        var dist = Math.sqrt(dx * dx + dy * dy);
+      // Update particles
+      for (var i = 0; i < particles.length; i++) {
+        var p = particles[i];
+        p.x += p.vx;
+        p.y += p.vy;
+        p.pulse += .003;
+        if (p.x < -40) p.x = w + 40;
+        if (p.x > w + 40) p.x = -40;
+        if (p.y < -40) p.y = h + 40;
+        if (p.y > h + 40) p.y = -40;
+      }
 
-        if (dist < influenceRadius) {
-          var force = (1 - dist / influenceRadius) * spacing * 0.5;
-          var angle = Math.atan2(dy, dx);
-          p.x += (p.bx - Math.cos(angle) * force - p.x) * 0.12;
-          p.y += (p.by - Math.sin(angle) * force - p.y) * 0.12;
-        } else {
-          p.x += (p.bx - p.x) * 0.06;
-          p.y += (p.by - p.y) * 0.06;
+      // Draw connections
+      for (var i = 0; i < particles.length; i++) {
+        var a = particles[i];
+        for (var j = i + 1; j < particles.length; j++) {
+          var b = particles[j];
+          var dx = b.x - a.x;
+          var dy = b.y - a.y;
+          var dist = Math.sqrt(dx * dx + dy * dy);
+          if (dist > MAX_DIST) continue;
+
+          var mx2 = (a.x + b.x) / 2;
+          var my2 = (a.y + b.y) / 2;
+          var md = Math.sqrt(Math.pow(smx - mx2, 2) + Math.pow(smy - my2, 2));
+
+          var alpha = 1 - dist / MAX_DIST;
+          alpha *= .15;
+          if (md < MOUSE_RADIUS) {
+            alpha += (1 - md / MOUSE_RADIUS) * .5;
+          }
+
+          var grad = ctx.createLinearGradient(a.x, a.y, b.x, b.y);
+          grad.addColorStop(0, 'rgba(' + lineBase + ',0)');
+          grad.addColorStop(.2, 'rgba(' + lineBase + ',' + alpha.toFixed(3) + ')');
+          grad.addColorStop(.8, 'rgba(' + lineBase + ',' + alpha.toFixed(3) + ')');
+          grad.addColorStop(1, 'rgba(' + lineBase + ',0)');
+
+          var lw = .5;
+          if (md < MOUSE_RADIUS) lw += (1 - md / MOUSE_RADIUS) * 2;
+
+          ctx.strokeStyle = grad;
+          ctx.lineWidth = lw;
+          ctx.beginPath();
+          ctx.moveTo(a.x, a.y);
+          ctx.lineTo(b.x, b.y);
+          ctx.stroke();
         }
       }
 
-      ctx.strokeStyle = 'rgba(' + lineColor + ',.25)';
-      ctx.lineWidth = .6;
-      for (var i = 0; i < points.length; i++) {
-        var a = points[i];
-        var right = i + 1;
-        if (right < points.length && right % cols !== 0) {
-          var b = points[right];
-          var md = Math.sqrt(Math.pow((a.x - b.x),2) + Math.pow((a.y - b.y),2));
-          if (md < maxDist) {
-            var d1 = Math.sqrt(Math.pow(smx - (a.x+b.x)/2, 2) + Math.pow(smy - (a.y+b.y)/2, 2));
-            var alpha = d1 < influenceRadius ? .45 + (1 - d1/influenceRadius) * .3 : .25;
-            ctx.strokeStyle = 'rgba(' + lineColor + ',' + alpha + ')';
-            var lw = d1 < influenceRadius ? .6 + (1 - d1/influenceRadius) * 1.2 : .6;
-            ctx.lineWidth = lw;
-            ctx.beginPath();
-            ctx.moveTo(a.x, a.y);
-            ctx.lineTo(b.x, b.y);
-            ctx.stroke();
-          }
+      // Draw particle glow halos (mouse nearby only)
+      for (var i = 0; i < particles.length; i++) {
+        var p = particles[i];
+        var pd = Math.sqrt(Math.pow(smx - p.x, 2) + Math.pow(smy - p.y, 2));
+        if (pd < MOUSE_RADIUS * .7) {
+          var glowAlpha = (1 - pd / (MOUSE_RADIUS * .7)) * .15;
+          var glowRadius = p.r + (1 - pd / (MOUSE_RADIUS * .7)) * 6;
+          var glow = ctx.createRadialGradient(p.x, p.y, p.r, p.x, p.y, glowRadius);
+          glow.addColorStop(0, 'rgba(' + glowColor + ',' + (glowAlpha * 2).toFixed(3) + ')');
+          glow.addColorStop(1, 'rgba(' + glowColor + ',0)');
+          ctx.fillStyle = glow;
+          ctx.beginPath();
+          ctx.arc(p.x, p.y, glowRadius, 0, Math.PI * 2);
+          ctx.fill();
         }
-        var below = i + cols;
-        if (below < points.length) {
-          var b2 = points[below];
-          var md2 = Math.sqrt(Math.pow((a.x - b2.x),2) + Math.pow((a.y - b2.y),2));
-          if (md2 < maxDist) {
-            var d2 = Math.sqrt(Math.pow(smx - (a.x+b2.x)/2, 2) + Math.pow(smy - (a.y+b2.y)/2, 2));
-            var alpha2 = d2 < influenceRadius ? .45 + (1 - d2/influenceRadius) * .3 : .25;
-            ctx.strokeStyle = 'rgba(' + lineColor + ',' + alpha2 + ')';
-            var lw2 = d2 < influenceRadius ? .6 + (1 - d2/influenceRadius) * 1.2 : .6;
-            ctx.lineWidth = lw2;
-            ctx.beginPath();
-            ctx.moveTo(a.x, a.y);
-            ctx.lineTo(b2.x, b2.y);
-            ctx.stroke();
-          }
-        }
+      }
+
+      // Draw particle dots
+      for (var i = 0; i < particles.length; i++) {
+        var p = particles[i];
+        var pd = Math.sqrt(Math.pow(smx - p.x, 2) + Math.pow(smy - p.y, 2));
+        var da = .35;
+        if (pd < MOUSE_RADIUS) da += (1 - pd / MOUSE_RADIUS) * .55;
+        var pulseScale = 1 + Math.sin(p.pulse) * .15;
+        var r = p.r * pulseScale;
+        ctx.fillStyle = 'rgba(' + dotBase + ',' + da.toFixed(3) + ')';
+        ctx.beginPath();
+        ctx.arc(p.x, p.y, r, 0, Math.PI * 2);
+        ctx.fill();
       }
 
       requestAnimationFrame(draw);
