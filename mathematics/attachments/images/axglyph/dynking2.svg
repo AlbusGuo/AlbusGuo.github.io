@@ -1,0 +1,13 @@
+<?xml version="1.0"?>
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="73.8157959" height="25.2631588">
+	<defs />
+	<path d="M -213.556 0 L 213.557 0" fill="none" stroke="#000000" stroke-width="5.0666666" stroke-linecap="round" stroke-linejoin="round" transform="matrix(0.131579 0 0 0.131579 36.7217 12.7632)" />
+	<ellipse cx="249.80910110473633" cy="342.00008010864258" rx="19.950000762939453" ry="19.950000762939453" stroke="none" fill="#000000" transform="matrix(0.131579 0 0 0.131579 -23.9474 -32.2368)" />
+	<ellipse cx="249.80909442901611" cy="342.00010395050049" rx="13.300000190734863" ry="13.300000190734863" stroke="none" fill="#FFFFFF" transform="matrix(0.131579 0 0 0.131579 -23.9474 -32.2368)" />
+	<ellipse cx="676.4713020324707" cy="342.00008010864258" rx="19.950000762939453" ry="19.950000762939453" stroke="none" fill="#000000" transform="matrix(0.131579 0 0 0.131579 -23.9474 -32.2368)" />
+	<ellipse cx="676.47132587432861" cy="342.00010395050049" rx="13.300000190734863" ry="13.300000190734863" stroke="none" fill="#FFFFFF" transform="matrix(0.131579 0 0 0.131579 -23.9474 -32.2368)" />
+	<path d="M -213.556 0 L 213.557 0" fill="none" stroke="#000000" stroke-width="5.0666666" stroke-linecap="round" stroke-linejoin="round" transform="matrix(0.131579 0 0 0.131579 36.7217 10.5529)" />
+	<path d="M -213.556 0 L 213.557 0" fill="none" stroke="#000000" stroke-width="5.0666666" stroke-linecap="round" stroke-linejoin="round" transform="matrix(0.131579 0 0 0.131579 36.7217 14.9204)" />
+	<path d="M -23.4508 17.5729 L 23.4507 -17.5729" fill="none" stroke="#000000" stroke-width="5.0666666" stroke-linecap="round" stroke-linejoin="round" transform="matrix(0.131579 0 0 0.131579 36.7217 10.3203)" />
+	<path d="M -23.4508 -17.5728 L 23.4507 17.5729" fill="none" stroke="#000000" stroke-width="5.0666666" stroke-linecap="round" stroke-linejoin="round" transform="matrix(0.131579 0 0 0.131579 36.7217 15.206)" />
+</svg>

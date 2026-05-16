@@ -1,0 +1,26 @@
+<?xml version="1.0"?>
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="173.125" height="47.1875">
+	<defs />
+	<path d="M -49.3989 24 L 49.3992 -24" fill="none" stroke="#000000" stroke-width="2.13333344" stroke-linecap="round" stroke-linejoin="round" transform="matrix(0.3125 0 0 0.3125 146.544 16.25)" />
+	<path d="M -49.3989 -24 L 49.3992 24" fill="none" stroke="#000000" stroke-width="2.13333344" stroke-linecap="round" stroke-linejoin="round" transform="matrix(0.3125 0 0 0.3125 146.544 31.25)" />
+	<path d="M -49.0024 0 L 49.0021 0" fill="none" stroke="#000000" stroke-width="2.13333344" stroke-linecap="round" stroke-linejoin="round" transform="matrix(0.3125 0 0 0.3125 23.9574 25.95)" />
+	<path d="M -49.0024 0 L 49.0021 0" fill="none" stroke="#000000" stroke-width="2.13333344" stroke-linecap="round" stroke-linejoin="round" transform="matrix(0.3125 0 0 0.3125 23.9574 21.4167)" />
+	<path d="M -49.0025 0 L 49.0022 0" fill="none" stroke="#000000" stroke-width="2.13333344" stroke-linecap="round" stroke-linejoin="round" transform="matrix(0.3125 0 0 0.3125 54.5405 23.75)" />
+	<path d="M -48.8625 0 L 48.8619 0" fill="none" stroke="#000000" stroke-width="2.13333344" stroke-linecap="round" stroke-linejoin="round" transform="matrix(0.3125 0 0 0.3125 115.837 23.75)" />
+	<path d="M -49.0021 0 L 49.002 0" fill="none" stroke="#000000" stroke-width="2.13333344" stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="1.07733, 3.18933" transform="matrix(0.3125 0 0 0.3125 85.1668 23.75)" />
+	<ellipse cx="314.5271053314209" cy="341.99997520446777" rx="8.3999996185302734" ry="8.3999996185302734" stroke="none" fill="#000000" transform="matrix(0.3125 0 0 0.3125 -59.0625 -83.125)" />
+	<ellipse cx="314.52709341049194" cy="341.99996328353882" rx="5.5999999046325684" ry="5.5999999046325684" stroke="none" fill="#FFFFFF" transform="matrix(0.3125 0 0 0.3125 -59.0625 -83.125)" />
+	<ellipse cx="412.53177452087402" cy="341.99997520446777" rx="8.3999996185302734" ry="8.3999996185302734" stroke="none" fill="#000000" transform="matrix(0.3125 0 0 0.3125 -59.0625 -83.125)" />
+	<ellipse cx="412.53176259994507" cy="341.99996328353882" rx="5.5999999046325684" ry="5.5999999046325684" stroke="none" fill="#FFFFFF" transform="matrix(0.3125 0 0 0.3125 -59.0625 -83.125)" />
+	<ellipse cx="510.53595542907715" cy="341.99997520446777" rx="8.3999996185302734" ry="8.3999996185302734" stroke="none" fill="#000000" transform="matrix(0.3125 0 0 0.3125 -59.0625 -83.125)" />
+	<ellipse cx="510.53594350814819" cy="341.99996328353882" rx="5.5999999046325684" ry="5.5999999046325684" stroke="none" fill="#FFFFFF" transform="matrix(0.3125 0 0 0.3125 -59.0625 -83.125)" />
+	<ellipse cx="608.54044151306152" cy="341.99997520446777" rx="8.3999996185302734" ry="8.3999996185302734" stroke="none" fill="#000000" transform="matrix(0.3125 0 0 0.3125 -59.0625 -83.125)" />
+	<ellipse cx="608.54049062728882" cy="341.99996328353882" rx="5.5999999046325684" ry="5.5999999046325684" stroke="none" fill="#FFFFFF" transform="matrix(0.3125 0 0 0.3125 -59.0625 -83.125)" />
+	<ellipse cx="216.66145896911621" cy="341.99997520446777" rx="8.3999996185302734" ry="8.3999996185302734" stroke="none" fill="#000000" transform="matrix(0.3125 0 0 0.3125 -59.0625 -83.125)" />
+	<ellipse cx="216.66144704818726" cy="341.99996328353882" rx="5.5999999046325684" ry="5.5999999046325684" stroke="none" fill="#FFFFFF" transform="matrix(0.3125 0 0 0.3125 -59.0625 -83.125)" />
+	<ellipse cx="707.33847618103027" cy="389.99994468688965" rx="8.3999996185302734" ry="8.3999996185302734" stroke="none" fill="#000000" transform="matrix(0.3125 0 0 0.3125 -59.0625 -83.125)" />
+	<ellipse cx="707.33852529525757" cy="389.99993276596069" rx="5.5999999046325684" ry="5.5999999046325684" stroke="none" fill="#FFFFFF" transform="matrix(0.3125 0 0 0.3125 -59.0625 -83.125)" />
+	<path d="M -49.0024 0 L 49.0021 0" fill="none" stroke="#000000" stroke-width="2.13333344" stroke-linecap="round" stroke-linejoin="round" transform="matrix(0.3125 0 0 0.3125 23.9574 25.95)" />
+	<ellipse cx="707.33847618103027" cy="294.00003623962402" rx="8.3999996185302734" ry="8.3999996185302734" stroke="none" fill="#000000" transform="matrix(0.3125 0 0 0.3125 -59.0625 -83.125)" />
+	<ellipse cx="707.33852529525757" cy="294.00002431869507" rx="5.5999999046325684" ry="5.5999999046325684" stroke="none" fill="#FFFFFF" transform="matrix(0.3125 0 0 0.3125 -59.0625 -83.125)" />
+</svg>
