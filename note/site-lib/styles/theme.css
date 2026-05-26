@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?&family=Spectral:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,200;1,300;1,400;1,500;1,600;1,700;1,800&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap');
+
 /*#region 内容排版 */
 
 /*#region 编辑区焦点指示器 */
@@ -420,7 +422,7 @@ kbd:active {
 
 
 /*#region 新增 Callout 样式 */
-/*#region timeline */
+/*#region timeline 时间轴 */
 body {
   --timeline-title-color: var(--text-normal);
   --timeline-title-size: var(--h3-size);
@@ -443,6 +445,10 @@ body {
   --timeline-card-background-color: var(--color-base-30);
   --timeline-card-padding-x: 10px;
   --timeline-card-padding-y: 16px;
+
+  /* 👇 新增：标题垂直居中微调变量 👇 */
+  /* 如果文字相对圆点偏上，增大此数值；偏下则减小（支持负数） */
+  --timeline-title-offset-y: 5px; 
 }
 
 /* Timeline styling */
@@ -463,8 +469,11 @@ body {
     text-align: right;
     color: var(--timeline-title-color);
     font-size: var(--timeline-title-size);
-    margin-top: var(--dot-offset);
+    /* 将圆点的基础高度加上你的微调偏移量 */
+    margin-top: calc(var(--dot-offset) + var(--timeline-title-offset-y));
+    line-height: 1.3;
   }
+  
   .callout-icon {
     order: 2;
     margin-inline: var(--timeline-line-margin);
@@ -487,6 +496,7 @@ body {
       left: var(--timeline-dot-offset-x);
     }
   }
+  
   .svg-icon {
     display: none;
   }
@@ -512,10 +522,9 @@ div:not(:has(> [data-callout="timeline"])) + div > [data-callout="timeline"] {
 div:has(> [data-callout="timeline"]) + div:not(> [data-callout="timeline"]) {
   margin-bottom: 1rem;
 }
-
 /*#endregion */
 
-/*#region stickies */
+/*#region stickies 便签 */
 .theme-light{
     --stickies-change-color: rgb(247, 233, 153);
     --stickies-polaroid-shadow-color: rgb(0, 0, 0, 0.4);
@@ -622,25 +631,25 @@ div.callout[data-callout="stickies"] >.callout-content ul {
 }
 
 /*#endregion */
+/*#region you / me 聊天气泡 */
 
-/*#region you / me */
-/* [!you] 对方消息（左）  [!me] 自己消息（右），标题即用户名 */
-
-/* 共用：清除默认样式 */
+/* --- 基础容器与共用样式 --- */
 .callout[data-callout="you"],
 .callout[data-callout="me"] {
-    background: transparent;
-    border: none;
-    box-shadow: none;
-    padding: 0;
-    max-width: 75%;
+    background: transparent !important;
+    border: none !important;
+    box-shadow: none !important;
+    padding: 0 !important;
+    max-width: 75% !important;        /* 强行限制宽度 */
+    width: fit-content !important;    /* 强行自适应宽度，防主题干扰 */
+    word-break: break-word;
     position: relative;
+    overflow: visible;
 }
 
-/* 隐藏图标，标题变为用户名称标签 */
 .callout[data-callout="you"] .callout-icon,
 .callout[data-callout="me"] .callout-icon {
-    display: none;
+    display: none !important;
 }
 
 .callout[data-callout="you"] .callout-title,
@@ -652,11 +661,31 @@ div.callout[data-callout="stickies"] >.callout-content ul {
     letter-spacing: 0.03em;
 }
 
-/* ── you：对方（左） ── */
+.callout[data-callout="you"] .callout-content > p,
+.callout[data-callout="me"] .callout-content > p {
+    margin: 0 !important;
+}
+
+.callout[data-callout="you"] .callout-title img,
+.callout[data-callout="me"] .callout-title img {
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    object-fit: cover;
+    position: absolute;
+    top: 0;
+    border: 2px solid var(--background-primary);
+    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.15);
+}
+
+/* --- you：对方消息（左对齐） --- */
 .callout[data-callout="you"] {
-    margin-right: auto;
-    margin-left: 68px;  /* 为左侧头像留空 */
-    overflow: visible;
+    margin-right: auto !important;
+    margin-left: 0 !important; 
+}
+
+.callout[data-callout="you"]:has(.callout-title img) {
+    margin-left: 68px !important;
 }
 
 .callout[data-callout="you"] .callout-title {
@@ -664,29 +693,23 @@ div.callout[data-callout="stickies"] >.callout-content ul {
 }
 
 .callout[data-callout="you"] .callout-content {
-    background: var(--background-secondary);
-    border-radius: 4px 20px 20px 20px;
-    padding: 0 10px 0 10px;
+    background: var(--background-secondary) !important;
+    border-radius: 4px 20px 20px 20px !important;
+    padding: 5px 12px !important;
 }
 
-/* 头像：从标题中提取图片，移至气泡左侧 */
 .callout[data-callout="you"] .callout-title img {
-    width: 48px;
-    height: 48px;
-    border-radius: 50%;
-    object-fit: cover;
-    position: absolute;
     left: -62px;
-    top: 0;
-    border: 2px solid var(--background-primary);
-    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.15);
 }
 
-/* ── me：自己（右） ── */
+/* --- me：自己消息（右对齐） --- */
 .callout[data-callout="me"] {
-    margin-left: auto;
-    margin-right: 68px;  /* 为右侧头像留空 */
-    overflow: visible;
+    margin-left: auto !important;
+    margin-right: 0 !important; 
+}
+
+.callout[data-callout="me"]:has(.callout-title img) {
+    margin-right: 68px !important;
 }
 
 .callout[data-callout="me"] .callout-title {
@@ -694,34 +717,778 @@ div.callout[data-callout="stickies"] >.callout-content ul {
 }
 
 .callout[data-callout="me"] .callout-content {
-    background: rgba(var(--color-green-rgb), 0.5);
-    border-radius: 20px 4px 20px 20px;
-    color: var(--text-normal);
-    padding: 0 10px 0 10px;
+    background: rgba(var(--color-green-rgb), 0.5) !important;
+    border-radius: 20px 4px 20px 20px !important;
+    color: var(--text-normal) !important;
+    padding: 5px 12px !important;
 }
 
-/* 头像：从标题中提取图片，移至气泡右侧 */
 .callout[data-callout="me"] .callout-title img {
-    width: 48px;
-    height: 48px;
-    border-radius: 50%;
-    object-fit: cover;
-    position: absolute;
     right: -62px;
-    top: 0;
-    border: 2px solid var(--background-primary);
-    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.15);
 }
 
-/* 相邻气泡间距 */
 .callout[data-callout="you"] + .callout[data-callout="you"],
 .callout[data-callout="you"] + .callout[data-callout="me"],
 .callout[data-callout="me"] + .callout[data-callout="you"],
 .callout[data-callout="me"] + .callout[data-callout="me"] {
-    margin-top: 16px;
+    margin-top: 16px !important;
+}
+
+div:has(> .callout[data-callout="me"]) {
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: flex-end !important;
+    width: 100% !important;
+    background: transparent;
 }
 /*#endregion */
 
+/*#region pictorial 画报 */
+
+.callout[data-callout="pictorial"] {
+  --callout-color: var(--text-normal);
+  --callout-icon: none;
+
+  position: relative;
+  margin: 1.2em 0;
+  padding: 2px 54px 2px 2px;
+
+  color: var(--text-normal);
+  background: var(--background-primary);
+  border: 4px solid var(--text-normal);
+  border-radius: 0;
+  box-shadow: none;
+  box-sizing: border-box;
+}
+
+/* 内框线 */
+.callout[data-callout="pictorial"]::before {
+  content: "";
+  position: absolute;
+  inset: 2px 52px 2px 2px;
+  border: 1px solid var(--text-normal);
+  pointer-events: none;
+}
+
+/* 右侧反色竖排题签（默认状态） */
+.callout[data-callout="pictorial"]::after {
+  content: "號外"; /* 默认题签 */
+  position: absolute;
+  top: 2px;
+  right: 2px;
+  bottom: 2px;
+  width: 46px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  background: var(--text-normal);
+  color: var(--background-primary);
+
+  writing-mode: vertical-rl;
+  text-orientation: upright;
+  letter-spacing: 0.18em;
+  font-size: 1.35em;
+  font-weight: 800;
+  line-height: 1.1;
+  
+  /* 尝试利用 OpenType 特性强制调用繁体字形（需系统/字体支持） */
+  font-variant-east-asian: traditional;
+}
+
+/* 当传入 metadata 时（读取竖线后面的文字） */
+.callout[data-callout="pictorial"][data-callout-metadata]::after {
+  content: attr(data-callout-metadata);
+}
+
+/* 标题栏 */
+.callout[data-callout="pictorial"] > .callout-title {
+  position: relative;
+  z-index: 1;
+
+  margin: 0;
+  padding: 0.65em 0.9em 0.55em;
+
+  border-bottom: 2px solid var(--text-normal);
+  background: transparent;
+
+  color: var(--text-normal);
+  font-size: 1.2em;
+  font-weight: 900;
+  line-height: 1.2;
+  letter-spacing: 0.12em;
+}
+
+/* 去掉默认图标 */
+.callout[data-callout="pictorial"] > .callout-title .callout-icon {
+  display: none;
+}
+
+/* 标题文字 */
+.callout[data-callout="pictorial"] > .callout-title .callout-title-inner {
+  color: var(--text-normal);
+}
+
+/* 正文区域 */
+.callout[data-callout="pictorial"] > .callout-content {
+  position: relative;
+  z-index: 1;
+
+  margin: 0;
+  padding: 0.85em 1em 0.95em;
+
+  font-size: 1em;
+  line-height: 1.85;
+  letter-spacing: 0.03em;
+}
+
+/* 正文第一段不要太松 */
+.callout[data-callout="pictorial"] > .callout-content > p:first-child {
+  margin-top: 0;
+}
+
+.callout[data-callout="pictorial"] > .callout-content > p:last-child {
+  margin-bottom: 0;
+}
+
+
+/* 链接：不使用彩色，保持黑白印刷感 */
+.callout[data-callout="pictorial"] a {
+  color: var(--text-normal);
+  text-decoration: underline;
+  text-decoration-thickness: 1px;
+  text-underline-offset: 3px;
+}
+
+/* 加粗文字像小标题 */
+.callout[data-callout="pictorial"] strong {
+  font-weight: 900;
+  letter-spacing: 0.06em;
+}
+
+/* 行内代码做成铅字标签 */
+.callout[data-callout="pictorial"] code {
+  padding: 0.1em 0.35em;
+  border: 1px solid var(--text-muted);
+  border-radius: 0;
+  background: var(--background-primary-alt);
+  color: var(--text-normal);
+  font-family: var(--font-monospace);
+}
+
+/* 代码块 */
+.callout[data-callout="pictorial"] pre {
+  border: 1px solid var(--text-normal);
+  border-radius: 0;
+  background: var(--background-primary-alt);
+}
+
+/* 引用块内嵌时保持报纸侧栏感 */
+.callout[data-callout="pictorial"] blockquote {
+  margin: 0.8em 0;
+  padding: 0.4em 0.8em;
+  border-left: 3px solid var(--text-normal);
+  color: var(--text-muted);
+  background: transparent;
+}
+
+/* 表格：画报栏位风 */
+.callout[data-callout="pictorial"] table {
+  border-collapse: collapse;
+  width: 100%;
+  margin: 0.8em 0;
+}
+
+.callout[data-callout="pictorial"] th,
+.callout[data-callout="pictorial"] td {
+  border: 1px solid var(--text-normal);
+  padding: 0.45em 0.6em;
+}
+
+.callout[data-callout="pictorial"] th {
+  background: var(--text-normal);
+  color: var(--background-primary);
+  font-weight: 800;
+}
+
+/* 移动端 / 窄栏：右侧竖排变横条 */
+@media screen and (max-width: 520px) {
+  .callout[data-callout="pictorial"] {
+    padding: 42px 2px 2px 2px;
+  }
+
+  .callout[data-callout="pictorial"]::before {
+    inset: 42px 2px 2px 2px;
+  }
+
+  .callout[data-callout="pictorial"]::after {
+    top: 2px;
+    left: 2px;
+    right: 2px;
+    bottom: auto;
+    width: auto;
+    height: 38px;
+
+    writing-mode: horizontal-tb;
+    text-orientation: mixed;
+    letter-spacing: 0.25em;
+    font-size: 1.1em;
+  }
+}
+/*#endregion */
+
+/*#region tarot 塔罗 */
+.callout[data-callout="tarot"] {
+    --callout-color: transparent;
+    --callout-icon: none;
+    
+    background-color: #1a1a2e; /* 极夜蓝 */
+    color: #e5cc98; /* 烫金色 */
+    
+    /* 减少了整体的上下内边距 (从 40px 降到 25px)，让整体更紧凑 */
+    padding: 20px 30px;
+    margin: var(--p-spacing) 0;
+    
+    border-radius: 10px;
+    border: 2px solid #e5cc98;
+    outline: 1px solid #e5cc98;
+    outline-offset: -8px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.5);
+    font-family: "Palatino Linotype", "香萃打字机体";
+    position: relative;
+}
+
+/* 四个角落的圆点，稍微向外移了一点 (从 15px 改为 12px) 以适应变窄的边框 */
+.callout[data-callout="tarot"]::before {
+    content: "";
+    position: absolute;
+    top: 12px; left: 12px; right: 12px; bottom: 12px;
+    pointer-events: none;
+    background-image: 
+        radial-gradient(circle at 0 0, #e5cc98 3px, transparent 4px),
+        radial-gradient(circle at 100% 0, #e5cc98 3px, transparent 4px),
+        radial-gradient(circle at 0 100%, #e5cc98 3px, transparent 4px),
+        radial-gradient(circle at 100% 100%, #e5cc98 3px, transparent 4px);
+}
+
+.callout[data-callout="tarot"] .callout-title {
+    font-size: 1.4em;
+    font-weight: bold;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    border-bottom: 1px solid rgba(229, 204, 152, 0.5);
+    
+    /* 大幅减少标题底部的空白 */
+    padding-bottom: 8px;
+    /* 保持标题单独居中，维持华丽感 */
+    text-align: center; 
+}
+
+.callout[data-callout="tarot"] .callout-content {
+    line-height: 1.8;
+    /* 明确设置正文为左对齐，确保正常的阅读体验 */
+    text-align: left;
+}
+/*#endregion */
+
+/*#region terminal 终端 */
+.callout[data-callout="terminal"] {
+    --callout-color: 0, 255, 65; /* 矩阵绿 */
+    background-color: #0d1117;
+    color: #00ff41;
+    border: 1px solid #00ff41;
+    border-radius: 2px;
+    box-shadow: 0 0 12px rgba(0, 255, 65, 0.2), inset 0 0 15px rgba(0, 255, 65, 0.1);
+    font-family: "Consolas", monospace;
+    position: relative;
+}
+
+/* 移除默认图标，更像纯代码终端 */
+.callout[data-callout="terminal"] .callout-icon {
+    display: none; 
+}
+
+/* 模拟 CRT 屏幕扫描线 */
+.callout[data-callout="terminal"]::before {
+    content: " ";
+    display: block;
+    position: absolute;
+    top: 0; left: 0; bottom: 0; right: 0;
+    background: linear-gradient(rgba(18, 16, 16, 0) 50%, rgba(0, 0, 0, 0.3) 50%);
+    background-size: 100% 4px;
+    pointer-events: none;
+    z-index: 10;
+}
+
+.callout[data-callout="terminal"] .callout-title {
+    color: #00ff41;
+    text-shadow: 0 0 6px #00ff41;
+    border-bottom: 1px solid rgba(0, 255, 65, 0.4);
+    padding-bottom: 6px;
+}
+
+/* 让输入光标闪烁效果 (伪元素模拟) */
+.callout[data-callout="terminal"] .callout-title::after {
+    content: "█";
+    animation: blink 1s step-end infinite;
+    margin-left: 6px;
+}
+
+@keyframes blink {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0; }
+}
+/*#endregion */
+
+/*#region blueprint 蓝图 */
+.callout[data-callout="blueprint"] {
+    --callout-color: transparent;
+    --callout-icon: none;
+    
+    background-color: #1a4d80; /* 晒蓝图专用深蓝色 */
+    color: #ffffff;
+    /* 核心魔法：纯 CSS 绘制工程网格（主网格+细分网格） */
+    background-image: 
+        linear-gradient(rgba(255,255,255,0.3) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(255,255,255,0.3) 1px, transparent 1px),
+        linear-gradient(rgba(255,255,255,0.1) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(255,255,255,0.1) 1px, transparent 1px);
+    background-size: 50px 50px, 50px 50px, 10px 10px, 10px 10px;
+    background-position: -1px -1px;
+    
+    border: 3px solid #ffffff;
+    border-radius: 0;
+    padding: 13px 20px;
+    font-family: "Arial", sans-serif;
+    box-shadow: 2px 4px 10px rgba(0,0,0,0.3);
+}
+
+.theme-dark .callout[data-callout="blueprint"] {
+    background-color: #0f3054; /* 夜间模式加深蓝图颜色 */
+}
+
+/* 蓝图信息栏排版 */
+.callout[data-callout="blueprint"] .callout-title {
+    font-weight: 400;
+    font-size: 1.4em;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    /* 已删除 border-top 属性，去掉了顶部横线 */
+    border-bottom: 3px solid #ffffff; /* 工程图纸特有的粗底线 */
+    padding: 0 0 8px 0; /* 调整了 padding，因为没有了顶部横线，顶部不需要留白了 */
+    margin-bottom: 15px;
+    text-shadow: none;
+}
+
+.callout[data-callout="blueprint"] .callout-content {
+    line-height: 1.6;
+    letter-spacing: 1px;
+}
+
+/* 内部 SVG 反色处理 (将黑色线稿变为白色以融入蓝图) */
+.theme-light .callout[data-callout="blueprint"] .internal-embed {
+    filter: invert(100%) !important;
+}
+
+/*#endregion */
+
+/*#region blackboard 黑板 */
+.callout[data-callout="blackboard"] {
+    --callout-color: transparent;
+    --callout-icon: none;
+    
+    background-color: #1e3525; /* 经典黑板墨绿色 */
+    color: #e8eee9;
+    padding: 20px 30px;
+    border-radius: 4px; /* 稍微大一点的圆角，配合木框更自然 */
+    
+    /* --- 核心 1：3D 立体木制边框 --- */
+    /* 使用分色 border 模拟 3D 光影质感的木框（光从左上方打来） */
+    border-style: solid;
+    border-width: 6px;
+    border-top-color: #6a4a3a;    /* 顶侧受光面（浅木色） */
+    border-left-color: #5c4033;   /* 左侧侧光面 */
+    border-right-color: #4a2f24;  /* 右侧背光面 */
+    border-bottom-color: #3e2723; /* 底侧阴影面（深木色） */
+    
+    box-shadow: 
+        inset 0px 0px 10px 5px rgba(0,0,0,0.6);   /* 挂在墙上的整体柔和外投影 */
+        
+    /* --- 核心 2：没擦干净的粉笔灰痕迹 --- */
+    background-image: 
+        radial-gradient(circle at 30% 50%, rgba(255,255,255,0.06) 0%, transparent 20%),
+        radial-gradient(circle at 70% 80%, rgba(255,255,255,0.04) 0%, transparent 30%),
+        linear-gradient(45deg, rgba(255,255,255,0.02) 25%, transparent 25%, transparent 50%, rgba(255,255,255,0.02) 50%, rgba(255,255,255,0.02) 75%, transparent 75%, transparent);
+    background-size: 100% 100%, 100% 100%, 4px 4px; /* 最后一层是黑板的粗糙颗粒感 */
+    
+    /* 增加几个备用字体，防止没装汉仪粉笔体时退化成普通宋体 */
+    font-family: "撒野青春奶酪体", "Comic Sans MS", "Chalkboard SE", cursive, sans-serif; 
+}
+
+
+/* --- 核心 4：对齐与排版控制 --- */
+.callout[data-callout="blackboard"] .callout-title {
+    font-size: 1.5em;
+    margin: 0 !important;
+    justify-content: flex-start; /* 强制标题栏 Flex 元素左对齐 */
+    text-align: left; 
+    color:#f1c40f;
+}
+
+
+.callout[data-callout="blackboard"] .callout-content {
+    padding: 0 !important;
+    margin: 0 !important;
+    text-align: left; /* 强制内容左对齐 */
+    display: block;
+    font-size: 1.1em;
+}
+
+/* --- 粉笔字效果 --- */
+.callout[data-callout="blackboard"] .callout-title,
+.callout[data-callout="blackboard"] .callout-content {
+    text-shadow: 0.5px 0.5px 1px rgba(255,255,255,0.3); /* 模拟粉笔边缘掉粉造成的微小模糊 */
+    letter-spacing: 2px;
+    line-height: 1.6; /* 适当增加行高，提升大段文字的阅读体验 */
+}
+
+/*#endregion */
+
+/*#region draft 稿纸 */
+
+/* ===== 1. 基础变量与卡片样式 ===== */
+.callout[data-callout="draft"] {
+    /* 网格系统 */
+    --grid-height: 30px;
+    --text-offset: 4px;
+
+    /* 颜色 */
+    --card-bg: #fdf6e3;
+    --card-bg-dark: #2b2823;
+    --card-red-line: #d98282;
+    --card-red-line-dark: #8b4a4a;
+    --card-blue-line: #a3c6c6;
+    --card-blue-line-dark: #3a5c5c;
+
+    /* Obsidian 变量覆盖 */
+    --callout-color: transparent;
+    --callout-icon: none;
+
+    /* 卡片外观 */
+    background-color: var(--card-bg);
+    color: #333;
+    border: 1px solid #d3c7b1;
+    border-radius: 4px;
+    box-shadow: 2px 4px 10px rgba(0, 0, 0, 0.1);
+    position: relative;
+    font-family: "Comic Sans MS", "霞鹜文楷", sans-serif;
+    font-size: 16px !important;
+    padding: var(--grid-height) 20px var(--grid-height) 50px !important;
+    text-align: left !important; /* 新增：确保整体文字靠左对齐 */
+
+    /* 网格背景：红色竖线 + 蓝色横线 */
+    background-image:
+        linear-gradient(90deg, transparent 35px, var(--card-red-line) 35px, var(--card-red-line) 37px, transparent 37px),
+        linear-gradient(to bottom, transparent calc(var(--grid-height) - 1px), var(--card-blue-line) calc(var(--grid-height) - 1px), var(--card-blue-line) var(--grid-height));
+    background-size: 100% 100%, 100% var(--grid-height);
+    background-position: left top, left top;
+    background-repeat: no-repeat, repeat;
+
+    /* 防溢出 & 隐藏滚动条 */
+    overflow: hidden !important;
+    scrollbar-width: none !important;
+    -ms-overflow-style: none !important;
+    word-wrap: break-word !important;
+    overflow-wrap: anywhere !important;
+}
+
+/* ===== 2. 隐藏 Webkit 滚动条 ===== */
+.callout[data-callout="draft"]::-webkit-scrollbar,
+.callout[data-callout="draft"] .callout-content::-webkit-scrollbar {
+    display: none !important;
+    width: 0 !important;
+    height: 0 !important;
+    -webkit-appearance: none !important;
+}
+
+/* ===== 3. 深色模式 ===== */
+.theme-dark .callout[data-callout="draft"] {
+    background-color: var(--card-bg-dark);
+    border-color: #4a453b;
+    color: #d8d3c5;
+    background-image:
+        linear-gradient(90deg, transparent 35px, var(--card-red-line-dark) 35px, var(--card-red-line-dark) 37px, transparent 37px),
+        linear-gradient(to bottom, transparent calc(var(--grid-height) - 1px), var(--card-blue-line-dark) calc(var(--grid-height) - 1px), var(--card-blue-line-dark) var(--grid-height));
+}
+
+/* ===== 4. 标题 ===== */
+/* 新增：彻底隐藏原有的图标容器，防止它在左侧占位导致标题缩进 */
+.callout[data-callout="draft"] .callout-icon {
+    display: none !important;
+}
+
+.callout[data-callout="draft"] .callout-title {
+    font-size: 1.2em !important;
+    font-weight: bold;
+    color: #111;
+    border-bottom: none;
+    margin: 0 !important;
+    padding: 0 !important;
+    line-height: var(--grid-height) !important;
+    min-height: var(--grid-height) !important;
+    position: relative;
+    top: var(--text-offset);
+    overflow: visible !important;
+    justify-content: flex-start !important; /* 新增：标题栏 flex 容器强制靠左 */
+    text-align: left !important;            /* 新增：标题文字本身靠左 */
+}
+
+.theme-dark .callout[data-callout="draft"] .callout-title {
+    color: #f0ebd8;
+}
+
+.callout[data-callout="draft"] .callout-title-inner {
+    line-height: var(--grid-height) !important;
+}
+
+/* ===== 5. 内容区 ===== */
+.callout[data-callout="draft"] .callout-content {
+    margin: 0 !important;
+    padding: 0 !important;
+    overflow: visible !important;
+    text-align: left !important; /* 新增：内容区文字强制靠左 */
+}
+
+/* 直接子元素强制对齐网格 */
+.callout[data-callout="draft"] .callout-content > * {
+    margin-top: 0 !important;
+    margin-bottom: var(--grid-height) !important;
+    line-height: var(--grid-height) !important;
+    position: relative;
+    top: var(--text-offset);
+}
+
+.callout[data-callout="draft"] .callout-content > *:last-child {
+    margin-bottom: 0 !important;
+}
+
+/* 列表项对齐 */
+.callout[data-callout="draft"] .callout-content li {
+    line-height: var(--grid-height) !important;
+}
+
+/*#endregion */
+
+/*#region bamboo 竹简 */
+
+/* ===== 1. 基础变量与卡片样式 ===== */
+.callout[data-callout="bamboo"] {
+    /* 网格系统：定义单根竹简的宽度 */
+    --slip-width: 40px; 
+
+    /* 颜色配置 (日间) */
+    --bamboo-bg-1: #dcb37b;
+    --bamboo-bg-2: #c49963;
+    --bamboo-line-strong: rgba(139, 69, 19, 0.4);
+    --bamboo-line-light: rgba(139, 69, 19, 0.15);
+    --text-color: #2b1d11;
+
+    /* Obsidian 变量覆盖 */
+    --callout-color: transparent;
+    --callout-icon: none;
+
+    /* 卡片外观 */
+    color: var(--text-color);
+    font-family: "王羲之书法字体", "隶书", "STZhongsong", serif !important;
+    border-radius: 4px;
+    box-shadow: 3px 5px 15px rgba(0, 0, 0, 0.15);
+    
+    /* 核心 1：【动态宽度自适应】 */
+    display: block !important;
+    width: fit-content !important; 
+    max-width: 100% !important;
+    height: 460px;
+    overflow-x: auto !important;
+    overflow-y: hidden !important;
+    
+    /* 核心 2：强制竖排版 */
+    writing-mode: vertical-rl;
+    text-orientation: mixed;
+
+    /* 核心 3：安全排版区与完美对称留白 */
+    padding: 40px 20px!important;
+    
+    /* 【新增居中魔法】：利用 auto 自动平分左右剩余空间，让整个竹简居中展示 */
+    margin: 0 auto !important;
+
+    /* 核心 4：纯 CSS 复合背景（硬编码锁死，永远对齐网格） */
+    background-image: 
+        repeating-linear-gradient(to left, 
+            transparent 0, 
+            transparent 18px, 
+            var(--bamboo-line-strong) 18px, 
+            var(--bamboo-line-strong) 19px, 
+            var(--bamboo-line-light) 19px, 
+            var(--bamboo-line-light) 20px,
+            transparent 20px,
+            transparent 40px
+        ),
+        linear-gradient(90deg, var(--bamboo-bg-1), var(--bamboo-bg-2)) !important;
+    
+    background-size: 100% 100%, 100% 100%;
+    background-position: right top, left top;
+    background-repeat: repeat, no-repeat;
+    
+    border: none !important;
+    position: relative;
+}
+
+/* ===== 2. 隐藏 Webkit 滚动条 ===== */
+.callout[data-callout="bamboo"]::-webkit-scrollbar,
+.callout[data-callout="bamboo"] .callout-content::-webkit-scrollbar {
+    display: none !important;
+    width: 0 !important;
+    height: 0 !important;
+    -webkit-appearance: none !important;
+}
+
+/* ===== 3. 深色模式 ===== */
+.theme-dark .callout[data-callout="bamboo"] {
+    --bamboo-bg-1: #a88151;
+    --bamboo-bg-2: #825f38;
+    --bamboo-line-strong: rgba(89, 45, 10, 0.5);
+    --bamboo-line-light: rgba(89, 45, 10, 0.2);
+    --text-color: #1a0f05;
+}
+
+/* ===== 4. 标题与内容排版 ===== */
+
+.callout[data-callout="bamboo"] .callout-icon,
+.callout[data-callout="bamboo"] .callout-fold { 
+    display: none !important; 
+}
+
+/* 标题样式 */
+.callout[data-callout="bamboo"] .callout-title {
+    display: block !important;
+    border: none !important; 
+    background: transparent !important; 
+    
+    font-size: 1.5em !important;
+    font-weight: bold;
+    color: var(--text-color);
+    letter-spacing: 5px !important;
+    
+    margin: 0 0 0 var(--slip-width) !important; 
+    padding: 0 !important;
+    line-height: var(--slip-width) !important;
+    min-width: var(--slip-width) !important;
+}
+
+.callout[data-callout="bamboo"] .callout-title-inner {
+    display: block !important;
+    line-height: var(--slip-width) !important;
+}
+
+.callout[data-callout="bamboo"] .callout-content {
+    display: block !important;
+    margin: 0 !important; 
+    padding: 0 !important;
+    font-size: 1.2em;
+}
+
+/* 正文段落自动对齐 */
+.callout[data-callout="bamboo"] .callout-content > * {
+    margin-top: 0 !important; 
+    margin-bottom: 0 !important;
+    margin-right: 0 !important; 
+    
+    margin-left: var(--slip-width) !important; 
+    
+    padding: 0 !important;
+    line-height: var(--slip-width) !important;
+    letter-spacing: 2px !important;
+}
+
+.callout[data-callout="bamboo"] .callout-content > *:last-child { 
+    margin-left: 0 !important; 
+}
+
+.callout[data-callout="bamboo"] .callout-content li { 
+    line-height: var(--slip-width) !important; 
+}
+
+/* ===== 5. 伪元素生成扎带 ===== */
+.callout[data-callout="bamboo"]::before,
+.callout[data-callout="bamboo"]::after {
+    content: ''; 
+    position: absolute;
+    left: 0;
+    right: 0; 
+    height: 6px; 
+    background-image: repeating-linear-gradient(45deg, #5c3a21, #5c3a21 4px, #3d2616 4px, #3d2616 8px);
+    background-repeat: repeat-x; 
+    z-index: 1; 
+}
+
+.callout[data-callout="bamboo"]::before { top: 25px!important; }
+.callout[data-callout="bamboo"]::after { bottom: 25px!important; }
+
+/*#endregion */
+
+/*#region simple 极简 */
+.callout[data-callout="simple"] {
+    --callout-color: transparent;
+    --callout-icon: none;
+    
+    background-color: #ffffff;
+    color: #1a1a1a;
+    padding: 20px 30px;
+    
+    /* === 引入漫画风格的粗边框与重影设计 === */
+    border: 4px solid #1a1a1a;
+    border-radius: 0;
+    box-shadow: 8px 8px 0px #1a1a1a;
+    
+    font-family: "Mengshen-Handwritten", sans-serif;
+    transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* 深色模式兼容 */
+.theme-dark .callout[data-callout="simple"] {
+    background-color: #1a1a1a;
+    color: #ffffff;
+    /* 深色模式下边框和硬阴影颜色反转，确保视觉可见度和重影效果 */
+    border-color: #ffffff;
+    box-shadow: 8px 8px 0px #ffffff;
+}
+
+/* 核心魔法：强烈的红蓝视差分离 */
+.callout[data-callout="simple"] .callout-title,
+.callout[data-callout="simple"] .callout-content {
+    font-weight: bold;
+    letter-spacing: 2px;
+}
+
+
+.callout[data-callout="simple"] .callout-title {
+    font-size: 1.5em;
+    border-bottom: 2px solid #1a1a1a;
+    padding-bottom: 10px;
+    text-transform: uppercase;
+}
+
+.callout[data-callout="simple"] .callout-content {
+    font-size: 1.2em;
+    padding: 0 !important;
+    margin: 0 !important;
+}
+
+.theme-dark .callout[data-callout="simple"] .callout-title {
+    border-bottom-color: #ffffff;
+}
+/*#endregion */
 
 /*#endregion */
 /*#endregion */
@@ -1068,8 +1835,7 @@ pre[class='language-svg']:after {
   padding: 0 8px;
   border-radius: 4px;
   z-index: 10;
-  transition: background-color 0.2s, color 0.2s;
-  will-change: background-color, color
+  transition: background-color 0.2s, color 0.2s
 }
 
 .markdown-preview-view .copy-code-button:hover {
@@ -2147,7 +2913,6 @@ content: none;
 /*#endregion */
 
 /*#region black-and-white */
-@import url('https://fonts.googleapis.com/css2?&family=Spectral:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,200;1,300;1,400;1,500;1,600;1,700;1,800&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap');
 
 /* Black and white */
 .view-content:has(.black-and-white) {
