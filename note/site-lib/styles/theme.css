@@ -2,6 +2,51 @@
 
 /*#region 内容排版 */
 
+/*#region 链接样式 */
+/* Active line background */
+/* 源码模式：内部链接 */
+
+/* 预览模式：内部链接 */
+.markdown-preview-view .internal-link {
+  color: var(--text-normal) !important;
+  text-decoration-line: none !important;
+  border: 1px solid red;
+  border-radius: 0;
+  transition:
+    background-color var(--anim-duration-fast) ease,
+    color var(--anim-duration-fast) ease;
+}
+
+/* 源码模式：外部链接 */
+
+/* 预览模式：外部链接 */
+.markdown-preview-view .external-link {
+  color: var(--text-normal) !important;
+  text-decoration-line: none !important;
+  border: 1px solid red;
+  border-radius: 0;
+  transition:
+    background-color var(--anim-duration-fast) ease,
+    color var(--anim-duration-fast) ease;
+}
+
+/* 源码模式：hover 内部链接 */
+
+/* 预览模式：hover 内部链接 */
+.markdown-preview-view .internal-link:hover {
+  background-color: var(--background-modifier-hover);
+  color: var(--text-normal) !important;
+}
+
+/* 源码模式：hover 外部链接 */
+
+/* 预览模式：hover 外部链接 */
+.markdown-preview-view .external-link:hover {
+  background-color: var(--background-modifier-hover);
+  color: var(--text-normal) !important;
+}
+/*#endregion */
+
 /*#region 编辑区焦点指示器 */
 /* Active line background */
 
@@ -1558,36 +1603,7 @@ div.mermaid {
 }
 /*#endregion */
 
-/*#region 去掉链接下划线 */
-/* Active line background */
-.internal-link {
-  color: var(--link-color);
-  text-decoration-line: none !important;
-  border-radius: 4px;
-  transition:
-    background-color var(--anim-duration-fast) ease,
-    color var(--anim-duration-fast) ease;
-}
 
-.external-link {
-  color: var(--link-external-color);
-  text-decoration-line: none !important;
-  border-radius: 4px;
-  transition:
-    background-color var(--anim-duration-fast) ease,
-    color var(--anim-duration-fast) ease;
-}
-
-.internal-link:hover {
-  background-color: var(--background-modifier-hover);
-  color: var(--link-color-hover) !important;
-}
-
-.external-link:hover {
-  background-color: var(--background-modifier-hover);
-  color: var(--link-external-color-hover) !important;
-}
-/*#endregion */
 
 /*#region 段落间距 */
 .markdown-rendered p {
