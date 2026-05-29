@@ -592,7 +592,7 @@ div:has(> [data-callout="timeline"]) + div:not(> [data-callout="timeline"]) {
 }
 
 
-.callout[data-callout="stickies"] >.callout-title {
+.callout[data-callout="stickies"] .callout-title {
   display: none;
 }
 
@@ -1018,16 +1018,14 @@ div:has(> .callout[data-callout="me"]) {
 }
 
 .callout[data-callout="tarot"] .callout-title {
+    color: #e5cc98;
     font-size: 1.4em;
     font-weight: bold;
     letter-spacing: 3px;
-    text-transform: uppercase;
     border-bottom: 1px solid rgba(229, 204, 152, 0.5);
     
     /* 大幅减少标题底部的空白 */
     padding-bottom: 8px;
-    /* 保持标题单独居中，维持华丽感 */
-    text-align: center; 
 }
 
 .callout[data-callout="tarot"] .callout-content {
@@ -1115,6 +1113,7 @@ div:has(> .callout[data-callout="me"]) {
 
 /* 蓝图信息栏排版 */
 .callout[data-callout="blueprint"] .callout-title {
+    color: #ffffff;
     font-weight: 400;
     font-size: 1.4em;
     letter-spacing: 2px;
@@ -1518,6 +1517,7 @@ div:has(> .callout[data-callout="me"]) {
 
 
 .callout[data-callout="simple"] .callout-title {
+    color: inherit;
     font-size: 1.5em;
     border-bottom: 2px solid #1a1a1a;
     padding-bottom: 10px;
@@ -1539,6 +1539,13 @@ div:has(> .callout[data-callout="me"]) {
 /*#endregion */
 
 /*#region 官方样式修复 */
+
+/*#region 设置界面边距减小 */
+
+.vertical-tab-content{
+  padding: 30px 40px !important;
+}
+/*#endregion */
 
 /*#region 引用框边距减少 */
 blockquote {
