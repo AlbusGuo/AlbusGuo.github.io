@@ -378,6 +378,16 @@ button { cursor: pointer; font-family: inherit; }
   font-size: 14px; color: var(--text-secondary);
 }
 .check-icon { color: var(--accent); flex-shrink: 0; margin-top: 2px; }
+.pricing-feat-coming {
+  font-style: italic;
+  color: var(--text-secondary);
+  opacity: .65;
+}
+.pricing-feat-coming .check-icon {
+  font-style: normal;
+  opacity: 1;
+  margin-top: 0;
+}
 
 .pricing-btn {
   display: block; width: 100%;
