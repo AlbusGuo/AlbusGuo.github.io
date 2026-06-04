@@ -283,19 +283,6 @@ button { cursor: pointer; font-family: inherit; }
   display: block;
 }
 
-.showcase-credit {
-  font-size: 12px;
-  color: var(--text-secondary);
-  margin-top: 8px;
-  text-align: center;
-}
-.showcase-credit a {
-  color: var(--accent);
-  word-break: break-all;
-}
-.showcase-credit a:hover {
-  text-decoration: underline;
-}
 
 /* ── Pricing ── */
 .pricing-grid {
