@@ -681,20 +681,20 @@ div.callout[data-callout="stickies"] >.callout-content ul {
 /* --- 基础容器与共用样式 --- */
 .callout[data-callout="you"],
 .callout[data-callout="me"] {
-    background: transparent !important;
-    border: none !important;
-    box-shadow: none !important;
-    padding: 0 !important;
-    max-width: 75% !important;        /* 强行限制宽度 */
-    width: fit-content !important;    /* 强行自适应宽度，防主题干扰 */
+    background: transparent;
+    border: none;
+    box-shadow: none;
+    padding: 0;
+    max-width: 75%;
+    width: fit-content;
     word-break: break-word;
     position: relative;
-    overflow: visible;
+    overflow: visible !important;
 }
 
 .callout[data-callout="you"] .callout-icon,
 .callout[data-callout="me"] .callout-icon {
-    display: none !important;
+    display: none;
 }
 
 .callout[data-callout="you"] .callout-title,
@@ -708,7 +708,12 @@ div.callout[data-callout="stickies"] >.callout-content ul {
 
 .callout[data-callout="you"] .callout-content > p,
 .callout[data-callout="me"] .callout-content > p {
-    margin: 0 !important;
+    margin: 0;
+}
+
+.callout[data-callout="you"] .callout-content,
+.callout[data-callout="me"] .callout-content {
+    padding: 12px;
 }
 
 .callout[data-callout="you"] .callout-title img,
@@ -725,12 +730,12 @@ div.callout[data-callout="stickies"] >.callout-content ul {
 
 /* --- you：对方消息（左对齐） --- */
 .callout[data-callout="you"] {
-    margin-right: auto !important;
-    margin-left: 0 !important; 
+    margin-right: auto;
+    margin-left: 0; 
 }
 
 .callout[data-callout="you"]:has(.callout-title img) {
-    margin-left: 68px !important;
+    margin-left: 68px;
 }
 
 .callout[data-callout="you"] .callout-title {
@@ -738,9 +743,8 @@ div.callout[data-callout="stickies"] >.callout-content ul {
 }
 
 .callout[data-callout="you"] .callout-content {
-    background: var(--background-secondary) !important;
-    border-radius: 4px 20px 20px 20px !important;
-    padding: 5px 12px !important;
+    background: var(--background-secondary);
+    border-radius: 4px 20px 20px 20px;
 }
 
 .callout[data-callout="you"] .callout-title img {
@@ -749,34 +753,26 @@ div.callout[data-callout="stickies"] >.callout-content ul {
 
 /* --- me：自己消息（右对齐） --- */
 .callout[data-callout="me"] {
-    margin-left: auto !important;
-    margin-right: 0 !important; 
+    margin-left: auto;
+    margin-right: 0; 
 }
 
 .callout[data-callout="me"]:has(.callout-title img) {
-    margin-right: 68px !important;
+    margin-right: 68px;
 }
 
 .callout[data-callout="me"] .callout-title {
     justify-content: flex-end;
+    overflow: visible;
 }
 
 .callout[data-callout="me"] .callout-content {
-    background: rgba(var(--color-green-rgb), 0.5) !important;
-    border-radius: 20px 4px 20px 20px !important;
-    color: var(--text-normal) !important;
-    padding: 5px 12px !important;
+    background: rgba(var(--color-green-rgb), 0.5);
+    border-radius: 20px 4px 20px 20px;
 }
 
 .callout[data-callout="me"] .callout-title img {
     right: -62px;
-}
-
-.callout[data-callout="you"] + .callout[data-callout="you"],
-.callout[data-callout="you"] + .callout[data-callout="me"],
-.callout[data-callout="me"] + .callout[data-callout="you"],
-.callout[data-callout="me"] + .callout[data-callout="me"] {
-    margin-top: 16px !important;
 }
 
 div:has(> .callout[data-callout="me"]) {
@@ -785,6 +781,8 @@ div:has(> .callout[data-callout="me"]) {
     align-items: flex-end !important;
     width: 100% !important;
     background: transparent;
+    overflow: visible !important;
+    contain: none !important;
 }
 /*#endregion */
 
@@ -1808,9 +1806,7 @@ pre[class='language-svg']:after {
   padding-right: 0;
   margin: 20px 0;
   overflow: hidden;
-  transition: border-color 0.3s ease;
-  content-visibility: auto;
-  contain-intrinsic-size: auto 120px
+  transition: border-color 0.3s ease
 }
 
 
