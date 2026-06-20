@@ -9,10 +9,10 @@
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
   <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect rx='18' width='100' height='100' fill='%231a1a2e'/><text x='50' y='72' font-size='62' font-weight='800' text-anchor='middle' fill='white'>A</text></svg>">
-  <script src="https://cdn.jsdelivr.net/npm/ogl@1.0.11/dist/ogl.umd.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/three@0.160.0/build/three.min.js"></script>
 </head>
 <body>
-  <div id="ferrofluidBg" class="ferrofluid-bg"></div>
+  <div id="antigravityBg" class="antigravity-bg"></div>
   <button class="theme-toggle" id="themeToggle" aria-label="切换深色模式">
     <svg class="icon-sun" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg>
     <svg class="icon-moon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
@@ -110,273 +110,149 @@
   </script>
   <script>
   (function(){
-    var O = window.ogl || window.OGL;
-    if (!O) { console.warn('ogl not loaded'); return; }
-    var Renderer = O.Renderer, Program = O.Program, Mesh = O.Mesh, Triangle = O.Triangle;
+    if (!window.THREE) { console.warn('Three.js not loaded'); return; }
+    var THREE = window.THREE;
 
-    // ── Configuration (studio defaults for max visibility) ──
-    var COLORS = ['#3b82f6', '#6366f1', '#a5b4fc'];
-    var SPEED = 0.5;
-    var SCALE = 1.0;
-    var TURBULENCE = 1;
-    var FLUIDITY = 0.1;
-    var RIM_WIDTH = 0.2;
-    var SHARPNESS = 3;
-    var SHIMMER = 1;
-    var GLOW = 2;
-    var FLOW_DIRECTION = 'down';
-    var OPACITY = 1;
-    var MOUSE_INTERACTION = true;
-    var MOUSE_STRENGTH = 1;
-    var MOUSE_RADIUS = 0.35;
-    var MOUSE_DAMPENING = 0.15;
-    var MAX_COLORS = 8;
+    var COUNT = 300, MAGNET_RADIUS = 6, RING_RADIUS = 7;
+    var WAVE_SPEED = 0.4, WAVE_AMPLITUDE = 1;
+    var PARTICLE_SIZE = 1.5, LERP_SPEED = 0.05;
+    var COLOR = '#3b82f6', AUTO_ANIMATE = true;
+    var PARTICLE_VARIANCE = 1, ROTATION_SPEED = 0;
+    var DEPTH_FACTOR = 1, PULSE_SPEED = 3;
+    var FIELD_STRENGTH = 10;
 
-    // ── Helpers ──
-    function hexToRGB(hex) {
-      var c = hex.replace('#', '');
-      while (c.length < 6) c += '0';
-      return [parseInt(c.slice(0,2),16)/255, parseInt(c.slice(2,4),16)/255, parseInt(c.slice(4,6),16)/255];
-    }
-
-    function prepColors(input) {
-      var base = (input && input.length ? input : ['#4F46E5','#06B6D4','#E0F2FE']).slice(0, MAX_COLORS);
-      var count = base.length;
-      var arr = [];
-      for (var i = 0; i < MAX_COLORS; i++) arr.push(hexToRGB(base[Math.min(i, base.length - 1)]));
-      var avg = [0,0,0];
-      for (var i = 0; i < count; i++) { avg[0] += arr[i][0]; avg[1] += arr[i][1]; avg[2] += arr[i][2]; }
-      avg[0] /= count; avg[1] /= count; avg[2] /= count;
-      return { arr: arr, count: count, avg: avg };
-    }
-
-    function flowVec(d) {
-      if (d === 'up') return [0,1];
-      if (d === 'left') return [-1,0];
-      if (d === 'right') return [1,0];
-      return [0,-1]; // down
-    }
-
-    // ── Shaders (exact from reactbits) ──
-    var vertex = [
-      'attribute vec2 position;',
-      'attribute vec2 uv;',
-      'varying vec2 vUv;',
-      'void main() {',
-      '  vUv = uv;',
-      '  gl_Position = vec4(position, 0.0, 1.0);',
-      '}'
-    ].join('\n');
-
-    var fragment = [
-      'precision highp float;',
-      'uniform vec3  iResolution;',
-      'uniform vec2  iMouse;',
-      'uniform float iTime;',
-      'uniform vec3  uColor0;',
-      'uniform vec3  uColor1;',
-      'uniform vec3  uColor2;',
-      'uniform vec3  uColor3;',
-      'uniform vec3  uColor4;',
-      'uniform vec3  uColor5;',
-      'uniform vec3  uColor6;',
-      'uniform vec3  uColor7;',
-      'uniform int   uColorCount;',
-      'uniform vec3  uMouseColor;',
-      'uniform vec2  uFlow;',
-      'uniform float uSpeed;',
-      'uniform float uScale;',
-      'uniform float uTurbulence;',
-      'uniform float uFluidity;',
-      'uniform float uRimWidth;',
-      'uniform float uSharpness;',
-      'uniform float uShimmer;',
-      'uniform float uGlow;',
-      'uniform float uOpacity;',
-      'uniform float uMouseEnabled;',
-      'uniform float uMouseStrength;',
-      'uniform float uMouseRadius;',
-      'varying vec2 vUv;',
-      '#define PI 3.14159265',
-      'vec3 palette(float h) {',
-      '  int count = uColorCount;',
-      '  if (count < 1) count = 1;',
-      '  int idx = int(floor(clamp(h, 0.0, 0.999999) * float(count)));',
-      '  if (idx <= 0) return uColor0;',
-      '  if (idx == 1) return uColor1;',
-      '  if (idx == 2) return uColor2;',
-      '  if (idx == 3) return uColor3;',
-      '  if (idx == 4) return uColor4;',
-      '  if (idx == 5) return uColor5;',
-      '  if (idx == 6) return uColor6;',
-      '  return uColor7;',
-      '}',
-      'float hash(vec3 p3) {',
-      '  p3 = fract(p3 * 0.1031);',
-      '  p3 += dot(p3, p3.zyx + 33.33);',
-      '  return fract((p3.x + p3.y) * p3.z);',
-      '}',
-      'float smin(float a, float b, float k) {',
-      '  float r = exp2(-a / k) + exp2(-b / k);',
-      '  return -k * log2(r);',
-      '}',
-      'float sinlerp(float a, float b, float w) {',
-      '  return mix(a, b, (sin(w * PI - PI / 2.0) + 1.0) / 2.0);',
-      '}',
-      'float vn(vec2 p, float s, float seed) {',
-      '  vec2 cellp = floor(p / s);',
-      '  vec2 relp = mod(p, s);',
-      '  float g1 = hash(vec3(cellp, seed));',
-      '  float g2 = hash(vec3(cellp.x + 1.0, cellp.y, seed));',
-      '  float g3 = hash(vec3(cellp.x + 1.0, cellp.y + 1.0, seed));',
-      '  float g4 = hash(vec3(cellp.x, cellp.y + 1.0, seed));',
-      '  float bx = sinlerp(g1, g2, relp.x / s);',
-      '  float tx = sinlerp(g4, g3, relp.x / s);',
-      '  return sinlerp(bx, tx, relp.y / s);',
-      '}',
-      'float dbn(vec2 p, float s, float seed) {',
-      '  float o = s / 2.0;',
-      '  float n0 = vn(p, s, seed);',
-      '  float n1 = vn(p + vec2(o, o), s, seed + 0.1);',
-      '  float n2 = vn(p + vec2(-o, o), s, seed + 0.2);',
-      '  float n3 = vn(p + vec2(o, -o), s, seed + 0.3);',
-      '  float n4 = vn(p + vec2(-o, -o), s, seed + 0.4);',
-      '  return (2.0 * n0 + 1.5 * n1 + 1.25 * n2 + 1.125 * n3 + n4) / 7.0;',
-      '}',
-      'void mainImage(out vec4 fragColor, in vec2 fragCoord) {',
-      '  float ref = 700.0 / max(uScale, 0.05);',
-      '  vec2 p = fragCoord / iResolution.y * ref;',
-      '  float spd = 200.0 * uSpeed;',
-      '  float t = iTime;',
-      '  vec2 dir = uFlow;',
-      '  vec2 perp = vec2(-dir.y, dir.x);',
-      '  float distort1 = vn(p + perp * (t * spd), 60.0, 10.0) * 50.0 * uTurbulence;',
-      '  float distort2 = vn(p - perp * (t * spd), 120.0, 15.0) * 100.0 * uTurbulence;',
-      '  float peaks = dbn(p + distort1 + dir * (t * spd * 0.5), 40.0, 1.0);',
-      '  float peaks2 = dbn(p + distort2 - dir * (t * spd * 0.5), 40.0, 0.0);',
-      '  float mapeaks = smin(peaks, peaks2, max(uFluidity, 0.001));',
-      '  float mGlow = 0.0;',
-      '  if (uMouseEnabled > 0.5) {',
-      '    vec2 mp = iMouse / iResolution.y * ref;',
-      '    float md = length(p - mp) / ref;',
-      '    float rr = max(uMouseRadius, 0.02);',
-      '    mGlow = exp(-md * md / (rr * rr)) * uMouseStrength;',
-      '  }',
-      '  float band = (uRimWidth - abs((mapeaks - 0.4) * 2.0)) * 5.0;',
-      '  float ltn = clamp(band - vn(p + dir * (t * spd * 0.5), 60.0, 12.0) * uShimmer, 0.0, 1.0);',
-      '  ltn = pow(ltn, uSharpness) * uGlow;',
-      '  ltn = max(ltn, 0.04);',
-      '  ltn *= clamp(1.0 - mGlow, 0.0, 1.0);',
-      '  float h = clamp(0.5 + (peaks - peaks2) * 0.8, 0.0, 1.0);',
-      '  vec3 col = palette(h);',
-      '  vec3 outc = col * ltn;',
-      '  float a = clamp(max(outc.r, max(outc.g, outc.b)), 0.0, 1.0);',
-      '  fragColor = vec4(outc, a * uOpacity);',
-      '}',
-      'void main() {',
-      '  vec4 color;',
-      '  mainImage(color, vUv * iResolution.xy);',
-      '  gl_FragColor = color;',
-      '}'
-    ].join('\n');
-
-    // ── Init ──
-    var container = document.getElementById('ferrofluidBg');
+    var container = document.getElementById('antigravityBg');
     if (!container) return;
 
-    var renderer = new Renderer({
-      dpr: window.devicePixelRatio || 1,
-      alpha: true,
-      antialias: true
+    var width = window.innerWidth, height = window.innerHeight;
+    var scene = new THREE.Scene();
+    var camera = new THREE.PerspectiveCamera(35, width/height, 0.1, 200);
+    camera.position.set(0, 0, 50);
+
+    var renderer = new THREE.WebGLRenderer({ alpha: true, antialias: true });
+    renderer.setSize(width, height);
+    renderer.setPixelRatio(Math.min(window.devicePixelRatio || 1, 2));
+    renderer.domElement.style.display = 'block';
+    container.appendChild(renderer.domElement);
+
+    function getViewport() {
+      var h = 2 * 50 * Math.tan((35/2) * Math.PI / 180);
+      return { w: h * (width/height), h: h };
+    }
+    var vp = getViewport();
+
+    var geometry = new THREE.CapsuleGeometry(0.1, 0.4, 4, 8);
+    var material = new THREE.MeshBasicMaterial({ color: COLOR });
+    var mesh = new THREE.InstancedMesh(geometry, material, COUNT);
+    scene.add(mesh);
+    var dummy = new THREE.Object3D();
+
+    var particles = [];
+    for (var i = 0; i < COUNT; i++) {
+      var p = {
+        t: Math.random() * 100,
+        speed: 0.01 + Math.random() / 200,
+        mx: (Math.random() - 0.5) * vp.w,
+        my: (Math.random() - 0.5) * vp.h,
+        mz: (Math.random() - 0.5) * 20,
+        randomRadiusOffset: (Math.random() - 0.5) * 2
+      };
+      p.cx = p.mx; p.cy = p.my; p.cz = p.mz;
+      particles.push(p);
+    }
+
+    var mouseX = 0, mouseY = 0;
+    var lastMousePos = { x: 0, y: 0 };
+    var lastMouseMoveTime = 0;
+    var virtualMouse = { x: 0, y: 0 };
+
+    document.addEventListener('pointermove', function(e) {
+      mouseX = e.clientX; mouseY = e.clientY;
     });
-    var gl = renderer.gl;
-    var canvas = gl.canvas;
-    gl.clearColor(0, 0, 0, 0);
-    canvas.style.width = '100%';
-    canvas.style.height = '100%';
-    canvas.style.display = 'block';
-    container.appendChild(canvas);
 
-    var prepared = prepColors(COLORS);
-    var arr = prepared.arr, count = prepared.count, avg = prepared.avg;
+    window.addEventListener('resize', function() {
+      width = window.innerWidth; height = window.innerHeight;
+      renderer.setSize(width, height);
+      camera.aspect = width / height;
+      camera.updateProjectionMatrix();
+      vp = getViewport();
+    });
 
-    var uniforms = {
-      iResolution: { value: [gl.drawingBufferWidth, gl.drawingBufferHeight, 1] },
-      iMouse: { value: [0, 0] },
-      iTime: { value: 0 },
-      uColor0: { value: arr[0] }, uColor1: { value: arr[1] },
-      uColor2: { value: arr[2] }, uColor3: { value: arr[3] },
-      uColor4: { value: arr[4] }, uColor5: { value: arr[5] },
-      uColor6: { value: arr[6] }, uColor7: { value: arr[7] },
-      uColorCount: { value: count },
-      uMouseColor: { value: avg },
-      uFlow: { value: flowVec(FLOW_DIRECTION) },
-      uSpeed: { value: SPEED },
-      uScale: { value: SCALE },
-      uTurbulence: { value: TURBULENCE },
-      uFluidity: { value: FLUIDITY },
-      uRimWidth: { value: RIM_WIDTH },
-      uSharpness: { value: SHARPNESS },
-      uShimmer: { value: SHIMMER },
-      uGlow: { value: GLOW },
-      uOpacity: { value: OPACITY },
-      uMouseEnabled: { value: MOUSE_INTERACTION ? 1 : 0 },
-      uMouseStrength: { value: MOUSE_STRENGTH },
-      uMouseRadius: { value: MOUSE_RADIUS }
-    };
+    var clock = new THREE.Clock();
 
-    var program = new Program(gl, { vertex: vertex, fragment: fragment, uniforms: uniforms });
-    var geometry = new Triangle(gl);
-    var mesh = new Mesh(gl, { geometry: geometry, program: program });
+    function animate() {
+      requestAnimationFrame(animate);
+      var elapsed = clock.getElapsedTime();
+      var mx = (mouseX / width) * 2 - 1;
+      var my = -(mouseY / height) * 2 + 1;
 
-    var mouseTarget = [0, 0];
-    var lastTime = 0;
-    var rafId;
-
-    function resize() {
-      var rect = container.getBoundingClientRect();
-      renderer.setSize(rect.width, rect.height);
-      uniforms.iResolution.value = [gl.drawingBufferWidth, gl.drawingBufferHeight, 1];
-    }
-
-    resize();
-    var ro = new ResizeObserver(resize);
-    ro.observe(container);
-
-    function onPointerMove(e) {
-      var rect = canvas.getBoundingClientRect();
-      var sc = renderer.dpr || 1;
-      mouseTarget[0] = (e.clientX - rect.left) * sc;
-      mouseTarget[1] = (rect.height - (e.clientY - rect.top)) * sc;
-    }
-
-    if (MOUSE_INTERACTION) {
-      canvas.addEventListener('pointermove', onPointerMove);
-    }
-
-    function loop(t) {
-      rafId = requestAnimationFrame(loop);
-      uniforms.iTime.value = t * 0.001;
-      if (MOUSE_DAMPENING > 0) {
-        if (!lastTime) lastTime = t;
-        var dt = (t - lastTime) / 1000;
-        lastTime = t;
-        var tau = Math.max(1e-4, MOUSE_DAMPENING);
-        var factor = 1 - Math.exp(-dt / tau);
-        if (factor > 1) factor = 1;
-        var cur = uniforms.iMouse.value;
-        cur[0] += (mouseTarget[0] - cur[0]) * factor;
-        cur[1] += (mouseTarget[1] - cur[1]) * factor;
-      } else {
-        lastTime = t;
+      var mouseDist = Math.sqrt(Math.pow(mx - lastMousePos.x, 2) + Math.pow(my - lastMousePos.y, 2));
+      if (mouseDist > 0.001) {
+        lastMouseMoveTime = performance.now();
+        lastMousePos.x = mx; lastMousePos.y = my;
       }
-      try {
-        renderer.render({ scene: mesh });
-      } catch(e) {}
+
+      var destX = (mx * vp.w) / 2;
+      var destY = (my * vp.h) / 2;
+
+      if (AUTO_ANIMATE && performance.now() - lastMouseMoveTime > 2000) {
+        destX = Math.sin(elapsed * 0.5) * (vp.w / 4);
+        destY = Math.cos(elapsed * 0.5 * 2) * (vp.h / 4);
+      }
+
+      virtualMouse.x += (destX - virtualMouse.x) * 0.05;
+      virtualMouse.y += (destY - virtualMouse.y) * 0.05;
+
+      var targetX = virtualMouse.x, targetY = virtualMouse.y;
+      var globalRotation = elapsed * ROTATION_SPEED;
+
+      for (var i = 0; i < COUNT; i++) {
+        var p = particles[i];
+        p.t += p.speed / 2;
+
+        var proj = 1 - p.cz / 50;
+        var ptx = targetX * proj, pty = targetY * proj;
+
+        var dx = p.mx - ptx, dy = p.my - pty;
+        var dist = Math.sqrt(dx * dx + dy * dy);
+
+        var tx = p.mx, ty = p.my, tz = p.mz * DEPTH_FACTOR;
+
+        if (dist < MAGNET_RADIUS) {
+          var angle = Math.atan2(dy, dx) + globalRotation;
+          var wave = Math.sin(p.t * WAVE_SPEED + angle) * (0.5 * WAVE_AMPLITUDE);
+          var dev = p.randomRadiusOffset * (5 / (FIELD_STRENGTH + 0.1));
+          var rr = RING_RADIUS + wave + dev;
+          tx = ptx + rr * Math.cos(angle);
+          ty = pty + rr * Math.sin(angle);
+          tz = p.mz * DEPTH_FACTOR + Math.sin(p.t) * WAVE_AMPLITUDE * DEPTH_FACTOR;
+        }
+
+        p.cx += (tx - p.cx) * LERP_SPEED;
+        p.cy += (ty - p.cy) * LERP_SPEED;
+        p.cz += (tz - p.cz) * LERP_SPEED;
+
+        dummy.position.set(p.cx, p.cy, p.cz);
+        dummy.lookAt(ptx, pty, p.cz);
+        dummy.rotateX(Math.PI / 2);
+
+        var cd = Math.sqrt(Math.pow(p.cx - ptx, 2) + Math.pow(p.cy - pty, 2));
+        var dfr = Math.abs(cd - RING_RADIUS);
+        var sf = Math.max(0, Math.min(1, 1 - dfr / 10));
+        var pulse = Math.sin(p.t * PULSE_SPEED) * 0.2 * PARTICLE_VARIANCE;
+        var fs = sf * (0.8 + pulse) * PARTICLE_SIZE;
+
+        dummy.scale.set(fs, fs, fs);
+        dummy.updateMatrix();
+        mesh.setMatrixAt(i, dummy.matrix);
+      }
+
+      mesh.instanceMatrix.needsUpdate = true;
+      renderer.render(scene, camera);
     }
 
-    rafId = requestAnimationFrame(loop);
-    console.log('Ferrofluid WebGL initialized (gl: ' + gl.drawingBufferWidth + 'x' + gl.drawingBufferHeight + ', dpr: ' + (renderer.dpr || 1) + ')');
+    animate();
+    console.log('Antigravity ready: ' + COUNT + ' particles, ' + Math.round(vp.w) + 'x' + Math.round(vp.h) + ' viewport');
   })();
   </script>
 </body>
