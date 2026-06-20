@@ -9,16 +9,17 @@
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
   <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect rx='18' width='100' height='100' fill='%231a1a2e'/><text x='50' y='72' font-size='62' font-weight='800' text-anchor='middle' fill='white'>A</text></svg>">
+  <script src="https://cdn.jsdelivr.net/npm/ogl@1.0.11/dist/ogl.umd.js"></script>
 </head>
 <body>
-  <canvas id="bgMesh"></canvas>
+  <div id="ferrofluidBg" class="ferrofluid-bg"></div>
   <button class="theme-toggle" id="themeToggle" aria-label="切换深色模式">
     <svg class="icon-sun" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg>
     <svg class="icon-moon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
   </button>
   <div class="page">
     <header class="header">
-      <div class="avatar"><div class="avatar-icon">A</div></div>
+      <div class="avatar"><img src="albus.svg" alt="Albus" class="avatar-svg"></div>
       <div class="header-body">
         <h1><span class="prompt">&gt;</span> Albus<span class="cursor">_</span></h1>
         <p class="bio"><span class="comment">#</span> Obsidian 插件开发 · 代数超群表示论</p>
@@ -109,137 +110,271 @@
   </script>
   <script>
   (function(){
-    var canvas = document.getElementById('bgMesh');
-    var ctx = canvas.getContext('2d');
-    var mx = -1000, my = -1000;
-    var smx = -1000, smy = -1000;
-    var particles = [];
-    var w, h;
-    var PARTICLE_COUNT = 150;
+    var O = window.ogl || window.OGL;
+    if (!O) { console.warn('ogl not loaded'); return; }
+    var Renderer = O.Renderer, Program = O.Program, Mesh = O.Mesh, Triangle = O.Triangle;
+
+    // ── Configuration (matches reactbits Ferrofluid defaults) ──
+    var COLORS = ['#3b82f6', '#6366f1', '#a5b4fc'];
+    var SPEED = 0.5;
+    var SCALE = 1.6;
+    var TURBULENCE = 1;
+    var FLUIDITY = 0.1;
+    var RIM_WIDTH = 0.2;
+    var SHARPNESS = 2.5;
+    var SHIMMER = 1.5;
+    var GLOW = 2;
+    var FLOW_DIRECTION = 'down';
+    var OPACITY = 1;
+    var MOUSE_INTERACTION = true;
+    var MOUSE_STRENGTH = 1;
+    var MOUSE_RADIUS = 0.35;
+    var MOUSE_DAMPENING = 0.15;
+    var MAX_COLORS = 8;
+
+    // ── Helpers ──
+    function hexToRGB(hex) {
+      var c = hex.replace('#', '');
+      while (c.length < 6) c += '0';
+      return [parseInt(c.slice(0,2),16)/255, parseInt(c.slice(2,4),16)/255, parseInt(c.slice(4,6),16)/255];
+    }
+
+    function prepColors(input) {
+      var base = (input && input.length ? input : ['#4F46E5','#06B6D4','#E0F2FE']).slice(0, MAX_COLORS);
+      var count = base.length;
+      var arr = [];
+      for (var i = 0; i < MAX_COLORS; i++) arr.push(hexToRGB(base[Math.min(i, base.length - 1)]));
+      var avg = [0,0,0];
+      for (var i = 0; i < count; i++) { avg[0] += arr[i][0]; avg[1] += arr[i][1]; avg[2] += arr[i][2]; }
+      avg[0] /= count; avg[1] /= count; avg[2] /= count;
+      return { arr: arr, count: count, avg: avg };
+    }
+
+    function flowVec(d) {
+      if (d === 'up') return [0,1];
+      if (d === 'left') return [-1,0];
+      if (d === 'right') return [1,0];
+      return [0,-1]; // down
+    }
+
+    // ── Shaders (exact from reactbits) ──
+    var vertex = [
+      'attribute vec2 position;',
+      'attribute vec2 uv;',
+      'varying vec2 vUv;',
+      'void main() {',
+      '  vUv = uv;',
+      '  gl_Position = vec4(position, 0.0, 1.0);',
+      '}'
+    ].join('\n');
+
+    var fragment = [
+      'precision highp float;',
+      'uniform vec3  iResolution;',
+      'uniform vec2  iMouse;',
+      'uniform float iTime;',
+      'uniform vec3  uColor0;',
+      'uniform vec3  uColor1;',
+      'uniform vec3  uColor2;',
+      'uniform vec3  uColor3;',
+      'uniform vec3  uColor4;',
+      'uniform vec3  uColor5;',
+      'uniform vec3  uColor6;',
+      'uniform vec3  uColor7;',
+      'uniform int   uColorCount;',
+      'uniform vec3  uMouseColor;',
+      'uniform vec2  uFlow;',
+      'uniform float uSpeed;',
+      'uniform float uScale;',
+      'uniform float uTurbulence;',
+      'uniform float uFluidity;',
+      'uniform float uRimWidth;',
+      'uniform float uSharpness;',
+      'uniform float uShimmer;',
+      'uniform float uGlow;',
+      'uniform float uOpacity;',
+      'uniform float uMouseEnabled;',
+      'uniform float uMouseStrength;',
+      'uniform float uMouseRadius;',
+      'varying vec2 vUv;',
+      '#define PI 3.14159265',
+      'vec3 palette(float h) {',
+      '  int count = uColorCount;',
+      '  if (count < 1) count = 1;',
+      '  int idx = int(floor(clamp(h, 0.0, 0.999999) * float(count)));',
+      '  if (idx <= 0) return uColor0;',
+      '  if (idx == 1) return uColor1;',
+      '  if (idx == 2) return uColor2;',
+      '  if (idx == 3) return uColor3;',
+      '  if (idx == 4) return uColor4;',
+      '  if (idx == 5) return uColor5;',
+      '  if (idx == 6) return uColor6;',
+      '  return uColor7;',
+      '}',
+      'float hash(vec3 p3) {',
+      '  p3 = fract(p3 * 0.1031);',
+      '  p3 += dot(p3, p3.zyx + 33.33);',
+      '  return fract((p3.x + p3.y) * p3.z);',
+      '}',
+      'float smin(float a, float b, float k) {',
+      '  float r = exp2(-a / k) + exp2(-b / k);',
+      '  return -k * log2(r);',
+      '}',
+      'float sinlerp(float a, float b, float w) {',
+      '  return mix(a, b, (sin(w * PI - PI / 2.0) + 1.0) / 2.0);',
+      '}',
+      'float vn(vec2 p, float s, float seed) {',
+      '  vec2 cellp = floor(p / s);',
+      '  vec2 relp = mod(p, s);',
+      '  float g1 = hash(vec3(cellp, seed));',
+      '  float g2 = hash(vec3(cellp.x + 1.0, cellp.y, seed));',
+      '  float g3 = hash(vec3(cellp.x + 1.0, cellp.y + 1.0, seed));',
+      '  float g4 = hash(vec3(cellp.x, cellp.y + 1.0, seed));',
+      '  float bx = sinlerp(g1, g2, relp.x / s);',
+      '  float tx = sinlerp(g4, g3, relp.x / s);',
+      '  return sinlerp(bx, tx, relp.y / s);',
+      '}',
+      'float dbn(vec2 p, float s, float seed) {',
+      '  float o = s / 2.0;',
+      '  float n0 = vn(p, s, seed);',
+      '  float n1 = vn(p + vec2(o, o), s, seed + 0.1);',
+      '  float n2 = vn(p + vec2(-o, o), s, seed + 0.2);',
+      '  float n3 = vn(p + vec2(o, -o), s, seed + 0.3);',
+      '  float n4 = vn(p + vec2(-o, -o), s, seed + 0.4);',
+      '  return (2.0 * n0 + 1.5 * n1 + 1.25 * n2 + 1.125 * n3 + n4) / 7.0;',
+      '}',
+      'void mainImage(out vec4 fragColor, in vec2 fragCoord) {',
+      '  float ref = 700.0 / max(uScale, 0.05);',
+      '  vec2 p = fragCoord / iResolution.y * ref;',
+      '  float spd = 200.0 * uSpeed;',
+      '  float t = iTime;',
+      '  vec2 dir = uFlow;',
+      '  vec2 perp = vec2(-dir.y, dir.x);',
+      '  float distort1 = vn(p + perp * (t * spd), 60.0, 10.0) * 50.0 * uTurbulence;',
+      '  float distort2 = vn(p - perp * (t * spd), 120.0, 15.0) * 100.0 * uTurbulence;',
+      '  float peaks = dbn(p + distort1 + dir * (t * spd * 0.5), 40.0, 1.0);',
+      '  float peaks2 = dbn(p + distort2 - dir * (t * spd * 0.5), 40.0, 0.0);',
+      '  float mapeaks = smin(peaks, peaks2, max(uFluidity, 0.001));',
+      '  float mGlow = 0.0;',
+      '  if (uMouseEnabled > 0.5) {',
+      '    vec2 mp = iMouse / iResolution.y * ref;',
+      '    float md = length(p - mp) / ref;',
+      '    float rr = max(uMouseRadius, 0.02);',
+      '    mGlow = exp(-md * md / (rr * rr)) * uMouseStrength;',
+      '  }',
+      '  float band = (uRimWidth - abs((mapeaks - 0.4) * 2.0)) * 5.0;',
+      '  float ltn = clamp(band - vn(p + dir * (t * spd * 0.5), 60.0, 12.0) * uShimmer, 0.0, 1.0);',
+      '  ltn = pow(ltn, uSharpness) * uGlow;',
+      '  ltn *= clamp(1.0 - mGlow, 0.0, 1.0);',
+      '  float h = clamp(0.5 + (peaks - peaks2) * 0.8, 0.0, 1.0);',
+      '  vec3 col = palette(h);',
+      '  vec3 outc = col * ltn;',
+      '  float a = clamp(max(outc.r, max(outc.g, outc.b)), 0.0, 1.0);',
+      '  fragColor = vec4(outc, a * uOpacity);',
+      '}',
+      'void main() {',
+      '  vec4 color;',
+      '  mainImage(color, vUv * iResolution.xy);',
+      '  gl_FragColor = color;',
+      '}'
+    ].join('\n');
+
+    // ── Init ──
+    var container = document.getElementById('ferrofluidBg');
+    if (!container) return;
+
+    var renderer = new Renderer({
+      dpr: window.devicePixelRatio || 1,
+      alpha: true,
+      antialias: true
+    });
+    var gl = renderer.gl;
+    var canvas = gl.canvas;
+    gl.clearColor(0, 0, 0, 0);
+    canvas.style.width = '100%';
+    canvas.style.height = '100%';
+    canvas.style.display = 'block';
+    container.appendChild(canvas);
+
+    var prepared = prepColors(COLORS);
+    var arr = prepared.arr, count = prepared.count, avg = prepared.avg;
+
+    var uniforms = {
+      iResolution: { value: [gl.drawingBufferWidth, gl.drawingBufferHeight, 1] },
+      iMouse: { value: [0, 0] },
+      iTime: { value: 0 },
+      uColor0: { value: arr[0] }, uColor1: { value: arr[1] },
+      uColor2: { value: arr[2] }, uColor3: { value: arr[3] },
+      uColor4: { value: arr[4] }, uColor5: { value: arr[5] },
+      uColor6: { value: arr[6] }, uColor7: { value: arr[7] },
+      uColorCount: { value: count },
+      uMouseColor: { value: avg },
+      uFlow: { value: flowVec(FLOW_DIRECTION) },
+      uSpeed: { value: SPEED },
+      uScale: { value: SCALE },
+      uTurbulence: { value: TURBULENCE },
+      uFluidity: { value: FLUIDITY },
+      uRimWidth: { value: RIM_WIDTH },
+      uSharpness: { value: SHARPNESS },
+      uShimmer: { value: SHIMMER },
+      uGlow: { value: GLOW },
+      uOpacity: { value: OPACITY },
+      uMouseEnabled: { value: MOUSE_INTERACTION ? 1 : 0 },
+      uMouseStrength: { value: MOUSE_STRENGTH },
+      uMouseRadius: { value: MOUSE_RADIUS }
+    };
+
+    var program = new Program(gl, { vertex: vertex, fragment: fragment, uniforms: uniforms });
+    var geometry = new Triangle(gl);
+    var mesh = new Mesh(gl, { geometry: geometry, program: program });
+
+    var mouseTarget = [0, 0];
+    var lastTime = 0;
+    var rafId;
 
     function resize() {
-      w = canvas.width = window.innerWidth;
-      h = canvas.height = window.innerHeight;
-      initParticles();
+      var rect = container.getBoundingClientRect();
+      renderer.setSize(rect.width, rect.height);
+      uniforms.iResolution.value = [gl.drawingBufferWidth, gl.drawingBufferHeight, 1];
     }
-
-    function initParticles() {
-      particles = [];
-      for (var i = 0; i < PARTICLE_COUNT; i++) {
-        particles.push({
-          x: Math.random() * w,
-          y: Math.random() * h,
-          vx: (Math.random() - .5) * .2,
-          vy: (Math.random() - .5) * .2,
-          r: .7 + Math.random() * 1.6,
-          pulse: Math.random() * Math.PI * 2
-        });
-      }
-    }
-
-    window.addEventListener('resize', resize);
-    document.addEventListener('mousemove', function(e) { mx = e.clientX; my = e.clientY; });
 
     resize();
+    var ro = new ResizeObserver(resize);
+    ro.observe(container);
 
-    function draw() {
-      smx += (mx - smx) * .04;
-      smy += (my - smy) * .04;
-
-      var isLight = document.documentElement.classList.contains('light');
-      var lineBase = isLight ? '148,163,184' : '75,75,95';
-      var dotBase = isLight ? '100,116,139' : '110,110,130';
-      var glowColor = isLight ? '59,130,246' : '59,130,246';
-      var MAX_DIST = 200;
-      var MOUSE_RADIUS = 280;
-
-      ctx.clearRect(0, 0, w, h);
-
-      // Update particles
-      for (var i = 0; i < particles.length; i++) {
-        var p = particles[i];
-        p.x += p.vx;
-        p.y += p.vy;
-        p.pulse += .003;
-        if (p.x < -40) p.x = w + 40;
-        if (p.x > w + 40) p.x = -40;
-        if (p.y < -40) p.y = h + 40;
-        if (p.y > h + 40) p.y = -40;
-      }
-
-      // Draw connections
-      for (var i = 0; i < particles.length; i++) {
-        var a = particles[i];
-        for (var j = i + 1; j < particles.length; j++) {
-          var b = particles[j];
-          var dx = b.x - a.x;
-          var dy = b.y - a.y;
-          var dist = Math.sqrt(dx * dx + dy * dy);
-          if (dist > MAX_DIST) continue;
-
-          var mx2 = (a.x + b.x) / 2;
-          var my2 = (a.y + b.y) / 2;
-          var md = Math.sqrt(Math.pow(smx - mx2, 2) + Math.pow(smy - my2, 2));
-
-          var alpha = 1 - dist / MAX_DIST;
-          alpha *= .15;
-          if (md < MOUSE_RADIUS) {
-            alpha += (1 - md / MOUSE_RADIUS) * .5;
-          }
-
-          var grad = ctx.createLinearGradient(a.x, a.y, b.x, b.y);
-          grad.addColorStop(0, 'rgba(' + lineBase + ',0)');
-          grad.addColorStop(.2, 'rgba(' + lineBase + ',' + alpha.toFixed(3) + ')');
-          grad.addColorStop(.8, 'rgba(' + lineBase + ',' + alpha.toFixed(3) + ')');
-          grad.addColorStop(1, 'rgba(' + lineBase + ',0)');
-
-          var lw = .5;
-          if (md < MOUSE_RADIUS) lw += (1 - md / MOUSE_RADIUS) * 2;
-
-          ctx.strokeStyle = grad;
-          ctx.lineWidth = lw;
-          ctx.beginPath();
-          ctx.moveTo(a.x, a.y);
-          ctx.lineTo(b.x, b.y);
-          ctx.stroke();
-        }
-      }
-
-      // Draw particle glow halos (mouse nearby only)
-      for (var i = 0; i < particles.length; i++) {
-        var p = particles[i];
-        var pd = Math.sqrt(Math.pow(smx - p.x, 2) + Math.pow(smy - p.y, 2));
-        if (pd < MOUSE_RADIUS * .7) {
-          var glowAlpha = (1 - pd / (MOUSE_RADIUS * .7)) * .15;
-          var glowRadius = p.r + (1 - pd / (MOUSE_RADIUS * .7)) * 6;
-          var glow = ctx.createRadialGradient(p.x, p.y, p.r, p.x, p.y, glowRadius);
-          glow.addColorStop(0, 'rgba(' + glowColor + ',' + (glowAlpha * 2).toFixed(3) + ')');
-          glow.addColorStop(1, 'rgba(' + glowColor + ',0)');
-          ctx.fillStyle = glow;
-          ctx.beginPath();
-          ctx.arc(p.x, p.y, glowRadius, 0, Math.PI * 2);
-          ctx.fill();
-        }
-      }
-
-      // Draw particle dots
-      for (var i = 0; i < particles.length; i++) {
-        var p = particles[i];
-        var pd = Math.sqrt(Math.pow(smx - p.x, 2) + Math.pow(smy - p.y, 2));
-        var da = .35;
-        if (pd < MOUSE_RADIUS) da += (1 - pd / MOUSE_RADIUS) * .55;
-        var pulseScale = 1 + Math.sin(p.pulse) * .15;
-        var r = p.r * pulseScale;
-        ctx.fillStyle = 'rgba(' + dotBase + ',' + da.toFixed(3) + ')';
-        ctx.beginPath();
-        ctx.arc(p.x, p.y, r, 0, Math.PI * 2);
-        ctx.fill();
-      }
-
-      requestAnimationFrame(draw);
+    function onPointerMove(e) {
+      var rect = canvas.getBoundingClientRect();
+      var sc = renderer.dpr || 1;
+      mouseTarget[0] = (e.clientX - rect.left) * sc;
+      mouseTarget[1] = (rect.height - (e.clientY - rect.top)) * sc;
     }
 
-    draw();
+    if (MOUSE_INTERACTION) {
+      canvas.addEventListener('pointermove', onPointerMove);
+    }
+
+    function loop(t) {
+      rafId = requestAnimationFrame(loop);
+      uniforms.iTime.value = t * 0.001;
+      if (MOUSE_DAMPENING > 0) {
+        if (!lastTime) lastTime = t;
+        var dt = (t - lastTime) / 1000;
+        lastTime = t;
+        var tau = Math.max(1e-4, MOUSE_DAMPENING);
+        var factor = 1 - Math.exp(-dt / tau);
+        if (factor > 1) factor = 1;
+        var cur = uniforms.iMouse.value;
+        cur[0] += (mouseTarget[0] - cur[0]) * factor;
+        cur[1] += (mouseTarget[1] - cur[1]) * factor;
+      } else {
+        lastTime = t;
+      }
+      try {
+        renderer.render({ scene: mesh });
+      } catch(e) {}
+    }
+
+    rafId = requestAnimationFrame(loop);
   })();
   </script>
 </body>

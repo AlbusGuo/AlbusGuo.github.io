@@ -47,11 +47,17 @@ body {
 
 a { color: inherit; text-decoration: none; }
 
-#bgMesh {
+.ferrofluid-bg {
   position: fixed;
   inset: 0;
   z-index: 0;
   pointer-events: none;
+  overflow: hidden;
+}
+.ferrofluid-bg canvas {
+  display: block;
+  width: 100%;
+  height: 100%;
 }
 
 /* ═══ Layout ═══ */
@@ -79,16 +85,15 @@ a { color: inherit; text-decoration: none; }
   transition: filter .5s ease;
 }
 .avatar:hover { filter: drop-shadow(0 0 48px var(--accent-dim)); }
-.avatar-icon {
+.avatar-svg {
   width: 100%; height: 100%;
   border-radius: 36px;
+  display: block;
   background: #1a1a2e;
-  color: #fff;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 124px;
-  font-weight: 800;
+  filter: brightness(0) invert(1);
+}
+html.light .avatar-svg {
+  filter: none;
 }
 
 .header-body { flex: 1; min-width: 0; }
