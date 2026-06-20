@@ -51,7 +51,6 @@ a { color: inherit; text-decoration: none; }
   position: fixed;
   inset: 0;
   z-index: 0;
-  pointer-events: none;
   overflow: hidden;
 }
 .ferrofluid-bg canvas {
@@ -89,7 +88,6 @@ a { color: inherit; text-decoration: none; }
   width: 100%; height: 100%;
   border-radius: 36px;
   display: block;
-  background: #1a1a2e;
   filter: brightness(0) invert(1);
 }
 html.light .avatar-svg {
