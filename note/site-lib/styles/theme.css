@@ -791,7 +791,7 @@ div:has(> .callout[data-callout="me"]) {
 .callout[data-callout="pictorial"] {
   --callout-color: var(--text-normal);
   --callout-icon: none;
-
+  font-family: "汇文明朝体";
   position: relative;
   margin: 1.2em 0;
   padding: 2px 54px 2px 2px;
