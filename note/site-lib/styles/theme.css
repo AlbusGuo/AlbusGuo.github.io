@@ -2499,12 +2499,12 @@ body{
 /*#endregion */
 
 /*#region 界面左下角心形动画样式 */
-/* Define the Heart Color based on Light/Dark mode */
+/*
 .theme-dark {
-    --heart-color: var(--interactive-accent); /* Neon Pink for Dark Mode */
+    --heart-color: var(--interactive-accent);
 }
 .theme-light {
-    --heart-color: #ff0000; /* Deep Magenta for Light Mode */
+    --heart-color: #ff0000;
 }
 
 .app-container::before {
@@ -2519,7 +2519,7 @@ body{
     pointer-events: none;
     color: var(--text-muted);
 }
-
+*/
 /* THE HEART CONFIGURATION */
 .app-container::after {
     content: '';
