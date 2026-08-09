@@ -1538,13 +1538,6 @@ div:has(> .callout[data-callout="me"]) {
 
 /*#region 官方样式修复 */
 
-/*#region 设置界面边距减小 */
-
-.vertical-tab-content{
-  padding: 30px 40px !important;
-}
-/*#endregion */
-
 /*#region 引用框边距减少 */
 blockquote {
   padding-left: 14.5px !important;
