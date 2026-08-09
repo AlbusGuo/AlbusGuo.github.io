@@ -1243,7 +1243,7 @@ i, em { font-style: italic; color: var(--italic-color); }
 .bases-cards-line .metadata-input-text { position: absolute; top: 0px; }
 .bases-cards-line .multi-select-container { flex-wrap: nowrap; }
 .bases-cards-line .value-list-container { flex-wrap: nowrap; }
-.bases-cards-line .value-list-container:empty::before { content: "â€”"; color: var(--text-faint); }
+.bases-cards-line .value-list-container:empty::before { content: "—"; color: var(--text-faint); }
 .bases-view[data-view-type="list"] { --bases-view-padding: var(--size-4-2) var(--size-4-4) 60px var(--size-4-2); --bases-embed-padding: 0; }
 .bases-view[data-view-type="list"].is-grouped { --bases-view-padding: 0 var(--size-4-4) 60px var(--size-4-4); }
 .bases-list-container { position: relative; user-select: text; cursor: text; min-height: 100px; }
