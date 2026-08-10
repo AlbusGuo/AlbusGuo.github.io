@@ -1,5 +1,5 @@
 {
-  "version": 1,
+  "version": 2,
   "files": {
     "site-lib/scripts/webpage.js": "91ccb1038c2573388c0249bb948b0ae2733953024c0441cfb0b39f61bb5b0296",
     "site-lib/styles/main-styles.css": "a64a1c3e1ff20dc849acd76f23f9886e86fd12baa46123ef1bd5a5eba8e53ced",
@@ -9,211 +9,211 @@
     "site-lib/styles/other-plugins.css": "598f39f0a9a36f4cc86495a25739d763ce328a753594ccd9743bb61633826dbc",
     "site-lib/styles/global-variable-styles.css": "544b1be7eaa57af0d4e1aa5b465b7a88dcee31288dca5cba5d83f2f4490148bc",
     "site-lib/styles/supported-plugins.css": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
-    "site-lib/html/file-tree.html": "07273885a52a09aeddf6f93161a6dd4178bbee01b2a555fefc8c69b2dad4efec",
-    "site-lib/search-index.json": "6c1e5b9ebd47b4c67b872d99c4361dac93b9b912d25a2ffa5a84197b1fac9882",
-    "site-lib/metadata.json": "6abfd0be483d160c1aa7fef66e08ffa1daa40b914deae4f5931c5a44eb05bc18",
-    "index.html": "686ef68d995da54b1da5ee180ef290559ee3083503663b368653d98ff769fbe0",
-    "高中数学/基本逻辑用语/命题.html": "4bd897fa3a1734f2bb9eb871764b0818c3036d0892787d5862d510b201d2c38f",
-    "高中数学/基本逻辑用语/基本逻辑算符与复合命题.html": "0e12ee30fd603794229b1a88f53a850ea03b8a78dbf68df71a2c423f47c04167",
-    "高中数学/基本逻辑用语/逆命题-否命题-逆否命题.html": "a2a4780ca3aa5671b15014ebb858f38a2d14092fc7ab6799a20c92dc500a00f5",
-    "高中数学/基本逻辑用语/充分条件-必要条件-充要条件.html": "147989326d23a2e45496dba54c8ad9c4cfdd83585d8b49d41feda2d11e7815f0",
-    "高中数学/基本逻辑用语/全称量词与存在量词.html": "3546108862cbed31b42f3b619755061f0ae1d7a7dfa8d3f8f7492256a1dbc1b8",
-    "高中数学/基本逻辑用语/悖论.html": "2df189971d9c40129adf24da3b7d46f2c70198d6ca397cdee035397c78c8fea6",
-    "高中数学/集合/集合的基本概念.html": "a08dc20152fedb77f8a47e3b739f3551c57b0a7480dcb090b377f0b5e632fdf5",
-    "高中数学/集合/集合的基本运算.html": "b43a13df11022dbec2a49ddbcc5b0e6f87026c4cc9c9612024bfb0fe43ee5ee4",
-    "高中数学/不等式/等式与不等式的基本性质.html": "81ef38478ec5cd9dbbc82f080854c394df92a968b865a3d31357460c91c240e3",
-    "高中数学/不等式/基本不等式.html": "d33983cab1ddf0a83d3d6a1b486a77035190ea9510193f0a37917db7e42119cd",
-    "高中数学/不等式/均值不等式.html": "a6330ce083d5459578d95908822df09fb4980936f1ea41af86aa8de8c729c6dc",
-    "高中数学/函数/函数的概念与图像.html": "1807513b9bce5e7843a3f19e855f31524dbb0f7452aa90d3fe96b62d287b32db",
-    "高中数学/函数/函数的单调性.html": "2dbe281f5a5c361b5814820c06e02b83e113cdeb5072f42a20fcb15a929b7abd",
-    "高中数学/函数/函数的奇偶性.html": "3f1680ce0bfc9d168325be8644641eb0e9b150cdb5ebbc14b76fa219a95784b9",
-    "高中数学/幂函数-指数函数-对数函数/幂函数.html": "896cf2b87fa5cdef5502b60b71cb4c8a7d42d02dfc759de5772d4861dbe3c7cf",
-    "高中数学/幂函数-指数函数-对数函数/指数与对数.html": "5bf16b17c683c1af8fc513db751721aac57043d167c1dbd8336b2624a1f83567",
-    "高中数学/幂函数-指数函数-对数函数/指数函数.html": "d02768d7ff774a1523e263f80d4abfc42510fceb67fa656bfbc8deba3db7eb2d",
-    "高中数学/幂函数-指数函数-对数函数/对数函数.html": "784d21cf0cef270aca17ee986bdbbd7a90d119ccd1f2217b87da355379210e45",
-    "高中数学/三角函数/角与弧度.html": "fad5a15a24bbba1b5f79d2d36edbe63e2cedf6603898ef20d5b6b22afa77413f",
-    "高中数学/三角函数/三角函数的概念.html": "7016b736128a171ca77f8758a5a97b57510e785751ddffcb751303d67e933322",
-    "高中数学/三角函数/三角函数诱导公式.html": "1b2862be5577ea1b9fb592b47fea68c955e00f64814b464d1890855ced1fcdbc",
-    "高中数学/三角函数/三角恒等变换.html": "49754fac2b2bce27324972370122a407a611d37bb2495eb7fe93c3d00f49759f",
-    "高中数学/三角函数/余弦定理.html": "1811ebaf7db9777821fab01b25324d73309dc013cebe14c46078f27d44c5e427",
-    "高中数学/三角函数/正弦定理.html": "23ac41c7e0efb5cf590876f81b520640fcf51d4bdcf1c1b4cab96dcdf59c989b",
-    "高中数学/导数/导数的概念.html": "deb109eece209dde9f3edf7885836f4fe08f42b00e439eb8424cecd9a5bb11d2",
-    "高中数学/数列/等差数列.html": "8532705fe86b322a9d687e3e8201df6641941993ed3bd2c57fc562e8e0e28a8d",
-    "高中数学/平面几何/平面向量.html": "de7bba4394a043fb22265851d054780204962f1fb8d18cf9420e23c504d6b111",
-    "高中数学/平面几何/直线与方程.html": "7438a4d87df07401288bba6865fca7391a7b7b44a0cfb6ca1b80fa13e72b13b5",
-    "高中数学/平面几何/圆与方程.html": "de4d9a6e1b19092749498fdb2b075a00b589c84ec44c524dd25aeb9c6bfdee06",
-    "高中数学/平面几何/椭圆.html": "08bcbe374dbb9fcb9c2d16bb1f564a8cf3f88d23a4c9e604acd0d9f0072dc029",
-    "高中数学/平面几何/双曲线.html": "64e804420bf33011c35f3da1acbda74087d1f4d2ac3d97a778cbde76f88c1be2",
-    "高中数学/平面几何/抛物线.html": "c687e7b41542c6b398f0f0ff92a8d0f094db428a34a94db60f83270d93248ce7",
-    "高中数学/复数/复数.html": "f002574af6df6127aab871a7493779925b318111e86fb8b233c03f07557e00d3",
-    "高中数学/立体几何/基本立体图形.html": "e7ea0703bf2c7ef3bb1069df5f2b8a02bf88c04afea8917565cb7fee3f8e2c49",
-    "高中数学/空间向量/空间向量.html": "94ed18840c796a024e1eaf302b0557254d8b90b6f8d53ce2ee78dc3df5f3b7ca",
-    "高中数学/计数原理/排列数.html": "196f633cf53e243054eaff082d08f33bda6b1b4a59f192e59a11a2bf6dee29aa",
-    "高中数学/统计基础/抽样.html": "3e0eda16a7e8b0c06595eea230d775c9958daf647aca47c2488fcc3d0a92b997",
-    "高中数学/统计基础/用样本估计总体.html": "b72a7bb7864c209c89771a7deabfa00766f74936a98a29607a9aad8103b9e8da",
-    "高中数学/概率基础/随机事件与样本空间.html": "65625c0a30832340a36b536b03c7591fdfd076f3648204ddca8d8463478935ba",
-    "高中数学/概率基础/随机事件的概率.html": "3e440d186165c921abf086e342a1dc6e4db31d104c3b27d6d03f53e381c8af8b",
-    "高中数学/概率基础/互斥事件与独立事件.html": "830f5d6df42cb8b3a413c881e7dcf944d3216d5558bea2a2c9ae58c58d142581",
-    "高中数学/参考资料.html": "4584992954b72bfc0e92307d3a18ad3913b587c86c605ed443f697eaef139838",
-    "数理逻辑/前言.html": "bebda59791e30e1b2ceceb5ed435b68cb32f9e75a58b1dc1252e52365c4e0746",
-    "数理逻辑/参考资料.html": "19dfb1b2d32432773c7212859bdcc09e647b00f8484577aad0bafc4245a25772",
-    "集合论/前言.html": "387439e4a15712847c148676e139a0758da5397133193545e9d9de7c30cab38b",
-    "集合论/zfc-集合论公理.html": "4d567cfb2af41ea431cc25d9556d12367397fc101db3f9bf51bcdd224ddc5d91",
-    "集合论/二元关系.html": "bf76cf3afccabbcf861ac0e2b989214a5d2a67dc1afaa70a84b4d0d18ca514ca",
-    "集合论/序数.html": "ee51a5537375d92c9ed3991410807030e53a2ef1ec497469e677ca51c4cfde2a",
-    "集合论/基数.html": "ec96517304a8efbbe3448af6c3495337e2270fd063592da27b8d87d48fdc2b4c",
-    "集合论/数集.html": "52122f6c07d0f5d4508731ae261b0320cb9fa71e7079f084b2041fd6f6bf8f24",
-    "集合论/归纳法原理.html": "1a5d0e06c8d227b5d9be5a5d7b24e230a86e0a5f9308bb356f891386bb6818d8",
-    "集合论/参考资料.html": "01e48561325fdaa7ac483146a2289bb04cab5e0a8176f9d86e35c1c6ac3404da",
-    "初等数论/前言.html": "9da35b87129255227710af2feb3a62c161f9357353b28b50bffc153420ec062e",
-    "初等数论/整数的可除性.html": "609a11597892f2029d5156fb6a7b384df5eac416b07b50f8cdc705db60b72ec8",
-    "初等数论/不定方程.html": "824aeaefafe122415c65557dacd5f67163ac242863c6a2b64b86af1e33a2bdc6",
-    "初等数论/参考资料.html": "39a13b81a3a94f20117a6d3c5d4d21c7b52497003156b9a96dcff4a05cfc3519",
-    "解析几何/前言.html": "5e9b341c62568e027d50ae2e95ba3cae4ccb4796393458467971b4e9f498ceea",
-    "解析几何/参考资料.html": "de4d4e42643931f54b002108110ebdf8e64a714d75f7e2027784e73d32e5de8f",
-    "微积分/前言.html": "23d42cc526419bca89cfc9358d0dfbced0f04a0870b57ae10a5263ca8c1ef04b",
-    "微积分/参考资料.html": "ff6b74aaa64a2c60a51781fa06f32ee931c07e30dc06b0f46fc955e34f0693ca",
-    "线性代数/前言.html": "ac78786b6c1582b29f15a916a00992b3d1de85fd7449ef07e44347a4c21b90e3",
-    "线性代数/行列式/行列式的定义.html": "7fd2776476f8fd84ee5a0b0bcf5f71c0a4fa8322d98f4aadf211f0048aa99abd",
-    "线性代数/行列式/子式与基本性质.html": "7b412f1896b0ebce15b27207ac29e05ac2762c76092a6e2f1a5f108f612fe178",
-    "线性代数/行列式/laplace-定理.html": "442bb5553220c967d44723674bbb956c2261db398128297f2b204985074c47d7",
-    "线性代数/行列式/行列式的计算.html": "cf2c40fa2458d72e9368a834308606c21b5cb92215f03bc738e2cd57257fdd6d",
-    "线性代数/参考资料.html": "52a8ca7cf083768657ecae7a6beab0237cfbf3d769c214eb144f357eacfdeaa2",
-    "常微分方程/前言.html": "a1613ba6baba2605390a0e694c9f55ec2c32aaaa2113c48ee17239cd38804e73",
-    "复变函数/前言.html": "31db720a3d067107116114c3b04343d2f3f64994eeff52b75a663161c23a7897",
-    "抽象代数/前言.html": "3aba6a08fad492891e397ddd6e2ee4bcd8e6b5ec4f941e5fc8ec10c71e255592",
-    "抽象代数/群/群的定义.html": "fe74e6fe070b5086cb3ebe1d2a669d4518062d96323d453cace3072283071ac4",
-    "抽象代数/环/环的定义.html": "0b5193930a1c418141c28f7238391ccb531ea3b498e90698ea24a5bb9599dc57",
-    "抽象代数/模/模的基本概念.html": "088a51ff5709b53dd271655c99488ed2514615a928825685a7d7faebd3519e20",
-    "抽象代数/模/模的正合列.html": "f063f37e8739f1db8b72b90ac3ce9be5f8f2ad009121ca36f0d8400892c42e81",
-    "抽象代数/模/模的直和与直积.html": "a366e2393377a1234d4abe87e3458d9cbb280ab38cf52ac92fada62bac7ce08d",
-    "抽象代数/模/自由模.html": "a35a8db6312447340e45f56d7f1ea99632d8ab1c978c90bcc0fbe7f55834329d",
-    "抽象代数/模/hom(---).html": "9ee09a4fe4fbce28f298ea78836ddb2d813a9169741e72a572cc7f1cf04ff01b",
-    "抽象代数/模/对偶模与对偶概念.html": "9f662c7a7adb03d46150e9901b00cce532b08d822fa41b513f7c59805b96d82d",
-    "抽象代数/模/投射模与内射模.html": "7cc5cfd693ca616e01cc116bd7f1f3e2bcf1eb9fdededaab2b2e98409820642f",
-    "抽象代数/模/模的张量积.html": "588e524c738bad873dca068770cfbae21c6698ee32f267d63d05dd6033b0dbcc",
-    "抽象代数/模/平坦模.html": "52b0dbf781e356eb5b03f5aaff5784b3b9fc254ec28b09ef922529d2d855acbc",
-    "抽象代数/模/代数-张量代数-对称代数-外代数.html": "a29445ab6696788e308083aca4701e7dcd2bff9f36babf56d0d733afaef5de3d",
-    "抽象代数/模/分次模与分次代数.html": "be009f423b9fdf3a70e334bdde18d1a75a2aa12ea12a38854179a2be82caa251",
-    "抽象代数/参考资料.html": "e8da08973a945c2d2823ea582609b8f571c6213d521fc5b2d406df12e35e8b23",
-    "拓扑学/前言.html": "0cd7285c2d8989c50a3de6cb82d5560fdc847e181bc52cb88c5367b06025c7ac",
-    "实分析/前言.html": "6443128367c05ef5bf2995b1f3258ae19a83e41e86387821252707ce8161314c",
-    "范畴论/前言.html": "0c62a1ebb9100ac4665d9b1a8452f6d9f79b1a8548f3882b8824f40fab9d5e47",
-    "范畴论/范畴的基本概念.html": "f78ac09363a874f4f94d1534ba2697ba8c13335bb014c704016325cc33047422",
-    "范畴论/函子与自然变换.html": "16f6ab7aeb171555ebe25b56033020d329b9af1eea0b26b88549e19f395b04ed",
-    "范畴论/积与余积.html": "3de8ccacad8d16b5ba38889bc1d0d157f9cfe9b68dbb66ffe99ef8cab5394aa0",
-    "范畴论/自由对象-泛对象-余泛对象.html": "e0affc6279c8c02a9084e62c0043fab27117c0424b6b8698337bf32740910d89",
-    "范畴论/范畴同构与范畴等价.html": "a32c060ae3f1c7935d78f9452ef322f436f9056d3302a28000b30a0c75fcc755",
-    "范畴论/可表函子与-yoneda-引理.html": "a4bbe6f17a7c41e358c18ae9c70daf3803a0518c82ead8f4de49af5d66a444e9",
-    "范畴论/乘积范畴与伴随函子.html": "da30ee60b06c2ded8f4a245fe888e5ef0aa3db831183b77b4d48d82926f902e1",
-    "范畴论/态射的基本性质.html": "e82bacbc4d7e1633c8cbad7bc19ab96af9b7b65152ff41e52987aa2c49815e7b",
-    "范畴论/abel-范畴与加性范畴.html": "f9316c7ef24cd6d2170d833602a8b63d5c586e17c36741fb4d44d8368781b3c7",
-    "范畴论/参考资料.html": "57003c4107992a17781c5197ab35f6d897c7a8c05eeb5c846b9e922ba777c571",
-    "同调代数/前言.html": "bd13bfbdbce67b38b7059d3fa0962d91252bd1eff2a9d08e9454e748a9fb4c30",
-    "代数拓扑/前言.html": "53c9b358b30807de8b5fdb33e5827a89e0dd80ad7e888c8c57b745e6a2fe5c47",
-    "光滑流形/前言.html": "22862a03443bc5c05939efef8586dcde1f26aa570a4872b1e0ab9dba89840150",
-    "半单-lie-代数及其表示/前言.html": "40de5a478270ef18a11f065742f3712c426196858f0e8b2efeb203da21bee55b",
-    "半单-lie-代数及其表示/lie-代数的基本概念/未命名-2.html": "d492152e93c3cd93ec9c45eb24d86eb108bbf2d2f0024055dd7d69a61b9330ad",
-    "半单-lie-代数及其表示/半单-lie-代数及其表示论初步/未命名.html": "689813d8169c01ace958b8261aecd9a10e044c921a57dd7f1e76a625b7ee1dfa",
-    "半单-lie-代数及其表示/根系理论/未命名.html": "9fc5a239454c25aa31c708a8f3097052c00a5f5ddd77b2417276523116938279",
-    "半单-lie-代数及其表示/有限维单-lie-代数的分类/未命名.html": "27f1825949ea08f04548d9624e35726bfbe725280fc978ae8ee556fff5adf729",
-    "半单-lie-代数及其表示/有限维半单-lie-代数的表示/泛包络代数与-pbw-定理.html": "f3370310444e2f9ab8f273185c8d1738ed01c30d96fb597c1359ee15e157185b",
-    "半单-lie-代数及其表示/有限维半单-lie-代数的表示/权空间分解.html": "71675cfe946e1e59edd486b4669af4ed8326776bfed909d946c0a2faaf2b9d36",
-    "半单-lie-代数及其表示/有限维半单-lie-代数的表示/最高权模初步.html": "15717c137fdef02d3dd304d664cd9e99d0c02ccf4c41a666ba1197815d0ed0c9",
-    "半单-lie-代数及其表示/bgg-范畴基础/bgg-范畴公理.html": "cb26003fce63dceb1381055ee0e8d5785238f64fd5ded224d794e4bb352b060b",
-    "半单-lie-代数及其表示/bgg-范畴基础/bgg-范畴中的最高权模.html": "c656ebf6f4b0503a3cfdc88ba021123cc1d1c76c92e75e93f9be45f37dde5a18",
-    "半单-lie-代数及其表示/bgg-范畴中的常用工具/未命名.html": "6a8daef241cf2e5810320b746b9f802bdb862ac2b22f41cffdf16e1b5054a89b",
-    "半单-lie-代数及其表示/最高权模的进一步讨论/未命名.html": "f512cbedc5ec75bc6c3d060b67591b0369a50cc957941884ce13c20a43383852",
-    "半单-lie-代数及其表示/转移函子/未命名.html": "074ea7469b1d6c00fd4e58c50b34c2838cb72816389a157ecd40e656bb3009d1",
-    "半单-lie-代数及其表示/kazhdan-lusztig-理论/未命名.html": "72df0f67509ce5bb3f06e864847f564a80eaa4f88151975d31f7f28cabf76c46",
-    "半单-lie-代数及其表示/参考资料.html": "dbee7ed8bfe6686b3b3d2ee06407440da09fb7f95cda74e9f2e148badb323021",
-    "代数几何/前言.html": "802cae66c9fe728bd9800f17240e73b850292f99df637a9e17fd6190f37fb5f9",
-    "代数几何/交换代数/素理想与极大理想.html": "a4359206f51860148eb3987977bb03d0727516a5056fac61e2973861dac71a44",
-    "代数几何/交换代数/理想的和-交-积-商.html": "dccc76112d79259b831bc30f4dcbcaffc5c5de8040f1d7a9f81e8a2b47e84fd9",
-    "代数几何/交换代数/理想的根.html": "22f7dfa7c33a08185ec0b0c56721f527f188f1c7f44315409b72d3c97e0ef456",
-    "代数几何/交换代数/幂零元根与-jacobson-根.html": "bb6695981a7e76c48d78263cc232e1b7905cfdf7fd324d89ade6e5516498f0b8",
-    "代数几何/交换代数/分式环与分式模.html": "f7c811496eda1d755d4a0589e4aa272099f56d1676f929bd32020f18da085e9e",
-    "代数几何/交换代数/局部环与局部化.html": "a3c37fd59547b47f6aa5a3f9499aa73dd0919b2f84223d188637510873ec5232",
-    "代数几何/交换代数/理想的准素分解.html": "90d7002f3452cc153d9b9c22a0cd8a53b22bedd1fd2524e97cc1b8ea655a8879",
-    "代数几何/交换代数/整相关性.html": "acfb9da5f3f17bda680ebb5cb4aca8e5ac26935b9689d24a642e8958d3eae10c",
-    "代数几何/交换代数/上升定理.html": "8fc5b4686f149d98838829644f089071fbf53b959e319d62210954a362229221",
-    "代数几何/交换代数/下降定理.html": "11f6de63782dcd79d3fb787eea3e0da53ad59c9e8d1d626750d9dc46ab38c3f2",
-    "代数几何/交换代数/赋值环.html": "f00922583f752d58939593e822767a30280db17e7d910b71e9ee61b87bb39af2",
-    "代数几何/交换代数/noether-环.html": "0850ad6f9cbe7fc75caac576c449111a68534cfe0a2b84b5147b1eba227b5256",
-    "代数几何/交换代数/artin-环.html": "0ce8f25a1e55266752c0b0adfdbff275fd00ae32a1175d6b83151dd01ce39334",
-    "代数几何/交换代数/dedekind-整环.html": "88dcaef271c1d94d652fcb1c13b4f2ac90ab01d7c2a707cbe9aed24adb4ebcf0",
-    "代数几何/交换代数/krull-维数.html": "2109892fc5f7171a36a9d9cae419eea5eda83303bccda022da233093ee47c09a",
-    "代数几何/仿射簇/仿射簇的基本概念.html": "b049a77639d276a731ab92857c261ed02c8a99acd00059e352dced9fd68600ec",
-    "代数几何/仿射簇/坐标环.html": "df576172d7152cccdeb9076d2baf3c1e962e9ca38e707407621fcd291b09670b",
-    "代数几何/仿射簇/zariski-拓扑.html": "b5ed4a40fa6ddce48ca1b7a599d209cfb7103eddefd4a90d189538b73eb6a9fc",
-    "代数几何/仿射簇/仿射簇的维数.html": "174dbefed77bd9f95090de07d67f9547bd3e350aecabb76d11f0bd3070faee77",
-    "代数几何/仿射簇/正则函数与主开集.html": "330299390d1f7c41a68364fa3de8c82ed18a06f7c8e04e7526c70c696cc30a9c",
-    "代数几何/仿射簇/环化空间与态射.html": "33dc723c8cc303c97e07f2875cd0e9642422d444a3e8372a7e244a7f7690d8fb",
-    "代数几何/簇/预簇.html": "9b39d47e0ed25bd6b1d66201ebe0c4562c9c963cccecdb08f1c134a13bdabb82",
-    "代数几何/簇/子预簇.html": "ad235768f94a435b158cc0934312b3e13fc5884a997b6b1ac5db55291169a46e",
-    "代数几何/簇/仿射簇的乘积.html": "e15fd9d25095f012751a54ddf84179bb581d03442d135425c5c0a7d05bccaa95",
-    "代数几何/簇/簇.html": "ca156496e8a386c22a62b6be9531d4489dba6ba55e14d589c0cd68afb777df8f",
-    "代数几何/簇/f-结构与-f-有理点.html": "b3476558ee813239e64c9f53e66e2de7beea0001119b776e179e9a2cb0ffbdbb",
-    "代数几何/射影簇/射影空间.html": "72d93bb7d68ecf44d703645c576d338f238d5ce26fd51bdb1719817daa2055fa",
-    "代数几何/仿射概形/仿射概形.html": "19ea403fc1a1291380f5364aba75706fb2edab7890d2f55b04165fe0459188a1",
-    "代数几何/概形/概形.html": "820a5d32253429d5c28eab0de839b92cf9d2dda6016628d5005acf94caa66812",
-    "代数几何/模层/未命名.html": "153cf1d119329f8091c01926d86b3204f245a9f503db5cf47960385185d0b926",
-    "代数几何/范畴化/正向极限与逆向极限.html": "d6fca23dedce4a7f72a2c6365fdb7eceb3b0a875130a4d56e55fc9075bcfd178",
-    "代数几何/范畴化/极限与余极限.html": "55deba137c9a9ef90c9776be2a2e1bf7d0625cc044301847cb276e1afeb2b2e2",
-    "代数几何/范畴化/预层.html": "aba0ed5c379137aaed2231e347e89a0601bed2fcb7ac1b08c175dafb94b9ba5e",
-    "代数几何/范畴化/层.html": "9e5f67e3419e53d0868c822c659874da1d4031712bb5165bd8f53b0d95d71e42",
-    "代数几何/范畴化/层的态射.html": "bb8e177323207bdbba192c148b922a85690b2656b55ea54f595b6c8108a08512",
-    "代数几何/范畴化/相伴层.html": "ce0f219302c0e00d894ebed0f01b55cf8c6904150e542508ae3f252ae50da8d9",
-    "代数几何/范畴化/仿射簇的范畴化.html": "440ce0877f23663a81f31792bdf6f0bb69053cc4fef51961ac0ddbf852e7fb2b",
-    "代数几何/范畴化/概形的范畴化.html": "11d60dc62ab354e1d8547ac142721cb6f01d59faf0aefe021f4892c7493c32e0",
-    "代数几何/参考资料.html": "1512711dc33347902a0b56af21e841b8b248b80c6dd7d787fb0ca9d0cc20b2ab",
-    "代数群及其表示/前言.html": "da43469e3c12ab4e0b1b0a83f9e10ab8247a5c23afc986c33e6eb5c0fd4af89e",
-    "代数群及其表示/仿射代数群的基本概念/仿射代数群的定义.html": "ea0dca4088fcf612d2b4532a93ba0031cd0c97826d0ea6d440b9d328f1c9f51b",
-    "代数群及其表示/仿射代数群的基本概念/经典仿射代数群.html": "e46f5a461f9c696c1c40a7b0e95247c6285628eb5c41181e6f0ed6a919f6c0eb",
-    "代数群及其表示/仿射代数群的基本概念/单位分支.html": "f2af073a30b681ba478315f99d57efdb143f108ef4788ba2c6bc0b54a8032e4f",
-    "代数群及其表示/仿射代数群的基本概念/闭子群.html": "d1845b0e92059bcf213bed67e5442de6404dc7a3b5fc7d197ee7937d50cfcdd6",
-    "代数群及其表示/仿射代数群的基本概念/仿射代数群同态.html": "8de692b393fd6e6b8bbd32a884f8e33ce444defcb2007193890c17bea1e14958",
-    "代数群及其表示/仿射代数群的基本概念/hopf-代数.html": "22815cc79179b13d55f5e589f470fbe0e3388a6541174ff17179e31c3c64e285",
-    "代数群及其表示/仿射代数群的作用/群作用.html": "71ec1a47d0857647e250344e3ed78a50cfad1033255e3df8c6a55b1473d658f4",
-    "代数群及其表示/仿射代数群的作用/代数群的作用.html": "d94a6c10bf9019d36e4bb053d2bfefac646868e2ac8d07c37ecd40c9de37a4ae",
-    "代数群及其表示/仿射代数群的作用/代数群的-lie-代数.html": "97467a82f08c76ff27030d0e713fc707759902851cd3e5fbc36884d8088c0a41",
-    "代数群及其表示/仿射代数群的作用/仿射代数群的线性化.html": "b908dcbacc4d1fe5786c7185446bc06b136eefa17b51902baa4ce3db72c25666",
-    "代数群及其表示/可对角化代数群/可对角化代数群.html": "0ae36213b171daf581df2f81eef5437ae21632199143e091f37432a0f23e4f98",
-    "代数群及其表示/可对角化代数群/特征标群.html": "fb43689b33865b269cc95aef61b1655e205edfeeb308ca90402dbf92086212dd",
-    "代数群及其表示/可对角化代数群/环面.html": "db016446a00aaf9d55b45c23335641d39337b3620fcf3456dac056d026056779",
-    "代数群及其表示/参考资料.html": "088d0a276a8b448a082033e2a5c7b3b78bac0fe9697e1e14a2b0bec996def1a8",
-    "模-lie-代数及其表示/前言.html": "e9fcee7145b4014fd93194a2442789e765fb1c54bc0a2d58d9a9203f4ed14eae",
-    "模-lie-代数及其表示/chevalley-基与-kostant-ℤ-形式/chevalley-基.html": "ec454ff7fa3e439b483033911158baf127ff9ca0ed7e9186af70bb295ed25968",
-    "模-lie-代数及其表示/chevalley-基与-kostant-ℤ-形式/kostant-ℤ-形式.html": "735b686c23b6b55e997ba52deac4aa48bdd84da0ed5f17400b53c6617650b761",
-    "模-lie-代数及其表示/chevalley-基与-kostant-ℤ-形式/chevalley-代数.html": "249c7ba543225e63fde532ed745e9cf0d0e3286c3fa515bd1efe06e3e9b330f3",
-    "模-lie-代数及其表示/chevalley-基与-kostant-ℤ-形式/chevalley-群.html": "7c9cfef0b303d257a502c445bcf8d71b3df4cbd32e5d08e03d8bcf61868f3cb5",
-    "模-lie-代数及其表示/限制-lie-代数的基本概念.html": "c3cf2fde7598c98c5b456a468754a057f394197b6783ae394fa7b8312f15fe22",
-    "模-lie-代数及其表示/参考资料.html": "75b661480f7f3acbb94ae0118613a81443bf9b7e38cda309b99541044080c87b",
-    "lie-超代数及其表示/前言.html": "5cfc4b30c5314dc876c75b7d23b87939c800e428884f80e831162b853a135dc8",
-    "lie-超代数及其表示/lie-超代数的基本概念/超空间与超代数.html": "0d15b66f5d844a6f0ec96809b81101d3401b47d2b5f6641e0c74b5ff18acebd4",
-    "lie-超代数及其表示/lie-超代数的基本概念/超代数上的模.html": "7b572d1d9339d168ba90596c0bd86818540911cf407f5c5f8826e08b419c6506",
-    "lie-超代数及其表示/lie-超代数的基本概念/lie-超代数.html": "94b1bee7e15b2f8c404484305ec091ae3b8fa0fef58bc00d879526e5ccc91203",
-    "lie-超代数及其表示/lie-超代数的基本概念/有限维单-lie-超代数的分类.html": "f39f1d24412f1df87702923dae51e60d6d92d2fa5313a66d5148e4c5e4071b02",
-    "lie-超代数及其表示/基本典型-lie-超代数/基本典型-lie-超代数的根系.html": "ac7160d4280aa9072c28ee99e453b69859f2d5f9d2d5bef2089186616ceda6e5",
-    "lie-超代数及其表示/基本典型-lie-超代数/偶反射与奇反射.html": "8a423f804259b0c2776e335745a8e026991ace4ec729313428fbecd7f0f12298",
-    "lie-超代数及其表示/基本典型-lie-超代数/超-weyl-群.html": "fc96b0f6595f739bdfb6e60b951742bc0523981c776b20dcfb1c91de6eb7ce14",
-    "lie-超代数及其表示/参考资料.html": "10c7570d8d5aaf02fcf8e74a560ec18495de2c46bda0ae169435d560acb26cf2",
-    "模-lie-超代数及其表示/前言.html": "4c06c33e502bd1cdb8d067cd57c752b94562bd5797e59e21ffa5b297afa73adc",
-    "模-lie-超代数及其表示/参考资料.html": "dba8d2a237c4f684ed0416f2de17e137c70511db4c7a2b479204f267d348ec59",
-    "chevalley-超群的-r-阶-frobenius-核的表示/前言.html": "abf839727ab4b8364a464b665cb5570a5dbadd56e42f0dbf664f65da67dab27a",
-    "chevalley-超群的-r-阶-frobenius-核的表示/1-阶-frobenius-核的表示/限制-lie-超代数与-chevalley-超群.html": "04a1ed971197d84fd450f8ccc070f4903996992517a3d91414b182a0e0076e88",
-    "chevalley-超群的-r-阶-frobenius-核的表示/1-阶-frobenius-核的表示/分次结构.html": "9895f9c1825d7076df26f2e1590c539dc77a2565bd7fff83073bc79b711d91b1",
-    "chevalley-超群的-r-阶-frobenius-核的表示/1-阶-frobenius-核的表示/(u_0(g)-t)-模范畴.html": "0d2a4d75cf9d28df2b1470be805732b81cf669907e3b565745ff035700497a31",
-    "chevalley-超群的-r-阶-frobenius-核的表示/1-阶-frobenius-核的表示/1-阶情形同态计算.html": "a69ae74c8a6e4a8283144d51580981578a38cb722f06c2e7c1978dbf6f746e2b",
-    "chevalley-超群的-r-阶-frobenius-核的表示/1-阶-frobenius-核的表示/1-阶情形基变换.html": "0add0cc21898c464e2250c4844f7f4f9f8655ee157daaccff513740e8312b8ec",
-    "chevalley-超群的-r-阶-frobenius-核的表示/1-阶-frobenius-核的表示/1-阶情形-jantzen-滤过.html": "e7a400251546f366c543ae4097a8092947141b3f9bf3b9fc9ed5ce5f854a035e",
-    "chevalley-超群的-r-阶-frobenius-核的表示/1-阶-frobenius-核的表示/1-阶情形-jantzen-和公式.html": "2702d357054d7edb4fcd83540cd8723ad349eb951b0cb99255407681e03cbfaf",
-    "chevalley-超群的-r-阶-frobenius-核的表示/frobenius-核与分次代数.html": "03daf51edf584b4beddf453e420a3c2d8bf0e11ea843a82e46298c1dbaec7e2b",
-    "chevalley-超群的-r-阶-frobenius-核的表示/(dist(g_r)-t)-模范畴.html": "c5e9e4c69ec203accf0768fb59e7a74d7c365b83a19bace484cc79c89ad9a86f",
-    "chevalley-超群的-r-阶-frobenius-核的表示/计算二项式系数的工具.html": "cb3406c892efb903bb4991652124ea6d3854448932ac1c424cc1c3de16605a8f",
-    "chevalley-超群的-r-阶-frobenius-核的表示/r-阶情形同态的计算.html": "c2393decfad58d8e8024989cc86fa537615929d1594f128b6218cb637b5b41fa",
-    "chevalley-超群的-r-阶-frobenius-核的表示/同态空间的计算.html": "a508d84d3f6c7d3149ad20f9f7eca05e543b4fff679d29886cf860e4d51df325",
-    "chevalley-超群的-r-阶-frobenius-核的表示/(dist(g_r)-t)-模范畴的基变换.html": "0bf544c3af686e884e990cffda7964c8f9bccec6c194c8a79d045de7714e4aa4",
+    "site-lib/html/file-tree.html": "9c1f9efec61cb40a1bd9fede353ee1d57c95568bcc7cf2e8058bc69d39f5023c",
+    "site-lib/search-index.json": "f5bfa4813066143d208b66e6a644a034204c15cb3469cdf4ed92f5227f2a0805",
+    "site-lib/metadata.json": "b0b131d3786a7f37cc62a6a244c9b4a45ac743aed50edf2faad36416a31b5d26",
+    "index.html": "5c5df3bae4e8bdbad162b9d0aff748966043ce1b578c07e903266000e4013bea",
+    "高中数学/基本逻辑用语/命题.html": "69f571f91039270e0dc24f35fc26f1015fea24bb842256d6828b1dacb59d844e",
+    "高中数学/基本逻辑用语/基本逻辑算符与复合命题.html": "19bab2a5dec2ac98b6dd8489d4ee823948bc2c8c76363e5a800124d58f3fa857",
+    "高中数学/基本逻辑用语/逆命题-否命题-逆否命题.html": "ca9b60553c5ddfc157f76e0275fe2cd25c6c739baef3e75a0c32828a5acb9cd6",
+    "高中数学/基本逻辑用语/充分条件-必要条件-充要条件.html": "3d5f1dd6b39d138c1d226e28ac314b75aeef1e0f75257feafa0ac5c4d3e168f1",
+    "高中数学/基本逻辑用语/全称量词与存在量词.html": "1de8606276fc33b6e8a018f8d855c3957418ff804f5f83cece69d8001e8a734d",
+    "高中数学/基本逻辑用语/悖论.html": "463750429b3557c0542a5afdb23299a2861940b4c5a1c069478d842268bcc621",
+    "高中数学/集合/集合的基本概念.html": "4cf754a2b01e9e5fcc6dc0ec68c79bd6f22b3170d689c95110cd2dbca47fde8d",
+    "高中数学/集合/集合的基本运算.html": "4720701dbe042889174145f454f929ba1165b83bf4a3ad78bfedc2c44a6efc12",
+    "高中数学/不等式/等式与不等式的基本性质.html": "9e52c17f09ff9f4bbe05fe491da48c1c0610776a6e62e1c4154894ee0ebe3d50",
+    "高中数学/不等式/基本不等式.html": "d7c92942b8590b574c6014b4ccdb9a4d84ef22d795db196ac4c6e7004d185b76",
+    "高中数学/不等式/均值不等式.html": "0ed6ee6e6da60b75cd890a6a0c4c1348f14f0d18ba9f5e14157f2ee78850353c",
+    "高中数学/函数/函数的概念与图像.html": "b4d6ca6944121b5b30fbc5f2e50b592a43c37e72acad05e257b47e842255ae6b",
+    "高中数学/函数/函数的单调性.html": "7f93c580fc0471b48527838435a1ca8c79703a70be3151746c04bbeb64e96304",
+    "高中数学/函数/函数的奇偶性.html": "5f28d484a326805a91756a896e7a6a14753dfc3bd8d491b7f9117c950cfae98a",
+    "高中数学/幂函数-指数函数-对数函数/幂函数.html": "0a33fed0714c004768e752a1adfe598f8901d2264de2c29ece2b415df611063f",
+    "高中数学/幂函数-指数函数-对数函数/指数与对数.html": "4856fef6908f6c6e4800ecdd236123fb566b3da5b309a629307ec08d26c780da",
+    "高中数学/幂函数-指数函数-对数函数/指数函数.html": "b4584140faf41d5d845d9d6d510c3fbe3976a61c3efd1ff1915af0eac401fd48",
+    "高中数学/幂函数-指数函数-对数函数/对数函数.html": "69e4713227ccbed4023f2fee6bca54a7113773bee22c61353eac67269310b1d0",
+    "高中数学/三角函数/角与弧度.html": "30b12bbf8a1ca25ea388d23b730a1cf690d4eca2e5a8e4bc46373fde83d40c78",
+    "高中数学/三角函数/三角函数的概念.html": "fbd1536128dd8206b30f882b277a63a80f8ca29aee103b277cf4fb3af8cbb5e5",
+    "高中数学/三角函数/三角函数诱导公式.html": "ff1be7e887eb64f573a422d5f8f01234afa6aa334931399076007a59fac7f624",
+    "高中数学/三角函数/三角恒等变换.html": "1adc90277728ae54347b4d491bf70527726dba4ec8636c128c998522d094a746",
+    "高中数学/三角函数/余弦定理.html": "78a81a2cd8da8997a931f3ba92a8a9df2b259842e722aade0fade73daf8733ee",
+    "高中数学/三角函数/正弦定理.html": "372da7fe4e5d8bc1782f82fd206d8e05626abf4a98967b361b54f02dea35fb32",
+    "高中数学/导数/导数的概念.html": "f53096ac5baef7881a6234ca277838f8b39d1e28db128f4ec27b86948da56215",
+    "高中数学/数列/等差数列.html": "0250663a0e20b6cf2b0b1f6b7986dc7465d2b33cda332f3014c1b726e311b593",
+    "高中数学/平面几何/平面向量.html": "9f58be471c8f88f657a333c3c85a2c9c4426d0c2b9ae5e916991d34e51cb094b",
+    "高中数学/平面几何/直线与方程.html": "b93a31856c98691200f2ca0aaca20d6a8f1db1003deb6d179dd46b85c3cc46d6",
+    "高中数学/平面几何/圆与方程.html": "08b3dd8670eef40ca5153382416b0848571e8cfb5ab568607bb4abce3235c8ee",
+    "高中数学/平面几何/椭圆.html": "48e620112d4dba53f9fa0ed32865bd60c00d648a822137cbdd2c9652866416e7",
+    "高中数学/平面几何/双曲线.html": "e88c335fc907bde8f4d55a2fbb7e063d3019304f6db1492b71bd8c7c341b9879",
+    "高中数学/平面几何/抛物线.html": "4ced386def90d5e35c7c7d3b56e46a1cdef38d8470575506d3bf5234c08b4e9e",
+    "高中数学/复数/复数.html": "ff4d787504c701538e04eb3a1bda9ffa5783b923f09a6b2c18346470d779977e",
+    "高中数学/立体几何/基本立体图形.html": "f2c673ddad9c3a603fdfcd7b3f8a01ecd9f58f831193bbe3f51756960b3fb387",
+    "高中数学/空间向量/空间向量.html": "d30746f01ec56e1e056a09b254cc3e25f5c9230bfc77bd8c82829dfbd7b79fcd",
+    "高中数学/计数原理/排列数.html": "26f618d432b933793c177244fb1bcf149616ccc9ec90a5f43e13a0d1f996bdfa",
+    "高中数学/统计基础/抽样.html": "5f056bdc0b61687f4f895256a30ccee031bcb6a3b339d28df5a4d2de8d06d214",
+    "高中数学/统计基础/用样本估计总体.html": "7dd71ffc47aeb7c8f5ec7b88c0ef8dc6df48e48a7c9dfeb399acbcd281ab1411",
+    "高中数学/概率基础/随机事件与样本空间.html": "81af14bc29fa027130eb5cf19e556fa1c85610550e8bf2cf6774be1b97e6050a",
+    "高中数学/概率基础/随机事件的概率.html": "60a478ca1d1b0348cc8fe0a10497356259fcf6aa424bbe054081d64f2d42c293",
+    "高中数学/概率基础/互斥事件与独立事件.html": "aa8466629dbc4c4739814a950dfe5c10f7989faf604450057a66e75c323eacaa",
+    "高中数学/参考资料.html": "6b46db9f264734f93a124aad21967a27449034a2fc1206e50d5f41f00fd13ae5",
+    "数理逻辑/前言.html": "c9f64e6be4c45f4d294ef34b73081da8afad060fed2ab19254b90d1715e837c0",
+    "数理逻辑/参考资料.html": "997b9e6d057c39a96344171cb5d38d01df88a13c769d441b6276aeae82b81fc5",
+    "集合论/前言.html": "e1aef8ce24902319751fabc174fb6df2513dff22a884eedfc188d2352617d6e6",
+    "集合论/zfc-集合论公理.html": "666c1cc23168f61d42a536bb0a034370f9afa3703612c814b583efb40c390cce",
+    "集合论/二元关系.html": "6e709fce968a165e2ca916349368a5673ad5682435080ba62d0635f6d072568e",
+    "集合论/序数.html": "ca36fad2ba6b506b28de7dc04dbf548d63555aad493a40993ecac93c1722c134",
+    "集合论/基数.html": "7c2618ea573d000fa4da3d0d915f89e81a1c4352837980c640c8babf853411bd",
+    "集合论/数集.html": "ff268e25824d9e8436744c16fa098ade2dbff6efb63e78ac43d137798c17e96b",
+    "集合论/归纳法原理.html": "26409d7dca9014332dd7056ec2ef9727a96420767789e6bad2f71cfea0fda6c5",
+    "集合论/参考资料.html": "45787c7479be784cc7305c501c8de32d4190645bf994c8571e9c28614145799d",
+    "初等数论/前言.html": "9404744acdc14f67aa16fb91ff8fb5c80547a8b04276353c89460b789f4bd073",
+    "初等数论/整数的可除性.html": "fb41b69b9839b05630e4e0b54a7b05ef1b231f0d361e17d4f5dc3e19174d1c77",
+    "初等数论/不定方程.html": "76bef3aa9c4d52ca5bd74d8c34dd7c329fcf6211eb84946889aad172c8de709d",
+    "初等数论/参考资料.html": "1ae42f613ff29a487e87fcd035251af4e7071acba9e25d690a5e450e453a6a1a",
+    "解析几何/前言.html": "53c2ef4f3de678944337d205f6f9b3226ed2b948c0ec940b97e8df29ff6b8b2a",
+    "解析几何/参考资料.html": "225d77d98558dd8f8714773a9492d8cb747c58761ec4b5a32d59bcecd333f1f3",
+    "微积分/前言.html": "36e48ab61c0af6f619335831b0b62acc7a4d97a96dc0da9a20d13aa52fa01250",
+    "微积分/参考资料.html": "11c27c8ff1dc96ec64c12c191aa71527d6df2996dbc4167980bb0e25ffe786b5",
+    "线性代数/前言.html": "efd138733cd8c31efb22f9d7878c2bcb64da55af8b69b79f655c0b6f2ddbbe82",
+    "线性代数/行列式/行列式的定义.html": "e4f79800123de9749aa69a21e6e2a2dfb6e7407cb315389cecad12eb316694e0",
+    "线性代数/行列式/子式与基本性质.html": "98dc3a91c4b47ff1e3255febb8a5a1716a8e2ba8d8187c8b278c261745f98bc9",
+    "线性代数/行列式/laplace-定理.html": "51acdc2859fdb17773324a5c85e90a519489fd932d66b9bbb7250bae363d6118",
+    "线性代数/行列式/行列式的计算.html": "d17b62ec49a0778064d640366339e040ce30a2ac38089f35213893cfc9ea95e5",
+    "线性代数/参考资料.html": "52b628cd0bd899ea9239f4ee423543d82f6ecb6ca36735e6de148c9373a1c412",
+    "常微分方程/前言.html": "b05910daa7b0a2384b20e37285777b83b1b63f4f61237864e96df055cf37f6c7",
+    "复变函数/前言.html": "e1b137959331ec6f054ceb83bb4728df3fbc669462b44be20f51c032dc71f5b4",
+    "抽象代数/前言.html": "f3cd2aedc5b72b1057ba8776b3baa9f72772052996dac3180e7ba0f19e2f6b19",
+    "抽象代数/群/群的定义.html": "9d1156f17a9663a1f3f21466fb482f814bf204f880a157466d6e3ec31e2475ba",
+    "抽象代数/环/环的定义.html": "067a31413ff624a9a2f2be6d23cd0c266fd048293f0a4880350bee60fe302abb",
+    "抽象代数/模/模的基本概念.html": "f34d99fd611d10154f6ea4e521e32d833ba4d51b6bd5e4c2c804d4f8f39f42cb",
+    "抽象代数/模/模的正合列.html": "17a3e052da2bf8a35e8a103f3a3828dd82893e552355d90363251f3671a51a87",
+    "抽象代数/模/模的直和与直积.html": "8944f608469410cb3bc01052577f8473e3693cf19f134e98c5a7925a5fdeefb4",
+    "抽象代数/模/自由模.html": "1d2e17c0d639982bbfb50730fa3b4895b106a940333c0ea12843caf994d77d7a",
+    "抽象代数/模/hom(---).html": "b800e0cd15dcbc0e4a053c10f014f51f4a795810f182a8c453d276cb237b7dff",
+    "抽象代数/模/对偶模与对偶概念.html": "95cfabc9327aec7d1a8e78cb13f2ea24566924688beecc57c6f191136d6a0d8f",
+    "抽象代数/模/投射模与内射模.html": "67d012e76cc18b9d5c9fe15dfc9c4bce9fb019c33e3396aca2027aab885272af",
+    "抽象代数/模/模的张量积.html": "1d0b2c89984eb08c4af11dc047f72d5f8af315794de925c2da9a1e1e7d19f32c",
+    "抽象代数/模/平坦模.html": "0e97bdb960c77456024b020ff92eb881540da634e2905a172960ca95d46abbd5",
+    "抽象代数/模/代数-张量代数-对称代数-外代数.html": "c6a61b0c3f1f94669d7e6d829f67c08c5731553c0dd8090e8d98ee2b19fd9a39",
+    "抽象代数/模/分次模与分次代数.html": "030369d99a268d55e1ddaabbc4dd157a088650933b7c6dfdb2ae9681cd2b6851",
+    "抽象代数/参考资料.html": "cf4be4051915a85c0d06befeb667b6fda95cfa0c070b8b3cb372241b0f84337a",
+    "拓扑学/前言.html": "36e04f5bf254f7fd456da45585394d1118122511eda2cda1b459703361d16516",
+    "实分析/前言.html": "168ade0da4a7adac4e3a5ec3a09ef227c178ecee71682155c9d946adf8ae2ddb",
+    "范畴论/前言.html": "c6757c335dd4a3d73f747e12f4eee60263db01eb3ce190dcef98f4af67b25527",
+    "范畴论/范畴的基本概念.html": "c7a00b0db77a3105aeb1e576e9321b36d01a62ec7f9022b827887d10676b5904",
+    "范畴论/函子与自然变换.html": "85162ccb44ee3fe3b6f75d69cac7e258621734d93c42ece20e9f083d2473200c",
+    "范畴论/积与余积.html": "62507c3e831dc620bca8121ae8e3fdc4389c19669ca6b0552d524a0f4ff9a66d",
+    "范畴论/自由对象-泛对象-余泛对象.html": "51f30dc86e43c7831c41bcdb5b5da5a44abddbd73d4d0af3d1c846db828db1d1",
+    "范畴论/范畴同构与范畴等价.html": "5692faf059b97f47e5e47f9c28e5947d9fbf52c94df491b2183c8565c968bb52",
+    "范畴论/可表函子与-yoneda-引理.html": "31af107417646be51435da2c63c1534b64ffb1d49f88d497ab9978c91f48f25c",
+    "范畴论/乘积范畴与伴随函子.html": "b9896728d8e56a01a6648eb5298d5ef0b0443e72396f114ce9f2dffd7216ff54",
+    "范畴论/态射的基本性质.html": "e465f903fda609e1d48c30314ea000936f6f4a9e408a23bea8c615d3a0299a2f",
+    "范畴论/abel-范畴与加性范畴.html": "5d69e5d8b1c9ca13bd1e9e7c9e3eb53cbfde3f09cb3facb03c2bc76c3db4dba6",
+    "范畴论/参考资料.html": "bf01a208b5a710daad413327484fba359ab2983df1aa9d7e5ddc2cb625fd55d5",
+    "同调代数/前言.html": "8fc191e0e88caf999ba22296391339978050f2d5b2b99a43ec6411f19fac0e24",
+    "代数拓扑/前言.html": "2def8ccc19c5c73d00f9cb1ec1c372933289b7d1a258510df4cbf657153e32b6",
+    "光滑流形/前言.html": "4fddec83661ea8edbcfdcf554a73be681746ead56f57269c9986c282a2f4c76c",
+    "半单-lie-代数及其表示/前言.html": "e25169323e2f926d1020e1b418fe280cef6be41552bd052dba66657e0173083c",
+    "半单-lie-代数及其表示/lie-代数的基本概念/未命名-2.html": "a50489b059eba98f991a3d37796938d9bda2386287fbcc86d133f87b689d9146",
+    "半单-lie-代数及其表示/半单-lie-代数及其表示论初步/未命名.html": "a9498eb0d73c17a8414a7fe21f1a51e56aae010532b5c656d37aebae01b126be",
+    "半单-lie-代数及其表示/根系理论/未命名.html": "fa5793032306b60ea36fbdde45f4e0bf4729cd4a3886d67f593afba8156eb274",
+    "半单-lie-代数及其表示/有限维单-lie-代数的分类/未命名.html": "b18120246fd7a18f6838a1ca209bb27b798e6fe9fbeaaaf4d014360220a1717a",
+    "半单-lie-代数及其表示/有限维半单-lie-代数的表示/泛包络代数与-pbw-定理.html": "a709849eea48910646e1090399edaea340335ff8dd8e736c17faf570cf62620a",
+    "半单-lie-代数及其表示/有限维半单-lie-代数的表示/权空间分解.html": "0260c30d581395b0deee07bd7a022df4e571a646d556ff3b80e138bb79f62716",
+    "半单-lie-代数及其表示/有限维半单-lie-代数的表示/最高权模初步.html": "1fba91392c7f4a977d800d02eb8ddb65e1b37924052339c4cdcfe189f6f909df",
+    "半单-lie-代数及其表示/bgg-范畴基础/bgg-范畴公理.html": "6857c17523826d67b62fb32dfae3af99c43210ed741b57a4df0bbe9bf91fe417",
+    "半单-lie-代数及其表示/bgg-范畴基础/bgg-范畴中的最高权模.html": "ab569e9977ce44f6f702ee410dc26e33c2eabe3cf798864f5b70cb3c47b19551",
+    "半单-lie-代数及其表示/bgg-范畴中的常用工具/未命名.html": "e1e0db143f926efb399f0bd858074be0f9493625ee61c28a21c5af43fa0e830e",
+    "半单-lie-代数及其表示/最高权模的进一步讨论/未命名.html": "6741aacacf5e458f861f2fb9976e115dc8ff519cf34e42bb1cf1c30038b714c3",
+    "半单-lie-代数及其表示/转移函子/未命名.html": "47459d2a44e253d522242a056f3515819cf4f33bc21eb73786dbe356abf7b9ee",
+    "半单-lie-代数及其表示/kazhdan-lusztig-理论/未命名.html": "bb008f400529ff113a87b38709336506457bb9c1f78d5574363dc6ddcf5de6d3",
+    "半单-lie-代数及其表示/参考资料.html": "7175efba307f1729eb6b0c86d597438d6e7ac032e64a2613c0cb59ddbfae066f",
+    "代数几何/前言.html": "63621686a455781aafdd7a790eac164ab5e1818f6e894d40ff1d6e3da58dd2f3",
+    "代数几何/交换代数/素理想与极大理想.html": "488adcd92f19841b97e1115180c11c4ff92e21b382ccabb353b302b3399b382c",
+    "代数几何/交换代数/理想的和-交-积-商.html": "66e317766e398b6faef4a4b00c94223c855a6601aa57bed710b95c7d6c292bef",
+    "代数几何/交换代数/理想的根.html": "db32d91a639a5380261c4920a83353b3d50aced0730a5180ecbc8ae48c69b9af",
+    "代数几何/交换代数/幂零元根与-jacobson-根.html": "128feec1856ba229afa5bc82b5fb276131ce5622bc8df6bdf213155309fcb120",
+    "代数几何/交换代数/分式环与分式模.html": "610efce8f8b6c223a0e55182a5af77f7729daf8899b5f99950db0c0a4433badf",
+    "代数几何/交换代数/局部环与局部化.html": "ce5ff3f457cb4934f81772e2bb036f7db63f97e69596461d7d5f209c4adc75f3",
+    "代数几何/交换代数/理想的准素分解.html": "2b423fd41c635777793f57159c95efdcd284f5206f92efd92131a1c808ccf365",
+    "代数几何/交换代数/整相关性.html": "93db774fddbd7b7477ff2b16e20da43609ad4819d9779364b7582cc93610f22f",
+    "代数几何/交换代数/上升定理.html": "c4da3324dab9eeb2e5cc6dd1448848e724122efb886bf39bfadf281e0439413a",
+    "代数几何/交换代数/下降定理.html": "d1688fbe21c8d43badfe60aa555db3519b32f682d07e55f1b22a1eb3bc81511f",
+    "代数几何/交换代数/赋值环.html": "c63392693ddd59bdb0c6b39a99af32fe14a0b4eda85deb3ec7570b80b48bed10",
+    "代数几何/交换代数/noether-环.html": "2f3ed6e59741bf91691d667a7a075ca20287ba42dde198137481304a4e7a4ec6",
+    "代数几何/交换代数/artin-环.html": "9b9edb026768eaef72fe6f88409f34a4c837811a884130cc5b3d0595989f9cbe",
+    "代数几何/交换代数/dedekind-整环.html": "0e47b730c99959e290c2120f5f4cc080f3b254011d01b9659240cc5b0d7cc86d",
+    "代数几何/交换代数/krull-维数.html": "6dda7fa2490dda2334e7c038f41dbd4de3fb13ef4aca4eed27e2fb2ea7eab3cb",
+    "代数几何/仿射簇/仿射簇的基本概念.html": "dc8dc6bc790fbe6d753695e6274468b021bde511fcb60214120427b0080c607d",
+    "代数几何/仿射簇/坐标环.html": "53d1b7633cde8d74f3dc336308f3492cc2a1f88f6c47be6ab6658cf639af1910",
+    "代数几何/仿射簇/zariski-拓扑.html": "aa503525f954e38bfcdd8550e86f3090eee9663e3fb206719ba424db91c4f710",
+    "代数几何/仿射簇/仿射簇的维数.html": "8a0399218000afeb78fa8a39c8825c856780c7e5871579520fd506ab25e38d7a",
+    "代数几何/仿射簇/正则函数与主开集.html": "6d3f7453ca98e7dd3e95673ffc7b384ce2f6b09a6e84d6c1bef97ef9485ed0a2",
+    "代数几何/仿射簇/环化空间与态射.html": "60e90bd187f02ce73f79aa0d7af9fde7846532ab7012af25f645fd137a0cd051",
+    "代数几何/簇/预簇.html": "9bbe93e44c85917cdbdb9d9576686ee3e42616ca68a6f687e4845494a7739e00",
+    "代数几何/簇/子预簇.html": "e58ade0b81751a93b1b5185784002eb768980c8b6f2c8256884f94576cb5230d",
+    "代数几何/簇/仿射簇的乘积.html": "748e16ffb1b33fead1dd6f5e81c378473571376cbf8784c3fb02b467eeded8a0",
+    "代数几何/簇/簇.html": "4c939b1e50bf91876526a8ebb8922eb1ac8c401482be659475466ffb67491977",
+    "代数几何/簇/f-结构与-f-有理点.html": "1f52d2743ef95081092736101e62d9ac91390108cb24c8be475579f8e8f4cfc4",
+    "代数几何/射影簇/射影空间.html": "b924ee7f696927ab82262c53b69e8b515cead9091540a45be6f47f2ff78940bb",
+    "代数几何/仿射概形/仿射概形.html": "4bf0288f6a58b490d4dbd185748e56e6dffc11bfd06e535b6faec2b8b56b6856",
+    "代数几何/概形/概形.html": "15d9ce50f6852f2c113f3c342df47d80ece1027d193736633e23d7f01eab5493",
+    "代数几何/模层/未命名.html": "7510a377e0e038645a4808a12aaffdc404d4032437d2edca1651b557a482cf1e",
+    "代数几何/范畴化/正向极限与逆向极限.html": "08ccc3de49c523d2c60e8df93f259b43a45cd0e1a3c1b31c9c7fc0d930a8d834",
+    "代数几何/范畴化/极限与余极限.html": "594e6b82c256bd0784f24d55980e03343cd411a02cf115cbdb36e6329df5f96e",
+    "代数几何/范畴化/预层.html": "ebef91b11b6207a8c8e16c7f54132997638e38e346848fc479fcb492c1aa7703",
+    "代数几何/范畴化/层.html": "21d3f321c1a56b82a112afb9869f99deb1832403dceecf194d92944e763b18e6",
+    "代数几何/范畴化/层的态射.html": "ae9133fa7e87558974c89f989568d2499092c15a16512c2a48ed16364d5f6973",
+    "代数几何/范畴化/相伴层.html": "8e8dfd8d9d8e90ad4dbd40e2e528ef1b8cbf39e31f197babaa574649b8c72d75",
+    "代数几何/范畴化/仿射簇的范畴化.html": "5773d3b7ba6f38173f7eae9794bccb9f601ea2896cb46969b9af1cb1975fc3e5",
+    "代数几何/范畴化/概形的范畴化.html": "ff531790ffb59f1fab348bbdb8fdc2d3e4074dce280999da4a589056d060fd16",
+    "代数几何/参考资料.html": "1b0095355f2208ecfa8cba60783d1ad6c59ec05566513ef9ce7ca899e38de807",
+    "代数群及其表示/前言.html": "65164fd8ad253a0a47dfb8e3482ad66384580bb526b1774cdedca9212322abb3",
+    "代数群及其表示/仿射代数群的基本概念/仿射代数群的定义.html": "c6f909b26ff3a2bd0038547e31bb80b0b45012c8103912f54918e914c8b4309c",
+    "代数群及其表示/仿射代数群的基本概念/经典仿射代数群.html": "a0c1a96b80054120d09ca34df17dc62e9e6a65229b24c51d154f5b877053b150",
+    "代数群及其表示/仿射代数群的基本概念/单位分支.html": "04392f99305b024a855a5b275907c7822ab440ee614d270f8a4473ba20002133",
+    "代数群及其表示/仿射代数群的基本概念/闭子群.html": "b3c6500bdbe9823a7f0627bb178462f6e42d9114c73319558b17fadf36383166",
+    "代数群及其表示/仿射代数群的基本概念/仿射代数群同态.html": "c3f81e1e0c358722066833bdfe7977bfb71c0fdc29e8b16207a46e50835a4710",
+    "代数群及其表示/仿射代数群的基本概念/hopf-代数.html": "b7c340dab26a1bb883e5bc5edc0a021a49924e97faded07c88685ad55a93281d",
+    "代数群及其表示/仿射代数群的作用/群作用.html": "02fcc7436c8eeaecb8e43562b16faa0a743710d72bbaf5065e57aff5539b5816",
+    "代数群及其表示/仿射代数群的作用/代数群的作用.html": "fd63065383a75f95e061e6b70108dfd49ed9211055a49b6b5ab7b509d17b21c8",
+    "代数群及其表示/仿射代数群的作用/代数群的-lie-代数.html": "21d5d00d5e46a5aa38b7108766d7291fd766631ab193478a9e08fef087996de0",
+    "代数群及其表示/仿射代数群的作用/仿射代数群的线性化.html": "a280a3157ee0d02d2f6a45527f9535d73bce666a8f1d87e808889615df7d5c75",
+    "代数群及其表示/可对角化代数群/可对角化代数群.html": "da28dbfab5bdd5a884ede47a81d979ee2d50f4b781b28c64c8874e83fbef339b",
+    "代数群及其表示/可对角化代数群/特征标群.html": "7b2e7a403c58f847b9e18033303066a0462ca40769399860b063754722192be9",
+    "代数群及其表示/可对角化代数群/环面.html": "da7095d7e6257ca0c8811d84dddfd125295b926eabdfb3d54f2429ca4a71dc0f",
+    "代数群及其表示/参考资料.html": "efcd2828f968960b6a6eafc62ef002395f32ef4bfe4149a0686f3983c77d931f",
+    "模-lie-代数及其表示/前言.html": "dfaa481d00708039a61ad5097f76cd02ec276499dfbff8a4ae51990164318d7b",
+    "模-lie-代数及其表示/chevalley-基与-kostant-ℤ-形式/chevalley-基.html": "e36e5cbe900fe6d9a43b5a5752b04e181783c0bb920f7ba744f96d201c04f101",
+    "模-lie-代数及其表示/chevalley-基与-kostant-ℤ-形式/kostant-ℤ-形式.html": "37ee711df2551055de468b1943d8c743986af079a82bc8e4aec6ee8122d10468",
+    "模-lie-代数及其表示/chevalley-基与-kostant-ℤ-形式/chevalley-代数.html": "935b206b59d34b7f91d3bcaba0f587b18ffee3c4e42005be33b3a3fc1ac1b6b4",
+    "模-lie-代数及其表示/chevalley-基与-kostant-ℤ-形式/chevalley-群.html": "fc4e9df8dfc5730ea553be2e7c4b28b5ae56543fc1ac62cdb35706eee7996111",
+    "模-lie-代数及其表示/限制-lie-代数的基本概念.html": "c42e8a07f11eb423e2090879fe982ea930d25467e1d866dc57965922a2269109",
+    "模-lie-代数及其表示/参考资料.html": "eb1d5cc4d93f55ccf11a362c5e120a4ad01a941576cba5a074ec1960c96991a7",
+    "lie-超代数及其表示/前言.html": "76c90670cf7ace85dc6c3bf1263c755729c502258005fe0356404048b0c8974c",
+    "lie-超代数及其表示/lie-超代数的基本概念/超空间与超代数.html": "7214aa5a35d643d8d073d8e3d20458c0ee76052adca11590f9b8116c3f2a30f4",
+    "lie-超代数及其表示/lie-超代数的基本概念/超代数上的模.html": "c19604d63478de551d4386a268ee2861bf33c741295d6da5052e05989bd61f55",
+    "lie-超代数及其表示/lie-超代数的基本概念/lie-超代数.html": "09c57573298ccd105ac526920272f302ce61af6c00eef29be14cedcaed2241ba",
+    "lie-超代数及其表示/lie-超代数的基本概念/有限维单-lie-超代数的分类.html": "afc8a851cbcbdbad16aa7097a2cbd91f2bbfbca9d3d75cf359805da4dd791213",
+    "lie-超代数及其表示/基本典型-lie-超代数/基本典型-lie-超代数的根系.html": "12d4802c419366754069615b72c7a4ae6380b045dcc76271b2ddea8cf9d6a42d",
+    "lie-超代数及其表示/基本典型-lie-超代数/偶反射与奇反射.html": "a5f2a31c200297bb5da2c05e5fdc4dab9a3bf0ab44223213f2f2b58eb951da98",
+    "lie-超代数及其表示/基本典型-lie-超代数/超-weyl-群.html": "d02c8b82265aaaeaa1362c57c93f0ce7322e7f2c634243b25831e41b45a47987",
+    "lie-超代数及其表示/参考资料.html": "9ade98e22ea0190447bda472e6e500b10a9b0a1394761aec3cafd893533e8afc",
+    "模-lie-超代数及其表示/前言.html": "39ead9d6d4e9465b3777935622bb580b9f7d6fbc8ed1b5ac68e46f55f2e03817",
+    "模-lie-超代数及其表示/参考资料.html": "b28257d7b4b80c9381c891cadb43ed40539414bc133420c76b71531c69143ab3",
+    "chevalley-超群的-r-阶-frobenius-核的表示/前言.html": "9a92f667345a5f17802478e0e545b134a3ac6fd724058b09d5d368be82423797",
+    "chevalley-超群的-r-阶-frobenius-核的表示/1-阶-frobenius-核的表示/限制-lie-超代数与-chevalley-超群.html": "5354953ee90b94ecf46ba0178d9f95476adb01004676acf5c82be3114c306211",
+    "chevalley-超群的-r-阶-frobenius-核的表示/1-阶-frobenius-核的表示/分次结构.html": "638b4832ab2f25e2de1f0e4adf138c40a018a995d648626c9611c85094fa9064",
+    "chevalley-超群的-r-阶-frobenius-核的表示/1-阶-frobenius-核的表示/(u_0(g)-t)-模范畴.html": "6909b7c0d1c63c53ae8ffe6b77a976b0dd0d39d572f4b783ee5410cf0fc87aec",
+    "chevalley-超群的-r-阶-frobenius-核的表示/1-阶-frobenius-核的表示/1-阶情形同态计算.html": "fcd2a20470797af3a78a917c93fdfcc9d1483c2973c302a8643b43cf5929005f",
+    "chevalley-超群的-r-阶-frobenius-核的表示/1-阶-frobenius-核的表示/1-阶情形基变换.html": "028aad0ed28342d82f6174e007952775b2692aa59cc0fe92159b8089d1d124a1",
+    "chevalley-超群的-r-阶-frobenius-核的表示/1-阶-frobenius-核的表示/1-阶情形-jantzen-滤过.html": "709292a7696077bc82f0733ceabb2e971fc42bb42f3782236a17bea53d4cddc1",
+    "chevalley-超群的-r-阶-frobenius-核的表示/1-阶-frobenius-核的表示/1-阶情形-jantzen-和公式.html": "fdaa75a683983015622c823514d18885a08021b83c7eecee93938b7410f41ee9",
+    "chevalley-超群的-r-阶-frobenius-核的表示/frobenius-核与分次代数.html": "7ce6b1d76471ff3bebc7adb8652042472f4d00ac0352471cdbd2ab7b7b9f1761",
+    "chevalley-超群的-r-阶-frobenius-核的表示/(dist(g_r)-t)-模范畴.html": "0c84020e68ba469654b9b7376ecef73aacb852ae8c110a6a72684f7da5d8a01f",
+    "chevalley-超群的-r-阶-frobenius-核的表示/计算二项式系数的工具.html": "13185503da3399249551acc9f29c889eb7f99b828b5313a0be726dd85fc6f366",
+    "chevalley-超群的-r-阶-frobenius-核的表示/r-阶情形同态的计算.html": "a8367c59f79a28cb45ac1b6be5002934e45595ec0867cc1f0ac8eb5ec8f8a343",
+    "chevalley-超群的-r-阶-frobenius-核的表示/同态空间的计算.html": "d8abba1b5658d379959dd7f07d7499c9536dac15d85d47546b5f80c1a48c7dd4",
+    "chevalley-超群的-r-阶-frobenius-核的表示/(dist(g_r)-t)-模范畴的基变换.html": "3db4d6044a74f73120a509a31c8893e65cdc19b623e6d22b48006a981ef16118",
     "chevalley-超群的-r-阶-frobenius-核的表示/参考资料.html": "c2cc3d5f541c9fe4bbf614e5237161e41acfca1861932164321439886bacb0ca",
     "attachments/Attachments/Images/AxGlyph/Venn 图示例.svg": "ebf04ade9be234df507377e1aeab31f0f117215a6257aadc2e50a30ebd076a98",
     "attachments/Attachments/Images/AxGlyph/辗转相除法举例.svg": "c9e8e67b32f04505f5d3a28484b94cef9a16d33fe411ae75e6739c924c1e44e7",
@@ -289,14 +289,831 @@
     "site-lib/fonts/mathjax-c56da8d69f1a.woff": "c56da8d69f1a0208b8e0703656c3264b6dd748bd452524c82b0385b60f6a68c1",
     "site-lib/fonts/mathjax-72bc573386dd.woff": "72bc573386dd1d48c5bbd286302ca9e3400c5eb0f298e7cfbf945b9d08fc688f",
     "site-lib/fonts/mathjax-36e0d72d8a7a.woff": "36e0d72d8a7afc696a3e7a5c7369807634640de9b02257bca447bdf126221a27",
-    "site-lib/media/81d33d08a96d-4bb6ac751d1c5478ff3a.woff2": "81d33d08a96d99034c41b49ac980f63b353175f919db817d74e0405749af03db",
-    "site-lib/media/a7c6a118d17f-6155340132a851f6089e.svg": "a7c6a118d17f6a296037b519e9891e08951de59c289fe41ec2596a63c3b28516",
     "site-lib/media/6e5dd0494f63-70cc7ff27245e82ad414.ttf": "6e5dd0494f63d85970156cd54b6ac568b82a392d135db08bbf5cc3048d489aa9",
-    "site-lib/media/693b77d4f32e-c504db5c06caaf7cdfba.woff2": "693b77d4f32ee9b8bfc995589b5fad5e99adf2832738661f5402f9978429a8e3",
-    "site-lib/media/a44ac4cbf79c-2308ab1944a6bfa5c5b8.svg": "a44ac4cbf79c6765f4bdc3a0dc3fb51b56ed5eb4679177f0a40f04b63b3e3a3c",
+    "site-lib/media/81d33d08a96d-4bb6ac751d1c5478ff3a.woff2": "81d33d08a96d99034c41b49ac980f63b353175f919db817d74e0405749af03db",
     "site-lib/media/ba51b929995b-454577c22304619db035.ttf": "ba51b929995b3088ff1932d9d6835c90ccf304b296a3b8e103d2e95b958109ee",
     "site-lib/media/839f42df29a5-52ac8f3034507f1d9e53.ttf": "839f42df29a5a83470888b9a3aa4064fc1bc35e6616bb542226d89086f019ec5",
     "site-lib/media/a0cfec834df5-05b618077343fbbd92b7.ttf": "a0cfec834df50e21cdb3d15bf93e87ed033d8c26693f9ede6efe24325ae22c9e",
+    "site-lib/media/a7c6a118d17f-6155340132a851f6089e.svg": "a7c6a118d17f6a296037b519e9891e08951de59c289fe41ec2596a63c3b28516",
+    "site-lib/media/a44ac4cbf79c-2308ab1944a6bfa5c5b8.svg": "a44ac4cbf79c6765f4bdc3a0dc3fb51b56ed5eb4679177f0a40f04b63b3e3a3c",
+    "site-lib/media/693b77d4f32e-c504db5c06caaf7cdfba.woff2": "693b77d4f32ee9b8bfc995589b5fad5e99adf2832738661f5402f9978429a8e3",
     "site-lib/media/e564f652916d-01dcbad1bac635f9c9cd.woff2": "e564f652916db6c139570fefb9524a77c4d48f30c92928de9db19b6b5c7a262a"
+  },
+  "state": {
+    "structureSignature": "e59243e8bd2aab4406f604d364c2d989aadffb0c696d5e5eb36de4a29c5f720c",
+    "pages": {
+      "Documents/数学/高中数学/前言.md": {
+        "route": "index.html",
+        "signature": "b007c17d530fda220d0752a4a123252432cfc6fb00f812fb9adf21a68747496f"
+      },
+      "Documents/数学/高中数学/基本逻辑用语/命题.md": {
+        "route": "高中数学/基本逻辑用语/命题.html",
+        "signature": "fd87b043927260036c69bcb09058ba0d18dffdd83f1429b9bd804106d2aa0340"
+      },
+      "Documents/数学/高中数学/基本逻辑用语/基本逻辑算符与复合命题.md": {
+        "route": "高中数学/基本逻辑用语/基本逻辑算符与复合命题.html",
+        "signature": "48a4d5208a77030da3a48b7bb250123dc1ce8aa4684e558a2c412332a1dc4e85"
+      },
+      "Documents/数学/高中数学/基本逻辑用语/逆命题、否命题、逆否命题.md": {
+        "route": "高中数学/基本逻辑用语/逆命题-否命题-逆否命题.html",
+        "signature": "cbcd7635d2cbd0d3a2adc428127cff2b8ff9aae4bfec59f98adcea5ae405e013"
+      },
+      "Documents/数学/高中数学/基本逻辑用语/充分条件、必要条件、充要条件.md": {
+        "route": "高中数学/基本逻辑用语/充分条件-必要条件-充要条件.html",
+        "signature": "67d872bfb99986176b7ee230123118c0fc2e0ebd821133bb685eb3d7ed460c90"
+      },
+      "Documents/数学/高中数学/基本逻辑用语/全称量词与存在量词.md": {
+        "route": "高中数学/基本逻辑用语/全称量词与存在量词.html",
+        "signature": "31c4f02a1141b51654061f01d02045536c71f20da5b4d2f08645ec1e1040c22e"
+      },
+      "Documents/数学/高中数学/基本逻辑用语/悖论.md": {
+        "route": "高中数学/基本逻辑用语/悖论.html",
+        "signature": "4a2919bd5e497cfdb7bdeecf5bdcc2b6039a4629aa2d502a115dfba84425cad6"
+      },
+      "Documents/数学/高中数学/集合/集合的基本概念.md": {
+        "route": "高中数学/集合/集合的基本概念.html",
+        "signature": "dac5541332fda2f123c49e4e1f9ef3a99cf6db8f7c082bb7793b835969933cda"
+      },
+      "Documents/数学/高中数学/集合/集合的基本运算.md": {
+        "route": "高中数学/集合/集合的基本运算.html",
+        "signature": "fe6e8dbf8cd0ed10d22eff3a8aef63bb233590b7295ce2d6a93143f050dac94d"
+      },
+      "Documents/数学/高中数学/不等式/等式与不等式的基本性质.md": {
+        "route": "高中数学/不等式/等式与不等式的基本性质.html",
+        "signature": "41787198af97c94f309205339418ebb71592a6df7747b2eb706460a99beeb600"
+      },
+      "Documents/数学/高中数学/不等式/基本不等式.md": {
+        "route": "高中数学/不等式/基本不等式.html",
+        "signature": "d182cfb111d45396ff841be8bb64f3c0e7c2e6dfe515e8812aac8b7dfe2e150b"
+      },
+      "Documents/数学/高中数学/不等式/均值不等式.md": {
+        "route": "高中数学/不等式/均值不等式.html",
+        "signature": "58b80647e8be3c61bf9c3c953458c83f9342a363a850ec6b177bb83831dfeb2f"
+      },
+      "Documents/数学/高中数学/函数/函数的概念与图像.md": {
+        "route": "高中数学/函数/函数的概念与图像.html",
+        "signature": "9dc1ee3dfcdc7d20933df800df6f82237b1cc7775871194b505015a73b09084c"
+      },
+      "Documents/数学/高中数学/函数/函数的单调性.md": {
+        "route": "高中数学/函数/函数的单调性.html",
+        "signature": "a53d89cc6004f6e815a620da785a284ee95c4a7328a3b176a3994831c46b37cc"
+      },
+      "Documents/数学/高中数学/函数/函数的奇偶性.md": {
+        "route": "高中数学/函数/函数的奇偶性.html",
+        "signature": "6517fe5360d18feb93a2ee986e2e9a2679d79d9429a44650b5ea65dd2d79ca3c"
+      },
+      "Documents/数学/高中数学/幂函数、指数函数、对数函数/幂函数.md": {
+        "route": "高中数学/幂函数-指数函数-对数函数/幂函数.html",
+        "signature": "139c3924258d964fd1acd7fe632f53e4858c5bbc66bc34e6796a46e1e0f5c952"
+      },
+      "Documents/数学/高中数学/幂函数、指数函数、对数函数/指数与对数.md": {
+        "route": "高中数学/幂函数-指数函数-对数函数/指数与对数.html",
+        "signature": "877f54213c60fea43bc67e9b2292ad006144768886788b692c675c5ec3e37716"
+      },
+      "Documents/数学/高中数学/幂函数、指数函数、对数函数/指数函数.md": {
+        "route": "高中数学/幂函数-指数函数-对数函数/指数函数.html",
+        "signature": "f57c140167eb511552df3cf3aac8edd459bda7497180eb9f196c308d20e97c75"
+      },
+      "Documents/数学/高中数学/幂函数、指数函数、对数函数/对数函数.md": {
+        "route": "高中数学/幂函数-指数函数-对数函数/对数函数.html",
+        "signature": "129c0b85939669d2ffa285d58a323ef50e0114079b0ed02555a1f9ca1a6cf13a"
+      },
+      "Documents/数学/高中数学/三角函数/角与弧度.md": {
+        "route": "高中数学/三角函数/角与弧度.html",
+        "signature": "1425317b88a002a84671abb50288d9f53d69f0e363cb7cc0c4928d203159dd4e"
+      },
+      "Documents/数学/高中数学/三角函数/三角函数的概念.md": {
+        "route": "高中数学/三角函数/三角函数的概念.html",
+        "signature": "040f7dc23b4de2957849b047b04c856af7b95c2d33d80aa114125d876ecd003c"
+      },
+      "Documents/数学/高中数学/三角函数/三角函数诱导公式.md": {
+        "route": "高中数学/三角函数/三角函数诱导公式.html",
+        "signature": "1a13dad61b72cce21f96c3c4fd3b248588e80d323a68de69229ebe0edfa14fff"
+      },
+      "Documents/数学/高中数学/三角函数/三角恒等变换.md": {
+        "route": "高中数学/三角函数/三角恒等变换.html",
+        "signature": "4bc295a1b2423430baa84564006acd22409774e434006ab7a51456d75ee08813"
+      },
+      "Documents/数学/高中数学/三角函数/余弦定理.md": {
+        "route": "高中数学/三角函数/余弦定理.html",
+        "signature": "4064baad556713c2e5d195f2359611b31babe5ede5aa1a7dab243d910a498470"
+      },
+      "Documents/数学/高中数学/三角函数/正弦定理.md": {
+        "route": "高中数学/三角函数/正弦定理.html",
+        "signature": "2068126a745aadffa976af290953b21bcd845934d9d67d36c4586cf333ca66f3"
+      },
+      "Documents/数学/高中数学/导数/导数的概念.md": {
+        "route": "高中数学/导数/导数的概念.html",
+        "signature": "aa5b45218f5d692fb7e1faae4689cac7bcebed3b41fa11779f4273d0880533d5"
+      },
+      "Documents/数学/高中数学/数列/等差数列.md": {
+        "route": "高中数学/数列/等差数列.html",
+        "signature": "a1bca4abb7034769a870ee5e30cd4039f374c2fc5e03e841ce59c0d6740953e4"
+      },
+      "Documents/数学/高中数学/平面几何/平面向量.md": {
+        "route": "高中数学/平面几何/平面向量.html",
+        "signature": "1412a85c33bd9cf6c1be4d02251db26ac300ad30341cf68fcfc039f6f36c839b"
+      },
+      "Documents/数学/高中数学/平面几何/直线与方程.md": {
+        "route": "高中数学/平面几何/直线与方程.html",
+        "signature": "5641277fef06262c7e1770825592d161624c717a5c41b0cb86c4b644e8df5998"
+      },
+      "Documents/数学/高中数学/平面几何/圆与方程.md": {
+        "route": "高中数学/平面几何/圆与方程.html",
+        "signature": "7e8805adcc5199df7f59d7c9347af88314ed7f00ea00a234eeedd1609596f294"
+      },
+      "Documents/数学/高中数学/平面几何/椭圆.md": {
+        "route": "高中数学/平面几何/椭圆.html",
+        "signature": "b1f46c2c947aa270d7576fc06214584add6c965b7dff8fc5cfc91acd375f9485"
+      },
+      "Documents/数学/高中数学/平面几何/双曲线.md": {
+        "route": "高中数学/平面几何/双曲线.html",
+        "signature": "03c3740d0f62532e4749d58345527a06fc9d20b1ccc97e805e9749d7de13788a"
+      },
+      "Documents/数学/高中数学/平面几何/抛物线.md": {
+        "route": "高中数学/平面几何/抛物线.html",
+        "signature": "577b7f1c358f5a97950e3454e6db0bf1b8a04c6df19b2a84f2933d568ea02490"
+      },
+      "Documents/数学/高中数学/复数/复数.md": {
+        "route": "高中数学/复数/复数.html",
+        "signature": "539db7400a382b58587ce8b13a607fa9de37dbf2c9e0238887ba45ff52e12a40"
+      },
+      "Documents/数学/高中数学/立体几何/基本立体图形.md": {
+        "route": "高中数学/立体几何/基本立体图形.html",
+        "signature": "f0120b1e61a3cc94ed4288755c446aeee214cd664bcbe51c63bcd111127f72b3"
+      },
+      "Documents/数学/高中数学/空间向量/空间向量.md": {
+        "route": "高中数学/空间向量/空间向量.html",
+        "signature": "08460b3b4640038d7f8659253b220e66be635b52a298757e3cfdb7c63201741d"
+      },
+      "Documents/数学/高中数学/计数原理/排列数.md": {
+        "route": "高中数学/计数原理/排列数.html",
+        "signature": "ed033b4f18822cce65ec9c3a4e743c7a537e2b9139f8c457fbbe4a799b205ea4"
+      },
+      "Documents/数学/高中数学/统计基础/抽样.md": {
+        "route": "高中数学/统计基础/抽样.html",
+        "signature": "09cfa7322243d5bb0625b3f9e9e7c74feab4749bf510c7ab413b7c2e01bdaef4"
+      },
+      "Documents/数学/高中数学/统计基础/用样本估计总体.md": {
+        "route": "高中数学/统计基础/用样本估计总体.html",
+        "signature": "12d367f25c916571953020fd15aea6cd4b11abb80073c194d703875bda4e0a06"
+      },
+      "Documents/数学/高中数学/概率基础/随机事件与样本空间.md": {
+        "route": "高中数学/概率基础/随机事件与样本空间.html",
+        "signature": "958c35797cf1738483dd0fb87409d947fb06761d01015ed24bcd2cc58c11830e"
+      },
+      "Documents/数学/高中数学/概率基础/随机事件的概率.md": {
+        "route": "高中数学/概率基础/随机事件的概率.html",
+        "signature": "f480b4c36451f0f132cd938a56a7fbdc8ca9cd9075b952a5b83798104e3668be"
+      },
+      "Documents/数学/高中数学/概率基础/互斥事件与独立事件.md": {
+        "route": "高中数学/概率基础/互斥事件与独立事件.html",
+        "signature": "95bb242042c7703c190b7027379b05e9baeab20c592e35419c4e9935ee5f2711"
+      },
+      "Documents/数学/高中数学/参考资料.md": {
+        "route": "高中数学/参考资料.html",
+        "signature": "c10b0195dc53a85f18c35fead10cd56833b7250d2c0800c7f69f6772289e66cf"
+      },
+      "Documents/数学/数理逻辑/前言.md": {
+        "route": "数理逻辑/前言.html",
+        "signature": "83f7a9aae977253711ad0c6a3d20ad37ce88ee7b47023c3ebf1da6e20db83d3c"
+      },
+      "Documents/数学/数理逻辑/参考资料.md": {
+        "route": "数理逻辑/参考资料.html",
+        "signature": "5e498d761b30d569e68732b3f06cdcce8d6b1dd4a2bb3c738a235a9944dc8cee"
+      },
+      "Documents/数学/集合论/前言.md": {
+        "route": "集合论/前言.html",
+        "signature": "2c290f300114f149310c634256e08a91565a85b4eed0d05118bd65a05c7581c9"
+      },
+      "Documents/数学/集合论/ZFC 集合论公理.md": {
+        "route": "集合论/zfc-集合论公理.html",
+        "signature": "2424ee9dc7c0760dc84812847b95b540a394cf524646f3fed00bdc9cdd17c681"
+      },
+      "Documents/数学/集合论/二元关系.md": {
+        "route": "集合论/二元关系.html",
+        "signature": "3f65a1cd593406e188dd3452e0a01a0e8c63474a7ce0ec6256fea3d23aec40bb"
+      },
+      "Documents/数学/集合论/序数.md": {
+        "route": "集合论/序数.html",
+        "signature": "0d126657a33b6734397b316e514e4a4d7778fe8fdceed4bf3871a7893723fbf7"
+      },
+      "Documents/数学/集合论/基数.md": {
+        "route": "集合论/基数.html",
+        "signature": "d737a5bc32746df23491257e652c92f2b637a9842a84b8361ef1cfc36b421427"
+      },
+      "Documents/数学/集合论/数集.md": {
+        "route": "集合论/数集.html",
+        "signature": "2bf06cca6679a73b208671ab24ad4f64e6b8ab64d8a8a5310539246b20db743e"
+      },
+      "Documents/数学/集合论/归纳法原理.md": {
+        "route": "集合论/归纳法原理.html",
+        "signature": "2d64d5e6fba9776258f284a8ffca7b95714075cb81a5f22d84cdb1cbade858ae"
+      },
+      "Documents/数学/集合论/参考资料.md": {
+        "route": "集合论/参考资料.html",
+        "signature": "a91c24fb355bd3f5fb57056c52d18f4c356d7a76b3d44887eeaad7e639e301d9"
+      },
+      "Documents/数学/初等数论/前言.md": {
+        "route": "初等数论/前言.html",
+        "signature": "d54810a64d88fa5ff6263091413d5897eecf9cc3f42b55b04defe4c019852b2d"
+      },
+      "Documents/数学/初等数论/整数的可除性.md": {
+        "route": "初等数论/整数的可除性.html",
+        "signature": "3053f06d76a997fe8af220d936b799210025ce165859974b13e78cfa92791e63"
+      },
+      "Documents/数学/初等数论/不定方程.md": {
+        "route": "初等数论/不定方程.html",
+        "signature": "c0ca6eb1f5202128256652a868a468e4114b71a84c2b248682d81080d19af248"
+      },
+      "Documents/数学/初等数论/参考资料.md": {
+        "route": "初等数论/参考资料.html",
+        "signature": "80051158ff468e6dc4edc82b105300418689365c1b802a4c5973e243f97de6d9"
+      },
+      "Documents/数学/解析几何/前言.md": {
+        "route": "解析几何/前言.html",
+        "signature": "a7defc9f957f47d95f3ba1cb5785010dbfca1ca535e65d9deeabb674a461bce2"
+      },
+      "Documents/数学/解析几何/参考资料.md": {
+        "route": "解析几何/参考资料.html",
+        "signature": "78516a784a5d9ba66b558294ae8151c8f4826d7600e434d0b9d5e2b84de34af0"
+      },
+      "Documents/数学/微积分/前言.md": {
+        "route": "微积分/前言.html",
+        "signature": "4998a7e008f407c726d775f45b116a363c8b48e720d7e8e4da5ac6c2f41ae705"
+      },
+      "Documents/数学/微积分/参考资料.md": {
+        "route": "微积分/参考资料.html",
+        "signature": "7e494270c938fe2b0191984d75860f63555dadf7900658a8a8b2acc9331771e2"
+      },
+      "Documents/数学/线性代数/前言.md": {
+        "route": "线性代数/前言.html",
+        "signature": "3eed343ff8ba3ef9d27803f048f3013f146e4f9961d39965a4881bbc6644d842"
+      },
+      "Documents/数学/线性代数/行列式/行列式的定义.md": {
+        "route": "线性代数/行列式/行列式的定义.html",
+        "signature": "cca9cf88a8ab6606efd8b2c64e8ee9241d4d752e169c1d21eb8a845884eca5e9"
+      },
+      "Documents/数学/线性代数/行列式/子式与基本性质.md": {
+        "route": "线性代数/行列式/子式与基本性质.html",
+        "signature": "4b905d43ad849a45474e00829b4a49a11c2653eebd0df0ea9d83bc83152acf00"
+      },
+      "Documents/数学/线性代数/行列式/Laplace 定理.md": {
+        "route": "线性代数/行列式/laplace-定理.html",
+        "signature": "728bd90e85dcfee2204c4aa9589db561751866670bcd8b71728a9f6498c53a24"
+      },
+      "Documents/数学/线性代数/行列式/行列式的计算.md": {
+        "route": "线性代数/行列式/行列式的计算.html",
+        "signature": "e42d606a3747725d999fa5169005c166fc9367ca57cdf103088bdfe61022e282"
+      },
+      "Documents/数学/线性代数/参考资料.md": {
+        "route": "线性代数/参考资料.html",
+        "signature": "07cb0d277fa1479dcbed9da2133bb7b3d957bb8fd86fe3a8bc88f02d336e2d2a"
+      },
+      "Documents/数学/常微分方程/前言.md": {
+        "route": "常微分方程/前言.html",
+        "signature": "dfadd392f6974baa6d6226b51e186c862e311ae30d074d6260ffafe593cc4660"
+      },
+      "Documents/数学/复变函数/前言.md": {
+        "route": "复变函数/前言.html",
+        "signature": "866f0729a3285b1f486c1caea7ee6696d37301d3f8237df5d6a2e745d34e9fde"
+      },
+      "Documents/数学/抽象代数/前言.md": {
+        "route": "抽象代数/前言.html",
+        "signature": "726c68d004def737643f68a4ceb2dfe88d7218c7320fee99aa7707b187ede74e"
+      },
+      "Documents/数学/抽象代数/群/群的定义.md": {
+        "route": "抽象代数/群/群的定义.html",
+        "signature": "0fa0672146cc55571243f9c4420c8d20354338db40914e905862d04e7c9123f0"
+      },
+      "Documents/数学/抽象代数/环/环的定义.md": {
+        "route": "抽象代数/环/环的定义.html",
+        "signature": "0b1047b847b7fe98fa15937e533df27a59175cec03c1d5c5b6dab1382a3f4b7a"
+      },
+      "Documents/数学/抽象代数/模/模的基本概念.md": {
+        "route": "抽象代数/模/模的基本概念.html",
+        "signature": "bafae127d27eac5a365ab63168b37dbe917c93e2f05aa1f1c9ef5cf0c774c9ef"
+      },
+      "Documents/数学/抽象代数/模/模的正合列.md": {
+        "route": "抽象代数/模/模的正合列.html",
+        "signature": "3d60cb41fa08879168c683efd796a85df3fea83fb4a4bbb3a86f7479f347f6a4"
+      },
+      "Documents/数学/抽象代数/模/模的直和与直积.md": {
+        "route": "抽象代数/模/模的直和与直积.html",
+        "signature": "00b01dcd4876566353f2cfce902b5aff459dab6c726b82d59fc302b7bbbbcbb7"
+      },
+      "Documents/数学/抽象代数/模/自由模.md": {
+        "route": "抽象代数/模/自由模.html",
+        "signature": "f599149875c87521c2d4b3832671ce7afe97fbdc18fb3b6604a12145f0e59277"
+      },
+      "Documents/数学/抽象代数/模/Hom(-,-).md": {
+        "route": "抽象代数/模/hom(---).html",
+        "signature": "c46b16e08116a95f1467199887b4bd63f8ce1ae53a477bd8a970720379916c95"
+      },
+      "Documents/数学/抽象代数/模/对偶模与对偶概念.md": {
+        "route": "抽象代数/模/对偶模与对偶概念.html",
+        "signature": "ede625294404ac6ba5762e3719f630df8fac0ae67bc4b4e17dd9b6d59588991a"
+      },
+      "Documents/数学/抽象代数/模/投射模与内射模.md": {
+        "route": "抽象代数/模/投射模与内射模.html",
+        "signature": "44a2f8815888c727cbf9568801200a821d95dc5a736ac30a34b744a3edf09ccb"
+      },
+      "Documents/数学/抽象代数/模/模的张量积.md": {
+        "route": "抽象代数/模/模的张量积.html",
+        "signature": "3e9d48577b151af62b557dbfa8a55d932a0edecd238614226e166e10a55c04ff"
+      },
+      "Documents/数学/抽象代数/模/平坦模.md": {
+        "route": "抽象代数/模/平坦模.html",
+        "signature": "33d7bd80c8e14859dfd6375745b6d2b1d8eee920d02c8c95636e135d41f2a300"
+      },
+      "Documents/数学/抽象代数/模/代数、张量代数、对称代数、外代数.md": {
+        "route": "抽象代数/模/代数-张量代数-对称代数-外代数.html",
+        "signature": "9753c6029d489aa61e3462fa79795c5890dbb009c4e5d1ac3ced8d1e67a52157"
+      },
+      "Documents/数学/抽象代数/模/分次模与分次代数.md": {
+        "route": "抽象代数/模/分次模与分次代数.html",
+        "signature": "1102b2bdcb154a8a63ee69f55dfaf3ef5f32a8f9ae9d5401defbb19d13428709"
+      },
+      "Documents/数学/抽象代数/参考资料.md": {
+        "route": "抽象代数/参考资料.html",
+        "signature": "90a434f098203a20b3dd28ba334c1f4c29e050dbad0dda9222d44a3ded59262a"
+      },
+      "Documents/数学/拓扑学/前言.md": {
+        "route": "拓扑学/前言.html",
+        "signature": "848db57f7dbae5c4c039c93ccce631cd9b3440a1f22b716c09c4edaa1729edce"
+      },
+      "Documents/数学/实分析/前言.md": {
+        "route": "实分析/前言.html",
+        "signature": "25dcf33b6b2be9baf3b423a81bb2c17fe82b7e2bd98b0fc282cda8baba01282b"
+      },
+      "Documents/数学/范畴论/前言.md": {
+        "route": "范畴论/前言.html",
+        "signature": "f0388e41d6fd8428ae70478dcf13b30316668100dc11ac9da96bf831801ae06f"
+      },
+      "Documents/数学/范畴论/范畴的基本概念.md": {
+        "route": "范畴论/范畴的基本概念.html",
+        "signature": "7c52bffcd59c111596ca0fb2423bdd75db85a6e73bf451d446ec426592de3721"
+      },
+      "Documents/数学/范畴论/函子与自然变换.md": {
+        "route": "范畴论/函子与自然变换.html",
+        "signature": "18de2ab7e89e6335928bd75ef5bcfb01b4460c6e35d3a503e50716a017b055f4"
+      },
+      "Documents/数学/范畴论/积与余积.md": {
+        "route": "范畴论/积与余积.html",
+        "signature": "fb14961d1e6a2134677ea0b7e307e9202c39cdd1afa814f91b1efbad87e33c72"
+      },
+      "Documents/数学/范畴论/自由对象、泛对象、余泛对象.md": {
+        "route": "范畴论/自由对象-泛对象-余泛对象.html",
+        "signature": "75af65dcac800125731b0a5c3d51b7dd405fcbb883315f4d9fbd91db42356824"
+      },
+      "Documents/数学/范畴论/范畴同构与范畴等价.md": {
+        "route": "范畴论/范畴同构与范畴等价.html",
+        "signature": "d38a86daf13a0ee4dcaecb71d713834782d49e6a2422a7c84b7c5eb49295fd36"
+      },
+      "Documents/数学/范畴论/可表函子与 Yoneda 引理.md": {
+        "route": "范畴论/可表函子与-yoneda-引理.html",
+        "signature": "e879d5a6f83d760938d2d7f7255c5b5dcf345c12c9809a543f2f50c08c0780f4"
+      },
+      "Documents/数学/范畴论/乘积范畴与伴随函子.md": {
+        "route": "范畴论/乘积范畴与伴随函子.html",
+        "signature": "94e536ce07cd6d3789cd52f9a00c40a244e90abd94cdf513b0b2799474c2bfe6"
+      },
+      "Documents/数学/范畴论/态射的基本性质.md": {
+        "route": "范畴论/态射的基本性质.html",
+        "signature": "6b931b166dae9018cd93a02616c05f164d1635f3c39e21445fe823746f6d44a8"
+      },
+      "Documents/数学/范畴论/Abel 范畴与加性范畴.md": {
+        "route": "范畴论/abel-范畴与加性范畴.html",
+        "signature": "b73bcf0ba5d2b811d91d3fbd0e0aa2b4b065bb72b56d59f576d58c20d1fb8622"
+      },
+      "Documents/数学/范畴论/参考资料.md": {
+        "route": "范畴论/参考资料.html",
+        "signature": "6aa58983d32121d245ef834bd31cc4b6bc664b45d62d9c68f84f1126d48c39c7"
+      },
+      "Documents/数学/同调代数/前言.md": {
+        "route": "同调代数/前言.html",
+        "signature": "ab42f1fd7e3b9ea944ec8d6db7420bc8ae0f9bb85384928c37be0cd369b93fa9"
+      },
+      "Documents/数学/代数拓扑/前言.md": {
+        "route": "代数拓扑/前言.html",
+        "signature": "9cc3aa25d8b2a257aa331da503f7be1d41f68733f35ba625a0110bcd6411983a"
+      },
+      "Documents/数学/光滑流形/前言.md": {
+        "route": "光滑流形/前言.html",
+        "signature": "89b56c6f306ba34617fbc43558b30368f6986002c936ccec3d258d1e6a38c344"
+      },
+      "Documents/数学/半单 Lie 代数及其表示/前言.md": {
+        "route": "半单-lie-代数及其表示/前言.html",
+        "signature": "b52de5b0c02f04af85e23da4502d948c5a3012a8030b613022f9c5701b98454d"
+      },
+      "Documents/数学/半单 Lie 代数及其表示/Lie 代数的基本概念/未命名 2.md": {
+        "route": "半单-lie-代数及其表示/lie-代数的基本概念/未命名-2.html",
+        "signature": "791be815c61f9420d98771b7b61d33af2adc109c6e6f22543a17a301c6fb3d75"
+      },
+      "Documents/数学/半单 Lie 代数及其表示/半单 Lie 代数及其表示论初步/未命名.md": {
+        "route": "半单-lie-代数及其表示/半单-lie-代数及其表示论初步/未命名.html",
+        "signature": "0e26cc0838d4bfbadf837bb39c86602c19b418ea49eaf8f5cbcfdf403693b04f"
+      },
+      "Documents/数学/半单 Lie 代数及其表示/根系理论/未命名.md": {
+        "route": "半单-lie-代数及其表示/根系理论/未命名.html",
+        "signature": "8282a272762b3d8010b0114cdc6a97c527bb23b1cbd0198801f38e1443099d14"
+      },
+      "Documents/数学/半单 Lie 代数及其表示/有限维单 Lie 代数的分类/未命名.md": {
+        "route": "半单-lie-代数及其表示/有限维单-lie-代数的分类/未命名.html",
+        "signature": "94d4dc6bb3996bb020a8ef073f7725519de93efa29b89847480038fbbdffe38d"
+      },
+      "Documents/数学/半单 Lie 代数及其表示/有限维半单 Lie 代数的表示/泛包络代数与 PBW 定理.md": {
+        "route": "半单-lie-代数及其表示/有限维半单-lie-代数的表示/泛包络代数与-pbw-定理.html",
+        "signature": "1c3c2c7728d74b42d4b5f21df044e5e5e8a15830ee3057b9fbf6514b6a856065"
+      },
+      "Documents/数学/半单 Lie 代数及其表示/有限维半单 Lie 代数的表示/权空间分解.md": {
+        "route": "半单-lie-代数及其表示/有限维半单-lie-代数的表示/权空间分解.html",
+        "signature": "629d0bf874264698c99a9d8bebdc637bc1d729c895f3bc97bdcd12132997edd7"
+      },
+      "Documents/数学/半单 Lie 代数及其表示/有限维半单 Lie 代数的表示/最高权模初步.md": {
+        "route": "半单-lie-代数及其表示/有限维半单-lie-代数的表示/最高权模初步.html",
+        "signature": "082dafdaecfc68766eb88668f1ff038b65391fd6bfed6982a98d0b9bdcef2bda"
+      },
+      "Documents/数学/半单 Lie 代数及其表示/BGG 范畴基础/BGG 范畴公理.md": {
+        "route": "半单-lie-代数及其表示/bgg-范畴基础/bgg-范畴公理.html",
+        "signature": "8121a9c07e6e4b04ca7168f8e32177fbe78d75cb72054fcf0b22e4640b900a39"
+      },
+      "Documents/数学/半单 Lie 代数及其表示/BGG 范畴基础/BGG 范畴中的最高权模.md": {
+        "route": "半单-lie-代数及其表示/bgg-范畴基础/bgg-范畴中的最高权模.html",
+        "signature": "4ec153db18a7cbafdf9ca8e0cac1e71af6b0d6f267a0c35c1b59cad7f29cc2e0"
+      },
+      "Documents/数学/半单 Lie 代数及其表示/BGG 范畴中的常用工具/未命名.md": {
+        "route": "半单-lie-代数及其表示/bgg-范畴中的常用工具/未命名.html",
+        "signature": "a33d744baf17eeb793afb9bee1ac6b7a1c22e0e6d340760bcdb7cee57cc6f933"
+      },
+      "Documents/数学/半单 Lie 代数及其表示/最高权模的进一步讨论/未命名.md": {
+        "route": "半单-lie-代数及其表示/最高权模的进一步讨论/未命名.html",
+        "signature": "22b30b98d97f88d2428769d989717ccf1882377ef9cedbe90070a1213baf86fc"
+      },
+      "Documents/数学/半单 Lie 代数及其表示/转移函子/未命名.md": {
+        "route": "半单-lie-代数及其表示/转移函子/未命名.html",
+        "signature": "73acc67d2668ab0b92e2abc2170d87d38a858bde0a9fe51e1e2bdfc94747083e"
+      },
+      "Documents/数学/半单 Lie 代数及其表示/Kazhdan-Lusztig 理论/未命名.md": {
+        "route": "半单-lie-代数及其表示/kazhdan-lusztig-理论/未命名.html",
+        "signature": "63f7880125f010a7acf0c55c90248fdca78e690f056d556af2468a2a92cbafb6"
+      },
+      "Documents/数学/半单 Lie 代数及其表示/参考资料.md": {
+        "route": "半单-lie-代数及其表示/参考资料.html",
+        "signature": "69faa1e20fc998abb4583d714a5ae65db87186ad593c123eaa3662fa017b5129"
+      },
+      "Documents/数学/代数几何/前言.md": {
+        "route": "代数几何/前言.html",
+        "signature": "3d23d1e1c68099bed94dbdd225f8cba1262de5382788d91d3c174f7f89687ef3"
+      },
+      "Documents/数学/代数几何/交换代数/素理想与极大理想.md": {
+        "route": "代数几何/交换代数/素理想与极大理想.html",
+        "signature": "a9fbca1e20637946b8c6ddb0a8fe05193153bc60931013f366653757293d354d"
+      },
+      "Documents/数学/代数几何/交换代数/理想的和、交、积、商.md": {
+        "route": "代数几何/交换代数/理想的和-交-积-商.html",
+        "signature": "27a00ce6d0e47cd90ffaa0b93d10cf1cc2e9a094e576f65436ce97fbd9f8b022"
+      },
+      "Documents/数学/代数几何/交换代数/理想的根.md": {
+        "route": "代数几何/交换代数/理想的根.html",
+        "signature": "02cba3d824c9b7587bb030561b8d2457b2f0cb902828446521fc47bd407611ff"
+      },
+      "Documents/数学/代数几何/交换代数/幂零元根与 Jacobson 根.md": {
+        "route": "代数几何/交换代数/幂零元根与-jacobson-根.html",
+        "signature": "7c6c7b6d3a8256d20c2565a92bc6e61a8cbcf762317ee698279acf54f70c5555"
+      },
+      "Documents/数学/代数几何/交换代数/分式环与分式模.md": {
+        "route": "代数几何/交换代数/分式环与分式模.html",
+        "signature": "59315acae2d384fe9548a313fc06726f250b0ee7ceacecb90ec63b9f9af6c7e3"
+      },
+      "Documents/数学/代数几何/交换代数/局部环与局部化.md": {
+        "route": "代数几何/交换代数/局部环与局部化.html",
+        "signature": "e5957803dbdbabcb175ec00f45390469094c2ed40fd265fedbe4e20d69e2d8e8"
+      },
+      "Documents/数学/代数几何/交换代数/理想的准素分解.md": {
+        "route": "代数几何/交换代数/理想的准素分解.html",
+        "signature": "cdaba350a39754f2fb7b6f3212574ab8698f36a14adacc6c21ba66e0fb8492a9"
+      },
+      "Documents/数学/代数几何/交换代数/整相关性.md": {
+        "route": "代数几何/交换代数/整相关性.html",
+        "signature": "e519aee07e80b0147484df4c8be93f17e675b6eb97b8391c2087cfb105f3d6e2"
+      },
+      "Documents/数学/代数几何/交换代数/上升定理.md": {
+        "route": "代数几何/交换代数/上升定理.html",
+        "signature": "e25251880af66d24092ab13aff890b9d43eb96986e81eb96adfea9ef21f3367f"
+      },
+      "Documents/数学/代数几何/交换代数/下降定理.md": {
+        "route": "代数几何/交换代数/下降定理.html",
+        "signature": "ac6c3e0d4b7ff6120e3836cd5c95df909b7fc44f6577eb504442949047d9978f"
+      },
+      "Documents/数学/代数几何/交换代数/赋值环.md": {
+        "route": "代数几何/交换代数/赋值环.html",
+        "signature": "bc988c2ffd8cf2ee8da3cdf784d429b84e84555cba1325303ad32944f73d5cc3"
+      },
+      "Documents/数学/代数几何/交换代数/Noether 环.md": {
+        "route": "代数几何/交换代数/noether-环.html",
+        "signature": "19ab0ea2464af491049b09de2420c2c1c3891f868c1dc80aae8104115015d241"
+      },
+      "Documents/数学/代数几何/交换代数/Artin 环.md": {
+        "route": "代数几何/交换代数/artin-环.html",
+        "signature": "4c65613be8bd94cb77b19bf86174e9cee403e6ee60d3649ea33c31401b9739bc"
+      },
+      "Documents/数学/代数几何/交换代数/Dedekind 整环.md": {
+        "route": "代数几何/交换代数/dedekind-整环.html",
+        "signature": "4e4fb2b54d3f176cee6c059a435e72c814714639e68b9f65294a806cd91011ed"
+      },
+      "Documents/数学/代数几何/交换代数/Krull 维数.md": {
+        "route": "代数几何/交换代数/krull-维数.html",
+        "signature": "557aff0938442ac1b7c53be6f1d0e695d126638b06abb81dddcbb433824e7f5c"
+      },
+      "Documents/数学/代数几何/仿射簇/仿射簇的基本概念.md": {
+        "route": "代数几何/仿射簇/仿射簇的基本概念.html",
+        "signature": "140e82dfdeaa986d05b48f14491f3842059d2870d9b186c24ba64d332bd02cc1"
+      },
+      "Documents/数学/代数几何/仿射簇/坐标环.md": {
+        "route": "代数几何/仿射簇/坐标环.html",
+        "signature": "0a341738c19010c00b74fcb1dbb7d3b2d068dc7d84c3949e0c81875855e9f9c8"
+      },
+      "Documents/数学/代数几何/仿射簇/Zariski 拓扑.md": {
+        "route": "代数几何/仿射簇/zariski-拓扑.html",
+        "signature": "293ff52b9f62910ca22bee4b05ba717700f4336432b5843f3e90fc043c19cccb"
+      },
+      "Documents/数学/代数几何/仿射簇/仿射簇的维数.md": {
+        "route": "代数几何/仿射簇/仿射簇的维数.html",
+        "signature": "2df2aa0fa2bfc46a1d58b3143480b05e841b88f99fee422222980b4d211775b3"
+      },
+      "Documents/数学/代数几何/仿射簇/正则函数与主开集.md": {
+        "route": "代数几何/仿射簇/正则函数与主开集.html",
+        "signature": "6a71ca677b0a6f77f20f5feb6909b2995a27d18bff1fc440da776ac6ca777ba7"
+      },
+      "Documents/数学/代数几何/仿射簇/环化空间与态射.md": {
+        "route": "代数几何/仿射簇/环化空间与态射.html",
+        "signature": "ef6853d8b2ca8b4d3d382a429e257661e29410b93a4ec632c2748b2968a5f8fd"
+      },
+      "Documents/数学/代数几何/簇/预簇.md": {
+        "route": "代数几何/簇/预簇.html",
+        "signature": "df059f4d4735e49e6ef7c62aeb5c0a44d16af3acc71b94dc59815395ec222052"
+      },
+      "Documents/数学/代数几何/簇/子预簇.md": {
+        "route": "代数几何/簇/子预簇.html",
+        "signature": "9b07823b5b735755567db504a0ddb83b3ad194dd9bbdac7c76a424f254ea7940"
+      },
+      "Documents/数学/代数几何/簇/仿射簇的乘积.md": {
+        "route": "代数几何/簇/仿射簇的乘积.html",
+        "signature": "1ddc303bb518fe6f6cd0aa7cfb09e574a2c8d7ce4eed6c64697a345de2cf88b6"
+      },
+      "Documents/数学/代数几何/簇/簇.md": {
+        "route": "代数几何/簇/簇.html",
+        "signature": "60f7d7da8988f36306d89942c3adf89cf9eb127e410d9ec24b48e1dd1ac22102"
+      },
+      "Documents/数学/代数几何/簇/F 结构与 F 有理点.md": {
+        "route": "代数几何/簇/f-结构与-f-有理点.html",
+        "signature": "0fa1e997d5fd7dbc65ce928f6609f57344f86326ea0f6d3126c7d85b47195733"
+      },
+      "Documents/数学/代数几何/射影簇/射影空间.md": {
+        "route": "代数几何/射影簇/射影空间.html",
+        "signature": "7fee8dcd0797a3555f2af60a8184193dce2da1cb160a07cedfd6f0412aa81656"
+      },
+      "Documents/数学/代数几何/仿射概形/仿射概形.md": {
+        "route": "代数几何/仿射概形/仿射概形.html",
+        "signature": "62238f28d17e118c305a49af55085e1b854534ac77f28a30e39dcf359c33db90"
+      },
+      "Documents/数学/代数几何/概形/概形.md": {
+        "route": "代数几何/概形/概形.html",
+        "signature": "1109f4265266dbaae81f91d737a6f22fbf0dfd6f9331f96b528151fec29195a8"
+      },
+      "Documents/数学/代数几何/模层/未命名.md": {
+        "route": "代数几何/模层/未命名.html",
+        "signature": "7e3bff692f3b363ffbd51d27a96dd2e2cc76778456fc336114d554f67ab38e17"
+      },
+      "Documents/数学/代数几何/范畴化/正向极限与逆向极限.md": {
+        "route": "代数几何/范畴化/正向极限与逆向极限.html",
+        "signature": "35863f6561e109380f8e07382dced7e6e46c2f41cbd8946cb8edc398a4dfbf2a"
+      },
+      "Documents/数学/代数几何/范畴化/极限与余极限.md": {
+        "route": "代数几何/范畴化/极限与余极限.html",
+        "signature": "405d8fc182edd305efa83ead1e0f423ed7d7a927b8c4c17f06aee63b277ce97b"
+      },
+      "Documents/数学/代数几何/范畴化/预层.md": {
+        "route": "代数几何/范畴化/预层.html",
+        "signature": "8f6ba38fb46fb90925401d16af5339a17abea17a4e7138a02cb1f085b3a28087"
+      },
+      "Documents/数学/代数几何/范畴化/层.md": {
+        "route": "代数几何/范畴化/层.html",
+        "signature": "c159d101142c9b19ad81d1aeaa919a5b5168cd96d347a1263e331417af8994ea"
+      },
+      "Documents/数学/代数几何/范畴化/层的态射.md": {
+        "route": "代数几何/范畴化/层的态射.html",
+        "signature": "9bed8d8e17d828c1efdedec64869815e07be2d18521befa1170d0fd4ac5a9de8"
+      },
+      "Documents/数学/代数几何/范畴化/相伴层.md": {
+        "route": "代数几何/范畴化/相伴层.html",
+        "signature": "25baf08d85ee688442cd7d9af76eafc1cf68233caf608492d31dd8e08bd3e341"
+      },
+      "Documents/数学/代数几何/范畴化/仿射簇的范畴化.md": {
+        "route": "代数几何/范畴化/仿射簇的范畴化.html",
+        "signature": "61ba9e71cd10c7f819ee40e150e8eb9e632a14d2dc5a4bd6cd864963d170d747"
+      },
+      "Documents/数学/代数几何/范畴化/概形的范畴化.md": {
+        "route": "代数几何/范畴化/概形的范畴化.html",
+        "signature": "fd973734a3b1808a4ad658f38a538fc785073a7ea4f6de62a581444de689c02f"
+      },
+      "Documents/数学/代数几何/参考资料.md": {
+        "route": "代数几何/参考资料.html",
+        "signature": "dfb82ca0d6056a21ea1c91bdc946ec013aa0bcd7d963fb08702855976bc22f33"
+      },
+      "Documents/数学/代数群及其表示/前言.md": {
+        "route": "代数群及其表示/前言.html",
+        "signature": "33ff1209181f2812858185a771bb46896318f92f044238757716fe8e8ac8d2ac"
+      },
+      "Documents/数学/代数群及其表示/仿射代数群的基本概念/仿射代数群的定义.md": {
+        "route": "代数群及其表示/仿射代数群的基本概念/仿射代数群的定义.html",
+        "signature": "4701af77b8d00923a9e63fbb3017197271e9f6b05a4eca34b3ef8c0da42d374c"
+      },
+      "Documents/数学/代数群及其表示/仿射代数群的基本概念/经典仿射代数群.md": {
+        "route": "代数群及其表示/仿射代数群的基本概念/经典仿射代数群.html",
+        "signature": "c7d7bb3c397f834dcac92be1edc645bfca3f74c6781994ab90f4e2970e2671f3"
+      },
+      "Documents/数学/代数群及其表示/仿射代数群的基本概念/单位分支.md": {
+        "route": "代数群及其表示/仿射代数群的基本概念/单位分支.html",
+        "signature": "279df01d45c92ed744971b19e5d6a98c91999581913c6d14e05f4e420bb33bd7"
+      },
+      "Documents/数学/代数群及其表示/仿射代数群的基本概念/闭子群.md": {
+        "route": "代数群及其表示/仿射代数群的基本概念/闭子群.html",
+        "signature": "cebe3bd35baae89e520d059780b643a895250e7ec000443a00c522be1bc77d75"
+      },
+      "Documents/数学/代数群及其表示/仿射代数群的基本概念/仿射代数群同态.md": {
+        "route": "代数群及其表示/仿射代数群的基本概念/仿射代数群同态.html",
+        "signature": "14272b4fb59acf1f3ade616a4ef226577c265c71387219fb0968d8421c7d8e3f"
+      },
+      "Documents/数学/代数群及其表示/仿射代数群的基本概念/Hopf 代数.md": {
+        "route": "代数群及其表示/仿射代数群的基本概念/hopf-代数.html",
+        "signature": "9a5f2d527585262b5c0e87ec141fd2633d31f5196772aded82e4f1052408f708"
+      },
+      "Documents/数学/代数群及其表示/仿射代数群的作用/群作用.md": {
+        "route": "代数群及其表示/仿射代数群的作用/群作用.html",
+        "signature": "a68b7bbc6640c69965544ad94024aea153987040a76970d898d23290c5faaa85"
+      },
+      "Documents/数学/代数群及其表示/仿射代数群的作用/代数群的作用.md": {
+        "route": "代数群及其表示/仿射代数群的作用/代数群的作用.html",
+        "signature": "da35e8c004adf849aeb36c615e4ab208b8fb24f48fc2513fe8e420b02f426f79"
+      },
+      "Documents/数学/代数群及其表示/仿射代数群的作用/代数群的 Lie 代数.md": {
+        "route": "代数群及其表示/仿射代数群的作用/代数群的-lie-代数.html",
+        "signature": "57f7e7d2d21bd11f58e7766012c94287d04824a05e1a8de679e41cd002ec59fc"
+      },
+      "Documents/数学/代数群及其表示/仿射代数群的作用/仿射代数群的线性化.md": {
+        "route": "代数群及其表示/仿射代数群的作用/仿射代数群的线性化.html",
+        "signature": "0fdac28b60b46fe011d1780d91ebc0b951acc64163be0831f6ec8bcb6de00d7d"
+      },
+      "Documents/数学/代数群及其表示/可对角化代数群/可对角化代数群.md": {
+        "route": "代数群及其表示/可对角化代数群/可对角化代数群.html",
+        "signature": "9681c409500f33a59749363a5e3143ec9358c01f76b1c441080210f2c59f7858"
+      },
+      "Documents/数学/代数群及其表示/可对角化代数群/特征标群.md": {
+        "route": "代数群及其表示/可对角化代数群/特征标群.html",
+        "signature": "638d14906d952f1244bece22915b7d0a87e5b022db45f9ddcefa7032e5841f67"
+      },
+      "Documents/数学/代数群及其表示/可对角化代数群/环面.md": {
+        "route": "代数群及其表示/可对角化代数群/环面.html",
+        "signature": "f4d7bf8e115a38cb4d832da2c496d433cab0b6c8e385a3eaf51d6f13e559a693"
+      },
+      "Documents/数学/代数群及其表示/参考资料.md": {
+        "route": "代数群及其表示/参考资料.html",
+        "signature": "b141f9aa51c6f474d0372edc3c405ff6ec741ec5599882f299264d29c9e5ff85"
+      },
+      "Documents/数学/模 Lie 代数及其表示/前言.md": {
+        "route": "模-lie-代数及其表示/前言.html",
+        "signature": "e6924e9f08f698c9699d5f2bf73e70eb2002631402b6333979fcbac212fb7886"
+      },
+      "Documents/数学/模 Lie 代数及其表示/Chevalley 基与 Kostant ℤ 形式/Chevalley 基.md": {
+        "route": "模-lie-代数及其表示/chevalley-基与-kostant-ℤ-形式/chevalley-基.html",
+        "signature": "b6293b6a97a337eab030903ad3ac013ac2bc3298ba86822f599ef6703eac530b"
+      },
+      "Documents/数学/模 Lie 代数及其表示/Chevalley 基与 Kostant ℤ 形式/Kostant ℤ 形式.md": {
+        "route": "模-lie-代数及其表示/chevalley-基与-kostant-ℤ-形式/kostant-ℤ-形式.html",
+        "signature": "e1cb5432a4533a172e7632078c908b5c72d13396433ed50a82f9d5051977c958"
+      },
+      "Documents/数学/模 Lie 代数及其表示/Chevalley 基与 Kostant ℤ 形式/Chevalley 代数.md": {
+        "route": "模-lie-代数及其表示/chevalley-基与-kostant-ℤ-形式/chevalley-代数.html",
+        "signature": "d53cb535a026b2a8875a0dbdd2147a0d7079d982fb0b408fccd749309401dc38"
+      },
+      "Documents/数学/模 Lie 代数及其表示/Chevalley 基与 Kostant ℤ 形式/Chevalley 群.md": {
+        "route": "模-lie-代数及其表示/chevalley-基与-kostant-ℤ-形式/chevalley-群.html",
+        "signature": "6f0eb9d13c3f24b96d7824d2045920ff515350919641bff621b0e1930e1f8032"
+      },
+      "Documents/数学/模 Lie 代数及其表示/限制 Lie 代数的基本概念.md": {
+        "route": "模-lie-代数及其表示/限制-lie-代数的基本概念.html",
+        "signature": "36e6d36590094e160af4f5aba2286cf60017431702fd8ae405d11de0a7f6e3bf"
+      },
+      "Documents/数学/模 Lie 代数及其表示/参考资料.md": {
+        "route": "模-lie-代数及其表示/参考资料.html",
+        "signature": "abed211c20be2c77348aff6f06ccbfdbec85fcf3d6c341139bca76f8f6894846"
+      },
+      "Documents/数学/Lie 超代数及其表示/前言.md": {
+        "route": "lie-超代数及其表示/前言.html",
+        "signature": "b3fed8fdc2cfde7137440dd953e6b6038e7258e9d830b733942847fc8efa21a5"
+      },
+      "Documents/数学/Lie 超代数及其表示/Lie 超代数的基本概念/超空间与超代数.md": {
+        "route": "lie-超代数及其表示/lie-超代数的基本概念/超空间与超代数.html",
+        "signature": "e6d20cff94a3508b67a64eeb87c4e7358ee8a58212b8f6f7769c05de387e796f"
+      },
+      "Documents/数学/Lie 超代数及其表示/Lie 超代数的基本概念/超代数上的模.md": {
+        "route": "lie-超代数及其表示/lie-超代数的基本概念/超代数上的模.html",
+        "signature": "4c8b8b3207b9e7202296e3b1178e3c0f95cd360ef0200d2ca885d15fe0633403"
+      },
+      "Documents/数学/Lie 超代数及其表示/Lie 超代数的基本概念/Lie 超代数.md": {
+        "route": "lie-超代数及其表示/lie-超代数的基本概念/lie-超代数.html",
+        "signature": "f27fc657e50ee40c862d7ce24f32eea464170dcee34b11a151b5d7d926ab97db"
+      },
+      "Documents/数学/Lie 超代数及其表示/Lie 超代数的基本概念/有限维单 Lie 超代数的分类.md": {
+        "route": "lie-超代数及其表示/lie-超代数的基本概念/有限维单-lie-超代数的分类.html",
+        "signature": "f77fff972a74db98f4df3e746b1a376449bd4d884ba6377ffd6751be31eed2d1"
+      },
+      "Documents/数学/Lie 超代数及其表示/基本典型 Lie 超代数/基本典型 Lie 超代数的根系.md": {
+        "route": "lie-超代数及其表示/基本典型-lie-超代数/基本典型-lie-超代数的根系.html",
+        "signature": "1af2c3f83dff31911ad5a05b5055210efaf8572f9bf2062764e61e934f1297ff"
+      },
+      "Documents/数学/Lie 超代数及其表示/基本典型 Lie 超代数/偶反射与奇反射.md": {
+        "route": "lie-超代数及其表示/基本典型-lie-超代数/偶反射与奇反射.html",
+        "signature": "b690e7072dc4154c3eacfe25e625cce89df67b2f88787c5e5f91554111f02a8a"
+      },
+      "Documents/数学/Lie 超代数及其表示/基本典型 Lie 超代数/超 Weyl 群.md": {
+        "route": "lie-超代数及其表示/基本典型-lie-超代数/超-weyl-群.html",
+        "signature": "ac6586f4d1551866d53399f5b89b02d2e5fd1c94774892ba3756212ab2a3ab21"
+      },
+      "Documents/数学/Lie 超代数及其表示/参考资料.md": {
+        "route": "lie-超代数及其表示/参考资料.html",
+        "signature": "bb2aa462b8662704c8bee9db4d9177c28989456845ad68fb41e9b0b8a5bb011f"
+      },
+      "Documents/数学/模 Lie 超代数及其表示/前言.md": {
+        "route": "模-lie-超代数及其表示/前言.html",
+        "signature": "cf3da0a6ee193d8f85d8deeb55dc1a926a3f0677f41b4f3fdfde2b6903b2b55f"
+      },
+      "Documents/数学/模 Lie 超代数及其表示/参考资料.md": {
+        "route": "模-lie-超代数及其表示/参考资料.html",
+        "signature": "5e9dd71f68e8428aa2f1c4db456a6668df74dcc08479cc83a4230563e4b41c87"
+      },
+      "Documents/数学/Chevalley 超群的 r 阶 Frobenius 核的表示/前言.md": {
+        "route": "chevalley-超群的-r-阶-frobenius-核的表示/前言.html",
+        "signature": "e203f9c6e29a6b3120c547edad788f0004d281d95d116239ae90ad47f7d89c12"
+      },
+      "Documents/数学/Chevalley 超群的 r 阶 Frobenius 核的表示/1 阶 Frobenius 核的表示/限制 Lie 超代数与 Chevalley 超群.md": {
+        "route": "chevalley-超群的-r-阶-frobenius-核的表示/1-阶-frobenius-核的表示/限制-lie-超代数与-chevalley-超群.html",
+        "signature": "53c7bf9a4ccc01654f2fc6bbf8446f6418a9ab0f27a16c7917654eef46da7cf7"
+      },
+      "Documents/数学/Chevalley 超群的 r 阶 Frobenius 核的表示/1 阶 Frobenius 核的表示/分次结构.md": {
+        "route": "chevalley-超群的-r-阶-frobenius-核的表示/1-阶-frobenius-核的表示/分次结构.html",
+        "signature": "9911537c742fc4a6862062d02b11c549a24c0caf6b751995b77b886b6bede6d7"
+      },
+      "Documents/数学/Chevalley 超群的 r 阶 Frobenius 核的表示/1 阶 Frobenius 核的表示/(U_0(g),T) 模范畴.md": {
+        "route": "chevalley-超群的-r-阶-frobenius-核的表示/1-阶-frobenius-核的表示/(u_0(g)-t)-模范畴.html",
+        "signature": "fdc79ff95927e0629af57eb9fd2b1cdad105c5d4b87d2e9efb88a52b2bd27438"
+      },
+      "Documents/数学/Chevalley 超群的 r 阶 Frobenius 核的表示/1 阶 Frobenius 核的表示/1 阶情形同态计算.md": {
+        "route": "chevalley-超群的-r-阶-frobenius-核的表示/1-阶-frobenius-核的表示/1-阶情形同态计算.html",
+        "signature": "efea32af596b897b91bc0010192dcef7d9b8971be00461e5a37993e3cdcffb53"
+      },
+      "Documents/数学/Chevalley 超群的 r 阶 Frobenius 核的表示/1 阶 Frobenius 核的表示/1 阶情形基变换.md": {
+        "route": "chevalley-超群的-r-阶-frobenius-核的表示/1-阶-frobenius-核的表示/1-阶情形基变换.html",
+        "signature": "6771f488c6c6def8c9676ab7aa97f5cabd0345dfc08958fbb80bdb7b838beec1"
+      },
+      "Documents/数学/Chevalley 超群的 r 阶 Frobenius 核的表示/1 阶 Frobenius 核的表示/1 阶情形 Jantzen 滤过.md": {
+        "route": "chevalley-超群的-r-阶-frobenius-核的表示/1-阶-frobenius-核的表示/1-阶情形-jantzen-滤过.html",
+        "signature": "67fbf0dcfb900d4f434225255cb29a7c470afc2bc90ea2add5109efe134af0e9"
+      },
+      "Documents/数学/Chevalley 超群的 r 阶 Frobenius 核的表示/1 阶 Frobenius 核的表示/1 阶情形 Jantzen 和公式.md": {
+        "route": "chevalley-超群的-r-阶-frobenius-核的表示/1-阶-frobenius-核的表示/1-阶情形-jantzen-和公式.html",
+        "signature": "5ac73930ab43b436ed8755ddbd16ac60b6e141665fb61511544e8170a22733c9"
+      },
+      "Documents/数学/Chevalley 超群的 r 阶 Frobenius 核的表示/Frobenius 核与分次代数.md": {
+        "route": "chevalley-超群的-r-阶-frobenius-核的表示/frobenius-核与分次代数.html",
+        "signature": "4479e11c74a9809ab8a24622c0a4017a62da0518b2d3612265b0d661c59d7194"
+      },
+      "Documents/数学/Chevalley 超群的 r 阶 Frobenius 核的表示/(Dist(G_r),T) 模范畴.md": {
+        "route": "chevalley-超群的-r-阶-frobenius-核的表示/(dist(g_r)-t)-模范畴.html",
+        "signature": "5ac1d11f8f1641f48d96c1c7e03965f786f1c4d0d7c15a3352dd9ef869624aaa"
+      },
+      "Documents/数学/Chevalley 超群的 r 阶 Frobenius 核的表示/计算二项式系数的工具.md": {
+        "route": "chevalley-超群的-r-阶-frobenius-核的表示/计算二项式系数的工具.html",
+        "signature": "e11341daf05249017d2cd71dd7df71b3430dc79ab45365db74aa7e457fff0ced"
+      },
+      "Documents/数学/Chevalley 超群的 r 阶 Frobenius 核的表示/r 阶情形同态的计算.md": {
+        "route": "chevalley-超群的-r-阶-frobenius-核的表示/r-阶情形同态的计算.html",
+        "signature": "50f8764bcd554c886c3d5687312e1cae079911b5cbed6a424c343d162d107c7b"
+      },
+      "Documents/数学/Chevalley 超群的 r 阶 Frobenius 核的表示/同态空间的计算.md": {
+        "route": "chevalley-超群的-r-阶-frobenius-核的表示/同态空间的计算.html",
+        "signature": "896a56699fc5154d9560d883c064c008c32dd17763ce45ae7e522fa6a6934443"
+      },
+      "Documents/数学/Chevalley 超群的 r 阶 Frobenius 核的表示/(Dist(G_r),T) 模范畴的基变换.md": {
+        "route": "chevalley-超群的-r-阶-frobenius-核的表示/(dist(g_r)-t)-模范畴的基变换.html",
+        "signature": "cab3660b9bdbeffe05f1616c3be483b934da7e803332f32e8d20fb5771e98c31"
+      },
+      "Documents/数学/Chevalley 超群的 r 阶 Frobenius 核的表示/参考资料.md": {
+        "route": "chevalley-超群的-r-阶-frobenius-核的表示/参考资料.html",
+        "signature": "6b746338fc2b7d49f7784e6cb2e363b33c62b9953f27c201a3e0b8f50ffd834f"
+      }
+    }
   }
 }
