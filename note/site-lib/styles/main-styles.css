@@ -1140,12 +1140,15 @@ body.theme-light .excalidraw-plugin svg.light {
 .mathcraft-export-notebook-entry{appearance:none!important;display:flex!important;align-items:center;gap:6px;width:100%;min-width:0;margin:0!important;padding:var(--nav-item-padding,4px 8px)!important;border:0!important;box-shadow:none!important;background:transparent!important;color:var(--nav-item-color);font:inherit!important;text-align:left;border-radius:var(--nav-item-radius);cursor:pointer}
 .mathcraft-export-notebook-entry:hover{background:var(--nav-item-background-hover)!important;color:var(--nav-item-color-hover)}
 .mathcraft-export-notebook-entry:focus-visible{box-shadow:0 0 0 2px var(--background-modifier-border-focus)!important}
-.mathcraft-export-notebook-entry-icon,.mathcraft-export-notebook-entry-chevron{display:flex;flex:0 0 auto;color:var(--nav-item-color)}
+.mathcraft-export-notebook-entry-icon,.mathcraft-export-notebook-entry-chevron{display:flex;align-items:center;justify-content:center;flex:0 0 auto;color:var(--nav-item-color)}
+.mathcraft-export-notebook-entry-icon{order:0;width:var(--icon-size,18px);height:var(--icon-size,18px)}
+.mathcraft-export-notebook-entry-title{order:1}
+.mathcraft-export-notebook-entry-chevron{order:2;margin-left:auto}
 .mathcraft-export-notebook-entry-icon svg,.mathcraft-export-notebook-entry-chevron svg{width:var(--icon-xs,14px);height:var(--icon-xs,14px)}
 .mathcraft-export-notebook-entry-title{flex:1;min-width:0;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
 .mathcraft-export-notebook-detail-header .feature-title{display:flex;align-items:center;min-width:0}
-.mathcraft-export-notebook-back{display:flex;align-items:center;justify-content:center;flex:0 0 auto;margin-right:4px;padding:4px;border:0;box-shadow:none;background:transparent;color:var(--text-muted);border-radius:var(--radius-s);cursor:pointer}
-.mathcraft-export-notebook-back:hover{background:var(--background-modifier-hover);color:var(--text-normal)}
+.mathcraft-export-notebook-back{appearance:none!important;display:flex!important;align-items:center;justify-content:center;flex:0 0 auto;width:var(--clickable-icon-size,30px);height:var(--clickable-icon-size,30px);min-width:0!important;margin:0 4px 0 0!important;padding:0!important;border:0!important;box-shadow:none!important;background:transparent!important;color:var(--icon-color)!important;border-radius:var(--clickable-icon-radius,var(--radius-s))!important;cursor:pointer}
+.mathcraft-export-notebook-back:hover{background:var(--background-modifier-hover)!important;color:var(--icon-color-hover)!important}
 .mathcraft-export-notebook-title{min-width:0;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
 .mathcraft-export-notebook-root-self{display:none!important}
 .mathcraft-export-notebook-tree>.tree-item-children{display:block!important;margin-left:0}
