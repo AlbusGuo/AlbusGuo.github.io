@@ -1,3 +1,16 @@
+
+.callout.mathcraft-style-latex[data-callout="theorem"] { --callout-color: #0010eb !important; }
+.callout.mathcraft-style-latex[data-callout="lemma"] { --callout-color: #4da9ff !important; }
+.callout.mathcraft-style-latex[data-callout="corollary"] { --callout-color: #0098b3 !important; }
+.callout.mathcraft-style-latex[data-callout="proposition"] { --callout-color: #05ad9a !important; }
+.callout.mathcraft-style-latex[data-callout="definition"] { --callout-color: #00a321 !important; }
+.callout.mathcraft-style-latex[data-callout="axiom"] { --callout-color: #ffae00 !important; }
+.callout.mathcraft-style-latex[data-callout="example"] { --callout-color: #d632ec !important; }
+.callout.mathcraft-style-latex[data-callout="exercise"] { --callout-color: #ffdd00 !important; }
+.callout.mathcraft-style-latex[data-callout="remark"] { --callout-color: #800000 !important; }
+.callout.mathcraft-style-latex[data-callout="note"] { --callout-color: #ffa97a !important; }
+.callout.mathcraft-remark-note-special[data-callout="remark"] { --callout-color: #800000 !important; }
+.callout.mathcraft-remark-note-special[data-callout="note"] { --callout-color: #ffa97a !important; }
 /* 忽略文件夹列表项 */
 
 /* 添加文件夹行 */
@@ -4425,8 +4438,8 @@ button.mbv-sticky-tag-option:focus-visible {
 	--mbv-operator-control-lift: -2px;
 }
 
-.mbv-operator-shell:hover,
-.mbv-operator-shell:focus-visible {
+.mbv-operator-card:hover .mbv-operator-shell,
+.mbv-operator-card:focus-within .mbv-operator-shell {
 	color: inherit;
 	text-decoration: none;
 	transform: translateY(-2px);
@@ -4832,8 +4845,8 @@ button.mbv-sticky-tag-option:focus-visible {
 	display: none;
 }
 
-.mbv-operator-shell:hover .mbv-operator-profession,
-.mbv-operator-shell:focus-visible .mbv-operator-profession {
+.mbv-operator-card:hover .mbv-operator-profession,
+.mbv-operator-card:focus-within .mbv-operator-profession {
 	filter:
 		drop-shadow(
 			var(--mbv-operator-logo-shadow-x)
@@ -4845,8 +4858,8 @@ button.mbv-sticky-tag-option:focus-visible {
 	transform: translate3d(-10cqw, -9cqw, 64px) rotate(-4deg) scale(1.2);
 }
 
-.mbv-operator-shell:hover .mbv-operator-faction,
-.mbv-operator-shell:focus-visible .mbv-operator-faction {
+.mbv-operator-card:hover .mbv-operator-faction,
+.mbv-operator-card:focus-within .mbv-operator-faction {
 	filter:
 		drop-shadow(
 			var(--mbv-operator-logo-shadow-x)
@@ -4858,8 +4871,8 @@ button.mbv-sticky-tag-option:focus-visible {
 	transform: translate3d(-12cqw, 8cqw, 60px) rotate(3deg) scale(1.16);
 }
 
-.mbv-operator-shell:hover .mbv-operator-rarity,
-.mbv-operator-shell:focus-visible .mbv-operator-rarity {
+.mbv-operator-card:hover .mbv-operator-rarity,
+.mbv-operator-card:focus-within .mbv-operator-rarity {
 	filter: drop-shadow(var(--mbv-operator-logo-shadow-x) var(--mbv-operator-logo-shadow-y) 0 white) drop-shadow(0 0 12px var(--mbv-operator-rarity-glow));
 	transform: translate3d(7cqw, -7cqw, 68px) rotate(2deg) scale(1.18);
 }
@@ -4931,8 +4944,8 @@ button.mbv-sticky-tag-option:focus-visible {
 		transition: none;
 	}
 
-	.mbv-operator-shell:hover,
-	.mbv-operator-shell:focus-visible {
+	.mbv-operator-card:hover .mbv-operator-shell,
+	.mbv-operator-card:focus-within .mbv-operator-shell {
 		transform: none;
 	}
 
@@ -4943,12 +4956,12 @@ button.mbv-sticky-tag-option:focus-visible {
 		--mbv-operator-tilt-y: 0deg;
 	}
 
-	.mbv-operator-shell:hover .mbv-operator-profession,
-	.mbv-operator-shell:focus-visible .mbv-operator-profession,
-	.mbv-operator-shell:hover .mbv-operator-faction,
-	.mbv-operator-shell:focus-visible .mbv-operator-faction,
-	.mbv-operator-shell:hover .mbv-operator-rarity,
-	.mbv-operator-shell:focus-visible .mbv-operator-rarity {
+	.mbv-operator-card:hover .mbv-operator-profession,
+	.mbv-operator-card:focus-within .mbv-operator-profession,
+	.mbv-operator-card:hover .mbv-operator-faction,
+	.mbv-operator-card:focus-within .mbv-operator-faction,
+	.mbv-operator-card:hover .mbv-operator-rarity,
+	.mbv-operator-card:focus-within .mbv-operator-rarity {
 		filter: none;
 		transform: translate3d(0, 0, 24px) scale(1);
 	}
