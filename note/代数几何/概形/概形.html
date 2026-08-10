@@ -232,6 +232,7 @@ body
 	display: flex;
 	flex-direction: column;
 	height: 100%;
+	min-height: 0;
 	width: 100%;
 	align-items: stretch;
 	justify-content: center;
@@ -241,6 +242,9 @@ body
     display: flex;
     flex-direction: row;
 	flex-grow: 1;
+	min-height: 0;
+	height: 100%;
+	overflow: hidden;
     width: 100%;
     align-items: stretch;
     justify-content: center;
@@ -252,6 +256,7 @@ body
     max-width: 100%;
     width: 100%;
     height: 100%;
+	min-height: 0;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -280,6 +285,8 @@ body
     border-top-left-radius: var(--window-radius, var(--radius-m));
     overflow-x: hidden !important;
     overflow-y: auto !important;
+	min-height: 0;
+	height: 100%;
     display: flex !important;
     flex-direction: column !important;
     align-items: center !important;
@@ -405,7 +412,6 @@ body #center-content>.obsidian-document>.markdown-preview-sizer
 }
 
 /*#endregion */
-
 
 </style><script defer>async function loadIncludes()
 {
@@ -973,7 +979,7 @@ mjx-stretchy-v mjx-c, mjx-stretchy-h mjx-c { font-family: MJXZERO, MJXTEX-S1, MJ
 @font-face { font-family: MJXTEX-SC; src: url("site-lib/fonts/mathjax-af96f67d7acc.woff") format("woff"); }
 @font-face { font-family: MJXTEX-T; src: url("site-lib/fonts/mathjax-c56da8d69f1a.woff") format("woff"); }
 @font-face { font-family: MJXTEX-V; src: url("site-lib/fonts/mathjax-72bc573386dd.woff") format("woff"); }
-@font-face { font-family: MJXTEX-VB; src: url("site-lib/fonts/mathjax-36e0d72d8a7a.woff") format("woff"); }</style><div class="markdown-preview-sizer markdown-preview-section"><div class="header"><div class="page-title" id="概形">§6.1 概形</div><div class="data-bar"></div></div><div class="markdown-preview-pusher" style="width:1px;height:.1px;margin-bottom:0"></div><div class="el-p"><p dir="auto">本章引入概形理论. 在<a data-tooltip-position="top" aria-label="环化空间与态射 &gt; ^prp-e24985" data-href="环化空间与态射#^prp-e24985" href="代数几何/仿射簇/环化空间与态射.html#^prp-e24985" class="internal-link" target="_self" rel="noopener nofollow">命题 2.6.4</a> 我们已经得到了仿射簇和有限生成约化 <span class="math math-inline is-loaded"><mjx-container class="MathJax" jax="CHTML"><mjx-math class="MJX-TEX"><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D43E TEX-I"></mjx-c></mjx-mi></mjx-math></mjx-container></span> 代数的一一对应关系, 但我们并不满足于此, 希望进一步加强代数几何与交换代数的联系, 我们将在本章中将理论推广到一般域 <span class="math math-inline is-loaded"><mjx-container class="MathJax" jax="CHTML"><mjx-math class="MJX-TEX"><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D439 TEX-I"></mjx-c></mjx-mi></mjx-math></mjx-container></span>, 我们将区分幂零元的存在, 先构造仿射概形, 然后像从仿射簇到簇那样构造概形.</p></div><div class="el-h3"><h3 data-heading="6.1.1 概形" dir="auto" id="6.1.1_概形_0"><span class="heading-collapse-indicator collapse-indicator collapse-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="svg-icon right-triangle"><path d="M3 8L12 17L21 8"></path></svg></span>6.1.1 概形</h3></div><div class="el-p"><p dir="auto">与从仿射簇到预簇 (簇) 类似, 从仿射概形得到概形也是采取粘合的方法, 唯一的不同是概形允许粘合无限多个仿射概形.</p></div><div class="el-div"><div data-callout-metadata="" data-callout-fold="" data-callout="definition" class="callout mathcraft-style-latex"><div class="callout-title" dir="auto"><div class="callout-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="svg-icon lucide-pencil"><path d="M21.174 6.812a1 1 0 0 0-3.986-3.987L3.842 16.174a2 2 0 0 0-.5.83l-1.321 4.352a.5.5 0 0 0 .623.622l4.353-1.32a2 2 0 0 0 .83-.497z"></path><path d="m15 5 4 4"></path></svg></div><div class="callout-title-inner">定义 6.1.1 (概形)</div></div><div class="callout-content">
+@font-face { font-family: MJXTEX-VB; src: url("site-lib/fonts/mathjax-36e0d72d8a7a.woff") format("woff"); }</style><div class="markdown-preview-sizer markdown-preview-section"><div class="header"><div class="page-title" id="概形">§6.1 概形</div><div class="data-bar"></div></div><div class="markdown-preview-pusher" style="width:1px;height:.1px;margin-bottom:0"></div><div class="el-p"><p dir="auto">本章引入概形理论. 在<a data-tooltip-position="top" aria-label="环化空间与态射 &gt; ^prp-e24985" data-href="环化空间与态射#^prp-e24985" href="代数几何/仿射簇/环化空间与态射.html#^prp-e24985" class="internal-link" target="_self" rel="noopener nofollow">命题 2.6.4</a> 我们已经得到了仿射簇和有限生成约化 <span class="math math-inline is-loaded"><mjx-container class="MathJax" jax="CHTML"><mjx-math class="MJX-TEX"><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D43E TEX-I"></mjx-c></mjx-mi></mjx-math></mjx-container></span> 代数的一一对应关系, 但我们并不满足于此, 希望进一步加强代数几何与交换代数的联系, 我们将在本章中将理论推广到一般域 <span class="math math-inline is-loaded"><mjx-container class="MathJax" jax="CHTML"><mjx-math class="MJX-TEX"><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D439 TEX-I"></mjx-c></mjx-mi></mjx-math></mjx-container></span>, 我们将区分幂零元的存在, 先构造仿射概形, 然后像从仿射簇到簇那样构造概形.</p></div><div class="el-h3"><h3 data-heading="6.1.1 概形" dir="auto" id="6.1.1_概形_0"><span class="heading-collapse-indicator collapse-indicator collapse-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="svg-icon right-triangle"><path d="M3 8L12 17L21 8"></path></svg></span>6.1.1 概形</h3></div><div class="el-p" id="^def-6839ab"><p dir="auto">与从仿射簇到预簇 (簇) 类似, 从仿射概形得到概形也是采取粘合的方法, 唯一的不同是概形允许粘合无限多个仿射概形.</p></div><div class="el-div"><div data-callout-metadata="" data-callout-fold="" data-callout="definition" class="callout mathcraft-style-latex"><div class="callout-title" dir="auto"><div class="callout-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="svg-icon lucide-pencil"><path d="M21.174 6.812a1 1 0 0 0-3.986-3.987L3.842 16.174a2 2 0 0 0-.5.83l-1.321 4.352a.5.5 0 0 0 .623.622l4.353-1.32a2 2 0 0 0 .83-.497z"></path><path d="m15 5 4 4"></path></svg></div><div class="callout-title-inner">定义 6.1.1 (概形)</div></div><div class="callout-content">
 <p dir="auto">设 <span class="math math-inline is-loaded"><mjx-container class="MathJax" jax="CHTML"><mjx-math class="MJX-TEX"><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D44B TEX-I"></mjx-c></mjx-mi></mjx-math></mjx-container></span> 为局部环化空间, 若其存在一个由仿射概形构成的开覆盖, 则称 <span class="math math-inline is-loaded"><mjx-container class="MathJax" jax="CHTML"><mjx-math class="MJX-TEX"><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D44B TEX-I"></mjx-c></mjx-mi></mjx-math></mjx-container></span> 为概形 (scheme), 概形的态射即局部环化空间的态射.<br>
 </p>
 </div></div></div><div class="el-div"><div data-callout-metadata="" data-callout-fold="" data-callout="remark" class="callout mathcraft-style-latex"><div class="callout-title" dir="auto"><div class="callout-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="svg-icon lucide-pencil"><path d="M21.174 6.812a1 1 0 0 0-3.986-3.987L3.842 16.174a2 2 0 0 0-.5.83l-1.321 4.352a.5.5 0 0 0 .623.622l4.353-1.32a2 2 0 0 0 .83-.497z"></path><path d="m15 5 4 4"></path></svg></div><div class="callout-title-inner">注 6.1.1</div></div><div class="callout-content">

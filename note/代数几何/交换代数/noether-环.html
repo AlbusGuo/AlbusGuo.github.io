@@ -232,6 +232,7 @@ body
 	display: flex;
 	flex-direction: column;
 	height: 100%;
+	min-height: 0;
 	width: 100%;
 	align-items: stretch;
 	justify-content: center;
@@ -241,6 +242,9 @@ body
     display: flex;
     flex-direction: row;
 	flex-grow: 1;
+	min-height: 0;
+	height: 100%;
+	overflow: hidden;
     width: 100%;
     align-items: stretch;
     justify-content: center;
@@ -252,6 +256,7 @@ body
     max-width: 100%;
     width: 100%;
     height: 100%;
+	min-height: 0;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -280,6 +285,8 @@ body
     border-top-left-radius: var(--window-radius, var(--radius-m));
     overflow-x: hidden !important;
     overflow-y: auto !important;
+	min-height: 0;
+	height: 100%;
     display: flex !important;
     flex-direction: column !important;
     align-items: center !important;
@@ -405,7 +412,6 @@ body #center-content>.obsidian-document>.markdown-preview-sizer
 }
 
 /*#endregion */
-
 
 </style><script defer>async function loadIncludes()
 {
@@ -963,7 +969,7 @@ mjx-stretchy-v mjx-c, mjx-stretchy-h mjx-c { font-family: MJXZERO, MJXTEX-S1, MJ
 <li data-line="5" dir="auto" class="math-env-rendered-marker-item"><span class="math-env-rendered-marker">(3)</span><div class="math-env-rendered-marker-content"><span class="math math-inline is-loaded"><mjx-container class="MathJax" jax="CHTML"><mjx-math class="MJX-TEX"><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D445 TEX-I"></mjx-c></mjx-mi></mjx-math></mjx-container></span> 上的理想满足升链条件, 即对任意理想的升链 <span class="math math-inline is-loaded"><mjx-container class="MathJax" jax="CHTML"><mjx-math class="MJX-TEX"><mjx-msub><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D43C TEX-I"></mjx-c></mjx-mi><mjx-script style="vertical-align: -0.15em; margin-left: -0.064em;"><mjx-texatom size="s" texclass="ORD"><mjx-mn class="mjx-n"><mjx-c class="mjx-c31"></mjx-c></mjx-mn></mjx-texatom></mjx-script></mjx-msub><mjx-mo class="mjx-n" space="4"><mjx-c class="mjx-c2286"></mjx-c></mjx-mo><mjx-msub space="4"><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D43C TEX-I"></mjx-c></mjx-mi><mjx-script style="vertical-align: -0.15em; margin-left: -0.064em;"><mjx-texatom size="s" texclass="ORD"><mjx-mn class="mjx-n"><mjx-c class="mjx-c32"></mjx-c></mjx-mn></mjx-texatom></mjx-script></mjx-msub><mjx-mo class="mjx-n" space="4"><mjx-c class="mjx-c2286"></mjx-c></mjx-mo><mjx-mo class="mjx-n" space="4"><mjx-c class="mjx-c22EF"></mjx-c></mjx-mo></mjx-math></mjx-container></span>, 必定存在 <span class="math math-inline is-loaded"><mjx-container class="MathJax" jax="CHTML"><mjx-math class="MJX-TEX"><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D45B TEX-I"></mjx-c></mjx-mi><mjx-mo class="mjx-n" space="4"><mjx-c class="mjx-c2208"></mjx-c></mjx-mo><mjx-msub space="4"><mjx-texatom texclass="ORD"><mjx-mi class="mjx-ds mjx-b"><mjx-c class="mjx-c2124 TEX-A"></mjx-c></mjx-mi></mjx-texatom><mjx-script style="vertical-align: -0.15em;"><mjx-texatom size="s" texclass="ORD"><mjx-mo class="mjx-n"><mjx-c class="mjx-c2265"></mjx-c></mjx-mo><mjx-mn class="mjx-n"><mjx-c class="mjx-c30"></mjx-c></mjx-mn></mjx-texatom></mjx-script></mjx-msub></mjx-math></mjx-container></span> 使得 <span class="math math-inline is-loaded"><mjx-container class="MathJax" jax="CHTML"><mjx-math class="MJX-TEX"><mjx-mi class="mjx-n"><mjx-c class="mjx-c2200"></mjx-c></mjx-mi><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D458 TEX-I"></mjx-c></mjx-mi><mjx-mo class="mjx-n" space="4"><mjx-c class="mjx-c2265"></mjx-c></mjx-mo><mjx-mi class="mjx-i" space="4"><mjx-c class="mjx-c1D45B TEX-I"></mjx-c></mjx-mi><mjx-mtext class="mjx-n"><mjx-c class="mjx-cA0"></mjx-c></mjx-mtext><mjx-mtext class="mjx-n"><mjx-c class="mjx-cA0"></mjx-c></mjx-mtext><mjx-msub><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D43C TEX-I"></mjx-c></mjx-mi><mjx-script style="vertical-align: -0.15em; margin-left: -0.064em;"><mjx-texatom size="s" texclass="ORD"><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D458 TEX-I"></mjx-c></mjx-mi></mjx-texatom></mjx-script></mjx-msub><mjx-mo class="mjx-n" space="4"><mjx-c class="mjx-c3D"></mjx-c></mjx-mo><mjx-msub space="4"><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D43C TEX-I"></mjx-c></mjx-mi><mjx-script style="vertical-align: -0.15em; margin-left: -0.064em;"><mjx-texatom size="s" texclass="ORD"><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D45B TEX-I"></mjx-c></mjx-mi></mjx-texatom></mjx-script></mjx-msub></mjx-math></mjx-container></span>.</div></li>
 <li data-line="6" dir="auto" class="math-env-rendered-marker-item"><span class="math-env-rendered-marker">(4)</span><div class="math-env-rendered-marker-content"><span class="math math-inline is-loaded"><mjx-container class="MathJax" jax="CHTML"><mjx-math class="MJX-TEX"><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D445 TEX-I"></mjx-c></mjx-mi></mjx-math></mjx-container></span> 的任意理想构成的非空集合在 <span class="math math-inline is-loaded"><mjx-container class="MathJax" jax="CHTML"><mjx-math class="MJX-TEX"><mjx-mo class="mjx-n"><mjx-c class="mjx-c2286"></mjx-c></mjx-mo></mjx-math></mjx-container></span> 关系下构成的偏序集必有极大元.</div></li>
 </ol>
-</div></div></div><div class="el-div"><div data-callout-metadata="" data-callout-fold="" data-callout="proposition" class="callout mathcraft-style-latex"><div class="callout-title" dir="auto"><div class="callout-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="svg-icon lucide-pencil"><path d="M21.174 6.812a1 1 0 0 0-3.986-3.987L3.842 16.174a2 2 0 0 0-.5.83l-1.321 4.352a.5.5 0 0 0 .623.622l4.353-1.32a2 2 0 0 0 .83-.497z"></path><path d="m15 5 4 4"></path></svg></div><div class="callout-title-inner">命题 1.12.2</div></div><div class="callout-content">
+</div></div></div><div class="el-div" id="^prp-3b9c3f"><div data-callout-metadata="" data-callout-fold="" data-callout="proposition" class="callout mathcraft-style-latex"><div class="callout-title" dir="auto"><div class="callout-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="svg-icon lucide-pencil"><path d="M21.174 6.812a1 1 0 0 0-3.986-3.987L3.842 16.174a2 2 0 0 0-.5.83l-1.321 4.352a.5.5 0 0 0 .623.622l4.353-1.32a2 2 0 0 0 .83-.497z"></path><path d="m15 5 4 4"></path></svg></div><div class="callout-title-inner">命题 1.12.2</div></div><div class="callout-content">
 <p dir="auto">设 <span class="math math-inline is-loaded"><mjx-container class="MathJax" jax="CHTML"><mjx-math class="MJX-TEX"><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D445 TEX-I"></mjx-c></mjx-mi></mjx-math></mjx-container></span> 为交换幺环, 若 <span class="math math-inline is-loaded"><mjx-container class="MathJax" jax="CHTML"><mjx-math class="MJX-TEX"><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D445 TEX-I"></mjx-c></mjx-mi></mjx-math></mjx-container></span> 为 Noether 环, 则 <span class="math math-inline is-loaded"><mjx-container class="MathJax" jax="CHTML"><mjx-math class="MJX-TEX"><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D445 TEX-I"></mjx-c></mjx-mi></mjx-math></mjx-container></span> 的同态像也为 Noether 环.</p>
 </div></div></div><div class="el-div"><div data-callout-metadata="" data-callout-fold="" data-callout="proposition" class="callout mathcraft-style-latex"><div class="callout-title" dir="auto"><div class="callout-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="svg-icon lucide-pencil"><path d="M21.174 6.812a1 1 0 0 0-3.986-3.987L3.842 16.174a2 2 0 0 0-.5.83l-1.321 4.352a.5.5 0 0 0 .623.622l4.353-1.32a2 2 0 0 0 .83-.497z"></path><path d="m15 5 4 4"></path></svg></div><div class="callout-title-inner">命题 1.12.3 (Hilbert 基定理)</div></div><div class="callout-content">
 <ol start="1" class="math-env-rendered-marker-list">

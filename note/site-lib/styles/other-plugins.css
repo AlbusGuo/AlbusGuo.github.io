@@ -4770,6 +4770,40 @@ button.mbv-sticky-tag-option:focus-visible {
 	transition: opacity 200ms ease;
 }
 
+.mbv-operator-profession-image.is-cycle-a,
+.mbv-operator-faction-image.is-cycle-a {
+	animation: mbv-operator-badge-cycle-a 420ms cubic-bezier(0.2, 0.8, 0.2, 1);
+}
+
+.mbv-operator-profession-image.is-cycle-b,
+.mbv-operator-faction-image.is-cycle-b {
+	animation: mbv-operator-badge-cycle-b 420ms cubic-bezier(0.2, 0.8, 0.2, 1);
+}
+
+@keyframes mbv-operator-badge-cycle-a {
+	from {
+		opacity: 0;
+		transform: translate3d(-16%, 5%, 0) rotate(-7deg);
+	}
+
+	to {
+		opacity: 1;
+		transform: translate3d(0, 0, 0) rotate(0);
+	}
+}
+
+@keyframes mbv-operator-badge-cycle-b {
+	from {
+		opacity: 0;
+		transform: translate3d(16%, -5%, 0) rotate(7deg);
+	}
+
+	to {
+		opacity: 1;
+		transform: translate3d(0, 0, 0) rotate(0);
+	}
+}
+
 .mbv-operator-profession.is-branch .mbv-operator-profession-track {
 	background: rgb(0 0 0 / 90%);
 }

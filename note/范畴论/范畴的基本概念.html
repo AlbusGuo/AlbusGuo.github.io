@@ -232,6 +232,7 @@ body
 	display: flex;
 	flex-direction: column;
 	height: 100%;
+	min-height: 0;
 	width: 100%;
 	align-items: stretch;
 	justify-content: center;
@@ -241,6 +242,9 @@ body
     display: flex;
     flex-direction: row;
 	flex-grow: 1;
+	min-height: 0;
+	height: 100%;
+	overflow: hidden;
     width: 100%;
     align-items: stretch;
     justify-content: center;
@@ -252,6 +256,7 @@ body
     max-width: 100%;
     width: 100%;
     height: 100%;
+	min-height: 0;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -280,6 +285,8 @@ body
     border-top-left-radius: var(--window-radius, var(--radius-m));
     overflow-x: hidden !important;
     overflow-y: auto !important;
+	min-height: 0;
+	height: 100%;
     display: flex !important;
     flex-direction: column !important;
     align-items: center !important;
@@ -405,7 +412,6 @@ body #center-content>.obsidian-document>.markdown-preview-sizer
 }
 
 /*#endregion */
-
 
 </style><script defer>async function loadIncludes()
 {
@@ -916,7 +922,7 @@ mjx-stretchy-v mjx-c, mjx-stretchy-h mjx-c { font-family: MJXZERO, MJXTEX-S1, MJ
 @font-face { font-family: MJXTEX-V; src: url("site-lib/fonts/mathjax-72bc573386dd.woff") format("woff"); }
 @font-face { font-family: MJXTEX-VB; src: url("site-lib/fonts/mathjax-36e0d72d8a7a.woff") format("woff"); }</style><div class="markdown-preview-sizer markdown-preview-section"><div class="header"><div class="page-title" id="范畴的基本概念">1. 范畴的基本概念</div><div class="data-bar"></div></div><div class="markdown-preview-pusher" style="width:1px;height:.1px;margin-bottom:0"></div><div class="el-p"><p dir="auto">我们的一切操作都在 ZFC 公理体系的框架中, 但为了更好进行一些操作, 必须引入类的概念, 这只是对集合论中的合式公式进行操作, 类并不是在 ZFC 公理体系中存在的合法对象, 可以看作一个虚无的脚手架.</p></div><div class="el-div"><div data-callout-metadata="" data-callout-fold="" data-callout="definition" class="callout mathcraft-style-latex"><div class="callout-title" dir="auto"><div class="callout-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="svg-icon lucide-pencil"><path d="M21.174 6.812a1 1 0 0 0-3.986-3.987L3.842 16.174a2 2 0 0 0-.5.83l-1.321 4.352a.5.5 0 0 0 .623.622l4.353-1.32a2 2 0 0 0 .83-.497z"></path><path d="m15 5 4 4"></path></svg></div><div class="callout-title-inner">定义 1.1 (类)</div></div><div class="callout-content">
 <p dir="auto">设 <span class="math math-inline is-loaded"><mjx-container class="MathJax" jax="CHTML"><mjx-math class="MJX-TEX"><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D711 TEX-I"></mjx-c></mjx-mi></mjx-math></mjx-container></span> 为集合论语言中的一个合式公式, 则称 <span class="math math-inline is-loaded"><mjx-container class="MathJax" jax="CHTML"><mjx-math class="MJX-TEX"><mjx-mrow><mjx-mo class="mjx-n"><mjx-c class="mjx-c7B"></mjx-c></mjx-mo><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D465 TEX-I"></mjx-c></mjx-mi><mjx-mtext class="mjx-n"><mjx-c class="mjx-cA0"></mjx-c></mjx-mtext><mjx-texatom texclass="CLOSE"></mjx-texatom><mjx-mo class="mjx-n"><mjx-c class="mjx-c7C"></mjx-c></mjx-mo><mjx-texatom texclass="OPEN"></mjx-texatom><mjx-mtext class="mjx-n"><mjx-c class="mjx-cA0"></mjx-c></mjx-mtext><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D711 TEX-I"></mjx-c></mjx-mi><mjx-mo class="mjx-n"><mjx-c class="mjx-c28"></mjx-c></mjx-mo><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D465 TEX-I"></mjx-c></mjx-mi><mjx-mo class="mjx-n"><mjx-c class="mjx-c29"></mjx-c></mjx-mo><mjx-mo class="mjx-n"><mjx-c class="mjx-c7D"></mjx-c></mjx-mo></mjx-mrow></mjx-math></mjx-container></span> 为类 (class). 若一个类不是集合, 我们称其为真类.</p>
-</div></div></div><div class="el-p"><p dir="auto">对于类, 我们可以和集合一样定义子类, 包括集合的基本运算, 也可以移植到类上. 在 ZFC 公理体系下, 由于真类不是真实存在的, 我们绝不能用量词 <span class="math math-inline is-loaded"><mjx-container class="MathJax" jax="CHTML"><mjx-math class="MJX-TEX"><mjx-mi class="mjx-n"><mjx-c class="mjx-c2200"></mjx-c></mjx-mi></mjx-math></mjx-container></span> 和 <span class="math math-inline is-loaded"><mjx-container class="MathJax" jax="CHTML"><mjx-math class="MJX-TEX"><mjx-mi class="mjx-n"><mjx-c class="mjx-c2203"></mjx-c></mjx-mi></mjx-math></mjx-container></span> 来直接操作类, 究其本质, 类是合式公式的一种简化表达, 对所有真类的操作实际上是合式公式的操作.</p></div><div class="el-div"><div data-callout-metadata="" data-callout-fold="" data-callout="definition" class="callout mathcraft-style-latex"><div class="callout-title" dir="auto"><div class="callout-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="svg-icon lucide-pencil"><path d="M21.174 6.812a1 1 0 0 0-3.986-3.987L3.842 16.174a2 2 0 0 0-.5.83l-1.321 4.352a.5.5 0 0 0 .623.622l4.353-1.32a2 2 0 0 0 .83-.497z"></path><path d="m15 5 4 4"></path></svg></div><div class="callout-title-inner">定义 1.2 (范畴)</div></div><div class="callout-content">
+</div></div></div><div class="el-p" id="^def-21e7d6"><p dir="auto">对于类, 我们可以和集合一样定义子类, 包括集合的基本运算, 也可以移植到类上. 在 ZFC 公理体系下, 由于真类不是真实存在的, 我们绝不能用量词 <span class="math math-inline is-loaded"><mjx-container class="MathJax" jax="CHTML"><mjx-math class="MJX-TEX"><mjx-mi class="mjx-n"><mjx-c class="mjx-c2200"></mjx-c></mjx-mi></mjx-math></mjx-container></span> 和 <span class="math math-inline is-loaded"><mjx-container class="MathJax" jax="CHTML"><mjx-math class="MJX-TEX"><mjx-mi class="mjx-n"><mjx-c class="mjx-c2203"></mjx-c></mjx-mi></mjx-math></mjx-container></span> 来直接操作类, 究其本质, 类是合式公式的一种简化表达, 对所有真类的操作实际上是合式公式的操作.</p></div><div class="el-div"><div data-callout-metadata="" data-callout-fold="" data-callout="definition" class="callout mathcraft-style-latex"><div class="callout-title" dir="auto"><div class="callout-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="svg-icon lucide-pencil"><path d="M21.174 6.812a1 1 0 0 0-3.986-3.987L3.842 16.174a2 2 0 0 0-.5.83l-1.321 4.352a.5.5 0 0 0 .623.622l4.353-1.32a2 2 0 0 0 .83-.497z"></path><path d="m15 5 4 4"></path></svg></div><div class="callout-title-inner">定义 1.2 (范畴)</div></div><div class="callout-content">
 <p dir="auto">一个范畴 (category) <span class="math math-inline is-loaded"><mjx-container class="MathJax" jax="CHTML"><mjx-math class="MJX-TEX"><mjx-texatom texclass="ORD"><mjx-mi class="mjx-fr"><mjx-c class="mjx-c212D TEX-FR"></mjx-c></mjx-mi></mjx-texatom></mjx-math></mjx-container></span> 由以下要素构成:</p>
 <ol class="math-env-rendered-marker-list" start="1">
 <li data-line="3" dir="auto" class="math-env-rendered-marker-item"><span class="math-env-rendered-marker">(1)</span><div class="math-env-rendered-marker-content">一些对象构成的类, 记为 <span class="math math-inline is-loaded"><mjx-container class="MathJax" jax="CHTML"><mjx-math class="MJX-TEX"><mjx-mi class="mjx-n"><mjx-c class="mjx-c6F"></mjx-c><mjx-c class="mjx-c62"></mjx-c></mjx-mi><mjx-mo class="mjx-n"><mjx-c class="mjx-c28"></mjx-c></mjx-mo><mjx-texatom texclass="ORD"><mjx-mi class="mjx-fr"><mjx-c class="mjx-c212D TEX-FR"></mjx-c></mjx-mi></mjx-texatom><mjx-mo class="mjx-n"><mjx-c class="mjx-c29"></mjx-c></mjx-mo></mjx-math></mjx-container></span>.</div></li>

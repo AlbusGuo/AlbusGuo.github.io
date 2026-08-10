@@ -232,6 +232,7 @@ body
 	display: flex;
 	flex-direction: column;
 	height: 100%;
+	min-height: 0;
 	width: 100%;
 	align-items: stretch;
 	justify-content: center;
@@ -241,6 +242,9 @@ body
     display: flex;
     flex-direction: row;
 	flex-grow: 1;
+	min-height: 0;
+	height: 100%;
+	overflow: hidden;
     width: 100%;
     align-items: stretch;
     justify-content: center;
@@ -252,6 +256,7 @@ body
     max-width: 100%;
     width: 100%;
     height: 100%;
+	min-height: 0;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -280,6 +285,8 @@ body
     border-top-left-radius: var(--window-radius, var(--radius-m));
     overflow-x: hidden !important;
     overflow-y: auto !important;
+	min-height: 0;
+	height: 100%;
     display: flex !important;
     flex-direction: column !important;
     align-items: center !important;
@@ -406,7 +413,6 @@ body #center-content>.obsidian-document>.markdown-preview-sizer
 
 /*#endregion */
 
-
 </style><script defer>async function loadIncludes()
 {
 	// replace include tags with the contents of the file
@@ -523,14 +529,14 @@ mjx-c.mjx-c58.TEX-C::before { padding: 0.683em 0.807em 0px 0px; content: "X"; }
 mjx-c.mjx-c59.TEX-C::before { padding: 0.683em 0.714em 0.143em 0px; content: "Y"; }
 mjx-c.mjx-c1D523.TEX-FR::before { padding: 0.681em 0.326em 0.221em 0px; content: "f"; }
 mjx-c.mjx-c1D41A.TEX-B::before { padding: 0.453em 0.559em 0.006em 0px; content: "a"; }
+mjx-c.mjx-c1D701.TEX-I::before { padding: 0.704em 0.471em 0.204em 0px; content: "ζ"; }
 mjx-c.mjx-c1D709.TEX-I::before { padding: 0.704em 0.438em 0.205em 0px; content: "ξ"; }
 mjx-c.mjx-c1D40F.TEX-B::before { padding: 0.686em 0.786em 0px 0px; content: "P"; }
-mjx-c.mjx-c1D701.TEX-I::before { padding: 0.704em 0.471em 0.204em 0px; content: "ζ"; }
 mjx-c.mjx-c2C.TEX-MI::before { padding: 0.121em 0.307em 0.194em 0px; content: ","; }
 mjx-c.mjx-c1D4A2.TEX-SC::before { padding: 0.717em 0.738em 0.037em 0px; content: "G"; }
 mjx-c.mjx-c1D425.TEX-B::before { padding: 0.694em 0.319em 0px 0px; content: "l"; }
-mjx-c.mjx-c2210.TEX-S2::before { padding: 0.95em 1.278em 0.45em 0px; content: "∐"; }
 mjx-c.mjx-c1D505.TEX-FR::before { padding: 0.691em 0.884em 0.027em 0px; content: "B"; }
+mjx-c.mjx-c2210.TEX-S2::before { padding: 0.95em 1.278em 0.45em 0px; content: "∐"; }
 mjx-stretchy-h.mjx-c2192 mjx-ext mjx-c::before { content: "−"; padding: 0.583em 0px 0.082em; }
 mjx-stretchy-h.mjx-c2192 mjx-end mjx-c::before { content: "→"; padding: 0.583em 0px 0.082em; }
 mjx-c.mjx-c1D708.TEX-I::before { padding: 0.442em 0.53em 0px 0px; content: "ν"; }
@@ -1001,7 +1007,7 @@ mjx-stretchy-v mjx-c, mjx-stretchy-h mjx-c { font-family: MJXZERO, MJXTEX-S1, MJ
 @font-face { font-family: MJXTEX-SC; src: url("site-lib/fonts/mathjax-af96f67d7acc.woff") format("woff"); }
 @font-face { font-family: MJXTEX-T; src: url("site-lib/fonts/mathjax-c56da8d69f1a.woff") format("woff"); }
 @font-face { font-family: MJXTEX-V; src: url("site-lib/fonts/mathjax-72bc573386dd.woff") format("woff"); }
-@font-face { font-family: MJXTEX-VB; src: url("site-lib/fonts/mathjax-36e0d72d8a7a.woff") format("woff"); }</style><div class="markdown-preview-sizer markdown-preview-section"><div class="header"><div class="page-title" id="单位分支">§1.3 单位分支</div><div class="data-bar"></div></div><div class="markdown-preview-pusher" style="width:1px;height:.1px;margin-bottom:0"></div><div class="el-div"><div data-callout-metadata="" data-callout-fold="" data-callout="definition" class="callout mathcraft-style-latex"><div class="callout-title" dir="auto"><div class="callout-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="svg-icon lucide-pencil"><path d="M21.174 6.812a1 1 0 0 0-3.986-3.987L3.842 16.174a2 2 0 0 0-.5.83l-1.321 4.352a.5.5 0 0 0 .623.622l4.353-1.32a2 2 0 0 0 .83-.497z"></path><path d="m15 5 4 4"></path></svg></div><div class="callout-title-inner">定义 1.3.1 (单位分支)</div></div><div class="callout-content">
+@font-face { font-family: MJXTEX-VB; src: url("site-lib/fonts/mathjax-36e0d72d8a7a.woff") format("woff"); }</style><div class="markdown-preview-sizer markdown-preview-section"><div class="header"><div class="page-title" id="单位分支">§1.3 单位分支</div><div class="data-bar"></div></div><div class="markdown-preview-pusher" style="width:1px;height:.1px;margin-bottom:0"></div><div class="el-div" id="^prp-18dce5"><div data-callout-metadata="" data-callout-fold="" data-callout="definition" class="callout mathcraft-style-latex"><div class="callout-title" dir="auto"><div class="callout-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="svg-icon lucide-pencil"><path d="M21.174 6.812a1 1 0 0 0-3.986-3.987L3.842 16.174a2 2 0 0 0-.5.83l-1.321 4.352a.5.5 0 0 0 .623.622l4.353-1.32a2 2 0 0 0 .83-.497z"></path><path d="m15 5 4 4"></path></svg></div><div class="callout-title-inner">定义 1.3.1 (单位分支)</div></div><div class="callout-content">
 <p dir="auto">设 <span class="math math-inline is-loaded"><mjx-container class="MathJax" jax="CHTML"><mjx-math class="MJX-TEX"><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D43A TEX-I"></mjx-c></mjx-mi></mjx-math></mjx-container></span> 为仿射代数群, 则 <span class="math math-inline is-loaded"><mjx-container class="MathJax" jax="CHTML"><mjx-math class="MJX-TEX"><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D43A TEX-I"></mjx-c></mjx-mi></mjx-math></mjx-container></span> 的不可约分支 (<a data-tooltip-position="top" aria-label="Zariski 拓扑 &gt; ^def-7cc552" data-href="Zariski 拓扑#^def-7cc552" href="代数几何/仿射簇/zariski-拓扑.html#^def-7cc552" class="internal-link" target="_self" rel="noopener nofollow">[18, 定义 2.3.3</a>]) 中有且仅有一个包含单位元. 我们称该不可约分支为单位分支 (identity component), 记为 <span class="math math-inline is-loaded"><mjx-container class="MathJax" jax="CHTML"><mjx-math class="MJX-TEX"><mjx-msup><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D43A TEX-I"></mjx-c></mjx-mi><mjx-script style="vertical-align: 0.363em;"><mjx-texatom size="s" texclass="ORD"><mjx-mo class="mjx-n"><mjx-c class="mjx-c2218"></mjx-c></mjx-mo></mjx-texatom></mjx-script></mjx-msup></mjx-math></mjx-container></span>.</p>
 </div></div></div><div class="el-div"><div data-callout-metadata="" data-callout-fold="" data-callout="proposition" class="callout mathcraft-style-latex"><div class="callout-title" dir="auto"><div class="callout-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="svg-icon lucide-pencil"><path d="M21.174 6.812a1 1 0 0 0-3.986-3.987L3.842 16.174a2 2 0 0 0-.5.83l-1.321 4.352a.5.5 0 0 0 .623.622l4.353-1.32a2 2 0 0 0 .83-.497z"></path><path d="m15 5 4 4"></path></svg></div><div class="callout-title-inner">命题 1.3.1 (单位分支基本性质)</div></div><div class="callout-content">
 <p dir="auto">设 <span class="math math-inline is-loaded"><mjx-container class="MathJax" jax="CHTML"><mjx-math class="MJX-TEX"><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D43A TEX-I"></mjx-c></mjx-mi></mjx-math></mjx-container></span> 为仿射代数群, 则</p>

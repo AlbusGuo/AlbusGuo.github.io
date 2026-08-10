@@ -232,6 +232,7 @@ body
 	display: flex;
 	flex-direction: column;
 	height: 100%;
+	min-height: 0;
 	width: 100%;
 	align-items: stretch;
 	justify-content: center;
@@ -241,6 +242,9 @@ body
     display: flex;
     flex-direction: row;
 	flex-grow: 1;
+	min-height: 0;
+	height: 100%;
+	overflow: hidden;
     width: 100%;
     align-items: stretch;
     justify-content: center;
@@ -252,6 +256,7 @@ body
     max-width: 100%;
     width: 100%;
     height: 100%;
+	min-height: 0;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -280,6 +285,8 @@ body
     border-top-left-radius: var(--window-radius, var(--radius-m));
     overflow-x: hidden !important;
     overflow-y: auto !important;
+	min-height: 0;
+	height: 100%;
     display: flex !important;
     flex-direction: column !important;
     align-items: center !important;
@@ -405,7 +412,6 @@ body #center-content>.obsidian-document>.markdown-preview-sizer
 }
 
 /*#endregion */
-
 
 </style><script defer>async function loadIncludes()
 {
@@ -540,14 +546,14 @@ mjx-c.mjx-c58.TEX-C::before { padding: 0.683em 0.807em 0px 0px; content: "X"; }
 mjx-c.mjx-c59.TEX-C::before { padding: 0.683em 0.714em 0.143em 0px; content: "Y"; }
 mjx-c.mjx-c1D523.TEX-FR::before { padding: 0.681em 0.326em 0.221em 0px; content: "f"; }
 mjx-c.mjx-c1D41A.TEX-B::before { padding: 0.453em 0.559em 0.006em 0px; content: "a"; }
+mjx-c.mjx-c1D701.TEX-I::before { padding: 0.704em 0.471em 0.204em 0px; content: "ζ"; }
 mjx-c.mjx-c1D709.TEX-I::before { padding: 0.704em 0.438em 0.205em 0px; content: "ξ"; }
 mjx-c.mjx-c1D40F.TEX-B::before { padding: 0.686em 0.786em 0px 0px; content: "P"; }
-mjx-c.mjx-c1D701.TEX-I::before { padding: 0.704em 0.471em 0.204em 0px; content: "ζ"; }
 mjx-c.mjx-c2C.TEX-MI::before { padding: 0.121em 0.307em 0.194em 0px; content: ","; }
 mjx-c.mjx-c1D4A2.TEX-SC::before { padding: 0.717em 0.738em 0.037em 0px; content: "G"; }
 mjx-c.mjx-c1D425.TEX-B::before { padding: 0.694em 0.319em 0px 0px; content: "l"; }
-mjx-c.mjx-c2210.TEX-S2::before { padding: 0.95em 1.278em 0.45em 0px; content: "∐"; }
 mjx-c.mjx-c1D505.TEX-FR::before { padding: 0.691em 0.884em 0.027em 0px; content: "B"; }
+mjx-c.mjx-c2210.TEX-S2::before { padding: 0.95em 1.278em 0.45em 0px; content: "∐"; }
 mjx-stretchy-h.mjx-c2192 mjx-ext mjx-c::before { content: "−"; padding: 0.583em 0px 0.082em; }
 mjx-stretchy-h.mjx-c2192 mjx-end mjx-c::before { content: "→"; padding: 0.583em 0px 0.082em; }
 mjx-c.mjx-c1D708.TEX-I::before { padding: 0.442em 0.53em 0px 0px; content: "ν"; }

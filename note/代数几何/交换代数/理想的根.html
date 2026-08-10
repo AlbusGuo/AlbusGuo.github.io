@@ -232,6 +232,7 @@ body
 	display: flex;
 	flex-direction: column;
 	height: 100%;
+	min-height: 0;
 	width: 100%;
 	align-items: stretch;
 	justify-content: center;
@@ -241,6 +242,9 @@ body
     display: flex;
     flex-direction: row;
 	flex-grow: 1;
+	min-height: 0;
+	height: 100%;
+	overflow: hidden;
     width: 100%;
     align-items: stretch;
     justify-content: center;
@@ -252,6 +256,7 @@ body
     max-width: 100%;
     width: 100%;
     height: 100%;
+	min-height: 0;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -280,6 +285,8 @@ body
     border-top-left-radius: var(--window-radius, var(--radius-m));
     overflow-x: hidden !important;
     overflow-y: auto !important;
+	min-height: 0;
+	height: 100%;
     display: flex !important;
     flex-direction: column !important;
     align-items: center !important;
@@ -405,7 +412,6 @@ body #center-content>.obsidian-document>.markdown-preview-sizer
 }
 
 /*#endregion */
-
 
 </style><script defer>async function loadIncludes()
 {
@@ -948,7 +954,7 @@ mjx-stretchy-v mjx-c, mjx-stretchy-h mjx-c { font-family: MJXZERO, MJXTEX-S1, MJ
 @font-face { font-family: MJXTEX-SC; src: url("site-lib/fonts/mathjax-af96f67d7acc.woff") format("woff"); }
 @font-face { font-family: MJXTEX-T; src: url("site-lib/fonts/mathjax-c56da8d69f1a.woff") format("woff"); }
 @font-face { font-family: MJXTEX-V; src: url("site-lib/fonts/mathjax-72bc573386dd.woff") format("woff"); }
-@font-face { font-family: MJXTEX-VB; src: url("site-lib/fonts/mathjax-36e0d72d8a7a.woff") format("woff"); }</style><div class="markdown-preview-sizer markdown-preview-section"><div class="header"><div class="page-title" id="理想的根">§1.3 理想的根</div><div class="data-bar"></div></div><div class="markdown-preview-pusher" style="width:1px;height:.1px;margin-bottom:0"></div><div class="el-div"><div data-callout-metadata="" data-callout-fold="" data-callout="definition" class="callout mathcraft-style-latex"><div class="callout-title" dir="auto"><div class="callout-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="svg-icon lucide-pencil"><path d="M21.174 6.812a1 1 0 0 0-3.986-3.987L3.842 16.174a2 2 0 0 0-.5.83l-1.321 4.352a.5.5 0 0 0 .623.622l4.353-1.32a2 2 0 0 0 .83-.497z"></path><path d="m15 5 4 4"></path></svg></div><div class="callout-title-inner">定义 1.3.1 (理想的根)</div></div><div class="callout-content">
+@font-face { font-family: MJXTEX-VB; src: url("site-lib/fonts/mathjax-36e0d72d8a7a.woff") format("woff"); }</style><div class="markdown-preview-sizer markdown-preview-section"><div class="header"><div class="page-title" id="理想的根">§1.3 理想的根</div><div class="data-bar"></div></div><div class="markdown-preview-pusher" style="width:1px;height:.1px;margin-bottom:0"></div><div class="el-div" id="^prp-549c16"><div data-callout-metadata="" data-callout-fold="" data-callout="definition" class="callout mathcraft-style-latex"><div class="callout-title" dir="auto"><div class="callout-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="svg-icon lucide-pencil"><path d="M21.174 6.812a1 1 0 0 0-3.986-3.987L3.842 16.174a2 2 0 0 0-.5.83l-1.321 4.352a.5.5 0 0 0 .623.622l4.353-1.32a2 2 0 0 0 .83-.497z"></path><path d="m15 5 4 4"></path></svg></div><div class="callout-title-inner">定义 1.3.1 (理想的根)</div></div><div class="callout-content">
 <p dir="auto">设 <span class="math math-inline is-loaded"><mjx-container class="MathJax" jax="CHTML"><mjx-math class="MJX-TEX"><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D445 TEX-I"></mjx-c></mjx-mi></mjx-math></mjx-container></span> 为交换幺环, <span class="math math-inline is-loaded"><mjx-container class="MathJax" jax="CHTML"><mjx-math class="MJX-TEX"><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D43D TEX-I"></mjx-c></mjx-mi><mjx-mo class="mjx-n" space="4"><mjx-c class="mjx-c22B4 TEX-A"></mjx-c></mjx-mo><mjx-mi class="mjx-i" space="4"><mjx-c class="mjx-c1D445 TEX-I"></mjx-c></mjx-mi></mjx-math></mjx-container></span>, 定义 <span class="math math-inline is-loaded"><mjx-container class="MathJax" jax="CHTML"><mjx-math class="MJX-TEX"><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D43D TEX-I"></mjx-c></mjx-mi></mjx-math></mjx-container></span> 的根 (radical) 为:<br>
 <span class="math math-block is-loaded"><mjx-container class="MathJax" jax="CHTML" display="true"><mjx-math display="true" class="MJX-TEX" style="margin-left: 0px; margin-right: 0px;"><mjx-msqrt><mjx-sqrt><mjx-surd><mjx-mo class="mjx-n"><mjx-c class="mjx-c221A"></mjx-c></mjx-mo></mjx-surd><mjx-box style="padding-top: 0.203em;"><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D43D TEX-I"></mjx-c></mjx-mi></mjx-box></mjx-sqrt></mjx-msqrt><mjx-mo class="mjx-n" space="4"><mjx-c class="mjx-c3A"></mjx-c><mjx-c class="mjx-c3D"></mjx-c></mjx-mo><mjx-mrow space="4"><mjx-mo class="mjx-n"><mjx-c class="mjx-c7B"></mjx-c></mjx-mo><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D465 TEX-I"></mjx-c></mjx-mi><mjx-mo class="mjx-n" space="4"><mjx-c class="mjx-c2208"></mjx-c></mjx-mo><mjx-mi class="mjx-i" space="4"><mjx-c class="mjx-c1D445 TEX-I"></mjx-c></mjx-mi><mjx-mtext class="mjx-n"><mjx-c class="mjx-cA0"></mjx-c></mjx-mtext><mjx-texatom texclass="CLOSE"></mjx-texatom><mjx-mo class="mjx-n"><mjx-c class="mjx-c7C"></mjx-c></mjx-mo><mjx-texatom texclass="OPEN"></mjx-texatom><mjx-mtext class="mjx-n"><mjx-c class="mjx-cA0"></mjx-c></mjx-mtext><mjx-mi class="mjx-n"><mjx-c class="mjx-c2203"></mjx-c></mjx-mi><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D45F TEX-I"></mjx-c></mjx-mi><mjx-mo class="mjx-n" space="4"><mjx-c class="mjx-c2208"></mjx-c></mjx-mo><mjx-msub space="4"><mjx-texatom texclass="ORD"><mjx-mi class="mjx-ds mjx-b"><mjx-c class="mjx-c2124 TEX-A"></mjx-c></mjx-mi></mjx-texatom><mjx-script style="vertical-align: -0.15em;"><mjx-texatom size="s" texclass="ORD"><mjx-mo class="mjx-n"><mjx-c class="mjx-c3E"></mjx-c></mjx-mo><mjx-mn class="mjx-n"><mjx-c class="mjx-c30"></mjx-c></mjx-mn></mjx-texatom></mjx-script></mjx-msub><mjx-mtext class="mjx-n"><mjx-c class="mjx-cA0"></mjx-c></mjx-mtext><mjx-mtext class="mjx-n"><mjx-c class="mjx-cA0"></mjx-c></mjx-mtext><mjx-msup><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D465 TEX-I"></mjx-c></mjx-mi><mjx-script style="vertical-align: 0.413em;"><mjx-texatom size="s" texclass="ORD"><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D45F TEX-I"></mjx-c></mjx-mi></mjx-texatom></mjx-script></mjx-msup><mjx-mo class="mjx-n" space="4"><mjx-c class="mjx-c2208"></mjx-c></mjx-mo><mjx-mi class="mjx-i" space="4"><mjx-c class="mjx-c1D43D TEX-I"></mjx-c></mjx-mi><mjx-mo class="mjx-n"><mjx-c class="mjx-c7D"></mjx-c></mjx-mo></mjx-mrow><mjx-mo class="mjx-n"><mjx-c class="mjx-c2E"></mjx-c></mjx-mo></mjx-math></mjx-container></span>进一步, 若 <span class="math math-inline is-loaded"><mjx-container class="MathJax" jax="CHTML"><mjx-math class="MJX-TEX"><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D43D TEX-I"></mjx-c></mjx-mi></mjx-math></mjx-container></span> 满足 <span class="math math-inline is-loaded"><mjx-container class="MathJax" jax="CHTML"><mjx-math class="MJX-TEX"><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D43D TEX-I"></mjx-c></mjx-mi><mjx-mo class="mjx-n" space="4"><mjx-c class="mjx-c3D"></mjx-c></mjx-mo><mjx-msqrt space="4"><mjx-sqrt><mjx-surd><mjx-mo class="mjx-n"><mjx-c class="mjx-c221A"></mjx-c></mjx-mo></mjx-surd><mjx-box style="padding-top: 0.155em;"><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D43D TEX-I"></mjx-c></mjx-mi></mjx-box></mjx-sqrt></mjx-msqrt></mjx-math></mjx-container></span>, 则称 <span class="math math-inline is-loaded"><mjx-container class="MathJax" jax="CHTML"><mjx-math class="MJX-TEX"><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D43D TEX-I"></mjx-c></mjx-mi></mjx-math></mjx-container></span> 为根理想 (radical ideal).</p>
 </div></div></div><div class="el-div"><div data-callout-metadata="" data-callout-fold="" data-callout="proposition" class="callout mathcraft-style-latex"><div class="callout-title" dir="auto"><div class="callout-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="svg-icon lucide-pencil"><path d="M21.174 6.812a1 1 0 0 0-3.986-3.987L3.842 16.174a2 2 0 0 0-.5.83l-1.321 4.352a.5.5 0 0 0 .623.622l4.353-1.32a2 2 0 0 0 .83-.497z"></path><path d="m15 5 4 4"></path></svg></div><div class="callout-title-inner">命题 1.3.1 (根的基本性质)</div></div><div class="callout-content">
