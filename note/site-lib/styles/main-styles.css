@@ -1135,16 +1135,13 @@ body.theme-light .excalidraw-plugin svg.light {
 .mathcraft-export-file-explorer.mathcraft-export-navigation-animating>.mathcraft-export-notebook-index{grid-column:1;grid-row:1/3}
 .mathcraft-export-file-explorer.mathcraft-export-navigation-animating>.mathcraft-export-notebook-detail{grid-column:1;grid-row:1}
 .mathcraft-export-file-explorer.mathcraft-export-navigation-animating>.mathcraft-export-notebook-tree{grid-column:1;grid-row:2}
-.mathcraft-export-notebook-index-list{padding:0}
+.mathcraft-export-notebook-index-list{padding:2px 0}
 .mathcraft-export-notebook-index-item{margin:0}
-.mathcraft-export-notebook-entry{appearance:none!important;display:flex!important;align-items:center;gap:6px;width:100%;min-width:0;margin:0!important;padding:var(--nav-item-padding,4px 8px)!important;border:0!important;box-shadow:none!important;background:transparent!important;color:var(--nav-item-color);font:inherit!important;text-align:left;border-radius:var(--nav-item-radius);cursor:pointer}
+.mathcraft-export-notebook-entry{appearance:none!important;display:flex!important;align-items:center;gap:6px;width:100%;min-width:0;min-height:30px;margin:0!important;padding:5px 6px 5px 8px!important;border:0!important;box-shadow:none!important;background:transparent!important;color:var(--nav-item-color);font:inherit!important;text-align:left;border-radius:var(--nav-item-radius);cursor:pointer}
 .mathcraft-export-notebook-entry:hover{background:var(--nav-item-background-hover)!important;color:var(--nav-item-color-hover)}
 .mathcraft-export-notebook-entry:focus-visible{box-shadow:0 0 0 2px var(--background-modifier-border-focus)!important}
-.mathcraft-export-notebook-entry-icon,.mathcraft-export-notebook-entry-chevron{display:flex;align-items:center;justify-content:center;flex:0 0 auto;color:var(--nav-item-color)}
-.mathcraft-export-notebook-entry-icon{order:0;width:var(--icon-size,18px);height:var(--icon-size,18px)}
-.mathcraft-export-notebook-entry-title{order:1}
-.mathcraft-export-notebook-entry-chevron{order:2;margin-left:auto}
-.mathcraft-export-notebook-entry-icon svg,.mathcraft-export-notebook-entry-chevron svg{width:var(--icon-xs,14px);height:var(--icon-xs,14px)}
+.mathcraft-export-notebook-entry-chevron{display:flex;align-items:center;justify-content:center;flex:0 0 auto;margin-left:auto;color:var(--nav-item-color)}
+.mathcraft-export-notebook-entry-chevron svg{width:var(--icon-xs,14px);height:var(--icon-xs,14px)}
 .mathcraft-export-notebook-entry-title{flex:1;min-width:0;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
 .mathcraft-export-notebook-detail-header .feature-title{display:flex;align-items:center;min-width:0}
 .mathcraft-export-notebook-back{appearance:none!important;display:flex!important;align-items:center;justify-content:center;flex:0 0 auto;width:var(--clickable-icon-size,30px);height:var(--clickable-icon-size,30px);min-width:0!important;margin:0 4px 0 0!important;padding:0!important;border:0!important;box-shadow:none!important;background:transparent!important;color:var(--icon-color)!important;border-radius:var(--clickable-icon-radius,var(--radius-s))!important;cursor:pointer}
@@ -1152,3 +1149,20 @@ body.theme-light .excalidraw-plugin svg.light {
 .mathcraft-export-notebook-title{min-width:0;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
 .mathcraft-export-notebook-root-self{display:none!important}
 .mathcraft-export-notebook-tree>.tree-item-children{display:block!important;margin-left:0}
+@media(max-width:768px){.mathcraft-export-notebook-entry{min-height:34px;padding:7px 8px!important}.mathcraft-export-notebook-index-list{padding:4px 0}}
+
+
+:root{--mathcraft-content-width:800px}
+body #center-content>.obsidian-document>.markdown-preview-sizer{width:100%;max-width:min(var(--mathcraft-content-width),calc(100vw - 2em));flex-basis:min(var(--mathcraft-content-width),calc(100vw - 2em))}
+#center-content>.obsidian-document{background:color-mix(in srgb,var(--background-primary) 96%,var(--interactive-accent) 4%)}
+#center-content>.obsidian-document>.markdown-preview-sizer{box-sizing:border-box;padding-left:clamp(20px,4vw,48px);padding-right:clamp(20px,4vw,48px);background:var(--background-primary);border-left:1px solid var(--background-modifier-border);border-right:1px solid var(--background-modifier-border);box-shadow:0 0 28px color-mix(in srgb,var(--background-modifier-box-shadow) 42%,transparent)}
+#center-content .page-title{position:relative;padding-bottom:.45em;margin-bottom:1.2em;letter-spacing:-.02em}
+#center-content .page-title::after{content:'';position:absolute;left:0;bottom:0;width:3.25rem;height:3px;border-radius:3px;background:var(--interactive-accent)}
+#center-content .markdown-preview-section :is(h1,h2,h3,h4,h5,h6){scroll-margin-top:1.5rem}
+#center-content .markdown-preview-section a.internal-link{text-decoration-thickness:1px;text-underline-offset:.18em}
+#center-content .markdown-preview-section code:not(pre code){padding:.12em .35em;border:1px solid var(--background-modifier-border);border-radius:var(--radius-s);background:var(--code-background)}
+#center-content .markdown-preview-section img{border-radius:var(--radius-m)}
+#center-content .markdown-preview-section :not(h1,h2,h3,h4,h5,h6,li):has(>.math.math-block):not(:has(>table)){overflow-x:visible!important}
+#center-content .markdown-preview-section .math.math-block{display:block;max-width:100%;overflow-x:auto;overflow-y:hidden;overscroll-behavior-inline:contain;scrollbar-width:thin}
+#center-content .markdown-preview-section .math.math-block>mjx-container[display="true"]{width:max-content;min-width:100%;margin-block:1em}
+@media(max-width:768px){#center-content>.obsidian-document{background:var(--background-primary)}#center-content>.obsidian-document>.markdown-preview-sizer{max-width:100%;padding-left:18px;padding-right:18px;border:0;box-shadow:none}#center-content .page-title{font-size:1.85em}}
