@@ -7,13 +7,13 @@
     "site-lib/styles/obsidian.css": "96cb4f5c42ebcfd24912676479d3a5e0b66145118c46a1c9b30ff1a6d8f5ddd0",
     "site-lib/styles/theme.css": "c1712f518ec48d303a46c034ccee824731a9b152139bcc9841f3cd145170e391",
     "site-lib/styles/snippets.css": "40142d5af5a6c4689145f8d7321bade0ac3b40ff64e1694cd940c767f9c0ce22",
-    "site-lib/styles/other-plugins.css": "017c53e192f4622325b06e4d0abd4bc0383814913e0f49fe6f56f6e37ee83101",
+    "site-lib/styles/other-plugins.css": "72422f2895328286e5a5199b1b85c8c8edb5b3d4e561ffe51c86eb8602375fe0",
     "site-lib/styles/global-variable-styles.css": "f7dafb42b94b0d6ce12cb4daee8505313bb7acf6327dfe8ec19ed6059ef850a0",
     "site-lib/styles/supported-plugins.css": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
     "site-lib/html/file-tree.html": "788b0f3c27821238818b5275e0ccaa790f907958594c0d60c44698aa4b38208e",
-    "site-lib/search-index.json": "393a470aad250b25772c454fd855c38952b7f11dec518b9bb449fa08e761da09",
-    "site-lib/metadata.json": "698f88fd3cf48bd952e16fb5a8acf09797c07c741e24f913caa2a4c0164da190",
-    "index.html": "81390a78677c05ff0e1fc19623b6650b5176c62b5afe981bbcf9610d0d611cce",
+    "site-lib/search-index.json": "81d2f67e6c42c19677bfe1592f52460f0a3c35b1b5f1b20470a8d30768777083",
+    "site-lib/metadata.json": "a4961982b87080aa522c6a3660ea49aac5680d334a267209abbb0837b5d64230",
+    "index.html": "6e088d50414386149091dfbcd21109e25a1fd703461883f0f51db9c6d8453c70",
     "site-lib/fonts/mathjax-481e39042508.woff": "481e39042508ae313a60618af1e37146ab93e9324c98e4c78b8f17fe55d41e0b",
     "site-lib/fonts/mathjax-1cb1c39ea642.woff": "1cb1c39ea642f26a4dfed230b4aea1c3c218689421f6e9c0a7c1811693c4fa07",
     "site-lib/fonts/mathjax-88b98cad3688.woff": "88b98cad3688915e50da55553ff6ad185e0dce134b47f176e91b100f8a9b175c",
@@ -36,12 +36,12 @@
     "site-lib/fonts/mathjax-c56da8d69f1a.woff": "c56da8d69f1a0208b8e0703656c3264b6dd748bd452524c82b0385b60f6a68c1",
     "site-lib/fonts/mathjax-72bc573386dd.woff": "72bc573386dd1d48c5bbd286302ca9e3400c5eb0f298e7cfbf945b9d08fc688f",
     "site-lib/fonts/mathjax-36e0d72d8a7a.woff": "36e0d72d8a7afc696a3e7a5c7369807634640de9b02257bca447bdf126221a27",
-    "site-lib/media/6e5dd0494f63-70cc7ff27245e82ad414.ttf": "6e5dd0494f63d85970156cd54b6ac568b82a392d135db08bbf5cc3048d489aa9",
     "site-lib/media/81d33d08a96d-4bb6ac751d1c5478ff3a.woff2": "81d33d08a96d99034c41b49ac980f63b353175f919db817d74e0405749af03db",
-    "site-lib/media/a7c6a118d17f-6155340132a851f6089e.svg": "a7c6a118d17f6a296037b519e9891e08951de59c289fe41ec2596a63c3b28516",
+    "site-lib/media/6e5dd0494f63-70cc7ff27245e82ad414.ttf": "6e5dd0494f63d85970156cd54b6ac568b82a392d135db08bbf5cc3048d489aa9",
+    "site-lib/media/839f42df29a5-52ac8f3034507f1d9e53.ttf": "839f42df29a5a83470888b9a3aa4064fc1bc35e6616bb542226d89086f019ec5",
     "site-lib/media/ba51b929995b-454577c22304619db035.ttf": "ba51b929995b3088ff1932d9d6835c90ccf304b296a3b8e103d2e95b958109ee",
     "site-lib/media/a44ac4cbf79c-2308ab1944a6bfa5c5b8.svg": "a44ac4cbf79c6765f4bdc3a0dc3fb51b56ed5eb4679177f0a40f04b63b3e3a3c",
-    "site-lib/media/839f42df29a5-52ac8f3034507f1d9e53.ttf": "839f42df29a5a83470888b9a3aa4064fc1bc35e6616bb542226d89086f019ec5",
+    "site-lib/media/a7c6a118d17f-6155340132a851f6089e.svg": "a7c6a118d17f6a296037b519e9891e08951de59c289fe41ec2596a63c3b28516",
     "site-lib/media/a0cfec834df5-05b618077343fbbd92b7.ttf": "a0cfec834df50e21cdb3d15bf93e87ed033d8c26693f9ede6efe24325ae22c9e",
     "site-lib/media/693b77d4f32e-c504db5c06caaf7cdfba.woff2": "693b77d4f32ee9b8bfc995589b5fad5e99adf2832738661f5402f9978429a8e3",
     "site-lib/media/e564f652916d-01dcbad1bac635f9c9cd.woff2": "e564f652916db6c139570fefb9524a77c4d48f30c92928de9db19b6b5c7a262a",
@@ -305,7 +305,7 @@
     "pages": {
       "Documents/数学/高中数学/前言.md": {
         "route": "index.html",
-        "signature": "04735176ce1da85cd3517913a32c1d4c74c5958a12292e26d93df12b6aee50ec"
+        "signature": "d93a5fbad41763ba5437c001c7c95818e1079a1e5a2e6c8522041f0ff3a5f6c5"
       },
       "Documents/数学/高中数学/基本逻辑用语/命题.md": {
         "route": "高中数学/基本逻辑用语/命题.html",
