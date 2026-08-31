@@ -1,419 +1,4 @@
-<!DOCTYPE html><html lang="zh-CN"><head><title>3.9 平坦模</title><base href="../.."><meta name="pathname" content="抽象代数/模/平坦模.html"><meta name="description" content="正如投射模可补全命题 3.5.2 的短正合列:定义 3.9.1 (平坦模) 设 为交换幺环, 为 模, 若对任意的 模单同态 , 其诱导同态 也为单同态, 则称 为平坦模 (flat module). 命题 3.9.1 (平坦模等价条件) 设 为交换幺环, 为 模, 以下命题等价: (1) 为平坦模. (2)对任意 模同态短正合列 , 使得如下序列正合: (3)对 的任意理想 , 都有正合列: , 其中 为包含映射. (4)对任意线性关系式 , 存在 和 , , 使得 命题 "><meta property="og:title" content="3.9 平坦模"><meta property="og:description" content="正如投射模可补全命题 3.5.2 的短正合列:定义 3.9.1 (平坦模) 设 为交换幺环, 为 模, 若对任意的 模单同态 , 其诱导同态 也为单同态, 则称 为平坦模 (flat module). 命题 3.9.1 (平坦模等价条件) 设 为交换幺环, 为 模, 以下命题等价: (1) 为平坦模. (2)对任意 模同态短正合列 , 使得如下序列正合: (3)对 的任意理想 , 都有正合列: , 其中 为包含映射. (4)对任意线性关系式 , 存在 和 , , 使得 命题 "><meta property="og:type" content="website"><meta property="og:url" content="抽象代数/模/平坦模.html"><meta charset="UTF-8"><meta property="og:site_name" content="数学"><meta name="viewport" content="width=device-width,initial-scale=1.0,user-scalable=yes,minimum-scale=1.0,maximum-scale=5.0"><script async id="webpage-script" src="site-lib/scripts/webpage.js" onload="this.onload=null;this.setAttribute('loaded','true')"></script><script defer src="site-lib/scripts/notebook-navigation.js"></script><link rel="preload" href="site-lib/styles/snippets.css" as="style" onload="this.onload=null;this.rel='stylesheet'"><noscript><link rel="stylesheet" href="site-lib/styles/snippets.css"></noscript><link rel="stylesheet" href="site-lib/styles/obsidian.css"><link rel="preload" href="site-lib/styles/other-plugins.css" as="style" onload="this.onload=null;this.rel='stylesheet'"><noscript><link rel="stylesheet" href="site-lib/styles/other-plugins.css"></noscript><link rel="stylesheet" href="site-lib/styles/theme.css"><link rel="preload" href="site-lib/styles/global-variable-styles.css" as="style" onload="this.onload=null;this.rel='stylesheet'"><noscript><link rel="stylesheet" href="site-lib/styles/global-variable-styles.css"></noscript><link rel="preload" href="site-lib/styles/supported-plugins.css" as="style" onload="this.onload=null;this.rel='stylesheet'"><noscript><link rel="stylesheet" href="site-lib/styles/supported-plugins.css"></noscript><link rel="preload" href="site-lib/styles/main-styles.css" as="style" onload="this.onload=null;this.rel='stylesheet'"><noscript><link rel="stylesheet" href="site-lib/styles/main-styles.css"></noscript><style>/* Define default values for variables */
-body
-{
-    --line-width: 40em;
-    --line-width-adaptive: 40em;
-    --file-line-width: 40em;
-    --sidebar-width: min(20em, 80vw);
-    --collapse-arrow-size: 11px;
-    --tree-vertical-spacing: 1.3em;
-    --sidebar-margin: 12px;
-}
-
-:root
-{
-    background-color: #202124;
-}
-
-/*#region Sidebars */
-
-.sidebar {
-    height: 100%;
-    font-size: 14px;
-    z-index: 10;
-    min-width: calc(var(--sidebar-width) + var(--divider-width-hover));
-    max-width: calc(var(--sidebar-width) + var(--divider-width-hover));
-    position: relative;
-    overflow: hidden;
-    overflow: clip;
-
-    transition: min-width ease-in-out, max-width ease-in-out;
-    transition-duration: .2s;
-    contain: size;
-}
-
-#left-sidebar {
-    left: 0;
-}
-
-#right-sidebar {
-    right: 0;
-}
-
-.sidebar.is-collapsed {
-    min-width: 0;
-    max-width: 0;
-}
-
-.sidebar.floating {
-    position: absolute;
-}
-
-.sidebar .leaf-content {
-    height: 100%;
-    min-width: calc(var(--sidebar-width) - var(--divider-width-hover));
-    top: 0;
-    padding: var(--sidebar-margin);
-    padding-top: 4em;
-    line-height: var(--line-height-tight);
-    background-color: var(--background-secondary);
-    transition: background-color,border-right,border-left,box-shadow;
-    transition-duration: var(--color-fade-speed);
-    transition-timing-function: ease-in-out;
-    position: absolute;
-    display: flex;
-    flex-direction: column;
-}
-
-/* If the sidebar isn't collapsed the content should have the same width as it */
-.sidebar:not(.is-collapsed) .leaf-content {
-    min-width: calc(max(100%,var(--sidebar-width)) - 3px);
-    max-width: calc(max(100%,var(--sidebar-width)) - 3px);
-}
-
-#left-sidebar-content
-{
-    left: 0;
-    border-top-right-radius: var(--radius-l);
-    border-bottom-right-radius: var(--radius-l);
-}
-
-#right-sidebar-content
-{
-    right: 0;
-    border-top-left-radius: var(--radius-l);
-    border-bottom-left-radius: var(--radius-l);
-}
-
-.sidebar #right-sidebar-content, .sidebar #left-sidebar-content
-{
-    contain: none !important;
-    container-type: normal !important;
-    animation: none !important;
-}
-
-/* Hide empty sidebars */
-.sidebar:has(.leaf-content:empty):has(.topbar-content:empty)
-{
-    display: none;
-}
-
-.sidebar-topbar {
-    height: calc(2.3em + 2 * var(--sidebar-margin));
-    width: var(--sidebar-width);
-    padding: var(--sidebar-margin);
-    z-index: 1;
-
-    position: fixed;
-    display: flex;
-    align-items: center;
-
-    transition: width ease-in-out;
-    transition-duration: inherit;
-}
-
-.sidebar.is-collapsed .sidebar-topbar {
-    width: calc(2.3em + var(--sidebar-margin) * 2);
-}
-
-.sidebar .sidebar-topbar.is-collapsed
-{
-    width: 0;
-}
-
-#left-sidebar .sidebar-topbar {
-    left: 0;
-    flex-direction: row;
-	border-top-right-radius: var(--radius-l);
-}
-
-#right-sidebar .sidebar-topbar {
-    right: 0;
-    flex-direction: row-reverse;
-	border-top-left-radius: var(--radius-l);
-}
-
-#left-sidebar .topbar-content {
-    margin-right: calc(2.3em + var(--sidebar-margin));
-    flex-direction: row;
-}
-
-#right-sidebar .topbar-content {
-    margin-left: calc(2.3em + var(--sidebar-margin));
-    flex-direction: row-reverse;
-}
-
-.topbar-content {
-    overflow: hidden visible;
-    overflow: clip visible;
-    width: 100%;
-    height: 100%;
-    display: flex;
-    align-items: center;
-    transition: inherit;
-}
-
-.sidebar.is-collapsed .topbar-content {
-    width: 0;
-    transition: inherit;
-}
-
-.clickable-icon.sidebar-collapse-icon {
-    background-color: transparent;
-    color: var(--icon-color-focused);
-    padding: 2px!important;
-    margin: 0!important;
-    height: 100%!important;
-    width: 2.3em !important;
-    margin-inline: 0.14em!important;
-    position: absolute;
-}
-
-#left-sidebar .clickable-icon.sidebar-collapse-icon {
-    right: var(--sidebar-margin);
-}
-
-#right-sidebar .clickable-icon.sidebar-collapse-icon {
-	transform: scaleX(-1);
-	transform-origin: center;
-    left: var(--sidebar-margin);
-}
-
-.clickable-icon.sidebar-collapse-icon svg.svg-icon {
-    width: 80%;
-    height: 80%;
-}
-
-.sidebar:not(.is-collapsed) .clickable-icon.sidebar-collapse-icon svg.svg-icon .sidebar-toggle-icon-inner {
-	width: 24%;
-}
-
-.feature-title {
-    margin-left: 1px;
-    text-transform: uppercase;
-    letter-spacing: .06em;
-    margin-top: 0.75em;
-    margin-bottom: 0.75em;
-}
-
-.feature-header
-{
-    display: flex;
-    align-items: center;
-    padding-top: 0;
-    font-size: 1em;
-    padding-left: 0;
-}
-
-body.floating-sidebars .sidebar
-{
-    position: absolute;
-}
-
-/*#endregion */
-
-/*#region Content / Markdown Preview View */
-
-body
-{
-    transition: background-color var(--color-fade-speed) ease-in-out;
-}
-
-#navbar:not(:empty)
-{
-	display: flex;
-	align-items: center;
-	justify-content: space-between;
-	padding: 0.5em 1em;
-	width: 100%;
-}
-
-#main {
-	display: flex;
-	flex-direction: column;
-	height: 100%;
-	min-height: 0;
-	width: 100%;
-	align-items: stretch;
-	justify-content: center;
-}
-
-#main-horizontal {
-    display: flex;
-    flex-direction: row;
-	flex-grow: 1;
-	min-height: 0;
-	height: 100%;
-	overflow: hidden;
-    width: 100%;
-    align-items: stretch;
-    justify-content: center;
-}
-
-#center-content 
-{
-    flex-basis: 100%;
-    max-width: 100%;
-    width: 100%;
-    height: 100%;
-	min-height: 0;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    transition: opacity 0.2s ease-in-out;
-    contain: inline-size;
-}
-
-.hide
-{
-    opacity: 0 !important;
-    transition: opacity 0.2s ease-in-out;
-    pointer-events: none;
-}
-
-#center-content>.obsidian-document 
-{
-    padding-left: 2em;
-    padding-right: 1em;
-    margin-bottom: 0;
-    width: 100%;
-    width: -webkit-fill-available;
-    width: -moz-available;
-    width: fill-available;
-    transition: background-color var(--color-fade-speed) ease-in-out;
-    border-top-right-radius: var(--window-radius, var(--radius-m));
-    border-top-left-radius: var(--window-radius, var(--radius-m));
-    overflow-x: hidden !important;
-    overflow-y: auto !important;
-	min-height: 0;
-	height: 100%;
-    display: flex !important;
-    flex-direction: column !important;
-    align-items: center !important;
-    contain: inline-size;
-}
-
-body #center-content>.obsidian-document>.markdown-preview-sizer 
-{
-    padding-bottom: 80vh;
-    width: 100%;
-    max-width: var(--line-width);
-    flex-basis: var(--line-width);
-    transition: background-color var(--color-fade-speed) ease-in-out;
-    contain: inline-size;
-}
-
-#center-content>.obsidian-document>div
-{
-    width: 100% !important;
-    transition: background-color var(--color-fade-speed) ease-in-out;
-    contain: inline-size;
-}
-
-/* If the markdown view is displaying a raw file or embed then increase it's size to make everything as large as possible */
-#center-content > .obsidian-document:not([data-type='markdown']).embed {
-    display: flex;
-    padding: 1em;
-    height: 100%;
-    width: 100%;
-    align-items: center;
-    justify-content: center;
-}
-
-#center-content > .obsidian-document:not([data-type='markdown']).embed > *
-{
-    max-width: 100%;
-    max-height: 100%;
-    object-fit: contain;
-}
-
-:not(h1,h2,h3,h4,h5,h6,li):has(> :is(.math, table)) 
-{
-    overflow-x: auto !important;
-}
-
-/* For custom view exports */
-#center-content > .obsidian-document:not([data-type='markdown'])
-{
-    overflow-x: auto;
-    contain: content;
-    padding: 0;
-    margin: 0;
-    height: 100%;
-}
-
-.obsidian-document[data-type="attachment"]
-{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    height: 100%;
-    width: 100%;
-}
-
-.obsidian-document[data-type="attachment"] > *
-{
-    outline: none;
-    border: none;
-    box-shadow: none;
-}
-
-.obsidian-document[data-type="attachment"] :is(img)
-{
-    max-width: 90%;
-    max-height: 90%;
-    object-fit: contain;
-}
-
-.obsidian-document[data-type="attachment"] > :is(audio)
-{
-    width: 100%;
-    max-width: min(90%, var(--line-width));
-}
-
-.obsidian-document[data-type="attachment"] > :is(embed, iframe, video)
-{
-    width: 100%;
-    height: 100%;
-    max-width: 100%;
-    max-height: 100%;
-    object-fit: contain;
-}
-
-.canvas-wrapper > :is(.header, .footer)
-{
-    z-index: 100;
-    position: absolute;
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
-    width: 100%;
-    align-items: center;
-}
-
-/*#endregion */
-
-/*#region Loading */
-
-.scroll-highlight 
-{
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    pointer-events: none;
-    z-index: 1000;
-    background-color: hsla(var(--color-accent-hsl),.25);
-    opacity: 0;
-    padding: 1em;
-    inset: 50%;
-    translate: -50% -50%;
-    border-radius: var(--radius-s);
-}
-
-/*#endregion */
-
-</style><script defer>async function loadIncludes()
+<!DOCTYPE html><html lang="zh-CN"><head><title>3.9 平坦模</title><base href="../.."><meta name="pathname" content="抽象代数/模/平坦模.html"><meta name="description" content="正如投射模可补全命题 3.5.2 的短正合列:定义 3.9.1 (平坦模) 设 为交换幺环, 为 模, 若对任意的 模单同态 , 其诱导同态 也为单同态, 则称 为平坦模 (flat module). 命题 3.9.1 (平坦模等价条件) 设 为交换幺环, 为 模, 以下命题等价: 为平坦模. 对任意 模同态短正合列 , 使得如下序列正合: 对 的任意理想 , 都有正合列: , 其中 为包含映射. 对任意线性关系式 , 存在 和 , , 使得 命题 3.9.1 (4) 不太好"><meta property="og:title" content="3.9 平坦模"><meta property="og:description" content="正如投射模可补全命题 3.5.2 的短正合列:定义 3.9.1 (平坦模) 设 为交换幺环, 为 模, 若对任意的 模单同态 , 其诱导同态 也为单同态, 则称 为平坦模 (flat module). 命题 3.9.1 (平坦模等价条件) 设 为交换幺环, 为 模, 以下命题等价: 为平坦模. 对任意 模同态短正合列 , 使得如下序列正合: 对 的任意理想 , 都有正合列: , 其中 为包含映射. 对任意线性关系式 , 存在 和 , , 使得 命题 3.9.1 (4) 不太好"><meta property="og:type" content="website"><meta property="og:url" content="抽象代数/模/平坦模.html"><meta charset="UTF-8"><meta property="og:site_name" content="数学"><meta name="viewport" content="width=device-width,initial-scale=1.0,user-scalable=yes,minimum-scale=1.0,maximum-scale=5.0"><script async id="webpage-script" src="site-lib/scripts/webpage.js" onload="this.onload=null;this.setAttribute('loaded','true')"></script><script defer src="site-lib/scripts/notebook-navigation.js"></script><link rel="stylesheet" href="site-lib/styles/obsidian.css"><link rel="stylesheet" href="site-lib/styles/theme.css"><link rel="stylesheet" href="site-lib/styles/export-webpage.css"><link rel="preload" href="site-lib/styles/other-plugins.css" as="style" onload="this.onload=null;this.rel='stylesheet'"><noscript><link rel="stylesheet" href="site-lib/styles/other-plugins.css"></noscript><link rel="preload" href="site-lib/styles/snippets.css" as="style" onload="this.onload=null;this.rel='stylesheet'"><noscript><link rel="stylesheet" href="site-lib/styles/snippets.css"></noscript><link rel="preload" href="site-lib/styles/supported-plugins.css" as="style" onload="this.onload=null;this.rel='stylesheet'"><noscript><link rel="stylesheet" href="site-lib/styles/supported-plugins.css"></noscript><link rel="preload" href="site-lib/styles/global-variable-styles.css" as="style" onload="this.onload=null;this.rel='stylesheet'"><noscript><link rel="stylesheet" href="site-lib/styles/global-variable-styles.css"></noscript><link rel="preload" href="site-lib/styles/main-styles.css" as="style" onload="this.onload=null;this.rel='stylesheet'"><noscript><link rel="stylesheet" href="site-lib/styles/main-styles.css"></noscript><script defer>async function loadIncludes()
 {
 	// replace include tags with the contents of the file
 	let includeTags = document.querySelectorAll("link[itemprop='include']");
@@ -500,7 +85,7 @@ function waitLoadScripts(scriptNames, callback)
 	loadNext(0);
 }
 
-</script></head><body class="publish css-settings-manager styled-scrollbars show-ribbon is-focused mathcraft-active crb-hide-default-actions editing-suite-color-highlights-enabled editing-suite-colored-text-enabled"><script defer>let theme = localStorage.getItem("theme") || (window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light");
+</script></head><body class="publish css-settings-manager styled-scrollbars show-ribbon is-focused mathcraft-active crb-hide-default-actions editing-suite-seamless-typography-enabled editing-suite-math-enabled editing-suite-math-overflow-enabled editing-suite-table-centered-enabled editing-suite-cloze-enabled editing-suite-color-highlights-enabled editing-suite-colored-text-enabled editing-suite-custom-lists-enabled editing-suite-sidenotes-enabled editing-suite-code-blocks-enabled mathcraft-pdf-no-break"><script defer>let theme = localStorage.getItem("theme") || (window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light");
 if (theme == "dark")
 {
 	document.body.classList.add("theme-dark");
@@ -518,7 +103,7 @@ else if (window.innerWidth < 1024) document.body.classList.add("is-small-screen"
 else document.body.classList.add("is-large-screen");
 
 
-</script><div id="main"><div id="navbar"></div><div id="main-horizontal"><div id="left-content" class="leaf" style="--sidebar-width:var(--sidebar-width-left)"><div id="left-sidebar" class="sidebar"><div class="sidebar-handle"></div><div class="sidebar-topbar"><div class="topbar-content"><div id="search-container"><div id="search-wrapper"><input enterkeyhint="search" type="search" spellcheck="false" placeholder="搜索..."><div aria-label="清除搜索" id="search-clear-button"></div></div></div></div><div class="clickable-icon sidebar-collapse-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="svg-icon sidebar-toggle-button-icon"><rect x="1" y="2" width="22" height="20" rx="4"></rect><rect x="4" y="5" width="2" height="14" rx="2" fill="currentColor" class="sidebar-toggle-icon-inner"></rect></svg></div></div><div class="sidebar-content-wrapper"><div id="left-sidebar-content" class="leaf-content"><link itemprop="include" href="site-lib/html/file-tree.html"></div></div><script defer>const ls=document.querySelector('#left-sidebar');ls.classList.toggle('is-collapsed',innerWidth<768);ls.style.setProperty('--sidebar-width',localStorage.getItem('sidebar-left-width'));</script></div></div><div id="center-content" class="leaf"><div class="obsidian-document markdown-preview-view markdown-rendered node-insert-event is-readable-line-width allow-fold-headings show-indentation-guide show-properties allow-fold-lists" data-type="markdown"><style id="MJX-CHTML-styles">.mjx-stretched mjx-c.mjx-c2013::before { content: "–"; }
+</script><div id="main"><div id="navbar"></div><div id="main-horizontal"><div id="left-content" class="leaf" style="--sidebar-width:var(--sidebar-width-left)"><div id="left-sidebar" class="sidebar"><div class="sidebar-handle"></div><div class="sidebar-topbar"><div class="topbar-content"><div id="search-container"><div id="search-wrapper"><input enterkeyhint="search" type="search" spellcheck="false" placeholder="搜索..."><div aria-label="清除搜索" id="search-clear-button"></div></div></div></div><button type="button" class="clickable-icon sidebar-collapse-icon" aria-label="切换左侧栏"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="svg-icon sidebar-toggle-button-icon"><rect x="1" y="2" width="22" height="20" rx="4"></rect><rect x="4" y="5" width="2" height="14" rx="2" fill="currentColor" class="sidebar-toggle-icon-inner"></rect></svg></button></div><div class="sidebar-content-wrapper"><div id="left-sidebar-content" class="leaf-content"><link itemprop="include" href="site-lib/html/file-tree.html"></div></div><script defer>const ls=document.querySelector('#left-sidebar');ls.classList.toggle('is-collapsed',innerWidth<768);ls.style.setProperty('--sidebar-width',localStorage.getItem('sidebar-left-width'));</script></div></div><div id="center-content" class="leaf"><div class="obsidian-document markdown-preview-view markdown-rendered node-insert-event is-readable-line-width allow-fold-headings show-indentation-guide show-properties allow-fold-lists" data-type="markdown"><style id="MJX-CHTML-styles">.mjx-stretched mjx-c.mjx-c2013::before { content: "–"; }
 mjx-stretchy-h.mjx-c2013 mjx-ext mjx-c::before { content: "–"; padding: 0.285em 0px 0px; }
 mjx-c.mjx-c21AA::before { padding: 0.511em 1.126em 0.011em 0px; content: "↪"; }
 mjx-c.mjx-c2102.TEX-A::before { padding: 0.702em 0.722em 0.019em 0px; content: "C"; }
@@ -564,6 +149,7 @@ mjx-c.mjx-c1D449.TEX-I::before { padding: 0.683em 0.769em 0.022em 0px; content: 
 mjx-c.mjx-c1D43E.TEX-I::before { padding: 0.683em 0.889em 0px 0px; content: "K"; }
 mjx-c.mjx-c2F::before { padding: 0.75em 0.5em 0.25em 0px; content: "/"; }
 mjx-c.mjx-c2032::before { padding: 0.56em 0.275em 0px 0px; content: "′"; }
+mjx-c.mjx-c1D453.TEX-I::before { padding: 0.705em 0.55em 0.205em 0px; content: "f"; }
 mjx-c.mjx-c4B::before { padding: 0.683em 0.778em 0px 0px; content: "K"; }
 mjx-c.mjx-c65::before { padding: 0.448em 0.444em 0.011em 0px; content: "e"; }
 mjx-c.mjx-c72::before { padding: 0.442em 0.392em 0px 0px; content: "r"; }
@@ -582,15 +168,15 @@ mjx-c.mjx-c7D.TEX-S2::before { padding: 1.15em 0.667em 0.649em 0px; content: "}"
 mjx-c.mjx-c22C2.TEX-S2::before { padding: 0.949em 1.111em 0.45em 0px; content: "⋂"; }
 mjx-c.mjx-c27E8::before { padding: 0.75em 0.389em 0.25em 0px; content: "⟨"; }
 mjx-c.mjx-c27E9::before { padding: 0.75em 0.389em 0.25em 0px; content: "⟩"; }
-mjx-c.mjx-c2194::before { padding: 0.511em 1em 0.011em 0px; content: "↔"; }
-mjx-c.mjx-c6D::before { padding: 0.442em 0.833em 0px 0px; content: "m"; }
-mjx-c.mjx-c61::before { padding: 0.448em 0.5em 0.011em 0px; content: "a"; }
-mjx-c.mjx-c78::before { padding: 0.431em 0.528em 0px 0px; content: "x"; }
 mjx-c.mjx-c1D467.TEX-I::before { padding: 0.442em 0.465em 0.011em 0px; content: "z"; }
 mjx-c.mjx-c5E::before { padding: 0.694em 0.5em 0px 0px; content: "^"; }
 mjx-c.mjx-c7B.TEX-S4::before { padding: 1.75em 0.806em 1.249em 0px; content: "{"; }
 mjx-c.mjx-c28.TEX-S4::before { padding: 1.75em 0.792em 1.249em 0px; content: "("; }
 mjx-c.mjx-c29.TEX-S4::before { padding: 1.75em 0.792em 1.249em 0px; content: ")"; }
+mjx-c.mjx-c2194::before { padding: 0.511em 1em 0.011em 0px; content: "↔"; }
+mjx-c.mjx-c6D::before { padding: 0.442em 0.833em 0px 0px; content: "m"; }
+mjx-c.mjx-c61::before { padding: 0.448em 0.5em 0.011em 0px; content: "a"; }
+mjx-c.mjx-c78::before { padding: 0.431em 0.528em 0px 0px; content: "x"; }
 mjx-c.mjx-c2217::before { padding: 0.465em 0.5em 0px 0px; content: "∗"; }
 mjx-c.mjx-c1D437.TEX-I::before { padding: 0.683em 0.828em 0px 0px; content: "D"; }
 mjx-mover { display: inline-block; text-align: left; }
@@ -603,6 +189,7 @@ mjx-c.mjx-c28.TEX-S3::before { padding: 1.45em 0.736em 0.949em 0px; content: "("
 mjx-c.mjx-c29.TEX-S3::before { padding: 1.45em 0.736em 0.949em 0px; content: ")"; }
 mjx-c.mjx-c2DC.TEX-S2::before { padding: 0.75em 1em 0px 0px; content: "˜"; }
 mjx-c.mjx-c3A::before { padding: 0.43em 0.278em 0px 0px; content: ":"; }
+mjx-c.mjx-c2211.TEX-S1::before { padding: 0.75em 1.056em 0.25em 0px; content: "∑"; }
 mjx-c.mjx-c220F.TEX-S1::before { padding: 0.75em 0.944em 0.25em 0px; content: "∏"; }
 mjx-c.mjx-c29F8.TEX-I::before { padding: 0.716em 0.778em 0.215em 0px; content: "/"; }
 mjx-c.mjx-c2192::before { padding: 0.511em 1em 0.011em 0px; content: "→"; }
@@ -612,6 +199,12 @@ mjx-c.mjx-c48::before { padding: 0.683em 0.75em 0px 0px; content: "H"; }
 mjx-c.mjx-c53::before { padding: 0.705em 0.556em 0.022em 0px; content: "S"; }
 mjx-c.mjx-c1D53D.TEX-A::before { padding: 0.683em 0.611em 0px 0px; content: "F"; }
 mjx-c.mjx-c4C::before { padding: 0.683em 0.625em 0px 0px; content: "L"; }
+mjx-munderover { display: inline-block; text-align: left; }
+mjx-munderover:not([limits="false"]) { padding-top: 0.1em; }
+mjx-munderover:not([limits="false"]) > * { display: block; }
+mjx-msubsup { display: inline-block; text-align: left; }
+mjx-script { display: inline-block; padding-right: 0.05em; padding-left: 0.033em; }
+mjx-script > mjx-spacer { display: block; }
 mjx-munder { display: inline-block; text-align: left; }
 mjx-over { text-align: left; }
 mjx-munder:not([limits="false"]) { display: inline-table; }
@@ -619,6 +212,7 @@ mjx-munder > mjx-row { text-align: left; }
 mjx-under { padding-bottom: 0.1em; }
 mjx-stretchy-v.mjx-c7C mjx-ext mjx-c::before { content: "∣"; width: 0.333em; }
 mjx-c.mjx-c1D70E.TEX-I::before { padding: 0.431em 0.571em 0.011em 0px; content: "σ"; }
+mjx-c.mjx-c1D456.TEX-I::before { padding: 0.661em 0.345em 0.011em 0px; content: "i"; }
 mjx-c.mjx-c1D441.TEX-I::before { padding: 0.683em 0.888em 0px 0px; content: "N"; }
 mjx-c.mjx-c73::before { padding: 0.448em 0.394em 0.011em 0px; content: "s"; }
 mjx-c.mjx-c6E::before { padding: 0.442em 0.556em 0px 0px; content: "n"; }
@@ -646,6 +240,7 @@ mjx-c.mjx-cB1::before { padding: 0.666em 0.778em 0px 0px; content: "±"; }
 mjx-c.mjx-c1D45D.TEX-I::before { padding: 0.442em 0.503em 0.194em 0px; content: "p"; }
 mjx-c.mjx-c1D45F.TEX-I::before { padding: 0.442em 0.451em 0.011em 0px; content: "r"; }
 mjx-c.mjx-c36::before { padding: 0.666em 0.5em 0.022em 0px; content: "6"; }
+mjx-c.mjx-c1D45B.TEX-I::before { padding: 0.442em 0.6em 0.011em 0px; content: "n"; }
 mjx-c.mjx-c2265::before { padding: 0.636em 0.778em 0.138em 0px; content: "≥"; }
 mjx-c.mjx-c2026::before { padding: 0.12em 1.172em 0px 0px; content: "…"; }
 mjx-c.mjx-c1D451.TEX-I::before { padding: 0.694em 0.52em 0.01em 0px; content: "d"; }
@@ -666,8 +261,10 @@ mjx-c.mjx-c1D448.TEX-I::before { padding: 0.683em 0.767em 0.022em 0px; content: 
 mjx-c.mjx-c2201.TEX-A::before { padding: 0.846em 0.5em 0.021em 0px; content: "∁"; }
 mjx-c.mjx-c2216::before { padding: 0.75em 0.5em 0.25em 0px; content: "∖"; }
 mjx-c.mjx-c1D436.TEX-I::before { padding: 0.705em 0.76em 0.022em 0px; content: "C"; }
+mjx-msub { display: inline-block; text-align: left; }
 mjx-c.mjx-c1D434.TEX-I::before { padding: 0.716em 0.75em 0px 0px; content: "A"; }
 mjx-c.mjx-c1D435.TEX-I::before { padding: 0.683em 0.759em 0px 0px; content: "B"; }
+mjx-c.mjx-c1D44E.TEX-I::before { padding: 0.441em 0.529em 0.01em 0px; content: "a"; }
 mjx-c.mjx-c1D44F.TEX-I::before { padding: 0.694em 0.429em 0.011em 0px; content: "b"; }
 mjx-c.mjx-c2208::before { padding: 0.54em 0.667em 0.04em 0px; content: "∈"; }
 mjx-c.mjx-c2209::before { padding: 0.716em 0.667em 0.215em 0px; content: "∉"; }
@@ -687,6 +284,7 @@ mjx-c.mjx-c2287::before { padding: 0.636em 0.778em 0.138em 0px; content: "⊇"; 
 mjx-c.mjx-c2260::before { padding: 0.716em 0.778em 0.215em 0px; content: "≠"; }
 mjx-c.mjx-c2282::before { padding: 0.54em 0.778em 0.04em 0px; content: "⊂"; }
 mjx-c.mjx-c2283::before { padding: 0.54em 0.778em 0.04em 0px; content: "⊃"; }
+mjx-c.mjx-c1D465.TEX-I::before { padding: 0.442em 0.572em 0.011em 0px; content: "x"; }
 mjx-c.mjx-c2200::before { padding: 0.694em 0.556em 0.022em 0px; content: "∀"; }
 mjx-c.mjx-c2203::before { padding: 0.694em 0.556em 0px 0px; content: "∃"; }
 mjx-c.mjx-c21::before { padding: 0.716em 0.278em 0px 0px; content: "!"; }
@@ -701,6 +299,7 @@ mjx-c.mjx-c35::before { padding: 0.666em 0.5em 0.022em 0px; content: "5"; }
 mjx-c.mjx-c3E::before { padding: 0.54em 0.778em 0.04em 0px; content: ">"; }
 mjx-c.mjx-c2264::before { padding: 0.636em 0.778em 0.138em 0px; content: "≤"; }
 mjx-c.mjx-c221A::before { padding: 0.8em 0.853em 0.2em 0px; content: "√"; }
+mjx-mi { display: inline-block; text-align: left; }
 mjx-mspace { display: inline-block; text-align: left; }
 mjx-mtable { display: inline-block; text-align: center; vertical-align: 0.25em; position: relative; box-sizing: border-box; border-spacing: 0px; border-collapse: collapse; }
 mjx-mstyle[size="s"] mjx-mtable { vertical-align: 0.354em; }
@@ -750,6 +349,8 @@ mjx-c.mjx-c27F9::before { padding: 0.525em 1.638em 0.024em 0px; content: "⟹"; 
 mjx-c.mjx-c27FA::before { padding: 0.525em 1.858em 0.024em 0px; content: "⟺"; }
 mjx-c.mjx-cA0::before { padding: 0px 0.25em 0px 0px; content: " "; }
 mjx-c.mjx-c27F8::before { padding: 0.525em 1.609em 0.024em 0px; content: "⟸"; }
+mjx-c.mjx-c28::before { padding: 0.75em 0.389em 0.25em 0px; content: "("; }
+mjx-c.mjx-c29::before { padding: 0.75em 0.389em 0.25em 0px; content: ")"; }
 mjx-c.mjx-c38::before { padding: 0.666em 0.5em 0.022em 0px; content: "8"; }
 mjx-c.mjx-c2218::before { padding: 0.444em 0.5em 0px 0px; content: "∘"; }
 mjx-c.mjx-c33::before { padding: 0.665em 0.5em 0.022em 0px; content: "3"; }
@@ -759,6 +360,35 @@ mjx-c.mjx-c7B.TEX-S3::before { padding: 1.45em 0.75em 0.949em 0px; content: "{";
 mjx-c.mjx-c1D439.TEX-I::before { padding: 0.68em 0.749em 0px 0px; content: "F"; }
 mjx-c.mjx-c2E::before { padding: 0.12em 0.278em 0px 0px; content: "."; }
 mjx-c.mjx-c1D447.TEX-I::before { padding: 0.677em 0.704em 0px 0px; content: "T"; }
+mjx-math { display: inline-block; text-align: left; line-height: 0; text-indent: 0px; font-style: normal; font-weight: normal; font-size: 100%; font-size-adjust: none; letter-spacing: normal; border-collapse: collapse; overflow-wrap: normal; word-spacing: normal; white-space: nowrap; direction: ltr; padding: 1px 0px; }
+mjx-container[jax="CHTML"][display="true"] { display: block; text-align: center; margin: 1em 0px; }
+mjx-container[jax="CHTML"][display="true"][width="full"] { display: flex; }
+mjx-container[jax="CHTML"][display="true"] mjx-math { padding: 0px; }
+mjx-container[jax="CHTML"][justify="left"] { text-align: left; }
+mjx-container[jax="CHTML"][justify="right"] { text-align: right; }
+mjx-texatom { display: inline-block; text-align: left; }
+mjx-mn { display: inline-block; text-align: left; }
+mjx-c { display: inline-block; }
+mjx-utext { display: inline-block; padding: 0.75em 0px 0.2em; }
+mjx-mo { display: inline-block; text-align: left; }
+mjx-stretchy-h { display: inline-table; width: 100%; }
+mjx-stretchy-h > * { display: table-cell; width: 0px; }
+mjx-stretchy-h > * > mjx-c { display: inline-block; transform: scaleX(1); }
+mjx-stretchy-h > * > mjx-c::before { display: inline-block; width: initial; }
+mjx-stretchy-h > mjx-ext { overflow: clip visible; width: 100%; }
+mjx-stretchy-h > mjx-ext > mjx-c::before { transform: scaleX(500); }
+mjx-stretchy-h > mjx-ext > mjx-c { width: 0px; }
+mjx-stretchy-h > mjx-beg > mjx-c { margin-right: -0.1em; }
+mjx-stretchy-h > mjx-end > mjx-c { margin-left: -0.1em; }
+mjx-stretchy-v { display: inline-block; }
+mjx-stretchy-v > * { display: block; }
+mjx-stretchy-v > mjx-beg { height: 0px; }
+mjx-stretchy-v > mjx-end > mjx-c { display: block; }
+mjx-stretchy-v > * > mjx-c { transform: scaleY(1); transform-origin: left center; overflow: hidden; }
+mjx-stretchy-v > mjx-ext { display: block; height: 100%; box-sizing: border-box; border: 0px solid transparent; overflow: visible clip; }
+mjx-stretchy-v > mjx-ext > mjx-c::before { width: initial; box-sizing: border-box; }
+mjx-stretchy-v > mjx-ext > mjx-c { transform: scaleY(500) translateY(0.075em); overflow: visible; }
+mjx-mark { display: inline-block; height: 0px; }
 mjx-mfrac { display: inline-block; text-align: left; }
 mjx-frac { display: inline-block; vertical-align: 0.17em; padding: 0px 0.22em; }
 mjx-frac[type="d"] { vertical-align: 0.04em; }
@@ -782,7 +412,9 @@ mjx-line { display: block; box-sizing: border-box; min-height: 1px; height: 0.06
 mjx-line[type="d"] { margin: 0.18em -0.1em; }
 mjx-c.mjx-c30::before { padding: 0.666em 0.5em 0.022em 0px; content: "0"; }
 mjx-c.mjx-c2C::before { padding: 0.121em 0.278em 0.194em 0px; content: ","; }
+mjx-c.mjx-c31::before { padding: 0.666em 0.5em 0px 0px; content: "1"; }
 mjx-c.mjx-c2B::before { padding: 0.583em 0.778em 0.082em 0px; content: "+"; }
+mjx-c.mjx-c3D::before { padding: 0.583em 0.778em 0.082em 0px; content: "="; }
 mjx-c.mjx-c32::before { padding: 0.666em 0.5em 0px 0px; content: "2"; }
 mjx-container[jax="CHTML"] { line-height: 0; }
 mjx-container [space="1"] { margin-left: 0.111em; }
@@ -816,43 +448,6 @@ mjx-merror { display: inline-block; color: red; background-color: yellow; }
 mjx-mphantom { visibility: hidden; }
 mjx-assistive-mml { top: 0px; left: 0px; clip: rect(1px, 1px, 1px, 1px); user-select: none; position: absolute !important; padding: 1px 0px 0px !important; border: 0px !important; display: block !important; width: auto !important; overflow: hidden !important; }
 mjx-assistive-mml[display="block"] { width: 100% !important; }
-mjx-math { display: inline-block; text-align: left; line-height: 0; text-indent: 0px; font-style: normal; font-weight: normal; font-size: 100%; font-size-adjust: none; letter-spacing: normal; border-collapse: collapse; overflow-wrap: normal; word-spacing: normal; white-space: nowrap; direction: ltr; padding: 1px 0px; }
-mjx-container[jax="CHTML"][display="true"] { display: block; text-align: center; margin: 1em 0px; }
-mjx-container[jax="CHTML"][display="true"][width="full"] { display: flex; }
-mjx-container[jax="CHTML"][display="true"] mjx-math { padding: 0px; }
-mjx-container[jax="CHTML"][justify="left"] { text-align: left; }
-mjx-container[jax="CHTML"][justify="right"] { text-align: right; }
-mjx-munderover { display: inline-block; text-align: left; }
-mjx-munderover:not([limits="false"]) { padding-top: 0.1em; }
-mjx-munderover:not([limits="false"]) > * { display: block; }
-mjx-msubsup { display: inline-block; text-align: left; }
-mjx-script { display: inline-block; padding-right: 0.05em; padding-left: 0.033em; }
-mjx-script > mjx-spacer { display: block; }
-mjx-mo { display: inline-block; text-align: left; }
-mjx-stretchy-h { display: inline-table; width: 100%; }
-mjx-stretchy-h > * { display: table-cell; width: 0px; }
-mjx-stretchy-h > * > mjx-c { display: inline-block; transform: scaleX(1); }
-mjx-stretchy-h > * > mjx-c::before { display: inline-block; width: initial; }
-mjx-stretchy-h > mjx-ext { overflow: clip visible; width: 100%; }
-mjx-stretchy-h > mjx-ext > mjx-c::before { transform: scaleX(500); }
-mjx-stretchy-h > mjx-ext > mjx-c { width: 0px; }
-mjx-stretchy-h > mjx-beg > mjx-c { margin-right: -0.1em; }
-mjx-stretchy-h > mjx-end > mjx-c { margin-left: -0.1em; }
-mjx-stretchy-v { display: inline-block; }
-mjx-stretchy-v > * { display: block; }
-mjx-stretchy-v > mjx-beg { height: 0px; }
-mjx-stretchy-v > mjx-end > mjx-c { display: block; }
-mjx-stretchy-v > * > mjx-c { transform: scaleY(1); transform-origin: left center; overflow: hidden; }
-mjx-stretchy-v > mjx-ext { display: block; height: 100%; box-sizing: border-box; border: 0px solid transparent; overflow: visible clip; }
-mjx-stretchy-v > mjx-ext > mjx-c::before { width: initial; box-sizing: border-box; }
-mjx-stretchy-v > mjx-ext > mjx-c { transform: scaleY(500) translateY(0.075em); overflow: visible; }
-mjx-mark { display: inline-block; height: 0px; }
-mjx-c { display: inline-block; }
-mjx-utext { display: inline-block; padding: 0.75em 0px 0.2em; }
-mjx-texatom { display: inline-block; text-align: left; }
-mjx-mi { display: inline-block; text-align: left; }
-mjx-mn { display: inline-block; text-align: left; }
-mjx-msub { display: inline-block; text-align: left; }
 mjx-c::before { display: block; width: 0px; }
 .MJX-TEX { font-family: MJXZERO, MJXTEX; }
 .TEX-B { font-family: MJXZERO, MJXTEX-B; }
@@ -897,25 +492,15 @@ mjx-stretchy-v mjx-c, mjx-stretchy-h mjx-c { font-family: MJXZERO, MJXTEX-S1, MJ
 @font-face { font-family: MJXTEX-SC; src: url("site-lib/fonts/mathjax-af96f67d7acc.woff") format("woff"); }
 @font-face { font-family: MJXTEX-T; src: url("site-lib/fonts/mathjax-c56da8d69f1a.woff") format("woff"); }
 @font-face { font-family: MJXTEX-V; src: url("site-lib/fonts/mathjax-72bc573386dd.woff") format("woff"); }
-@font-face { font-family: MJXTEX-VB; src: url("site-lib/fonts/mathjax-36e0d72d8a7a.woff") format("woff"); }
-mjx-c.mjx-c2211.TEX-S1::before { padding: 0.75em 1.056em 0.25em 0px; content: "∑"; }
-mjx-c.mjx-c1D45B.TEX-I::before { padding: 0.442em 0.6em 0.011em 0px; content: "n"; }
-mjx-c.mjx-c1D456.TEX-I::before { padding: 0.661em 0.345em 0.011em 0px; content: "i"; }
-mjx-c.mjx-c3D::before { padding: 0.583em 0.778em 0.082em 0px; content: "="; }
-mjx-c.mjx-c31::before { padding: 0.666em 0.5em 0px 0px; content: "1"; }
-mjx-c.mjx-c1D44E.TEX-I::before { padding: 0.441em 0.529em 0.01em 0px; content: "a"; }
-mjx-c.mjx-c1D453.TEX-I::before { padding: 0.705em 0.55em 0.205em 0px; content: "f"; }
-mjx-c.mjx-c28::before { padding: 0.75em 0.389em 0.25em 0px; content: "("; }
-mjx-c.mjx-c1D465.TEX-I::before { padding: 0.442em 0.572em 0.011em 0px; content: "x"; }
-mjx-c.mjx-c29::before { padding: 0.75em 0.389em 0.25em 0px; content: ")"; }</style><div class="markdown-preview-sizer markdown-preview-section"><div class="header"><div class="page-title" id="3.9 平坦模">3.9 平坦模</div><div class="data-bar"></div></div><div class="markdown-preview-pusher" style="width:1px;height:.1px;margin-bottom:0"></div><div class="el-p"><p dir="auto">正如投射模可补全<a data-tooltip-position="top" aria-label="Hom(-,-) &gt; ^prp-9150d6" data-href="Hom(-,-)#^prp-9150d6" href="抽象代数/模/hom(---).html#^prp-9150d6" class="internal-link" target="_self" rel="noopener nofollow">命题 3.5.2</a> 的短正合列:</p></div><div class="el-div"><div data-callout-metadata="" data-callout-fold="" data-callout="definition" class="callout mathcraft-style-latex"><div class="callout-title" dir="auto"><div class="callout-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="svg-icon lucide-pencil"><path d="M21.174 6.812a1 1 0 0 0-3.986-3.987L3.842 16.174a2 2 0 0 0-.5.83l-1.321 4.352a.5.5 0 0 0 .623.622l4.353-1.32a2 2 0 0 0 .83-.497z"></path><path d="m15 5 4 4"></path></svg></div><div class="callout-title-inner">定义 3.9.1 (平坦模)</div></div><div class="callout-content">
+@font-face { font-family: MJXTEX-VB; src: url("site-lib/fonts/mathjax-36e0d72d8a7a.woff") format("woff"); }</style><div class="markdown-preview-sizer markdown-preview-section"><div class="header"><div class="page-title" id="3.9 平坦模">3.9 平坦模</div><div class="data-bar"></div></div><div class="markdown-preview-pusher" style="width:1px;height:.1px;margin-bottom:0"></div><div class="el-p"><p dir="auto">正如投射模可补全<a data-tooltip-position="top" aria-label="Hom(-,-) &gt; ^prp-9150d6" data-href="Hom(-,-)#^prp-9150d6" href="抽象代数/模/hom(---).html#^prp-9150d6" class="internal-link" target="_self" rel="noopener nofollow">命题 3.5.2</a> 的短正合列:</p></div><div class="el-div"><div data-callout-metadata="" data-callout-fold="" data-callout="definition" class="callout mathcraft-style-latex"><div class="callout-title" dir="auto"><div class="callout-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="svg-icon lucide-pencil"><path d="M21.174 6.812a1 1 0 0 0-3.986-3.987L3.842 16.174a2 2 0 0 0-.5.83l-1.321 4.352a.5.5 0 0 0 .623.622l4.353-1.32a2 2 0 0 0 .83-.497z"></path><path d="m15 5 4 4"></path></svg></div><div class="callout-title-inner">定义 3.9.1 (平坦模)</div></div><div class="callout-content">
 <p dir="auto">设 <span class="math math-inline is-loaded"><mjx-container class="MathJax" jax="CHTML"><mjx-math class="MJX-TEX"><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D445 TEX-I"></mjx-c></mjx-mi></mjx-math></mjx-container></span> 为交换幺环, <span class="math math-inline is-loaded"><mjx-container class="MathJax" jax="CHTML"><mjx-math class="MJX-TEX"><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D440 TEX-I"></mjx-c></mjx-mi></mjx-math></mjx-container></span> 为 <span class="math math-inline is-loaded"><mjx-container class="MathJax" jax="CHTML"><mjx-math class="MJX-TEX"><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D445 TEX-I"></mjx-c></mjx-mi></mjx-math></mjx-container></span> 模, 若对任意的 <span class="math math-inline is-loaded"><mjx-container class="MathJax" jax="CHTML"><mjx-math class="MJX-TEX"><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D445 TEX-I"></mjx-c></mjx-mi></mjx-math></mjx-container></span> 模单同态 <span class="math math-inline is-loaded"><mjx-container class="MathJax" jax="CHTML"><mjx-math class="MJX-TEX"><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D453 TEX-I"></mjx-c></mjx-mi><mjx-mo class="mjx-n" space="4"><mjx-c class="mjx-c3A"></mjx-c></mjx-mo><mjx-mi class="mjx-i" space="4"><mjx-c class="mjx-c1D434 TEX-I"></mjx-c></mjx-mi><mjx-mo class="mjx-n" space="4"><mjx-c class="mjx-c2192"></mjx-c></mjx-mo><mjx-mi class="mjx-i" space="4"><mjx-c class="mjx-c1D435 TEX-I"></mjx-c></mjx-mi></mjx-math></mjx-container></span>, 其诱导同态 <span class="math math-inline is-loaded"><mjx-container class="MathJax" jax="CHTML"><mjx-math class="MJX-TEX"><mjx-msub><mjx-texatom texclass="ORD"><mjx-mi class="mjx-n"><mjx-c class="mjx-c69"></mjx-c><mjx-c class="mjx-c64"></mjx-c></mjx-mi></mjx-texatom><mjx-script style="vertical-align: -0.15em;"><mjx-texatom size="s" texclass="ORD"><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D440 TEX-I"></mjx-c></mjx-mi></mjx-texatom></mjx-script></mjx-msub><mjx-mo class="mjx-n" space="3"><mjx-c class="mjx-c2297"></mjx-c></mjx-mo><mjx-mi class="mjx-i" space="3"><mjx-c class="mjx-c1D453 TEX-I"></mjx-c></mjx-mi><mjx-mo class="mjx-n" space="4"><mjx-c class="mjx-c3A"></mjx-c></mjx-mo><mjx-mi class="mjx-i" space="4"><mjx-c class="mjx-c1D440 TEX-I"></mjx-c></mjx-mi><mjx-msub space="3"><mjx-mo class="mjx-n"><mjx-c class="mjx-c2297"></mjx-c></mjx-mo><mjx-script style="vertical-align: -0.15em;"><mjx-texatom size="s" texclass="ORD"><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D445 TEX-I"></mjx-c></mjx-mi></mjx-texatom></mjx-script></mjx-msub><mjx-mi class="mjx-i" space="3"><mjx-c class="mjx-c1D434 TEX-I"></mjx-c></mjx-mi><mjx-mo class="mjx-n" space="4"><mjx-c class="mjx-c2192"></mjx-c></mjx-mo><mjx-mi class="mjx-i" space="4"><mjx-c class="mjx-c1D440 TEX-I"></mjx-c></mjx-mi><mjx-msub space="3"><mjx-mo class="mjx-n"><mjx-c class="mjx-c2297"></mjx-c></mjx-mo><mjx-script style="vertical-align: -0.15em;"><mjx-texatom size="s" texclass="ORD"><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D445 TEX-I"></mjx-c></mjx-mi></mjx-texatom></mjx-script></mjx-msub><mjx-mi class="mjx-i" space="3"><mjx-c class="mjx-c1D435 TEX-I"></mjx-c></mjx-mi></mjx-math></mjx-container></span> 也为单同态, 则称 <span class="math math-inline is-loaded"><mjx-container class="MathJax" jax="CHTML"><mjx-math class="MJX-TEX"><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D440 TEX-I"></mjx-c></mjx-mi></mjx-math></mjx-container></span> 为平坦模 (flat module).</p>
 </div></div></div><div class="el-div" id="^prp-ac283d"><div data-callout-metadata="" data-callout-fold="" data-callout="proposition" class="callout mathcraft-style-latex"><div class="callout-title" dir="auto"><div class="callout-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="svg-icon lucide-pencil"><path d="M21.174 6.812a1 1 0 0 0-3.986-3.987L3.842 16.174a2 2 0 0 0-.5.83l-1.321 4.352a.5.5 0 0 0 .623.622l4.353-1.32a2 2 0 0 0 .83-.497z"></path><path d="m15 5 4 4"></path></svg></div><div class="callout-title-inner">命题 3.9.1 (平坦模等价条件)</div></div><div class="callout-content">
 <p dir="auto">设 <span class="math math-inline is-loaded"><mjx-container class="MathJax" jax="CHTML"><mjx-math class="MJX-TEX"><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D445 TEX-I"></mjx-c></mjx-mi></mjx-math></mjx-container></span> 为交换幺环, <span class="math math-inline is-loaded"><mjx-container class="MathJax" jax="CHTML"><mjx-math class="MJX-TEX"><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D440 TEX-I"></mjx-c></mjx-mi></mjx-math></mjx-container></span> 为 <span class="math math-inline is-loaded"><mjx-container class="MathJax" jax="CHTML"><mjx-math class="MJX-TEX"><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D445 TEX-I"></mjx-c></mjx-mi></mjx-math></mjx-container></span> 模, 以下命题等价:</p>
-<ol class="math-env-rendered-marker-list" start="1">
-<li data-line="3" dir="auto" class="math-env-rendered-marker-item"><span class="math-env-rendered-marker">(1)</span><div class="math-env-rendered-marker-content"><span class="math math-inline is-loaded"><mjx-container class="MathJax" jax="CHTML"><mjx-math class="MJX-TEX"><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D440 TEX-I"></mjx-c></mjx-mi></mjx-math></mjx-container></span> 为平坦模.</div></li>
-<li data-line="4" dir="auto" class="math-env-rendered-marker-item"><span class="math-env-rendered-marker">(2)</span><div class="math-env-rendered-marker-content">对任意 <span class="math math-inline is-loaded"><mjx-container class="MathJax" jax="CHTML"><mjx-math class="MJX-TEX"><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D445 TEX-I"></mjx-c></mjx-mi></mjx-math></mjx-container></span> 模同态短正合列 <span class="math math-inline is-loaded"><mjx-container class="MathJax" jax="CHTML"><mjx-math class="MJX-TEX"><mjx-texatom texclass="ORD"></mjx-texatom><mjx-mn class="mjx-n"><mjx-c class="mjx-c30"></mjx-c></mjx-mn><mjx-mo class="mjx-n" space="4"><mjx-c class="mjx-c2192"></mjx-c></mjx-mo><mjx-mi class="mjx-i" space="4"><mjx-c class="mjx-c1D434 TEX-I"></mjx-c></mjx-mi><mjx-mover space="4"><mjx-over style="padding-bottom: 0.111em; padding-left: 0.306em;"><mjx-mi class="mjx-i" size="s"><mjx-c class="mjx-c1D453 TEX-I"></mjx-c></mjx-mi></mjx-over><mjx-base><mjx-mo class="mjx-n"><mjx-c class="mjx-c2192"></mjx-c></mjx-mo></mjx-base></mjx-mover><mjx-mi class="mjx-i" space="4"><mjx-c class="mjx-c1D435 TEX-I"></mjx-c></mjx-mi><mjx-mover space="4"><mjx-over style="padding-bottom: 0.111em; padding-left: 0.331em;"><mjx-mi class="mjx-i" size="s"><mjx-c class="mjx-c1D454 TEX-I"></mjx-c></mjx-mi></mjx-over><mjx-base><mjx-mo class="mjx-n"><mjx-c class="mjx-c2192"></mjx-c></mjx-mo></mjx-base></mjx-mover><mjx-mi class="mjx-i" space="4"><mjx-c class="mjx-c1D436 TEX-I"></mjx-c></mjx-mi><mjx-mo class="mjx-n" space="4"><mjx-c class="mjx-c2192"></mjx-c></mjx-mo><mjx-mn class="mjx-n" space="4"><mjx-c class="mjx-c30"></mjx-c></mjx-mn></mjx-math></mjx-container></span>, <span class="math math-inline is-loaded"><mjx-container class="MathJax" jax="CHTML"><mjx-math class="MJX-TEX"><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D440 TEX-I"></mjx-c></mjx-mi></mjx-math></mjx-container></span> 使得如下序列正合: <span class="math math-block is-loaded"><mjx-container class="MathJax" jax="CHTML" display="true"><mjx-math display="true" class="MJX-TEX" style="margin-left: 0px; margin-right: 0px;"><mjx-mn class="mjx-n"><mjx-c class="mjx-c30"></mjx-c></mjx-mn><mjx-mo class="mjx-n" space="4"><mjx-c class="mjx-c2192"></mjx-c></mjx-mo><mjx-mi class="mjx-i" space="4"><mjx-c class="mjx-c1D440 TEX-I"></mjx-c></mjx-mi><mjx-msub space="3"><mjx-mo class="mjx-n"><mjx-c class="mjx-c2297"></mjx-c></mjx-mo><mjx-script style="vertical-align: -0.15em;"><mjx-texatom size="s" texclass="ORD"><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D445 TEX-I"></mjx-c></mjx-mi></mjx-texatom></mjx-script></mjx-msub><mjx-mi class="mjx-i" space="3"><mjx-c class="mjx-c1D434 TEX-I"></mjx-c></mjx-mi><mjx-mover space="4"><mjx-over style="padding-bottom: 0.111em;"><mjx-mrow size="s"><mjx-msub><mjx-texatom texclass="ORD"><mjx-mi class="mjx-n"><mjx-c class="mjx-c69"></mjx-c><mjx-c class="mjx-c64"></mjx-c></mjx-mi></mjx-texatom><mjx-script style="vertical-align: -0.15em;"><mjx-texatom size="s" texclass="ORD"><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D440 TEX-I"></mjx-c></mjx-mi></mjx-texatom></mjx-script></mjx-msub><mjx-mo class="mjx-n"><mjx-c class="mjx-c2297"></mjx-c></mjx-mo><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D453 TEX-I"></mjx-c></mjx-mi></mjx-mrow></mjx-over><mjx-base style="padding-left: 0.237em;"><mjx-mo class="mjx-n"><mjx-c class="mjx-c27F6"></mjx-c></mjx-mo></mjx-base></mjx-mover><mjx-mi class="mjx-i" space="4"><mjx-c class="mjx-c1D440 TEX-I"></mjx-c></mjx-mi><mjx-msub space="3"><mjx-mo class="mjx-n"><mjx-c class="mjx-c2297"></mjx-c></mjx-mo><mjx-script style="vertical-align: -0.15em;"><mjx-texatom size="s" texclass="ORD"><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D445 TEX-I"></mjx-c></mjx-mi></mjx-texatom></mjx-script></mjx-msub><mjx-mi class="mjx-i" space="3"><mjx-c class="mjx-c1D435 TEX-I"></mjx-c></mjx-mi><mjx-mover space="4"><mjx-over style="padding-bottom: 0.111em;"><mjx-mrow size="s"><mjx-msub><mjx-texatom texclass="ORD"><mjx-mi class="mjx-n"><mjx-c class="mjx-c69"></mjx-c><mjx-c class="mjx-c64"></mjx-c></mjx-mi></mjx-texatom><mjx-script style="vertical-align: -0.15em;"><mjx-texatom size="s" texclass="ORD"><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D440 TEX-I"></mjx-c></mjx-mi></mjx-texatom></mjx-script></mjx-msub><mjx-mo class="mjx-n"><mjx-c class="mjx-c2297"></mjx-c></mjx-mo><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D454 TEX-I"></mjx-c></mjx-mi></mjx-mrow></mjx-over><mjx-base style="padding-left: 0.212em;"><mjx-mo class="mjx-n"><mjx-c class="mjx-c27F6"></mjx-c></mjx-mo></mjx-base></mjx-mover><mjx-mi class="mjx-i" space="4"><mjx-c class="mjx-c1D440 TEX-I"></mjx-c></mjx-mi><mjx-msub space="3"><mjx-mo class="mjx-n"><mjx-c class="mjx-c2297"></mjx-c></mjx-mo><mjx-script style="vertical-align: -0.15em;"><mjx-texatom size="s" texclass="ORD"><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D445 TEX-I"></mjx-c></mjx-mi></mjx-texatom></mjx-script></mjx-msub><mjx-mi class="mjx-i" space="3"><mjx-c class="mjx-c1D436 TEX-I"></mjx-c></mjx-mi><mjx-mo class="mjx-n" space="4"><mjx-c class="mjx-c2192"></mjx-c></mjx-mo><mjx-mn class="mjx-n" space="4"><mjx-c class="mjx-c30"></mjx-c><mjx-c class="mjx-c2E"></mjx-c></mjx-mn></mjx-math></mjx-container></span></div></li>
-<li data-line="5" dir="auto" class="math-env-rendered-marker-item"><span class="math-env-rendered-marker">(3)</span><div class="math-env-rendered-marker-content">对 <span class="math math-inline is-loaded"><mjx-container class="MathJax" jax="CHTML"><mjx-math class="MJX-TEX"><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D445 TEX-I"></mjx-c></mjx-mi></mjx-math></mjx-container></span> 的任意理想 <span class="math math-inline is-loaded"><mjx-container class="MathJax" jax="CHTML"><mjx-math class="MJX-TEX"><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D446 TEX-I"></mjx-c></mjx-mi></mjx-math></mjx-container></span>, 都有正合列: <span class="math math-inline is-loaded"><mjx-container class="MathJax" jax="CHTML"><mjx-math class="MJX-TEX"><mjx-texatom texclass="ORD"></mjx-texatom><mjx-mn class="mjx-n"><mjx-c class="mjx-c30"></mjx-c></mjx-mn><mjx-mo class="mjx-n" space="4"><mjx-c class="mjx-c2192"></mjx-c></mjx-mo><mjx-mi class="mjx-i" space="4"><mjx-c class="mjx-c1D440 TEX-I"></mjx-c></mjx-mi><mjx-msub space="3"><mjx-mo class="mjx-n"><mjx-c class="mjx-c2297"></mjx-c></mjx-mo><mjx-script style="vertical-align: -0.15em;"><mjx-texatom size="s" texclass="ORD"><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D445 TEX-I"></mjx-c></mjx-mi></mjx-texatom></mjx-script></mjx-msub><mjx-mi class="mjx-i" space="3"><mjx-c class="mjx-c1D446 TEX-I"></mjx-c></mjx-mi><mjx-mover space="4"><mjx-over style="padding-bottom: 0.111em;"><mjx-mrow size="s"><mjx-msub><mjx-texatom texclass="ORD"><mjx-mi class="mjx-n"><mjx-c class="mjx-c69"></mjx-c><mjx-c class="mjx-c64"></mjx-c></mjx-mi></mjx-texatom><mjx-script style="vertical-align: -0.15em;"><mjx-texatom size="s" texclass="ORD"><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D440 TEX-I"></mjx-c></mjx-mi></mjx-texatom></mjx-script></mjx-msub><mjx-mo class="mjx-n"><mjx-c class="mjx-c2297"></mjx-c></mjx-mo><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D456 TEX-I"></mjx-c></mjx-mi></mjx-mrow></mjx-over><mjx-base style="padding-left: 0.165em;"><mjx-mo class="mjx-n"><mjx-c class="mjx-c27F6"></mjx-c></mjx-mo></mjx-base></mjx-mover><mjx-mi class="mjx-i" space="4"><mjx-c class="mjx-c1D440 TEX-I"></mjx-c></mjx-mi><mjx-msub space="3"><mjx-mo class="mjx-n"><mjx-c class="mjx-c2297"></mjx-c></mjx-mo><mjx-script style="vertical-align: -0.15em;"><mjx-texatom size="s" texclass="ORD"><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D445 TEX-I"></mjx-c></mjx-mi></mjx-texatom></mjx-script></mjx-msub><mjx-mi class="mjx-i" space="3"><mjx-c class="mjx-c1D445 TEX-I"></mjx-c></mjx-mi></mjx-math></mjx-container></span>, 其中 <span class="math math-inline is-loaded"><mjx-container class="MathJax" jax="CHTML"><mjx-math class="MJX-TEX"><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D456 TEX-I"></mjx-c></mjx-mi><mjx-mo class="mjx-n" space="4"><mjx-c class="mjx-c3A"></mjx-c></mjx-mo><mjx-mi class="mjx-i" space="4"><mjx-c class="mjx-c1D446 TEX-I"></mjx-c></mjx-mi><mjx-mo class="mjx-n" space="4"><mjx-c class="mjx-c21AA"></mjx-c></mjx-mo><mjx-mi class="mjx-i" space="4"><mjx-c class="mjx-c1D445 TEX-I"></mjx-c></mjx-mi></mjx-math></mjx-container></span> 为包含映射.</div></li>
-<li data-line="6" dir="auto" class="math-env-rendered-marker-item"><span class="math-env-rendered-marker">(4)</span><div class="math-env-rendered-marker-content">对任意线性关系式 <span class="math math-inline is-loaded"><mjx-container class="MathJax" jax="CHTML"><mjx-math class="MJX-TEX"><mjx-munderover limits="false"><mjx-mo class="mjx-sop"><mjx-c class="mjx-c2211 TEX-S1"></mjx-c></mjx-mo><mjx-script style="vertical-align: -0.285em; margin-left: 0px;"><mjx-texatom size="s" texclass="ORD"><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D45A TEX-I"></mjx-c></mjx-mi></mjx-texatom><mjx-spacer style="margin-top: 0.284em;"></mjx-spacer><mjx-texatom size="s" texclass="ORD"><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D456 TEX-I"></mjx-c></mjx-mi><mjx-mo class="mjx-n"><mjx-c class="mjx-c3D"></mjx-c></mjx-mo><mjx-mn class="mjx-n"><mjx-c class="mjx-c31"></mjx-c></mjx-mn></mjx-texatom></mjx-script></mjx-munderover><mjx-msub space="2"><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D45F TEX-I"></mjx-c></mjx-mi><mjx-script style="vertical-align: -0.15em;"><mjx-texatom size="s" texclass="ORD"><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D456 TEX-I"></mjx-c></mjx-mi></mjx-texatom></mjx-script></mjx-msub><mjx-msub><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D465 TEX-I"></mjx-c></mjx-mi><mjx-script style="vertical-align: -0.15em;"><mjx-texatom size="s" texclass="ORD"><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D456 TEX-I"></mjx-c></mjx-mi></mjx-texatom></mjx-script></mjx-msub><mjx-mo class="mjx-n" space="4"><mjx-c class="mjx-c3D"></mjx-c></mjx-mo><mjx-mn class="mjx-n" space="4"><mjx-c class="mjx-c30"></mjx-c></mjx-mn></mjx-math></mjx-container></span>, 存在 <span class="math math-inline is-loaded"><mjx-container class="MathJax" jax="CHTML"><mjx-math class="MJX-TEX"><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D45B TEX-I"></mjx-c></mjx-mi><mjx-mo class="mjx-n" space="4"><mjx-c class="mjx-c2208"></mjx-c></mjx-mo><mjx-texatom space="4" texclass="ORD"><mjx-mi class="mjx-ds mjx-b"><mjx-c class="mjx-c2124 TEX-A"></mjx-c></mjx-mi></mjx-texatom></mjx-math></mjx-container></span> 和 <span class="math math-inline is-loaded"><mjx-container class="MathJax" jax="CHTML"><mjx-math class="MJX-TEX"><mjx-msub><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D460 TEX-I"></mjx-c></mjx-mi><mjx-script style="vertical-align: -0.15em;"><mjx-texatom size="s" texclass="ORD"><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D456 TEX-I"></mjx-c></mjx-mi><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D457 TEX-I"></mjx-c></mjx-mi></mjx-texatom></mjx-script></mjx-msub><mjx-mo class="mjx-n" space="4"><mjx-c class="mjx-c2208"></mjx-c></mjx-mo><mjx-mi class="mjx-i" space="4"><mjx-c class="mjx-c1D445 TEX-I"></mjx-c></mjx-mi></mjx-math></mjx-container></span>, <span class="math math-inline is-loaded"><mjx-container class="MathJax" jax="CHTML"><mjx-math class="MJX-TEX"><mjx-msub><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D466 TEX-I"></mjx-c></mjx-mi><mjx-script style="vertical-align: -0.15em;"><mjx-texatom size="s" texclass="ORD"><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D457 TEX-I"></mjx-c></mjx-mi></mjx-texatom></mjx-script></mjx-msub><mjx-mo class="mjx-n" space="4"><mjx-c class="mjx-c2208"></mjx-c></mjx-mo><mjx-mi class="mjx-i" space="4"><mjx-c class="mjx-c1D440 TEX-I"></mjx-c></mjx-mi></mjx-math></mjx-container></span>, 使得 <span class="math math-block is-loaded"><mjx-container class="MathJax" jax="CHTML" display="true"><mjx-math display="true" class="MJX-TEX" style="margin-left: 0px; margin-right: 0px;"><mjx-mrow><mjx-mo class="mjx-s3"><mjx-c class="mjx-c7B TEX-S3"></mjx-c></mjx-mo><mjx-mtable style="min-width: 13.525em;"><mjx-table><mjx-itable><mjx-mtr><mjx-mtd style="text-align: left; padding-right: 0.5em; padding-bottom: 0.1em;"><mjx-msub><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D465 TEX-I"></mjx-c></mjx-mi><mjx-script style="vertical-align: -0.15em;"><mjx-texatom size="s" texclass="ORD"><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D456 TEX-I"></mjx-c></mjx-mi></mjx-texatom></mjx-script></mjx-msub><mjx-mo class="mjx-n" space="4"><mjx-c class="mjx-c3D"></mjx-c></mjx-mo><mjx-munderover space="4" limits="false"><mjx-mo class="mjx-sop"><mjx-c class="mjx-c2211 TEX-S1"></mjx-c></mjx-mo><mjx-script style="vertical-align: -0.285em; margin-left: 0px;"><mjx-texatom size="s" texclass="ORD"><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D45B TEX-I"></mjx-c></mjx-mi></mjx-texatom><mjx-spacer style="margin-top: 0.284em;"></mjx-spacer><mjx-texatom size="s" texclass="ORD"><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D457 TEX-I"></mjx-c></mjx-mi><mjx-mo class="mjx-n"><mjx-c class="mjx-c3D"></mjx-c></mjx-mo><mjx-mn class="mjx-n"><mjx-c class="mjx-c31"></mjx-c></mjx-mn></mjx-texatom></mjx-script></mjx-munderover><mjx-msub space="2"><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D460 TEX-I"></mjx-c></mjx-mi><mjx-script style="vertical-align: -0.15em;"><mjx-texatom size="s" texclass="ORD"><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D456 TEX-I"></mjx-c></mjx-mi><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D457 TEX-I"></mjx-c></mjx-mi></mjx-texatom></mjx-script></mjx-msub><mjx-msub><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D466 TEX-I"></mjx-c></mjx-mi><mjx-script style="vertical-align: -0.15em;"><mjx-texatom size="s" texclass="ORD"><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D457 TEX-I"></mjx-c></mjx-mi></mjx-texatom></mjx-script></mjx-msub><mjx-mo class="mjx-n"><mjx-c class="mjx-c2C"></mjx-c></mjx-mo><mjx-tstrut></mjx-tstrut></mjx-mtd><mjx-mtd style="text-align: left; padding-left: 0.5em; padding-bottom: 0.1em;"><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D456 TEX-I"></mjx-c></mjx-mi><mjx-mo class="mjx-n" space="4"><mjx-c class="mjx-c3D"></mjx-c></mjx-mo><mjx-mn class="mjx-n" space="4"><mjx-c class="mjx-c31"></mjx-c></mjx-mn><mjx-mo class="mjx-n"><mjx-c class="mjx-c2C"></mjx-c></mjx-mo><mjx-mo class="mjx-n" space="2"><mjx-c class="mjx-c2026"></mjx-c></mjx-mo><mjx-mo class="mjx-n" space="2"><mjx-c class="mjx-c2C"></mjx-c></mjx-mo><mjx-mi class="mjx-i" space="2"><mjx-c class="mjx-c1D45A TEX-I"></mjx-c></mjx-mi><mjx-mo class="mjx-n"><mjx-c class="mjx-c2C"></mjx-c></mjx-mo><mjx-tstrut></mjx-tstrut></mjx-mtd></mjx-mtr><mjx-mtr><mjx-mtd style="text-align: left; padding-right: 0.5em; padding-top: 0.1em;"><mjx-munderover limits="false"><mjx-mo class="mjx-sop"><mjx-c class="mjx-c2211 TEX-S1"></mjx-c></mjx-mo><mjx-script style="vertical-align: -0.285em; margin-left: 0px;"><mjx-texatom size="s" texclass="ORD"><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D45A TEX-I"></mjx-c></mjx-mi></mjx-texatom><mjx-spacer style="margin-top: 0.284em;"></mjx-spacer><mjx-texatom size="s" texclass="ORD"><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D456 TEX-I"></mjx-c></mjx-mi><mjx-mo class="mjx-n"><mjx-c class="mjx-c3D"></mjx-c></mjx-mo><mjx-mn class="mjx-n"><mjx-c class="mjx-c31"></mjx-c></mjx-mn></mjx-texatom></mjx-script></mjx-munderover><mjx-msub space="2"><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D45F TEX-I"></mjx-c></mjx-mi><mjx-script style="vertical-align: -0.15em;"><mjx-texatom size="s" texclass="ORD"><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D456 TEX-I"></mjx-c></mjx-mi></mjx-texatom></mjx-script></mjx-msub><mjx-msub><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D460 TEX-I"></mjx-c></mjx-mi><mjx-script style="vertical-align: -0.15em;"><mjx-texatom size="s" texclass="ORD"><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D456 TEX-I"></mjx-c></mjx-mi><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D457 TEX-I"></mjx-c></mjx-mi></mjx-texatom></mjx-script></mjx-msub><mjx-mo class="mjx-n" space="4"><mjx-c class="mjx-c3D"></mjx-c></mjx-mo><mjx-mn class="mjx-n" space="4"><mjx-c class="mjx-c30"></mjx-c></mjx-mn><mjx-mo class="mjx-n"><mjx-c class="mjx-c2C"></mjx-c></mjx-mo><mjx-tstrut></mjx-tstrut></mjx-mtd><mjx-mtd style="text-align: left; padding-left: 0.5em; padding-top: 0.1em;"><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D457 TEX-I"></mjx-c></mjx-mi><mjx-mo class="mjx-n" space="4"><mjx-c class="mjx-c3D"></mjx-c></mjx-mo><mjx-mn class="mjx-n" space="4"><mjx-c class="mjx-c31"></mjx-c></mjx-mn><mjx-mo class="mjx-n"><mjx-c class="mjx-c2C"></mjx-c></mjx-mo><mjx-mo class="mjx-n" space="2"><mjx-c class="mjx-c2026"></mjx-c></mjx-mo><mjx-mo class="mjx-n" space="2"><mjx-c class="mjx-c2C"></mjx-c></mjx-mo><mjx-mi class="mjx-i" space="2"><mjx-c class="mjx-c1D45B TEX-I"></mjx-c></mjx-mi><mjx-mo class="mjx-n"><mjx-c class="mjx-c2E"></mjx-c></mjx-mo><mjx-tstrut></mjx-tstrut></mjx-mtd></mjx-mtr></mjx-itable></mjx-table></mjx-mtable><mjx-mo class="mjx-n" style="vertical-align: 0.25em;"></mjx-mo></mjx-mrow></mjx-math></mjx-container></span></div></li>
+<ol>
+<li data-line="3" dir="auto" class="editing-suite-custom-list-item" data-editing-suite-custom-list-marker="(1)"><span class="math math-inline is-loaded"><mjx-container class="MathJax" jax="CHTML"><mjx-math class="MJX-TEX"><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D440 TEX-I"></mjx-c></mjx-mi></mjx-math></mjx-container></span> 为平坦模.</li>
+<li data-line="4" dir="auto" class="editing-suite-custom-list-item" data-editing-suite-custom-list-marker="(2)">对任意 <span class="math math-inline is-loaded"><mjx-container class="MathJax" jax="CHTML"><mjx-math class="MJX-TEX"><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D445 TEX-I"></mjx-c></mjx-mi></mjx-math></mjx-container></span> 模同态短正合列 <span class="math math-inline is-loaded"><mjx-container class="MathJax" jax="CHTML"><mjx-math class="MJX-TEX"><mjx-texatom texclass="ORD"></mjx-texatom><mjx-mn class="mjx-n"><mjx-c class="mjx-c30"></mjx-c></mjx-mn><mjx-mo class="mjx-n" space="4"><mjx-c class="mjx-c2192"></mjx-c></mjx-mo><mjx-mi class="mjx-i" space="4"><mjx-c class="mjx-c1D434 TEX-I"></mjx-c></mjx-mi><mjx-mover space="4"><mjx-over style="padding-bottom: 0.111em; padding-left: 0.306em;"><mjx-mi class="mjx-i" size="s"><mjx-c class="mjx-c1D453 TEX-I"></mjx-c></mjx-mi></mjx-over><mjx-base><mjx-mo class="mjx-n"><mjx-c class="mjx-c2192"></mjx-c></mjx-mo></mjx-base></mjx-mover><mjx-mi class="mjx-i" space="4"><mjx-c class="mjx-c1D435 TEX-I"></mjx-c></mjx-mi><mjx-mover space="4"><mjx-over style="padding-bottom: 0.111em; padding-left: 0.331em;"><mjx-mi class="mjx-i" size="s"><mjx-c class="mjx-c1D454 TEX-I"></mjx-c></mjx-mi></mjx-over><mjx-base><mjx-mo class="mjx-n"><mjx-c class="mjx-c2192"></mjx-c></mjx-mo></mjx-base></mjx-mover><mjx-mi class="mjx-i" space="4"><mjx-c class="mjx-c1D436 TEX-I"></mjx-c></mjx-mi><mjx-mo class="mjx-n" space="4"><mjx-c class="mjx-c2192"></mjx-c></mjx-mo><mjx-mn class="mjx-n" space="4"><mjx-c class="mjx-c30"></mjx-c></mjx-mn></mjx-math></mjx-container></span>, <span class="math math-inline is-loaded"><mjx-container class="MathJax" jax="CHTML"><mjx-math class="MJX-TEX"><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D440 TEX-I"></mjx-c></mjx-mi></mjx-math></mjx-container></span> 使得如下序列正合: <span class="math math-block is-loaded"><mjx-container class="MathJax" jax="CHTML" display="true"><mjx-math display="true" class="MJX-TEX" style="margin-left: 0px; margin-right: 0px;"><mjx-mn class="mjx-n"><mjx-c class="mjx-c30"></mjx-c></mjx-mn><mjx-mo class="mjx-n" space="4"><mjx-c class="mjx-c2192"></mjx-c></mjx-mo><mjx-mi class="mjx-i" space="4"><mjx-c class="mjx-c1D440 TEX-I"></mjx-c></mjx-mi><mjx-msub space="3"><mjx-mo class="mjx-n"><mjx-c class="mjx-c2297"></mjx-c></mjx-mo><mjx-script style="vertical-align: -0.15em;"><mjx-texatom size="s" texclass="ORD"><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D445 TEX-I"></mjx-c></mjx-mi></mjx-texatom></mjx-script></mjx-msub><mjx-mi class="mjx-i" space="3"><mjx-c class="mjx-c1D434 TEX-I"></mjx-c></mjx-mi><mjx-mover space="4"><mjx-over style="padding-bottom: 0.111em;"><mjx-mrow size="s"><mjx-msub><mjx-texatom texclass="ORD"><mjx-mi class="mjx-n"><mjx-c class="mjx-c69"></mjx-c><mjx-c class="mjx-c64"></mjx-c></mjx-mi></mjx-texatom><mjx-script style="vertical-align: -0.15em;"><mjx-texatom size="s" texclass="ORD"><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D440 TEX-I"></mjx-c></mjx-mi></mjx-texatom></mjx-script></mjx-msub><mjx-mo class="mjx-n"><mjx-c class="mjx-c2297"></mjx-c></mjx-mo><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D453 TEX-I"></mjx-c></mjx-mi></mjx-mrow></mjx-over><mjx-base style="padding-left: 0.237em;"><mjx-mo class="mjx-n"><mjx-c class="mjx-c27F6"></mjx-c></mjx-mo></mjx-base></mjx-mover><mjx-mi class="mjx-i" space="4"><mjx-c class="mjx-c1D440 TEX-I"></mjx-c></mjx-mi><mjx-msub space="3"><mjx-mo class="mjx-n"><mjx-c class="mjx-c2297"></mjx-c></mjx-mo><mjx-script style="vertical-align: -0.15em;"><mjx-texatom size="s" texclass="ORD"><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D445 TEX-I"></mjx-c></mjx-mi></mjx-texatom></mjx-script></mjx-msub><mjx-mi class="mjx-i" space="3"><mjx-c class="mjx-c1D435 TEX-I"></mjx-c></mjx-mi><mjx-mover space="4"><mjx-over style="padding-bottom: 0.111em;"><mjx-mrow size="s"><mjx-msub><mjx-texatom texclass="ORD"><mjx-mi class="mjx-n"><mjx-c class="mjx-c69"></mjx-c><mjx-c class="mjx-c64"></mjx-c></mjx-mi></mjx-texatom><mjx-script style="vertical-align: -0.15em;"><mjx-texatom size="s" texclass="ORD"><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D440 TEX-I"></mjx-c></mjx-mi></mjx-texatom></mjx-script></mjx-msub><mjx-mo class="mjx-n"><mjx-c class="mjx-c2297"></mjx-c></mjx-mo><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D454 TEX-I"></mjx-c></mjx-mi></mjx-mrow></mjx-over><mjx-base style="padding-left: 0.212em;"><mjx-mo class="mjx-n"><mjx-c class="mjx-c27F6"></mjx-c></mjx-mo></mjx-base></mjx-mover><mjx-mi class="mjx-i" space="4"><mjx-c class="mjx-c1D440 TEX-I"></mjx-c></mjx-mi><mjx-msub space="3"><mjx-mo class="mjx-n"><mjx-c class="mjx-c2297"></mjx-c></mjx-mo><mjx-script style="vertical-align: -0.15em;"><mjx-texatom size="s" texclass="ORD"><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D445 TEX-I"></mjx-c></mjx-mi></mjx-texatom></mjx-script></mjx-msub><mjx-mi class="mjx-i" space="3"><mjx-c class="mjx-c1D436 TEX-I"></mjx-c></mjx-mi><mjx-mo class="mjx-n" space="4"><mjx-c class="mjx-c2192"></mjx-c></mjx-mo><mjx-mn class="mjx-n" space="4"><mjx-c class="mjx-c30"></mjx-c><mjx-c class="mjx-c2E"></mjx-c></mjx-mn></mjx-math></mjx-container></span></li>
+<li data-line="5" dir="auto" class="editing-suite-custom-list-item" data-editing-suite-custom-list-marker="(3)">对 <span class="math math-inline is-loaded"><mjx-container class="MathJax" jax="CHTML"><mjx-math class="MJX-TEX"><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D445 TEX-I"></mjx-c></mjx-mi></mjx-math></mjx-container></span> 的任意理想 <span class="math math-inline is-loaded"><mjx-container class="MathJax" jax="CHTML"><mjx-math class="MJX-TEX"><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D446 TEX-I"></mjx-c></mjx-mi></mjx-math></mjx-container></span>, 都有正合列: <span class="math math-inline is-loaded"><mjx-container class="MathJax" jax="CHTML"><mjx-math class="MJX-TEX"><mjx-texatom texclass="ORD"></mjx-texatom><mjx-mn class="mjx-n"><mjx-c class="mjx-c30"></mjx-c></mjx-mn><mjx-mo class="mjx-n" space="4"><mjx-c class="mjx-c2192"></mjx-c></mjx-mo><mjx-mi class="mjx-i" space="4"><mjx-c class="mjx-c1D440 TEX-I"></mjx-c></mjx-mi><mjx-msub space="3"><mjx-mo class="mjx-n"><mjx-c class="mjx-c2297"></mjx-c></mjx-mo><mjx-script style="vertical-align: -0.15em;"><mjx-texatom size="s" texclass="ORD"><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D445 TEX-I"></mjx-c></mjx-mi></mjx-texatom></mjx-script></mjx-msub><mjx-mi class="mjx-i" space="3"><mjx-c class="mjx-c1D446 TEX-I"></mjx-c></mjx-mi><mjx-mover space="4"><mjx-over style="padding-bottom: 0.111em;"><mjx-mrow size="s"><mjx-msub><mjx-texatom texclass="ORD"><mjx-mi class="mjx-n"><mjx-c class="mjx-c69"></mjx-c><mjx-c class="mjx-c64"></mjx-c></mjx-mi></mjx-texatom><mjx-script style="vertical-align: -0.15em;"><mjx-texatom size="s" texclass="ORD"><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D440 TEX-I"></mjx-c></mjx-mi></mjx-texatom></mjx-script></mjx-msub><mjx-mo class="mjx-n"><mjx-c class="mjx-c2297"></mjx-c></mjx-mo><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D456 TEX-I"></mjx-c></mjx-mi></mjx-mrow></mjx-over><mjx-base style="padding-left: 0.165em;"><mjx-mo class="mjx-n"><mjx-c class="mjx-c27F6"></mjx-c></mjx-mo></mjx-base></mjx-mover><mjx-mi class="mjx-i" space="4"><mjx-c class="mjx-c1D440 TEX-I"></mjx-c></mjx-mi><mjx-msub space="3"><mjx-mo class="mjx-n"><mjx-c class="mjx-c2297"></mjx-c></mjx-mo><mjx-script style="vertical-align: -0.15em;"><mjx-texatom size="s" texclass="ORD"><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D445 TEX-I"></mjx-c></mjx-mi></mjx-texatom></mjx-script></mjx-msub><mjx-mi class="mjx-i" space="3"><mjx-c class="mjx-c1D445 TEX-I"></mjx-c></mjx-mi></mjx-math></mjx-container></span>, 其中 <span class="math math-inline is-loaded"><mjx-container class="MathJax" jax="CHTML"><mjx-math class="MJX-TEX"><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D456 TEX-I"></mjx-c></mjx-mi><mjx-mo class="mjx-n" space="4"><mjx-c class="mjx-c3A"></mjx-c></mjx-mo><mjx-mi class="mjx-i" space="4"><mjx-c class="mjx-c1D446 TEX-I"></mjx-c></mjx-mi><mjx-mo class="mjx-n" space="4"><mjx-c class="mjx-c21AA"></mjx-c></mjx-mo><mjx-mi class="mjx-i" space="4"><mjx-c class="mjx-c1D445 TEX-I"></mjx-c></mjx-mi></mjx-math></mjx-container></span> 为包含映射.</li>
+<li data-line="6" dir="auto" class="editing-suite-custom-list-item" data-editing-suite-custom-list-marker="(4)">对任意线性关系式 <span class="math math-inline is-loaded"><mjx-container class="MathJax" jax="CHTML"><mjx-math class="MJX-TEX"><mjx-munderover limits="false"><mjx-mo class="mjx-sop"><mjx-c class="mjx-c2211 TEX-S1"></mjx-c></mjx-mo><mjx-script style="vertical-align: -0.285em; margin-left: 0px;"><mjx-texatom size="s" texclass="ORD"><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D45A TEX-I"></mjx-c></mjx-mi></mjx-texatom><mjx-spacer style="margin-top: 0.284em;"></mjx-spacer><mjx-texatom size="s" texclass="ORD"><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D456 TEX-I"></mjx-c></mjx-mi><mjx-mo class="mjx-n"><mjx-c class="mjx-c3D"></mjx-c></mjx-mo><mjx-mn class="mjx-n"><mjx-c class="mjx-c31"></mjx-c></mjx-mn></mjx-texatom></mjx-script></mjx-munderover><mjx-msub space="2"><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D45F TEX-I"></mjx-c></mjx-mi><mjx-script style="vertical-align: -0.15em;"><mjx-texatom size="s" texclass="ORD"><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D456 TEX-I"></mjx-c></mjx-mi></mjx-texatom></mjx-script></mjx-msub><mjx-msub><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D465 TEX-I"></mjx-c></mjx-mi><mjx-script style="vertical-align: -0.15em;"><mjx-texatom size="s" texclass="ORD"><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D456 TEX-I"></mjx-c></mjx-mi></mjx-texatom></mjx-script></mjx-msub><mjx-mo class="mjx-n" space="4"><mjx-c class="mjx-c3D"></mjx-c></mjx-mo><mjx-mn class="mjx-n" space="4"><mjx-c class="mjx-c30"></mjx-c></mjx-mn></mjx-math></mjx-container></span>, 存在 <span class="math math-inline is-loaded"><mjx-container class="MathJax" jax="CHTML"><mjx-math class="MJX-TEX"><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D45B TEX-I"></mjx-c></mjx-mi><mjx-mo class="mjx-n" space="4"><mjx-c class="mjx-c2208"></mjx-c></mjx-mo><mjx-texatom space="4" texclass="ORD"><mjx-mi class="mjx-ds mjx-b"><mjx-c class="mjx-c2124 TEX-A"></mjx-c></mjx-mi></mjx-texatom></mjx-math></mjx-container></span> 和 <span class="math math-inline is-loaded"><mjx-container class="MathJax" jax="CHTML"><mjx-math class="MJX-TEX"><mjx-msub><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D460 TEX-I"></mjx-c></mjx-mi><mjx-script style="vertical-align: -0.15em;"><mjx-texatom size="s" texclass="ORD"><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D456 TEX-I"></mjx-c></mjx-mi><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D457 TEX-I"></mjx-c></mjx-mi></mjx-texatom></mjx-script></mjx-msub><mjx-mo class="mjx-n" space="4"><mjx-c class="mjx-c2208"></mjx-c></mjx-mo><mjx-mi class="mjx-i" space="4"><mjx-c class="mjx-c1D445 TEX-I"></mjx-c></mjx-mi></mjx-math></mjx-container></span>, <span class="math math-inline is-loaded"><mjx-container class="MathJax" jax="CHTML"><mjx-math class="MJX-TEX"><mjx-msub><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D466 TEX-I"></mjx-c></mjx-mi><mjx-script style="vertical-align: -0.15em;"><mjx-texatom size="s" texclass="ORD"><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D457 TEX-I"></mjx-c></mjx-mi></mjx-texatom></mjx-script></mjx-msub><mjx-mo class="mjx-n" space="4"><mjx-c class="mjx-c2208"></mjx-c></mjx-mo><mjx-mi class="mjx-i" space="4"><mjx-c class="mjx-c1D440 TEX-I"></mjx-c></mjx-mi></mjx-math></mjx-container></span>, 使得 <span class="math math-block is-loaded"><mjx-container class="MathJax" jax="CHTML" display="true"><mjx-math display="true" class="MJX-TEX" style="margin-left: 0px; margin-right: 0px;"><mjx-mrow><mjx-mo class="mjx-s3"><mjx-c class="mjx-c7B TEX-S3"></mjx-c></mjx-mo><mjx-mtable style="min-width: 13.525em;"><mjx-table><mjx-itable><mjx-mtr><mjx-mtd style="text-align: left; padding-right: 0.5em; padding-bottom: 0.1em;"><mjx-msub><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D465 TEX-I"></mjx-c></mjx-mi><mjx-script style="vertical-align: -0.15em;"><mjx-texatom size="s" texclass="ORD"><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D456 TEX-I"></mjx-c></mjx-mi></mjx-texatom></mjx-script></mjx-msub><mjx-mo class="mjx-n" space="4"><mjx-c class="mjx-c3D"></mjx-c></mjx-mo><mjx-munderover space="4" limits="false"><mjx-mo class="mjx-sop"><mjx-c class="mjx-c2211 TEX-S1"></mjx-c></mjx-mo><mjx-script style="vertical-align: -0.285em; margin-left: 0px;"><mjx-texatom size="s" texclass="ORD"><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D45B TEX-I"></mjx-c></mjx-mi></mjx-texatom><mjx-spacer style="margin-top: 0.284em;"></mjx-spacer><mjx-texatom size="s" texclass="ORD"><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D457 TEX-I"></mjx-c></mjx-mi><mjx-mo class="mjx-n"><mjx-c class="mjx-c3D"></mjx-c></mjx-mo><mjx-mn class="mjx-n"><mjx-c class="mjx-c31"></mjx-c></mjx-mn></mjx-texatom></mjx-script></mjx-munderover><mjx-msub space="2"><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D460 TEX-I"></mjx-c></mjx-mi><mjx-script style="vertical-align: -0.15em;"><mjx-texatom size="s" texclass="ORD"><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D456 TEX-I"></mjx-c></mjx-mi><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D457 TEX-I"></mjx-c></mjx-mi></mjx-texatom></mjx-script></mjx-msub><mjx-msub><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D466 TEX-I"></mjx-c></mjx-mi><mjx-script style="vertical-align: -0.15em;"><mjx-texatom size="s" texclass="ORD"><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D457 TEX-I"></mjx-c></mjx-mi></mjx-texatom></mjx-script></mjx-msub><mjx-mo class="mjx-n"><mjx-c class="mjx-c2C"></mjx-c></mjx-mo><mjx-tstrut></mjx-tstrut></mjx-mtd><mjx-mtd style="text-align: left; padding-left: 0.5em; padding-bottom: 0.1em;"><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D456 TEX-I"></mjx-c></mjx-mi><mjx-mo class="mjx-n" space="4"><mjx-c class="mjx-c3D"></mjx-c></mjx-mo><mjx-mn class="mjx-n" space="4"><mjx-c class="mjx-c31"></mjx-c></mjx-mn><mjx-mo class="mjx-n"><mjx-c class="mjx-c2C"></mjx-c></mjx-mo><mjx-mo class="mjx-n" space="2"><mjx-c class="mjx-c2026"></mjx-c></mjx-mo><mjx-mo class="mjx-n" space="2"><mjx-c class="mjx-c2C"></mjx-c></mjx-mo><mjx-mi class="mjx-i" space="2"><mjx-c class="mjx-c1D45A TEX-I"></mjx-c></mjx-mi><mjx-mo class="mjx-n"><mjx-c class="mjx-c2C"></mjx-c></mjx-mo><mjx-tstrut></mjx-tstrut></mjx-mtd></mjx-mtr><mjx-mtr><mjx-mtd style="text-align: left; padding-right: 0.5em; padding-top: 0.1em;"><mjx-munderover limits="false"><mjx-mo class="mjx-sop"><mjx-c class="mjx-c2211 TEX-S1"></mjx-c></mjx-mo><mjx-script style="vertical-align: -0.285em; margin-left: 0px;"><mjx-texatom size="s" texclass="ORD"><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D45A TEX-I"></mjx-c></mjx-mi></mjx-texatom><mjx-spacer style="margin-top: 0.284em;"></mjx-spacer><mjx-texatom size="s" texclass="ORD"><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D456 TEX-I"></mjx-c></mjx-mi><mjx-mo class="mjx-n"><mjx-c class="mjx-c3D"></mjx-c></mjx-mo><mjx-mn class="mjx-n"><mjx-c class="mjx-c31"></mjx-c></mjx-mn></mjx-texatom></mjx-script></mjx-munderover><mjx-msub space="2"><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D45F TEX-I"></mjx-c></mjx-mi><mjx-script style="vertical-align: -0.15em;"><mjx-texatom size="s" texclass="ORD"><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D456 TEX-I"></mjx-c></mjx-mi></mjx-texatom></mjx-script></mjx-msub><mjx-msub><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D460 TEX-I"></mjx-c></mjx-mi><mjx-script style="vertical-align: -0.15em;"><mjx-texatom size="s" texclass="ORD"><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D456 TEX-I"></mjx-c></mjx-mi><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D457 TEX-I"></mjx-c></mjx-mi></mjx-texatom></mjx-script></mjx-msub><mjx-mo class="mjx-n" space="4"><mjx-c class="mjx-c3D"></mjx-c></mjx-mo><mjx-mn class="mjx-n" space="4"><mjx-c class="mjx-c30"></mjx-c></mjx-mn><mjx-mo class="mjx-n"><mjx-c class="mjx-c2C"></mjx-c></mjx-mo><mjx-tstrut></mjx-tstrut></mjx-mtd><mjx-mtd style="text-align: left; padding-left: 0.5em; padding-top: 0.1em;"><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D457 TEX-I"></mjx-c></mjx-mi><mjx-mo class="mjx-n" space="4"><mjx-c class="mjx-c3D"></mjx-c></mjx-mo><mjx-mn class="mjx-n" space="4"><mjx-c class="mjx-c31"></mjx-c></mjx-mn><mjx-mo class="mjx-n"><mjx-c class="mjx-c2C"></mjx-c></mjx-mo><mjx-mo class="mjx-n" space="2"><mjx-c class="mjx-c2026"></mjx-c></mjx-mo><mjx-mo class="mjx-n" space="2"><mjx-c class="mjx-c2C"></mjx-c></mjx-mo><mjx-mi class="mjx-i" space="2"><mjx-c class="mjx-c1D45B TEX-I"></mjx-c></mjx-mi><mjx-mo class="mjx-n"><mjx-c class="mjx-c2E"></mjx-c></mjx-mo><mjx-tstrut></mjx-tstrut></mjx-mtd></mjx-mtr></mjx-itable></mjx-table></mjx-mtable><mjx-mo class="mjx-n" style="vertical-align: 0.25em;"></mjx-mo></mjx-mrow></mjx-math></mjx-container></span></li>
 </ol>
 </div></div></div><div class="el-p"><p dir="auto"><a data-tooltip-position="top" aria-label="^prp-ac283d" data-href="#^prp-ac283d" href="抽象代数/模/平坦模.html#^prp-ac283d" class="internal-link" target="_self" rel="noopener nofollow">命题 3.9.1</a> (4) 不太好, 我们举个例子:</p></div><div class="el-div"><div data-callout-metadata="" data-callout-fold="" data-callout="example" class="callout mathcraft-style-latex"><div class="callout-title" dir="auto"><div class="callout-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="svg-icon lucide-list"><path d="M3 5h.01"></path><path d="M3 12h.01"></path><path d="M3 19h.01"></path><path d="M8 5h13"></path><path d="M8 12h13"></path><path d="M8 19h13"></path></svg></div><div class="callout-title-inner">例 3.9.1</div></div><div class="callout-content">
 <p dir="auto">取 <span class="math math-inline is-loaded"><mjx-container class="MathJax" jax="CHTML"><mjx-math class="MJX-TEX"><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D445 TEX-I"></mjx-c></mjx-mi><mjx-mo class="mjx-n" space="4"><mjx-c class="mjx-c3D"></mjx-c></mjx-mo><mjx-texatom space="4" texclass="ORD"><mjx-mi class="mjx-ds mjx-b"><mjx-c class="mjx-c2102 TEX-A"></mjx-c></mjx-mi></mjx-texatom><mjx-mo class="mjx-n"><mjx-c class="mjx-c5B"></mjx-c></mjx-mo><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D465 TEX-I"></mjx-c></mjx-mi><mjx-mo class="mjx-n"><mjx-c class="mjx-c2C"></mjx-c></mjx-mo><mjx-mi class="mjx-i" space="2"><mjx-c class="mjx-c1D466 TEX-I"></mjx-c></mjx-mi><mjx-mo class="mjx-n"><mjx-c class="mjx-c5D"></mjx-c></mjx-mo></mjx-math></mjx-container></span>, <span class="math math-inline is-loaded"><mjx-container class="MathJax" jax="CHTML"><mjx-math class="MJX-TEX"><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D440 TEX-I"></mjx-c></mjx-mi><mjx-mo class="mjx-n" space="4"><mjx-c class="mjx-c3D"></mjx-c></mjx-mo><mjx-texatom space="4" texclass="ORD"><mjx-mi class="mjx-ds mjx-b"><mjx-c class="mjx-c2102 TEX-A"></mjx-c></mjx-mi></mjx-texatom><mjx-mo class="mjx-n"><mjx-c class="mjx-c5B"></mjx-c></mjx-mo><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D465 TEX-I"></mjx-c></mjx-mi><mjx-mo class="mjx-n"><mjx-c class="mjx-c2C"></mjx-c></mjx-mo><mjx-mi class="mjx-i" space="2"><mjx-c class="mjx-c1D466 TEX-I"></mjx-c></mjx-mi><mjx-mo class="mjx-n"><mjx-c class="mjx-c2C"></mjx-c></mjx-mo><mjx-mi class="mjx-i" space="2"><mjx-c class="mjx-c1D467 TEX-I"></mjx-c></mjx-mi><mjx-mo class="mjx-n"><mjx-c class="mjx-c5D"></mjx-c></mjx-mo><mjx-texatom texclass="ORD"><mjx-mo class="mjx-n"><mjx-c class="mjx-c2F"></mjx-c></mjx-mo></mjx-texatom><mjx-mrow space="2"><mjx-mo class="mjx-n"><mjx-c class="mjx-c27E8"></mjx-c></mjx-mo><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D465 TEX-I"></mjx-c></mjx-mi><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D467 TEX-I"></mjx-c></mjx-mi><mjx-mo class="mjx-n" space="3"><mjx-c class="mjx-c2212"></mjx-c></mjx-mo><mjx-mi class="mjx-i" space="3"><mjx-c class="mjx-c1D466 TEX-I"></mjx-c></mjx-mi><mjx-mo class="mjx-n"><mjx-c class="mjx-c27E9"></mjx-c></mjx-mo></mjx-mrow></mjx-math></mjx-container></span>, 说明 <span class="math math-inline is-loaded"><mjx-container class="MathJax" jax="CHTML"><mjx-math class="MJX-TEX"><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D440 TEX-I"></mjx-c></mjx-mi></mjx-math></mjx-container></span> 不为平坦 <span class="math math-inline is-loaded"><mjx-container class="MathJax" jax="CHTML"><mjx-math class="MJX-TEX"><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D445 TEX-I"></mjx-c></mjx-mi></mjx-math></mjx-container></span> 模.</p>
@@ -923,4 +508,4 @@ mjx-c.mjx-c29::before { padding: 0.75em 0.389em 0.25em 0px; content: ")"; }</sty
 <p dir="auto">设 <span class="math math-inline is-loaded"><mjx-container class="MathJax" jax="CHTML"><mjx-math class="MJX-TEX"><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D445 TEX-I"></mjx-c></mjx-mi></mjx-math></mjx-container></span> 为交换幺环, <span class="math math-inline is-loaded"><mjx-container class="MathJax" jax="CHTML"><mjx-math class="MJX-TEX"><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D440 TEX-I"></mjx-c></mjx-mi></mjx-math></mjx-container></span> 为 <span class="math math-inline is-loaded"><mjx-container class="MathJax" jax="CHTML"><mjx-math class="MJX-TEX"><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D445 TEX-I"></mjx-c></mjx-mi></mjx-math></mjx-container></span> 模, 若 <span class="math math-inline is-loaded"><mjx-container class="MathJax" jax="CHTML"><mjx-math class="MJX-TEX"><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D440 TEX-I"></mjx-c></mjx-mi></mjx-math></mjx-container></span> 为投射模, 则 <span class="math math-inline is-loaded"><mjx-container class="MathJax" jax="CHTML"><mjx-math class="MJX-TEX"><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D440 TEX-I"></mjx-c></mjx-mi></mjx-math></mjx-container></span> 为平坦模.</p>
 </div></div></div><div class="el-p"><p dir="auto">当 <span class="math math-inline is-loaded"><mjx-container class="MathJax" jax="CHTML"><mjx-math class="MJX-TEX"><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D445 TEX-I"></mjx-c></mjx-mi></mjx-math></mjx-container></span> 为主理想整环时, 可以给出平坦模的更细致刻画:</p></div><div class="el-div"><div data-callout-metadata="" data-callout-fold="" data-callout="proposition" class="callout mathcraft-style-latex"><div class="callout-title" dir="auto"><div class="callout-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="svg-icon lucide-pencil"><path d="M21.174 6.812a1 1 0 0 0-3.986-3.987L3.842 16.174a2 2 0 0 0-.5.83l-1.321 4.352a.5.5 0 0 0 .623.622l4.353-1.32a2 2 0 0 0 .83-.497z"></path><path d="m15 5 4 4"></path></svg></div><div class="callout-title-inner">命题 3.9.3</div></div><div class="callout-content">
 <p dir="auto">设 <span class="math math-inline is-loaded"><mjx-container class="MathJax" jax="CHTML"><mjx-math class="MJX-TEX"><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D445 TEX-I"></mjx-c></mjx-mi></mjx-math></mjx-container></span> 为交换幺环, 若 <span class="math math-inline is-loaded"><mjx-container class="MathJax" jax="CHTML"><mjx-math class="MJX-TEX"><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D445 TEX-I"></mjx-c></mjx-mi></mjx-math></mjx-container></span> 进一步为主理想整环, 则 <span class="math math-inline is-loaded"><mjx-container class="MathJax" jax="CHTML"><mjx-math class="MJX-TEX"><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D445 TEX-I"></mjx-c></mjx-mi></mjx-math></mjx-container></span> 模 <span class="math math-inline is-loaded"><mjx-container class="MathJax" jax="CHTML"><mjx-math class="MJX-TEX"><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D440 TEX-I"></mjx-c></mjx-mi></mjx-math></mjx-container></span> 为平坦模当且仅当 <span class="math math-inline is-loaded"><mjx-container class="MathJax" jax="CHTML"><mjx-math class="MJX-TEX"><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D440 TEX-I"></mjx-c></mjx-mi></mjx-math></mjx-container></span> 无扭 (即不存在非零扭元, 见<a data-tooltip-position="top" aria-label="模的基本概念 &gt; ^def-551995" data-href="模的基本概念#^def-551995" href="抽象代数/模/模的基本概念.html#^def-551995" class="internal-link" target="_self" rel="noopener nofollow">定义 3.1.7</a>).</p>
-</div></div></div><div class="footer"><div class="data-bar"></div></div></div></div></div><div id="right-content" class="leaf" style="--sidebar-width:var(--sidebar-width-right)"><div id="right-sidebar" class="sidebar"><div class="sidebar-handle"></div><div class="sidebar-topbar"><div class="topbar-content"><label class="theme-toggle-container" for="theme-toggle-input"><input class="theme-toggle-input" type="checkbox" id="theme-toggle-input"><div class="toggle-background"></div></label></div><div class="clickable-icon sidebar-collapse-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="svg-icon sidebar-toggle-button-icon"><rect x="1" y="2" width="22" height="20" rx="4"></rect><rect x="4" y="5" width="2" height="14" rx="2" fill="currentColor" class="sidebar-toggle-icon-inner"></rect></svg></div></div><div class="sidebar-content-wrapper"><div id="right-sidebar-content" class="leaf-content"><div id="outline" class="tree-container"><div class="feature-header"><div class="feature-title">目录</div></div></div></div></div><script defer>const rs=document.querySelector('#right-sidebar');rs.classList.toggle('is-collapsed',innerWidth<768);rs.style.setProperty('--sidebar-width',localStorage.getItem('sidebar-right-width'));</script></div></div></div></div></body></html>
+</div></div></div><div class="footer"><div class="data-bar"></div></div></div></div></div><div id="right-content" class="leaf" style="--sidebar-width:var(--sidebar-width-right)"><div id="right-sidebar" class="sidebar"><div class="sidebar-handle"></div><div class="sidebar-topbar"><div class="topbar-content"><label class="theme-toggle-container" for="theme-toggle-input"><input class="theme-toggle-input" type="checkbox" id="theme-toggle-input"><div class="toggle-background"></div></label></div><button type="button" class="clickable-icon sidebar-collapse-icon" aria-label="切换右侧栏"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="svg-icon sidebar-toggle-button-icon"><rect x="1" y="2" width="22" height="20" rx="4"></rect><rect x="4" y="5" width="2" height="14" rx="2" fill="currentColor" class="sidebar-toggle-icon-inner"></rect></svg></button></div><div class="sidebar-content-wrapper"><div id="right-sidebar-content" class="leaf-content"><div id="outline" class="tree-container"><div class="feature-header"><div class="feature-title">目录</div></div></div></div></div><script defer>const rs=document.querySelector('#right-sidebar');rs.classList.toggle('is-collapsed',innerWidth<768);rs.style.setProperty('--sidebar-width',localStorage.getItem('sidebar-right-width'));</script></div></div></div></div></body></html>

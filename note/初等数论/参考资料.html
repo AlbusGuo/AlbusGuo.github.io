@@ -1,419 +1,4 @@
-<!DOCTYPE html><html lang="zh-CN"><head><title>参考资料</title><base href=".."><meta name="pathname" content="初等数论/参考资料.html"><meta name="description" content="参考文献 [1]闵嗣鹤. 初等数论. 4 版. 高等教育出版社, 2020. 相关课程 [1]赵桃艳. 初等数论."><meta property="og:title" content="参考资料"><meta property="og:description" content="参考文献 [1]闵嗣鹤. 初等数论. 4 版. 高等教育出版社, 2020. 相关课程 [1]赵桃艳. 初等数论."><meta property="og:type" content="website"><meta property="og:url" content="初等数论/参考资料.html"><meta charset="UTF-8"><meta property="og:site_name" content="数学"><meta name="viewport" content="width=device-width,initial-scale=1.0,user-scalable=yes,minimum-scale=1.0,maximum-scale=5.0"><script async id="webpage-script" src="site-lib/scripts/webpage.js" onload="this.onload=null;this.setAttribute('loaded','true')"></script><script defer src="site-lib/scripts/notebook-navigation.js"></script><link rel="preload" href="site-lib/styles/snippets.css" as="style" onload="this.onload=null;this.rel='stylesheet'"><noscript><link rel="stylesheet" href="site-lib/styles/snippets.css"></noscript><link rel="stylesheet" href="site-lib/styles/obsidian.css"><link rel="preload" href="site-lib/styles/other-plugins.css" as="style" onload="this.onload=null;this.rel='stylesheet'"><noscript><link rel="stylesheet" href="site-lib/styles/other-plugins.css"></noscript><link rel="stylesheet" href="site-lib/styles/theme.css"><link rel="preload" href="site-lib/styles/global-variable-styles.css" as="style" onload="this.onload=null;this.rel='stylesheet'"><noscript><link rel="stylesheet" href="site-lib/styles/global-variable-styles.css"></noscript><link rel="preload" href="site-lib/styles/supported-plugins.css" as="style" onload="this.onload=null;this.rel='stylesheet'"><noscript><link rel="stylesheet" href="site-lib/styles/supported-plugins.css"></noscript><link rel="preload" href="site-lib/styles/main-styles.css" as="style" onload="this.onload=null;this.rel='stylesheet'"><noscript><link rel="stylesheet" href="site-lib/styles/main-styles.css"></noscript><style>/* Define default values for variables */
-body
-{
-    --line-width: 40em;
-    --line-width-adaptive: 40em;
-    --file-line-width: 40em;
-    --sidebar-width: min(20em, 80vw);
-    --collapse-arrow-size: 11px;
-    --tree-vertical-spacing: 1.3em;
-    --sidebar-margin: 12px;
-}
-
-:root
-{
-    background-color: #202124;
-}
-
-/*#region Sidebars */
-
-.sidebar {
-    height: 100%;
-    font-size: 14px;
-    z-index: 10;
-    min-width: calc(var(--sidebar-width) + var(--divider-width-hover));
-    max-width: calc(var(--sidebar-width) + var(--divider-width-hover));
-    position: relative;
-    overflow: hidden;
-    overflow: clip;
-
-    transition: min-width ease-in-out, max-width ease-in-out;
-    transition-duration: .2s;
-    contain: size;
-}
-
-#left-sidebar {
-    left: 0;
-}
-
-#right-sidebar {
-    right: 0;
-}
-
-.sidebar.is-collapsed {
-    min-width: 0;
-    max-width: 0;
-}
-
-.sidebar.floating {
-    position: absolute;
-}
-
-.sidebar .leaf-content {
-    height: 100%;
-    min-width: calc(var(--sidebar-width) - var(--divider-width-hover));
-    top: 0;
-    padding: var(--sidebar-margin);
-    padding-top: 4em;
-    line-height: var(--line-height-tight);
-    background-color: var(--background-secondary);
-    transition: background-color,border-right,border-left,box-shadow;
-    transition-duration: var(--color-fade-speed);
-    transition-timing-function: ease-in-out;
-    position: absolute;
-    display: flex;
-    flex-direction: column;
-}
-
-/* If the sidebar isn't collapsed the content should have the same width as it */
-.sidebar:not(.is-collapsed) .leaf-content {
-    min-width: calc(max(100%,var(--sidebar-width)) - 3px);
-    max-width: calc(max(100%,var(--sidebar-width)) - 3px);
-}
-
-#left-sidebar-content
-{
-    left: 0;
-    border-top-right-radius: var(--radius-l);
-    border-bottom-right-radius: var(--radius-l);
-}
-
-#right-sidebar-content
-{
-    right: 0;
-    border-top-left-radius: var(--radius-l);
-    border-bottom-left-radius: var(--radius-l);
-}
-
-.sidebar #right-sidebar-content, .sidebar #left-sidebar-content
-{
-    contain: none !important;
-    container-type: normal !important;
-    animation: none !important;
-}
-
-/* Hide empty sidebars */
-.sidebar:has(.leaf-content:empty):has(.topbar-content:empty)
-{
-    display: none;
-}
-
-.sidebar-topbar {
-    height: calc(2.3em + 2 * var(--sidebar-margin));
-    width: var(--sidebar-width);
-    padding: var(--sidebar-margin);
-    z-index: 1;
-
-    position: fixed;
-    display: flex;
-    align-items: center;
-
-    transition: width ease-in-out;
-    transition-duration: inherit;
-}
-
-.sidebar.is-collapsed .sidebar-topbar {
-    width: calc(2.3em + var(--sidebar-margin) * 2);
-}
-
-.sidebar .sidebar-topbar.is-collapsed
-{
-    width: 0;
-}
-
-#left-sidebar .sidebar-topbar {
-    left: 0;
-    flex-direction: row;
-	border-top-right-radius: var(--radius-l);
-}
-
-#right-sidebar .sidebar-topbar {
-    right: 0;
-    flex-direction: row-reverse;
-	border-top-left-radius: var(--radius-l);
-}
-
-#left-sidebar .topbar-content {
-    margin-right: calc(2.3em + var(--sidebar-margin));
-    flex-direction: row;
-}
-
-#right-sidebar .topbar-content {
-    margin-left: calc(2.3em + var(--sidebar-margin));
-    flex-direction: row-reverse;
-}
-
-.topbar-content {
-    overflow: hidden visible;
-    overflow: clip visible;
-    width: 100%;
-    height: 100%;
-    display: flex;
-    align-items: center;
-    transition: inherit;
-}
-
-.sidebar.is-collapsed .topbar-content {
-    width: 0;
-    transition: inherit;
-}
-
-.clickable-icon.sidebar-collapse-icon {
-    background-color: transparent;
-    color: var(--icon-color-focused);
-    padding: 2px!important;
-    margin: 0!important;
-    height: 100%!important;
-    width: 2.3em !important;
-    margin-inline: 0.14em!important;
-    position: absolute;
-}
-
-#left-sidebar .clickable-icon.sidebar-collapse-icon {
-    right: var(--sidebar-margin);
-}
-
-#right-sidebar .clickable-icon.sidebar-collapse-icon {
-	transform: scaleX(-1);
-	transform-origin: center;
-    left: var(--sidebar-margin);
-}
-
-.clickable-icon.sidebar-collapse-icon svg.svg-icon {
-    width: 80%;
-    height: 80%;
-}
-
-.sidebar:not(.is-collapsed) .clickable-icon.sidebar-collapse-icon svg.svg-icon .sidebar-toggle-icon-inner {
-	width: 24%;
-}
-
-.feature-title {
-    margin-left: 1px;
-    text-transform: uppercase;
-    letter-spacing: .06em;
-    margin-top: 0.75em;
-    margin-bottom: 0.75em;
-}
-
-.feature-header
-{
-    display: flex;
-    align-items: center;
-    padding-top: 0;
-    font-size: 1em;
-    padding-left: 0;
-}
-
-body.floating-sidebars .sidebar
-{
-    position: absolute;
-}
-
-/*#endregion */
-
-/*#region Content / Markdown Preview View */
-
-body
-{
-    transition: background-color var(--color-fade-speed) ease-in-out;
-}
-
-#navbar:not(:empty)
-{
-	display: flex;
-	align-items: center;
-	justify-content: space-between;
-	padding: 0.5em 1em;
-	width: 100%;
-}
-
-#main {
-	display: flex;
-	flex-direction: column;
-	height: 100%;
-	min-height: 0;
-	width: 100%;
-	align-items: stretch;
-	justify-content: center;
-}
-
-#main-horizontal {
-    display: flex;
-    flex-direction: row;
-	flex-grow: 1;
-	min-height: 0;
-	height: 100%;
-	overflow: hidden;
-    width: 100%;
-    align-items: stretch;
-    justify-content: center;
-}
-
-#center-content 
-{
-    flex-basis: 100%;
-    max-width: 100%;
-    width: 100%;
-    height: 100%;
-	min-height: 0;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    transition: opacity 0.2s ease-in-out;
-    contain: inline-size;
-}
-
-.hide
-{
-    opacity: 0 !important;
-    transition: opacity 0.2s ease-in-out;
-    pointer-events: none;
-}
-
-#center-content>.obsidian-document 
-{
-    padding-left: 2em;
-    padding-right: 1em;
-    margin-bottom: 0;
-    width: 100%;
-    width: -webkit-fill-available;
-    width: -moz-available;
-    width: fill-available;
-    transition: background-color var(--color-fade-speed) ease-in-out;
-    border-top-right-radius: var(--window-radius, var(--radius-m));
-    border-top-left-radius: var(--window-radius, var(--radius-m));
-    overflow-x: hidden !important;
-    overflow-y: auto !important;
-	min-height: 0;
-	height: 100%;
-    display: flex !important;
-    flex-direction: column !important;
-    align-items: center !important;
-    contain: inline-size;
-}
-
-body #center-content>.obsidian-document>.markdown-preview-sizer 
-{
-    padding-bottom: 80vh;
-    width: 100%;
-    max-width: var(--line-width);
-    flex-basis: var(--line-width);
-    transition: background-color var(--color-fade-speed) ease-in-out;
-    contain: inline-size;
-}
-
-#center-content>.obsidian-document>div
-{
-    width: 100% !important;
-    transition: background-color var(--color-fade-speed) ease-in-out;
-    contain: inline-size;
-}
-
-/* If the markdown view is displaying a raw file or embed then increase it's size to make everything as large as possible */
-#center-content > .obsidian-document:not([data-type='markdown']).embed {
-    display: flex;
-    padding: 1em;
-    height: 100%;
-    width: 100%;
-    align-items: center;
-    justify-content: center;
-}
-
-#center-content > .obsidian-document:not([data-type='markdown']).embed > *
-{
-    max-width: 100%;
-    max-height: 100%;
-    object-fit: contain;
-}
-
-:not(h1,h2,h3,h4,h5,h6,li):has(> :is(.math, table)) 
-{
-    overflow-x: auto !important;
-}
-
-/* For custom view exports */
-#center-content > .obsidian-document:not([data-type='markdown'])
-{
-    overflow-x: auto;
-    contain: content;
-    padding: 0;
-    margin: 0;
-    height: 100%;
-}
-
-.obsidian-document[data-type="attachment"]
-{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    height: 100%;
-    width: 100%;
-}
-
-.obsidian-document[data-type="attachment"] > *
-{
-    outline: none;
-    border: none;
-    box-shadow: none;
-}
-
-.obsidian-document[data-type="attachment"] :is(img)
-{
-    max-width: 90%;
-    max-height: 90%;
-    object-fit: contain;
-}
-
-.obsidian-document[data-type="attachment"] > :is(audio)
-{
-    width: 100%;
-    max-width: min(90%, var(--line-width));
-}
-
-.obsidian-document[data-type="attachment"] > :is(embed, iframe, video)
-{
-    width: 100%;
-    height: 100%;
-    max-width: 100%;
-    max-height: 100%;
-    object-fit: contain;
-}
-
-.canvas-wrapper > :is(.header, .footer)
-{
-    z-index: 100;
-    position: absolute;
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
-    width: 100%;
-    align-items: center;
-}
-
-/*#endregion */
-
-/*#region Loading */
-
-.scroll-highlight 
-{
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    pointer-events: none;
-    z-index: 1000;
-    background-color: hsla(var(--color-accent-hsl),.25);
-    opacity: 0;
-    padding: 1em;
-    inset: 50%;
-    translate: -50% -50%;
-    border-radius: var(--radius-s);
-}
-
-/*#endregion */
-
-</style><script defer>async function loadIncludes()
+<!DOCTYPE html><html lang="zh-CN"><head><title>参考资料</title><base href=".."><meta name="pathname" content="初等数论/参考资料.html"><meta name="description" content="参考文献 闵嗣鹤. 初等数论. 4 版. 高等教育出版社, 2020. 相关课程 赵桃艳. 初等数论."><meta property="og:title" content="参考资料"><meta property="og:description" content="参考文献 闵嗣鹤. 初等数论. 4 版. 高等教育出版社, 2020. 相关课程 赵桃艳. 初等数论."><meta property="og:type" content="website"><meta property="og:url" content="初等数论/参考资料.html"><meta charset="UTF-8"><meta property="og:site_name" content="数学"><meta name="viewport" content="width=device-width,initial-scale=1.0,user-scalable=yes,minimum-scale=1.0,maximum-scale=5.0"><script async id="webpage-script" src="site-lib/scripts/webpage.js" onload="this.onload=null;this.setAttribute('loaded','true')"></script><script defer src="site-lib/scripts/notebook-navigation.js"></script><link rel="stylesheet" href="site-lib/styles/obsidian.css"><link rel="stylesheet" href="site-lib/styles/theme.css"><link rel="stylesheet" href="site-lib/styles/export-webpage.css"><link rel="preload" href="site-lib/styles/other-plugins.css" as="style" onload="this.onload=null;this.rel='stylesheet'"><noscript><link rel="stylesheet" href="site-lib/styles/other-plugins.css"></noscript><link rel="preload" href="site-lib/styles/snippets.css" as="style" onload="this.onload=null;this.rel='stylesheet'"><noscript><link rel="stylesheet" href="site-lib/styles/snippets.css"></noscript><link rel="preload" href="site-lib/styles/supported-plugins.css" as="style" onload="this.onload=null;this.rel='stylesheet'"><noscript><link rel="stylesheet" href="site-lib/styles/supported-plugins.css"></noscript><link rel="preload" href="site-lib/styles/global-variable-styles.css" as="style" onload="this.onload=null;this.rel='stylesheet'"><noscript><link rel="stylesheet" href="site-lib/styles/global-variable-styles.css"></noscript><link rel="preload" href="site-lib/styles/main-styles.css" as="style" onload="this.onload=null;this.rel='stylesheet'"><noscript><link rel="stylesheet" href="site-lib/styles/main-styles.css"></noscript><script defer>async function loadIncludes()
 {
 	// replace include tags with the contents of the file
 	let includeTags = document.querySelectorAll("link[itemprop='include']");
@@ -500,7 +85,7 @@ function waitLoadScripts(scriptNames, callback)
 	loadNext(0);
 }
 
-</script></head><body class="publish css-settings-manager styled-scrollbars show-ribbon is-focused mathcraft-active crb-hide-default-actions editing-suite-color-highlights-enabled editing-suite-colored-text-enabled"><script defer>let theme = localStorage.getItem("theme") || (window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light");
+</script></head><body class="publish css-settings-manager styled-scrollbars show-ribbon is-focused mathcraft-active crb-hide-default-actions editing-suite-seamless-typography-enabled editing-suite-math-enabled editing-suite-math-overflow-enabled editing-suite-table-centered-enabled editing-suite-cloze-enabled editing-suite-color-highlights-enabled editing-suite-colored-text-enabled editing-suite-custom-lists-enabled editing-suite-sidenotes-enabled editing-suite-code-blocks-enabled mathcraft-pdf-no-break"><script defer>let theme = localStorage.getItem("theme") || (window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light");
 if (theme == "dark")
 {
 	document.body.classList.add("theme-dark");
@@ -518,7 +103,7 @@ else if (window.innerWidth < 1024) document.body.classList.add("is-small-screen"
 else document.body.classList.add("is-large-screen");
 
 
-</script><div id="main"><div id="navbar"></div><div id="main-horizontal"><div id="left-content" class="leaf" style="--sidebar-width:var(--sidebar-width-left)"><div id="left-sidebar" class="sidebar"><div class="sidebar-handle"></div><div class="sidebar-topbar"><div class="topbar-content"><div id="search-container"><div id="search-wrapper"><input enterkeyhint="search" type="search" spellcheck="false" placeholder="搜索..."><div aria-label="清除搜索" id="search-clear-button"></div></div></div></div><div class="clickable-icon sidebar-collapse-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="svg-icon sidebar-toggle-button-icon"><rect x="1" y="2" width="22" height="20" rx="4"></rect><rect x="4" y="5" width="2" height="14" rx="2" fill="currentColor" class="sidebar-toggle-icon-inner"></rect></svg></div></div><div class="sidebar-content-wrapper"><div id="left-sidebar-content" class="leaf-content"><link itemprop="include" href="site-lib/html/file-tree.html"></div></div><script defer>const ls=document.querySelector('#left-sidebar');ls.classList.toggle('is-collapsed',innerWidth<768);ls.style.setProperty('--sidebar-width',localStorage.getItem('sidebar-left-width'));</script></div></div><div id="center-content" class="leaf"><div class="obsidian-document markdown-preview-view markdown-rendered node-insert-event is-readable-line-width allow-fold-headings show-indentation-guide show-properties allow-fold-lists" data-type="markdown"><style id="MJX-CHTML-styles">mjx-mlabeledtr { display: table-row; text-align: left; }
+</script><div id="main"><div id="navbar"></div><div id="main-horizontal"><div id="left-content" class="leaf" style="--sidebar-width:var(--sidebar-width-left)"><div id="left-sidebar" class="sidebar"><div class="sidebar-handle"></div><div class="sidebar-topbar"><div class="topbar-content"><div id="search-container"><div id="search-wrapper"><input enterkeyhint="search" type="search" spellcheck="false" placeholder="搜索..."><div aria-label="清除搜索" id="search-clear-button"></div></div></div></div><button type="button" class="clickable-icon sidebar-collapse-icon" aria-label="切换左侧栏"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="svg-icon sidebar-toggle-button-icon"><rect x="1" y="2" width="22" height="20" rx="4"></rect><rect x="4" y="5" width="2" height="14" rx="2" fill="currentColor" class="sidebar-toggle-icon-inner"></rect></svg></button></div><div class="sidebar-content-wrapper"><div id="left-sidebar-content" class="leaf-content"><link itemprop="include" href="site-lib/html/file-tree.html"></div></div><script defer>const ls=document.querySelector('#left-sidebar');ls.classList.toggle('is-collapsed',innerWidth<768);ls.style.setProperty('--sidebar-width',localStorage.getItem('sidebar-left-width'));</script></div></div><div id="center-content" class="leaf"><div class="obsidian-document markdown-preview-view markdown-rendered node-insert-event is-readable-line-width allow-fold-headings show-indentation-guide show-properties allow-fold-lists" data-type="markdown"><style id="MJX-CHTML-styles">mjx-mlabeledtr { display: table-row; text-align: left; }
 mjx-mlabeledtr[rowalign="top"] > mjx-mtd { vertical-align: top; }
 mjx-mlabeledtr[rowalign="center"] > mjx-mtd { vertical-align: middle; }
 mjx-mlabeledtr[rowalign="bottom"] > mjx-mtd { vertical-align: bottom; }
@@ -532,6 +117,7 @@ mjx-c.mjx-cB1::before { padding: 0.666em 0.778em 0px 0px; content: "±"; }
 mjx-c.mjx-c1D45D.TEX-I::before { padding: 0.442em 0.503em 0.194em 0px; content: "p"; }
 mjx-c.mjx-c1D45F.TEX-I::before { padding: 0.442em 0.451em 0.011em 0px; content: "r"; }
 mjx-c.mjx-c36::before { padding: 0.666em 0.5em 0.022em 0px; content: "6"; }
+mjx-c.mjx-c1D45B.TEX-I::before { padding: 0.442em 0.6em 0.011em 0px; content: "n"; }
 mjx-c.mjx-c2265::before { padding: 0.636em 0.778em 0.138em 0px; content: "≥"; }
 mjx-c.mjx-c2026::before { padding: 0.12em 1.172em 0px 0px; content: "…"; }
 mjx-c.mjx-c1D451.TEX-I::before { padding: 0.694em 0.52em 0.01em 0px; content: "d"; }
@@ -552,8 +138,10 @@ mjx-c.mjx-c1D448.TEX-I::before { padding: 0.683em 0.767em 0.022em 0px; content: 
 mjx-c.mjx-c2201.TEX-A::before { padding: 0.846em 0.5em 0.021em 0px; content: "∁"; }
 mjx-c.mjx-c2216::before { padding: 0.75em 0.5em 0.25em 0px; content: "∖"; }
 mjx-c.mjx-c1D436.TEX-I::before { padding: 0.705em 0.76em 0.022em 0px; content: "C"; }
+mjx-msub { display: inline-block; text-align: left; }
 mjx-c.mjx-c1D434.TEX-I::before { padding: 0.716em 0.75em 0px 0px; content: "A"; }
 mjx-c.mjx-c1D435.TEX-I::before { padding: 0.683em 0.759em 0px 0px; content: "B"; }
+mjx-c.mjx-c1D44E.TEX-I::before { padding: 0.441em 0.529em 0.01em 0px; content: "a"; }
 mjx-c.mjx-c1D44F.TEX-I::before { padding: 0.694em 0.429em 0.011em 0px; content: "b"; }
 mjx-c.mjx-c2208::before { padding: 0.54em 0.667em 0.04em 0px; content: "∈"; }
 mjx-c.mjx-c2209::before { padding: 0.716em 0.667em 0.215em 0px; content: "∉"; }
@@ -573,6 +161,7 @@ mjx-c.mjx-c2287::before { padding: 0.636em 0.778em 0.138em 0px; content: "⊇"; 
 mjx-c.mjx-c2260::before { padding: 0.716em 0.778em 0.215em 0px; content: "≠"; }
 mjx-c.mjx-c2282::before { padding: 0.54em 0.778em 0.04em 0px; content: "⊂"; }
 mjx-c.mjx-c2283::before { padding: 0.54em 0.778em 0.04em 0px; content: "⊃"; }
+mjx-c.mjx-c1D465.TEX-I::before { padding: 0.442em 0.572em 0.011em 0px; content: "x"; }
 mjx-c.mjx-c2200::before { padding: 0.694em 0.556em 0.022em 0px; content: "∀"; }
 mjx-c.mjx-c2203::before { padding: 0.694em 0.556em 0px 0px; content: "∃"; }
 mjx-c.mjx-c21::before { padding: 0.716em 0.278em 0px 0px; content: "!"; }
@@ -587,6 +176,7 @@ mjx-c.mjx-c35::before { padding: 0.666em 0.5em 0.022em 0px; content: "5"; }
 mjx-c.mjx-c3E::before { padding: 0.54em 0.778em 0.04em 0px; content: ">"; }
 mjx-c.mjx-c2264::before { padding: 0.636em 0.778em 0.138em 0px; content: "≤"; }
 mjx-c.mjx-c221A::before { padding: 0.8em 0.853em 0.2em 0px; content: "√"; }
+mjx-mi { display: inline-block; text-align: left; }
 mjx-mspace { display: inline-block; text-align: left; }
 mjx-mtable { display: inline-block; text-align: center; vertical-align: 0.25em; position: relative; box-sizing: border-box; border-spacing: 0px; border-collapse: collapse; }
 mjx-mstyle[size="s"] mjx-mtable { vertical-align: 0.354em; }
@@ -636,6 +226,8 @@ mjx-c.mjx-c27F9::before { padding: 0.525em 1.638em 0.024em 0px; content: "⟹"; 
 mjx-c.mjx-c27FA::before { padding: 0.525em 1.858em 0.024em 0px; content: "⟺"; }
 mjx-c.mjx-cA0::before { padding: 0px 0.25em 0px 0px; content: " "; }
 mjx-c.mjx-c27F8::before { padding: 0.525em 1.609em 0.024em 0px; content: "⟸"; }
+mjx-c.mjx-c28::before { padding: 0.75em 0.389em 0.25em 0px; content: "("; }
+mjx-c.mjx-c29::before { padding: 0.75em 0.389em 0.25em 0px; content: ")"; }
 mjx-c.mjx-c38::before { padding: 0.666em 0.5em 0.022em 0px; content: "8"; }
 mjx-c.mjx-c2218::before { padding: 0.444em 0.5em 0px 0px; content: "∘"; }
 mjx-c.mjx-c33::before { padding: 0.665em 0.5em 0.022em 0px; content: "3"; }
@@ -645,6 +237,35 @@ mjx-c.mjx-c7B.TEX-S3::before { padding: 1.45em 0.75em 0.949em 0px; content: "{";
 mjx-c.mjx-c1D439.TEX-I::before { padding: 0.68em 0.749em 0px 0px; content: "F"; }
 mjx-c.mjx-c2E::before { padding: 0.12em 0.278em 0px 0px; content: "."; }
 mjx-c.mjx-c1D447.TEX-I::before { padding: 0.677em 0.704em 0px 0px; content: "T"; }
+mjx-math { display: inline-block; text-align: left; line-height: 0; text-indent: 0px; font-style: normal; font-weight: normal; font-size: 100%; font-size-adjust: none; letter-spacing: normal; border-collapse: collapse; overflow-wrap: normal; word-spacing: normal; white-space: nowrap; direction: ltr; padding: 1px 0px; }
+mjx-container[jax="CHTML"][display="true"] { display: block; text-align: center; margin: 1em 0px; }
+mjx-container[jax="CHTML"][display="true"][width="full"] { display: flex; }
+mjx-container[jax="CHTML"][display="true"] mjx-math { padding: 0px; }
+mjx-container[jax="CHTML"][justify="left"] { text-align: left; }
+mjx-container[jax="CHTML"][justify="right"] { text-align: right; }
+mjx-texatom { display: inline-block; text-align: left; }
+mjx-mn { display: inline-block; text-align: left; }
+mjx-c { display: inline-block; }
+mjx-utext { display: inline-block; padding: 0.75em 0px 0.2em; }
+mjx-mo { display: inline-block; text-align: left; }
+mjx-stretchy-h { display: inline-table; width: 100%; }
+mjx-stretchy-h > * { display: table-cell; width: 0px; }
+mjx-stretchy-h > * > mjx-c { display: inline-block; transform: scaleX(1); }
+mjx-stretchy-h > * > mjx-c::before { display: inline-block; width: initial; }
+mjx-stretchy-h > mjx-ext { overflow: clip visible; width: 100%; }
+mjx-stretchy-h > mjx-ext > mjx-c::before { transform: scaleX(500); }
+mjx-stretchy-h > mjx-ext > mjx-c { width: 0px; }
+mjx-stretchy-h > mjx-beg > mjx-c { margin-right: -0.1em; }
+mjx-stretchy-h > mjx-end > mjx-c { margin-left: -0.1em; }
+mjx-stretchy-v { display: inline-block; }
+mjx-stretchy-v > * { display: block; }
+mjx-stretchy-v > mjx-beg { height: 0px; }
+mjx-stretchy-v > mjx-end > mjx-c { display: block; }
+mjx-stretchy-v > * > mjx-c { transform: scaleY(1); transform-origin: left center; overflow: hidden; }
+mjx-stretchy-v > mjx-ext { display: block; height: 100%; box-sizing: border-box; border: 0px solid transparent; overflow: visible clip; }
+mjx-stretchy-v > mjx-ext > mjx-c::before { width: initial; box-sizing: border-box; }
+mjx-stretchy-v > mjx-ext > mjx-c { transform: scaleY(500) translateY(0.075em); overflow: visible; }
+mjx-mark { display: inline-block; height: 0px; }
 mjx-mfrac { display: inline-block; text-align: left; }
 mjx-frac { display: inline-block; vertical-align: 0.17em; padding: 0px 0.22em; }
 mjx-frac[type="d"] { vertical-align: 0.04em; }
@@ -668,7 +289,9 @@ mjx-line { display: block; box-sizing: border-box; min-height: 1px; height: 0.06
 mjx-line[type="d"] { margin: 0.18em -0.1em; }
 mjx-c.mjx-c30::before { padding: 0.666em 0.5em 0.022em 0px; content: "0"; }
 mjx-c.mjx-c2C::before { padding: 0.121em 0.278em 0.194em 0px; content: ","; }
+mjx-c.mjx-c31::before { padding: 0.666em 0.5em 0px 0px; content: "1"; }
 mjx-c.mjx-c2B::before { padding: 0.583em 0.778em 0.082em 0px; content: "+"; }
+mjx-c.mjx-c3D::before { padding: 0.583em 0.778em 0.082em 0px; content: "="; }
 mjx-c.mjx-c32::before { padding: 0.666em 0.5em 0px 0px; content: "2"; }
 mjx-container[jax="CHTML"] { line-height: 0; }
 mjx-container [space="1"] { margin-left: 0.111em; }
@@ -702,43 +325,6 @@ mjx-merror { display: inline-block; color: red; background-color: yellow; }
 mjx-mphantom { visibility: hidden; }
 mjx-assistive-mml { top: 0px; left: 0px; clip: rect(1px, 1px, 1px, 1px); user-select: none; position: absolute !important; padding: 1px 0px 0px !important; border: 0px !important; display: block !important; width: auto !important; overflow: hidden !important; }
 mjx-assistive-mml[display="block"] { width: 100% !important; }
-mjx-math { display: inline-block; text-align: left; line-height: 0; text-indent: 0px; font-style: normal; font-weight: normal; font-size: 100%; font-size-adjust: none; letter-spacing: normal; border-collapse: collapse; overflow-wrap: normal; word-spacing: normal; white-space: nowrap; direction: ltr; padding: 1px 0px; }
-mjx-container[jax="CHTML"][display="true"] { display: block; text-align: center; margin: 1em 0px; }
-mjx-container[jax="CHTML"][display="true"][width="full"] { display: flex; }
-mjx-container[jax="CHTML"][display="true"] mjx-math { padding: 0px; }
-mjx-container[jax="CHTML"][justify="left"] { text-align: left; }
-mjx-container[jax="CHTML"][justify="right"] { text-align: right; }
-mjx-munderover { display: inline-block; text-align: left; }
-mjx-munderover:not([limits="false"]) { padding-top: 0.1em; }
-mjx-munderover:not([limits="false"]) > * { display: block; }
-mjx-msubsup { display: inline-block; text-align: left; }
-mjx-script { display: inline-block; padding-right: 0.05em; padding-left: 0.033em; }
-mjx-script > mjx-spacer { display: block; }
-mjx-mo { display: inline-block; text-align: left; }
-mjx-stretchy-h { display: inline-table; width: 100%; }
-mjx-stretchy-h > * { display: table-cell; width: 0px; }
-mjx-stretchy-h > * > mjx-c { display: inline-block; transform: scaleX(1); }
-mjx-stretchy-h > * > mjx-c::before { display: inline-block; width: initial; }
-mjx-stretchy-h > mjx-ext { overflow: clip visible; width: 100%; }
-mjx-stretchy-h > mjx-ext > mjx-c::before { transform: scaleX(500); }
-mjx-stretchy-h > mjx-ext > mjx-c { width: 0px; }
-mjx-stretchy-h > mjx-beg > mjx-c { margin-right: -0.1em; }
-mjx-stretchy-h > mjx-end > mjx-c { margin-left: -0.1em; }
-mjx-stretchy-v { display: inline-block; }
-mjx-stretchy-v > * { display: block; }
-mjx-stretchy-v > mjx-beg { height: 0px; }
-mjx-stretchy-v > mjx-end > mjx-c { display: block; }
-mjx-stretchy-v > * > mjx-c { transform: scaleY(1); transform-origin: left center; overflow: hidden; }
-mjx-stretchy-v > mjx-ext { display: block; height: 100%; box-sizing: border-box; border: 0px solid transparent; overflow: visible clip; }
-mjx-stretchy-v > mjx-ext > mjx-c::before { width: initial; box-sizing: border-box; }
-mjx-stretchy-v > mjx-ext > mjx-c { transform: scaleY(500) translateY(0.075em); overflow: visible; }
-mjx-mark { display: inline-block; height: 0px; }
-mjx-c { display: inline-block; }
-mjx-utext { display: inline-block; padding: 0.75em 0px 0.2em; }
-mjx-texatom { display: inline-block; text-align: left; }
-mjx-mi { display: inline-block; text-align: left; }
-mjx-mn { display: inline-block; text-align: left; }
-mjx-msub { display: inline-block; text-align: left; }
 mjx-c::before { display: block; width: 0px; }
 .MJX-TEX { font-family: MJXZERO, MJXTEX; }
 .TEX-B { font-family: MJXZERO, MJXTEX-B; }
@@ -783,18 +369,8 @@ mjx-stretchy-v mjx-c, mjx-stretchy-h mjx-c { font-family: MJXZERO, MJXTEX-S1, MJ
 @font-face { font-family: MJXTEX-SC; src: url("site-lib/fonts/mathjax-af96f67d7acc.woff") format("woff"); }
 @font-face { font-family: MJXTEX-T; src: url("site-lib/fonts/mathjax-c56da8d69f1a.woff") format("woff"); }
 @font-face { font-family: MJXTEX-V; src: url("site-lib/fonts/mathjax-72bc573386dd.woff") format("woff"); }
-@font-face { font-family: MJXTEX-VB; src: url("site-lib/fonts/mathjax-36e0d72d8a7a.woff") format("woff"); }
-mjx-c.mjx-c2211.TEX-S1::before { padding: 0.75em 1.056em 0.25em 0px; content: "∑"; }
-mjx-c.mjx-c1D45B.TEX-I::before { padding: 0.442em 0.6em 0.011em 0px; content: "n"; }
-mjx-c.mjx-c1D456.TEX-I::before { padding: 0.661em 0.345em 0.011em 0px; content: "i"; }
-mjx-c.mjx-c3D::before { padding: 0.583em 0.778em 0.082em 0px; content: "="; }
-mjx-c.mjx-c31::before { padding: 0.666em 0.5em 0px 0px; content: "1"; }
-mjx-c.mjx-c1D44E.TEX-I::before { padding: 0.441em 0.529em 0.01em 0px; content: "a"; }
-mjx-c.mjx-c1D453.TEX-I::before { padding: 0.705em 0.55em 0.205em 0px; content: "f"; }
-mjx-c.mjx-c28::before { padding: 0.75em 0.389em 0.25em 0px; content: "("; }
-mjx-c.mjx-c1D465.TEX-I::before { padding: 0.442em 0.572em 0.011em 0px; content: "x"; }
-mjx-c.mjx-c29::before { padding: 0.75em 0.389em 0.25em 0px; content: ")"; }</style><div class="markdown-preview-sizer markdown-preview-section"><div class="header"><div class="page-title" id="参考资料">参考资料</div><div class="data-bar"></div></div><div class="markdown-preview-pusher" style="width:1px;height:.1px;margin-bottom:0"></div><div class="el-h2"><h2 data-heading="参考文献" dir="auto" data-ntoc-source-line="6" data-ntoc-heading-index="0" id="参考文献_0"><span class="heading-collapse-indicator collapse-indicator collapse-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="svg-icon right-triangle"><path d="M3 8L12 17L21 8"></path></svg></span>参考文献</h2></div><div class="el-ol"><ol class="math-env-rendered-marker-list" start="1">
-<li data-line="0" dir="auto" class="math-env-rendered-marker-item"><span class="math-env-rendered-marker">[1]</span><div class="math-env-rendered-marker-content"><a data-href="闵嗣鹤. 初等数论. 4 版. 高等教育出版社, 2020." class="internal-link export-unresolved" target="_blank" rel="noopener nofollow">闵嗣鹤. 初等数论. 4 版. 高等教育出版社, 2020.</a></div></li>
-</ol></div><div class="el-h2"><h2 data-heading="相关课程" dir="auto" data-ntoc-source-line="10" data-ntoc-heading-index="1" id="相关课程_0"><span class="heading-collapse-indicator collapse-indicator collapse-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="svg-icon right-triangle"><path d="M3 8L12 17L21 8"></path></svg></span>相关课程</h2></div><div class="el-ol"><ol class="math-env-rendered-marker-list" start="1">
-<li data-line="0" dir="auto" class="math-env-rendered-marker-item"><span class="math-env-rendered-marker">[1]</span><div class="math-env-rendered-marker-content"><a data-href="赵桃艳. 初等数论." class="internal-link export-unresolved" target="_blank" rel="noopener nofollow">赵桃艳. 初等数论.</a></div></li>
-</ol></div><div class="footer"><div class="data-bar"></div></div></div></div></div><div id="right-content" class="leaf" style="--sidebar-width:var(--sidebar-width-right)"><div id="right-sidebar" class="sidebar"><div class="sidebar-handle"></div><div class="sidebar-topbar"><div class="topbar-content"><label class="theme-toggle-container" for="theme-toggle-input"><input class="theme-toggle-input" type="checkbox" id="theme-toggle-input"><div class="toggle-background"></div></label></div><div class="clickable-icon sidebar-collapse-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="svg-icon sidebar-toggle-button-icon"><rect x="1" y="2" width="22" height="20" rx="4"></rect><rect x="4" y="5" width="2" height="14" rx="2" fill="currentColor" class="sidebar-toggle-icon-inner"></rect></svg></div></div><div class="sidebar-content-wrapper"><div id="right-sidebar-content" class="leaf-content"><div id="outline" class="tree-container"><div class="feature-header"><div class="feature-title">目录</div><button class="clickable-icon nav-action-button tree-collapse-all is-collapsed" aria-label="全部折叠"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></svg></button></div><div class="tree-item nav-file" data-depth="2"><a class="tree-item-self is-clickable nav-file-title heading-link" href="#参考文献_0" data-path="参考文献_0" heading-name="参考文献"><div class="tree-item-inner nav-file-title-content">参考文献</div></a><div class="tree-item-children nav-file-children"></div></div><div class="tree-item nav-file" data-depth="2"><a class="tree-item-self is-clickable nav-file-title heading-link" href="#相关课程_0" data-path="相关课程_0" heading-name="相关课程"><div class="tree-item-inner nav-file-title-content">相关课程</div></a><div class="tree-item-children nav-file-children"></div></div></div></div></div><script defer>const rs=document.querySelector('#right-sidebar');rs.classList.toggle('is-collapsed',innerWidth<768);rs.style.setProperty('--sidebar-width',localStorage.getItem('sidebar-right-width'));</script></div></div></div></div></body></html>
+@font-face { font-family: MJXTEX-VB; src: url("site-lib/fonts/mathjax-36e0d72d8a7a.woff") format("woff"); }</style><div class="markdown-preview-sizer markdown-preview-section"><div class="header"><div class="page-title" id="参考资料">参考资料</div><div class="data-bar"></div></div><div class="markdown-preview-pusher" style="width:1px;height:.1px;margin-bottom:0"></div><div class="el-h2"><h2 data-heading="参考文献" dir="auto" data-ntoc-source-line="6" data-ntoc-heading-index="0" id="参考文献_0"><span class="heading-collapse-indicator collapse-indicator collapse-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="svg-icon right-triangle"><path d="M3 8L12 17L21 8"></path></svg></span>参考文献</h2></div><div class="el-ol"><ol>
+<li data-line="0" dir="auto" class="editing-suite-custom-list-item" data-editing-suite-custom-list-marker="[1]"><a data-href="闵嗣鹤. 初等数论. 4 版. 高等教育出版社, 2020." class="internal-link export-unresolved" target="_blank" rel="noopener nofollow">闵嗣鹤. 初等数论. 4 版. 高等教育出版社, 2020.</a></li>
+</ol></div><div class="el-h2"><h2 data-heading="相关课程" dir="auto" data-ntoc-source-line="10" data-ntoc-heading-index="1" id="相关课程_0"><span class="heading-collapse-indicator collapse-indicator collapse-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="svg-icon right-triangle"><path d="M3 8L12 17L21 8"></path></svg></span>相关课程</h2></div><div class="el-ol"><ol>
+<li data-line="0" dir="auto" class="editing-suite-custom-list-item" data-editing-suite-custom-list-marker="[1]"><a data-href="赵桃艳. 初等数论." class="internal-link export-unresolved" target="_blank" rel="noopener nofollow">赵桃艳. 初等数论.</a></li>
+</ol></div><div class="footer"><div class="data-bar"></div></div></div></div></div><div id="right-content" class="leaf" style="--sidebar-width:var(--sidebar-width-right)"><div id="right-sidebar" class="sidebar"><div class="sidebar-handle"></div><div class="sidebar-topbar"><div class="topbar-content"><label class="theme-toggle-container" for="theme-toggle-input"><input class="theme-toggle-input" type="checkbox" id="theme-toggle-input"><div class="toggle-background"></div></label></div><button type="button" class="clickable-icon sidebar-collapse-icon" aria-label="切换右侧栏"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="svg-icon sidebar-toggle-button-icon"><rect x="1" y="2" width="22" height="20" rx="4"></rect><rect x="4" y="5" width="2" height="14" rx="2" fill="currentColor" class="sidebar-toggle-icon-inner"></rect></svg></button></div><div class="sidebar-content-wrapper"><div id="right-sidebar-content" class="leaf-content"><div id="outline" class="tree-container"><div class="feature-header"><div class="feature-title">目录</div><button class="clickable-icon nav-action-button tree-collapse-all is-collapsed" aria-label="全部折叠"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></svg></button></div><div class="tree-item nav-file" data-depth="2"><a class="tree-item-self is-clickable nav-file-title heading-link" href="#参考文献_0" data-path="参考文献_0" heading-name="参考文献"><div class="tree-item-inner nav-file-title-content">参考文献</div></a><div class="tree-item-children nav-file-children"></div></div><div class="tree-item nav-file" data-depth="2"><a class="tree-item-self is-clickable nav-file-title heading-link" href="#相关课程_0" data-path="相关课程_0" heading-name="相关课程"><div class="tree-item-inner nav-file-title-content">相关课程</div></a><div class="tree-item-children nav-file-children"></div></div></div></div></div><script defer>const rs=document.querySelector('#right-sidebar');rs.classList.toggle('is-collapsed',innerWidth<768);rs.style.setProperty('--sidebar-width',localStorage.getItem('sidebar-right-width'));</script></div></div></div></div></body></html>
