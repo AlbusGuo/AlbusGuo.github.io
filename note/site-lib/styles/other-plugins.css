@@ -4006,6 +4006,16 @@ html.theme-dark .callout.mathcraft-style-brutalism[data-callout="theorem"] .call
 }
 body.mathcraft-active .math { overflow-x: auto; }
 :root { --editing-suite-highlight-color-yellow: #ffd700; --editing-suite-highlight-color-green: #96ceb4; --editing-suite-highlight-color-red: #ff6b6b; --editing-suite-highlight-color-purple: #a78bfa; --editing-suite-highlight-color-blue: #45b7d1; --editing-suite-text-color-yellow: #9a6700; --editing-suite-text-color-green: #1a7f37; --editing-suite-text-color-red: #cf222e; --editing-suite-text-color-purple: #8250df; --editing-suite-text-color-blue: #0969da; --editing-suite-code-font-size: 0.95rem; --editing-suite-code-header-height: 32px; --editing-suite-code-line-height: 1.6; --editing-suite-code-padding-block: 12px; --editing-suite-code-radius: 8px; }
+body.editing-suite-list-marker-text-color { --list-marker-color: var(--text-normal); }
+.editing-suite-settings-root { display: flex; flex-direction: column; height: 100%; position: relative; overflow: hidden; }
+.editing-suite-settings-tabs { display: flex; justify-content: flex-start; border-bottom: 1px solid var(--background-modifier-border); overflow-x: auto; padding: 0px; margin: 0px; flex-shrink: 0; }
+.editing-suite-settings-tabs::-webkit-scrollbar { display: none; }
+.editing-suite-settings-tab { padding: 4px 8px; margin-bottom: -1px; border-width: 1px 1px 2px; border-style: solid; border-color: transparent; border-image: none; border-radius: 5px 5px 0px 0px; cursor: pointer; font-size: var(--font-ui-medium); font-weight: 500; color: var(--text-muted); transition: color 0.1s; user-select: none; }
+.editing-suite-settings-tab:hover { border-bottom-color: var(--interactive-accent); color: var(--text-normal); }
+.editing-suite-settings-tab.is-active { border-bottom-color: var(--interactive-accent); color: var(--text-normal); font-weight: 600; }
+.editing-suite-settings-scroll { flex: 1 1 0px; overflow-y: auto; min-height: 0px; }
+.editing-suite-settings-content { padding-top: 16px; }
+.editing-suite-settings-content .setting-group + .setting-item-heading { margin-top: 1.5em; }
 .theme-dark { --editing-suite-text-color-yellow: #e3b341; --editing-suite-text-color-green: #3fb950; --editing-suite-text-color-red: #ff7b72; --editing-suite-text-color-purple: #d2a8ff; --editing-suite-text-color-blue: #58a6ff; }
 body.editing-suite-math-enabled mjx-container[display="true"] { margin-block: var(--editing-suite-display-math-margin, 0.5em) !important; }
 body.editing-suite-math-enabled.editing-suite-seamless-typography-enabled .markdown-source-view.mod-cm6 .math-block > mjx-container[display="true"], body.editing-suite-math-enabled.editing-suite-seamless-typography-enabled .markdown-rendered mjx-container[display="true"] { padding-block: 0px; }
@@ -12576,6 +12586,73 @@ body.mathcraft-active .theorem-link{color:var(--link-color);font-weight:500}body
 	--editing-suite-code-line-height: 1.6;
 	--editing-suite-code-padding-block: 12px;
 	--editing-suite-code-radius: 8px;
+}
+
+body.editing-suite-list-marker-text-color {
+	--list-marker-color: var(--text-normal);
+}
+
+.editing-suite-settings-root {
+	display: flex;
+	flex-direction: column;
+	height: 100%;
+	position: relative;
+	overflow: hidden;
+}
+
+.editing-suite-settings-tabs {
+	display: flex;
+	justify-content: flex-start;
+	border-bottom: 1px solid var(--background-modifier-border);
+	overflow-x: auto;
+	padding: 0;
+	margin: 0;
+	flex-shrink: 0;
+}
+
+.editing-suite-settings-tabs::-webkit-scrollbar {
+	display: none;
+}
+
+.editing-suite-settings-tab {
+	padding: 4px 8px;
+	margin-bottom: -1px;
+	border: 1px solid transparent;
+	border-radius: 5px 5px 0 0;
+	cursor: pointer;
+	font-size: var(--font-ui-medium);
+	font-weight: 500;
+	color: var(--text-muted);
+	transition: color 0.1s ease;
+	border-bottom: 2px solid transparent;
+	user-select: none;
+}
+
+.editing-suite-settings-tab:hover {
+	border-bottom-color: var(--interactive-accent);
+	color: var(--text-normal);
+}
+
+.editing-suite-settings-tab.is-active {
+	border-bottom-color: var(--interactive-accent);
+	color: var(--text-normal);
+	font-weight: 600;
+}
+
+.editing-suite-settings-scroll {
+	flex: 1 1 0;
+	overflow-y: auto;
+	min-height: 0;
+}
+
+.editing-suite-settings-content {
+	padding-top: 16px;
+}
+
+.editing-suite-settings-content
+	.setting-group
+	+ .setting-item-heading {
+	margin-top: 1.5em;
 }
 
 .theme-dark {
