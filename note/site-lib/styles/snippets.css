@@ -36,80 +36,6 @@
 }
 /*#endregion */
 
-/*#region 滑块样式 */
-/*#region 动画变量 */
-.checkbox-container {
-  --slider-ease-bounce: cubic-bezier(0.175, 0.885, 0.32, 2);
-}
-/*#endregion */
-
-/*#region 设置项开关 */
-.checkbox-container {
-    border-radius: 10px;
-    transition: border-radius 0.1s var(--slider-ease-bounce);
-}
-
-.checkbox-container:not(.is-enabled)::after {
-    border-radius: 10px;
-    transition: transform 0.1s var(--slider-ease-bounce), border-radius 0.1s var(--slider-ease-bounce);
-}
-
-.checkbox-container.is-enabled {
-    border-radius: 6px;
-    transition: border-radius 0.1s ease-out;
-}
-
-.checkbox-container.is-enabled::after {
-    border-radius: 6px;
-    transition: background-size 0.1s var(--slider-ease-bounce),
-                transform 0.1s cubic-bezier(0.175, 0.885, 0.32, 1.5),
-                border-radius 0.3s var(--slider-ease-bounce);
-}
-
-.checkbox-container::after {
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: 70%;
-}
-
-.checkbox-container:not(.is-enabled):hover::after {
-    transform: scale(1.5);
-    background-image: url("data:image/svg+xml;utf8,\<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'>\<circle cx='35' cy='40' r='6' fill='black'/>\<circle cx='65' cy='40' r='6' fill='black'/>\<path d='M30 60 Q50 72 70 60' stroke='black' stroke-width='10' fill='none' stroke-linecap='round'/>\</svg>");
-}
-
-.theme-light .checkbox-container:not(.is-enabled):hover::after {
-    border: 1px solid var(--background-modifier-border);
-}
-
-.theme-light .checkbox-container.is-enabled:hover::after {
-    border: 1px solid var(--background-modifier-border) !important;
-    transition: transform 0.1s var(--slider-ease-bounce),
-                border 0.1s ease;
-}
-
-.checkbox-container.is-enabled:hover::after {
-    background-size: 100%;
-    background-image: url("data:image/svg+xml;utf8,\<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'>\<line x1='28' y1='34' x2='42' y2='38' stroke='black' stroke-width='8' stroke-linecap='round'/>\<line x1='58' y1='38' x2='72' y2='34' stroke='black' stroke-width='8' stroke-linecap='round'/>\<line x1='40' y1='55' x2='60' y2='55' stroke='black' stroke-width='6' stroke-linecap='round'/>\</svg>");
-    transform: scale(1.5) translateX(1em);
-    transition: transform 0.1s var(--slider-ease-bounce),
-                border 0.1s ease;
-}
-/*#endregion */
-
-/*#region 任务复选框 */
-input[type=checkbox] {
-    transform: scale(1);
-    transition: transform 0.1s ease !important;
-}
-
-input[type=checkbox]:checked:hover {
-    background-color: var(--checkbox-color);
-    border-color: var(--checkbox-color);
-    transform: scale(1.2);
-}
-/*#endregion */
-/*#endregion */
-
 /*#region 模态框、命令面板、菜单样式优化以及弹出动画 */
 /*#region 弹出动画 */
 .modal,
@@ -226,72 +152,76 @@ body.setting-default-frosted-glass .vertical-tab-header {
 /*#endregion */
 /*#endregion */
 
-/*#region 侧边栏背景 */
-/*#region 装饰纹理变量 */
-.app-container {
-    --art-deco-background: url("data:image/svg+xml,%0A%3Csvg width='132.91847mm' height='266.71841mm' viewBox='0 0 132.91847 266.71841' version='1.1' xml:space='preserve' xmlns='http://www.w3.org/2000/svg' xmlns:svg='http://www.w3.org/2000/svg'%3E%3Cg transform='translate(-54.325883,-15.575685)' style='fill:none;stroke:%23ffffff;stroke-width:2;'%3E%3Cpath d='M 75.724442,179.16735 A 23.153744,33.166172 0 0 1 60.221204,147.87391 23.153744,33.166172 0 0 1 75.711406,116.56722' /%3E%3Cpath d='M 60.696316,171.41821 A 28.033714,40.069035 0 0 1 60.6891,124.32402' /%3E%3Cpath d='m 61.159932,138.73541 10.199485,10.19948 -9.908403,9.90841' /%3E%3Cpath d='M 64.899052,129.22891 84.605036,148.9349 64.899051,168.64088' /%3E%3Cpath d='M 75.75864,70.444576 V 140.0885 m 0,0 8.8899,-8.8899 V 15.575685' /%3E%3Cpath d='m 68.522566,132.85243 7.236074,-7.23608' /%3E%3Cpath d='M 69.588242,121.21836 V 88.985467' /%3E%3Crect width='4.568171' height='4.568171' x='107.56038' y='9.1477385' transform='rotate(45)' /%3E%3Crect width='4.568171' height='4.568171' x='98.813118' y='-8.3257818' transform='rotate(45)' /%3E%3Cpath d='m 75.758638,227.42521 v -69.64392 m 0,0 8.8899,8.8899 V 282.2941' /%3E%3Cpath d='m 68.522564,165.01736 7.236074,7.23608' /%3E%3Cpath d='m 69.58824,174.50967 v 34.37465' /%3E%3Crect width='4.568171' height='4.568171' x='-103.06537' y='-201.47801' transform='matrix(0.70710678,-0.70710678,-0.70710678,-0.70710678,0,0)' /%3E%3Crect width='4.568171' height='4.568171' x='-111.81263' y='-218.95152' transform='matrix(0.70710678,-0.70710678,-0.70710678,-0.70710678,0,0)' /%3E%3Cpath d='m -165.8458,179.16735 a 23.153744,33.166172 0 0 1 -15.50324,-31.29344 23.153744,33.166172 0 0 1 15.4902,-31.30669' transform='scale(-1,1)' /%3E%3Cpath d='m -180.87393,171.41821 a 28.033714,40.069035 0 0 1 -0.007,-47.09419' transform='scale(-1,1)' /%3E%3Cpath d='m 180.41032,138.73541 -10.19949,10.19948 9.90841,9.90841' /%3E%3Cpath d='m 176.6712,129.22891 -19.70599,19.70599 19.70599,19.70598' /%3E%3Cpath d='M 165.81161,70.444576 V 140.0885 m 0,0 -8.8899,-8.8899 V 15.575685' /%3E%3Cpath d='m 173.04768,132.85243 -7.23607,-7.23608' /%3E%3Cpath d='M 171.98201,121.21836 V 88.985467' /%3E%3Crect width='4.568171' height='4.568171' x='-63.255585' y='179.9637' transform='matrix(-0.70710678,0.70710678,0.70710678,0.70710678,0,0)' /%3E%3Crect width='4.568171' height='4.568171' x='-72.002846' y='162.49017' transform='matrix(-0.70710678,0.70710678,0.70710678,0.70710678,0,0)' /%3E%3Cpath d='m 165.81161,227.42521 v -69.64392 m 0,0 -8.8899,8.8899 V 282.2941' /%3E%3Cpath d='m 173.04769,165.01736 -7.23608,7.23608' /%3E%3Cpath d='m 171.98201,174.50967 v 34.37465' /%3E%3Crect width='4.568171' height='4.568171' x='-273.88135' y='-30.662046' transform='rotate(-135)' /%3E%3Crect width='4.568171' height='4.568171' x='-282.6286' y='-48.135559' transform='rotate(-135)' /%3E%3C/g%3E%3C/svg%3E%0A");
-}
-
-.app-container {
-  --sidebar-texture: var(--art-deco-background);
-  --sidebar-texture-size: auto 100%;
-  --sidebar-texture-blend: soft-light;
-  --sidebar-texture-position: center center;
-  --sidebar-texture-opacity: 0.2;
+/*#region 滑块样式 */
+/*#region 动画变量 */
+.checkbox-container {
+  --slider-ease-bounce: cubic-bezier(0.175, 0.885, 0.32, 2);
 }
 /*#endregion */
 
-/*#region 深色模式纹理 */
-.mod-sidedock .workspace-leaf {
-  --sidebar-overlay-color: color-mix(in srgb, var(--background-primary), transparent calc(100% * var(--sidebar-texture-opacity)));
-  background-image: linear-gradient(var(--sidebar-overlay-color), var(--sidebar-overlay-color)), var(--sidebar-texture);
-  background-size: var(--sidebar-texture-size);
-  background-blend-mode: normal, var(--sidebar-texture-blend);
-  background-position: var(--sidebar-texture-position);
-  background-repeat: no-repeat;
+/*#region 设置项开关 */
+.checkbox-container {
+    border-radius: 10px;
+    transition: border-radius 0.1s var(--slider-ease-bounce);
+}
+
+.checkbox-container:not(.is-enabled)::after {
+    border-radius: 10px;
+    transition: transform 0.1s var(--slider-ease-bounce), border-radius 0.1s var(--slider-ease-bounce);
+}
+
+.checkbox-container.is-enabled {
+    border-radius: 6px;
+    transition: border-radius 0.1s ease-out;
+}
+
+.checkbox-container.is-enabled::after {
+    border-radius: 6px;
+    transition: background-size 0.1s var(--slider-ease-bounce),
+                transform 0.1s cubic-bezier(0.175, 0.885, 0.32, 1.5),
+                border-radius 0.3s var(--slider-ease-bounce);
+}
+
+.checkbox-container::after {
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 70%;
+}
+
+.checkbox-container:not(.is-enabled):hover::after {
+    transform: scale(1.5);
+    background-image: url("data:image/svg+xml;utf8,\<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'>\<circle cx='35' cy='40' r='6' fill='black'/>\<circle cx='65' cy='40' r='6' fill='black'/>\<path d='M30 60 Q50 72 70 60' stroke='black' stroke-width='10' fill='none' stroke-linecap='round'/>\</svg>");
+}
+
+.theme-light .checkbox-container:not(.is-enabled):hover::after {
+    border: 1px solid var(--background-modifier-border);
+}
+
+.theme-light .checkbox-container.is-enabled:hover::after {
+    border: 1px solid var(--background-modifier-border) !important;
+    transition: transform 0.1s var(--slider-ease-bounce),
+                border 0.1s ease;
+}
+
+.checkbox-container.is-enabled:hover::after {
+    background-size: 100%;
+    background-image: url("data:image/svg+xml;utf8,\<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'>\<line x1='28' y1='34' x2='42' y2='38' stroke='black' stroke-width='8' stroke-linecap='round'/>\<line x1='58' y1='38' x2='72' y2='34' stroke='black' stroke-width='8' stroke-linecap='round'/>\<line x1='40' y1='55' x2='60' y2='55' stroke='black' stroke-width='6' stroke-linecap='round'/>\</svg>");
+    transform: scale(1.5) translateX(1em);
+    transition: transform 0.1s var(--slider-ease-bounce),
+                border 0.1s ease;
 }
 /*#endregion */
 
-/*#region 浅色模式纯色背景 */
-body.theme-light .mod-sidedock .workspace-leaf {
-  background-image: none;
-  background-color: var(--background-primary);
-}
-/*#endregion */
-
-/*#endregion */
-
-/*#region ribbon 底部装饰 */
-/*#region 配色与图形变量 */
-body{
-    --tab-text-color-focused-active-current: var(--interactive-accent);
-    --icon-color-focused: var(--interactive-accent);
-    --art-deco-gradient: linear-gradient(var(--interactive-accent), var(--interactive-accent));
-    --art-deco-corner-2-bottom-left: url("data:image/svg+xml,%0A%3Csvg width='10.010233mm' height='10.000001mm' viewBox='0 0 10.010233 10.000001' version='1.1' xml:space='preserve' xmlns='http://www.w3.org/2000/svg' xmlns:svg='http://www.w3.org/2000/svg'%3E%3Cg transform='translate(-43.041955,-72.351599)'%3E%3Cg style='fill:%23000000;stroke:none;stroke-width:0.352777;' %3E%3Cpath d='m 43.055014,79.254085 a 3.083998,3.083998 0 0 1 2.183661,0.909066 3.083998,3.083998 0 0 1 0.897482,2.188449 l -3.083968,-0.01352 z' /%3E%3Cpath d='m 90.153341,24.651649 c 0.353049,0.168168 0.677565,0.396757 0.959195,0.678561 l 1.756148,-1.750302 a 5.9424839,5.9424839 0 0 0 -1.64543,-1.166015 z' transform='rotate(45)' /%3E%3Cpath d='m -84.450425,23.579908 -1.760899,1.755053 -0.0062,-0.0062 c -0.2795,-0.278989 -0.601586,-0.505046 -0.951156,-0.672715 l 1.072471,-2.242507 a 5.9424839,5.9424839 0 0 1 1.645796,1.166381 z' transform='matrix(-0.70710678,-0.70710678,-0.70710678,0.70710678,0,0)' /%3E%3C/g%3E%3Cg style='fill:none;stroke:%23000000;stroke-width:0.264583px;stroke-opacity:1'%3E%3Cpath d='m 43.18448,72.351599 v 9.867709 h 9.867708' /%3E%3Cpath d='m 48.788652,77.973661 0.66312,0.66312 -4.149571,2.395755 -0.883202,-1.068339 2.32799,-4.032198 0.669941,0.66994' /%3E%3Cpath d='m 49.930474,77.115474 -4.826311,3.754474 -0.474981,-0.717692 3.648277,-4.689794 z' /%3E%3Cpath d='m 46.143402,77.018857 -0.877279,-0.877279 -1.309044,3.659994 1.448601,1.688253 3.836511,-1.372178 -0.869459,-0.869459' /%3E%3C/g%3E%3C/g%3E%3C/svg%3E%0A");
+/*#region 任务复选框 */
+input[type=checkbox] {
+    transform: scale(1);
+    transition: transform 0.1s ease !important;
 }
 
-/*#endregion */
-
-/*#region 左侧 Ribbon 角饰 */
-.side-dock-ribbon.mod-left::after {
-    content: "";
-    display: block;
-    position: absolute;
-    left: 0;
-    bottom: 0;
-    width: var(--ribbon-width);
-    height: var(--ribbon-width);
-    background-image: var(--art-deco-gradient);
-    mask-image: var(--art-deco-corner-2-bottom-left);
-    mask-size: 100%;
-    mask-repeat: no-repeat;
-    mask-position: bottom left;
-    z-index: -1;
-    pointer-events: none;
-}
-
-.workspace-ribbon.mod-left {
-  padding-bottom: 30px !important;
+input[type=checkbox]:checked:hover {
+    background-color: var(--checkbox-color);
+    border-color: var(--checkbox-color);
+    transform: scale(1.2);
 }
 /*#endregion */
 /*#endregion */
@@ -397,4 +327,39 @@ body:not(.is-mobile) .mod-sidedock .workspace-leaf-content .view-header {
   font-size: large;
 }
 /*#endregion */
+/*#endregion */
+
+/*#region 侧边栏背景 */
+/*#region 装饰纹理变量 */
+.app-container {
+    --art-deco-background: url("data:image/svg+xml,%0A%3Csvg width='132.91847mm' height='266.71841mm' viewBox='0 0 132.91847 266.71841' version='1.1' xml:space='preserve' xmlns='http://www.w3.org/2000/svg' xmlns:svg='http://www.w3.org/2000/svg'%3E%3Cg transform='translate(-54.325883,-15.575685)' style='fill:none;stroke:%23ffffff;stroke-width:2;'%3E%3Cpath d='M 75.724442,179.16735 A 23.153744,33.166172 0 0 1 60.221204,147.87391 23.153744,33.166172 0 0 1 75.711406,116.56722' /%3E%3Cpath d='M 60.696316,171.41821 A 28.033714,40.069035 0 0 1 60.6891,124.32402' /%3E%3Cpath d='m 61.159932,138.73541 10.199485,10.19948 -9.908403,9.90841' /%3E%3Cpath d='M 64.899052,129.22891 84.605036,148.9349 64.899051,168.64088' /%3E%3Cpath d='M 75.75864,70.444576 V 140.0885 m 0,0 8.8899,-8.8899 V 15.575685' /%3E%3Cpath d='m 68.522566,132.85243 7.236074,-7.23608' /%3E%3Cpath d='M 69.588242,121.21836 V 88.985467' /%3E%3Crect width='4.568171' height='4.568171' x='107.56038' y='9.1477385' transform='rotate(45)' /%3E%3Crect width='4.568171' height='4.568171' x='98.813118' y='-8.3257818' transform='rotate(45)' /%3E%3Cpath d='m 75.758638,227.42521 v -69.64392 m 0,0 8.8899,8.8899 V 282.2941' /%3E%3Cpath d='m 68.522564,165.01736 7.236074,7.23608' /%3E%3Cpath d='m 69.58824,174.50967 v 34.37465' /%3E%3Crect width='4.568171' height='4.568171' x='-103.06537' y='-201.47801' transform='matrix(0.70710678,-0.70710678,-0.70710678,-0.70710678,0,0)' /%3E%3Crect width='4.568171' height='4.568171' x='-111.81263' y='-218.95152' transform='matrix(0.70710678,-0.70710678,-0.70710678,-0.70710678,0,0)' /%3E%3Cpath d='m -165.8458,179.16735 a 23.153744,33.166172 0 0 1 -15.50324,-31.29344 23.153744,33.166172 0 0 1 15.4902,-31.30669' transform='scale(-1,1)' /%3E%3Cpath d='m -180.87393,171.41821 a 28.033714,40.069035 0 0 1 -0.007,-47.09419' transform='scale(-1,1)' /%3E%3Cpath d='m 180.41032,138.73541 -10.19949,10.19948 9.90841,9.90841' /%3E%3Cpath d='m 176.6712,129.22891 -19.70599,19.70599 19.70599,19.70598' /%3E%3Cpath d='M 165.81161,70.444576 V 140.0885 m 0,0 -8.8899,-8.8899 V 15.575685' /%3E%3Cpath d='m 173.04768,132.85243 -7.23607,-7.23608' /%3E%3Cpath d='M 171.98201,121.21836 V 88.985467' /%3E%3Crect width='4.568171' height='4.568171' x='-63.255585' y='179.9637' transform='matrix(-0.70710678,0.70710678,0.70710678,0.70710678,0,0)' /%3E%3Crect width='4.568171' height='4.568171' x='-72.002846' y='162.49017' transform='matrix(-0.70710678,0.70710678,0.70710678,0.70710678,0,0)' /%3E%3Cpath d='m 165.81161,227.42521 v -69.64392 m 0,0 -8.8899,8.8899 V 282.2941' /%3E%3Cpath d='m 173.04769,165.01736 -7.23608,7.23608' /%3E%3Cpath d='m 171.98201,174.50967 v 34.37465' /%3E%3Crect width='4.568171' height='4.568171' x='-273.88135' y='-30.662046' transform='rotate(-135)' /%3E%3Crect width='4.568171' height='4.568171' x='-282.6286' y='-48.135559' transform='rotate(-135)' /%3E%3C/g%3E%3C/svg%3E%0A");
+}
+
+.app-container {
+  --sidebar-texture: var(--art-deco-background);
+  --sidebar-texture-size: auto 100%;
+  --sidebar-texture-blend: soft-light;
+  --sidebar-texture-position: center center;
+  --sidebar-texture-opacity: 0.2;
+}
+/*#endregion */
+
+/*#region 深色模式纹理 */
+.mod-sidedock .workspace-leaf {
+  --sidebar-overlay-color: color-mix(in srgb, var(--background-primary), transparent calc(100% * var(--sidebar-texture-opacity)));
+  background-image: linear-gradient(var(--sidebar-overlay-color), var(--sidebar-overlay-color)), var(--sidebar-texture);
+  background-size: var(--sidebar-texture-size);
+  background-blend-mode: normal, var(--sidebar-texture-blend);
+  background-position: var(--sidebar-texture-position);
+  background-repeat: no-repeat;
+}
+/*#endregion */
+
+/*#region 浅色模式纯色背景 */
+body.theme-light .mod-sidedock .workspace-leaf {
+  background-image: none;
+  background-color: var(--background-primary);
+}
+/*#endregion */
+
 /*#endregion */
