@@ -29,21 +29,21 @@
 @media(max-width:768px){.mathcraft-export-notebook-entry{min-height:34px;padding:7px 8px!important}.mathcraft-export-notebook-index-list{padding:4px 0}}
 
 
-:root{--mathcraft-content-width:800px;--mathcraft-left-width:clamp(228px,18vw,292px);--mathcraft-right-width:clamp(210px,16vw,258px)}
+:root{--mathcraft-left-width:clamp(228px,18vw,292px);--mathcraft-right-width:clamp(210px,16vw,258px)}
 html,body{height:100%;min-height:0;overflow:hidden}
 body,#main,#main-horizontal{background:var(--background-primary)}
-body #center-content>.obsidian-document>.markdown-preview-sizer{box-sizing:border-box;width:100%;max-width:min(var(--mathcraft-content-width),calc(100vw - 2em));flex-basis:min(var(--mathcraft-content-width),calc(100vw - 2em));padding-left:clamp(22px,4vw,52px);padding-right:clamp(22px,4vw,52px)}
+body #center-content>.obsidian-document>.markdown-preview-sizer{box-sizing:border-box;width:100%;max-width:min(var(--file-line-width,var(--line-width,800px)),calc(100vw - 2em));flex-basis:min(var(--file-line-width,var(--line-width,800px)),calc(100vw - 2em));padding-left:clamp(22px,4vw,52px);padding-right:clamp(22px,4vw,52px)}
 #center-content>.obsidian-document{padding-left:0;padding-right:0;border-radius:0;background:var(--background-primary);font-family:var(--font-text,serif)}
 #center-content .page-title{position:relative;padding:0 0 .55em 18px;margin-bottom:1.35em;border-bottom:1px solid var(--background-modifier-border);letter-spacing:-.02em}
 #center-content .page-title::before{content:'';position:absolute;left:0;top:.14em;bottom:.64em;width:4px;border-radius:4px;background:var(--interactive-accent)}
 #center-content .markdown-preview-section :is(h1,h2,h3,h4,h5,h6){scroll-margin-top:1.5rem}
 #center-content .markdown-preview-section :is(h2,h3){padding-bottom:.22em;border-bottom:1px solid color-mix(in srgb,var(--background-modifier-border) 72%,transparent)}
 #center-content .markdown-preview-section a.internal-link{text-decoration-thickness:1px;text-underline-offset:.18em}
-#center-content .markdown-preview-section code:not(pre code){padding:.12em .35em;border:1px solid var(--background-modifier-border);border-radius:var(--radius-s);background:var(--code-background)}
+body:not(.editing-suite-inline-code-enabled) #center-content .markdown-preview-section code:not(pre code){padding:.12em .35em;border:1px solid var(--background-modifier-border);border-radius:var(--radius-s);background:var(--code-background)}
 #center-content .markdown-preview-section img{border-radius:var(--radius-m)}
-#center-content .markdown-preview-section :not(h1,h2,h3,h4,h5,h6,li):has(>.math.math-block):not(:has(>table)){overflow-x:visible!important}
-#center-content .markdown-preview-section .math.math-block{display:block;max-width:100%;overflow-x:auto;overflow-y:hidden;overscroll-behavior-inline:contain;scrollbar-width:thin}
-#center-content .markdown-preview-section .math.math-block>mjx-container[display="true"]{width:max-content;min-width:100%;margin-block:1em}
+body:not(.editing-suite-math-enabled) #center-content .markdown-preview-section :not(h1,h2,h3,h4,h5,h6,li):has(>.math.math-block):not(:has(>table)){overflow-x:visible!important}
+body:not(.editing-suite-math-enabled) #center-content .markdown-preview-section .math.math-block{display:block;max-width:100%;overflow-x:auto;overflow-y:hidden;overscroll-behavior-inline:contain;scrollbar-width:thin}
+body:not(.editing-suite-math-enabled) #center-content .markdown-preview-section .math.math-block>mjx-container[display="true"]{width:max-content;min-width:100%}
 @media(min-width:1025px){
 #main-horizontal{--mathcraft-left-column:var(--mathcraft-left-width);--mathcraft-right-column:var(--mathcraft-right-width);display:grid!important;grid-template-columns:var(--mathcraft-left-column) minmax(0,1fr) var(--mathcraft-right-column);grid-template-rows:minmax(0,1fr);align-items:stretch;justify-content:stretch;height:auto!important;min-height:0;overflow:hidden;transition:grid-template-columns .2s ease-in-out}
 #main-horizontal:has(#left-sidebar.is-collapsed){--mathcraft-left-column:0px}
