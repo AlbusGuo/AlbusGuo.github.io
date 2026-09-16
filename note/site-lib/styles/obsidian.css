@@ -1292,6 +1292,7 @@ i, em { font-style: italic; color: var(--italic-color); }
 .bases-cards-line .value-list-container { flex-wrap: nowrap; }
 .bases-cards-line .value-list-container:empty::before { content: "—"; color: var(--text-faint); }
 .bases-view[data-view-type="kanban"] { --bases-view-padding: 0; --bases-embed-padding: 0; --bases-embed-border-width: 0; --bases-embed-height: 500px; }
+.hover-popover > .bases-embed .bases-view[data-view-type="kanban"] { height: calc(var(--popover-height) - var(--bases-header-height)); }
 .bases-kanban-container { background-color: var(--bases-kanban-container-background); padding: var(--bases-kanban-container-padding); overflow: auto hidden; height: 100%; position: relative; }
 .bases-kanban-inner { position: relative; gap: var(--bases-kanban-container-gap); height: 100%; }
 .bases-kanban-column { position: absolute; inset-block: 0px; width: var(--bases-kanban-column-min-width, 240px); display: flex; flex-direction: column; background-color: var(--bases-kanban-column-background); border-radius: var(--bases-kanban-column-radius); border: 1px solid var(--background-modifier-border); box-shadow: var(--bases-kanban-column-box-shadow); overflow: hidden; }

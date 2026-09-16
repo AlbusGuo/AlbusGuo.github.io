@@ -10,6 +10,9 @@
 .mathcraft-export-notebook-index{display:flex;flex:1 1 auto;flex-direction:column;height:100%;min-height:0}
 .mathcraft-export-notebook-index .feature-title{padding-inline:6px}
 .mathcraft-export-notebook-index-list{flex:1 1 auto;min-height:0;padding:2px 0;overflow-x:hidden;overflow-y:auto;overscroll-behavior:contain;scrollbar-gutter:stable}
+.mathcraft-export-introduction-item{margin:0}
+.mathcraft-export-introduction-item>.nav-file-title{display:flex;align-items:center;width:100%;min-height:30px;margin:0;padding:5px 6px 5px 8px;color:var(--nav-item-color);font-family:var(--font-interface,sans-serif);font-size:var(--font-ui-small,13px);line-height:var(--line-height-tight);border-radius:var(--nav-item-radius)}
+.mathcraft-export-introduction-item>.nav-file-title:hover{background:var(--nav-item-background-hover);color:var(--nav-item-color-hover)}
 .mathcraft-export-notebook-index-item{margin:0}
 .mathcraft-export-notebook-entry{appearance:none!important;display:flex!important;align-items:center;gap:6px;width:100%;min-width:0;min-height:30px;margin:0!important;padding:5px 6px 5px 8px!important;border:0!important;box-shadow:none!important;background:transparent!important;color:var(--nav-item-color);font-family:var(--font-interface,sans-serif)!important;font-size:var(--font-ui-small,13px)!important;line-height:var(--line-height-tight)!important;text-align:left;border-radius:var(--nav-item-radius);cursor:pointer}
 .mathcraft-export-notebook-entry:hover{background:var(--nav-item-background-hover)!important;color:var(--nav-item-color-hover)}
@@ -26,7 +29,7 @@
 .mathcraft-export-notebook-tree-scroll :is(.nav-file-title,.nav-folder-title){color:var(--nav-item-color);font-family:var(--font-interface,sans-serif)!important;font-size:var(--font-ui-small,13px)!important}
 .mathcraft-export-notebook-root-self{display:none!important}
 .mathcraft-export-notebook-tree>.tree-item-children{display:block!important;margin-left:0}
-@media(max-width:768px){.mathcraft-export-notebook-entry{min-height:34px;padding:7px 8px!important}.mathcraft-export-notebook-index-list{padding:4px 0}}
+@media(max-width:768px){.mathcraft-export-introduction-item>.nav-file-title,.mathcraft-export-notebook-entry{min-height:34px;padding:7px 8px!important}.mathcraft-export-notebook-index-list{padding:4px 0}}
 
 
 :root{--mathcraft-left-width:clamp(228px,18vw,292px);--mathcraft-right-width:clamp(210px,16vw,258px)}

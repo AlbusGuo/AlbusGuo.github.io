@@ -2,22 +2,23 @@
   "version": 2,
   "files": {
     "site-lib/scripts/webpage.js": "91ccb1038c2573388c0249bb948b0ae2733953024c0441cfb0b39f61bb5b0296",
-    "site-lib/scripts/notebook-navigation.js": "0c7e1fec7582cf7bd9782d564fce58ab4ddb70e50e96b0305b64da4f6748d705",
+    "site-lib/scripts/notebook-navigation.js": "e3047008f110f54783cb5e06ed7ed81032b1b6c9b4d6843d98a4150e79f54df2",
     "site-lib/scripts/editing-suite.js": "87df6aa4950e59b2318fe46c03cc15c66b067ee36c688f4488493739d6ba4c10",
     "site-lib/styles/export-webpage.css": "90738a4d2be2de9ae3489dad6254c95274997260a76b51338f68153fc4510dbd",
-    "site-lib/styles/main-styles.css": "1d21fe552dee53f4720025b556cdc0ede14b1f8a74d551cfe31bcece3f198b77",
-    "site-lib/styles/obsidian.css": "96681fe047e4c3f6441222ae0fc2603c352713a2835829c99cd5682c582e52dd",
+    "site-lib/styles/main-styles.css": "deb6901fe057751d66a47f6d7961ce3c623239dd18541ba2611d157332c2b0e6",
+    "site-lib/styles/obsidian.css": "2da3567d3875a015a526a83db610234e80effdb7e580d3ba928ffa4ec3193f55",
     "site-lib/styles/theme.css": "0e446061bba8b1ee44f46b08013f684973ad627663b1532d00e498638ab251a2",
     "site-lib/styles/snippets.css": "32efcabff5fa2c61eae63c2321d8e6b45317ecb1d6de7d307c5dc70c1dcdc16a",
-    "site-lib/styles/other-plugins.css": "e07c1977a9cb8a5958703c297027981a4b242a5cb972d3e275c35b8277a13071",
+    "site-lib/styles/other-plugins.css": "fd1e6d5006ecb89bbd2d5c48569d7c8efc5ed1607cb52eb64b99beb358ed16bd",
     "site-lib/styles/editing-suite.css": "f03a5e141094e2e1d39295c14721e733f69e1f985dedce2411cdc5b2c1244543",
     "site-lib/styles/editing-suite-export.css": "b555d3f9c97e857507988f5b4a7acca1a51e0520707bb2d8ddbe41ddee124427",
-    "site-lib/styles/global-variable-styles.css": "27d0e3aacfd3a5d83e6233b05d6d966dba4036899102c9aa83dab7815ebcac53",
+    "site-lib/styles/global-variable-styles.css": "288bc463cac2063220c1a4bbb27cbd2197afc20408f68bc350bae29051595adc",
     "site-lib/styles/supported-plugins.css": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
-    "site-lib/html/file-tree.html": "34b5e4ecc55f561a0f050cb39de2847721441b5a2b4789227ff1fbddf76661c7",
-    "site-lib/search-index.json": "2efc275b0da03dafcefcd52ee015edcad6c5792ad8a1f105b769e55b4a7ffa09",
-    "site-lib/metadata.json": "3e0d85e97e23f84187faaa34c201305c0edec4cf090a1bd74c4a2bd4d31a7773",
-    "index.html": "d34d8ddeb6e84cbfe7902ccf0cb071a2a13de0fdca6ba392be74fdf4b3149142",
+    "site-lib/html/file-tree.html": "9b4f790ce7f7c50d426caf575004b6ee69e87309fc9d10867816655b98e44163",
+    "site-lib/search-index.json": "b25c1ebf1befe6e21cdf9100ec76e629ee388b30e5b3525cc2407739d4a8ef5c",
+    "site-lib/metadata.json": "56ebebdc32b95efded607c670759319321a5e83b004ff43d2a20f40ff22c0edf",
+    "index.html": "8e5d5f6b258cd2c51e1e12336709f976e78cc144f040e6dc5308fc6ab503d679",
+    "高中数学/前言.html": "2642532f0cc2b295c5d88820afa83911bdba4ebfa949c947e20e5dca0bbebedd",
     "高中数学/基本逻辑用语/命题.html": "53e2af600d90fd3d51bcc3644b49c35f78118b6b3de1ec199b62009d4caffce6",
     "高中数学/基本逻辑用语/基本逻辑算符.html": "c04f2bafdf1e5315bddcbfd659adce1c8ea38006bd7c78fef99c5a9d140ab89f",
     "高中数学/基本逻辑用语/复合命题-原子命题-合式公式.html": "96fbed53c12dd344d795255e14974c36c1131e41b9d79d91705e74794718bc5a",
@@ -217,7 +218,7 @@
     "chevalley-超群的-r-阶-frobenius-核的表示/frobenius-核与分次代数.html": "2c8979bcedbe0f88a4b00713a16e2e0ea8f3af3c4d011de409094adac7de46e8",
     "chevalley-超群的-r-阶-frobenius-核的表示/(dist(g_r)-t)-模范畴.html": "03e0c4a7a882796d773446c99c2ce48d9133b89ac06c190811b1f3c5500c79a4",
     "chevalley-超群的-r-阶-frobenius-核的表示/计算二项式系数的工具.html": "2cfedb76094a2f07198a3f71c508e1e25a26981c2e514f2919c3fcf0ca3399fa",
-    "chevalley-超群的-r-阶-frobenius-核的表示/r-阶情形同态像与核的计算.html": "5cd94c4b6e5f2eaee4f87758b2de5b11a70484710a1a99bc072007b2069c6a0b",
+    "chevalley-超群的-r-阶-frobenius-核的表示/r-阶情形同态像与核的计算.html": "6e2873e729675d3828a880b803c5245a269aa4cedac661894c016e38b0590fb0",
     "chevalley-超群的-r-阶-frobenius-核的表示/r-阶情形的正合列.html": "2446d77643bd942308b43b6b64c6a052d2635341baf012eb04ecc54f0df3ca92",
     "chevalley-超群的-r-阶-frobenius-核的表示/r-阶情形同态空间的计算.html": "10c80b3a84782fe9df2af45e065c7ff21767d1f7edf1593a20222f9798209c5b",
     "chevalley-超群的-r-阶-frobenius-核的表示/(dist(g_r)-t)-模范畴的基变换.html": "a2e17d6cae03830761a9599824fe467eb9c965f0660bb0d558169ff60f05d601",
@@ -306,14 +307,18 @@
     "site-lib/media/ba51b929995b-454577c22304619db035.ttf": "ba51b929995b3088ff1932d9d6835c90ccf304b296a3b8e103d2e95b958109ee",
     "site-lib/media/839f42df29a5-52ac8f3034507f1d9e53.ttf": "839f42df29a5a83470888b9a3aa4064fc1bc35e6616bb542226d89086f019ec5",
     "site-lib/media/a0cfec834df5-05b618077343fbbd92b7.ttf": "a0cfec834df50e21cdb3d15bf93e87ed033d8c26693f9ede6efe24325ae22c9e",
-    "site-lib/media/e564f652916d-01dcbad1bac635f9c9cd.woff2": "e564f652916db6c139570fefb9524a77c4d48f30c92928de9db19b6b5c7a262a",
-    "site-lib/media/693b77d4f32e-c504db5c06caaf7cdfba.woff2": "693b77d4f32ee9b8bfc995589b5fad5e99adf2832738661f5402f9978429a8e3"
+    "site-lib/media/693b77d4f32e-c504db5c06caaf7cdfba.woff2": "693b77d4f32ee9b8bfc995589b5fad5e99adf2832738661f5402f9978429a8e3",
+    "site-lib/media/e564f652916d-01dcbad1bac635f9c9cd.woff2": "e564f652916db6c139570fefb9524a77c4d48f30c92928de9db19b6b5c7a262a"
   },
   "state": {
-    "structureSignature": "0cb15fdf08af8a39cc7478fbb12d17ddb52119c72de98e948e7bf246e80061a9",
+    "structureSignature": "26b84d4c64bc0350d2f7f098fbb4a16ade18a3cfb53abfad628e9cd6c4f2cf24",
     "pages": {
-      "Documents/数学/高中数学/前言.md": {
+      "Documents/数学/介绍.md": {
         "route": "index.html",
+        "signature": "e6e70ee9273fed4ccd93ece3c1c11507e230cb8867bec516dbfe0de6b0404377"
+      },
+      "Documents/数学/高中数学/前言.md": {
+        "route": "高中数学/前言.html",
         "signature": "b7e13fa8ecf2582cd193e7132713d05f8f69512ba2457040817cb1ae4fa6069c"
       },
       "Documents/数学/高中数学/基本逻辑用语/命题.md": {
