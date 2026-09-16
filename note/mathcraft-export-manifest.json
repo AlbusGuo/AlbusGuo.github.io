@@ -12,12 +12,12 @@
     "site-lib/styles/other-plugins.css": "fd1e6d5006ecb89bbd2d5c48569d7c8efc5ed1607cb52eb64b99beb358ed16bd",
     "site-lib/styles/editing-suite.css": "f03a5e141094e2e1d39295c14721e733f69e1f985dedce2411cdc5b2c1244543",
     "site-lib/styles/editing-suite-export.css": "b555d3f9c97e857507988f5b4a7acca1a51e0520707bb2d8ddbe41ddee124427",
-    "site-lib/styles/global-variable-styles.css": "288bc463cac2063220c1a4bbb27cbd2197afc20408f68bc350bae29051595adc",
+    "site-lib/styles/global-variable-styles.css": "36a6ad10c65293e13a07991fa74947a09db1e6b8dd88e60d14dbc0f8f6c6adfe",
     "site-lib/styles/supported-plugins.css": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
     "site-lib/html/file-tree.html": "9b4f790ce7f7c50d426caf575004b6ee69e87309fc9d10867816655b98e44163",
-    "site-lib/search-index.json": "56a3b29250575a7326f4b1a20e0f787e01791e1a71c5f6b6d666a3a069b6a909",
-    "site-lib/metadata.json": "bb1b3d1c842b5a2d6ac71daa6701f255956ba28635659521999c9cd1bf26d357",
-    "index.html": "88e26998c1d4a79a595f3e4877149ccf00332465d60081f504806947e45f3f5d",
+    "site-lib/search-index.json": "b8c16238d6059c7320ed533c95f7c86cfd70b6396a6ea5c64cc1e5e6193c5fd0",
+    "site-lib/metadata.json": "e7ff573e6e122b42bac20281d7e13bc0f01b321c95ffc1524dfb37ee739d874c",
+    "高中数学/前言.html": "557c536fe060c1db5393824acda45b62c546569e88ef69e656035fe13d0b4b97",
     "site-lib/fonts/mathjax-2ea308c69f13.woff2": "2ea308c69f139e9ee7bc452e12a449c13e3b9ce4c08aebc4e86e15df232a26e0",
     "site-lib/fonts/mathjax-f9054e3dd268.woff2": "f9054e3dd268155cb38c708ef7b7c7c03e83ac3723afcb65ae65a37bbb301f4e",
     "site-lib/fonts/mathjax-2c146f72c9a3.woff2": "2c146f72c9a345aa282398a752d03af71d83a011f3d067297b533a31f0c5f5cb",
@@ -51,7 +51,7 @@
     "site-lib/media/6e5dd0494f63-70cc7ff27245e82ad414.ttf": "6e5dd0494f63d85970156cd54b6ac568b82a392d135db08bbf5cc3048d489aa9",
     "site-lib/media/ba51b929995b-454577c22304619db035.ttf": "ba51b929995b3088ff1932d9d6835c90ccf304b296a3b8e103d2e95b958109ee",
     "site-lib/media/a0cfec834df5-05b618077343fbbd92b7.ttf": "a0cfec834df50e21cdb3d15bf93e87ed033d8c26693f9ede6efe24325ae22c9e",
-    "高中数学/前言.html": "2642532f0cc2b295c5d88820afa83911bdba4ebfa949c947e20e5dca0bbebedd",
+    "index.html": "88e26998c1d4a79a595f3e4877149ccf00332465d60081f504806947e45f3f5d",
     "高中数学/基本逻辑用语/命题.html": "53e2af600d90fd3d51bcc3644b49c35f78118b6b3de1ec199b62009d4caffce6",
     "高中数学/基本逻辑用语/基本逻辑算符.html": "c04f2bafdf1e5315bddcbfd659adce1c8ea38006bd7c78fef99c5a9d140ab89f",
     "高中数学/基本逻辑用语/复合命题-原子命题-合式公式.html": "96fbed53c12dd344d795255e14974c36c1131e41b9d79d91705e74794718bc5a",
@@ -319,7 +319,7 @@
       },
       "Documents/数学/高中数学/前言.md": {
         "route": "高中数学/前言.html",
-        "signature": "b7e13fa8ecf2582cd193e7132713d05f8f69512ba2457040817cb1ae4fa6069c"
+        "signature": "29c7e53d7f22ff4470d2d1aa82e997547f28d4ee131bd6f0e62a716b46fa60c1"
       },
       "Documents/数学/高中数学/基本逻辑用语/命题.md": {
         "route": "高中数学/基本逻辑用语/命题.html",
