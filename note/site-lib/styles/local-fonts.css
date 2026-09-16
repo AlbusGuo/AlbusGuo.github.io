@@ -1,10 +1,23 @@
 :root body{--mathcraft-export-base-text-font:"CMU Serif", 华文中宋, "??", "SimSun", ui-sans-serif, -apple-system, BlinkMacSystemFont, system-ui, "Segoe UI", "Google Sans Flex", Roboto, "Inter Variable", Inter, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", sans-serif;--font-text:var(--mathcraft-export-base-text-font)!important}.editing-suite-note-font-enabled{--font-text:var(--editing-suite-note-font-family),var(--mathcraft-export-base-text-font)!important}
-@font-face{font-family:"CMU Serif";src:url("../fonts/CMU-Serif-3deb3c529a46.ttf") format("truetype");font-style:normal;font-weight:400;font-display:swap;}
+@font-face{font-family:"CMU Serif";src:url("../fonts/CMU-Serif-b962c7b68b9b.ttf") format("truetype");font-style:normal;font-weight:400;font-display:swap;}
 @font-face{font-family:"CMU Serif";src:url("../fonts/CMU-Serif-643afcc8fc9a.ttf") format("truetype");font-style:normal;font-weight:700;font-display:swap;}
-@font-face{font-family:"CMU Serif";src:url("../fonts/CMU-Serif-acd86b280644.ttf") format("truetype");font-style:italic;font-weight:400;font-display:swap;}
+@font-face{font-family:"CMU Serif";src:url("../fonts/CMU-Serif-570dbbba9377.ttf") format("truetype");font-style:italic;font-weight:400;font-display:swap;}
+@font-face{font-family:"ELEYANG Focus专注体";src:url("../fonts/ELEYANG-Focus专注体-2134e892cd29.ttf") format("truetype");font-style:normal;font-weight:400;font-display:swap;}
+@font-face{font-family:"ELEYANG Focus专注体";src:url("../fonts/ELEYANG-Focus专注体-58f6377b81e0.ttf") format("truetype");font-style:normal;font-weight:700;font-display:swap;}
+@font-face{font-family:"SimSun";src:url("../fonts/SimSun-8d4c801c3e0b.ttf") format("truetype");font-style:normal;font-weight:400;font-display:swap;}
 @font-face{font-family:"华文中宋";src:url("../fonts/华文中宋-e822a3f2859a.ttf") format("truetype");font-style:normal;font-weight:400;font-display:swap;}
-@font-face{font-family:"Segoe UI";src:url("../fonts/Segoe-UI-8134dbcd09e7.ttf") format("truetype");font-style:normal;font-weight:400;font-display:swap;}
-@font-face{font-family:"Segoe UI";src:url("../fonts/Segoe-UI-aeb9e4a6ec5c.ttf") format("truetype");font-style:normal;font-weight:700;font-display:swap;}
-@font-face{font-family:"Segoe UI";src:url("../fonts/Segoe-UI-be525b9a6d30.ttf") format("truetype");font-style:italic;font-weight:400;font-display:swap;}
-@font-face{font-family:"Segoe UI";src:url("../fonts/Segoe-UI-c886161fa6d1.ttf") format("truetype");font-style:italic;font-weight:700;font-display:swap;}
-@font-face{font-family:"SimSun";src:url("../fonts/SimSun-1526ac24375f.ttc") format("collection");font-style:normal;font-weight:400;font-display:swap;}
+@font-face{font-family:"Segoe UI";src:url("../fonts/Segoe-UI-27ca1ab4bd5a.ttf") format("truetype");font-style:normal;font-weight:100 900;font-display:swap;}
+@font-face{font-family:"Segoe UI";src:url("../fonts/Segoe-UI-27ca1ab4bd5a.ttf") format("truetype");font-style:normal;font-weight:100 900;font-display:swap;}
+@font-face{font-family:"Segoe UI";src:url("../fonts/Segoe-UI-27ca1ab4bd5a.ttf") format("truetype");font-style:normal;font-weight:100 900;font-display:swap;}
+@font-face{font-family:"Segoe UI";src:url("../fonts/Segoe-UI-27ca1ab4bd5a.ttf") format("truetype");font-style:normal;font-weight:100 900;font-display:swap;}
+@font-face{font-family:"Segoe UI";src:url("../fonts/Segoe-UI-27ca1ab4bd5a.ttf") format("truetype");font-style:normal;font-weight:100 900;font-display:swap;}
+@font-face{font-family:"Segoe UI";src:url("../fonts/Segoe-UI-27ca1ab4bd5a.ttf") format("truetype");font-style:normal;font-weight:100 900;font-display:swap;}
+@font-face{font-family:"Segoe UI";src:url("../fonts/Segoe-UI-27ca1ab4bd5a.ttf") format("truetype");font-style:normal;font-weight:100 900;font-display:swap;}
+@font-face{font-family:"Segoe UI";src:url("../fonts/Segoe-UI-27ca1ab4bd5a.ttf") format("truetype");font-style:normal;font-weight:100 900;font-display:swap;}
+@font-face{font-family:"Segoe UI";src:url("../fonts/Segoe-UI-27ca1ab4bd5a.ttf") format("truetype");font-style:normal;font-weight:100 900;font-display:swap;}
+@font-face{font-family:"Segoe UI";src:url("../fonts/Segoe-UI-27ca1ab4bd5a.ttf") format("truetype");font-style:normal;font-weight:100 900;font-display:swap;}
+@font-face{font-family:"Segoe UI";src:url("../fonts/Segoe-UI-27ca1ab4bd5a.ttf") format("truetype");font-style:normal;font-weight:100 900;font-display:swap;}
+@font-face{font-family:"Segoe UI";src:url("../fonts/Segoe-UI-27ca1ab4bd5a.ttf") format("truetype");font-style:normal;font-weight:100 900;font-display:swap;}
+@font-face{font-family:"Segoe UI";src:url("../fonts/Segoe-UI-27ca1ab4bd5a.ttf") format("truetype");font-style:normal;font-weight:100 900;font-display:swap;}
+@font-face{font-family:"Segoe UI";src:url("../fonts/Segoe-UI-27ca1ab4bd5a.ttf") format("truetype");font-style:normal;font-weight:100 900;font-display:swap;}
+@font-face{font-family:"Segoe UI";src:url("../fonts/Segoe-UI-27ca1ab4bd5a.ttf") format("truetype");font-style:normal;font-weight:100 900;font-display:swap;}
