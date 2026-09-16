@@ -1,3 +1,4 @@
+:root body{--mathcraft-export-base-text-font:"CMU Serif", 华文中宋, "??", "SimSun", ui-sans-serif, -apple-system, BlinkMacSystemFont, system-ui, "Segoe UI", "Google Sans Flex", Roboto, "Inter Variable", Inter, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", sans-serif;--font-text:var(--mathcraft-export-base-text-font)!important}.editing-suite-note-font-enabled{--font-text:var(--editing-suite-note-font-family),var(--mathcraft-export-base-text-font)!important}
 @font-face{font-family:"CMU Serif";src:url("../fonts/CMU-Serif-3deb3c529a46.ttf") format("truetype");font-style:normal;font-weight:400;font-display:swap;}
 @font-face{font-family:"CMU Serif";src:url("../fonts/CMU-Serif-643afcc8fc9a.ttf") format("truetype");font-style:normal;font-weight:700;font-display:swap;}
 @font-face{font-family:"CMU Serif";src:url("../fonts/CMU-Serif-acd86b280644.ttf") format("truetype");font-style:italic;font-weight:400;font-display:swap;}
@@ -5,5 +6,4 @@
 @font-face{font-family:"Segoe UI";src:url("../fonts/Segoe-UI-aeb9e4a6ec5c.ttf") format("truetype");font-style:normal;font-weight:700;font-display:swap;}
 @font-face{font-family:"Segoe UI";src:url("../fonts/Segoe-UI-be525b9a6d30.ttf") format("truetype");font-style:italic;font-weight:400;font-display:swap;}
 @font-face{font-family:"Segoe UI";src:url("../fonts/Segoe-UI-c886161fa6d1.ttf") format("truetype");font-style:italic;font-weight:700;font-display:swap;}
-@font-face{font-family:"Segoe UI Emoji";src:url("../fonts/Segoe-UI-Emoji-451df9bb5546.ttf") format("truetype");font-style:normal;font-weight:400;font-display:swap;}
-@font-face{font-family:"Segoe UI Symbol";src:url("../fonts/Segoe-UI-Symbol-a4a35dcc62cd.ttf") format("truetype");font-style:normal;font-weight:400;font-display:swap;}
+@font-face{font-family:"SimSun";src:url("../fonts/SimSun-1526ac24375f.ttc") format("collection");font-style:normal;font-weight:400;font-display:swap;}
