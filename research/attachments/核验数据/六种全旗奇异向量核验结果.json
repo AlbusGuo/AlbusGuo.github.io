@@ -1,0 +1,9 @@
+{
+  "status": "passed",
+  "two_model_source_target_cases": 3792,
+  "primitive_vectors": 8128,
+  "middle_relations": "odd brackets and squares; all E^(s)F^(t), same-root products and odd/divided commutators in the tested range",
+  "max_hom_with_T": 1,
+  "max_hom_without_T": 2,
+  "exception": "Same middle Borel, a divisible by p^r and b divisible by p; matching source character and parity."
+}

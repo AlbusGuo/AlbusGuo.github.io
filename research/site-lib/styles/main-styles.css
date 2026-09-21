@@ -1,0 +1,83 @@
+
+.mathcraft-export-notebook-view[hidden],.mathcraft-export-notebook-tree-scroll[hidden],.mathcraft-export-notebook-tree[hidden]{display:none!important}
+.mathcraft-export-file-explorer{display:flex;flex-direction:column;width:100%;height:100%;min-height:0;overflow:hidden!important;color:var(--nav-item-color);font-family:var(--font-interface,sans-serif);font-size:var(--font-ui-small,13px)}
+.mathcraft-export-file-explorer .feature-header{box-sizing:border-box;display:flex;align-items:center;flex:0 0 auto;min-height:38px;margin:0 0 6px;padding:0 4px 8px;border-bottom:1px solid var(--background-modifier-border)}
+.mathcraft-export-file-explorer .feature-title{display:flex;align-items:center;min-width:0;margin:0!important;color:var(--text-normal)!important;font-family:var(--font-interface,sans-serif);font-size:var(--font-ui-medium,14px)!important;font-weight:var(--font-semibold,600);line-height:var(--line-height-tight);letter-spacing:normal;text-transform:none}
+.mathcraft-export-file-explorer.mathcraft-export-navigation-animating{display:grid;grid-template-columns:100%;grid-template-rows:auto minmax(0,1fr);overflow:hidden}
+.mathcraft-export-file-explorer.mathcraft-export-navigation-animating>.mathcraft-export-notebook-index{grid-column:1;grid-row:1/3}
+.mathcraft-export-file-explorer.mathcraft-export-navigation-animating>.mathcraft-export-notebook-detail{grid-column:1;grid-row:1}
+.mathcraft-export-file-explorer.mathcraft-export-navigation-animating>.mathcraft-export-notebook-tree-scroll{grid-column:1;grid-row:2}
+.mathcraft-export-notebook-index{display:flex;flex:1 1 auto;flex-direction:column;height:100%;min-height:0}
+.mathcraft-export-notebook-index .feature-title{padding-inline:6px}
+.mathcraft-export-notebook-index-list{flex:1 1 auto;min-height:0;padding:2px 0;overflow-x:hidden;overflow-y:auto;overscroll-behavior:contain;scrollbar-gutter:stable}
+.mathcraft-export-introduction-item{margin:0}
+.mathcraft-export-introduction-item>.nav-file-title{display:flex;align-items:center;width:100%;min-height:30px;margin:0;padding:5px 6px 5px 8px;color:var(--nav-item-color);font-family:var(--font-interface,sans-serif);font-size:var(--font-ui-small,13px);line-height:var(--line-height-tight);border-radius:var(--nav-item-radius)}
+.mathcraft-export-introduction-item>.nav-file-title:hover{background:var(--nav-item-background-hover);color:var(--nav-item-color-hover)}
+.mathcraft-export-notebook-index-item{margin:0}
+.mathcraft-export-notebook-entry{appearance:none!important;display:flex!important;align-items:center;gap:6px;width:100%;min-width:0;min-height:30px;margin:0!important;padding:5px 6px 5px 8px!important;border:0!important;box-shadow:none!important;background:transparent!important;color:var(--nav-item-color);font-family:var(--font-interface,sans-serif)!important;font-size:var(--font-ui-small,13px)!important;line-height:var(--line-height-tight)!important;text-align:left;border-radius:var(--nav-item-radius);cursor:pointer}
+.mathcraft-export-notebook-entry:hover{background:var(--nav-item-background-hover)!important;color:var(--nav-item-color-hover)}
+.mathcraft-export-notebook-entry:focus-visible{box-shadow:0 0 0 2px var(--background-modifier-border-focus)!important}
+.mathcraft-export-notebook-entry-chevron{display:flex;align-items:center;justify-content:center;flex:0 0 auto;margin-left:auto;color:var(--nav-item-color)}
+.mathcraft-export-notebook-entry-chevron svg{width:var(--icon-xs,14px);height:var(--icon-xs,14px)}
+.mathcraft-export-notebook-entry-title{flex:1;min-width:0;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.mathcraft-export-notebook-detail{flex:0 0 auto}
+.mathcraft-export-notebook-detail-header .feature-title{flex:1 1 auto}
+.mathcraft-export-notebook-back{appearance:none!important;display:flex!important;align-items:center;justify-content:center;flex:0 0 auto;width:var(--clickable-icon-size,30px);height:var(--clickable-icon-size,30px);min-width:0!important;margin:0 4px 0 0!important;padding:0!important;border:0!important;box-shadow:none!important;background:transparent!important;color:var(--icon-color)!important;border-radius:var(--clickable-icon-radius,var(--radius-s))!important;cursor:pointer}
+.mathcraft-export-notebook-back:hover{background:var(--background-modifier-hover)!important;color:var(--icon-color-hover)!important}
+.mathcraft-export-notebook-title{min-width:0;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.mathcraft-export-notebook-tree-scroll{flex:1 1 auto;min-height:0;overflow-x:hidden;overflow-y:auto;overscroll-behavior:contain;scrollbar-gutter:stable}
+.mathcraft-export-notebook-tree-scroll :is(.nav-file-title,.nav-folder-title){color:var(--nav-item-color);font-family:var(--font-interface,sans-serif)!important;font-size:var(--font-ui-small,13px)!important}
+.mathcraft-export-notebook-root-self{display:none!important}
+.mathcraft-export-notebook-tree>.tree-item-children{display:block!important;margin-left:0}
+@media(max-width:768px){.mathcraft-export-introduction-item>.nav-file-title,.mathcraft-export-notebook-entry{min-height:34px;padding:7px 8px!important}.mathcraft-export-notebook-index-list{padding:4px 0}}
+
+
+:root{--mathcraft-left-width:clamp(228px,18vw,292px);--mathcraft-right-width:clamp(210px,16vw,258px)}
+html,body{height:100%;min-height:0;overflow:hidden}
+body,#main,#main-horizontal{background:var(--background-primary)}
+body #center-content>.obsidian-document>.markdown-preview-sizer{box-sizing:border-box;width:100%;max-width:min(var(--file-line-width,var(--line-width,800px)),calc(100vw - 2em));flex-basis:min(var(--file-line-width,var(--line-width,800px)),calc(100vw - 2em));padding-left:clamp(22px,4vw,52px);padding-right:clamp(22px,4vw,52px)}
+#center-content>.obsidian-document{padding-left:0;padding-right:0;border-radius:0;background:var(--background-primary);font-family:var(--font-text,serif)}
+#center-content .page-title{position:relative;padding:0 0 .55em 18px;margin-bottom:1.35em;border-bottom:1px solid var(--background-modifier-border);letter-spacing:-.02em}
+#center-content .page-title::before{content:'';position:absolute;left:0;top:.14em;bottom:.64em;width:4px;border-radius:4px;background:var(--interactive-accent)}
+#center-content .markdown-preview-section :is(h1,h2,h3,h4,h5,h6){scroll-margin-top:1.5rem}
+#center-content .markdown-preview-section :is(h2,h3){padding-bottom:.22em;border-bottom:1px solid color-mix(in srgb,var(--background-modifier-border) 72%,transparent)}
+#center-content .markdown-preview-section a.internal-link{text-decoration-thickness:1px;text-underline-offset:.18em}
+body:not(.editing-suite-inline-code-enabled) #center-content .markdown-preview-section code:not(pre code){padding:.12em .35em;border:1px solid var(--background-modifier-border);border-radius:var(--radius-s);background:var(--code-background)}
+#center-content .markdown-preview-section img{border-radius:var(--radius-m)}
+body:not(.editing-suite-math-enabled) #center-content .markdown-preview-section :not(h1,h2,h3,h4,h5,h6,li):has(>.math.math-block):not(:has(>table)){overflow-x:visible!important}
+body:not(.editing-suite-math-enabled) #center-content .markdown-preview-section .math.math-block{display:block;max-width:100%;overflow-x:auto;overflow-y:hidden;overscroll-behavior-inline:contain;scrollbar-width:thin}
+body:not(.editing-suite-math-enabled) #center-content .markdown-preview-section .math.math-block>mjx-container[display="true"]{width:max-content;min-width:100%}
+@media(min-width:1025px){
+#main-horizontal{--mathcraft-left-column:var(--mathcraft-left-width);--mathcraft-right-column:var(--mathcraft-right-width);display:grid!important;grid-template-columns:var(--mathcraft-left-column) minmax(0,1fr) var(--mathcraft-right-column);grid-template-rows:minmax(0,1fr);align-items:stretch;justify-content:stretch;height:auto!important;min-height:0;overflow:hidden;transition:grid-template-columns .2s ease-in-out}
+#main-horizontal:has(#left-sidebar.is-collapsed){--mathcraft-left-column:0px}
+#main-horizontal:has(#right-sidebar.is-collapsed){--mathcraft-right-column:0px}
+#left-content,#center-content,#right-content{box-sizing:border-box;width:auto!important;max-width:none!important;min-width:0;min-height:0;height:auto!important;overflow:hidden}
+#left-content{grid-column:1;border-right:1px solid var(--background-modifier-border)}
+#center-content{grid-column:2;contain:none}
+#right-content{grid-column:3;border-left:1px solid var(--background-modifier-border)}
+#left-content:has(#left-sidebar.is-collapsed),#right-content:has(#right-sidebar.is-collapsed){overflow:visible;border:0}
+body.floating-sidebars :is(#left-sidebar,#right-sidebar),#left-sidebar,#right-sidebar{position:relative!important;inset:auto!important;display:flex;flex-direction:column;width:100%!important;min-width:0!important;max-width:none!important;height:100%;overflow:hidden;contain:none;background:var(--background-primary)}
+:is(#left-sidebar,#right-sidebar).is-collapsed{width:100%!important;min-width:0!important;max-width:none!important;overflow:visible!important}
+:is(#left-sidebar,#right-sidebar) .sidebar-topbar,:is(#left-sidebar,#right-sidebar).is-collapsed .sidebar-topbar{position:relative!important;inset:auto!important;box-sizing:border-box;flex:0 0 52px;width:100%!important;height:52px;padding:10px 14px;border-radius:0;border-bottom:1px solid var(--background-modifier-border);background:var(--background-primary)}
+:is(#left-sidebar,#right-sidebar).is-collapsed .sidebar-topbar{position:fixed!important;top:0!important;width:52px!important;border:0;z-index:20}
+#left-sidebar.is-collapsed .sidebar-topbar{left:0!important;right:auto!important}
+#right-sidebar.is-collapsed .sidebar-topbar{right:0!important;left:auto!important}
+#left-sidebar .topbar-content,#right-sidebar .topbar-content{box-sizing:border-box;width:100%!important;margin:0;transition:opacity .12s ease-in-out}
+#left-sidebar:not(.is-collapsed) .topbar-content{padding-right:38px}
+#right-sidebar:not(.is-collapsed) .topbar-content{padding-left:38px}
+:is(#left-sidebar,#right-sidebar).is-collapsed .topbar-content{width:0!important;opacity:0;pointer-events:none}
+:is(#left-sidebar,#right-sidebar) .sidebar-content-wrapper{flex:1;min-height:0;overflow:hidden}
+:is(#left-sidebar,#right-sidebar).is-collapsed .sidebar-content-wrapper{visibility:hidden;pointer-events:none}
+:is(#left-sidebar,#right-sidebar) .leaf-content,:is(#left-sidebar,#right-sidebar):not(.is-collapsed) .leaf-content,:is(#left-sidebar,#right-sidebar).is-collapsed .leaf-content{position:relative;inset:auto;box-sizing:border-box;width:100%;min-width:0;max-width:none;height:100%;padding:14px 14px 28px;border-radius:0;background:var(--background-primary);font-family:var(--font-interface,sans-serif);overflow-x:hidden}
+#left-sidebar-content{overflow-y:hidden!important}
+#right-sidebar-content{overflow-y:auto!important}
+.clickable-icon.sidebar-collapse-icon{appearance:none;display:flex!important;align-items:center;justify-content:center;box-sizing:border-box;width:32px!important;height:32px!important;top:10px;margin:0!important;padding:2px!important;border:0;box-shadow:none;background:transparent;border-radius:var(--clickable-icon-radius,var(--radius-s));cursor:pointer}
+#left-sidebar .clickable-icon.sidebar-collapse-icon{right:10px}
+#right-sidebar .clickable-icon.sidebar-collapse-icon{left:10px}
+.clickable-icon.sidebar-collapse-icon:hover{background:var(--background-modifier-hover)}
+.sidebar-handle{display:none!important}
+#center-content>.obsidian-document{box-sizing:border-box;width:100%;height:100%;min-height:0;overflow-x:hidden!important;overflow-y:auto!important;overscroll-behavior:contain;scrollbar-gutter:stable}
+#center-content>.obsidian-document>.markdown-preview-sizer{padding-top:44px;padding-bottom:35vh}
+}
+@media(max-width:1024px){body #center-content>.obsidian-document>.markdown-preview-sizer{max-width:100%;padding-left:clamp(18px,5vw,42px);padding-right:clamp(18px,5vw,42px)}#center-content .page-title{font-size:1.85em}}
+@media(max-width:480px){body #center-content>.obsidian-document>.markdown-preview-sizer{padding-left:16px;padding-right:16px}#center-content .page-title{padding-left:14px;font-size:1.7em}}

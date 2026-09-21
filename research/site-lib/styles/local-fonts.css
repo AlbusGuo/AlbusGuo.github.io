@@ -1,0 +1,3 @@
+:root body{--mathcraft-export-base-text-font:"??", "??", "SimSun", ui-sans-serif, -apple-system, BlinkMacSystemFont, system-ui, "Segoe UI", "Google Sans Flex", Roboto, "Inter Variable", Inter, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", sans-serif;--font-text:var(--mathcraft-export-base-text-font)!important}.editing-suite-note-font-enabled{--font-text:var(--editing-suite-note-font-family),var(--mathcraft-export-base-text-font)!important}
+@font-face{font-family:"SimSun";src:url("../fonts/SimSun-8d4c801c3e0b.ttf") format("truetype");font-style:normal;font-weight:400;font-display:swap;}
+@font-face{font-family:"Segoe UI";src:url("../fonts/Segoe-UI-27ca1ab4bd5a.ttf") format("truetype");font-style:normal;font-weight:100 900;font-display:swap;}

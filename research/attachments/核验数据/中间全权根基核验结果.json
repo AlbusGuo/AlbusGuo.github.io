@@ -1,0 +1,235 @@
+[
+  {
+    "p": 3,
+    "r": 1,
+    "a": 0,
+    "b": 0,
+    "radical_dimensions": [
+      12,
+      11,
+      1,
+      0
+    ],
+    "actual_subspaces": "passed",
+    "reversed_dual_layers": "passed"
+  },
+  {
+    "p": 3,
+    "r": 2,
+    "a": 0,
+    "b": 0,
+    "radical_dimensions": [
+      36,
+      35,
+      33,
+      3,
+      1,
+      0
+    ],
+    "actual_subspaces": "passed",
+    "reversed_dual_layers": "passed"
+  },
+  {
+    "p": 3,
+    "r": 2,
+    "a": 3,
+    "b": 0,
+    "radical_dimensions": [
+      36,
+      34,
+      23,
+      3,
+      0
+    ],
+    "actual_subspaces": "passed",
+    "reversed_dual_layers": "passed"
+  },
+  {
+    "p": 3,
+    "r": 2,
+    "a": 6,
+    "b": 0,
+    "radical_dimensions": [
+      36,
+      33,
+      13,
+      2,
+      0
+    ],
+    "actual_subspaces": "passed",
+    "reversed_dual_layers": "passed"
+  },
+  {
+    "p": 3,
+    "r": 2,
+    "a": 3,
+    "b": 3,
+    "radical_dimensions": [
+      36,
+      34,
+      23,
+      3,
+      0
+    ],
+    "actual_subspaces": "passed",
+    "reversed_dual_layers": "passed"
+  },
+  {
+    "p": 3,
+    "r": 3,
+    "a": 3,
+    "b": 0,
+    "radical_dimensions": [
+      108,
+      106,
+      92,
+      69,
+      9,
+      0
+    ],
+    "actual_subspaces": "passed",
+    "reversed_dual_layers": "passed"
+  },
+  {
+    "p": 3,
+    "r": 3,
+    "a": 6,
+    "b": 0,
+    "radical_dimensions": [
+      108,
+      105,
+      79,
+      38,
+      6,
+      0
+    ],
+    "actual_subspaces": "passed",
+    "reversed_dual_layers": "passed"
+  },
+  {
+    "p": 3,
+    "r": 3,
+    "a": 9,
+    "b": 0,
+    "radical_dimensions": [
+      108,
+      106,
+      103,
+      69,
+      7,
+      3,
+      0
+    ],
+    "actual_subspaces": "passed",
+    "reversed_dual_layers": "passed"
+  },
+  {
+    "p": 3,
+    "r": 3,
+    "a": 12,
+    "b": 0,
+    "radical_dimensions": [
+      108,
+      104,
+      81,
+      49,
+      6,
+      0
+    ],
+    "actual_subspaces": "passed",
+    "reversed_dual_layers": "passed"
+  },
+  {
+    "p": 3,
+    "r": 3,
+    "a": 18,
+    "b": 0,
+    "radical_dimensions": [
+      108,
+      105,
+      101,
+      39,
+      5,
+      2,
+      0
+    ],
+    "actual_subspaces": "passed",
+    "reversed_dual_layers": "passed"
+  },
+  {
+    "p": 3,
+    "r": 3,
+    "a": 24,
+    "b": 0,
+    "radical_dimensions": [
+      108,
+      99,
+      39,
+      16,
+      2,
+      0
+    ],
+    "actual_subspaces": "passed",
+    "reversed_dual_layers": "passed"
+  },
+  {
+    "p": 5,
+    "r": 2,
+    "a": 5,
+    "b": 0,
+    "radical_dimensions": [
+      100,
+      98,
+      77,
+      5,
+      0
+    ],
+    "actual_subspaces": "passed",
+    "reversed_dual_layers": "passed"
+  },
+  {
+    "p": 5,
+    "r": 2,
+    "a": 10,
+    "b": 0,
+    "radical_dimensions": [
+      100,
+      97,
+      59,
+      4,
+      0
+    ],
+    "actual_subspaces": "passed",
+    "reversed_dual_layers": "passed"
+  },
+  {
+    "p": 5,
+    "r": 2,
+    "a": 15,
+    "b": 0,
+    "radical_dimensions": [
+      100,
+      96,
+      41,
+      3,
+      0
+    ],
+    "actual_subspaces": "passed",
+    "reversed_dual_layers": "passed"
+  },
+  {
+    "p": 5,
+    "r": 2,
+    "a": 20,
+    "b": 0,
+    "radical_dimensions": [
+      100,
+      95,
+      23,
+      2,
+      0
+    ],
+    "actual_subspaces": "passed",
+    "reversed_dual_layers": "passed"
+  }
+]

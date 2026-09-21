@@ -1,0 +1,74 @@
+[
+  {
+    "p": 3,
+    "r": 2,
+    "a": 3,
+    "depth": 1,
+    "F_dimension": 34,
+    "first_kernel_radical_dimension": 23,
+    "status": "passed"
+  },
+  {
+    "p": 3,
+    "r": 2,
+    "a": 3,
+    "depth": 2,
+    "F_dimension": 23,
+    "first_kernel_radical_dimension": 3,
+    "status": "passed"
+  },
+  {
+    "p": 3,
+    "r": 2,
+    "a": 6,
+    "depth": 1,
+    "F_dimension": 33,
+    "first_kernel_radical_dimension": 3,
+    "status": "passed"
+  },
+  {
+    "p": 3,
+    "r": 2,
+    "a": 6,
+    "depth": 2,
+    "F_dimension": 13,
+    "first_kernel_radical_dimension": 2,
+    "status": "passed"
+  },
+  {
+    "p": 3,
+    "r": 3,
+    "a": 9,
+    "depth": 1,
+    "F_dimension": 106,
+    "first_kernel_radical_dimension": 99,
+    "status": "passed"
+  },
+  {
+    "p": 3,
+    "r": 3,
+    "a": 9,
+    "depth": 2,
+    "F_dimension": 103,
+    "first_kernel_radical_dimension": 69,
+    "status": "passed"
+  },
+  {
+    "p": 3,
+    "r": 3,
+    "a": 9,
+    "depth": 3,
+    "F_dimension": 69,
+    "first_kernel_radical_dimension": 7,
+    "status": "passed"
+  },
+  {
+    "p": 3,
+    "r": 3,
+    "a": 9,
+    "depth": 4,
+    "F_dimension": 7,
+    "first_kernel_radical_dimension": 0,
+    "status": "passed"
+  }
+]

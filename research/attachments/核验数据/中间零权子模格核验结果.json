@@ -1,0 +1,118 @@
+{
+  "status": "passed",
+  "profiles": [
+    {
+      "p": 3,
+      "r": 1,
+      "radical_dimensions": [
+        12,
+        11,
+        1,
+        0
+      ],
+      "actual_subspaces": "passed",
+      "dual_dimensions": "passed"
+    },
+    {
+      "p": 3,
+      "r": 2,
+      "radical_dimensions": [
+        36,
+        35,
+        33,
+        3,
+        1,
+        0
+      ],
+      "actual_subspaces": "passed",
+      "dual_dimensions": "passed"
+    },
+    {
+      "p": 3,
+      "r": 3,
+      "radical_dimensions": [
+        108,
+        107,
+        105,
+        99,
+        9,
+        3,
+        1,
+        0
+      ],
+      "actual_subspaces": "passed",
+      "dual_dimensions": "passed"
+    },
+    {
+      "p": 5,
+      "r": 1,
+      "radical_dimensions": [
+        20,
+        19,
+        1,
+        0
+      ],
+      "actual_subspaces": "passed",
+      "dual_dimensions": "passed"
+    },
+    {
+      "p": 5,
+      "r": 2,
+      "radical_dimensions": [
+        100,
+        99,
+        95,
+        5,
+        1,
+        0
+      ],
+      "actual_subspaces": "passed",
+      "dual_dimensions": "passed"
+    }
+  ],
+  "lattices": [
+    {
+      "p": 3,
+      "r": 1,
+      "forget_T": false,
+      "submodules": 6,
+      "status": "passed"
+    },
+    {
+      "p": 3,
+      "r": 1,
+      "forget_T": true,
+      "submodules": 6,
+      "status": "passed"
+    },
+    {
+      "p": 3,
+      "r": 2,
+      "forget_T": false,
+      "submodules": 8,
+      "status": "passed"
+    },
+    {
+      "p": 3,
+      "r": 2,
+      "forget_T": true,
+      "submodules": 8,
+      "status": "passed"
+    },
+    {
+      "p": 5,
+      "r": 1,
+      "forget_T": false,
+      "submodules": 6,
+      "status": "passed"
+    },
+    {
+      "p": 5,
+      "r": 1,
+      "forget_T": true,
+      "submodules": 6,
+      "status": "passed"
+    }
+  ],
+  "lattice_scope": "Exhaustive over the prime field, by generating all homogeneous weight lines and closing under sums; the general algebraically closed-field claim uses the proof."
+}

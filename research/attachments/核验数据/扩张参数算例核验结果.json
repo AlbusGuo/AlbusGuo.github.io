@@ -1,0 +1,23 @@
+{
+  "状态": "通过",
+  "系数环": "F_3[c]；c为不定元，非有限取值测试",
+  "已核对关系": [
+    "[X_alpha,X_-alpha]=H_alpha",
+    "[H_alpha,X_alpha]=2X_alpha",
+    "[H_alpha,X_-alpha]=-2X_-alpha",
+    "X_alpha^3=0",
+    "X_-alpha^3=0",
+    "H_alpha^3=H_alpha",
+    "正根与提升交换",
+    "负根与提升交织",
+    "Cartan与提升交换"
+  ],
+  "二阶divided power作用": "X_-alpha^(2)e=c v_2",
+  "提升行列式": "c^2",
+  "整数Cartan权": [
+    0,
+    -2,
+    -4
+  ],
+  "范围": "仅核验教学用SL2三维扩张参数模型；一般G的Ext定理由笔记中的证明给出"
+}

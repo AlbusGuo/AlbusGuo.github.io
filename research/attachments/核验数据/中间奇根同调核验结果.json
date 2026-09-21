@@ -1,0 +1,117 @@
+[
+  {
+    "p": 3,
+    "r": 1,
+    "odd_roots": {
+      "x1": {
+        "rank": 4,
+        "homology_dimension": 4
+      },
+      "x2": {
+        "rank": 6,
+        "homology_dimension": 0
+      },
+      "y1": {
+        "rank": 6,
+        "homology_dimension": 0
+      },
+      "y2": {
+        "rank": 4,
+        "homology_dimension": 4
+      }
+    },
+    "status": "passed"
+  },
+  {
+    "p": 3,
+    "r": 2,
+    "odd_roots": {
+      "x1": {
+        "rank": 16,
+        "homology_dimension": 4
+      },
+      "x2": {
+        "rank": 18,
+        "homology_dimension": 0
+      },
+      "y1": {
+        "rank": 18,
+        "homology_dimension": 0
+      },
+      "y2": {
+        "rank": 16,
+        "homology_dimension": 4
+      }
+    },
+    "status": "passed"
+  },
+  {
+    "p": 3,
+    "r": 3,
+    "odd_roots": {
+      "x1": {
+        "rank": 52,
+        "homology_dimension": 4
+      },
+      "x2": {
+        "rank": 54,
+        "homology_dimension": 0
+      },
+      "y1": {
+        "rank": 54,
+        "homology_dimension": 0
+      },
+      "y2": {
+        "rank": 52,
+        "homology_dimension": 4
+      }
+    },
+    "status": "passed"
+  },
+  {
+    "p": 5,
+    "r": 1,
+    "odd_roots": {
+      "x1": {
+        "rank": 8,
+        "homology_dimension": 4
+      },
+      "x2": {
+        "rank": 10,
+        "homology_dimension": 0
+      },
+      "y1": {
+        "rank": 10,
+        "homology_dimension": 0
+      },
+      "y2": {
+        "rank": 8,
+        "homology_dimension": 4
+      }
+    },
+    "status": "passed"
+  },
+  {
+    "p": 5,
+    "r": 2,
+    "odd_roots": {
+      "x1": {
+        "rank": 48,
+        "homology_dimension": 4
+      },
+      "x2": {
+        "rank": 50,
+        "homology_dimension": 0
+      },
+      "y1": {
+        "rank": 50,
+        "homology_dimension": 0
+      },
+      "y2": {
+        "rank": 48,
+        "homology_dimension": 4
+      }
+    },
+    "status": "passed"
+  }
+]
