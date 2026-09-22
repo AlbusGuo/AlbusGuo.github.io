@@ -44,7 +44,9 @@ body #center-content>.obsidian-document>.markdown-preview-sizer{box-sizing:borde
 #center-content .markdown-preview-section a.internal-link{text-decoration-thickness:1px;text-underline-offset:.18em}
 body:not(.editing-suite-inline-code-enabled) #center-content .markdown-preview-section code:not(pre code){padding:.12em .35em;border:1px solid var(--background-modifier-border);border-radius:var(--radius-s);background:var(--code-background)}
 #center-content .markdown-preview-section img{border-radius:var(--radius-m)}
-body:not(.editing-suite-math-enabled) #center-content .markdown-preview-section :not(h1,h2,h3,h4,h5,h6,li):has(>.math.math-block):not(:has(>table)){overflow-x:visible!important}
+#center-content .markdown-preview-section :not(h1,h2,h3,h4,h5,h6,li):has(>:is(.math,table)){overflow-y:hidden!important}
+#center-content .markdown-preview-section :not(h1,h2,h3,h4,h5,h6,li):has(>.math):not(:has(>table)){overflow:visible!important}
+#center-content .markdown-preview-section :is(.callout-content,pre){overflow-y:hidden!important}
 body:not(.editing-suite-math-enabled) #center-content .markdown-preview-section .math.math-block{display:block;max-width:100%;overflow-x:auto;overflow-y:hidden;overscroll-behavior-inline:contain;scrollbar-width:thin}
 body:not(.editing-suite-math-enabled) #center-content .markdown-preview-section .math.math-block>mjx-container[display="true"]{width:max-content;min-width:100%}
 @media(min-width:1025px){

@@ -143,7 +143,7 @@ mjx-container .mjx-selected { outline: black solid 2px; }
 @media (prefers-color-scheme: dark) {
   mjx-container .mjx-selected { outline: rgb(200, 200, 200) solid 2px; }
 }
-mjx-mtext { display: inline-block; text-align: left; }
+mjx-mtext { display: inline-block; }
 mjx-mstyle { display: inline-block; }
 mjx-merror { display: inline-block; color: red; background-color: yellow; }
 mjx-mphantom { visibility: hidden; }
@@ -176,13 +176,9 @@ mjx-break[size="2"] { letter-spacing: -0.833em; }
 mjx-break[size="3"] { letter-spacing: -0.778em; }
 mjx-break[size="4"] { letter-spacing: -0.722em; }
 mjx-break[size="5"] { letter-spacing: -0.667em; }
-mjx-texatom { display: inline-block; text-align: left; }
-mjx-mover { display: inline-block; text-align: left; }
-mjx-mover:not([limits="false"]) { padding-top: 0.1em; }
-mjx-mover:not([limits="false"]) > mjx-base, mjx-mover:not([limits="false"]) > mjx-over { display: block; text-align: left; }
-mjx-msubsup { display: inline-block; text-align: left; }
-mjx-script { display: inline-block; padding-right: 0.05em; padding-left: 0.033em; }
-mjx-script > mjx-spacer { display: block; }
+mjx-mi { display: inline-block; text-align: left; }
+mjx-c { display: inline-block; width: 0px; text-align: right; }
+mjx-utext { display: inline-block; padding: 0.75em 0px 0.2em; }
 mjx-mo { display: inline-block; text-align: left; }
 mjx-stretchy-h > mjx-beg, mjx-stretchy-h > mjx-ext, mjx-stretchy-h > mjx-end, mjx-stretchy-h > mjx-mid { display: inline-block; width: 0px; text-align: right; }
 mjx-stretchy-h > mjx-ext { clip-path: polygon(0px -1em, 100% -1em, 100% calc(100% + 1em), 0px calc(100% + 1em)) padding-box; width: 100%; border: 0px solid transparent; box-sizing: border-box; text-align: left; }
@@ -190,18 +186,54 @@ mjx-stretchy-v > mjx-beg, mjx-stretchy-v > mjx-ext, mjx-stretchy-v > mjx-end, mj
 mjx-stretchy-v > mjx-ext > mjx-spacer { display: block; }
 mjx-stretchy-v > mjx-ext { clip-path: polygon(-1em 0px, calc(100% + 1em) 0px, calc(100% + 1em) 100%, -1em 100%) padding-box; height: 100%; border: 0.1px solid transparent; box-sizing: border-box; white-space: pre; }
 mjx-mark { display: inline-block; height: 0px; }
-mjx-c { display: inline-block; width: 0px; text-align: right; }
-mjx-utext { display: inline-block; padding: 0.75em 0px 0.2em; }
-mjx-mi { display: inline-block; text-align: left; }
-mjx-mn { display: inline-block; text-align: left; }
 mjx-msup { display: inline-block; text-align: left; }
-mjx-munder { display: inline-block; text-align: left; }
-mjx-over { text-align: left; }
-mjx-munder:not([limits="false"]) { display: inline-table; }
-mjx-munder > mjx-row { text-align: left; }
-mjx-under { padding-bottom: 0.1em; }
+mjx-msubsup { display: inline-block; text-align: left; }
+mjx-script { display: inline-block; padding-right: 0.05em; padding-left: 0.033em; }
+mjx-script > mjx-spacer { display: block; }
 mjx-msub { display: inline-block; text-align: left; }
+mjx-texatom { display: inline-block; text-align: left; }
 mjx-mspace { display: inline-block; text-align: left; }
+mjx-mn { display: inline-block; text-align: left; }
+mjx-mover { display: inline-block; text-align: left; }
+mjx-mover:not([limits="false"]) { padding-top: 0.1em; }
+mjx-mover:not([limits="false"]) > mjx-base, mjx-mover:not([limits="false"]) > mjx-over { display: block; text-align: left; }
+mjx-mrow { display: inline-block; text-align: left; }
+mjx-linestack, mjx-mrow[break-top] { display: inline-table; width: 100%; }
+mjx-linestack[break-align="bottom"], mjx-mrow[break-top][break-align="bottom"] { display: inline-block; }
+mjx-linestack[break-align="middle"], mjx-mrow[break-top][break-align="middle"] { vertical-align: middle; }
+mjx-linestack[break-align="center"], mjx-mrow[break-top][break-align="center"] { vertical-align: middle; }
+mjx-linestack[breakable] { display: inline; }
+mjx-linestack[breakable] > mjx-linebox { display: inline; }
+mjx-linestack[breakable] > mjx-linebox::before { white-space: pre; content: "\a "; }
+mjx-linestack[breakable] > mjx-linebox::after { white-space: normal; content: " "; letter-spacing: -0.999em; font-family: MJX-BRK; }
+mjx-linestack[breakable] > mjx-linebox:first-of-type::before { display: none; }
+mjx-linestack[breakable] > mjx-linebox:last-of-type::after { display: none; }
+mjx-linebox { display: block; }
+mjx-linebox[align="left"] { text-align: left; }
+mjx-linebox[align="center"] { text-align: center; }
+mjx-linebox[align="right"] { text-align: right; }
+mjx-linestrut { display: inline-block; height: 1em; vertical-align: -0.25em; }
+mjx-mfrac { display: inline-block; text-align: left; }
+mjx-frac { display: inline-block; vertical-align: 0.17em; padding: 0px 0.22em; }
+mjx-frac[type="d"] { vertical-align: 0.04em; }
+mjx-frac[delims] { padding: 0px 0.1em; }
+mjx-frac[atop] { padding: 0px 0.12em; }
+mjx-frac[atop][delims] { padding: 0px; }
+mjx-dtable { display: inline-table; width: 100%; }
+mjx-dtable > mjx-line, mjx-dtable > mjx-row { font-size: 2000%; }
+mjx-dbox { display: block; font-size: 5%; }
+mjx-num { display: block; text-align: center; }
+mjx-den { display: block; text-align: center; }
+mjx-mfrac[bevelled] > mjx-num { display: inline-block; }
+mjx-mfrac[bevelled] > mjx-den { display: inline-block; }
+mjx-den[align="right"], mjx-num[align="right"] { text-align: right; }
+mjx-den[align="left"], mjx-num[align="left"] { text-align: left; }
+mjx-nstrut { display: inline-block; height: 0.054em; width: 0px; vertical-align: -0.054em; }
+mjx-nstrut[type="d"] { height: 0.217em; vertical-align: -0.217em; }
+mjx-dstrut { display: inline-block; height: 0.505em; width: 0px; }
+mjx-dstrut[type="d"] { height: 0.726em; }
+mjx-line { display: block; box-sizing: border-box; min-height: 1px; height: 0.06em; border-top: 0.075em solid; margin: 0.06em -0.1em; overflow: hidden; }
+mjx-line[type="d"] { margin: 0.18em -0.1em; }
 mjx-container[jax="CHTML"] > mjx-math.TEX-N[breakable] > * { font-family: MJX-TEX-ZERO, MJX-TEX-N; }
 .TEX-N { font-family: MJX-TEX-ZERO, MJX-TEX-N; }
 .TEX-B { font-family: MJX-TEX-ZERO, MJX-TEX-B; }
@@ -249,165 +281,84 @@ mjx-container[jax="CHTML"] > mjx-math.TEX-N[breakable] > * { font-family: MJX-TE
 @font-face { font-family: MJX-TEX-V; src: url("site-lib/fonts/mathjax-bd9d7db0883d.woff2") format("woff2"); }
 @font-face { font-family: MJX-TEX-S3; src: url("site-lib/fonts/mathjax-07165a0e10ae.woff2") format("woff2"); }
 @font-face { font-family: MJX-TEX-S4; src: url("site-lib/fonts/mathjax-b20a0e1b0304.woff2") format("woff2"); }
-mjx-c.mjx-c2C6 { padding: 0.694em 0.5em 0px 0px; }
-mjx-c.mjx-c1D44D { padding: 0.683em 0.723em 0px 0px; }
-mjx-c.mjx-c28 { padding: 0.75em 0.389em 0.25em 0px; }
-mjx-c.mjx-c1D706 { padding: 0.694em 0.583em 0.012em 0px; }
-mjx-c.mjx-c29 { padding: 0.75em 0.389em 0.25em 0px; }
-mjx-c.mjx-c1D43F { padding: 0.683em 0.681em 0px 0px; }
-mjx-c.mjx-c1D458 { padding: 0.694em 0.521em 0.011em 0px; }
-mjx-c.mjx-c1D45D { padding: 0.442em 0.503em 0.194em 0px; }
-mjx-c.mjx-c3E { padding: 0.54em 0.778em 0.04em 0px; }
-mjx-c.mjx-c32 { padding: 0.666em 0.5em 0px 0px; }
-mjx-c.mjx-c3D { padding: 0.367em 0.778em 0px 0px; }
-mjx-c.mjx-c30 { padding: 0.666em 0.5em 0.022em 0px; }
-mjx-c.mjx-c2287 { padding: 0.636em 0.778em 0.138em 0px; }
-mjx-c.mjx-c31 { padding: 0.666em 0.5em 0px 0px; }
-mjx-c.mjx-c22EF { padding: 0.31em 1.172em 0px 0px; }
-mjx-c.mjx-c2E { padding: 0.12em 0.278em 0px 0px; }
-mjx-c.mjx-c2F { padding: 0.75em 0.5em 0.25em 0px; }
-mjx-c.mjx-c2245 { padding: 0.589em 1em 0px 0px; }
+mjx-c.mjx-c1D711 { padding: 0.442em 0.654em 0.218em 0px; }
 mjx-c.mjx-c2C { padding: 0.121em 0.278em 0.194em 0px; }
-mjx-c.mjx-c2211.TEX-LO { padding: 0.95em 1.444em 0.45em 0px; }
-mjx-c.mjx-c1D456 { padding: 0.661em 0.345em 0.011em 0px; }
-mjx-c.mjx-c63 { padding: 0.448em 0.444em 0.011em 0px; }
-mjx-c.mjx-c68 { padding: 0.694em 0.556em 0px 0px; }
-mjx-c.mjx-c2061 { padding: 0px; }
-mjx-c.mjx-c62 { padding: 0.694em 0.556em 0.011em 0px; }
-mjx-c.mjx-c61 { padding: 0.448em 0.5em 0.011em 0px; }
-mjx-c.mjx-c79 { padding: 0.431em 0.528em 0.204em 0px; }
-mjx-c.mjx-c20 { padding: 0px 0.25em 0px 0px; }
-mjx-c.mjx-c56 { padding: 0.683em 0.75em 0.022em 0px; }
+mjx-c.mjx-c2032 { padding: 0.56em 0.275em 0px 0px; }
+mjx-c.mjx-c6B { padding: 0.694em 0.528em 0px 0px; }
 mjx-c.mjx-c65 { padding: 0.448em 0.444em 0.011em 0px; }
 mjx-c.mjx-c72 { padding: 0.442em 0.392em 0px 0px; }
-mjx-c.mjx-c6D { padding: 0.442em 0.833em 0px 0px; }
-mjx-c.mjx-c64 { padding: 0.694em 0.556em 0.011em 0px; }
-mjx-c.mjx-c1D440 { padding: 0.683em 1.051em 0px 0px; }
-mjx-c.mjx-c1D702 { padding: 0.442em 0.503em 0.216em 0px; }
-mjx-c.mjx-c2208 { padding: 0.54em 0.667em 0.04em 0px; }
-mjx-c.mjx-c1D44B { padding: 0.683em 0.852em 0px 0px; }
-mjx-c.mjx-c1D447 { padding: 0.677em 0.717em 0px 0px; }
-mjx-c.mjx-c69 { padding: 0.669em 0.278em 0px 0px; }
-mjx-c.mjx-c1D452 { padding: 0.442em 0.466em 0.011em 0px; }
-mjx-c.mjx-c1D703 { padding: 0.705em 0.469em 0.01em 0px; }
-mjx-c.mjx-c2B { padding: 0.583em 0.778em 0.082em 0px; }
-mjx-c.mjx-c3A0 { padding: 0.68em 0.75em 0px 0px; }
-mjx-c.mjx-c1D45F { padding: 0.442em 0.451em 0.011em 0px; }
-mjx-c.mjx-c1D43B { padding: 0.683em 0.888em 0px 0px; }
-mjx-c.mjx-c2212 { padding: 0.583em 0.778em 0.082em 0px; }
-mjx-c.mjx-c1D461 { padding: 0.626em 0.361em 0.011em 0px; }
+mjx-c.mjx-c2061 { padding: 0px; }
 mjx-c.mjx-c1D43A { padding: 0.705em 0.786em 0.022em 0px; }
+mjx-c.mjx-c1D6FC { padding: 0.442em 0.64em 0.011em 0px; }
+mjx-c.mjx-c64 { padding: 0.694em 0.556em 0.011em 0px; }
+mjx-c.mjx-c67 { padding: 0.453em 0.5em 0.206em 0px; }
+mjx-c.mjx-c3A { padding: 0.43em 0.278em 0px 0px; }
+mjx-c.mjx-c1D44B { padding: 0.683em 0.852em 0px 0px; }
+mjx-c.mjx-c28 { padding: 0.75em 0.389em 0.25em 0px; }
+mjx-c.mjx-c1D447 { padding: 0.677em 0.717em 0px 0px; }
+mjx-c.mjx-c29 { padding: 0.75em 0.389em 0.25em 0px; }
+mjx-c.mjx-c27F6 { padding: 0.511em 1.638em 0.011em 0px; }
+mjx-c.mjx-c2124 { padding: 0.683em 0.667em 0.001em 0px; }
+mjx-c.mjx-c3D { padding: 0.367em 0.778em 0px 0px; }
+mjx-c.mjx-c30 { padding: 0.666em 0.5em 0.022em 0px; }
+mjx-c.mjx-c1D6FD { padding: 0.705em 0.573em 0.194em 0px; }
+mjx-c.mjx-c3E { padding: 0.54em 0.778em 0.04em 0px; }
+mjx-c.mjx-c2208 { padding: 0.54em 0.667em 0.04em 0px; }
+mjx-c.mjx-c394 { padding: 0.716em 0.833em 0px 0px; }
+mjx-c.mjx-c2B { padding: 0.583em 0.778em 0.082em 0px; }
+mjx-c.mjx-c1D435 { padding: 0.683em 0.759em 0px 0px; }
+mjx-c.mjx-c2216 { padding: 0.75em 0.5em 0.25em 0px; }
+mjx-c.mjx-c2E { padding: 0.12em 0.278em 0px 0px; }
+mjx-c.mjx-c2297 { padding: 0.583em 0.778em 0.083em 0px; }
+mjx-c.mjx-c211A { padding: 0.701em 0.778em 0.181em 0px; }
+mjx-c.mjx-c1D43F { padding: 0.683em 0.681em 0px 0px; }
 mjx-c.mjx-c1D45A { padding: 0.442em 0.878em 0.011em 0px; }
 mjx-c.mjx-c7C { padding: 0.75em 0.278em 0.249em 0px; }
 mjx-c.mjx-c1D45B { padding: 0.442em 0.6em 0.011em 0px; }
-mjx-c.mjx-c1D449 { padding: 0.683em 0.769em 0.022em 0px; }
-mjx-c.mjx-cAF { padding: 0.59em 0.5em 0px 0px; }
-mjx-c.mjx-c2295 { padding: 0.583em 0.778em 0.083em 0px; }
+mjx-c.mjx-c2C6 { padding: 0.694em 0.5em 0px 0px; }
+mjx-c.mjx-c1D44D { padding: 0.683em 0.723em 0px 0px; }
+mjx-c.mjx-c1D706 { padding: 0.694em 0.583em 0.012em 0px; }
 mjx-c.mjx-c1D463 { padding: 0.443em 0.485em 0.011em 0px; }
-mjx-c.mjx-c1D716 { padding: 0.431em 0.406em 0.011em 0px; }
-mjx-c.mjx-c2124 { padding: 0.683em 0.667em 0.001em 0px; }
-mjx-c.mjx-c1D453 { padding: 0.705em 0.55em 0.205em 0px; }
-mjx-c.mjx-c3A { padding: 0.43em 0.278em 0px 0px; }
-mjx-c.mjx-c2192 { padding: 0.511em 1em 0.011em 0px; }
-mjx-c.mjx-c1D44A { padding: 0.683em 1.048em 0.022em 0px; }
-mjx-c.mjx-c2286 { padding: 0.636em 0.778em 0.138em 0px; }
-mjx-c.mjx-c1D434 { padding: 0.716em 0.75em 0px 0px; }
-mjx-c.mjx-c1D6FF { padding: 0.717em 0.451em 0.01em 0px; }
+mjx-c.mjx-c1D456 { padding: 0.661em 0.345em 0.011em 0px; }
 mjx-c.mjx-c1D44E { padding: 0.441em 0.529em 0.01em 0px; }
 mjx-c.mjx-c1D44F { padding: 0.694em 0.429em 0.011em 0px; }
-mjx-c.mjx-c2297 { padding: 0.583em 0.778em 0.083em 0px; }
-mjx-c.mjx-c1D450 { padding: 0.442em 0.433em 0.011em 0px; }
 mjx-c.mjx-c1D451 { padding: 0.694em 0.523em 0.01em 0px; }
-mjx-c.mjx-c1D524 { padding: 0.47em 0.504em 0.209em 0px; }
-mjx-c.mjx-c5B { padding: 0.75em 0.278em 0.25em 0px; }
-mjx-c.mjx-c1D465 { padding: 0.442em 0.572em 0.011em 0px; }
-mjx-c.mjx-c1D466 { padding: 0.442em 0.496em 0.205em 0px; }
-mjx-c.mjx-c5D { padding: 0.75em 0.278em 0.25em 0px; }
-mjx-c.mjx-c22C5 { padding: 0.31em 0.278em 0px 0px; }
-mjx-c.mjx-c76 { padding: 0.431em 0.528em 0.011em 0px; }
-mjx-c.mjx-c1D435 { padding: 0.683em 0.759em 0px 0px; }
-mjx-c.mjx-c1D448 { padding: 0.683em 0.767em 0.022em 0px; }
-mjx-c.mjx-c1D525 { padding: 0.688em 0.521em 0.205em 0px; }
-mjx-c.mjx-c4C { padding: 0.683em 0.625em 0px 0px; }
-mjx-c.mjx-cD7 { padding: 0.491em 0.778em 0px 0px; }
-mjx-c.mjx-c48 { padding: 0.683em 0.75em 0px 0px; }
-mjx-c.mjx-c6F { padding: 0.448em 0.5em 0.01em 0px; }
-mjx-c.mjx-c2D { padding: 0.252em 0.333em 0px 0px; }
-mjx-c.mjx-c1D53E { padding: 0.702em 0.778em 0.019em 0px; }
-mjx-c.mjx-c2217 { padding: 0.465em 0.5em 0px 0px; }
-mjx-c.mjx-c1D712 { padding: 0.442em 0.626em 0.204em 0px; }
+mjx-c.mjx-c2261 { padding: 0.464em 0.778em 0px 0px; }
+mjx-c.mjx-c2212 { padding: 0.583em 0.778em 0.082em 0px; }
 mjx-c.mjx-c27E8 { padding: 0.75em 0.389em 0.25em 0px; }
+mjx-c.mjx-c1D712 { padding: 0.442em 0.626em 0.204em 0px; }
 mjx-c.mjx-c27E9 { padding: 0.75em 0.389em 0.25em 0px; }
-mjx-c.mjx-c2218 { padding: 0.444em 0.5em 0px 0px; }
-mjx-c.mjx-c1D467 { padding: 0.442em 0.468em 0.011em 0px; }
-mjx-c.mjx-c1D459 { padding: 0.694em 0.298em 0.011em 0px; }
-mjx-c.mjx-c1D6FC { padding: 0.442em 0.64em 0.011em 0px; }
-mjx-c.mjx-c7B { padding: 0.75em 0.5em 0.25em 0px; }
-mjx-c.mjx-c41 { padding: 0.716em 0.75em 0px 0px; }
-mjx-c.mjx-cA0 { padding: 0px 0.25em 0px 0px; }
-mjx-c.mjx-c7D { padding: 0.75em 0.5em 0.25em 0px; }
-mjx-c.mjx-c394 { padding: 0.716em 0.833em 0px 0px; }
-mjx-c.mjx-c2209 { padding: 0.716em 0.667em 0.215em 0px; }
-mjx-c.mjx-cB1 { padding: 0.666em 0.778em 0px 0px; }
-mjx-mrow { display: inline-block; text-align: left; }
-mjx-linestack, mjx-mrow[break-top] { display: inline-table; width: 100%; }
-mjx-linestack[break-align="bottom"], mjx-mrow[break-top][break-align="bottom"] { display: inline-block; }
-mjx-linestack[break-align="middle"], mjx-mrow[break-top][break-align="middle"] { vertical-align: middle; }
-mjx-linestack[break-align="center"], mjx-mrow[break-top][break-align="center"] { vertical-align: middle; }
-mjx-linestack[breakable] { display: inline; }
-mjx-linestack[breakable] > mjx-linebox { display: inline; }
-mjx-linestack[breakable] > mjx-linebox::before { white-space: pre; content: "\a "; }
-mjx-linestack[breakable] > mjx-linebox::after { white-space: normal; content: " "; letter-spacing: -0.999em; font-family: MJX-BRK; }
-mjx-linestack[breakable] > mjx-linebox:first-of-type::before { display: none; }
-mjx-linestack[breakable] > mjx-linebox:last-of-type::after { display: none; }
-mjx-linebox { display: block; }
-mjx-linebox[align="left"] { text-align: left; }
-mjx-linebox[align="center"] { text-align: center; }
-mjx-linebox[align="right"] { text-align: right; }
-mjx-linestrut { display: inline-block; height: 1em; vertical-align: -0.25em; }
-mjx-mfrac { display: inline-block; text-align: left; }
-mjx-frac { display: inline-block; vertical-align: 0.17em; padding: 0px 0.22em; }
-mjx-frac[type="d"] { vertical-align: 0.04em; }
-mjx-frac[delims] { padding: 0px 0.1em; }
-mjx-frac[atop] { padding: 0px 0.12em; }
-mjx-frac[atop][delims] { padding: 0px; }
-mjx-dtable { display: inline-table; width: 100%; }
-mjx-dtable > mjx-line, mjx-dtable > mjx-row { font-size: 2000%; }
-mjx-dbox { display: block; font-size: 5%; }
-mjx-num { display: block; text-align: center; }
-mjx-den { display: block; text-align: center; }
-mjx-mfrac[bevelled] > mjx-num { display: inline-block; }
-mjx-mfrac[bevelled] > mjx-den { display: inline-block; }
-mjx-den[align="right"], mjx-num[align="right"] { text-align: right; }
-mjx-den[align="left"], mjx-num[align="left"] { text-align: left; }
-mjx-nstrut { display: inline-block; height: 0.054em; width: 0px; vertical-align: -0.054em; }
-mjx-nstrut[type="d"] { height: 0.217em; vertical-align: -0.217em; }
-mjx-dstrut { display: inline-block; height: 0.505em; width: 0px; }
-mjx-dstrut[type="d"] { height: 0.726em; }
-mjx-line { display: block; box-sizing: border-box; min-height: 1px; height: 0.06em; border-top: 0.075em solid; margin: 0.06em -0.1em; overflow: hidden; }
-mjx-line[type="d"] { margin: 0.18em -0.1em; }
-mjx-c.mjx-c1D439 { padding: 0.68em 0.749em 0px 0px; }
-mjx-c.mjx-c27F6 { padding: 0.511em 1.638em 0.011em 0px; }
-mjx-c.mjx-c6B { padding: 0.694em 0.528em 0px 0px; }
-mjx-c.mjx-c2229 { padding: 0.598em 0.667em 0.022em 0px; }
-mjx-c.mjx-c21A6 { padding: 0.511em 1em 0.011em 0px; }
-mjx-c.mjx-c1D52A { padding: 0.475em 0.767em 0.026em 0px; }
-mjx-c.mjx-c44 { padding: 0.683em 0.764em 0px 0px; }
-mjx-c.mjx-c73 { padding: 0.448em 0.394em 0.011em 0px; }
-mjx-c.mjx-c74 { padding: 0.615em 0.389em 0.01em 0px; }
+mjx-c.mjx-c31 { padding: 0.666em 0.5em 0px 0px; }
+mjx-c.mjx-c6D { padding: 0.442em 0.833em 0px 0px; }
+mjx-c.mjx-c6F { padding: 0.448em 0.5em 0.01em 0px; }
+mjx-c.mjx-c1D45D { padding: 0.442em 0.503em 0.194em 0px; }
+mjx-c.mjx-c1D45F { padding: 0.442em 0.451em 0.011em 0px; }
+mjx-c.mjx-c2264 { padding: 0.636em 0.778em 0.138em 0px; }
+mjx-c.mjx-c3C { padding: 0.54em 0.778em 0.04em 0px; }
+mjx-c.mjx-c1D708 { padding: 0.442em 0.53em 0.002em 0px; }
+mjx-c.mjx-c2211.TEX-SO { padding: 0.75em 1.056em 0.25em 0px; }
 mjx-c.mjx-c1D457 { padding: 0.661em 0.412em 0.204em 0px; }
-mjx-c.mjx-c28.TEX-S3 { padding: 1.45em 0.736em 0.949em 0px; }
-mjx-c.mjx-c29.TEX-S3 { padding: 1.45em 0.736em 0.949em 0px; }
+mjx-c.mjx-c1D713 { padding: 0.694em 0.651em 0.205em 0px; }
 mjx-c.mjx-c28.TEX-LO { padding: 1.15em 0.597em 0.649em 0px; }
 mjx-c.mjx-c29.TEX-LO { padding: 1.15em 0.597em 0.649em 0px; }
-mjx-c.mjx-c21 { padding: 0.716em 0.278em 0px 0px; }
-mjx-mpadded { display: inline-block; text-align: left; }
-mjx-rbox { display: inline-block; position: relative; }
-mjx-stretchy-h.mjx-c2192 > mjx-ext > mjx-spacer { margin-left: -0.305em; }
-mjx-stretchy-h.mjx-c2192 > mjx-ext { padding: 0.431em 0px 0px; border-width: 0px 0.83em 0px 0px; }
-mjx-stretchy-h.mjx-c2192 > mjx-end { padding: 0.431em 0.89em 0px 0px; margin-left: -0.89em; }
+mjx-c.mjx-c27FC { padding: 0.511em 1.638em 0.011em 0px; }
+mjx-c.mjx-c1D460 { padding: 0.442em 0.469em 0.01em 0px; }
+mjx-c.mjx-c28.TEX-S3 { padding: 1.45em 0.736em 0.949em 0px; }
+mjx-c.mjx-c29.TEX-S3 { padding: 1.45em 0.736em 0.949em 0px; }
+mjx-c.mjx-c1D462 { padding: 0.442em 0.572em 0.011em 0px; }
+mjx-c.mjx-c2DC { padding: 0.668em 0.5em 0px 0px; }
 mjx-c.mjx-c2026 { padding: 0.12em 1.172em 0px 0px; }
-mjx-c.mjx-c223C { padding: 0.367em 0.778em 0px 0px; }
+mjx-c.mjx-c1D446 { padding: 0.705em 0.645em 0.022em 0px; }
+mjx-c.mjx-c32 { padding: 0.666em 0.5em 0px 0px; }
+mjx-c.mjx-c53 { padding: 0.705em 0.556em 0.022em 0px; }
+mjx-c.mjx-c70 { padding: 0.442em 0.556em 0.194em 0px; }
+mjx-c.mjx-c4F { padding: 0.705em 0.778em 0.022em 0px; }
+mjx-mtext { display: inline-block; text-align: left; }
+mjx-munder { display: inline-block; text-align: left; }
+mjx-over { text-align: left; }
+mjx-munder:not([limits="false"]) { display: inline-table; }
+mjx-munder > mjx-row { text-align: left; }
+mjx-under { padding-bottom: 0.1em; }
 mjx-mtable { display: inline-block; text-align: center; vertical-align: 0.25em; position: relative; box-sizing: border-box; border-spacing: 0px; border-collapse: collapse; }
 mjx-mstyle[size="s"] mjx-mtable { vertical-align: 0.354em; }
 mjx-labels { position: absolute; left: 0px; top: 0px; }
@@ -444,91 +395,144 @@ mjx-mtd[rowalign="center"] { vertical-align: middle; }
 mjx-mtd[rowalign="bottom"] { vertical-align: bottom; }
 mjx-mtd[rowalign="baseline"] { vertical-align: baseline; }
 mjx-mtd[rowalign="axis"] { vertical-align: 0.25em; }
-mjx-c.mjx-c2264 { padding: 0.636em 0.778em 0.138em 0px; }
-mjx-c.mjx-c3C { padding: 0.54em 0.778em 0.04em 0px; }
-mjx-c.mjx-c7B.TEX-S3 { padding: 1.45em 0.75em 0.949em 0px; }
-mjx-c.mjx-c2260 { padding: 0.716em 0.778em 0.215em 0px; }
-mjx-c.mjx-c220F.TEX-LO { padding: 0.95em 1.278em 0.45em 0px; }
-mjx-c.mjx-c1D707 { padding: 0.442em 0.603em 0.216em 0px; }
-mjx-c.mjx-c27FA { padding: 0.525em 1.858em 0.024em 0px; }
-mjx-c.mjx-c212D { padding: 0.685em 0.613em 0.024em 0px; }
-mjx-c.mjx-c1D40C { padding: 0.693em 1.092em 0px 0px; }
-mjx-c.mjx-c1D428 { padding: 0.452em 0.575em 0.005em 0px; }
-mjx-c.mjx-c1D41D { padding: 0.694em 0.639em 0.006em 0px; }
-mjx-c.mjx-c2A01.TEX-LO { padding: 0.949em 1.511em 0.449em 0px; }
-mjx-c.mjx-c1D462 { padding: 0.442em 0.572em 0.011em 0px; }
-mjx-c.mjx-c1D441 { padding: 0.683em 0.888em 0px 0px; }
-mjx-c.mjx-c1D6FD { padding: 0.705em 0.573em 0.194em 0px; }
-mjx-c.mjx-c1D446 { padding: 0.705em 0.645em 0.022em 0px; }
-mjx-c.mjx-c2115 { padding: 0.683em 0.722em 0.02em 0px; }
-mjx-c.mjx-c7B.TEX-S4 { padding: 1.75em 0.806em 1.249em 0px; }
+mjx-stretchy-h.mjx-c2013 > mjx-ext > mjx-spacer { margin-left: -0.25em; letter-spacing: -0.071em; }
+mjx-stretchy-h.mjx-c2013 > mjx-ext { padding: 0.285em 0px 0px; }
+mjx-c.mjx-c1D458 { padding: 0.694em 0.521em 0.011em 0px; }
 mjx-c.mjx-c2265 { padding: 0.636em 0.778em 0.138em 0px; }
-mjx-c.mjx-c7D.TEX-S4 { padding: 1.75em 0.806em 1.249em 0px; }
-mjx-c.mjx-c1D700 { padding: 0.452em 0.466em 0.022em 0px; }
+mjx-c.mjx-c48 { padding: 0.683em 0.75em 0px 0px; }
+mjx-c.mjx-c2D { padding: 0.252em 0.333em 0px 0px; }
+mjx-c.mjx-c1D53E { padding: 0.702em 0.778em 0.019em 0px; }
+mjx-c.mjx-c76 { padding: 0.431em 0.528em 0.011em 0px; }
+mjx-c.mjx-c1D524 { padding: 0.47em 0.504em 0.209em 0px; }
+mjx-c.mjx-c1D525 { padding: 0.688em 0.521em 0.205em 0px; }
+mjx-c.mjx-c2295 { padding: 0.583em 0.778em 0.083em 0px; }
+mjx-c.mjx-c2A01.TEX-SO { padding: 0.75em 1.111em 0.25em 0px; }
+mjx-c.mjx-cAF { padding: 0.59em 0.5em 0px 0px; }
+mjx-c.mjx-c7B { padding: 0.75em 0.5em 0.25em 0px; }
+mjx-c.mjx-c2286 { padding: 0.636em 0.778em 0.138em 0px; }
+mjx-c.mjx-c7D { padding: 0.75em 0.5em 0.25em 0px; }
+mjx-c.mjx-c7B.TEX-LO { padding: 1.15em 0.667em 0.649em 0px; }
+mjx-c.mjx-c2209 { padding: 0.716em 0.667em 0.215em 0px; }
+mjx-c.mjx-c7D.TEX-LO { padding: 1.15em 0.667em 0.649em 0px; }
+mjx-c.mjx-cB1 { padding: 0.666em 0.778em 0px 0px; }
+mjx-c.mjx-c1D716 { padding: 0.431em 0.406em 0.011em 0px; }
+mjx-c.mjx-c2229 { padding: 0.598em 0.667em 0.022em 0px; }
+mjx-c.mjx-c3A0 { padding: 0.68em 0.75em 0px 0px; }
+mjx-c.mjx-c212D { padding: 0.685em 0.613em 0.024em 0px; }
+mjx-c.mjx-c212C { padding: 0.708em 0.928em 0.028em 0px; }
+mjx-c.mjx-c1D43B { padding: 0.683em 0.888em 0px 0px; }
+mjx-c.mjx-c1D438 { padding: 0.68em 0.764em 0px 0px; }
+mjx-c.mjx-c33 { padding: 0.665em 0.5em 0.022em 0px; }
 mjx-c.mjx-c210E { padding: 0.694em 0.576em 0.011em 0px; }
-mjx-c.mjx-c27FC { padding: 0.511em 1.638em 0.011em 0px; }
+mjx-c.mjx-c69 { padding: 0.669em 0.278em 0px 0px; }
+mjx-c.mjx-c61 { padding: 0.448em 0.5em 0.011em 0px; }
+mjx-c.mjx-c1D461 { padding: 0.626em 0.361em 0.011em 0px; }
+mjx-c.mjx-c1D450 { padding: 0.442em 0.433em 0.011em 0px; }
+mjx-c.mjx-c1D434 { padding: 0.716em 0.75em 0px 0px; }
+mjx-c.mjx-c1D436 { padding: 0.705em 0.76em 0.022em 0px; }
+mjx-c.mjx-c1D437 { padding: 0.683em 0.828em 0px 0px; }
+mjx-c.mjx-c73 { padding: 0.448em 0.394em 0.011em 0px; }
+mjx-c.mjx-c63 { padding: 0.448em 0.444em 0.011em 0px; }
+mjx-c.mjx-c4C { padding: 0.683em 0.625em 0px 0px; }
+mjx-c.mjx-c1D43D { padding: 0.683em 0.633em 0.022em 0px; }
+mjx-c.mjx-c68 { padding: 0.694em 0.556em 0px 0px; }
+mjx-c.mjx-c5B { padding: 0.75em 0.278em 0.25em 0px; }
+mjx-c.mjx-c5D { padding: 0.75em 0.278em 0.25em 0px; }
+mjx-c.mjx-c1D701 { padding: 0.704em 0.471em 0.204em 0px; }
+mjx-c.mjx-c2F { padding: 0.75em 0.5em 0.25em 0px; }
+mjx-c.mjx-c1D440 { padding: 0.683em 1.051em 0px 0px; }
+mjx-c.mjx-c2211.TEX-LO { padding: 0.95em 1.444em 0.45em 0px; }
+mjx-c.mjx-c1D452 { padding: 0.442em 0.466em 0.011em 0px; }
+mjx-c.mjx-c1D439 { padding: 0.68em 0.749em 0px 0px; }
+mjx-c.mjx-c2217 { padding: 0.465em 0.5em 0px 0px; }
+mjx-c.mjx-c1D43E { padding: 0.683em 0.889em 0px 0px; }
+mjx-c.mjx-c74 { padding: 0.615em 0.389em 0.01em 0px; }
+mjx-c.mjx-c42.TEX-C { padding: 0.705em 0.664em 0.022em 0px; }
+mjx-c.mjx-c50.TEX-C { padding: 0.683em 0.733em 0.057em 0px; }
+mjx-c.mjx-c4C.TEX-C { padding: 0.705em 0.69em 0.022em 0px; }
+mjx-c.mjx-c49.TEX-C { padding: 0.683em 0.642em 0px 0px; }
+mjx-c.mjx-c1D449 { padding: 0.683em 0.769em 0.022em 0px; }
+mjx-c.mjx-c44 { padding: 0.683em 0.764em 0px 0px; }
+mjx-c.mjx-c1D453 { padding: 0.705em 0.55em 0.205em 0px; }
+mjx-c.mjx-c2192 { padding: 0.511em 1em 0.011em 0px; }
+mjx-c.mjx-c1D44A { padding: 0.683em 1.048em 0.022em 0px; }
+mjx-c.mjx-c1D707 { padding: 0.442em 0.603em 0.216em 0px; }
+mjx-c.mjx-c4B { padding: 0.683em 0.778em 0px 0px; }
+mjx-c.mjx-c21A6 { padding: 0.511em 1em 0.011em 0px; }
+mjx-c.mjx-c1D467 { padding: 0.442em 0.468em 0.011em 0px; }
+mjx-c.mjx-c22C5 { padding: 0.31em 0.278em 0px 0px; }
+mjx-c.mjx-cA0 { padding: 0px 0.25em 0px 0px; }
+mjx-c.mjx-c2A01.TEX-LO { padding: 0.949em 1.511em 0.449em 0px; }
+mjx-c.mjx-c1D465 { padding: 0.442em 0.572em 0.011em 0px; }
+mjx-c.mjx-c41 { padding: 0.716em 0.75em 0px 0px; }
+mjx-c.mjx-c1D700 { padding: 0.452em 0.466em 0.022em 0px; }
+mjx-c.mjx-c1D441 { padding: 0.683em 0.888em 0px 0px; }
+mjx-c.mjx-c1D448 { padding: 0.683em 0.767em 0.022em 0px; }
+mjx-c.mjx-c1D6FF { padding: 0.717em 0.451em 0.01em 0px; }
+mjx-c.mjx-c2245 { padding: 0.589em 1em 0px 0px; }
 mjx-c.mjx-c45 { padding: 0.68em 0.681em 0px 0px; }
 mjx-c.mjx-c6E { padding: 0.442em 0.556em 0px 0px; }
-mjx-c.mjx-c2211.TEX-SO { padding: 0.75em 1.056em 0.25em 0px; }
-mjx-c.mjx-c1D5B2 { padding: 0.716em 0.556em 0.022em 0px; }
+mjx-c.mjx-c75 { padding: 0.442em 0.556em 0.011em 0px; }
+mjx-mpadded { display: inline-block; text-align: left; }
+mjx-rbox { display: inline-block; position: relative; }
 mjx-munderover { display: inline-block; text-align: left; }
 mjx-munderover:not([limits="false"]) { padding-top: 0.1em; }
 mjx-munderover:not([limits="false"]) > mjx-over, mjx-munderover:not([limits="false"]) > mjx-box { display: block; }
-mjx-c.mjx-c1D701 { padding: 0.704em 0.471em 0.204em 0px; }
-mjx-c.mjx-c28.TEX-S4 { padding: 1.75em 0.792em 1.249em 0px; }
-mjx-c.mjx-c29.TEX-S4 { padding: 1.75em 0.792em 1.249em 0px; }
-mjx-c.mjx-c1D6FE { padding: 0.441em 0.543em 0.216em 0px; }
-mjx-c.mjx-c1D43E { padding: 0.683em 0.889em 0px 0px; }
-mjx-stretchy-v.mjx-c28 > mjx-beg { width: 0.875em; margin: 1.154em auto -1.154em; }
-mjx-stretchy-v.mjx-c28 > mjx-ext > mjx-spacer { margin-top: 0.259em; }
-mjx-stretchy-v.mjx-c28 > mjx-ext { width: 0.875em; line-height: 0.562em; border-width: 1.779em 0px; }
-mjx-stretchy-v.mjx-c28 > mjx-end { width: 0.875em; margin: -0.644em auto 0.644em; }
-mjx-stretchy-v.mjx-c29 > mjx-beg { width: 0.875em; margin: 1.154em auto -1.154em; }
-mjx-stretchy-v.mjx-c29 > mjx-ext > mjx-spacer { margin-top: 0.259em; }
-mjx-stretchy-v.mjx-c29 > mjx-ext { width: 0.875em; line-height: 0.562em; border-width: 1.779em 0px; }
-mjx-stretchy-v.mjx-c29 > mjx-end { width: 0.875em; margin: -0.644em auto 0.644em; }
-mjx-c.mjx-c2032 { padding: 0.56em 0.275em 0px 0px; }
-mjx-c.mjx-c23 { padding: 0.694em 0.833em 0.194em 0px; }
-mjx-c.mjx-c1D711 { padding: 0.442em 0.654em 0.218em 0px; }
-mjx-c.mjx-c2282 { padding: 0.54em 0.778em 0.04em 0px; }
-mjx-c.mjx-c1D438 { padding: 0.68em 0.764em 0px 0px; }
-mjx-c.mjx-c42.TEX-C { padding: 0.705em 0.664em 0.022em 0px; }
-mjx-c.mjx-c1D460 { padding: 0.442em 0.469em 0.01em 0px; }
-mjx-c.mjx-c1D464 { padding: 0.443em 0.716em 0.011em 0px; }
-mjx-c.mjx-c1D70F { padding: 0.431em 0.517em 0.013em 0px; }
-mjx-c.mjx-c39E { padding: 0.677em 0.667em 0px 0px; }
-mjx-c.mjx-c211A { padding: 0.701em 0.778em 0.181em 0px; }
-mjx-c.mjx-c2261 { padding: 0.464em 0.778em 0px 0px; }
-mjx-c.mjx-c2262 { padding: 0.716em 0.778em 0.215em 0px; }
-mjx-c.mjx-c1D443 { padding: 0.683em 0.751em 0px 0px; }
-mjx-c.mjx-c212C { padding: 0.708em 0.928em 0.028em 0px; }
-mjx-c.mjx-c1D708 { padding: 0.442em 0.53em 0.002em 0px; }
-mjx-c.mjx-c2203 { padding: 0.694em 0.556em 0px 0px; }
-mjx-c.mjx-c2216 { padding: 0.75em 0.5em 0.25em 0px; }
-mjx-c.mjx-c220F.TEX-SO { padding: 0.75em 0.944em 0.25em 0px; }
-mjx-c.mjx-c67 { padding: 0.453em 0.5em 0.206em 0px; }
-mjx-c.mjx-c1D713 { padding: 0.694em 0.651em 0.205em 0px; }
-mjx-c.mjx-c2DC { padding: 0.668em 0.5em 0px 0px; }
-mjx-stretchy-h.mjx-c2013 > mjx-ext > mjx-spacer { margin-left: -0.25em; letter-spacing: -0.071em; }
-mjx-stretchy-h.mjx-c2013 > mjx-ext { padding: 0.285em 0px 0px; }
-mjx-c.mjx-c2113 { padding: 0.705em 0.417em 0.02em 0px; }
-mjx-c.mjx-c1D52B { padding: 0.475em 0.527em 0.022em 0px; }
+mjx-c.mjx-c1D454 { padding: 0.442em 0.48em 0.205em 0px; }
+mjx-c.mjx-c1D704 { padding: 0.442em 0.354em 0.01em 0px; }
 mjx-c.mjx-c1D70B { padding: 0.431em 0.573em 0.011em 0px; }
+mjx-c.mjx-c2287 { padding: 0.636em 0.778em 0.138em 0px; }
+mjx-c.mjx-c22EF { padding: 0.31em 1.172em 0px 0px; }
+mjx-c.mjx-c2200 { padding: 0.694em 0.556em 0.022em 0px; }
+mjx-c.mjx-c228A { padding: 0.635em 0.778em 0.241em 0px; }
+mjx-c.mjx-c27F9 { padding: 0.525em 1.638em 0.024em 0px; }
+mjx-c.mjx-c22C2.TEX-LO { padding: 0.949em 1.111em 0.45em 0px; }
+mjx-c.mjx-c2113 { padding: 0.705em 0.417em 0.02em 0px; }
+mjx-c.mjx-c2283 { padding: 0.54em 0.778em 0.04em 0px; }
+mjx-c.mjx-c2282 { padding: 0.54em 0.778em 0.04em 0px; }
 mjx-c.mjx-c1D445 { padding: 0.683em 0.759em 0.021em 0px; }
-mjx-c.mjx-c1D53D { padding: 0.683em 0.611em 0.001em 0px; }
-mjx-c.mjx-c1D70E { padding: 0.431em 0.572em 0.011em 0px; }
-mjx-c.mjx-c1D70C { padding: 0.442em 0.517em 0.216em 0px; }
-mjx-c.mjx-c22C9 { padding: 0.492em 0.778em 0px 0px; }
-mjx-c.mjx-c39B { padding: 0.716em 0.694em 0px 0px; }
-mjx-c.mjx-c1D43D { padding: 0.683em 0.633em 0.022em 0px; }
-mjx-c.mjx-c33 { padding: 0.665em 0.5em 0.022em 0px; }
-mjx-c.mjx-c34 { padding: 0.677em 0.5em 0px 0px; }
-mjx-c.mjx-c2223 { padding: 0.75em 0.278em 0.249em 0px; }
-mjx-c.mjx-c39 { padding: 0.666em 0.5em 0.022em 0px; }
-mjx-c.mjx-c38 { padding: 0.666em 0.5em 0.022em 0px; }
+mjx-c.mjx-c46 { padding: 0.68em 0.653em 0px 0px; }
+mjx-c.mjx-c3A6 { padding: 0.683em 0.722em 0px 0px; }
+mjx-c.mjx-c1D444 { padding: 0.704em 0.791em 0.194em 0px; }
 mjx-c.mjx-c36 { padding: 0.666em 0.5em 0.022em 0px; }
 mjx-c.mjx-c35 { padding: 0.666em 0.5em 0.022em 0px; }
+mjx-c.mjx-c39 { padding: 0.666em 0.5em 0.022em 0px; }
+mjx-c.mjx-c38 { padding: 0.666em 0.5em 0.022em 0px; }
 mjx-c.mjx-c37 { padding: 0.676em 0.5em 0.022em 0px; }
+mjx-c.mjx-c21 { padding: 0.716em 0.278em 0px 0px; }
+mjx-c.mjx-c34 { padding: 0.677em 0.5em 0px 0px; }
+mjx-c.mjx-c49 { padding: 0.683em 0.361em 0px 0px; }
+mjx-mlabeledtr { display: table-row; text-align: left; }
+mjx-mlabeledtr[rowalign="top"] > mjx-mtd { vertical-align: top; }
+mjx-mlabeledtr[rowalign="center"] > mjx-mtd { vertical-align: middle; }
+mjx-mlabeledtr[rowalign="bottom"] > mjx-mtd { vertical-align: bottom; }
+mjx-mlabeledtr[rowalign="baseline"] > mjx-mtd { vertical-align: baseline; }
+mjx-mlabeledtr[rowalign="axis"] > mjx-mtd { vertical-align: 0.25em; }
+mjx-c.mjx-c1D709 { padding: 0.704em 0.443em 0.205em 0px; }
+mjx-c.mjx-c1D530 { padding: 0.478em 0.443em 0.029em 0px; }
+mjx-c.mjx-c1D529 { padding: 0.685em 0.28em 0.02em 0px; }
+mjx-c.mjx-c220F.TEX-LO { padding: 0.95em 1.278em 0.45em 0px; }
+mjx-c.mjx-c2260 { padding: 0.716em 0.778em 0.215em 0px; }
+mjx-c.mjx-c1D52C { padding: 0.48em 0.489em 0.028em 0px; }
+mjx-c.mjx-c1D52D { padding: 0.541em 0.5em 0.212em 0px; }
+mjx-c.mjx-c1D45C { padding: 0.441em 0.485em 0.011em 0px; }
+mjx-c.mjx-c220F.TEX-SO { padding: 0.75em 0.944em 0.25em 0px; }
+mjx-c.mjx-c43 { padding: 0.705em 0.722em 0.021em 0px; }
+mjx-c.mjx-c1D6FE { padding: 0.441em 0.543em 0.216em 0px; }
+mjx-c.mjx-c1D43C { padding: 0.683em 0.504em 0px 0px; }
+mjx-c.mjx-c2115 { padding: 0.683em 0.722em 0.02em 0px; }
+mjx-c.mjx-c2243 { padding: 0.464em 0.778em 0px 0px; }
+mjx-c.mjx-c1D52B { padding: 0.475em 0.527em 0.022em 0px; }
+mjx-c.mjx-c6C { padding: 0.694em 0.278em 0px 0px; }
+mjx-c.mjx-c39E { padding: 0.677em 0.667em 0px 0px; }
+mjx-c.mjx-c1D443 { padding: 0.683em 0.751em 0px 0px; }
+mjx-c.mjx-c21A0 { padding: 0.417em 1em 0px 0px; }
+mjx-c.mjx-c1D702 { padding: 0.442em 0.503em 0.216em 0px; }
+mjx-c.mjx-c7B.TEX-S3 { padding: 1.45em 0.75em 0.949em 0px; }
+mjx-c.mjx-c55.TEX-C { padding: 0.683em 0.687em 0.028em 0px; }
+mjx-c.mjx-c77 { padding: 0.431em 0.722em 0.011em 0px; }
+mjx-c.mjx-c78 { padding: 0.431em 0.528em 0px 0px; }
+mjx-c.mjx-c2247 { padding: 0.652em 0.778em 0.155em 0px; }
 mjx-menclose { display: inline-block; text-align: left; position: relative; }
 mjx-menclose > mjx-dstrike { display: inline-block; left: 0px; top: 0px; position: absolute; border-top: 0.067em solid; transform-origin: left top; }
 mjx-menclose > mjx-ustrike { display: inline-block; left: 0px; bottom: 0px; position: absolute; border-top: 0.067em solid; transform-origin: left bottom; }
@@ -545,66 +549,53 @@ mjx-menclose > mjx-arrow > mjx-lthead { display: block; position: absolute; box-
 mjx-menclose > mjx-arrow > mjx-lbhead { display: block; position: absolute; box-sizing: border-box; transform: skewX(0.464rad); transform-origin: center top; left: 0px; top: -1px; border-width: 1px 0.268em 0.134em 0px; border-style: solid solid solid none; border-color: transparent currentcolor; }
 mjx-menclose > mjx-dbox-top { position: absolute; top: 0px; bottom: 50%; left: 0px; width: 0.3em; border-width: 0.067em; border-style: solid solid none none; border-radius: 0px 100% 0px 0px; box-sizing: border-box; }
 mjx-menclose > mjx-dbox-bot { position: absolute; top: 50%; bottom: 0px; left: 0px; width: 0.3em; border-width: 0.067em; border-style: none solid solid none; border-radius: 0px 0px 100%; box-sizing: border-box; }
-mjx-c.mjx-c55.TEX-C { padding: 0.683em 0.687em 0.028em 0px; }
-mjx-c.mjx-c21A0 { padding: 0.417em 1em 0px 0px; }
-mjx-c.mjx-c2283 { padding: 0.54em 0.778em 0.04em 0px; }
-mjx-c.mjx-c1D436 { padding: 0.705em 0.76em 0.022em 0px; }
-mjx-c.mjx-c1D454 { padding: 0.442em 0.48em 0.205em 0px; }
-mjx-c.mjx-c53 { padding: 0.705em 0.556em 0.022em 0px; }
-mjx-c.mjx-c70 { padding: 0.442em 0.556em 0.194em 0px; }
-mjx-c.mjx-c4F { padding: 0.705em 0.778em 0.022em 0px; }
-mjx-c.mjx-c2A01.TEX-SO { padding: 0.75em 1.111em 0.25em 0px; }
-mjx-c.mjx-c7B.TEX-LO { padding: 1.15em 0.667em 0.649em 0px; }
-mjx-c.mjx-c7D.TEX-LO { padding: 1.15em 0.667em 0.649em 0px; }
-mjx-c.mjx-c1D437 { padding: 0.683em 0.828em 0px 0px; }
-mjx-c.mjx-c50.TEX-C { padding: 0.683em 0.733em 0.057em 0px; }
-mjx-c.mjx-c4C.TEX-C { padding: 0.705em 0.69em 0.022em 0px; }
-mjx-c.mjx-c49.TEX-C { padding: 0.683em 0.642em 0px 0px; }
-mjx-c.mjx-c4B { padding: 0.683em 0.778em 0px 0px; }
-mjx-c.mjx-c75 { padding: 0.442em 0.556em 0.011em 0px; }
-mjx-c.mjx-c1D704 { padding: 0.442em 0.354em 0.01em 0px; }
-mjx-c.mjx-c2200 { padding: 0.694em 0.556em 0.022em 0px; }
-mjx-c.mjx-c228A { padding: 0.635em 0.778em 0.241em 0px; }
-mjx-c.mjx-c27F9 { padding: 0.525em 1.638em 0.024em 0px; }
-mjx-c.mjx-c22C2.TEX-LO { padding: 0.949em 1.111em 0.45em 0px; }
-mjx-c.mjx-c46 { padding: 0.68em 0.653em 0px 0px; }
-mjx-c.mjx-c3A6 { padding: 0.683em 0.722em 0px 0px; }
-mjx-c.mjx-c1D444 { padding: 0.704em 0.791em 0.194em 0px; }
-mjx-c.mjx-c49 { padding: 0.683em 0.361em 0px 0px; }
-mjx-mlabeledtr { display: table-row; text-align: left; }
-mjx-mlabeledtr[rowalign="top"] > mjx-mtd { vertical-align: top; }
-mjx-mlabeledtr[rowalign="center"] > mjx-mtd { vertical-align: middle; }
-mjx-mlabeledtr[rowalign="bottom"] > mjx-mtd { vertical-align: bottom; }
-mjx-mlabeledtr[rowalign="baseline"] > mjx-mtd { vertical-align: baseline; }
-mjx-mlabeledtr[rowalign="axis"] > mjx-mtd { vertical-align: 0.25em; }
-mjx-c.mjx-c1D709 { padding: 0.704em 0.443em 0.205em 0px; }
-mjx-c.mjx-c1D530 { padding: 0.478em 0.443em 0.029em 0px; }
-mjx-c.mjx-c1D529 { padding: 0.685em 0.28em 0.02em 0px; }
-mjx-c.mjx-c1D52C { padding: 0.48em 0.489em 0.028em 0px; }
-mjx-c.mjx-c1D52D { padding: 0.541em 0.5em 0.212em 0px; }
-mjx-c.mjx-c1D45C { padding: 0.441em 0.485em 0.011em 0px; }
-mjx-c.mjx-c43 { padding: 0.705em 0.722em 0.021em 0px; }
-mjx-c.mjx-c1D43C { padding: 0.683em 0.504em 0px 0px; }
-mjx-c.mjx-c2243 { padding: 0.464em 0.778em 0px 0px; }
-mjx-c.mjx-c6C { padding: 0.694em 0.278em 0px 0px; }
-mjx-c.mjx-c77 { padding: 0.431em 0.722em 0.011em 0px; }
-mjx-c.mjx-c78 { padding: 0.431em 0.528em 0px 0px; }
-mjx-c.mjx-c2247 { padding: 0.652em 0.778em 0.155em 0px; }
+mjx-stretchy-v.mjx-c28 > mjx-beg { width: 0.875em; margin: 1.154em auto -1.154em; }
+mjx-stretchy-v.mjx-c28 > mjx-ext > mjx-spacer { margin-top: 0.259em; }
+mjx-stretchy-v.mjx-c28 > mjx-ext { width: 0.875em; line-height: 0.562em; border-width: 1.779em 0px; }
+mjx-stretchy-v.mjx-c28 > mjx-end { width: 0.875em; margin: -0.644em auto 0.644em; }
+mjx-stretchy-v.mjx-c29 > mjx-beg { width: 0.875em; margin: 1.154em auto -1.154em; }
+mjx-stretchy-v.mjx-c29 > mjx-ext > mjx-spacer { margin-top: 0.259em; }
+mjx-stretchy-v.mjx-c29 > mjx-ext { width: 0.875em; line-height: 0.562em; border-width: 1.779em 0px; }
+mjx-stretchy-v.mjx-c29 > mjx-end { width: 0.875em; margin: -0.644em auto 0.644em; }
 mjx-c.mjx-c27E8.TEX-SO { padding: 0.85em 0.472em 0.35em 0px; }
 mjx-c.mjx-c27E9.TEX-SO { padding: 0.85em 0.472em 0.35em 0px; }
+mjx-c.mjx-c28.TEX-S4 { padding: 1.75em 0.792em 1.249em 0px; }
+mjx-c.mjx-c29.TEX-S4 { padding: 1.75em 0.792em 1.249em 0px; }
+mjx-stretchy-h.mjx-c2192 > mjx-ext > mjx-spacer { margin-left: -0.305em; }
+mjx-stretchy-h.mjx-c2192 > mjx-ext { padding: 0.431em 0px 0px; border-width: 0px 0.83em 0px 0px; }
+mjx-stretchy-h.mjx-c2192 > mjx-end { padding: 0.431em 0.89em 0px 0px; margin-left: -0.89em; }
+mjx-c.mjx-c27FA { padding: 0.525em 1.858em 0.024em 0px; }
+mjx-c.mjx-c223C { padding: 0.367em 0.778em 0px 0px; }
 mjx-c.mjx-c237.TEX-I { padding: 0.442em 0.332em 0.204em 0px; }
+mjx-c.mjx-c1D464 { padding: 0.443em 0.716em 0.011em 0px; }
+mjx-c.mjx-c1D466 { padding: 0.442em 0.496em 0.205em 0px; }
+mjx-c.mjx-c1D53D { padding: 0.683em 0.611em 0.001em 0px; }
+mjx-c.mjx-c2203 { padding: 0.694em 0.556em 0px 0px; }
+mjx-c.mjx-cD7 { padding: 0.491em 0.778em 0px 0px; }
 mjx-c.mjx-c42 { padding: 0.683em 0.708em 0px 0px; }
+mjx-c.mjx-c2223 { padding: 0.75em 0.278em 0.249em 0px; }
+mjx-c.mjx-c2262 { padding: 0.716em 0.778em 0.215em 0px; }
 mjx-c.mjx-c2033 { padding: 0.56em 0.55em 0px 0px; }
 mjx-c.mjx-c54 { padding: 0.677em 0.722em 0px 0px; }
 mjx-c.mjx-c21D2 { padding: 0.525em 1em 0.024em 0px; }
 mjx-c.mjx-c7D.TEX-S3 { padding: 1.45em 0.75em 0.949em 0px; }
+mjx-c.mjx-c7B.TEX-S4 { padding: 1.75em 0.806em 1.249em 0px; }
+mjx-c.mjx-c7D.TEX-S4 { padding: 1.75em 0.806em 1.249em 0px; }
 mjx-c.mjx-c2224 { padding: 0.75em 0.3em 0.252em 0px; }
 mjx-c.mjx-c21AA { padding: 0.511em 1.126em 0.011em 0px; }
 mjx-c.mjx-c222A { padding: 0.598em 0.667em 0.022em 0px; }
+mjx-c.mjx-c1D703 { padding: 0.705em 0.469em 0.01em 0px; }
+mjx-c.mjx-c23 { padding: 0.694em 0.833em 0.194em 0px; }
 mjx-c.mjx-c4A { padding: 0.683em 0.514em 0.022em 0px; }
 mjx-c.mjx-c41.TEX-C { padding: 0.728em 0.819em 0.05em 0px; }
+mjx-c.mjx-c39B { padding: 0.716em 0.694em 0px 0px; }
+mjx-c.mjx-c2218 { padding: 0.444em 0.5em 0px 0px; }
 mjx-c.mjx-c2207 { padding: 0.683em 0.833em 0.033em 0px; }
+mjx-c.mjx-c62 { padding: 0.694em 0.556em 0.011em 0px; }
+mjx-c.mjx-c22C9 { padding: 0.492em 0.778em 0px 0px; }
+mjx-c.mjx-c1D70C { padding: 0.442em 0.517em 0.216em 0px; }
 mjx-c.mjx-c50 { padding: 0.683em 0.681em 0px 0px; }
+mjx-c.mjx-c1D70E { padding: 0.431em 0.572em 0.011em 0px; }
 mjx-c.mjx-c221E { padding: 0.442em 1em 0.011em 0px; }
 mjx-stretchy-v.mjx-c7B > mjx-beg { width: 0.889em; margin: 0.899em auto -0.899em; }
 mjx-stretchy-v.mjx-c7B > mjx-ext > mjx-spacer { margin-top: 0.115em; }
@@ -624,13 +615,15 @@ mjx-c.mjx-c1D45E { padding: 0.442em 0.46em 0.194em 0px; }
 mjx-c.mjx-c2119 { padding: 0.683em 0.611em 0.001em 0px; }
 mjx-c.mjx-c1D44C { padding: 0.683em 0.763em 0px 0px; }
 mjx-c.mjx-c3A9 { padding: 0.704em 0.722em 0px 0px; }
+mjx-c.mjx-c79 { padding: 0.431em 0.528em 0.204em 0px; }
 mjx-c.mjx-c1D715 { padding: 0.715em 0.566em 0.022em 0px; }
 mjx-c.mjx-c1D714 { padding: 0.443em 0.622em 0.011em 0px; }
 mjx-c.mjx-c1D705 { padding: 0.442em 0.576em 0.011em 0px; }
 mjx-c.mjx-c2194 { padding: 0.511em 1em 0.011em 0px; }
+mjx-c.mjx-c1D70F { padding: 0.431em 0.517em 0.013em 0px; }
 mjx-c.mjx-c4D { padding: 0.683em 0.917em 0px 0px; }
 mjx-c.mjx-c2284 { padding: 0.716em 0.778em 0.215em 0px; }
-mjx-c.mjx-c52 { padding: 0.683em 0.736em 0.022em 0px; }</style><div class="markdown-preview-sizer markdown-preview-section"><div class="header"><div class="page-title" id="9.5 奇反射后的滤过">9.5 奇反射后的滤过</div><div class="data-bar"></div></div><div class="markdown-preview-pusher" style="width:1px;height:.1px;margin-bottom:0"></div><div class="el-p"><p dir="auto">整格是有理表示中的自由整数子模，扩到有理数后恢复原空间；特殊纤维是在这个所选整格内约化所得的模。两个有理基张成不同整格时，模<span class="math math-inline is-loaded"><mjx-container class="MathJax" jax="CHTML" overflow="overflow"><mjx-math data-latex="p" class="TEX-N"><mjx-mi data-latex="p"><mjx-c class="mjx-c1D45D">𝑝</mjx-c></mjx-mi></mjx-math></mjx-container></span>结果可以不同，定义见<a data-tooltip-position="top" aria-label="整格与配对" data-href="整格与配对" href="高阶核表示论/反变配对/整格与配对.html" class="internal-link" target="_self" rel="noopener nofollow">§6.1</a>。本节<span class="math math-inline is-loaded"><mjx-container class="MathJax" jax="CHTML" overflow="overflow"><mjx-math data-latex="A,B" class="TEX-N"><mjx-mi data-latex="A"><mjx-c class="mjx-c1D434">𝐴</mjx-c></mjx-mi><mjx-mo data-latex=","><mjx-c class="mjx-c2C">,</mjx-c></mjx-mo><mjx-mi space="2" data-latex="B"><mjx-c class="mjx-c1D435">𝐵</mjx-c></mjx-mi></mjx-math></mjx-container></span>是环境最高权参数，<span class="math math-inline is-loaded"><mjx-container class="MathJax" jax="CHTML" overflow="overflow"><mjx-math data-latex="A_i,B_i,C_i,D_i" class="TEX-N"><mjx-msub data-latex="A_i"><mjx-mi data-latex="A"><mjx-c class="mjx-c1D434">𝐴</mjx-c></mjx-mi><mjx-script style="vertical-align: -0.15em;"><mjx-mi size="s" data-latex="i"><mjx-c class="mjx-c1D456">𝑖</mjx-c></mjx-mi></mjx-script></mjx-msub><mjx-mo data-latex=","><mjx-c class="mjx-c2C">,</mjx-c></mjx-mo><mjx-msub space="2" data-latex="B_i"><mjx-mi data-latex="B"><mjx-c class="mjx-c1D435">𝐵</mjx-c></mjx-mi><mjx-script style="vertical-align: -0.15em;"><mjx-mi size="s" data-latex="i"><mjx-c class="mjx-c1D456">𝑖</mjx-c></mjx-mi></mjx-script></mjx-msub><mjx-mo data-latex=","><mjx-c class="mjx-c2C">,</mjx-c></mjx-mo><mjx-msub space="2" data-latex="C_i"><mjx-mi data-latex="C"><mjx-c class="mjx-c1D436">𝐶</mjx-c></mjx-mi><mjx-script style="vertical-align: -0.15em; margin-left: -0.045em;"><mjx-mi size="s" data-latex="i"><mjx-c class="mjx-c1D456">𝑖</mjx-c></mjx-mi></mjx-script></mjx-msub><mjx-mo data-latex=","><mjx-c class="mjx-c2C">,</mjx-c></mjx-mo><mjx-msub space="2" data-latex="D_i"><mjx-mi data-latex="D"><mjx-c class="mjx-c1D437">𝐷</mjx-c></mjx-mi><mjx-script style="vertical-align: -0.15em;"><mjx-mi size="s" data-latex="i"><mjx-c class="mjx-c1D456">𝑖</mjx-c></mjx-mi></mjx-script></mjx-msub></mjx-math></mjx-container></span>是相应向量，二者由上下标区别；所有定义都在式(R3)–(R5)落实。</p></div><div class="el-p"><p dir="auto">奇反射后的向量中有些带环境参数<span class="math math-inline is-loaded"><mjx-container class="MathJax" jax="CHTML" overflow="overflow"><mjx-math data-latex="B" class="TEX-N"><mjx-mi data-latex="B"><mjx-c class="mjx-c1D435">𝐵</mjx-c></mjx-mi></mjx-math></mjx-container></span>作为系数。若直接放在标准Kac整格中约化，<span class="math math-inline is-loaded"><mjx-container class="MathJax" jax="CHTML" overflow="overflow"><mjx-math data-latex="p\mid B" breakable="true" class="TEX-N"><mjx-mi data-latex="p"><mjx-c class="mjx-c1D45D">𝑝</mjx-c></mjx-mi><mjx-break size="4"> </mjx-break><mjx-mo data-latex="\mid"><mjx-c class="mjx-c2223">∣</mjx-c></mjx-mo><mjx-mi space="4" data-latex="B"><mjx-c class="mjx-c1D435">𝐵</mjx-c></mjx-mi></mjx-math></mjx-container></span>时这些向量会变成零，所以必须先说明使用的是哪个整格。<sup class="editing-suite-sidenote-reference" data-sidenote-instance="reading-257"><a class="footnote-ref editing-suite-sidenote-reference-link" aria-label="边注 1" tabindex="-1">1</a></sup><span class="editing-suite-sidenote-anchor editing-suite-reading-sidenote-anchor" data-sidenote-instance="reading-257" data-sidenote-number="1"><template class="mathcraft-export-sidenote-template"><aside class="editing-suite-sidenote-margin" data-sidenote-number="1" role="note" aria-label="边注 1" tabindex="-1"><span class="editing-suite-sidenote-number">1</span><div class="editing-suite-sidenote-content">依据：<a data-tooltip-position="top" aria-label="同态分类" data-href="同态分类" href="高阶核表示论/正根系与同态/同态分类.html" class="internal-link" target="_self" rel="noopener nofollow">§9.3</a>、<a data-tooltip-position="top" aria-label="配对与和公式" data-href="配对与和公式" href="高阶核表示论/特殊线性超群/配对与和公式.html" class="internal-link" target="_self" rel="noopener nofollow">§8.2</a>。</div></aside></template></span></p></div><div class="el-p"><p dir="auto">正文在有理环境中选出新的自由整基，并逐项验证边界关系与整系数稳定性。只有在这个新整格内部特殊化，才能保留完整的baby模。</p></div><div class="el-p"><p dir="auto">随后计算奇权范数和偶二维块，最顶向量仍有环境外伙伴。第一层与根基的识别、和公式以及长度都依赖这个边界处理；不同整格的一般独立性没有随这些计算自动得到。</p></div><div class="el-h3"><h3 data-heading="9.5.1 奇反射的同构" dir="auto" id="9.5.1_奇反射的同构_0">9.5.1 奇反射的同构</h3></div><div class="el-p"><p dir="auto">设<span class="math math-inline is-loaded"><mjx-container class="MathJax" jax="CHTML" overflow="overflow"><mjx-math data-latex="p&gt;2" breakable="true" class="TEX-N"><mjx-mi data-latex="p"><mjx-c class="mjx-c1D45D">𝑝</mjx-c></mjx-mi><mjx-break size="4"> </mjx-break><mjx-mo data-latex="&gt;"><mjx-c class="mjx-c3E">&gt;</mjx-c></mjx-mo><mjx-mn space="4" data-latex="2"><mjx-c class="mjx-c32">2</mjx-c></mjx-mn></mjx-math></mjx-container></span>、<span class="math math-inline is-loaded"><mjx-container class="MathJax" jax="CHTML" overflow="overflow"><mjx-math data-latex="r\ge1" breakable="true" class="TEX-N"><mjx-mi data-latex="r"><mjx-c class="mjx-c1D45F">𝑟</mjx-c></mjx-mi><mjx-break size="4"> </mjx-break><mjx-mo data-latex="\ge"><mjx-c class="mjx-c2265">≥</mjx-c></mjx-mo><mjx-mn space="4" data-latex="1"><mjx-c class="mjx-c31">1</mjx-c></mjx-mn></mjx-math></mjx-container></span>。考察<span class="math math-inline is-loaded"><mjx-container class="MathJax" jax="CHTML" overflow="overflow"><mjx-math data-latex="Z_r^{132}(a,b)" class="TEX-N"><mjx-msubsup data-latex="Z_r^{132}"><mjx-mi data-latex="Z"><mjx-c class="mjx-c1D44D">𝑍</mjx-c></mjx-mi><mjx-script style="vertical-align: -0.247em; margin-left: -0.04em;"><mjx-texatom size="s" data-latex="{132}" texclass="ORD" style="margin-left: 0.13em;"><mjx-mn data-latex="132"><mjx-c class="mjx-c31" noic="true" style="padding-top: 0.666em;">1</mjx-c><mjx-c class="mjx-c33" noic="true" style="padding-top: 0.666em;">3</mjx-c><mjx-c class="mjx-c32" style="padding-top: 0.666em;">2</mjx-c></mjx-mn></mjx-texatom><mjx-spacer style="margin-top: 0.282em;"></mjx-spacer><mjx-mi size="s" data-latex="r"><mjx-c class="mjx-c1D45F">𝑟</mjx-c></mjx-mi></mjx-script></mjx-msubsup><mjx-mo data-latex="("><mjx-c class="mjx-c28">(</mjx-c></mjx-mo><mjx-mi data-latex="a"><mjx-c class="mjx-c1D44E">𝑎</mjx-c></mjx-mi><mjx-mo data-latex=","><mjx-c class="mjx-c2C">,</mjx-c></mjx-mo><mjx-mi space="2" data-latex="b"><mjx-c class="mjx-c1D44F">𝑏</mjx-c></mjx-mi><mjx-mo data-latex=")"><mjx-c class="mjx-c29">)</mjx-c></mjx-mo></mjx-math></mjx-container></span>，最高权向量取为偶向量，使用中间基<span class="math math-inline is-loaded"><mjx-container class="MathJax" jax="CHTML" overflow="overflow"><mjx-math data-latex="A_i,B_i,C_i,D_i" class="TEX-N"><mjx-msub data-latex="A_i"><mjx-mi data-latex="A"><mjx-c class="mjx-c1D434">𝐴</mjx-c></mjx-mi><mjx-script style="vertical-align: -0.15em;"><mjx-mi size="s" data-latex="i"><mjx-c class="mjx-c1D456">𝑖</mjx-c></mjx-mi></mjx-script></mjx-msub><mjx-mo data-latex=","><mjx-c class="mjx-c2C">,</mjx-c></mjx-mo><mjx-msub space="2" data-latex="B_i"><mjx-mi data-latex="B"><mjx-c class="mjx-c1D435">𝐵</mjx-c></mjx-mi><mjx-script style="vertical-align: -0.15em;"><mjx-mi size="s" data-latex="i"><mjx-c class="mjx-c1D456">𝑖</mjx-c></mjx-mi></mjx-script></mjx-msub><mjx-mo data-latex=","><mjx-c class="mjx-c2C">,</mjx-c></mjx-mo><mjx-msub space="2" data-latex="C_i"><mjx-mi data-latex="C"><mjx-c class="mjx-c1D436">𝐶</mjx-c></mjx-mi><mjx-script style="vertical-align: -0.15em; margin-left: -0.045em;"><mjx-mi size="s" data-latex="i"><mjx-c class="mjx-c1D456">𝑖</mjx-c></mjx-mi></mjx-script></mjx-msub><mjx-mo data-latex=","><mjx-c class="mjx-c2C">,</mjx-c></mjx-mo><mjx-msub space="2" data-latex="D_i"><mjx-mi data-latex="D"><mjx-c class="mjx-c1D437">𝐷</mjx-c></mjx-mi><mjx-script style="vertical-align: -0.15em;"><mjx-mi size="s" data-latex="i"><mjx-c class="mjx-c1D456">𝑖</mjx-c></mjx-mi></mjx-script></mjx-msub></mjx-math></mjx-container></span>。</p></div><div class="el-p"><p dir="auto">若<span class="math math-inline is-loaded"><mjx-container class="MathJax" jax="CHTML" overflow="overflow"><mjx-math data-latex="b\ne0" breakable="true" class="TEX-N"><mjx-mi data-latex="b"><mjx-c class="mjx-c1D44F">𝑏</mjx-c></mjx-mi><mjx-break size="4"> </mjx-break><mjx-mo data-latex="\ne"><mjx-c class="mjx-c2260">≠</mjx-c></mjx-mo><mjx-mn space="4" data-latex="0"><mjx-c class="mjx-c30">0</mjx-c></mjx-mn></mjx-math></mjx-container></span>于<span class="math math-inline is-loaded"><mjx-container class="MathJax" jax="CHTML" overflow="overflow"><mjx-math data-latex="k" class="TEX-N"><mjx-mi data-latex="k"><mjx-c class="mjx-c1D458">𝑘</mjx-c></mjx-mi></mjx-math></mjx-container></span>，<span class="math math-inline is-loaded"><mjx-container class="MathJax" jax="CHTML" overflow="overflow"><mjx-math data-latex="C_0" class="TEX-N"><mjx-msub data-latex="C_0"><mjx-mi data-latex="C"><mjx-c class="mjx-c1D436">𝐶</mjx-c></mjx-mi><mjx-script style="vertical-align: -0.15em; margin-left: -0.045em;"><mjx-mn size="s" data-latex="0"><mjx-c class="mjx-c30">0</mjx-c></mjx-mn></mjx-script></mjx-msub></mjx-math></mjx-container></span>是相对于123的奇异向量，权<span class="math math-inline is-loaded"><mjx-container class="MathJax" jax="CHTML" overflow="overflow"><mjx-math data-latex="(a-1,b)" breakable="true" class="TEX-N"><mjx-mo data-latex="("><mjx-c class="mjx-c28">(</mjx-c></mjx-mo><mjx-mi data-latex="a"><mjx-c class="mjx-c1D44E">𝑎</mjx-c></mjx-mi><mjx-break size="3"> </mjx-break><mjx-mo data-latex="-"><mjx-c class="mjx-c2212">−</mjx-c></mjx-mo><mjx-mn space="3" data-latex="1"><mjx-c class="mjx-c31">1</mjx-c></mjx-mn><mjx-mo data-latex=","><mjx-c class="mjx-c2C">,</mjx-c></mjx-mo><mjx-mi space="2" data-latex="b"><mjx-c class="mjx-c1D44F">𝑏</mjx-c></mjx-mi><mjx-mo data-latex=")"><mjx-c class="mjx-c29">)</mjx-c></mjx-mo></mjx-math></mjx-container></span>。它满足<span class="math math-inline is-loaded"><mjx-container class="MathJax" jax="CHTML" overflow="overflow"><mjx-math data-latex="E_{32}C_0=bA_0" breakable="true" class="TEX-N"><mjx-msub data-latex="E_{32}"><mjx-mi data-latex="E"><mjx-c class="mjx-c1D438">𝐸</mjx-c></mjx-mi><mjx-script style="vertical-align: -0.15em; margin-left: -0.026em;"><mjx-texatom size="s" data-latex="{32}" texclass="ORD"><mjx-mn data-latex="32"><mjx-c class="mjx-c33" noic="true" style="padding-top: 0.666em;">3</mjx-c><mjx-c class="mjx-c32" style="padding-top: 0.666em;">2</mjx-c></mjx-mn></mjx-texatom></mjx-script></mjx-msub><mjx-msub data-latex="C_0"><mjx-mi data-latex="C"><mjx-c class="mjx-c1D436">𝐶</mjx-c></mjx-mi><mjx-script style="vertical-align: -0.15em; margin-left: -0.045em;"><mjx-mn size="s" data-latex="0"><mjx-c class="mjx-c30">0</mjx-c></mjx-mn></mjx-script></mjx-msub><mjx-break size="4"> </mjx-break><mjx-mo data-latex="="><mjx-c class="mjx-c3D">=</mjx-c></mjx-mo><mjx-mi space="4" data-latex="b"><mjx-c class="mjx-c1D44F">𝑏</mjx-c></mjx-mi><mjx-msub data-latex="A_0"><mjx-mi data-latex="A"><mjx-c class="mjx-c1D434">𝐴</mjx-c></mjx-mi><mjx-script style="vertical-align: -0.15em;"><mjx-mn size="s" data-latex="0"><mjx-c class="mjx-c30">0</mjx-c></mjx-mn></mjx-script></mjx-msub></mjx-math></mjx-container></span>，因此生成整个<span class="math math-inline is-loaded"><mjx-container class="MathJax" jax="CHTML" overflow="overflow"><mjx-math data-latex="Z_r^{132}(a,b)" class="TEX-N"><mjx-msubsup data-latex="Z_r^{132}"><mjx-mi data-latex="Z"><mjx-c class="mjx-c1D44D">𝑍</mjx-c></mjx-mi><mjx-script style="vertical-align: -0.247em; margin-left: -0.04em;"><mjx-texatom size="s" data-latex="{132}" texclass="ORD" style="margin-left: 0.13em;"><mjx-mn data-latex="132"><mjx-c class="mjx-c31" noic="true" style="padding-top: 0.666em;">1</mjx-c><mjx-c class="mjx-c33" noic="true" style="padding-top: 0.666em;">3</mjx-c><mjx-c class="mjx-c32" style="padding-top: 0.666em;">2</mjx-c></mjx-mn></mjx-texatom><mjx-spacer style="margin-top: 0.282em;"></mjx-spacer><mjx-mi size="s" data-latex="r"><mjx-c class="mjx-c1D45F">𝑟</mjx-c></mjx-mi></mjx-script></mjx-msubsup><mjx-mo data-latex="("><mjx-c class="mjx-c28">(</mjx-c></mjx-mo><mjx-mi data-latex="a"><mjx-c class="mjx-c1D44E">𝑎</mjx-c></mjx-mi><mjx-mo data-latex=","><mjx-c class="mjx-c2C">,</mjx-c></mjx-mo><mjx-mi space="2" data-latex="b"><mjx-c class="mjx-c1D44F">𝑏</mjx-c></mjx-mi><mjx-mo data-latex=")"><mjx-c class="mjx-c29">)</mjx-c></mjx-mo></mjx-math></mjx-container></span>。同维数及诱导泛性质给出</p></div><div class="el-div"><div class="math math-block is-loaded"><mjx-container class="MathJax" jax="CHTML" overflow="scroll" display="true" width="full" data-editing-suite-math-overflow="" style="min-width: 18.133em;"><mjx-math data-latex="Z_r^{132}(a,b)\cong\Pi Z_r^{123}(a-1,b).
+mjx-c.mjx-c52 { padding: 0.683em 0.736em 0.022em 0px; }</style><div class="markdown-preview-sizer markdown-preview-section"><div class="header"><div class="page-title" id="9.5 奇反射后的滤过">9.5 奇反射后的滤过</div><div class="data-bar"></div></div><div class="markdown-preview-pusher" style="width:1px;height:.1px;margin-bottom:0"></div><div class="el-p"><p dir="auto">整格是有理表示中的自由整数子模，扩到有理数后恢复原空间；特殊纤维是在这个所选整格内约化所得的模。两个有理基张成不同整格时，模<span class="math math-inline is-loaded"><mjx-container class="MathJax" jax="CHTML" overflow="overflow"><mjx-math data-latex="p" class="TEX-N"><mjx-mi data-latex="p"><mjx-c class="mjx-c1D45D">𝑝</mjx-c></mjx-mi></mjx-math></mjx-container></span>结果可以不同，定义见<a data-tooltip-position="top" aria-label="整格与配对" data-href="整格与配对" href="高阶核表示论/反变配对/整格与配对.html" class="internal-link" target="_self" rel="noopener nofollow">§6.1</a>。本节<span class="math math-inline is-loaded"><mjx-container class="MathJax" jax="CHTML" overflow="overflow"><mjx-math data-latex="A,B" class="TEX-N"><mjx-mi data-latex="A"><mjx-c class="mjx-c1D434">𝐴</mjx-c></mjx-mi><mjx-mo data-latex=","><mjx-c class="mjx-c2C">,</mjx-c></mjx-mo><mjx-mi space="2" data-latex="B"><mjx-c class="mjx-c1D435">𝐵</mjx-c></mjx-mi></mjx-math></mjx-container></span>是环境最高权参数，<span class="math math-inline is-loaded"><mjx-container class="MathJax" jax="CHTML" overflow="overflow"><mjx-math data-latex="A_i,B_i,C_i,D_i" class="TEX-N"><mjx-msub data-latex="A_i"><mjx-mi data-latex="A"><mjx-c class="mjx-c1D434">𝐴</mjx-c></mjx-mi><mjx-script style="vertical-align: -0.15em;"><mjx-mi size="s" data-latex="i"><mjx-c class="mjx-c1D456">𝑖</mjx-c></mjx-mi></mjx-script></mjx-msub><mjx-mo data-latex=","><mjx-c class="mjx-c2C">,</mjx-c></mjx-mo><mjx-msub space="2" data-latex="B_i"><mjx-mi data-latex="B"><mjx-c class="mjx-c1D435">𝐵</mjx-c></mjx-mi><mjx-script style="vertical-align: -0.15em;"><mjx-mi size="s" data-latex="i"><mjx-c class="mjx-c1D456">𝑖</mjx-c></mjx-mi></mjx-script></mjx-msub><mjx-mo data-latex=","><mjx-c class="mjx-c2C">,</mjx-c></mjx-mo><mjx-msub space="2" data-latex="C_i"><mjx-mi data-latex="C"><mjx-c class="mjx-c1D436">𝐶</mjx-c></mjx-mi><mjx-script style="vertical-align: -0.15em; margin-left: -0.045em;"><mjx-mi size="s" data-latex="i"><mjx-c class="mjx-c1D456">𝑖</mjx-c></mjx-mi></mjx-script></mjx-msub><mjx-mo data-latex=","><mjx-c class="mjx-c2C">,</mjx-c></mjx-mo><mjx-msub space="2" data-latex="D_i"><mjx-mi data-latex="D"><mjx-c class="mjx-c1D437">𝐷</mjx-c></mjx-mi><mjx-script style="vertical-align: -0.15em;"><mjx-mi size="s" data-latex="i"><mjx-c class="mjx-c1D456">𝑖</mjx-c></mjx-mi></mjx-script></mjx-msub></mjx-math></mjx-container></span>是相应向量，二者由上下标区别；所有定义都在式(R3)–(R5)落实。</p></div><div class="el-p"><p dir="auto">奇反射后的向量中有些带环境参数<span class="math math-inline is-loaded"><mjx-container class="MathJax" jax="CHTML" overflow="overflow"><mjx-math data-latex="B" class="TEX-N"><mjx-mi data-latex="B"><mjx-c class="mjx-c1D435">𝐵</mjx-c></mjx-mi></mjx-math></mjx-container></span>作为系数。若直接放在标准Kac整格中约化，<span class="math math-inline is-loaded"><mjx-container class="MathJax" jax="CHTML" overflow="overflow"><mjx-math data-latex="p\mid B" breakable="true" class="TEX-N"><mjx-mi data-latex="p"><mjx-c class="mjx-c1D45D">𝑝</mjx-c></mjx-mi><mjx-break size="4"> </mjx-break><mjx-mo data-latex="\mid"><mjx-c class="mjx-c2223">∣</mjx-c></mjx-mo><mjx-mi space="4" data-latex="B"><mjx-c class="mjx-c1D435">𝐵</mjx-c></mjx-mi></mjx-math></mjx-container></span>时这些向量会变成零，所以必须先说明使用的是哪个整格。<sup class="editing-suite-sidenote-reference" data-sidenote-instance="reading-226"><a class="footnote-ref editing-suite-sidenote-reference-link" aria-label="边注 1" tabindex="-1">1</a></sup><span class="editing-suite-sidenote-anchor editing-suite-reading-sidenote-anchor" data-sidenote-instance="reading-226" data-sidenote-number="1"><template class="mathcraft-export-sidenote-template"><aside class="editing-suite-sidenote-margin" data-sidenote-number="1" role="note" aria-label="边注 1" tabindex="-1"><span class="editing-suite-sidenote-number">1</span><div class="editing-suite-sidenote-content">依据：<a data-tooltip-position="top" aria-label="同态分类" data-href="同态分类" href="高阶核表示论/正根系与同态/同态分类.html" class="internal-link" target="_self" rel="noopener nofollow">§9.3</a>、<a data-tooltip-position="top" aria-label="配对与和公式" data-href="配对与和公式" href="高阶核表示论/特殊线性超群/配对与和公式.html" class="internal-link" target="_self" rel="noopener nofollow">§8.2</a>。</div></aside></template></span></p></div><div class="el-p"><p dir="auto">正文在有理环境中选出新的自由整基，并逐项验证边界关系与整系数稳定性。只有在这个新整格内部特殊化，才能保留完整的baby模。</p></div><div class="el-p"><p dir="auto">随后计算奇权范数和偶二维块，最顶向量仍有环境外伙伴。第一层与根基的识别、和公式以及长度都依赖这个边界处理；不同整格的一般独立性没有随这些计算自动得到。</p></div><div class="el-h3"><h3 data-heading="9.5.1 奇反射的同构" dir="auto" id="9.5.1_奇反射的同构_0">9.5.1 奇反射的同构</h3></div><div class="el-p"><p dir="auto">设<span class="math math-inline is-loaded"><mjx-container class="MathJax" jax="CHTML" overflow="overflow"><mjx-math data-latex="p&gt;2" breakable="true" class="TEX-N"><mjx-mi data-latex="p"><mjx-c class="mjx-c1D45D">𝑝</mjx-c></mjx-mi><mjx-break size="4"> </mjx-break><mjx-mo data-latex="&gt;"><mjx-c class="mjx-c3E">&gt;</mjx-c></mjx-mo><mjx-mn space="4" data-latex="2"><mjx-c class="mjx-c32">2</mjx-c></mjx-mn></mjx-math></mjx-container></span>、<span class="math math-inline is-loaded"><mjx-container class="MathJax" jax="CHTML" overflow="overflow"><mjx-math data-latex="r\ge1" breakable="true" class="TEX-N"><mjx-mi data-latex="r"><mjx-c class="mjx-c1D45F">𝑟</mjx-c></mjx-mi><mjx-break size="4"> </mjx-break><mjx-mo data-latex="\ge"><mjx-c class="mjx-c2265">≥</mjx-c></mjx-mo><mjx-mn space="4" data-latex="1"><mjx-c class="mjx-c31">1</mjx-c></mjx-mn></mjx-math></mjx-container></span>。考察<span class="math math-inline is-loaded"><mjx-container class="MathJax" jax="CHTML" overflow="overflow"><mjx-math data-latex="Z_r^{132}(a,b)" class="TEX-N"><mjx-msubsup data-latex="Z_r^{132}"><mjx-mi data-latex="Z"><mjx-c class="mjx-c1D44D">𝑍</mjx-c></mjx-mi><mjx-script style="vertical-align: -0.247em; margin-left: -0.04em;"><mjx-texatom size="s" data-latex="{132}" texclass="ORD" style="margin-left: 0.13em;"><mjx-mn data-latex="132"><mjx-c class="mjx-c31" noic="true" style="padding-top: 0.666em;">1</mjx-c><mjx-c class="mjx-c33" noic="true" style="padding-top: 0.666em;">3</mjx-c><mjx-c class="mjx-c32" style="padding-top: 0.666em;">2</mjx-c></mjx-mn></mjx-texatom><mjx-spacer style="margin-top: 0.282em;"></mjx-spacer><mjx-mi size="s" data-latex="r"><mjx-c class="mjx-c1D45F">𝑟</mjx-c></mjx-mi></mjx-script></mjx-msubsup><mjx-mo data-latex="("><mjx-c class="mjx-c28">(</mjx-c></mjx-mo><mjx-mi data-latex="a"><mjx-c class="mjx-c1D44E">𝑎</mjx-c></mjx-mi><mjx-mo data-latex=","><mjx-c class="mjx-c2C">,</mjx-c></mjx-mo><mjx-mi space="2" data-latex="b"><mjx-c class="mjx-c1D44F">𝑏</mjx-c></mjx-mi><mjx-mo data-latex=")"><mjx-c class="mjx-c29">)</mjx-c></mjx-mo></mjx-math></mjx-container></span>，最高权向量取为偶向量，使用中间基<span class="math math-inline is-loaded"><mjx-container class="MathJax" jax="CHTML" overflow="overflow"><mjx-math data-latex="A_i,B_i,C_i,D_i" class="TEX-N"><mjx-msub data-latex="A_i"><mjx-mi data-latex="A"><mjx-c class="mjx-c1D434">𝐴</mjx-c></mjx-mi><mjx-script style="vertical-align: -0.15em;"><mjx-mi size="s" data-latex="i"><mjx-c class="mjx-c1D456">𝑖</mjx-c></mjx-mi></mjx-script></mjx-msub><mjx-mo data-latex=","><mjx-c class="mjx-c2C">,</mjx-c></mjx-mo><mjx-msub space="2" data-latex="B_i"><mjx-mi data-latex="B"><mjx-c class="mjx-c1D435">𝐵</mjx-c></mjx-mi><mjx-script style="vertical-align: -0.15em;"><mjx-mi size="s" data-latex="i"><mjx-c class="mjx-c1D456">𝑖</mjx-c></mjx-mi></mjx-script></mjx-msub><mjx-mo data-latex=","><mjx-c class="mjx-c2C">,</mjx-c></mjx-mo><mjx-msub space="2" data-latex="C_i"><mjx-mi data-latex="C"><mjx-c class="mjx-c1D436">𝐶</mjx-c></mjx-mi><mjx-script style="vertical-align: -0.15em; margin-left: -0.045em;"><mjx-mi size="s" data-latex="i"><mjx-c class="mjx-c1D456">𝑖</mjx-c></mjx-mi></mjx-script></mjx-msub><mjx-mo data-latex=","><mjx-c class="mjx-c2C">,</mjx-c></mjx-mo><mjx-msub space="2" data-latex="D_i"><mjx-mi data-latex="D"><mjx-c class="mjx-c1D437">𝐷</mjx-c></mjx-mi><mjx-script style="vertical-align: -0.15em;"><mjx-mi size="s" data-latex="i"><mjx-c class="mjx-c1D456">𝑖</mjx-c></mjx-mi></mjx-script></mjx-msub></mjx-math></mjx-container></span>。</p></div><div class="el-p"><p dir="auto">若<span class="math math-inline is-loaded"><mjx-container class="MathJax" jax="CHTML" overflow="overflow"><mjx-math data-latex="b\ne0" breakable="true" class="TEX-N"><mjx-mi data-latex="b"><mjx-c class="mjx-c1D44F">𝑏</mjx-c></mjx-mi><mjx-break size="4"> </mjx-break><mjx-mo data-latex="\ne"><mjx-c class="mjx-c2260">≠</mjx-c></mjx-mo><mjx-mn space="4" data-latex="0"><mjx-c class="mjx-c30">0</mjx-c></mjx-mn></mjx-math></mjx-container></span>于<span class="math math-inline is-loaded"><mjx-container class="MathJax" jax="CHTML" overflow="overflow"><mjx-math data-latex="k" class="TEX-N"><mjx-mi data-latex="k"><mjx-c class="mjx-c1D458">𝑘</mjx-c></mjx-mi></mjx-math></mjx-container></span>，<span class="math math-inline is-loaded"><mjx-container class="MathJax" jax="CHTML" overflow="overflow"><mjx-math data-latex="C_0" class="TEX-N"><mjx-msub data-latex="C_0"><mjx-mi data-latex="C"><mjx-c class="mjx-c1D436">𝐶</mjx-c></mjx-mi><mjx-script style="vertical-align: -0.15em; margin-left: -0.045em;"><mjx-mn size="s" data-latex="0"><mjx-c class="mjx-c30">0</mjx-c></mjx-mn></mjx-script></mjx-msub></mjx-math></mjx-container></span>是相对于123的奇异向量，权<span class="math math-inline is-loaded"><mjx-container class="MathJax" jax="CHTML" overflow="overflow"><mjx-math data-latex="(a-1,b)" breakable="true" class="TEX-N"><mjx-mo data-latex="("><mjx-c class="mjx-c28">(</mjx-c></mjx-mo><mjx-mi data-latex="a"><mjx-c class="mjx-c1D44E">𝑎</mjx-c></mjx-mi><mjx-break size="3"> </mjx-break><mjx-mo data-latex="-"><mjx-c class="mjx-c2212">−</mjx-c></mjx-mo><mjx-mn space="3" data-latex="1"><mjx-c class="mjx-c31">1</mjx-c></mjx-mn><mjx-mo data-latex=","><mjx-c class="mjx-c2C">,</mjx-c></mjx-mo><mjx-mi space="2" data-latex="b"><mjx-c class="mjx-c1D44F">𝑏</mjx-c></mjx-mi><mjx-mo data-latex=")"><mjx-c class="mjx-c29">)</mjx-c></mjx-mo></mjx-math></mjx-container></span>。它满足<span class="math math-inline is-loaded"><mjx-container class="MathJax" jax="CHTML" overflow="overflow"><mjx-math data-latex="E_{32}C_0=bA_0" breakable="true" class="TEX-N"><mjx-msub data-latex="E_{32}"><mjx-mi data-latex="E"><mjx-c class="mjx-c1D438">𝐸</mjx-c></mjx-mi><mjx-script style="vertical-align: -0.15em; margin-left: -0.026em;"><mjx-texatom size="s" data-latex="{32}" texclass="ORD"><mjx-mn data-latex="32"><mjx-c class="mjx-c33" noic="true" style="padding-top: 0.666em;">3</mjx-c><mjx-c class="mjx-c32" style="padding-top: 0.666em;">2</mjx-c></mjx-mn></mjx-texatom></mjx-script></mjx-msub><mjx-msub data-latex="C_0"><mjx-mi data-latex="C"><mjx-c class="mjx-c1D436">𝐶</mjx-c></mjx-mi><mjx-script style="vertical-align: -0.15em; margin-left: -0.045em;"><mjx-mn size="s" data-latex="0"><mjx-c class="mjx-c30">0</mjx-c></mjx-mn></mjx-script></mjx-msub><mjx-break size="4"> </mjx-break><mjx-mo data-latex="="><mjx-c class="mjx-c3D">=</mjx-c></mjx-mo><mjx-mi space="4" data-latex="b"><mjx-c class="mjx-c1D44F">𝑏</mjx-c></mjx-mi><mjx-msub data-latex="A_0"><mjx-mi data-latex="A"><mjx-c class="mjx-c1D434">𝐴</mjx-c></mjx-mi><mjx-script style="vertical-align: -0.15em;"><mjx-mn size="s" data-latex="0"><mjx-c class="mjx-c30">0</mjx-c></mjx-mn></mjx-script></mjx-msub></mjx-math></mjx-container></span>，因此生成整个<span class="math math-inline is-loaded"><mjx-container class="MathJax" jax="CHTML" overflow="overflow"><mjx-math data-latex="Z_r^{132}(a,b)" class="TEX-N"><mjx-msubsup data-latex="Z_r^{132}"><mjx-mi data-latex="Z"><mjx-c class="mjx-c1D44D">𝑍</mjx-c></mjx-mi><mjx-script style="vertical-align: -0.247em; margin-left: -0.04em;"><mjx-texatom size="s" data-latex="{132}" texclass="ORD" style="margin-left: 0.13em;"><mjx-mn data-latex="132"><mjx-c class="mjx-c31" noic="true" style="padding-top: 0.666em;">1</mjx-c><mjx-c class="mjx-c33" noic="true" style="padding-top: 0.666em;">3</mjx-c><mjx-c class="mjx-c32" style="padding-top: 0.666em;">2</mjx-c></mjx-mn></mjx-texatom><mjx-spacer style="margin-top: 0.282em;"></mjx-spacer><mjx-mi size="s" data-latex="r"><mjx-c class="mjx-c1D45F">𝑟</mjx-c></mjx-mi></mjx-script></mjx-msubsup><mjx-mo data-latex="("><mjx-c class="mjx-c28">(</mjx-c></mjx-mo><mjx-mi data-latex="a"><mjx-c class="mjx-c1D44E">𝑎</mjx-c></mjx-mi><mjx-mo data-latex=","><mjx-c class="mjx-c2C">,</mjx-c></mjx-mo><mjx-mi space="2" data-latex="b"><mjx-c class="mjx-c1D44F">𝑏</mjx-c></mjx-mi><mjx-mo data-latex=")"><mjx-c class="mjx-c29">)</mjx-c></mjx-mo></mjx-math></mjx-container></span>。同维数及诱导泛性质给出</p></div><div class="el-div"><div class="math math-block is-loaded"><mjx-container class="MathJax" jax="CHTML" overflow="scroll" display="true" width="full" data-editing-suite-math-overflow="" style="min-width: 18.133em;"><mjx-math data-latex="Z_r^{132}(a,b)\cong\Pi Z_r^{123}(a-1,b).
 \tag{R1}" width="full" display="true" class="TEX-N"><mjx-mtable data-latex="Z_r^{132}(a,b)\cong\Pi Z_r^{123}(a-1,b).
 \tag{R1}" width="full" side="right" style="min-width: 18.133em;"><mjx-table style="width: auto; min-width: 12.505em; margin: 0px 2.814em;"><mjx-itable width="full"><mjx-mlabeledtr style="height: 1.139em;"><mjx-mtd><mjx-msubsup data-latex="Z_r^{132}"><mjx-mi data-latex="Z"><mjx-c class="mjx-c1D44D">𝑍</mjx-c></mjx-mi><mjx-script style="vertical-align: -0.247em; margin-left: -0.04em;"><mjx-texatom size="s" data-latex="{132}" texclass="ORD" style="margin-left: 0.13em;"><mjx-mn data-latex="132"><mjx-c class="mjx-c31" noic="true" style="padding-top: 0.666em;">1</mjx-c><mjx-c class="mjx-c33" noic="true" style="padding-top: 0.666em;">3</mjx-c><mjx-c class="mjx-c32" style="padding-top: 0.666em;">2</mjx-c></mjx-mn></mjx-texatom><mjx-spacer style="margin-top: 0.332em;"></mjx-spacer><mjx-mi size="s" data-latex="r"><mjx-c class="mjx-c1D45F">𝑟</mjx-c></mjx-mi></mjx-script></mjx-msubsup><mjx-mo data-latex="("><mjx-c class="mjx-c28">(</mjx-c></mjx-mo><mjx-mi data-latex="a"><mjx-c class="mjx-c1D44E">𝑎</mjx-c></mjx-mi><mjx-mo data-latex=","><mjx-c class="mjx-c2C">,</mjx-c></mjx-mo><mjx-mi space="2" data-latex="b"><mjx-c class="mjx-c1D44F">𝑏</mjx-c></mjx-mi><mjx-mo data-latex=")"><mjx-c class="mjx-c29">)</mjx-c></mjx-mo><mjx-mo space="4" data-latex="\cong"><mjx-c class="mjx-c2245">≅</mjx-c></mjx-mo><mjx-mi space="4" data-latex="\Pi"><mjx-c class="mjx-c3A0">Π</mjx-c></mjx-mi><mjx-msubsup data-latex="Z_r^{123}"><mjx-mi data-latex="Z"><mjx-c class="mjx-c1D44D">𝑍</mjx-c></mjx-mi><mjx-script style="vertical-align: -0.247em; margin-left: -0.04em;"><mjx-texatom size="s" data-latex="{123}" texclass="ORD" style="margin-left: 0.13em;"><mjx-mn data-latex="123"><mjx-c class="mjx-c31" noic="true" style="padding-top: 0.666em;">1</mjx-c><mjx-c class="mjx-c32" noic="true" style="padding-top: 0.666em;">2</mjx-c><mjx-c class="mjx-c33" style="padding-top: 0.666em;">3</mjx-c></mjx-mn></mjx-texatom><mjx-spacer style="margin-top: 0.332em;"></mjx-spacer><mjx-mi size="s" data-latex="r"><mjx-c class="mjx-c1D45F">𝑟</mjx-c></mjx-mi></mjx-script></mjx-msubsup><mjx-mo data-latex="("><mjx-c class="mjx-c28">(</mjx-c></mjx-mo><mjx-mi data-latex="a"><mjx-c class="mjx-c1D44E">𝑎</mjx-c></mjx-mi><mjx-mo space="3" data-latex="-"><mjx-c class="mjx-c2212">−</mjx-c></mjx-mo><mjx-mn space="3" data-latex="1"><mjx-c class="mjx-c31">1</mjx-c></mjx-mn><mjx-mo data-latex=","><mjx-c class="mjx-c2C">,</mjx-c></mjx-mo><mjx-mi space="2" data-latex="b"><mjx-c class="mjx-c1D44F">𝑏</mjx-c></mjx-mi><mjx-mo data-latex=")"><mjx-c class="mjx-c29">)</mjx-c></mjx-mo><mjx-mo data-latex="\tag{R1}"><mjx-c class="mjx-c2E">.</mjx-c></mjx-mo><mjx-tstrut></mjx-tstrut></mjx-mtd></mjx-mlabeledtr></mjx-itable></mjx-table><mjx-labels style="width: 18.133em;"><mjx-itable align="right" style="right: 0px;"><mjx-mtr style="height: 1.139em;"><mjx-mtd id="mjx-eqn:R1"><mjx-mtext data-latex="\text{(}"><mjx-c class="mjx-c28">(</mjx-c></mjx-mtext><mjx-mtext data-latex="\text{R1}"><mjx-c class="mjx-c52" noic="true" style="padding-top: 0.683em;">R</mjx-c><mjx-c class="mjx-c31" style="padding-top: 0.683em;">1</mjx-c></mjx-mtext><mjx-mtext data-latex="\text{)}"><mjx-c class="mjx-c29">)</mjx-c></mjx-mtext><mjx-tstrut style="height: 1.139em; vertical-align: -0.255em;"></mjx-tstrut></mjx-mtd></mjx-mtr></mjx-itable></mjx-labels></mjx-mtable></mjx-math></mjx-container></div></div><div class="el-p"><p dir="auto">若<span class="math math-inline is-loaded"><mjx-container class="MathJax" jax="CHTML" overflow="overflow"><mjx-math data-latex="a+b\ne0" breakable="true" class="TEX-N"><mjx-mi data-latex="a"><mjx-c class="mjx-c1D44E">𝑎</mjx-c></mjx-mi><mjx-break size="3"> </mjx-break><mjx-mo data-latex="+"><mjx-c class="mjx-c2B">+</mjx-c></mjx-mo><mjx-mi space="3" data-latex="b"><mjx-c class="mjx-c1D44F">𝑏</mjx-c></mjx-mi><mjx-break size="4"> </mjx-break><mjx-mo data-latex="\ne"><mjx-c class="mjx-c2260">≠</mjx-c></mjx-mo><mjx-mn space="4" data-latex="0"><mjx-c class="mjx-c30">0</mjx-c></mjx-mn></mjx-math></mjx-container></span>于<span class="math math-inline is-loaded"><mjx-container class="MathJax" jax="CHTML" overflow="overflow"><mjx-math data-latex="k" class="TEX-N"><mjx-mi data-latex="k"><mjx-c class="mjx-c1D458">𝑘</mjx-c></mjx-mi></mjx-math></mjx-container></span>，<span class="math math-inline is-loaded"><mjx-container class="MathJax" jax="CHTML" overflow="overflow"><mjx-math data-latex="B_0" class="TEX-N"><mjx-msub data-latex="B_0"><mjx-mi data-latex="B"><mjx-c class="mjx-c1D435">𝐵</mjx-c></mjx-mi><mjx-script style="vertical-align: -0.15em;"><mjx-mn size="s" data-latex="0"><mjx-c class="mjx-c30">0</mjx-c></mjx-mn></mjx-script></mjx-msub></mjx-math></mjx-container></span>相对于312奇异，权<span class="math math-inline is-loaded"><mjx-container class="MathJax" jax="CHTML" overflow="overflow"><mjx-math data-latex="(a-1,b+1)" breakable="true" class="TEX-N"><mjx-mo data-latex="("><mjx-c class="mjx-c28">(</mjx-c></mjx-mo><mjx-mi data-latex="a"><mjx-c class="mjx-c1D44E">𝑎</mjx-c></mjx-mi><mjx-break size="3"> </mjx-break><mjx-mo data-latex="-"><mjx-c class="mjx-c2212">−</mjx-c></mjx-mo><mjx-mn space="3" data-latex="1"><mjx-c class="mjx-c31">1</mjx-c></mjx-mn><mjx-mo data-latex=","><mjx-c class="mjx-c2C">,</mjx-c></mjx-mo><mjx-mi space="2" data-latex="b"><mjx-c class="mjx-c1D44F">𝑏</mjx-c></mjx-mi><mjx-break size="3"> </mjx-break><mjx-mo data-latex="+"><mjx-c class="mjx-c2B">+</mjx-c></mjx-mo><mjx-mn space="3" data-latex="1"><mjx-c class="mjx-c31">1</mjx-c></mjx-mn><mjx-mo data-latex=")"><mjx-c class="mjx-c29">)</mjx-c></mjx-mo></mjx-math></mjx-container></span>，且<span class="math math-inline is-loaded"><mjx-container class="MathJax" jax="CHTML" overflow="overflow"><mjx-math data-latex="E_{13}B_0=(a+b)A_0" breakable="true" class="TEX-N"><mjx-msub data-latex="E_{13}"><mjx-mi data-latex="E"><mjx-c class="mjx-c1D438">𝐸</mjx-c></mjx-mi><mjx-script style="vertical-align: -0.15em; margin-left: -0.026em;"><mjx-texatom size="s" data-latex="{13}" texclass="ORD"><mjx-mn data-latex="13"><mjx-c class="mjx-c31" noic="true" style="padding-top: 0.666em;">1</mjx-c><mjx-c class="mjx-c33" style="padding-top: 0.666em;">3</mjx-c></mjx-mn></mjx-texatom></mjx-script></mjx-msub><mjx-msub data-latex="B_0"><mjx-mi data-latex="B"><mjx-c class="mjx-c1D435">𝐵</mjx-c></mjx-mi><mjx-script style="vertical-align: -0.15em;"><mjx-mn size="s" data-latex="0"><mjx-c class="mjx-c30">0</mjx-c></mjx-mn></mjx-script></mjx-msub><mjx-break size="4"> </mjx-break><mjx-mo data-latex="="><mjx-c class="mjx-c3D">=</mjx-c></mjx-mo><mjx-mo space="4" data-latex="("><mjx-c class="mjx-c28">(</mjx-c></mjx-mo><mjx-mi data-latex="a"><mjx-c class="mjx-c1D44E">𝑎</mjx-c></mjx-mi><mjx-break size="3"> </mjx-break><mjx-mo data-latex="+"><mjx-c class="mjx-c2B">+</mjx-c></mjx-mo><mjx-mi space="3" data-latex="b"><mjx-c class="mjx-c1D44F">𝑏</mjx-c></mjx-mi><mjx-mo data-latex=")"><mjx-c class="mjx-c29">)</mjx-c></mjx-mo><mjx-msub data-latex="A_0"><mjx-mi data-latex="A"><mjx-c class="mjx-c1D434">𝐴</mjx-c></mjx-mi><mjx-script style="vertical-align: -0.15em;"><mjx-mn size="s" data-latex="0"><mjx-c class="mjx-c30">0</mjx-c></mjx-mn></mjx-script></mjx-msub></mjx-math></mjx-container></span>，故</p></div><div class="el-div"><div class="math math-block is-loaded"><mjx-container class="MathJax" jax="CHTML" overflow="scroll" display="true" width="full" data-editing-suite-math-overflow="" style="min-width: 19.855em;"><mjx-math data-latex="Z_r^{132}(a,b)\cong\Pi Z_r^{312}(a-1,b+1).
 \tag{R2}" width="full" display="true" class="TEX-N"><mjx-mtable data-latex="Z_r^{132}(a,b)\cong\Pi Z_r^{312}(a-1,b+1).
@@ -694,4 +687,4 @@ M_i=u+v+\eta_{i-1}+\eta_i-m_i.
 " style="height: 2.992em;"><mjx-mtd style="text-align: right; padding-right: 0px; padding-bottom: 0.15em;"><mjx-munder data-latex="\sum_{n&gt;0}"><mjx-row><mjx-base><mjx-mo data-latex="\sum"><mjx-c class="mjx-c2211 TEX-LO">∑</mjx-c></mjx-mo></mjx-base></mjx-row><mjx-row><mjx-under style="padding-top: 0.167em; padding-left: 0.058em;"><mjx-texatom size="s" data-latex="{n&gt;0}" texclass="ORD"><mjx-mi data-latex="n"><mjx-c class="mjx-c1D45B">𝑛</mjx-c></mjx-mi><mjx-mo data-latex="&gt;"><mjx-c class="mjx-c3E">&gt;</mjx-c></mjx-mo><mjx-mn data-latex="0"><mjx-c class="mjx-c30">0</mjx-c></mjx-mn></mjx-texatom></mjx-under></mjx-row></mjx-munder><mjx-msub space="2" data-latex="\operatorname{ch}_{\pm}"><mjx-mi data-latex="\operatorname{ch}"><mjx-c class="mjx-c63" noic="true" style="padding-top: 0.694em;">c</mjx-c><mjx-c class="mjx-c68" style="padding-top: 0.694em;">h</mjx-c></mjx-mi><mjx-script style="vertical-align: -0.15em;"><mjx-texatom size="s" data-latex="{\pm}" texclass="ORD"><mjx-mo data-latex="\pm"><mjx-c class="mjx-cB1">±</mjx-c></mjx-mo></mjx-texatom></mjx-script></mjx-msub><mjx-mo><mjx-c class="mjx-c2061">⁡</mjx-c></mjx-mo><mjx-msup space="2" data-latex="J^n"><mjx-mi data-latex="J"><mjx-c class="mjx-c1D43D">𝐽</mjx-c></mjx-mi><mjx-script style="vertical-align: 0.413em; margin-left: 0.054em;"><mjx-mi size="s" data-latex="n"><mjx-c class="mjx-c1D45B">𝑛</mjx-c></mjx-mi></mjx-script></mjx-msup><mjx-texatom data-latex="{Z_r^{132}(a,b)}" texclass="ORD"><mjx-msubsup data-latex="Z_r^{132}"><mjx-mi data-latex="Z"><mjx-c class="mjx-c1D44D">𝑍</mjx-c></mjx-mi><mjx-script style="vertical-align: -0.247em; margin-left: -0.04em;"><mjx-texatom size="s" data-latex="{132}" texclass="ORD" style="margin-left: 0.13em;"><mjx-mn data-latex="132"><mjx-c class="mjx-c31" noic="true" style="padding-top: 0.666em;">1</mjx-c><mjx-c class="mjx-c33" noic="true" style="padding-top: 0.666em;">3</mjx-c><mjx-c class="mjx-c32" style="padding-top: 0.666em;">2</mjx-c></mjx-mn></mjx-texatom><mjx-spacer style="margin-top: 0.332em;"></mjx-spacer><mjx-mi size="s" data-latex="r"><mjx-c class="mjx-c1D45F">𝑟</mjx-c></mjx-mi></mjx-script></mjx-msubsup><mjx-mo data-latex="("><mjx-c class="mjx-c28">(</mjx-c></mjx-mo><mjx-mi data-latex="a"><mjx-c class="mjx-c1D44E">𝑎</mjx-c></mjx-mi><mjx-mo data-latex=","><mjx-c class="mjx-c2C">,</mjx-c></mjx-mo><mjx-mi space="2" data-latex="b"><mjx-c class="mjx-c1D44F">𝑏</mjx-c></mjx-mi><mjx-mo data-latex=")"><mjx-c class="mjx-c29">)</mjx-c></mjx-mo></mjx-texatom><mjx-mo space="4" data-latex="="><mjx-c class="mjx-c3D">=</mjx-c></mjx-mo><mjx-texatom space="4" data-latex="{}" texclass="ORD"></mjx-texatom><mjx-tstrut></mjx-tstrut></mjx-mtd><mjx-mtd style="text-align: left; padding-left: 0px; padding-bottom: 0.15em;"><mjx-mstyle><mjx-mi data-latex="\zeta"><mjx-c class="mjx-c1D701">𝜁</mjx-c></mjx-mi><mjx-munderover space="2" data-latex="\sum_{i=0}^{{p^{r}}-1}"><mjx-over style="padding-bottom: 0.111em;"><mjx-texatom size="s" data-latex="{{p^{r}}-1}" texclass="ORD"><mjx-texatom data-latex="{p^{r}}" texclass="ORD"><mjx-msup data-latex="p^{r}"><mjx-mi data-latex="p"><mjx-c class="mjx-c1D45D">𝑝</mjx-c></mjx-mi><mjx-script style="vertical-align: 0.363em;"><mjx-texatom size="s" data-latex="{r}" texclass="ORD"><mjx-mi data-latex="r"><mjx-c class="mjx-c1D45F">𝑟</mjx-c></mjx-mi></mjx-texatom></mjx-script></mjx-msup></mjx-texatom><mjx-mo data-latex="-"><mjx-c class="mjx-c2212">−</mjx-c></mjx-mo><mjx-mn data-latex="1"><mjx-c class="mjx-c31">1</mjx-c></mjx-mn></mjx-texatom></mjx-over><mjx-box><mjx-munder><mjx-row><mjx-base style="padding-left: 0.05em;"><mjx-mo data-latex="\sum"><mjx-c class="mjx-c2211 TEX-LO">∑</mjx-c></mjx-mo></mjx-base></mjx-row><mjx-row><mjx-under style="padding-top: 0.167em; padding-left: 0.198em;"><mjx-texatom size="s" data-latex="{i=0}" texclass="ORD"><mjx-mi data-latex="i"><mjx-c class="mjx-c1D456">𝑖</mjx-c></mjx-mi><mjx-mo data-latex="="><mjx-c class="mjx-c3D">=</mjx-c></mjx-mo><mjx-mn data-latex="0"><mjx-c class="mjx-c30">0</mjx-c></mjx-mn></mjx-texatom></mjx-under></mjx-row></mjx-munder></mjx-box></mjx-munderover><mjx-mo data-latex="("><mjx-c class="mjx-c28">(</mjx-c></mjx-mo><mjx-mi data-latex="v"><mjx-c class="mjx-c1D463">𝑣</mjx-c></mjx-mi><mjx-mo space="3" data-latex="+"><mjx-c class="mjx-c2B">+</mjx-c></mjx-mo><mjx-msub space="3" data-latex="\eta_i"><mjx-mi data-latex="\eta"><mjx-c class="mjx-c1D702">𝜂</mjx-c></mjx-mi><mjx-script style="vertical-align: -0.15em; margin-left: -0.006em;"><mjx-mi size="s" data-latex="i"><mjx-c class="mjx-c1D456">𝑖</mjx-c></mjx-mi></mjx-script></mjx-msub><mjx-mo data-latex=")"><mjx-c class="mjx-c29">)</mjx-c></mjx-mo><mjx-msup data-latex="e^{\lambda-\beta_1-i\alpha}"><mjx-mi data-latex="e"><mjx-c class="mjx-c1D452">𝑒</mjx-c></mjx-mi><mjx-script style="vertical-align: 0.413em;"><mjx-texatom size="s" data-latex="{\lambda-\beta_1-i\alpha}" texclass="ORD"><mjx-mi data-latex="\lambda"><mjx-c class="mjx-c1D706">𝜆</mjx-c></mjx-mi><mjx-mo data-latex="-"><mjx-c class="mjx-c2212">−</mjx-c></mjx-mo><mjx-msub data-latex="\beta_1"><mjx-mi data-latex="\beta"><mjx-c class="mjx-c1D6FD">𝛽</mjx-c></mjx-mi><mjx-script style="vertical-align: -0.15em; margin-left: -0.007em;"><mjx-mn size="s" data-latex="1"><mjx-c class="mjx-c31">1</mjx-c></mjx-mn></mjx-script></mjx-msub><mjx-mo data-latex="-"><mjx-c class="mjx-c2212">−</mjx-c></mjx-mo><mjx-mi data-latex="i"><mjx-c class="mjx-c1D456">𝑖</mjx-c></mjx-mi><mjx-mi data-latex="\alpha"><mjx-c class="mjx-c1D6FC">𝛼</mjx-c></mjx-mi></mjx-texatom></mjx-script></mjx-msup><mjx-mo space="3" data-latex="+"><mjx-c class="mjx-c2B">+</mjx-c></mjx-mo><mjx-mi space="3" data-latex="\zeta"><mjx-c class="mjx-c1D701">𝜁</mjx-c></mjx-mi><mjx-munderover space="2" data-latex="\sum_{i=0}^{{p^{r}}-1}"><mjx-over style="padding-bottom: 0.111em;"><mjx-texatom size="s" data-latex="{{p^{r}}-1}" texclass="ORD"><mjx-texatom data-latex="{p^{r}}" texclass="ORD"><mjx-msup data-latex="p^{r}"><mjx-mi data-latex="p"><mjx-c class="mjx-c1D45D">𝑝</mjx-c></mjx-mi><mjx-script style="vertical-align: 0.363em;"><mjx-texatom size="s" data-latex="{r}" texclass="ORD"><mjx-mi data-latex="r"><mjx-c class="mjx-c1D45F">𝑟</mjx-c></mjx-mi></mjx-texatom></mjx-script></mjx-msup></mjx-texatom><mjx-mo data-latex="-"><mjx-c class="mjx-c2212">−</mjx-c></mjx-mo><mjx-mn data-latex="1"><mjx-c class="mjx-c31">1</mjx-c></mjx-mn></mjx-texatom></mjx-over><mjx-box><mjx-munder><mjx-row><mjx-base style="padding-left: 0.05em;"><mjx-mo data-latex="\sum"><mjx-c class="mjx-c2211 TEX-LO">∑</mjx-c></mjx-mo></mjx-base></mjx-row><mjx-row><mjx-under style="padding-top: 0.167em; padding-left: 0.198em;"><mjx-texatom size="s" data-latex="{i=0}" texclass="ORD"><mjx-mi data-latex="i"><mjx-c class="mjx-c1D456">𝑖</mjx-c></mjx-mi><mjx-mo data-latex="="><mjx-c class="mjx-c3D">=</mjx-c></mjx-mo><mjx-mn data-latex="0"><mjx-c class="mjx-c30">0</mjx-c></mjx-mn></mjx-texatom></mjx-under></mjx-row></mjx-munder></mjx-box></mjx-munderover><mjx-mo data-latex="("><mjx-c class="mjx-c28">(</mjx-c></mjx-mo><mjx-mi data-latex="u"><mjx-c class="mjx-c1D462">𝑢</mjx-c></mjx-mi><mjx-mo space="3" data-latex="+"><mjx-c class="mjx-c2B">+</mjx-c></mjx-mo><mjx-msub space="3" data-latex="\eta_i"><mjx-mi data-latex="\eta"><mjx-c class="mjx-c1D702">𝜂</mjx-c></mjx-mi><mjx-script style="vertical-align: -0.15em; margin-left: -0.006em;"><mjx-mi size="s" data-latex="i"><mjx-c class="mjx-c1D456">𝑖</mjx-c></mjx-mi></mjx-script></mjx-msub><mjx-mo data-latex=")"><mjx-c class="mjx-c29">)</mjx-c></mjx-mo><mjx-msup data-latex="e^{\lambda+\beta_2-i\alpha}"><mjx-mi data-latex="e"><mjx-c class="mjx-c1D452">𝑒</mjx-c></mjx-mi><mjx-script style="vertical-align: 0.413em;"><mjx-texatom size="s" data-latex="{\lambda+\beta_2-i\alpha}" texclass="ORD"><mjx-mi data-latex="\lambda"><mjx-c class="mjx-c1D706">𝜆</mjx-c></mjx-mi><mjx-mo data-latex="+"><mjx-c class="mjx-c2B">+</mjx-c></mjx-mo><mjx-msub data-latex="\beta_2"><mjx-mi data-latex="\beta"><mjx-c class="mjx-c1D6FD">𝛽</mjx-c></mjx-mi><mjx-script style="vertical-align: -0.15em; margin-left: -0.007em;"><mjx-mn size="s" data-latex="2"><mjx-c class="mjx-c32">2</mjx-c></mjx-mn></mjx-script></mjx-msub><mjx-mo data-latex="-"><mjx-c class="mjx-c2212">−</mjx-c></mjx-mo><mjx-mi data-latex="i"><mjx-c class="mjx-c1D456">𝑖</mjx-c></mjx-mi><mjx-mi data-latex="\alpha"><mjx-c class="mjx-c1D6FC">𝛼</mjx-c></mjx-mi></mjx-texatom></mjx-script></mjx-msup></mjx-mstyle><mjx-tstrut></mjx-tstrut></mjx-mtd></mjx-mtr><mjx-mtr data-latex="
 " style="height: 2.972em;"><mjx-mtd style="text-align: right; padding-right: 0px; padding-top: 0.15em;"><mjx-tstrut></mjx-tstrut></mjx-mtd><mjx-mtd style="text-align: left; padding-left: 0px; padding-top: 0.15em;"><mjx-mstyle><mjx-mi></mjx-mi><mjx-mo space="3" data-latex="+"><mjx-c class="mjx-c2B">+</mjx-c></mjx-mo><mjx-munderover space="3" data-latex="\sum_{i=1}^{{p^{r}}-1}"><mjx-over style="padding-bottom: 0.111em;"><mjx-texatom size="s" data-latex="{{p^{r}}-1}" texclass="ORD"><mjx-texatom data-latex="{p^{r}}" texclass="ORD"><mjx-msup data-latex="p^{r}"><mjx-mi data-latex="p"><mjx-c class="mjx-c1D45D">𝑝</mjx-c></mjx-mi><mjx-script style="vertical-align: 0.363em;"><mjx-texatom size="s" data-latex="{r}" texclass="ORD"><mjx-mi data-latex="r"><mjx-c class="mjx-c1D45F">𝑟</mjx-c></mjx-mi></mjx-texatom></mjx-script></mjx-msup></mjx-texatom><mjx-mo data-latex="-"><mjx-c class="mjx-c2212">−</mjx-c></mjx-mo><mjx-mn data-latex="1"><mjx-c class="mjx-c31">1</mjx-c></mjx-mn></mjx-texatom></mjx-over><mjx-box><mjx-munder><mjx-row><mjx-base style="padding-left: 0.05em;"><mjx-mo data-latex="\sum"><mjx-c class="mjx-c2211 TEX-LO">∑</mjx-c></mjx-mo></mjx-base></mjx-row><mjx-row><mjx-under style="padding-top: 0.167em; padding-left: 0.198em;"><mjx-texatom size="s" data-latex="{i=1}" texclass="ORD"><mjx-mi data-latex="i"><mjx-c class="mjx-c1D456">𝑖</mjx-c></mjx-mi><mjx-mo data-latex="="><mjx-c class="mjx-c3D">=</mjx-c></mjx-mo><mjx-mn data-latex="1"><mjx-c class="mjx-c31">1</mjx-c></mjx-mn></mjx-texatom></mjx-under></mjx-row></mjx-munder></mjx-box></mjx-munderover><mjx-mo data-latex="("><mjx-c class="mjx-c28">(</mjx-c></mjx-mo><mjx-mi data-latex="u"><mjx-c class="mjx-c1D462">𝑢</mjx-c></mjx-mi><mjx-mo space="3" data-latex="+"><mjx-c class="mjx-c2B">+</mjx-c></mjx-mo><mjx-mi space="3" data-latex="v"><mjx-c class="mjx-c1D463">𝑣</mjx-c></mjx-mi><mjx-mo space="3" data-latex="+"><mjx-c class="mjx-c2B">+</mjx-c></mjx-mo><mjx-msub space="3" data-latex="\eta_{i-1}"><mjx-mi data-latex="\eta"><mjx-c class="mjx-c1D702">𝜂</mjx-c></mjx-mi><mjx-script style="vertical-align: -0.15em; margin-left: -0.006em;"><mjx-texatom size="s" data-latex="{i-1}" texclass="ORD"><mjx-mi data-latex="i"><mjx-c class="mjx-c1D456">𝑖</mjx-c></mjx-mi><mjx-mo data-latex="-"><mjx-c class="mjx-c2212">−</mjx-c></mjx-mo><mjx-mn data-latex="1"><mjx-c class="mjx-c31">1</mjx-c></mjx-mn></mjx-texatom></mjx-script></mjx-msub><mjx-mo space="3" data-latex="+"><mjx-c class="mjx-c2B">+</mjx-c></mjx-mo><mjx-msub space="3" data-latex="\eta_i"><mjx-mi data-latex="\eta"><mjx-c class="mjx-c1D702">𝜂</mjx-c></mjx-mi><mjx-script style="vertical-align: -0.15em; margin-left: -0.006em;"><mjx-mi size="s" data-latex="i"><mjx-c class="mjx-c1D456">𝑖</mjx-c></mjx-mi></mjx-script></mjx-msub><mjx-mo data-latex=")"><mjx-c class="mjx-c29">)</mjx-c></mjx-mo><mjx-msup data-latex="e^{\lambda-i\alpha}"><mjx-mi data-latex="e"><mjx-c class="mjx-c1D452">𝑒</mjx-c></mjx-mi><mjx-script style="vertical-align: 0.413em;"><mjx-texatom size="s" data-latex="{\lambda-i\alpha}" texclass="ORD"><mjx-mi data-latex="\lambda"><mjx-c class="mjx-c1D706">𝜆</mjx-c></mjx-mi><mjx-mo data-latex="-"><mjx-c class="mjx-c2212">−</mjx-c></mjx-mo><mjx-mi data-latex="i"><mjx-c class="mjx-c1D456">𝑖</mjx-c></mjx-mi><mjx-mi data-latex="\alpha"><mjx-c class="mjx-c1D6FC">𝛼</mjx-c></mjx-mi></mjx-texatom></mjx-script></mjx-msup><mjx-mo space="3" data-latex="+"><mjx-c class="mjx-c2B">+</mjx-c></mjx-mo><mjx-mo space="3" data-latex="("><mjx-c class="mjx-c28">(</mjx-c></mjx-mo><mjx-mi data-latex="r"><mjx-c class="mjx-c1D45F">𝑟</mjx-c></mjx-mi><mjx-mo space="3" data-latex="-"><mjx-c class="mjx-c2212">−</mjx-c></mjx-mo><mjx-mi space="3" data-latex="s"><mjx-c class="mjx-c1D460">𝑠</mjx-c></mjx-mi><mjx-mo space="3" data-latex="+"><mjx-c class="mjx-c2B">+</mjx-c></mjx-mo><mjx-mi space="3" data-latex="u"><mjx-c class="mjx-c1D462">𝑢</mjx-c></mjx-mi><mjx-mo space="3" data-latex="+"><mjx-c class="mjx-c2B">+</mjx-c></mjx-mo><mjx-mi space="3" data-latex="v"><mjx-c class="mjx-c1D463">𝑣</mjx-c></mjx-mi><mjx-mo data-latex=")"><mjx-c class="mjx-c29">)</mjx-c></mjx-mo><mjx-msup data-latex="e^{\lambda-{p^{r}}\alpha}"><mjx-mi data-latex="e"><mjx-c class="mjx-c1D452">𝑒</mjx-c></mjx-mi><mjx-script style="vertical-align: 0.413em;"><mjx-texatom size="s" data-latex="{\lambda-{p^{r}}\alpha}" texclass="ORD"><mjx-mi data-latex="\lambda"><mjx-c class="mjx-c1D706">𝜆</mjx-c></mjx-mi><mjx-mo data-latex="-"><mjx-c class="mjx-c2212">−</mjx-c></mjx-mo><mjx-texatom data-latex="{p^{r}}" texclass="ORD"><mjx-msup data-latex="p^{r}"><mjx-mi data-latex="p"><mjx-c class="mjx-c1D45D">𝑝</mjx-c></mjx-mi><mjx-script style="vertical-align: 0.363em;"><mjx-texatom size="s" data-latex="{r}" texclass="ORD"><mjx-mi data-latex="r"><mjx-c class="mjx-c1D45F">𝑟</mjx-c></mjx-mi></mjx-texatom></mjx-script></mjx-msup></mjx-texatom><mjx-mi data-latex="\alpha"><mjx-c class="mjx-c1D6FC">𝛼</mjx-c></mjx-mi></mjx-texatom></mjx-script></mjx-msup><mjx-mo data-latex="."><mjx-c class="mjx-c2E">.</mjx-c></mjx-mo></mjx-mstyle><mjx-tstrut></mjx-tstrut></mjx-mtd></mjx-mtr></mjx-itable></mjx-table></mjx-mtable><mjx-tstrut></mjx-tstrut></mjx-mtd></mjx-mlabeledtr></mjx-itable></mjx-table><mjx-labels style="width: 40.22em;"><mjx-itable align="right" style="right: 0px;"><mjx-mtr style="height: 6.264em;"><mjx-mtd id="mjx-eqn:R13"><mjx-mtext data-latex="\text{(}"><mjx-c class="mjx-c28">(</mjx-c></mjx-mtext><mjx-mtext data-latex="\text{R13}"><mjx-c class="mjx-c52" noic="true" style="padding-top: 0.683em;">R</mjx-c><mjx-c class="mjx-c31" noic="true" style="padding-top: 0.683em;">1</mjx-c><mjx-c class="mjx-c33" style="padding-top: 0.683em;">3</mjx-c></mjx-mtext><mjx-mtext data-latex="\text{)}"><mjx-c class="mjx-c29">)</mjx-c></mjx-mtext><mjx-tstrut style="height: 6.264em; vertical-align: -2.882em;"></mjx-tstrut></mjx-mtd></mjx-mtr></mjx-itable></mjx-labels></mjx-mtable></mjx-math></mjx-container></div></div><div class="el-p"><p dir="auto">这由全部指数及权直接求和得到。奇反射后的Borel超子群的第二条正奇根是<span class="math math-inline is-loaded"><mjx-container class="MathJax" jax="CHTML" overflow="overflow"><mjx-math data-latex="-\beta_2" class="TEX-N"><mjx-mo data-latex="-"><mjx-c class="mjx-c2212">−</mjx-c></mjx-mo><mjx-msub data-latex="\beta_2"><mjx-mi data-latex="\beta"><mjx-c class="mjx-c1D6FD">𝛽</mjx-c></mjx-mi><mjx-script style="vertical-align: -0.15em; margin-left: -0.007em;"><mjx-mn size="s" data-latex="2"><mjx-c class="mjx-c32">2</mjx-c></mjx-mn></mjx-script></mjx-msub></mjx-math></mjx-container></span>，所以第二项确为<span class="math math-inline is-loaded"><mjx-container class="MathJax" jax="CHTML" overflow="overflow"><mjx-math data-latex="\lambda+\beta_2-i\alpha" breakable="true" class="TEX-N"><mjx-mi data-latex="\lambda"><mjx-c class="mjx-c1D706">𝜆</mjx-c></mjx-mi><mjx-break size="3"> </mjx-break><mjx-mo data-latex="+"><mjx-c class="mjx-c2B">+</mjx-c></mjx-mo><mjx-msub space="3" data-latex="\beta_2"><mjx-mi data-latex="\beta"><mjx-c class="mjx-c1D6FD">𝛽</mjx-c></mjx-mi><mjx-script style="vertical-align: -0.15em; margin-left: -0.007em;"><mjx-mn size="s" data-latex="2"><mjx-c class="mjx-c32">2</mjx-c></mjx-mn></mjx-script></mjx-msub><mjx-break size="3"> </mjx-break><mjx-mo data-latex="-"><mjx-c class="mjx-c2212">−</mjx-c></mjx-mo><mjx-mi space="3" data-latex="i"><mjx-c class="mjx-c1D456">𝑖</mjx-c></mjx-mi><mjx-mi data-latex="\alpha"><mjx-c class="mjx-c1D6FC">𝛼</mjx-c></mjx-mi></mjx-math></mjx-container></span>，不能沿用标准Borel的减号。</p></div><div class="el-h3"><h3 data-heading="9.5.8 零权模的根基滤过" dir="auto" id="9.5.8_零权模的根基滤过_0">9.5.8 零权模的根基滤过</h3></div><div class="el-p"><p dir="auto">若<span class="math math-inline is-loaded"><mjx-container class="MathJax" jax="CHTML" overflow="overflow"><mjx-math data-latex="{p^{r}}\mid a,p^r\mid b" breakable="true" class="TEX-N"><mjx-texatom data-latex="{p^{r}}" texclass="ORD"><mjx-msup data-latex="p^{r}"><mjx-mi data-latex="p"><mjx-c class="mjx-c1D45D">𝑝</mjx-c></mjx-mi><mjx-script style="vertical-align: 0.363em;"><mjx-texatom size="s" data-latex="{r}" texclass="ORD"><mjx-mi data-latex="r"><mjx-c class="mjx-c1D45F">𝑟</mjx-c></mjx-mi></mjx-texatom></mjx-script></mjx-msup></mjx-texatom><mjx-break size="4"> </mjx-break><mjx-mo data-latex="\mid"><mjx-c class="mjx-c2223">∣</mjx-c></mjx-mo><mjx-mi space="4" data-latex="a"><mjx-c class="mjx-c1D44E">𝑎</mjx-c></mjx-mi><mjx-mo data-latex=","><mjx-c class="mjx-c2C">,</mjx-c></mjx-mo><mjx-msup space="2" data-latex="p^r"><mjx-mi data-latex="p"><mjx-c class="mjx-c1D45D">𝑝</mjx-c></mjx-mi><mjx-script style="vertical-align: 0.363em;"><mjx-mi size="s" data-latex="r"><mjx-c class="mjx-c1D45F">𝑟</mjx-c></mjx-mi></mjx-script></mjx-msup><mjx-break size="4"> </mjx-break><mjx-mo data-latex="\mid"><mjx-c class="mjx-c2223">∣</mjx-c></mjx-mo><mjx-mi space="4" data-latex="b"><mjx-c class="mjx-c1D44F">𝑏</mjx-c></mjx-mi></mjx-math></mjx-container></span>，则<span class="math math-inline is-loaded"><mjx-container class="MathJax" jax="CHTML" overflow="overflow"><mjx-math data-latex="s=u=v=r" breakable="true" class="TEX-N"><mjx-mi data-latex="s"><mjx-c class="mjx-c1D460">𝑠</mjx-c></mjx-mi><mjx-break size="4"> </mjx-break><mjx-mo data-latex="="><mjx-c class="mjx-c3D">=</mjx-c></mjx-mo><mjx-mi space="4" data-latex="u"><mjx-c class="mjx-c1D462">𝑢</mjx-c></mjx-mi><mjx-break size="4"> </mjx-break><mjx-mo data-latex="="><mjx-c class="mjx-c3D">=</mjx-c></mjx-mo><mjx-mi space="4" data-latex="v"><mjx-c class="mjx-c1D463">𝑣</mjx-c></mjx-mi><mjx-break size="4"> </mjx-break><mjx-mo data-latex="="><mjx-c class="mjx-c3D">=</mjx-c></mjx-mo><mjx-mi space="4" data-latex="r"><mjx-c class="mjx-c1D45F">𝑟</mjx-c></mjx-mi></mjx-math></mjx-container></span>、<span class="math math-inline is-loaded"><mjx-container class="MathJax" jax="CHTML" overflow="overflow"><mjx-math data-latex="\eta_i=0" breakable="true" class="TEX-N"><mjx-msub data-latex="\eta_i"><mjx-mi data-latex="\eta"><mjx-c class="mjx-c1D702">𝜂</mjx-c></mjx-mi><mjx-script style="vertical-align: -0.15em; margin-left: -0.006em;"><mjx-mi size="s" data-latex="i"><mjx-c class="mjx-c1D456">𝑖</mjx-c></mjx-mi></mjx-script></mjx-msub><mjx-break size="4"> </mjx-break><mjx-mo data-latex="="><mjx-c class="mjx-c3D">=</mjx-c></mjx-mo><mjx-mn space="4" data-latex="0"><mjx-c class="mjx-c30">0</mjx-c></mjx-mn></mjx-math></mjx-container></span>。奇权全部指数为<span class="math math-inline is-loaded"><mjx-container class="MathJax" jax="CHTML" overflow="overflow"><mjx-math data-latex="r" class="TEX-N"><mjx-mi data-latex="r"><mjx-c class="mjx-c1D45F">𝑟</mjx-c></mjx-mi></mjx-math></mjx-container></span>；内部偶块的指数为</p></div><div class="el-div"><div class="math math-block is-loaded"><mjx-container class="MathJax" jax="CHTML" overflow="scroll" display="true" data-editing-suite-math-overflow=""><mjx-math data-latex="r-v_p(i),\qquad r+v_p(i)." display="true" class="TEX-N"><mjx-mi data-latex="r"><mjx-c class="mjx-c1D45F">𝑟</mjx-c></mjx-mi><mjx-mo space="3" data-latex="-"><mjx-c class="mjx-c2212">−</mjx-c></mjx-mo><mjx-msub space="3" data-latex="v_p"><mjx-mi data-latex="v"><mjx-c class="mjx-c1D463">𝑣</mjx-c></mjx-mi><mjx-script style="vertical-align: -0.15em;"><mjx-mi size="s" data-latex="p"><mjx-c class="mjx-c1D45D">𝑝</mjx-c></mjx-mi></mjx-script></mjx-msub><mjx-mo data-latex="("><mjx-c class="mjx-c28">(</mjx-c></mjx-mo><mjx-mi data-latex="i"><mjx-c class="mjx-c1D456">𝑖</mjx-c></mjx-mi><mjx-mo data-latex=")"><mjx-c class="mjx-c29">)</mjx-c></mjx-mo><mjx-mo data-latex=","><mjx-c class="mjx-c2C">,</mjx-c></mjx-mo><mjx-mstyle data-latex="\qquad"><mjx-mspace style="width: 2em;"></mjx-mspace></mjx-mstyle><mjx-mi space="2" data-latex="r"><mjx-c class="mjx-c1D45F">𝑟</mjx-c></mjx-mi><mjx-mo space="3" data-latex="+"><mjx-c class="mjx-c2B">+</mjx-c></mjx-mo><mjx-msub space="3" data-latex="v_p"><mjx-mi data-latex="v"><mjx-c class="mjx-c1D463">𝑣</mjx-c></mjx-mi><mjx-script style="vertical-align: -0.15em;"><mjx-mi size="s" data-latex="p"><mjx-c class="mjx-c1D45D">𝑝</mjx-c></mjx-mi></mjx-script></mjx-msub><mjx-mo data-latex="("><mjx-c class="mjx-c28">(</mjx-c></mjx-mo><mjx-mi data-latex="i"><mjx-c class="mjx-c1D456">𝑖</mjx-c></mjx-mi><mjx-mo data-latex=")"><mjx-c class="mjx-c29">)</mjx-c></mjx-mo><mjx-mo data-latex="."><mjx-c class="mjx-c2E">.</mjx-c></mjx-mo></mjx-math></mjx-container></div></div><div class="el-p"><p dir="auto">若<span class="math math-inline is-loaded"><mjx-container class="MathJax" jax="CHTML" overflow="overflow"><mjx-math data-latex="p\nmid i" breakable="true" class="TEX-N"><mjx-mi data-latex="p"><mjx-c class="mjx-c1D45D">𝑝</mjx-c></mjx-mi><mjx-break size="4"> </mjx-break><mjx-mo data-latex="\nmid"><mjx-c class="mjx-c2224">∤</mjx-c></mjx-mo><mjx-mi space="4" data-latex="i"><mjx-c class="mjx-c1D456">𝑖</mjx-c></mjx-mi></mjx-math></mjx-container></span>，两个指数同为<span class="math math-inline is-loaded"><mjx-container class="MathJax" jax="CHTML" overflow="overflow"><mjx-math data-latex="r" class="TEX-N"><mjx-mi data-latex="r"><mjx-c class="mjx-c1D45F">𝑟</mjx-c></mjx-mi></mjx-math></mjx-container></span>。若<span class="math math-inline is-loaded"><mjx-container class="MathJax" jax="CHTML" overflow="overflow"><mjx-math data-latex="p\mid i" breakable="true" class="TEX-N"><mjx-mi data-latex="p"><mjx-c class="mjx-c1D45D">𝑝</mjx-c></mjx-mi><mjx-break size="4"> </mjx-break><mjx-mo data-latex="\mid"><mjx-c class="mjx-c2223">∣</mjx-c></mjx-mo><mjx-mi space="4" data-latex="i"><mjx-c class="mjx-c1D456">𝑖</mjx-c></mjx-mi></mjx-math></mjx-container></span>，非对角元与第一对角元之比的赋值为<span class="math math-inline is-loaded"><mjx-container class="MathJax" jax="CHTML" overflow="overflow"><mjx-math data-latex="v_p(i)&gt;0" breakable="true" class="TEX-N"><mjx-msub data-latex="v_p"><mjx-mi data-latex="v"><mjx-c class="mjx-c1D463">𝑣</mjx-c></mjx-mi><mjx-script style="vertical-align: -0.15em;"><mjx-mi size="s" data-latex="p"><mjx-c class="mjx-c1D45D">𝑝</mjx-c></mjx-mi></mjx-script></mjx-msub><mjx-mo data-latex="("><mjx-c class="mjx-c28">(</mjx-c></mjx-mo><mjx-mi data-latex="i"><mjx-c class="mjx-c1D456">𝑖</mjx-c></mjx-mi><mjx-mo data-latex=")"><mjx-c class="mjx-c29">)</mjx-c></mjx-mo><mjx-break size="4"> </mjx-break><mjx-mo data-latex="&gt;"><mjx-c class="mjx-c3E">&gt;</mjx-c></mjx-mo><mjx-mn space="4" data-latex="0"><mjx-c class="mjx-c30">0</mjx-c></mjx-mn></mjx-math></mjx-container></span>，所以两指数之间的实际剩余线是<span class="math math-inline is-loaded"><mjx-container class="MathJax" jax="CHTML" overflow="overflow"><mjx-math data-latex="kD_{i-1}" class="TEX-N"><mjx-mi data-latex="k"><mjx-c class="mjx-c1D458">𝑘</mjx-c></mjx-mi><mjx-msub data-latex="D_{i-1}"><mjx-mi data-latex="D"><mjx-c class="mjx-c1D437">𝐷</mjx-c></mjx-mi><mjx-script style="vertical-align: -0.15em;"><mjx-texatom size="s" data-latex="{i-1}" texclass="ORD"><mjx-mi data-latex="i"><mjx-c class="mjx-c1D456">𝑖</mjx-c></mjx-mi><mjx-mo data-latex="-"><mjx-c class="mjx-c2212">−</mjx-c></mjx-mo><mjx-mn data-latex="1"><mjx-c class="mjx-c31">1</mjx-c></mjx-mn></mjx-texatom></mjx-script></mjx-msub></mjx-math></mjx-container></span>，不是依赖某个未确定系数的斜线。再加上<span class="math math-inline is-loaded"><mjx-container class="MathJax" jax="CHTML" overflow="overflow"><mjx-math data-latex="A_0" class="TEX-N"><mjx-msub data-latex="A_0"><mjx-mi data-latex="A"><mjx-c class="mjx-c1D434">𝐴</mjx-c></mjx-mi><mjx-script style="vertical-align: -0.15em;"><mjx-mn size="s" data-latex="0"><mjx-c class="mjx-c30">0</mjx-c></mjx-mn></mjx-script></mjx-msub></mjx-math></mjx-container></span>指数0、<span class="math math-inline is-loaded"><mjx-container class="MathJax" jax="CHTML" overflow="overflow"><mjx-math data-latex="D_{{p^{r}}-1}" class="TEX-N"><mjx-msub data-latex="D_{{p^{r}}-1}"><mjx-mi data-latex="D"><mjx-c class="mjx-c1D437">𝐷</mjx-c></mjx-mi><mjx-script style="vertical-align: -0.15em;"><mjx-texatom size="s" data-latex="{{p^{r}}-1}" texclass="ORD"><mjx-texatom data-latex="{p^{r}}" texclass="ORD"><mjx-msup data-latex="p^{r}"><mjx-mi data-latex="p"><mjx-c class="mjx-c1D45D">𝑝</mjx-c></mjx-mi><mjx-script style="vertical-align: 0.289em;"><mjx-texatom size="s" data-latex="{r}" texclass="ORD"><mjx-mi data-latex="r"><mjx-c class="mjx-c1D45F">𝑟</mjx-c></mjx-mi></mjx-texatom></mjx-script></mjx-msup></mjx-texatom><mjx-mo data-latex="-"><mjx-c class="mjx-c2212">−</mjx-c></mjx-mo><mjx-mn data-latex="1"><mjx-c class="mjx-c31">1</mjx-c></mjx-mn></mjx-texatom></mjx-script></mjx-msub></mjx-math></mjx-container></span>指数<span class="math math-inline is-loaded"><mjx-container class="MathJax" jax="CHTML" overflow="overflow"><mjx-math data-latex="2r" class="TEX-N"><mjx-mn data-latex="2"><mjx-c class="mjx-c32">2</mjx-c></mjx-mn><mjx-mi data-latex="r"><mjx-c class="mjx-c1D45F">𝑟</mjx-c></mjx-mi></mjx-math></mjx-container></span>，恰得到中间零权族已证明的全部实际根基层。故</p></div><div class="el-div"><div class="math math-block is-loaded"><mjx-container class="MathJax" jax="CHTML" overflow="scroll" display="true" width="full" data-editing-suite-math-overflow="" style="min-width: 27.438em;"><mjx-math data-latex="J^n{Z_r^{132}(a,b)}=\operatorname{rad}^n{Z_r^{132}(a,b)}\qquad\text{对所有 }n\ge0.
 \tag{R14}" width="full" display="true" class="TEX-N"><mjx-mtable data-latex="J^n{Z_r^{132}(a,b)}=\operatorname{rad}^n{Z_r^{132}(a,b)}\qquad\text{对所有 }n\ge0.
-\tag{R14}" width="full" side="right" style="min-width: 27.438em;"><mjx-table style="width: auto; min-width: 20.81em; margin: 0px 3.314em;"><mjx-itable width="full"><mjx-mlabeledtr style="height: 1.139em;"><mjx-mtd><mjx-msup data-latex="J^n"><mjx-mi data-latex="J"><mjx-c class="mjx-c1D43D">𝐽</mjx-c></mjx-mi><mjx-script style="vertical-align: 0.413em; margin-left: 0.054em;"><mjx-mi size="s" data-latex="n"><mjx-c class="mjx-c1D45B">𝑛</mjx-c></mjx-mi></mjx-script></mjx-msup><mjx-texatom data-latex="{Z_r^{132}(a,b)}" texclass="ORD"><mjx-msubsup data-latex="Z_r^{132}"><mjx-mi data-latex="Z"><mjx-c class="mjx-c1D44D">𝑍</mjx-c></mjx-mi><mjx-script style="vertical-align: -0.247em; margin-left: -0.04em;"><mjx-texatom size="s" data-latex="{132}" texclass="ORD" style="margin-left: 0.13em;"><mjx-mn data-latex="132"><mjx-c class="mjx-c31" noic="true" style="padding-top: 0.666em;">1</mjx-c><mjx-c class="mjx-c33" noic="true" style="padding-top: 0.666em;">3</mjx-c><mjx-c class="mjx-c32" style="padding-top: 0.666em;">2</mjx-c></mjx-mn></mjx-texatom><mjx-spacer style="margin-top: 0.332em;"></mjx-spacer><mjx-mi size="s" data-latex="r"><mjx-c class="mjx-c1D45F">𝑟</mjx-c></mjx-mi></mjx-script></mjx-msubsup><mjx-mo data-latex="("><mjx-c class="mjx-c28">(</mjx-c></mjx-mo><mjx-mi data-latex="a"><mjx-c class="mjx-c1D44E">𝑎</mjx-c></mjx-mi><mjx-mo data-latex=","><mjx-c class="mjx-c2C">,</mjx-c></mjx-mo><mjx-mi space="2" data-latex="b"><mjx-c class="mjx-c1D44F">𝑏</mjx-c></mjx-mi><mjx-mo data-latex=")"><mjx-c class="mjx-c29">)</mjx-c></mjx-mo></mjx-texatom><mjx-mo space="4" data-latex="="><mjx-c class="mjx-c3D">=</mjx-c></mjx-mo><mjx-msup space="4" data-latex="\operatorname{rad}^n"><mjx-mi data-latex="\operatorname{rad}"><mjx-c class="mjx-c72" noic="true" style="padding-top: 0.694em;">r</mjx-c><mjx-c class="mjx-c61" noic="true" style="padding-top: 0.694em;">a</mjx-c><mjx-c class="mjx-c64" style="padding-top: 0.694em;">d</mjx-c></mjx-mi><mjx-script style="vertical-align: 0.421em;"><mjx-mi size="s" data-latex="n"><mjx-c class="mjx-c1D45B">𝑛</mjx-c></mjx-mi></mjx-script></mjx-msup><mjx-mo><mjx-c class="mjx-c2061">⁡</mjx-c></mjx-mo><mjx-texatom space="2" data-latex="{Z_r^{132}(a,b)}" texclass="ORD"><mjx-msubsup data-latex="Z_r^{132}"><mjx-mi data-latex="Z"><mjx-c class="mjx-c1D44D">𝑍</mjx-c></mjx-mi><mjx-script style="vertical-align: -0.247em; margin-left: -0.04em;"><mjx-texatom size="s" data-latex="{132}" texclass="ORD" style="margin-left: 0.13em;"><mjx-mn data-latex="132"><mjx-c class="mjx-c31" noic="true" style="padding-top: 0.666em;">1</mjx-c><mjx-c class="mjx-c33" noic="true" style="padding-top: 0.666em;">3</mjx-c><mjx-c class="mjx-c32" style="padding-top: 0.666em;">2</mjx-c></mjx-mn></mjx-texatom><mjx-spacer style="margin-top: 0.332em;"></mjx-spacer><mjx-mi size="s" data-latex="r"><mjx-c class="mjx-c1D45F">𝑟</mjx-c></mjx-mi></mjx-script></mjx-msubsup><mjx-mo data-latex="("><mjx-c class="mjx-c28">(</mjx-c></mjx-mo><mjx-mi data-latex="a"><mjx-c class="mjx-c1D44E">𝑎</mjx-c></mjx-mi><mjx-mo data-latex=","><mjx-c class="mjx-c2C">,</mjx-c></mjx-mo><mjx-mi space="2" data-latex="b"><mjx-c class="mjx-c1D44F">𝑏</mjx-c></mjx-mi><mjx-mo data-latex=")"><mjx-c class="mjx-c29">)</mjx-c></mjx-mo></mjx-texatom><mjx-mstyle data-latex="\qquad"><mjx-mspace style="width: 2em;"></mjx-mspace></mjx-mstyle><mjx-mtext data-latex="\text{对所有 }"><mjx-utext variant="normal" style="font-family: MJX-TEX-ZERO, serif;">对所有</mjx-utext><mjx-c class="mjx-cA0" style="padding-top: 0.75em;">&nbsp;</mjx-c></mjx-mtext><mjx-mi data-latex="n"><mjx-c class="mjx-c1D45B">𝑛</mjx-c></mjx-mi><mjx-mo space="4" data-latex="\ge"><mjx-c class="mjx-c2265">≥</mjx-c></mjx-mo><mjx-mn space="4" data-latex="\tag{R14}"><mjx-c class="mjx-c30" noic="true" style="padding-top: 0.666em;">0</mjx-c><mjx-c class="mjx-c2E" style="padding-top: 0.666em;">.</mjx-c></mjx-mn><mjx-tstrut></mjx-tstrut></mjx-mtd></mjx-mlabeledtr></mjx-itable></mjx-table><mjx-labels style="width: 27.438em;"><mjx-itable align="right" style="right: 0px;"><mjx-mtr style="height: 1.139em;"><mjx-mtd id="mjx-eqn:R14"><mjx-mtext data-latex="\text{(}"><mjx-c class="mjx-c28">(</mjx-c></mjx-mtext><mjx-mtext data-latex="\text{R14}"><mjx-c class="mjx-c52" noic="true" style="padding-top: 0.683em;">R</mjx-c><mjx-c class="mjx-c31" noic="true" style="padding-top: 0.683em;">1</mjx-c><mjx-c class="mjx-c34" style="padding-top: 0.683em;">4</mjx-c></mjx-mtext><mjx-mtext data-latex="\text{)}"><mjx-c class="mjx-c29">)</mjx-c></mjx-mtext><mjx-tstrut style="height: 1.139em; vertical-align: -0.255em;"></mjx-tstrut></mjx-mtd></mjx-mtr></mjx-itable></mjx-labels></mjx-mtable></mjx-math></mjx-container></div></div><div class="el-p"><p dir="auto">更一般地<span class="math math-inline is-loaded"><mjx-container class="MathJax" jax="CHTML" overflow="overflow"><mjx-math data-latex="{p^{r}}\mid a,p\mid b" breakable="true" class="TEX-N"><mjx-texatom data-latex="{p^{r}}" texclass="ORD"><mjx-msup data-latex="p^{r}"><mjx-mi data-latex="p"><mjx-c class="mjx-c1D45D">𝑝</mjx-c></mjx-mi><mjx-script style="vertical-align: 0.363em;"><mjx-texatom size="s" data-latex="{r}" texclass="ORD"><mjx-mi data-latex="r"><mjx-c class="mjx-c1D45F">𝑟</mjx-c></mjx-mi></mjx-texatom></mjx-script></mjx-msup></mjx-texatom><mjx-break size="4"> </mjx-break><mjx-mo data-latex="\mid"><mjx-c class="mjx-c2223">∣</mjx-c></mjx-mo><mjx-mi space="4" data-latex="a"><mjx-c class="mjx-c1D44E">𝑎</mjx-c></mjx-mi><mjx-mo data-latex=","><mjx-c class="mjx-c2C">,</mjx-c></mjx-mo><mjx-mi space="2" data-latex="p"><mjx-c class="mjx-c1D45D">𝑝</mjx-c></mjx-mi><mjx-break size="4"> </mjx-break><mjx-mo data-latex="\mid"><mjx-c class="mjx-c2223">∣</mjx-c></mjx-mo><mjx-mi space="4" data-latex="b"><mjx-c class="mjx-c1D44F">𝑏</mjx-c></mjx-mi></mjx-math></mjx-container></span>，若<span class="math math-inline is-loaded"><mjx-container class="MathJax" jax="CHTML" overflow="overflow"><mjx-math data-latex="h=\min(v_p(b),r)&lt;r" breakable="true" class="TEX-N"><mjx-mi data-latex="h"><mjx-c class="mjx-c210E">ℎ</mjx-c></mjx-mi><mjx-break size="4"> </mjx-break><mjx-mo data-latex="="><mjx-c class="mjx-c3D">=</mjx-c></mjx-mo><mjx-mo space="4" data-latex="\min"><mjx-c class="mjx-c6D" noic="true" style="padding-top: 0.669em;">m</mjx-c><mjx-c class="mjx-c69" noic="true" style="padding-top: 0.669em;">i</mjx-c><mjx-c class="mjx-c6E" style="padding-top: 0.669em;">n</mjx-c></mjx-mo><mjx-mo data-latex="("><mjx-c class="mjx-c28">(</mjx-c></mjx-mo><mjx-msub data-latex="v_p"><mjx-mi data-latex="v"><mjx-c class="mjx-c1D463">𝑣</mjx-c></mjx-mi><mjx-script style="vertical-align: -0.15em;"><mjx-mi size="s" data-latex="p"><mjx-c class="mjx-c1D45D">𝑝</mjx-c></mjx-mi></mjx-script></mjx-msub><mjx-mo data-latex="("><mjx-c class="mjx-c28">(</mjx-c></mjx-mo><mjx-mi data-latex="b"><mjx-c class="mjx-c1D44F">𝑏</mjx-c></mjx-mi><mjx-mo data-latex=")"><mjx-c class="mjx-c29">)</mjx-c></mjx-mo><mjx-mo data-latex=","><mjx-c class="mjx-c2C">,</mjx-c></mjx-mo><mjx-mi space="2" data-latex="r"><mjx-c class="mjx-c1D45F">𝑟</mjx-c></mjx-mi><mjx-mo data-latex=")"><mjx-c class="mjx-c29">)</mjx-c></mjx-mo><mjx-break size="4"> </mjx-break><mjx-mo data-latex="&lt;"><mjx-c class="mjx-c3C">&lt;</mjx-c></mjx-mo><mjx-mi space="4" data-latex="r"><mjx-c class="mjx-c1D45F">𝑟</mjx-c></mjx-mi></mjx-math></mjx-container></span>，则<span class="math math-inline is-loaded"><mjx-container class="MathJax" jax="CHTML" overflow="overflow"><mjx-math data-latex="u=v=h" breakable="true" class="TEX-N"><mjx-mi data-latex="u"><mjx-c class="mjx-c1D462">𝑢</mjx-c></mjx-mi><mjx-break size="4"> </mjx-break><mjx-mo data-latex="="><mjx-c class="mjx-c3D">=</mjx-c></mjx-mo><mjx-mi space="4" data-latex="v"><mjx-c class="mjx-c1D463">𝑣</mjx-c></mjx-mi><mjx-break size="4"> </mjx-break><mjx-mo data-latex="="><mjx-c class="mjx-c3D">=</mjx-c></mjx-mo><mjx-mi space="4" data-latex="h"><mjx-c class="mjx-c210E">ℎ</mjx-c></mjx-mi></mjx-math></mjx-container></span>，<span class="math math-inline is-loaded"><mjx-container class="MathJax" jax="CHTML" overflow="overflow"><mjx-math data-latex="J" class="TEX-N"><mjx-mi data-latex="J"><mjx-c class="mjx-c1D43D">𝐽</mjx-c></mjx-mi></mjx-math></mjx-container></span>长度仅为<span class="math math-inline is-loaded"><mjx-container class="MathJax" jax="CHTML" overflow="overflow"><mjx-math data-latex="2h+1" breakable="true" class="TEX-N"><mjx-mn data-latex="2"><mjx-c class="mjx-c32">2</mjx-c></mjx-mn><mjx-mi data-latex="h"><mjx-c class="mjx-c210E">ℎ</mjx-c></mjx-mi><mjx-break size="3"> </mjx-break><mjx-mo data-latex="+"><mjx-c class="mjx-c2B">+</mjx-c></mjx-mo><mjx-mn space="3" data-latex="1"><mjx-c class="mjx-c31">1</mjx-c></mjx-mn></mjx-math></mjx-container></span>，而Loewy长度仍为<span class="math math-inline is-loaded"><mjx-container class="MathJax" jax="CHTML" overflow="overflow"><mjx-math data-latex="2r+1" breakable="true" class="TEX-N"><mjx-mn data-latex="2"><mjx-c class="mjx-c32">2</mjx-c></mjx-mn><mjx-mi data-latex="r"><mjx-c class="mjx-c1D45F">𝑟</mjx-c></mjx-mi><mjx-break size="3"> </mjx-break><mjx-mo data-latex="+"><mjx-c class="mjx-c2B">+</mjx-c></mjx-mo><mjx-mn space="3" data-latex="1"><mjx-c class="mjx-c31">1</mjx-c></mjx-mn></mjx-math></mjx-container></span>。因此同一个零权族的Frobenius特征标扭转再次可以改变配对滤过；不能把(R14)扩大到所有<span class="math math-inline is-loaded"><mjx-container class="MathJax" jax="CHTML" overflow="overflow"><mjx-math data-latex="p\mid b" breakable="true" class="TEX-N"><mjx-mi data-latex="p"><mjx-c class="mjx-c1D45D">𝑝</mjx-c></mjx-mi><mjx-break size="4"> </mjx-break><mjx-mo data-latex="\mid"><mjx-c class="mjx-c2223">∣</mjx-c></mjx-mo><mjx-mi space="4" data-latex="b"><mjx-c class="mjx-c1D44F">𝑏</mjx-c></mjx-mi></mjx-math></mjx-container></span>，更不能用长度相等自动证明一般权的滤过相等。</p></div><div class="el-p"><p dir="auto">本节固定了(R9)的提升选择。不同合法整格、任意其他提升或经(R1)(R2)搬运的滤过是否给相同实际子空间，仍需另外比较，未在此宣称一般独立性。<sup class="editing-suite-sidenote-reference" data-sidenote-instance="reading-258"><a class="footnote-ref editing-suite-sidenote-reference-link" aria-label="边注 2" tabindex="-1">2</a></sup><span class="editing-suite-sidenote-anchor editing-suite-reading-sidenote-anchor" data-sidenote-instance="reading-258" data-sidenote-number="2"><template class="mathcraft-export-sidenote-template"><aside class="editing-suite-sidenote-margin" data-sidenote-number="2" role="note" aria-label="边注 2" tabindex="-1"><span class="editing-suite-sidenote-number">2</span><div class="editing-suite-sidenote-content">有限整格核验：四组整参数下检查反变性，并对1469组最高权核对PBW注入、Smith指数与边界指数。见<a class="internal-link" href="attachments/计算脚本/中间正根系整环境核验.py" target="_blank" rel="noopener nofollow">脚本</a>及<a class="internal-link" href="attachments/核验数据/中间整环境核验结果.json" target="_blank" rel="noopener nofollow">结果</a>。有限计算不替代正文的一般构造。</div></aside></template></span></p></div><div class="el-h3"><h3 data-heading="9.5.9 核验与下一步" dir="auto" id="9.5.9_核验与下一步_0">9.5.9 核验与下一步</h3></div><div class="el-p"><p dir="auto">现在至少一个奇配对非零时的Loewy已由奇反射归约；两配对都为零的一般最高权仍需结构论证。可以用本节的明确滤过作候选层检查，但必须先证明其商半单及其为根基，不能从Smith指数直接跳到Loewy结论。</p></div><div class="footer"><div class="data-bar"></div></div></div></div></div><div id="right-content" class="leaf" style="--sidebar-width:var(--sidebar-width-right)"><div id="right-sidebar" class="sidebar"><div class="sidebar-handle"></div><div class="sidebar-topbar"><div class="topbar-content"><label class="theme-toggle-container" for="theme-toggle-input"><input class="theme-toggle-input" type="checkbox" id="theme-toggle-input"><div class="toggle-background"></div></label></div><button type="button" class="clickable-icon sidebar-collapse-icon" aria-label="切换右侧栏"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="svg-icon sidebar-toggle-button-icon"><rect x="1" y="2" width="22" height="20" rx="4"></rect><rect x="4" y="5" width="2" height="14" rx="2" fill="currentColor" class="sidebar-toggle-icon-inner"></rect></svg></button></div><div class="sidebar-content-wrapper"><div id="right-sidebar-content" class="leaf-content"><div id="outline" class="tree-container"><div class="feature-header"><div class="feature-title">目录</div><button class="clickable-icon nav-action-button tree-collapse-all is-collapsed" aria-label="全部折叠"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></svg></button></div><div class="tree-item nav-file" data-depth="3"><a class="tree-item-self is-clickable nav-file-title heading-link" href="#9.5.1_奇反射的同构_0" data-path="9.5.1_奇反射的同构_0" heading-name="9.5.1 奇反射的同构"><div class="tree-item-inner nav-file-title-content">9.5.1 奇反射的同构</div></a><div class="tree-item-children nav-file-children"></div></div><div class="tree-item nav-file" data-depth="3"><a class="tree-item-self is-clickable nav-file-title heading-link" href="#9.5.2_整格的选择_0" data-path="9.5.2_整格的选择_0" heading-name="9.5.2 整格的选择"><div class="tree-item-inner nav-file-title-content">9.5.2 整格的选择</div></a><div class="tree-item-children nav-file-children"></div></div><div class="tree-item nav-file" data-depth="3"><a class="tree-item-self is-clickable nav-file-title heading-link" href="#9.5.3_自由整格_0" data-path="9.5.3_自由整格_0" heading-name="9.5.3 自由整格"><div class="tree-item-inner nav-file-title-content">9.5.3 自由整格</div></a><div class="tree-item-children nav-file-children"></div></div><div class="tree-item nav-file" data-depth="3"><a class="tree-item-self is-clickable nav-file-title heading-link" href="#9.5.4_反变配对及其整性_0" data-path="9.5.4_反变配对及其整性_0" heading-name="9.5.4 反变配对及其整性"><div class="tree-item-inner nav-file-title-content">9.5.4 反变配对及其整性</div></a><div class="tree-item-children nav-file-children"></div></div><div class="tree-item nav-file" data-depth="3"><a class="tree-item-self is-clickable nav-file-title heading-link" href="#9.5.5_参数与滤过_0" data-path="9.5.5_参数与滤过_0" heading-name="9.5.5 参数与滤过"><div class="tree-item-inner nav-file-title-content">9.5.5 参数与滤过</div></a><div class="tree-item-children nav-file-children"></div></div><div class="tree-item nav-file" data-depth="3"><a class="tree-item-self is-clickable nav-file-title heading-link" href="#9.5.6_Smith指数与边界_0" data-path="9.5.6_Smith指数与边界_0" heading-name="9.5.6 Smith指数与边界"><div class="tree-item-inner nav-file-title-content">9.5.6 Smith指数与边界</div></a><div class="tree-item-children nav-file-children"></div></div><div class="tree-item nav-file" data-depth="3"><a class="tree-item-self is-clickable nav-file-title heading-link" href="#9.5.7_首层与和公式_0" data-path="9.5.7_首层与和公式_0" heading-name="9.5.7 首层与和公式"><div class="tree-item-inner nav-file-title-content">9.5.7 首层与和公式</div></a><div class="tree-item-children nav-file-children"></div></div><div class="tree-item nav-file" data-depth="3"><a class="tree-item-self is-clickable nav-file-title heading-link" href="#9.5.8_零权模的根基滤过_0" data-path="9.5.8_零权模的根基滤过_0" heading-name="9.5.8 零权模的根基滤过"><div class="tree-item-inner nav-file-title-content">9.5.8 零权模的根基滤过</div></a><div class="tree-item-children nav-file-children"></div></div><div class="tree-item nav-file" data-depth="3"><a class="tree-item-self is-clickable nav-file-title heading-link" href="#9.5.9_核验与下一步_0" data-path="9.5.9_核验与下一步_0" heading-name="9.5.9 核验与下一步"><div class="tree-item-inner nav-file-title-content">9.5.9 核验与下一步</div></a><div class="tree-item-children nav-file-children"></div></div></div></div></div><script defer>const rs=document.querySelector('#right-sidebar');rs.classList.toggle('is-collapsed',innerWidth<768);rs.style.setProperty('--sidebar-width',localStorage.getItem('sidebar-right-width'));</script></div></div></div></div></body></html>
+\tag{R14}" width="full" side="right" style="min-width: 27.438em;"><mjx-table style="width: auto; min-width: 20.81em; margin: 0px 3.314em;"><mjx-itable width="full"><mjx-mlabeledtr style="height: 1.139em;"><mjx-mtd><mjx-msup data-latex="J^n"><mjx-mi data-latex="J"><mjx-c class="mjx-c1D43D">𝐽</mjx-c></mjx-mi><mjx-script style="vertical-align: 0.413em; margin-left: 0.054em;"><mjx-mi size="s" data-latex="n"><mjx-c class="mjx-c1D45B">𝑛</mjx-c></mjx-mi></mjx-script></mjx-msup><mjx-texatom data-latex="{Z_r^{132}(a,b)}" texclass="ORD"><mjx-msubsup data-latex="Z_r^{132}"><mjx-mi data-latex="Z"><mjx-c class="mjx-c1D44D">𝑍</mjx-c></mjx-mi><mjx-script style="vertical-align: -0.247em; margin-left: -0.04em;"><mjx-texatom size="s" data-latex="{132}" texclass="ORD" style="margin-left: 0.13em;"><mjx-mn data-latex="132"><mjx-c class="mjx-c31" noic="true" style="padding-top: 0.666em;">1</mjx-c><mjx-c class="mjx-c33" noic="true" style="padding-top: 0.666em;">3</mjx-c><mjx-c class="mjx-c32" style="padding-top: 0.666em;">2</mjx-c></mjx-mn></mjx-texatom><mjx-spacer style="margin-top: 0.332em;"></mjx-spacer><mjx-mi size="s" data-latex="r"><mjx-c class="mjx-c1D45F">𝑟</mjx-c></mjx-mi></mjx-script></mjx-msubsup><mjx-mo data-latex="("><mjx-c class="mjx-c28">(</mjx-c></mjx-mo><mjx-mi data-latex="a"><mjx-c class="mjx-c1D44E">𝑎</mjx-c></mjx-mi><mjx-mo data-latex=","><mjx-c class="mjx-c2C">,</mjx-c></mjx-mo><mjx-mi space="2" data-latex="b"><mjx-c class="mjx-c1D44F">𝑏</mjx-c></mjx-mi><mjx-mo data-latex=")"><mjx-c class="mjx-c29">)</mjx-c></mjx-mo></mjx-texatom><mjx-mo space="4" data-latex="="><mjx-c class="mjx-c3D">=</mjx-c></mjx-mo><mjx-msup space="4" data-latex="\operatorname{rad}^n"><mjx-mi data-latex="\operatorname{rad}"><mjx-c class="mjx-c72" noic="true" style="padding-top: 0.694em;">r</mjx-c><mjx-c class="mjx-c61" noic="true" style="padding-top: 0.694em;">a</mjx-c><mjx-c class="mjx-c64" style="padding-top: 0.694em;">d</mjx-c></mjx-mi><mjx-script style="vertical-align: 0.421em;"><mjx-mi size="s" data-latex="n"><mjx-c class="mjx-c1D45B">𝑛</mjx-c></mjx-mi></mjx-script></mjx-msup><mjx-mo><mjx-c class="mjx-c2061">⁡</mjx-c></mjx-mo><mjx-texatom space="2" data-latex="{Z_r^{132}(a,b)}" texclass="ORD"><mjx-msubsup data-latex="Z_r^{132}"><mjx-mi data-latex="Z"><mjx-c class="mjx-c1D44D">𝑍</mjx-c></mjx-mi><mjx-script style="vertical-align: -0.247em; margin-left: -0.04em;"><mjx-texatom size="s" data-latex="{132}" texclass="ORD" style="margin-left: 0.13em;"><mjx-mn data-latex="132"><mjx-c class="mjx-c31" noic="true" style="padding-top: 0.666em;">1</mjx-c><mjx-c class="mjx-c33" noic="true" style="padding-top: 0.666em;">3</mjx-c><mjx-c class="mjx-c32" style="padding-top: 0.666em;">2</mjx-c></mjx-mn></mjx-texatom><mjx-spacer style="margin-top: 0.332em;"></mjx-spacer><mjx-mi size="s" data-latex="r"><mjx-c class="mjx-c1D45F">𝑟</mjx-c></mjx-mi></mjx-script></mjx-msubsup><mjx-mo data-latex="("><mjx-c class="mjx-c28">(</mjx-c></mjx-mo><mjx-mi data-latex="a"><mjx-c class="mjx-c1D44E">𝑎</mjx-c></mjx-mi><mjx-mo data-latex=","><mjx-c class="mjx-c2C">,</mjx-c></mjx-mo><mjx-mi space="2" data-latex="b"><mjx-c class="mjx-c1D44F">𝑏</mjx-c></mjx-mi><mjx-mo data-latex=")"><mjx-c class="mjx-c29">)</mjx-c></mjx-mo></mjx-texatom><mjx-mstyle data-latex="\qquad"><mjx-mspace style="width: 2em;"></mjx-mspace></mjx-mstyle><mjx-mtext data-latex="\text{对所有 }"><mjx-utext variant="normal" style="font-family: MJX-TEX-ZERO, serif;">对所有</mjx-utext><mjx-c class="mjx-cA0" style="padding-top: 0.75em;">&nbsp;</mjx-c></mjx-mtext><mjx-mi data-latex="n"><mjx-c class="mjx-c1D45B">𝑛</mjx-c></mjx-mi><mjx-mo space="4" data-latex="\ge"><mjx-c class="mjx-c2265">≥</mjx-c></mjx-mo><mjx-mn space="4" data-latex="\tag{R14}"><mjx-c class="mjx-c30" noic="true" style="padding-top: 0.666em;">0</mjx-c><mjx-c class="mjx-c2E" style="padding-top: 0.666em;">.</mjx-c></mjx-mn><mjx-tstrut></mjx-tstrut></mjx-mtd></mjx-mlabeledtr></mjx-itable></mjx-table><mjx-labels style="width: 27.438em;"><mjx-itable align="right" style="right: 0px;"><mjx-mtr style="height: 1.139em;"><mjx-mtd id="mjx-eqn:R14"><mjx-mtext data-latex="\text{(}"><mjx-c class="mjx-c28">(</mjx-c></mjx-mtext><mjx-mtext data-latex="\text{R14}"><mjx-c class="mjx-c52" noic="true" style="padding-top: 0.683em;">R</mjx-c><mjx-c class="mjx-c31" noic="true" style="padding-top: 0.683em;">1</mjx-c><mjx-c class="mjx-c34" style="padding-top: 0.683em;">4</mjx-c></mjx-mtext><mjx-mtext data-latex="\text{)}"><mjx-c class="mjx-c29">)</mjx-c></mjx-mtext><mjx-tstrut style="height: 1.139em; vertical-align: -0.255em;"></mjx-tstrut></mjx-mtd></mjx-mtr></mjx-itable></mjx-labels></mjx-mtable></mjx-math></mjx-container></div></div><div class="el-p"><p dir="auto">更一般地<span class="math math-inline is-loaded"><mjx-container class="MathJax" jax="CHTML" overflow="overflow"><mjx-math data-latex="{p^{r}}\mid a,p\mid b" breakable="true" class="TEX-N"><mjx-texatom data-latex="{p^{r}}" texclass="ORD"><mjx-msup data-latex="p^{r}"><mjx-mi data-latex="p"><mjx-c class="mjx-c1D45D">𝑝</mjx-c></mjx-mi><mjx-script style="vertical-align: 0.363em;"><mjx-texatom size="s" data-latex="{r}" texclass="ORD"><mjx-mi data-latex="r"><mjx-c class="mjx-c1D45F">𝑟</mjx-c></mjx-mi></mjx-texatom></mjx-script></mjx-msup></mjx-texatom><mjx-break size="4"> </mjx-break><mjx-mo data-latex="\mid"><mjx-c class="mjx-c2223">∣</mjx-c></mjx-mo><mjx-mi space="4" data-latex="a"><mjx-c class="mjx-c1D44E">𝑎</mjx-c></mjx-mi><mjx-mo data-latex=","><mjx-c class="mjx-c2C">,</mjx-c></mjx-mo><mjx-mi space="2" data-latex="p"><mjx-c class="mjx-c1D45D">𝑝</mjx-c></mjx-mi><mjx-break size="4"> </mjx-break><mjx-mo data-latex="\mid"><mjx-c class="mjx-c2223">∣</mjx-c></mjx-mo><mjx-mi space="4" data-latex="b"><mjx-c class="mjx-c1D44F">𝑏</mjx-c></mjx-mi></mjx-math></mjx-container></span>，若<span class="math math-inline is-loaded"><mjx-container class="MathJax" jax="CHTML" overflow="overflow"><mjx-math data-latex="h=\min(v_p(b),r)&lt;r" breakable="true" class="TEX-N"><mjx-mi data-latex="h"><mjx-c class="mjx-c210E">ℎ</mjx-c></mjx-mi><mjx-break size="4"> </mjx-break><mjx-mo data-latex="="><mjx-c class="mjx-c3D">=</mjx-c></mjx-mo><mjx-mo space="4" data-latex="\min"><mjx-c class="mjx-c6D" noic="true" style="padding-top: 0.669em;">m</mjx-c><mjx-c class="mjx-c69" noic="true" style="padding-top: 0.669em;">i</mjx-c><mjx-c class="mjx-c6E" style="padding-top: 0.669em;">n</mjx-c></mjx-mo><mjx-mo data-latex="("><mjx-c class="mjx-c28">(</mjx-c></mjx-mo><mjx-msub data-latex="v_p"><mjx-mi data-latex="v"><mjx-c class="mjx-c1D463">𝑣</mjx-c></mjx-mi><mjx-script style="vertical-align: -0.15em;"><mjx-mi size="s" data-latex="p"><mjx-c class="mjx-c1D45D">𝑝</mjx-c></mjx-mi></mjx-script></mjx-msub><mjx-mo data-latex="("><mjx-c class="mjx-c28">(</mjx-c></mjx-mo><mjx-mi data-latex="b"><mjx-c class="mjx-c1D44F">𝑏</mjx-c></mjx-mi><mjx-mo data-latex=")"><mjx-c class="mjx-c29">)</mjx-c></mjx-mo><mjx-mo data-latex=","><mjx-c class="mjx-c2C">,</mjx-c></mjx-mo><mjx-mi space="2" data-latex="r"><mjx-c class="mjx-c1D45F">𝑟</mjx-c></mjx-mi><mjx-mo data-latex=")"><mjx-c class="mjx-c29">)</mjx-c></mjx-mo><mjx-break size="4"> </mjx-break><mjx-mo data-latex="&lt;"><mjx-c class="mjx-c3C">&lt;</mjx-c></mjx-mo><mjx-mi space="4" data-latex="r"><mjx-c class="mjx-c1D45F">𝑟</mjx-c></mjx-mi></mjx-math></mjx-container></span>，则<span class="math math-inline is-loaded"><mjx-container class="MathJax" jax="CHTML" overflow="overflow"><mjx-math data-latex="u=v=h" breakable="true" class="TEX-N"><mjx-mi data-latex="u"><mjx-c class="mjx-c1D462">𝑢</mjx-c></mjx-mi><mjx-break size="4"> </mjx-break><mjx-mo data-latex="="><mjx-c class="mjx-c3D">=</mjx-c></mjx-mo><mjx-mi space="4" data-latex="v"><mjx-c class="mjx-c1D463">𝑣</mjx-c></mjx-mi><mjx-break size="4"> </mjx-break><mjx-mo data-latex="="><mjx-c class="mjx-c3D">=</mjx-c></mjx-mo><mjx-mi space="4" data-latex="h"><mjx-c class="mjx-c210E">ℎ</mjx-c></mjx-mi></mjx-math></mjx-container></span>，<span class="math math-inline is-loaded"><mjx-container class="MathJax" jax="CHTML" overflow="overflow"><mjx-math data-latex="J" class="TEX-N"><mjx-mi data-latex="J"><mjx-c class="mjx-c1D43D">𝐽</mjx-c></mjx-mi></mjx-math></mjx-container></span>长度仅为<span class="math math-inline is-loaded"><mjx-container class="MathJax" jax="CHTML" overflow="overflow"><mjx-math data-latex="2h+1" breakable="true" class="TEX-N"><mjx-mn data-latex="2"><mjx-c class="mjx-c32">2</mjx-c></mjx-mn><mjx-mi data-latex="h"><mjx-c class="mjx-c210E">ℎ</mjx-c></mjx-mi><mjx-break size="3"> </mjx-break><mjx-mo data-latex="+"><mjx-c class="mjx-c2B">+</mjx-c></mjx-mo><mjx-mn space="3" data-latex="1"><mjx-c class="mjx-c31">1</mjx-c></mjx-mn></mjx-math></mjx-container></span>，而Loewy长度仍为<span class="math math-inline is-loaded"><mjx-container class="MathJax" jax="CHTML" overflow="overflow"><mjx-math data-latex="2r+1" breakable="true" class="TEX-N"><mjx-mn data-latex="2"><mjx-c class="mjx-c32">2</mjx-c></mjx-mn><mjx-mi data-latex="r"><mjx-c class="mjx-c1D45F">𝑟</mjx-c></mjx-mi><mjx-break size="3"> </mjx-break><mjx-mo data-latex="+"><mjx-c class="mjx-c2B">+</mjx-c></mjx-mo><mjx-mn space="3" data-latex="1"><mjx-c class="mjx-c31">1</mjx-c></mjx-mn></mjx-math></mjx-container></span>。因此同一个零权族的Frobenius特征标扭转再次可以改变配对滤过；不能把(R14)扩大到所有<span class="math math-inline is-loaded"><mjx-container class="MathJax" jax="CHTML" overflow="overflow"><mjx-math data-latex="p\mid b" breakable="true" class="TEX-N"><mjx-mi data-latex="p"><mjx-c class="mjx-c1D45D">𝑝</mjx-c></mjx-mi><mjx-break size="4"> </mjx-break><mjx-mo data-latex="\mid"><mjx-c class="mjx-c2223">∣</mjx-c></mjx-mo><mjx-mi space="4" data-latex="b"><mjx-c class="mjx-c1D44F">𝑏</mjx-c></mjx-mi></mjx-math></mjx-container></span>，更不能用长度相等自动证明一般权的滤过相等。</p></div><div class="el-p"><p dir="auto">本节固定了(R9)的提升选择。不同合法整格、任意其他提升或经(R1)(R2)搬运的滤过是否给相同实际子空间，仍需另外比较，未在此宣称一般独立性。<sup class="editing-suite-sidenote-reference" data-sidenote-instance="reading-227"><a class="footnote-ref editing-suite-sidenote-reference-link" aria-label="边注 2" tabindex="-1">2</a></sup><span class="editing-suite-sidenote-anchor editing-suite-reading-sidenote-anchor" data-sidenote-instance="reading-227" data-sidenote-number="2"><template class="mathcraft-export-sidenote-template"><aside class="editing-suite-sidenote-margin" data-sidenote-number="2" role="note" aria-label="边注 2" tabindex="-1"><span class="editing-suite-sidenote-number">2</span><div class="editing-suite-sidenote-content">有限整格核验：四组整参数下检查反变性，并对1469组最高权核对PBW注入、Smith指数与边界指数。见<a class="internal-link" href="attachments/计算脚本/中间正根系整环境核验.py" target="_blank" rel="noopener nofollow">脚本</a>及<a class="internal-link" href="attachments/核验数据/中间整环境核验结果.json" target="_blank" rel="noopener nofollow">结果</a>。有限计算不替代正文的一般构造。</div></aside></template></span></p></div><div class="el-h3"><h3 data-heading="9.5.9 核验与下一步" dir="auto" id="9.5.9_核验与下一步_0">9.5.9 核验与下一步</h3></div><div class="el-p"><p dir="auto">现在至少一个奇配对非零时的Loewy已由奇反射归约；两配对都为零的一般最高权仍需结构论证。可以用本节的明确滤过作候选层检查，但必须先证明其商半单及其为根基，不能从Smith指数直接跳到Loewy结论。</p></div><div class="footer"><div class="data-bar"></div></div></div></div></div><div id="right-content" class="leaf" style="--sidebar-width:var(--sidebar-width-right)"><div id="right-sidebar" class="sidebar"><div class="sidebar-handle"></div><div class="sidebar-topbar"><div class="topbar-content"><label class="theme-toggle-container" for="theme-toggle-input"><input class="theme-toggle-input" type="checkbox" id="theme-toggle-input"><div class="toggle-background"></div></label></div><button type="button" class="clickable-icon sidebar-collapse-icon" aria-label="切换右侧栏"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="svg-icon sidebar-toggle-button-icon"><rect x="1" y="2" width="22" height="20" rx="4"></rect><rect x="4" y="5" width="2" height="14" rx="2" fill="currentColor" class="sidebar-toggle-icon-inner"></rect></svg></button></div><div class="sidebar-content-wrapper"><div id="right-sidebar-content" class="leaf-content"><div id="outline" class="tree-container"><div class="feature-header"><div class="feature-title">目录</div><button class="clickable-icon nav-action-button tree-collapse-all is-collapsed" aria-label="全部折叠"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></svg></button></div><div class="tree-item nav-file" data-depth="3"><a class="tree-item-self is-clickable nav-file-title heading-link" href="#9.5.1_奇反射的同构_0" data-path="9.5.1_奇反射的同构_0" heading-name="9.5.1 奇反射的同构"><div class="tree-item-inner nav-file-title-content">9.5.1 奇反射的同构</div></a><div class="tree-item-children nav-file-children"></div></div><div class="tree-item nav-file" data-depth="3"><a class="tree-item-self is-clickable nav-file-title heading-link" href="#9.5.2_整格的选择_0" data-path="9.5.2_整格的选择_0" heading-name="9.5.2 整格的选择"><div class="tree-item-inner nav-file-title-content">9.5.2 整格的选择</div></a><div class="tree-item-children nav-file-children"></div></div><div class="tree-item nav-file" data-depth="3"><a class="tree-item-self is-clickable nav-file-title heading-link" href="#9.5.3_自由整格_0" data-path="9.5.3_自由整格_0" heading-name="9.5.3 自由整格"><div class="tree-item-inner nav-file-title-content">9.5.3 自由整格</div></a><div class="tree-item-children nav-file-children"></div></div><div class="tree-item nav-file" data-depth="3"><a class="tree-item-self is-clickable nav-file-title heading-link" href="#9.5.4_反变配对及其整性_0" data-path="9.5.4_反变配对及其整性_0" heading-name="9.5.4 反变配对及其整性"><div class="tree-item-inner nav-file-title-content">9.5.4 反变配对及其整性</div></a><div class="tree-item-children nav-file-children"></div></div><div class="tree-item nav-file" data-depth="3"><a class="tree-item-self is-clickable nav-file-title heading-link" href="#9.5.5_参数与滤过_0" data-path="9.5.5_参数与滤过_0" heading-name="9.5.5 参数与滤过"><div class="tree-item-inner nav-file-title-content">9.5.5 参数与滤过</div></a><div class="tree-item-children nav-file-children"></div></div><div class="tree-item nav-file" data-depth="3"><a class="tree-item-self is-clickable nav-file-title heading-link" href="#9.5.6_Smith指数与边界_0" data-path="9.5.6_Smith指数与边界_0" heading-name="9.5.6 Smith指数与边界"><div class="tree-item-inner nav-file-title-content">9.5.6 Smith指数与边界</div></a><div class="tree-item-children nav-file-children"></div></div><div class="tree-item nav-file" data-depth="3"><a class="tree-item-self is-clickable nav-file-title heading-link" href="#9.5.7_首层与和公式_0" data-path="9.5.7_首层与和公式_0" heading-name="9.5.7 首层与和公式"><div class="tree-item-inner nav-file-title-content">9.5.7 首层与和公式</div></a><div class="tree-item-children nav-file-children"></div></div><div class="tree-item nav-file" data-depth="3"><a class="tree-item-self is-clickable nav-file-title heading-link" href="#9.5.8_零权模的根基滤过_0" data-path="9.5.8_零权模的根基滤过_0" heading-name="9.5.8 零权模的根基滤过"><div class="tree-item-inner nav-file-title-content">9.5.8 零权模的根基滤过</div></a><div class="tree-item-children nav-file-children"></div></div><div class="tree-item nav-file" data-depth="3"><a class="tree-item-self is-clickable nav-file-title heading-link" href="#9.5.9_核验与下一步_0" data-path="9.5.9_核验与下一步_0" heading-name="9.5.9 核验与下一步"><div class="tree-item-inner nav-file-title-content">9.5.9 核验与下一步</div></a><div class="tree-item-children nav-file-children"></div></div></div></div></div><script defer>const rs=document.querySelector('#right-sidebar');rs.classList.toggle('is-collapsed',innerWidth<768);rs.style.setProperty('--sidebar-width',localStorage.getItem('sidebar-right-width'));</script></div></div></div></div></body></html>
