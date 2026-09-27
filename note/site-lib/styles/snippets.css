@@ -1,119 +1,3 @@
-/*#region 模态框、命令面板、菜单样式优化以及弹出动画 */
-/*#region 弹出动画 */
-.modal,
-.modal-container .prompt {
-  transform-origin: center;
-  animation: albus-modal-popup 180ms cubic-bezier(0.2, 0.8, 0.2, 1);
-}
-
-.menu {
-  transform-origin: top left;
-  animation: albus-menu-popup 140ms cubic-bezier(0.2, 0.8, 0.2, 1);
-  border-radius: 10px;
-  box-shadow: var(--window-shadow2);
-}
-
-@keyframes albus-modal-popup {
-  0% {
-    opacity: 0;
-    scale: 0.96;
-    translate: 0 6px;
-  }
-  68% {
-    opacity: 1;
-    scale: 1.012;
-    translate: 0 -1px;
-  }
-  100% {
-    opacity: 1;
-    scale: 1;
-    translate: 0 0;
-  }
-}
-
-@keyframes albus-menu-popup {
-  0% {
-    opacity: 0;
-    scale: 0.94;
-    translate: 0 -4px;
-  }
-  72% {
-    opacity: 1;
-    scale: 1.01;
-    translate: 0 0;
-  }
-  100% {
-    opacity: 1;
-    scale: 1;
-    translate: 0 0;
-  }
-}
-/*#endregion */
-
-/*#region 设置界面与命令面板背景 */
-.theme-light {
-  --prompt-box-shadow: #bebebe;
-  --window-shadow2: 0 0 9px var(--simple-gray-7);
-  --simple-gray-7: hsla(217, 15%, 83%, 0.7);
-  --bg-color-settings-2: #ffffff46;
-  --bg-color-settings-3: #ffffffda;
-  --bg-color-settings-4: #ffffff3e;
-}
-
-.theme-dark {
-  --prompt-box-shadow: #555555;
-  --simple-white-6: hsla(212, 17%, 0%, 0.3);
-  --window-shadow2: 0 0 9px var(--simple-white-6);
-  --bg-color-settings-2: #1f1f1fa9;
-  --bg-color-settings-3: #141414be;
-  --bg-color-settings-4: #14141428;
-}
-
-.prompt {
-  backdrop-filter: blur(8px);
-  box-shadow: 0 0 10px 1px var(--prompt-box-shadow);
-  border: none;
-  background-color: var(--bg-color-settings-4);
-}
-
-body.setting-default-frosted-glass .vertical-tab-header {
-  background-color: var(--bg-color-settings-3) !important;
-}
-.horizontal-tab-nav-item,
-.vertical-tab-nav-item {
-  background-color: transparent;
-}
-
-.horizontal-tab-nav-item:hover,
-.vertical-tab-nav-item:hover,
-.horizontal-tab-nav-item.is-active,
-.vertical-tab-nav-item.is-active {
-  background-color: var(--bg-color-settings-2);
-  color: var(--text-normal);
-  font-weight: bold;
-}
-
-.horizontal-tab-content {
-  background-color: var(--bg-color-settings-3);
-}
-
-.vertical-tab-content {
-  background-color: var(--bg-color-settings-2);
-}
-
-/*#endregion */
-
-/*#region 减少动态效果 */
-@media (prefers-reduced-motion: reduce) {
-  .modal,
-  .modal-container .prompt,
-  .menu {
-    animation: none;
-  }
-}
-/*#endregion */
-/*#endregion */
-
 /*#region 滑块样式 */
 /*#region 动画变量 */
 .checkbox-container {
@@ -300,27 +184,31 @@ body:not(.is-mobile) .mod-sidedock .workspace-leaf-content .view-header {
 .app-container {
   --sidebar-texture: var(--art-deco-background);
   --sidebar-texture-size: auto 100%;
-  --sidebar-texture-blend: soft-light;
   --sidebar-texture-position: center center;
-  --sidebar-texture-opacity: 0.2;
 }
 /*#endregion */
 
-/*#region 深色模式纹理 */
+/*#region 明暗模式纹理参数 */
+body.theme-dark .app-container {
+  --sidebar-texture-blend: soft-light;
+  --sidebar-texture-opacity: 0.2;
+}
+
+body.theme-light .app-container {
+  --sidebar-texture-blend: difference;
+  --sidebar-texture-opacity: 0.06;
+}
+/*#endregion */
+
+/*#region 侧边栏纹理 */
 .mod-sidedock .workspace-leaf {
   --sidebar-overlay-color: color-mix(in srgb, var(--background-primary), transparent calc(100% * var(--sidebar-texture-opacity)));
+  background-color: var(--background-primary);
   background-image: linear-gradient(var(--sidebar-overlay-color), var(--sidebar-overlay-color)), var(--sidebar-texture);
   background-size: var(--sidebar-texture-size);
   background-blend-mode: normal, var(--sidebar-texture-blend);
   background-position: var(--sidebar-texture-position);
   background-repeat: no-repeat;
-}
-/*#endregion */
-
-/*#region 浅色模式纯色背景 */
-body.theme-light .mod-sidedock .workspace-leaf {
-  background-image: none;
-  background-color: var(--background-primary);
 }
 /*#endregion */
 
@@ -394,5 +282,534 @@ body{
     mask-position: center;
     mask-repeat: no-repeat;
     mask-image: var(--empty-state-image);
+}
+/*#endregion */
+
+/*
+ * 按钮微交互，灵感来自 Enchanted Animations：
+ * https://github.com/Oczko24/Enchanted-Animations
+ * 不改变按钮尺寸、边距或定位。
+ */
+
+/*#region 动画参数 */
+body:not(.is-mobile) {
+  --albus-button-duration: 160ms;
+  --albus-button-ease: cubic-bezier(0.22, 1, 0.36, 1);
+}
+/*#endregion */
+
+/*#region 图标按钮 */
+@media (hover: hover) and (pointer: fine) {
+  body:not(.is-mobile) :is(
+    .workspace-ribbon,
+    .view-header,
+    .view-actions,
+    .modal-header,
+    .setting-item-control
+  ) .clickable-icon > svg {
+    transform-origin: center;
+    transition: transform var(--albus-button-duration) var(--albus-button-ease);
+  }
+
+  body:not(.is-mobile) :is(
+    .workspace-ribbon,
+    .view-header,
+    .view-actions,
+    .modal-header,
+    .setting-item-control
+  ) .clickable-icon:hover > svg {
+    transform: scale(1.13) rotate(4deg);
+  }
+
+  body:not(.is-mobile) :is(
+    .workspace-ribbon,
+    .view-header,
+    .view-actions,
+    .modal-header,
+    .setting-item-control
+  ) .clickable-icon:active > svg {
+    transform: scale(0.9) rotate(-6deg);
+    transition-duration: 70ms;
+  }
+}
+/*#endregion */
+
+/*#region 减少动态效果 */
+@media (prefers-reduced-motion: reduce) {
+  body:not(.is-mobile) .clickable-icon > svg {
+    transition: none;
+  }
+
+  body:not(.is-mobile) .clickable-icon:is(:hover, :active) > svg {
+    transform: none;
+  }
+}
+/*#endregion */
+
+/*
+ * 基于 Enchanted Animations 的动效思路重新实现：
+ * https://github.com/Oczko24/Enchanted-Animations
+ * 仅使用 opacity 与 transform 制作主要动画，避免触发布局重排。
+ */
+
+/*#region 动画参数 */
+body:not(.is-mobile) {
+  --albus-window-duration: 220ms;
+  --albus-window-duration-fast: 150ms;
+  --albus-window-ease: cubic-bezier(0.22, 1, 0.36, 1);
+  --albus-window-ease-out: cubic-bezier(0.4, 0, 1, 1);
+}
+/*#endregion */
+
+/*#region 模态框与命令面板 */
+body:not(.is-mobile) .modal {
+  transform-origin: center;
+  animation: albus-modal-in var(--albus-window-duration) var(--albus-window-ease);
+}
+
+body:not(.is-mobile) .modal-bg {
+  animation: albus-fade-in var(--albus-window-duration-fast) ease-out;
+}
+
+body:not(.is-mobile) .prompt {
+  transform-origin: center;
+  animation: albus-prompt-in var(--albus-window-duration) var(--albus-window-ease);
+}
+
+body:not(.is-mobile) .modal-container.is-closing {
+  opacity: 1;
+  pointer-events: none;
+}
+
+body:not(.is-mobile) .modal-container.is-closing .modal {
+  animation: albus-modal-out var(--albus-window-duration-fast) var(--albus-window-ease-out) forwards;
+}
+
+body:not(.is-mobile) .modal-container.is-closing .prompt {
+  animation: albus-prompt-out var(--albus-window-duration-fast) var(--albus-window-ease-out) forwards;
+}
+
+body:not(.is-mobile) .modal-container.is-closing .modal-bg {
+  animation: albus-fade-out var(--albus-window-duration-fast) ease-in forwards;
+}
+/*#endregion */
+
+/*#region 菜单与建议窗口 */
+body:not(.is-mobile) .menu {
+  transform-origin: top left;
+  animation: albus-menu-in var(--albus-window-duration-fast) var(--albus-window-ease);
+}
+
+body:not(.is-mobile) .menu.is-closing {
+  animation: albus-menu-out 110ms var(--albus-window-ease-out) forwards;
+  pointer-events: none;
+}
+
+body:not(.is-mobile) :is(
+  .suggestion-container,
+  .cm-tooltip.cm-tooltip-autocomplete
+) {
+  transform-origin: top center;
+  animation: albus-menu-in var(--albus-window-duration-fast) var(--albus-window-ease);
+}
+/*#endregion */
+
+/*#region 悬浮预览与控制面板 */
+body:not(.is-mobile) .popover.hover-popover {
+  transform-origin: top center;
+  animation: albus-popover-in var(--albus-window-duration) var(--albus-window-ease);
+}
+
+body:not(.is-mobile) :is(
+  .graph-controls:not(.is-close),
+  .canvas-controls
+) {
+  transform-origin: top right;
+  animation: albus-controls-in var(--albus-window-duration) var(--albus-window-ease);
+}
+
+body:not(.is-mobile) .graph-controls.is-closing {
+  transform-origin: top right;
+  animation: albus-controls-out var(--albus-window-duration-fast) var(--albus-window-ease-out) forwards;
+  pointer-events: none;
+}
+/*#endregion */
+
+/*#region 搜索栏与通知 */
+body:not(.is-mobile) .document-search-container {
+  transform-origin: top center;
+  animation: albus-search-in var(--albus-window-duration) var(--albus-window-ease);
+}
+
+body:not(.is-mobile) .document-search-container.is-closing {
+  animation: albus-search-out var(--albus-window-duration-fast) var(--albus-window-ease-out) forwards;
+  pointer-events: none;
+}
+
+body:not(.is-mobile) .notice {
+  animation: albus-notice-in var(--albus-window-duration) var(--albus-window-ease);
+}
+/*#endregion */
+
+/*#region 现有弹窗外观 */
+.theme-light {
+  --prompt-box-shadow: #bebebe;
+  --window-shadow2: 0 0 9px var(--simple-gray-7);
+  --simple-gray-7: hsla(217, 15%, 83%, 0.7);
+  --bg-color-settings-2: #ffffff46;
+  --bg-color-settings-3: #ffffffda;
+  --bg-color-settings-4: #ffffff3e;
+}
+
+.theme-dark {
+  --prompt-box-shadow: #555555;
+  --simple-white-6: hsla(212, 17%, 0%, 0.3);
+  --window-shadow2: 0 0 9px var(--simple-white-6);
+  --bg-color-settings-2: #1f1f1fa9;
+  --bg-color-settings-3: #141414be;
+  --bg-color-settings-4: #14141428;
+}
+
+.menu {
+  border-radius: 10px;
+  box-shadow: var(--window-shadow2);
+}
+
+.prompt {
+  border: none;
+  background-color: var(--bg-color-settings-4);
+  box-shadow: 0 0 10px 1px var(--prompt-box-shadow);
+  backdrop-filter: blur(8px);
+}
+
+body.setting-default-frosted-glass .vertical-tab-header {
+  background-color: var(--bg-color-settings-3) !important;
+}
+
+.horizontal-tab-content {
+  background-color: var(--bg-color-settings-3);
+}
+
+.vertical-tab-content {
+  background-color: var(--bg-color-settings-2);
+}
+/*#endregion */
+
+/*#region 关键帧 */
+@keyframes albus-modal-in {
+  from { opacity: 0; transform: translateY(14px) scale(0.94); }
+  70%  { opacity: 1; transform: translateY(-1px) scale(1.008); }
+  to   { opacity: 1; transform: none; }
+}
+
+@keyframes albus-modal-out {
+  from { opacity: 1; transform: none; }
+  to   { opacity: 0; transform: translateY(10px) scale(0.96); }
+}
+
+@keyframes albus-prompt-in {
+  from { opacity: 0; transform: translateY(18px) scale(0.975); }
+  to   { opacity: 1; transform: none; }
+}
+
+@keyframes albus-prompt-out {
+  from { opacity: 1; transform: none; }
+  to   { opacity: 0; transform: translateY(16px) scale(0.98); }
+}
+
+@keyframes albus-menu-in {
+  from { opacity: 0; transform: translateY(-8px) scale(0.97); }
+  to   { opacity: 1; transform: none; }
+}
+
+@keyframes albus-menu-out {
+  from { opacity: 1; transform: none; }
+  to   { opacity: 0; transform: translateY(-6px) scale(0.98); }
+}
+
+@keyframes albus-popover-in {
+  from { opacity: 0; transform: translateY(8px) scale(0.98); }
+  to   { opacity: 1; transform: none; }
+}
+
+@keyframes albus-controls-in {
+  from { opacity: 0; transform: translate(12px, -10px) scale(0.9); }
+  to   { opacity: 1; transform: none; }
+}
+
+@keyframes albus-controls-out {
+  from { opacity: 1; transform: none; }
+  to   { opacity: 0; transform: translate(12px, -10px) scale(0.9); }
+}
+
+@keyframes albus-search-in {
+  from { opacity: 0; transform: translateY(-10px); }
+  to   { opacity: 1; transform: none; }
+}
+
+@keyframes albus-search-out {
+  from { opacity: 1; transform: none; }
+  to   { opacity: 0; transform: translateY(-10px); }
+}
+
+@keyframes albus-notice-in {
+  from { opacity: 0; transform: translateX(28px); }
+  to   { opacity: 1; transform: none; }
+}
+
+@keyframes albus-fade-in {
+  from { opacity: 0; }
+  to   { opacity: 1; }
+}
+
+@keyframes albus-fade-out {
+  from { opacity: 1; }
+  to   { opacity: 0; }
+}
+/*#endregion */
+
+/*#region 减少动态效果 */
+@media (prefers-reduced-motion: reduce) {
+  body:not(.is-mobile) :is(
+    .modal,
+    .modal-bg,
+    .prompt,
+    .menu,
+    .suggestion-container,
+    .cm-tooltip.cm-tooltip-autocomplete,
+    .popover.hover-popover,
+    .graph-controls,
+    .canvas-controls,
+    .document-search-container,
+    .notice
+  ) {
+    animation: none;
+  }
+}
+/*#endregion */
+
+/*
+ * 菜单微交互，灵感来自 Enchanted Animations：
+ * https://github.com/Oczko24/Enchanted-Animations
+ */
+
+/*#region 动画参数 */
+body:not(.is-mobile) {
+  --albus-menu-item-duration: 180ms;
+  --albus-menu-item-ease: cubic-bezier(0.22, 1, 0.36, 1);
+  --albus-menu-item-shift: 4px;
+}
+/*#endregion */
+
+/*#region 上下文菜单条目 */
+@media (hover: hover) and (pointer: fine) {
+  body:not(.is-mobile) .menu-item {
+    transition:
+      transform var(--albus-menu-item-duration) var(--albus-menu-item-ease),
+      background-color 120ms ease-out,
+      color 120ms ease-out;
+  }
+
+  body:not(.is-mobile) .menu-item:hover {
+    transform: translateX(var(--albus-menu-item-shift));
+  }
+
+  body:not(.is-mobile) .menu-item:active {
+    transform: translateX(var(--albus-menu-item-shift)) scale(0.97);
+    background-color: var(--background-modifier-active-hover);
+    transition-duration: 70ms;
+  }
+}
+/*#endregion */
+
+/*#region 设置页导航条目 */
+.horizontal-tab-nav-item,
+.vertical-tab-nav-item {
+  background-color: transparent;
+}
+
+.horizontal-tab-nav-item:hover,
+.vertical-tab-nav-item:hover,
+.horizontal-tab-nav-item.is-active,
+.vertical-tab-nav-item.is-active {
+  background-color: var(--bg-color-settings-2, var(--background-modifier-hover));
+  color: var(--text-normal);
+}
+
+@media (hover: hover) and (pointer: fine) {
+  body:not(.is-mobile) .vertical-tab-nav-item {
+    transition:
+      transform var(--albus-menu-item-duration) var(--albus-menu-item-ease),
+      background-color 120ms ease-out,
+      color 120ms ease-out;
+  }
+
+  body:not(.is-mobile) .vertical-tab-nav-item:not(.is-active):hover {
+    transform: translateX(var(--albus-menu-item-shift));
+  }
+
+  body:not(.is-mobile) .vertical-tab-nav-item:not(.is-active):active {
+    transform: translateX(6px);
+    transition-duration: 70ms;
+  }
+}
+/*#endregion */
+
+/*#region 减少动态效果 */
+@media (prefers-reduced-motion: reduce) {
+  body:not(.is-mobile) :is(.menu-item, .vertical-tab-nav-item) {
+    transition: none;
+  }
+
+  body:not(.is-mobile) :is(.menu-item, .vertical-tab-nav-item):is(:hover, :active) {
+    transform: none;
+  }
+}
+/*#endregion */
+
+/*
+ * 桌面端工作区标签页纯运动微交互。
+ * 不添加颜色、背景、阴影、下划线或其他装饰。
+ */
+
+/*#region 动画参数 */
+body:not(.is-mobile) {
+  --albus-tab-duration: 220ms;
+  --albus-tab-duration-fast: 130ms;
+  --albus-tab-ease: cubic-bezier(0.22, 1, 0.36, 1);
+}
+/*#endregion */
+
+/*#region 非活动标签悬停与按压 */
+@media (hover: hover) and (pointer: fine) {
+  body:not(.is-mobile) .workspace-tab-header:not(.is-active) .workspace-tab-header-inner {
+    transform-origin: center bottom;
+    transition:
+      translate var(--albus-tab-duration) var(--albus-tab-ease),
+      scale var(--albus-tab-duration) var(--albus-tab-ease);
+  }
+
+  body:not(.is-mobile) .workspace-tab-header:not(.is-active) .workspace-tab-header-inner-title {
+    transition: translate var(--albus-tab-duration) var(--albus-tab-ease);
+  }
+
+  body:not(.is-mobile) .workspace-tab-header .workspace-tab-header-inner-icon > svg {
+    transform-origin: center;
+    transition: transform var(--albus-button-duration, 160ms) var(--albus-button-ease, cubic-bezier(0.22, 1, 0.36, 1));
+  }
+
+  body:not(.is-mobile) .workspace-tab-header:not(.is-active):hover .workspace-tab-header-inner {
+    translate: 0 -1px;
+    scale: 1.012;
+  }
+
+  body:not(.is-mobile) .workspace-tab-header:not(.is-active):hover .workspace-tab-header-inner-title {
+    translate: 2px 0;
+  }
+
+  body:not(.is-mobile) .workspace-tab-header:hover .workspace-tab-header-inner-icon > svg {
+    transform: scale(1.13) rotate(4deg);
+  }
+
+  body:not(.is-mobile) .workspace-tab-header:active .workspace-tab-header-inner-icon > svg {
+    transform: scale(0.9) rotate(-6deg);
+    transition-duration: 70ms;
+  }
+
+  body:not(.is-mobile) .workspace-tab-header:not(.is-active):active .workspace-tab-header-inner {
+    translate: 0 0;
+    scale: 0.975;
+    transition-duration: 70ms;
+  }
+}
+/*#endregion */
+
+/*#region 标签页激活动画 */
+body:not(.is-mobile) .workspace-tab-header.is-active .workspace-tab-header-inner {
+  transform-origin: center bottom;
+  animation: albus-tab-focus-in var(--albus-tab-duration) var(--albus-tab-ease);
+}
+
+body:not(.is-mobile) .workspace-tab-header.is-active .workspace-tab-header-inner-title {
+  animation: albus-tab-title-arrive var(--albus-tab-duration) var(--albus-tab-ease);
+}
+
+@keyframes albus-tab-focus-in {
+  0% {
+    opacity: 0.55;
+    translate: 0 4px;
+    scale: 0.97;
+  }
+
+  58% {
+    opacity: 1;
+    translate: 0 -1px;
+    scale: 1.01;
+  }
+
+  100% {
+    opacity: 1;
+    translate: 0 0;
+    scale: 1;
+  }
+}
+
+@keyframes albus-tab-title-arrive {
+  0%   { opacity: 0.45; translate: 6px 0; }
+  65%  { opacity: 1; translate: -1px 0; }
+  100% { opacity: 1; translate: 0 0; }
+}
+
+/*#endregion */
+
+/*#region 关闭与新建按钮 */
+@media (hover: hover) and (pointer: fine) {
+  body:not(.is-mobile) :is(
+    .workspace-tab-header-inner-close-button,
+    .workspace-tab-header-new-tab .clickable-icon
+  ) > svg {
+    transform-origin: center;
+    transition: transform var(--albus-button-duration, 160ms) var(--albus-button-ease, cubic-bezier(0.22, 1, 0.36, 1));
+  }
+
+  body:not(.is-mobile) .workspace-tab-header-inner-close-button:hover > svg {
+    transform: scale(1.13) rotate(4deg);
+  }
+
+  body:not(.is-mobile) .workspace-tab-header-new-tab .clickable-icon:hover > svg {
+    transform: scale(1.13) rotate(4deg);
+  }
+
+  body:not(.is-mobile) :is(
+    .workspace-tab-header-inner-close-button,
+    .workspace-tab-header-new-tab .clickable-icon
+  ):active > svg {
+    transform: scale(0.9) rotate(-6deg);
+    transition-duration: 70ms;
+  }
+}
+/*#endregion */
+
+/*#region 减少动态效果 */
+@media (prefers-reduced-motion: reduce) {
+  body:not(.is-mobile) .workspace-tab-header :is(
+    .workspace-tab-header-inner,
+    .workspace-tab-header-inner-title
+  ) {
+    translate: 0;
+    scale: 1;
+    animation: none;
+    transition: none;
+  }
+
+  body:not(.is-mobile) .workspace-tab-header .workspace-tab-header-inner-icon > svg,
+  body:not(.is-mobile) :is(
+    .workspace-tab-header-inner-close-button,
+    .workspace-tab-header-new-tab .clickable-icon
+  ) > svg {
+    transform: none;
+    animation: none;
+    transition: none;
+  }
 }
 /*#endregion */
