@@ -10,14 +10,71 @@
     "site-lib/styles/local-fonts.css": "f3cb8b84357e6f92df235e66411b43efcd2aecc22a88d2d2f26882170f774fa9",
     "site-lib/styles/theme.css": "0e446061bba8b1ee44f46b08013f684973ad627663b1532d00e498638ab251a2",
     "site-lib/styles/snippets.css": "049684202ff2c00b47cfefefe4878c3e0bc96157979dceb3c2add92f5512b265",
-    "site-lib/styles/other-plugins.css": "d8fe1c72b5ca3058d5d4865b7c9e068d278e9a8d01a9246ce4226367e656dc47",
+    "site-lib/styles/other-plugins.css": "eccad7cd1fef708192913b44a348617fa625037d9b2dcdd191b1af9b246c46fb",
     "site-lib/styles/editing-suite.css": "2d1a3f7d9f32ede187a189b167c1c6d1b310049ecb08b259ef5cbd6c01c72703",
     "site-lib/styles/editing-suite-export.css": "b555d3f9c97e857507988f5b4a7acca1a51e0520707bb2d8ddbe41ddee124427",
     "site-lib/styles/global-variable-styles.css": "449c7c5c39eeac8afd1f3c9d7a4de93aedf62d1a3f8eea6e190760ba21b8df69",
     "site-lib/styles/supported-plugins.css": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
     "site-lib/html/file-tree.html": "7ec6ef39089c9c919d3f81ab6d92fd4eb5c3f5fc38c8836fe63f6aa8b3c1e5cc",
-    "site-lib/search-index.json": "5de7fbc9c15acccb39c9ad00f95a955d6955467be13798be91604beca469d152",
-    "site-lib/metadata.json": "da3b54ce58bc44623ccea3f086585314f1fe01c7174c232a0d9b9cfaf8ce5a0f",
+    "site-lib/search-index.json": "b32872170e27f398509709b1665fc550f7afd6234826d986c9de7e74e9f10716",
+    "site-lib/metadata.json": "9e5dd6e89e3ec68f4d1cae589cdf0637607d819c243951539e7e0003ed2283a8",
+    "高中数学/参考资料.html": "bad8a53af7732727d17efc638ad8c350f7cfbed59cd29731217cd1077c95dd6b",
+    "数理逻辑/参考资料.html": "7df1f0d47df2569618c53a44aadbded39bc5fabb8fcaf93f6d2a4f1f4ec02a48",
+    "集合论/参考资料.html": "1b8dea3900418f8eec3b46154d32f19837694cca57c15df3448e923c8e95b59c",
+    "初等数论/参考资料.html": "5f23977a16fc12ea0ba907657230ef87dab4e2b67b34df4640950a7c8d8b87d9",
+    "解析几何/参考资料.html": "a9892d7ab62b8054066ec29d1336b1f6998334b7e29b17349ad425a285e8bb02",
+    "微积分/参考资料.html": "4940ee2125d0227cc55ece04f92eae4f21c85bc28da56b024b167c4d883eb0e4",
+    "线性代数/参考资料.html": "bd5a2155f6578a188d38ff414629bea5737558bc5a9c0ebcb86a6195d8a59533",
+    "抽象代数/参考资料.html": "78de3b1b53cfd0e82c23e1f9b2bd5cc4ad89eece8960729bfda495c56f65b501",
+    "范畴论/参考资料.html": "ff3652e7c75f443908d2207dc9c8579c0700ebd69ec8fef09d57b14607fee826",
+    "半单-lie-代数及其表示/参考资料.html": "1fad315124b87b41dab363669c10414f1bc93665b60f497a7dbd666edc0da5ba",
+    "代数几何/参考资料.html": "4e6bfb7fbbc4fb5290e716ead4275b381a165329889a547dc3ca6c03d25a7f99",
+    "代数群及其表示/参考资料.html": "77b51a8ed1546489dc03a04b7b998e7ce618a140fba2a1cfa470e535e0f702d6",
+    "lie-超代数及其表示/参考资料.html": "949dba153d90dd09cbd64b85c893669efa071a8014eff37922558ce44618f99d",
+    "模-lie-超代数及其表示/参考资料.html": "e82addfd1fd722388c2111e37c5e7f0843b784a1e452525c9f388473468cf950",
+    "chevalley-超群的-r-阶-frobenius-核的表示/参考资料.html": "688640e892327747811eb8341e6cbeb43f6c9b48e632f6157ea250fca3c04efb",
+    "site-lib/fonts/mathjax-2ea308c69f13.woff2": "2ea308c69f139e9ee7bc452e12a449c13e3b9ce4c08aebc4e86e15df232a26e0",
+    "site-lib/fonts/mathjax-f9054e3dd268.woff2": "f9054e3dd268155cb38c708ef7b7c7c03e83ac3723afcb65ae65a37bbb301f4e",
+    "site-lib/fonts/mathjax-2c146f72c9a3.woff2": "2c146f72c9a345aa282398a752d03af71d83a011f3d067297b533a31f0c5f5cb",
+    "site-lib/fonts/mathjax-4f03a0d86ff0.woff2": "4f03a0d86ff005f12cbb0ffd162bae0766415e48e07ed3fa5970e685594de15d",
+    "site-lib/fonts/mathjax-fad3b88ec7aa.woff2": "fad3b88ec7aac4959e3de19044931682bd4d1500c72a85d2d113b73b694c4133",
+    "site-lib/fonts/mathjax-69e45ca329dd.woff2": "69e45ca329dd2fcc3671dc20884f2baf29348a43833104266be098eba544fda2",
+    "site-lib/fonts/mathjax-82c82a2e0c8b.woff2": "82c82a2e0c8bc89421ce9cbb4ecea806c8ceec4b4fd0269726b9439ca853b365",
+    "site-lib/fonts/mathjax-d0c95edf7b32.woff2": "d0c95edf7b3223c8e66fcb4b6faaf74fc3376eea59c20f23677f4d54905a356e",
+    "site-lib/fonts/mathjax-6cb008e93488.woff2": "6cb008e934883d1f4652562276469dfc1ade06ee4ceebd6979e79b1c98472b47",
+    "site-lib/fonts/mathjax-303b28cdca9c.woff2": "303b28cdca9c064d93dc1672b843933ab20e28f777adb08b9eafa6f442f074d7",
+    "site-lib/fonts/mathjax-e0d564a939fc.woff2": "e0d564a939fce2e4d0c09a86f0dc936c2a9cdb42e44eb264dbc5ef01d71e179c",
+    "site-lib/fonts/mathjax-4a2e4827bad8.woff2": "4a2e4827bad85a9ae5fe906f179ccfce154bfc29e19115ceb8d7f1f6e8ce31cd",
+    "site-lib/fonts/mathjax-b6dfb310dd7b.woff2": "b6dfb310dd7b5c059e9b748b4766fcdd6fa0005c17d9229f3bb1bd095acfae1a",
+    "site-lib/fonts/mathjax-82e8abfaecf0.woff2": "82e8abfaecf005f639e18b1e7dece8700c56df76eac8ea94e4b5915bedee7567",
+    "site-lib/fonts/mathjax-0e9f0e5baa09.woff2": "0e9f0e5baa090d44c728e2ddaa39b4c465ff15d349e3547488503eb318628a45",
+    "site-lib/fonts/mathjax-98b20475232f.woff2": "98b20475232f47749126ae098177b5c71d3b6512e068efedb3a912c2c8f6ed0f",
+    "site-lib/fonts/mathjax-1faef92bbe44.woff2": "1faef92bbe440c459bcea0b7530044827749507e39bf49248c2203f9eb422bce",
+    "site-lib/fonts/mathjax-03de6a3467f8.woff2": "03de6a3467f88e79425df3505a936e6b336efbc5c0421f40905d1d52fddbe4ed",
+    "site-lib/fonts/mathjax-01bc6e82013d.woff2": "01bc6e82013dca9c1cbb132c353a0f63add97325bb979bba5e619591525c2a6e",
+    "site-lib/fonts/mathjax-62f1a8f7ced5.woff2": "62f1a8f7ced532d6ab1f6af3a5b3363eb6c774fe40d29092bbea27ac95a9f89e",
+    "site-lib/fonts/mathjax-4bd1e8cefc7c.woff2": "4bd1e8cefc7cf1b9aa2f2c6beb01ecef7ebf5d1f81d82f954a9688360a399fc3",
+    "site-lib/fonts/mathjax-bd9d7db0883d.woff2": "bd9d7db0883dc1adca7ed1c20042609e4e3d1f07f106b6bc8eeeab49d560393b",
+    "site-lib/fonts/mathjax-07165a0e10ae.woff2": "07165a0e10ae4b6b24db34b28d0a8c46bd4ac53b4d1682098ee7a3e88d2f1c83",
+    "site-lib/fonts/mathjax-b20a0e1b0304.woff2": "b20a0e1b03043ae1a540857bdf1b220297ff0e78b110b1e15554addf91ad0937",
+    "site-lib/media/81d33d08a96d-4bb6ac751d1c5478ff3a.woff2": "81d33d08a96d99034c41b49ac980f63b353175f919db817d74e0405749af03db",
+    "site-lib/media/a7c6a118d17f-6155340132a851f6089e.svg": "a7c6a118d17f6a296037b519e9891e08951de59c289fe41ec2596a63c3b28516",
+    "site-lib/media/a44ac4cbf79c-2308ab1944a6bfa5c5b8.svg": "a44ac4cbf79c6765f4bdc3a0dc3fb51b56ed5eb4679177f0a40f04b63b3e3a3c",
+    "site-lib/media/6e5dd0494f63-70cc7ff27245e82ad414.ttf": "6e5dd0494f63d85970156cd54b6ac568b82a392d135db08bbf5cc3048d489aa9",
+    "site-lib/media/ba51b929995b-454577c22304619db035.ttf": "ba51b929995b3088ff1932d9d6835c90ccf304b296a3b8e103d2e95b958109ee",
+    "site-lib/media/839f42df29a5-52ac8f3034507f1d9e53.ttf": "839f42df29a5a83470888b9a3aa4064fc1bc35e6616bb542226d89086f019ec5",
+    "site-lib/media/a0cfec834df5-05b618077343fbbd92b7.ttf": "a0cfec834df50e21cdb3d15bf93e87ed033d8c26693f9ede6efe24325ae22c9e",
+    "site-lib/media/693b77d4f32e-c504db5c06caaf7cdfba.woff2": "693b77d4f32ee9b8bfc995589b5fad5e99adf2832738661f5402f9978429a8e3",
+    "site-lib/media/e564f652916d-01dcbad1bac635f9c9cd.woff2": "e564f652916db6c139570fefb9524a77c4d48f30c92928de9db19b6b5c7a262a",
+    "site-lib/fonts/CMU-Serif-3deb3c529a46.ttf": "3deb3c529a46d391eaad2e2b896824013d4e1922419c91ab6cb75c40db97c3f2",
+    "site-lib/fonts/CMU-Serif-643afcc8fc9a.ttf": "643afcc8fc9a526cd060f37459f050f03156f0a593779d87b8ad21f937757a31",
+    "site-lib/fonts/CMU-Serif-acd86b280644.ttf": "acd86b2806441b277361e1dfe2d64c26038ba727c6e69fbdfff6ddb8f6446478",
+    "site-lib/fonts/CMU-Serif-570dbbba9377.ttf": "570dbbba9377d7d2fbdf544ae0dfd751614d90446a6229e7cf4b6a4cf97349ab",
+    "site-lib/fonts/CMU-Serif-f4c5e2fba77e.ttf": "f4c5e2fba77eab91e39a80ae7455404654bf3042b85b197e76b253175fe67edf",
+    "site-lib/fonts/CMU-Serif-b962c7b68b9b.ttf": "b962c7b68b9bd4728133c6d45dfa7a6f3248c30d8505fa8606ad5c8cf53c04d2",
+    "site-lib/fonts/ELEYANG-Focus专注体-2134e892cd29.ttf": "2134e892cd2958ddd45c17c22f191b5ef6ad840f19367d2d844f219e327c21ca",
+    "site-lib/fonts/ELEYANG-Focus专注体-58f6377b81e0.ttf": "58f6377b81e06b2793ecef9da8306e70bcdf2f32891570cc4ed80446bf2e05fa",
+    "site-lib/fonts/华文中宋-e822a3f2859a.ttf": "e822a3f2859a6cc982f04c6ad1eabc18371ce26d6874b710188a30c35dced0f1",
     "index.html": "0c4a96d27971ebf0a58d4617a76fa5fa88fcee99e5b7d93f0d03e7261969517d",
     "高中数学/前言.html": "1ebb3fef0abadfde2b93b09e59176bc34876db1c5644f829dd32e718e13692ae",
     "高中数学/基本逻辑用语/命题.html": "3ab894a9d5cb825e4f5da28636b9afd61b73e61ca5a5ccffdb781254b8d551d8",
@@ -62,9 +119,7 @@
     "高中数学/概率基础/随机事件与样本空间.html": "6fa6356b6eff7b951882f692164923b3471d75e54ddc1ba2e42f4b8ea291ac2b",
     "高中数学/概率基础/随机事件的概率.html": "a00be15ed2f53322a1041221ca2d33ba750e8b24fc7ac49b44dc3ff09f27df2d",
     "高中数学/概率基础/互斥事件与独立事件.html": "a0c08ba2aee4c84168dd972f15cb17d4a59bd50f0a047b998152a5aeb8ada54f",
-    "高中数学/参考资料.html": "1782bb060a721f9a1f6b5f4302150b72a0a92e5d479813509e9dc3f1bf831938",
     "数理逻辑/前言.html": "21934bb295c3d6a77074aeb33b55d88db1dcfa7c712cb7ef8d72d7566ca6d136",
-    "数理逻辑/参考资料.html": "6e6765da6f408ec15aaf165fee05289802907e87ea7514052c7e11f7d270f744",
     "集合论/前言.html": "3ea975e98b2ba214fe9910c718b9a073e373d7875e6894baf7a65555e4ccc32a",
     "集合论/zfc-集合论公理.html": "ff0bc299dff89063dd5f919758b77022b196a9b58eaa360f393533b9462214ac",
     "集合论/二元关系.html": "0eb213f591c836e10b9f6c92e12f7c194337bdf7521010a43294f05a42b88186",
@@ -72,21 +127,16 @@
     "集合论/基数.html": "d8ee46f2b3910047c9d2577bbf6b7f16697974947e4f85f0528e2cfc56de18a2",
     "集合论/数集.html": "32276c4d755765166837f33a3eff547ec2e1d0ccb22a44578bac65c860527dd1",
     "集合论/归纳法原理.html": "8abef7aba0c3fef7740d661992c33b3688a64ddd24fca0c84e20081c46dd7ed0",
-    "集合论/参考资料.html": "f2b032f7840be075c1863ca34179568d98e6a333f818d4c7130ac53ced893632",
     "初等数论/前言.html": "f3025c1742020e04b6ec8b20db524387ca55dd58ced6283b58c0499377b31e72",
     "初等数论/整数的可除性.html": "c71d834a2133b2469977e0aa59297f87d5cea74a5e98467a000b57340e05375b",
     "初等数论/不定方程.html": "818a7c892b4a8d876fca72af38cbbe7692210388947ee7ae672ef286357f9a64",
-    "初等数论/参考资料.html": "00dfc55b8085c524e9319bd56d1cf04fdebe04b691a1db4e1550cda34e5cf368",
     "解析几何/前言.html": "4fe39c345508d8f6bb1e699bb5d48bc1b953b6c0e2cd6a01dc0ae794aa09e37c",
-    "解析几何/参考资料.html": "35b66b3db79a1ea1fe0e3a453cdfaf89fdee06c72aef54ca4c22981498e5f892",
     "微积分/前言.html": "2b11ade205ca36101e8d88467d7f668dfd919efb96342f47f5345b432008b716",
-    "微积分/参考资料.html": "06b40919f5b86a4bbbaf7e1a7817d8a46dca15ba2a4e65685e9052ead7746bf3",
     "线性代数/前言.html": "adc8fec7a9c1de6c3e900a509ec04535e1fdeddfade48cd3f4aff9af173077a1",
     "线性代数/行列式/行列式的定义.html": "789a87a06d47c697ff8a8fde248767ed694d65261c59ac78f3a36e5258336b42",
     "线性代数/行列式/子式与基本性质.html": "f2d98a3f486b68fc9bf53aec5058853b8f46043ceebf33ffde8226d25f156c4b",
     "线性代数/行列式/laplace-定理.html": "d7a9db476588cd1bba668362f690ac66bfac271f2b9fe70b3adddca53a642a7f",
     "线性代数/行列式/行列式的计算.html": "a2637fdb3ed8dbae466ba1f9f4d4d74fd07233253bcdd46c19ae89b2fb7ba957",
-    "线性代数/参考资料.html": "484f94134b40ad7bd9efcc8763cf1c03da744bb8c338a22838f00d20c02a546f",
     "常微分方程/前言.html": "59485eb84e3fa0932b4cfce19ba1e442544603264c1ec87c15394dbb8600aac0",
     "复变函数/前言.html": "26f57b1dc6f71fa7886c64ee35457b83489c1e169fade54aeb370f2f98b8d67a",
     "抽象代数/前言.html": "c65220f1a0a97dd9ab68d9a2de5ef836e3abffb3f17de19e227e226c90a7977f",
@@ -103,7 +153,6 @@
     "抽象代数/模/平坦模.html": "ca1a6651d46ea3539989e76cfae4561ba8a08beaeb1ee28510a0e5906f356134",
     "抽象代数/模/代数-张量代数-对称代数-外代数.html": "ad70ff32b94e0039ab1102f1dbdb624e66be20731b16c2c9a5d860528cf0cadd",
     "抽象代数/模/分次模与分次代数.html": "7b988065cc7f19307154b0b378309b9a10ae38ac31f0675d55c0a0c5b0dab5d7",
-    "抽象代数/参考资料.html": "afce027c9db968d0018422ac66715eb70433a2b73db9b8fd75831af873151068",
     "拓扑学/前言.html": "7f767effa87fc49e0654ca5f4118f3ffad773d8308e577f21c459eb881681ece",
     "实分析/前言.html": "5fdc3179786750031b3df7a8fa89000abaa716af79701e5850ae89c65e6938a7",
     "范畴论/前言.html": "2530d3a10b55746fa108fda6e70012fae3086e139b6bc2e0e7553953eba12680",
@@ -116,7 +165,6 @@
     "范畴论/乘积范畴与伴随函子.html": "d9255a1004a2895b5869c80f60f319df6144947d2fb08d77cd73377873d572d0",
     "范畴论/态射的基本性质.html": "88c50f671010cf6751c8bef7738972d8ac145e302f7b771e1eb1d6d783a12100",
     "范畴论/abel-范畴与加性范畴.html": "b6ca45fb4b865db348d495012c403ebc61603fe0eacc7859cba74e24575f8ac3",
-    "范畴论/参考资料.html": "05606a6d3ba9f3a71ae2425a8e6359934ad46fcd180769718db2b27f76637193",
     "同调代数/前言.html": "51ffc8d76b1e02c7ffb8eb423b9ebba642f40f0be0657b04491aab929c4e041e",
     "代数拓扑/前言.html": "1aead507436239d38a9ec20af08ed294766cd7a14750f89c0e8a3d826e07cce2",
     "光滑流形/前言.html": "5d04ae15086b5366a6a7ca75810d32330d52b9c1ca02684c784d7fa5b6748dfe",
@@ -134,7 +182,6 @@
     "半单-lie-代数及其表示/最高权模的进一步讨论/未命名.html": "116259415b50d38c631eef0bc017d1fe6fee6c13f4d6bce62ef9953c07521acd",
     "半单-lie-代数及其表示/转移函子/未命名.html": "9774472634905f88f73750351cc004e2749f4142431fc9b119aab7b9243435da",
     "半单-lie-代数及其表示/kazhdan-lusztig-理论/未命名.html": "3a5f3c500ad6a39ab8c4e1add7a635d9b089accc04e40dfb5e06afc1d530e532",
-    "半单-lie-代数及其表示/参考资料.html": "86704a25c91b4f359b0d48e82a22c4d6ccd1d63024d6d97db4a5e515801281ca",
     "代数几何/前言.html": "80d875e07a48217e520fa77b9cfb7144d6a51186428b734cbe8b72dbb06e30cc",
     "代数几何/交换代数/素理想与极大理想.html": "c19dc987e10f2a3a2b6b80b61cc9e51bcd8db1206ca45493e17fbf3a6ffd1726",
     "代数几何/交换代数/理想的和-交-积-商.html": "617f93b88da6dabf90c894c76fef193803cc001a51485a1a6ad752cc26f94817",
@@ -174,7 +221,6 @@
     "代数几何/范畴化/相伴层.html": "c3434c47cfb7fddf237dfac1667700d82d120de8cadc2264502b865fdc4ea4a5",
     "代数几何/范畴化/仿射簇的范畴化.html": "e1fe429a9fed05dc6d5603e5575a5699194c1aee162d7d289d8e782b21566c33",
     "代数几何/范畴化/概形的范畴化.html": "1086636ebcf64d80433b5daeea8b4db5542099c3af34bc29903049f3d201b655",
-    "代数几何/参考资料.html": "554635383836357230557bfc2aff83f00ff47a1b346bc388f6d1516c65165be5",
     "代数群及其表示/前言.html": "1ec895f2f43a8da50042a09453e3a6b1a66db90310b34171177e70d49a673c34",
     "代数群及其表示/仿射代数群的基本概念/仿射代数群的定义.html": "983560f966dec88227c672ef1c33c144324cbbbb9452ac1d91244dcea0fd4849",
     "代数群及其表示/仿射代数群的基本概念/经典仿射代数群.html": "ce3b1b0cd839a758020f9ffe829866ae254e0728bce362c1aaf56d3735e626f3",
@@ -189,7 +235,6 @@
     "代数群及其表示/可对角化代数群/可对角化代数群.html": "8eed0e1d2ab094269761d312c9218ef1042d626d34a2fc66953c2dbf940479a2",
     "代数群及其表示/可对角化代数群/特征标群.html": "07ff6c693418f239bb4615895cbdca4a634d78d19b1f03a698daef4cf936cfbe",
     "代数群及其表示/可对角化代数群/环面.html": "6cfd9e32bcc4fe1355710fb84edcbc247e750c55e31d31b99553f754b26d88af",
-    "代数群及其表示/参考资料.html": "10dcc513a93fac740ebde88a188e84a3414b2f7a8694fd446e10904a4f136ccd",
     "模-lie-代数及其表示/前言.html": "68c7506b54d117efd657187458688101bfc359289ec592e7534363c14ffe0de9",
     "模-lie-代数及其表示/chevalley-基与-kostant-ℤ-形式/chevalley-基.html": "59248782eb4ffaded317e6f7c4449741bd48c555cb892be8e229fee40e7b1d7c",
     "模-lie-代数及其表示/chevalley-基与-kostant-ℤ-形式/kostant-ℤ-形式.html": "52b4e70257b8ddcc8784c39b8e9bb59318b46c4c4d8b1e416fea760d9b59b31b",
@@ -205,9 +250,7 @@
     "lie-超代数及其表示/基本典型-lie-超代数/基本典型-lie-超代数的根系.html": "9fa74df0d4979dfd1b675de5c5e397a1cafa046bf1495df055c4fc6ba248197a",
     "lie-超代数及其表示/基本典型-lie-超代数/偶反射与奇反射.html": "ccb1608aa957960ac910f64ef28eeea78c400c77f169c277cd3f92e7c11c55f6",
     "lie-超代数及其表示/基本典型-lie-超代数/超-weyl-群.html": "b1715fd82f972bc6b86a465e84091de29265b051751d56ec3317ed198b70476f",
-    "lie-超代数及其表示/参考资料.html": "2dbbd0dee7ee0ba551f13f7073fd2bd91a168ca33354024525664e75bd4e3c06",
     "模-lie-超代数及其表示/前言.html": "5968f12ae5e6179db27747ea1c0f693be49aaf44110b47f6e70a5881428545ba",
-    "模-lie-超代数及其表示/参考资料.html": "ca279bfaf4965149e7bcba11bb7aa238fcae3d8fc33c8a5789a5b82df57477a8",
     "chevalley-超群的-r-阶-frobenius-核的表示/前言.html": "928b9bdd173126363622f8a99a2a57f0530378eac5827c80ac9f7b20a9d493fb",
     "chevalley-超群的-r-阶-frobenius-核的表示/限制-lie-超代数与-chevalley-超群.html": "13af9f1e9b3b03f0ec19ed1b2f2b22867a6f7b792880aa1bd78d859c03c1157c",
     "chevalley-超群的-r-阶-frobenius-核的表示/分次结构.html": "4b89634f133792cb3280d4aa133e66761d36ef6b62db2b3e99eafb234619f7c6",
@@ -223,7 +266,6 @@
     "chevalley-超群的-r-阶-frobenius-核的表示/r-阶情形同态空间的计算.html": "d86cb89d289ee5f7cd6194c946042e0cd4160ab39eaacddc8fffeafda060cdbb",
     "chevalley-超群的-r-阶-frobenius-核的表示/r-阶情形的正合列与特征标公式.html": "09f5e1ab9d2a8f3974ca7a77bd948468563c69a5a51b40291a9644d78cab5315",
     "chevalley-超群的-r-阶-frobenius-核的表示/(dist(g_r)-t)-模范畴的基变换.html": "f9b447b0e0f296a40ba1d65754b8f8bbd534e784bee1df052decf734915c599a",
-    "chevalley-超群的-r-阶-frobenius-核的表示/参考资料.html": "627d678fae6088caaa2a3cd9a27ea68915450741420646eec2d65cac2f7469aa",
     "attachments/Attachments/Images/AxGlyph/Venn 图示例.svg": "ebf04ade9be234df507377e1aeab31f0f117215a6257aadc2e50a30ebd076a98",
     "attachments/Attachments/Images/AxGlyph/辗转相除法举例.svg": "c9e8e67b32f04505f5d3a28484b94cef9a16d33fe411ae75e6739c924c1e44e7",
     "attachments/Attachments/Images/AxGlyph/余像余核关系图.svg": "ad52d1b49d8e17d07d1cc9d1481ea666a5f124b9ff60d676c49da1c43fa582e2",
@@ -275,49 +317,7 @@
     "attachments/Attachments/Images/Mathcraft/TikZCD/Hopf 代数结合律.svg": "48d4665fe87551a31dd1e8c1345407b9687b67980f79601e28facd56d483f82e",
     "attachments/Attachments/Images/Mathcraft/TikZCD/Hopf 代数单位元.svg": "8c5ec456da374936d4ee44dd8731845b11160ba34828545a66cb5db23cb5e0f5",
     "attachments/Attachments/Images/Mathcraft/TikZCD/Hopf 代数逆元.svg": "9a2281c707b8839606b1b9effd6cdf13ce0c161264eb05501a9d9e698903b35f",
-    "attachments/Attachments/Images/Mathcraft/TikZCD/核像互补表.svg": "cec7e39d6d7a5d1cead337aae145d8eb79f01687e9072a529646a8b95c523922",
-    "site-lib/fonts/mathjax-2ea308c69f13.woff2": "2ea308c69f139e9ee7bc452e12a449c13e3b9ce4c08aebc4e86e15df232a26e0",
-    "site-lib/fonts/mathjax-f9054e3dd268.woff2": "f9054e3dd268155cb38c708ef7b7c7c03e83ac3723afcb65ae65a37bbb301f4e",
-    "site-lib/fonts/mathjax-2c146f72c9a3.woff2": "2c146f72c9a345aa282398a752d03af71d83a011f3d067297b533a31f0c5f5cb",
-    "site-lib/fonts/mathjax-4f03a0d86ff0.woff2": "4f03a0d86ff005f12cbb0ffd162bae0766415e48e07ed3fa5970e685594de15d",
-    "site-lib/fonts/mathjax-fad3b88ec7aa.woff2": "fad3b88ec7aac4959e3de19044931682bd4d1500c72a85d2d113b73b694c4133",
-    "site-lib/fonts/mathjax-69e45ca329dd.woff2": "69e45ca329dd2fcc3671dc20884f2baf29348a43833104266be098eba544fda2",
-    "site-lib/fonts/mathjax-82c82a2e0c8b.woff2": "82c82a2e0c8bc89421ce9cbb4ecea806c8ceec4b4fd0269726b9439ca853b365",
-    "site-lib/fonts/mathjax-d0c95edf7b32.woff2": "d0c95edf7b3223c8e66fcb4b6faaf74fc3376eea59c20f23677f4d54905a356e",
-    "site-lib/fonts/mathjax-6cb008e93488.woff2": "6cb008e934883d1f4652562276469dfc1ade06ee4ceebd6979e79b1c98472b47",
-    "site-lib/fonts/mathjax-303b28cdca9c.woff2": "303b28cdca9c064d93dc1672b843933ab20e28f777adb08b9eafa6f442f074d7",
-    "site-lib/fonts/mathjax-e0d564a939fc.woff2": "e0d564a939fce2e4d0c09a86f0dc936c2a9cdb42e44eb264dbc5ef01d71e179c",
-    "site-lib/fonts/mathjax-4a2e4827bad8.woff2": "4a2e4827bad85a9ae5fe906f179ccfce154bfc29e19115ceb8d7f1f6e8ce31cd",
-    "site-lib/fonts/mathjax-b6dfb310dd7b.woff2": "b6dfb310dd7b5c059e9b748b4766fcdd6fa0005c17d9229f3bb1bd095acfae1a",
-    "site-lib/fonts/mathjax-82e8abfaecf0.woff2": "82e8abfaecf005f639e18b1e7dece8700c56df76eac8ea94e4b5915bedee7567",
-    "site-lib/fonts/mathjax-0e9f0e5baa09.woff2": "0e9f0e5baa090d44c728e2ddaa39b4c465ff15d349e3547488503eb318628a45",
-    "site-lib/fonts/mathjax-98b20475232f.woff2": "98b20475232f47749126ae098177b5c71d3b6512e068efedb3a912c2c8f6ed0f",
-    "site-lib/fonts/mathjax-1faef92bbe44.woff2": "1faef92bbe440c459bcea0b7530044827749507e39bf49248c2203f9eb422bce",
-    "site-lib/fonts/mathjax-03de6a3467f8.woff2": "03de6a3467f88e79425df3505a936e6b336efbc5c0421f40905d1d52fddbe4ed",
-    "site-lib/fonts/mathjax-01bc6e82013d.woff2": "01bc6e82013dca9c1cbb132c353a0f63add97325bb979bba5e619591525c2a6e",
-    "site-lib/fonts/mathjax-62f1a8f7ced5.woff2": "62f1a8f7ced532d6ab1f6af3a5b3363eb6c774fe40d29092bbea27ac95a9f89e",
-    "site-lib/fonts/mathjax-4bd1e8cefc7c.woff2": "4bd1e8cefc7cf1b9aa2f2c6beb01ecef7ebf5d1f81d82f954a9688360a399fc3",
-    "site-lib/fonts/mathjax-bd9d7db0883d.woff2": "bd9d7db0883dc1adca7ed1c20042609e4e3d1f07f106b6bc8eeeab49d560393b",
-    "site-lib/fonts/mathjax-07165a0e10ae.woff2": "07165a0e10ae4b6b24db34b28d0a8c46bd4ac53b4d1682098ee7a3e88d2f1c83",
-    "site-lib/fonts/mathjax-b20a0e1b0304.woff2": "b20a0e1b03043ae1a540857bdf1b220297ff0e78b110b1e15554addf91ad0937",
-    "site-lib/media/a44ac4cbf79c-2308ab1944a6bfa5c5b8.svg": "a44ac4cbf79c6765f4bdc3a0dc3fb51b56ed5eb4679177f0a40f04b63b3e3a3c",
-    "site-lib/media/a7c6a118d17f-6155340132a851f6089e.svg": "a7c6a118d17f6a296037b519e9891e08951de59c289fe41ec2596a63c3b28516",
-    "site-lib/media/81d33d08a96d-4bb6ac751d1c5478ff3a.woff2": "81d33d08a96d99034c41b49ac980f63b353175f919db817d74e0405749af03db",
-    "site-lib/media/6e5dd0494f63-70cc7ff27245e82ad414.ttf": "6e5dd0494f63d85970156cd54b6ac568b82a392d135db08bbf5cc3048d489aa9",
-    "site-lib/media/ba51b929995b-454577c22304619db035.ttf": "ba51b929995b3088ff1932d9d6835c90ccf304b296a3b8e103d2e95b958109ee",
-    "site-lib/media/839f42df29a5-52ac8f3034507f1d9e53.ttf": "839f42df29a5a83470888b9a3aa4064fc1bc35e6616bb542226d89086f019ec5",
-    "site-lib/media/a0cfec834df5-05b618077343fbbd92b7.ttf": "a0cfec834df50e21cdb3d15bf93e87ed033d8c26693f9ede6efe24325ae22c9e",
-    "site-lib/media/e564f652916d-01dcbad1bac635f9c9cd.woff2": "e564f652916db6c139570fefb9524a77c4d48f30c92928de9db19b6b5c7a262a",
-    "site-lib/media/693b77d4f32e-c504db5c06caaf7cdfba.woff2": "693b77d4f32ee9b8bfc995589b5fad5e99adf2832738661f5402f9978429a8e3",
-    "site-lib/fonts/CMU-Serif-3deb3c529a46.ttf": "3deb3c529a46d391eaad2e2b896824013d4e1922419c91ab6cb75c40db97c3f2",
-    "site-lib/fonts/CMU-Serif-643afcc8fc9a.ttf": "643afcc8fc9a526cd060f37459f050f03156f0a593779d87b8ad21f937757a31",
-    "site-lib/fonts/CMU-Serif-acd86b280644.ttf": "acd86b2806441b277361e1dfe2d64c26038ba727c6e69fbdfff6ddb8f6446478",
-    "site-lib/fonts/CMU-Serif-570dbbba9377.ttf": "570dbbba9377d7d2fbdf544ae0dfd751614d90446a6229e7cf4b6a4cf97349ab",
-    "site-lib/fonts/CMU-Serif-f4c5e2fba77e.ttf": "f4c5e2fba77eab91e39a80ae7455404654bf3042b85b197e76b253175fe67edf",
-    "site-lib/fonts/CMU-Serif-b962c7b68b9b.ttf": "b962c7b68b9bd4728133c6d45dfa7a6f3248c30d8505fa8606ad5c8cf53c04d2",
-    "site-lib/fonts/ELEYANG-Focus专注体-2134e892cd29.ttf": "2134e892cd2958ddd45c17c22f191b5ef6ad840f19367d2d844f219e327c21ca",
-    "site-lib/fonts/ELEYANG-Focus专注体-58f6377b81e0.ttf": "58f6377b81e06b2793ecef9da8306e70bcdf2f32891570cc4ed80446bf2e05fa",
-    "site-lib/fonts/华文中宋-e822a3f2859a.ttf": "e822a3f2859a6cc982f04c6ad1eabc18371ce26d6874b710188a30c35dced0f1"
+    "attachments/Attachments/Images/Mathcraft/TikZCD/核像互补表.svg": "cec7e39d6d7a5d1cead337aae145d8eb79f01687e9072a529646a8b95c523922"
   },
   "state": {
     "structureSignature": "21da3d430512ee01fa4f3ffd15c6844b688c2a6556e532fc8ebf9637a1f3eecd",
@@ -500,7 +500,7 @@
       },
       "Documents/数学/高中数学/参考资料.md": {
         "route": "高中数学/参考资料.html",
-        "signature": "473698b3bbda21fb25586b6937d45b7cd684178a8c0b93e23710b9fafb9fbeb3"
+        "signature": "9f638ed0432d01b2cb0f68f16a1f985c526c2c6b2ef62fca0f5de26c1f733583"
       },
       "Documents/数学/数理逻辑/前言.md": {
         "route": "数理逻辑/前言.html",
@@ -508,7 +508,7 @@
       },
       "Documents/数学/数理逻辑/参考资料.md": {
         "route": "数理逻辑/参考资料.html",
-        "signature": "2d87c515b670f9e4c820139951f614f1c94bd19e67871ad37ff1911425d59a78"
+        "signature": "2b9588503d45b6f9754fee43d2b26b8a308b0cd503fec6e224162ce021ff69aa"
       },
       "Documents/数学/集合论/前言.md": {
         "route": "集合论/前言.html",
@@ -540,7 +540,7 @@
       },
       "Documents/数学/集合论/参考资料.md": {
         "route": "集合论/参考资料.html",
-        "signature": "5aff098e1ea7aa3689f69a65209bd3eb05c8cc2415b0f672feab65f590018d48"
+        "signature": "c47785b039bdc76d3d502bb4efb7e180fc844829b154bee24b9426cdae05daf4"
       },
       "Documents/数学/初等数论/前言.md": {
         "route": "初等数论/前言.html",
@@ -556,7 +556,7 @@
       },
       "Documents/数学/初等数论/参考资料.md": {
         "route": "初等数论/参考资料.html",
-        "signature": "4040cf26fd8923080b5cc4791172d39f4b936b085fa000ca6ffcddd493efaea1"
+        "signature": "f1f4025c1dc3f95cc0a3ddf32eb17ef047c39881fed9669118d50fb94487f919"
       },
       "Documents/数学/解析几何/前言.md": {
         "route": "解析几何/前言.html",
@@ -564,7 +564,7 @@
       },
       "Documents/数学/解析几何/参考资料.md": {
         "route": "解析几何/参考资料.html",
-        "signature": "faf38eedaa02b40308b28b249745d7d3b66bf07cec84472aa0a32da29f71ec91"
+        "signature": "d6aa108fbac92a537809f9b53c331e183d4e36577668d043ce49f4183593c664"
       },
       "Documents/数学/微积分/前言.md": {
         "route": "微积分/前言.html",
@@ -572,7 +572,7 @@
       },
       "Documents/数学/微积分/参考资料.md": {
         "route": "微积分/参考资料.html",
-        "signature": "c6229367f98757f8d650b93e1b66fccdd42fef9a8d1bf534844d9cbe81706db3"
+        "signature": "1e38e6806861a26328958594112df1285214207af38fc4b4df425bf0770ff9d9"
       },
       "Documents/数学/线性代数/前言.md": {
         "route": "线性代数/前言.html",
@@ -596,7 +596,7 @@
       },
       "Documents/数学/线性代数/参考资料.md": {
         "route": "线性代数/参考资料.html",
-        "signature": "c0b40fd729cc69b977a853d564ac54202f5736f5b97b767ec10bddda834b5876"
+        "signature": "9585b6a341a27c7eb855cabe9e98398705a39644e58c226d1b92b104ea542dab"
       },
       "Documents/数学/常微分方程/前言.md": {
         "route": "常微分方程/前言.html",
@@ -664,7 +664,7 @@
       },
       "Documents/数学/抽象代数/参考资料.md": {
         "route": "抽象代数/参考资料.html",
-        "signature": "a26ed48f99daa1791101b67ed742cea8c07fc29ae706fde28adc0b2612b62030"
+        "signature": "5ae36ffdc48fefabfe415bb1eb81c6dbf9a07824ba4406b95485c2c1ae1125bf"
       },
       "Documents/数学/拓扑学/前言.md": {
         "route": "拓扑学/前言.html",
@@ -716,7 +716,7 @@
       },
       "Documents/数学/范畴论/参考资料.md": {
         "route": "范畴论/参考资料.html",
-        "signature": "5839c9ed1a437d8067ea68ddd21b34b7e42841de8df4d7a643c3a1657d6d1dc8"
+        "signature": "debff53f987823be2f4b2780cac0644eb1410e27886d1169956744740f35b054"
       },
       "Documents/数学/同调代数/前言.md": {
         "route": "同调代数/前言.html",
@@ -788,7 +788,7 @@
       },
       "Documents/数学/半单 Lie 代数及其表示/参考资料.md": {
         "route": "半单-lie-代数及其表示/参考资料.html",
-        "signature": "08e0bc42e127b470723fd6bc6e30fd3117c9a672274bad3ea739b84857cd4fec"
+        "signature": "c08b8c380b9fca1d0d3d86f00d462ad4f3b9feb4386fba0e6a52302ef903d9d8"
       },
       "Documents/数学/代数几何/前言.md": {
         "route": "代数几何/前言.html",
@@ -948,7 +948,7 @@
       },
       "Documents/数学/代数几何/参考资料.md": {
         "route": "代数几何/参考资料.html",
-        "signature": "91b08726db237f57b8cecf57bf98cf76bbb5c187287866a645c724cf207f99a7"
+        "signature": "11604ab61affb06297f6711086ff18e04c2c50a27668402bb69fc6b48453a138"
       },
       "Documents/数学/代数群及其表示/前言.md": {
         "route": "代数群及其表示/前言.html",
@@ -1008,7 +1008,7 @@
       },
       "Documents/数学/代数群及其表示/参考资料.md": {
         "route": "代数群及其表示/参考资料.html",
-        "signature": "1dba289ca93a8509c498faa0c01aecdd1f1f68b7f7b517c22e5b7bb7df6ad58f"
+        "signature": "a791d9b6994ba6037b628cdde2aeda7264e241ae204fbe16392f3b4e9f25f936"
       },
       "Documents/数学/模 Lie 代数及其表示/前言.md": {
         "route": "模-lie-代数及其表示/前言.html",
@@ -1072,7 +1072,7 @@
       },
       "Documents/数学/Lie 超代数及其表示/参考资料.md": {
         "route": "lie-超代数及其表示/参考资料.html",
-        "signature": "6d2b3c0513d9e92e4b03ea1c2cd5acc6d8cf9bc9f9f34bb0f36a92eae01d4e10"
+        "signature": "cbf91568e79e6174027201f062319146ed1b56e59431d7b96edd4079539e0564"
       },
       "Documents/数学/模 Lie 超代数及其表示/前言.md": {
         "route": "模-lie-超代数及其表示/前言.html",
@@ -1080,7 +1080,7 @@
       },
       "Documents/数学/模 Lie 超代数及其表示/参考资料.md": {
         "route": "模-lie-超代数及其表示/参考资料.html",
-        "signature": "a0d6b1de910b0bfbcb026788af3386e440bd6150eed5134637733139009bd44a"
+        "signature": "8654458b21493f8be5b53db08211f9835a93c3f7a7d3f4a7a7e7afe07ec07b2f"
       },
       "Documents/数学/Chevalley 超群的 r 阶 Frobenius 核的表示/前言.md": {
         "route": "chevalley-超群的-r-阶-frobenius-核的表示/前言.html",
@@ -1144,7 +1144,7 @@
       },
       "Documents/数学/Chevalley 超群的 r 阶 Frobenius 核的表示/参考资料.md": {
         "route": "chevalley-超群的-r-阶-frobenius-核的表示/参考资料.html",
-        "signature": "be73791c870fdc3f91f9dff323d99b688426e014cccbe5209145aaddadeb3bc5"
+        "signature": "ad58843785961bd711a6d125eceeb813bb7691325d6c3e7fb0d698c07ae776b8"
       }
     }
   }
