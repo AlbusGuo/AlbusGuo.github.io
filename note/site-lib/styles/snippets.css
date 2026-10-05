@@ -773,11 +773,11 @@ body:not(.is-mobile) .workspace-tab-header.is-active .workspace-tab-header-inner
   }
 
   body:not(.is-mobile) .workspace-tab-header-inner-close-button:hover > svg {
-    transform: scale(1.13) rotate(4deg);
+    transform: scale(1.08) rotate(90deg);
   }
 
   body:not(.is-mobile) .workspace-tab-header-new-tab .clickable-icon:hover > svg {
-    transform: scale(1.13) rotate(4deg);
+    transform: scale(1.14) rotate(180deg);
   }
 
   body:not(.is-mobile) :is(
@@ -809,6 +809,33 @@ body:not(.is-mobile) .workspace-tab-header.is-active .workspace-tab-header-inner
   ) > svg {
     transform: none;
     animation: none;
+    transition: none;
+  }
+}
+/*#endregion */
+
+/*#region 图片悬停反馈 */
+@media (hover: hover) and (pointer: fine) {
+  body:not(.is-mobile) .markdown-reading-view img:not(.emoji) {
+    transform-origin: center;
+    transition: transform 180ms cubic-bezier(0.22, 1, 0.36, 1);
+  }
+
+  body:not(.is-mobile) .markdown-reading-view img:not(.emoji):hover {
+    transform: scale(1.022);
+  }
+
+  body:not(.is-mobile) .markdown-reading-view img:not(.emoji):active {
+    transform: scale(1.008);
+    transition-duration: 70ms;
+  }
+}
+/*#endregion */
+
+/*#region 减少动态效果 */
+@media (prefers-reduced-motion: reduce) {
+  body:not(.is-mobile) .markdown-reading-view img:not(.emoji) {
+    transform: none;
     transition: none;
   }
 }
