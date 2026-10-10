@@ -176,6 +176,7 @@ mjx-break[size="2"] { letter-spacing: -0.833em; }
 mjx-break[size="3"] { letter-spacing: -0.778em; }
 mjx-break[size="4"] { letter-spacing: -0.722em; }
 mjx-break[size="5"] { letter-spacing: -0.667em; }
+mjx-texatom { display: inline-block; text-align: left; }
 mjx-mi { display: inline-block; text-align: left; }
 mjx-c { display: inline-block; width: 0px; text-align: right; }
 mjx-utext { display: inline-block; padding: 0.75em 0px 0.2em; }
@@ -191,12 +192,50 @@ mjx-msub { display: inline-block; text-align: left; }
 mjx-msubsup { display: inline-block; text-align: left; }
 mjx-script { display: inline-block; padding-right: 0.05em; padding-left: 0.033em; }
 mjx-script > mjx-spacer { display: block; }
-mjx-texatom { display: inline-block; text-align: left; }
 mjx-mover { display: inline-block; text-align: left; }
 mjx-mover:not([limits="false"]) { padding-top: 0.1em; }
 mjx-mover:not([limits="false"]) > mjx-base, mjx-mover:not([limits="false"]) > mjx-over { display: block; text-align: left; }
 mjx-mspace { display: inline-block; text-align: left; }
+mjx-mpadded { display: inline-block; text-align: left; }
+mjx-rbox { display: inline-block; position: relative; }
 mjx-msup { display: inline-block; text-align: left; }
+mjx-mfrac { display: inline-block; text-align: left; }
+mjx-frac { display: inline-block; vertical-align: 0.17em; padding: 0px 0.22em; }
+mjx-frac[type="d"] { vertical-align: 0.04em; }
+mjx-frac[delims] { padding: 0px 0.1em; }
+mjx-frac[atop] { padding: 0px 0.12em; }
+mjx-frac[atop][delims] { padding: 0px; }
+mjx-dtable { display: inline-table; width: 100%; }
+mjx-dtable > mjx-line, mjx-dtable > mjx-row { font-size: 2000%; }
+mjx-dbox { display: block; font-size: 5%; }
+mjx-num { display: block; text-align: center; }
+mjx-den { display: block; text-align: center; }
+mjx-mfrac[bevelled] > mjx-num { display: inline-block; }
+mjx-mfrac[bevelled] > mjx-den { display: inline-block; }
+mjx-den[align="right"], mjx-num[align="right"] { text-align: right; }
+mjx-den[align="left"], mjx-num[align="left"] { text-align: left; }
+mjx-nstrut { display: inline-block; height: 0.054em; width: 0px; vertical-align: -0.054em; }
+mjx-nstrut[type="d"] { height: 0.217em; vertical-align: -0.217em; }
+mjx-dstrut { display: inline-block; height: 0.505em; width: 0px; }
+mjx-dstrut[type="d"] { height: 0.726em; }
+mjx-line { display: block; box-sizing: border-box; min-height: 1px; height: 0.06em; border-top: 0.075em solid; margin: 0.06em -0.1em; overflow: hidden; }
+mjx-line[type="d"] { margin: 0.18em -0.1em; }
+mjx-mrow { display: inline-block; text-align: left; }
+mjx-linestack, mjx-mrow[break-top] { display: inline-table; width: 100%; }
+mjx-linestack[break-align="bottom"], mjx-mrow[break-top][break-align="bottom"] { display: inline-block; }
+mjx-linestack[break-align="middle"], mjx-mrow[break-top][break-align="middle"] { vertical-align: middle; }
+mjx-linestack[break-align="center"], mjx-mrow[break-top][break-align="center"] { vertical-align: middle; }
+mjx-linestack[breakable] { display: inline; }
+mjx-linestack[breakable] > mjx-linebox { display: inline; }
+mjx-linestack[breakable] > mjx-linebox::before { white-space: pre; content: "\a "; }
+mjx-linestack[breakable] > mjx-linebox::after { white-space: normal; content: " "; letter-spacing: -0.999em; font-family: MJX-BRK; }
+mjx-linestack[breakable] > mjx-linebox:first-of-type::before { display: none; }
+mjx-linestack[breakable] > mjx-linebox:last-of-type::after { display: none; }
+mjx-linebox { display: block; }
+mjx-linebox[align="left"] { text-align: left; }
+mjx-linebox[align="center"] { text-align: center; }
+mjx-linebox[align="right"] { text-align: right; }
+mjx-linestrut { display: inline-block; height: 1em; vertical-align: -0.25em; }
 mjx-container[jax="CHTML"] > mjx-math.TEX-N[breakable] > * { font-family: MJX-TEX-ZERO, MJX-TEX-N; }
 .TEX-N { font-family: MJX-TEX-ZERO, MJX-TEX-N; }
 .TEX-B { font-family: MJX-TEX-ZERO, MJX-TEX-B; }
@@ -244,127 +283,143 @@ mjx-container[jax="CHTML"] > mjx-math.TEX-N[breakable] > * { font-family: MJX-TE
 @font-face { font-family: MJX-TEX-V; src: url("site-lib/fonts/mathjax-bd9d7db0883d.woff2") format("woff2"); }
 @font-face { font-family: MJX-TEX-S3; src: url("site-lib/fonts/mathjax-07165a0e10ae.woff2") format("woff2"); }
 @font-face { font-family: MJX-TEX-S4; src: url("site-lib/fonts/mathjax-b20a0e1b0304.woff2") format("woff2"); }
-mjx-c.mjx-c1D458 { padding: 0.694em 0.521em 0.011em 0px; }
-mjx-c.mjx-c63 { padding: 0.448em 0.444em 0.011em 0px; }
-mjx-c.mjx-c68 { padding: 0.694em 0.556em 0px 0px; }
-mjx-c.mjx-c61 { padding: 0.448em 0.5em 0.011em 0px; }
-mjx-c.mjx-c72 { padding: 0.442em 0.392em 0px 0px; }
-mjx-c.mjx-c2061 { padding: 0px; }
-mjx-c.mjx-c3D { padding: 0.367em 0.778em 0px 0px; }
-mjx-c.mjx-c1D45D { padding: 0.442em 0.503em 0.194em 0px; }
-mjx-c.mjx-c3E { padding: 0.54em 0.778em 0.04em 0px; }
-mjx-c.mjx-c32 { padding: 0.666em 0.5em 0px 0px; }
-mjx-c.mjx-c1D45F { padding: 0.442em 0.451em 0.011em 0px; }
-mjx-c.mjx-c31 { padding: 0.666em 0.5em 0px 0px; }
-mjx-c.mjx-c1D449 { padding: 0.683em 0.769em 0.022em 0px; }
-mjx-c.mjx-cAF { padding: 0.59em 0.5em 0px 0px; }
-mjx-c.mjx-c30 { padding: 0.666em 0.5em 0.022em 0px; }
-mjx-c.mjx-c2295 { padding: 0.583em 0.778em 0.083em 0px; }
-mjx-c.mjx-c1D463 { padding: 0.443em 0.485em 0.011em 0px; }
-mjx-c.mjx-c2208 { padding: 0.54em 0.667em 0.04em 0px; }
-mjx-c.mjx-c1D716 { padding: 0.431em 0.406em 0.011em 0px; }
-mjx-c.mjx-c7C { padding: 0.75em 0.278em 0.249em 0px; }
-mjx-c.mjx-c2124 { padding: 0.683em 0.667em 0.001em 0px; }
-mjx-c.mjx-c1D453 { padding: 0.705em 0.55em 0.205em 0px; }
-mjx-c.mjx-c3A { padding: 0.43em 0.278em 0px 0px; }
-mjx-c.mjx-c2192 { padding: 0.511em 1em 0.011em 0px; }
-mjx-c.mjx-c1D44A { padding: 0.683em 1.048em 0.022em 0px; }
-mjx-c.mjx-c28 { padding: 0.75em 0.389em 0.25em 0px; }
-mjx-c.mjx-c29 { padding: 0.75em 0.389em 0.25em 0px; }
-mjx-c.mjx-c2286 { padding: 0.636em 0.778em 0.138em 0px; }
-mjx-c.mjx-c2E { padding: 0.12em 0.278em 0px 0px; }
-mjx-c.mjx-c1D434 { padding: 0.716em 0.75em 0px 0px; }
-mjx-c.mjx-c1D6FF { padding: 0.717em 0.451em 0.01em 0px; }
-mjx-c.mjx-c2B { padding: 0.583em 0.778em 0.082em 0px; }
-mjx-c.mjx-c1D44E { padding: 0.441em 0.529em 0.01em 0px; }
-mjx-c.mjx-c1D44F { padding: 0.694em 0.429em 0.011em 0px; }
-mjx-c.mjx-c2212 { padding: 0.583em 0.778em 0.082em 0px; }
-mjx-c.mjx-c2C { padding: 0.121em 0.278em 0.194em 0px; }
-mjx-c.mjx-c2297 { padding: 0.583em 0.778em 0.083em 0px; }
-mjx-c.mjx-c1D450 { padding: 0.442em 0.433em 0.011em 0px; }
-mjx-c.mjx-c1D451 { padding: 0.694em 0.523em 0.01em 0px; }
-mjx-c.mjx-c1D524 { padding: 0.47em 0.504em 0.209em 0px; }
-mjx-c.mjx-c5B { padding: 0.75em 0.278em 0.25em 0px; }
-mjx-c.mjx-c1D465 { padding: 0.442em 0.572em 0.011em 0px; }
-mjx-c.mjx-c1D466 { padding: 0.442em 0.496em 0.205em 0px; }
-mjx-c.mjx-c5D { padding: 0.75em 0.278em 0.25em 0px; }
-mjx-c.mjx-c3A0 { padding: 0.68em 0.75em 0px 0px; }
-mjx-c.mjx-c22C5 { padding: 0.31em 0.278em 0px 0px; }
-mjx-c.mjx-c1D43A { padding: 0.705em 0.786em 0.022em 0px; }
-mjx-c.mjx-c65 { padding: 0.448em 0.444em 0.011em 0px; }
-mjx-c.mjx-c76 { padding: 0.431em 0.528em 0.011em 0px; }
-mjx-c.mjx-c2F { padding: 0.75em 0.5em 0.25em 0px; }
-mjx-c.mjx-c1D447 { padding: 0.677em 0.717em 0px 0px; }
-mjx-c.mjx-c1D435 { padding: 0.683em 0.759em 0px 0px; }
-mjx-c.mjx-c1D448 { padding: 0.683em 0.767em 0.022em 0px; }
-mjx-c.mjx-c1D525 { padding: 0.688em 0.521em 0.205em 0px; }
-mjx-c.mjx-c4C { padding: 0.683em 0.625em 0px 0px; }
-mjx-c.mjx-c69 { padding: 0.669em 0.278em 0px 0px; }
-mjx-c.mjx-cD7 { padding: 0.491em 0.778em 0px 0px; }
-mjx-mpadded { display: inline-block; text-align: left; }
-mjx-rbox { display: inline-block; position: relative; }
-mjx-mfrac { display: inline-block; text-align: left; }
-mjx-frac { display: inline-block; vertical-align: 0.17em; padding: 0px 0.22em; }
-mjx-frac[type="d"] { vertical-align: 0.04em; }
-mjx-frac[delims] { padding: 0px 0.1em; }
-mjx-frac[atop] { padding: 0px 0.12em; }
-mjx-frac[atop][delims] { padding: 0px; }
-mjx-dtable { display: inline-table; width: 100%; }
-mjx-dtable > mjx-line, mjx-dtable > mjx-row { font-size: 2000%; }
-mjx-dbox { display: block; font-size: 5%; }
-mjx-num { display: block; text-align: center; }
-mjx-den { display: block; text-align: center; }
-mjx-mfrac[bevelled] > mjx-num { display: inline-block; }
-mjx-mfrac[bevelled] > mjx-den { display: inline-block; }
-mjx-den[align="right"], mjx-num[align="right"] { text-align: right; }
-mjx-den[align="left"], mjx-num[align="left"] { text-align: left; }
-mjx-nstrut { display: inline-block; height: 0.054em; width: 0px; vertical-align: -0.054em; }
-mjx-nstrut[type="d"] { height: 0.217em; vertical-align: -0.217em; }
-mjx-dstrut { display: inline-block; height: 0.505em; width: 0px; }
-mjx-dstrut[type="d"] { height: 0.726em; }
-mjx-line { display: block; box-sizing: border-box; min-height: 1px; height: 0.06em; border-top: 0.075em solid; margin: 0.06em -0.1em; overflow: hidden; }
-mjx-line[type="d"] { margin: 0.18em -0.1em; }
-mjx-mrow { display: inline-block; text-align: left; }
-mjx-linestack, mjx-mrow[break-top] { display: inline-table; width: 100%; }
-mjx-linestack[break-align="bottom"], mjx-mrow[break-top][break-align="bottom"] { display: inline-block; }
-mjx-linestack[break-align="middle"], mjx-mrow[break-top][break-align="middle"] { vertical-align: middle; }
-mjx-linestack[break-align="center"], mjx-mrow[break-top][break-align="center"] { vertical-align: middle; }
-mjx-linestack[breakable] { display: inline; }
-mjx-linestack[breakable] > mjx-linebox { display: inline; }
-mjx-linestack[breakable] > mjx-linebox::before { white-space: pre; content: "\a "; }
-mjx-linestack[breakable] > mjx-linebox::after { white-space: normal; content: " "; letter-spacing: -0.999em; font-family: MJX-BRK; }
-mjx-linestack[breakable] > mjx-linebox:first-of-type::before { display: none; }
-mjx-linestack[breakable] > mjx-linebox:last-of-type::after { display: none; }
-mjx-linebox { display: block; }
-mjx-linebox[align="left"] { text-align: left; }
-mjx-linebox[align="center"] { text-align: center; }
-mjx-linebox[align="right"] { text-align: right; }
-mjx-linestrut { display: inline-block; height: 1em; vertical-align: -0.25em; }
 mjx-stretchy-h.mjx-c2192 > mjx-ext > mjx-spacer { margin-left: -0.305em; }
 mjx-stretchy-h.mjx-c2192 > mjx-ext { padding: 0.431em 0px 0px; border-width: 0px 0.83em 0px 0px; }
 mjx-stretchy-h.mjx-c2192 > mjx-end { padding: 0.431em 0.89em 0px 0px; margin-left: -0.89em; }
-mjx-c.mjx-c1D440 { padding: 0.683em 1.051em 0px 0px; }
-mjx-c.mjx-c39E { padding: 0.677em 0.667em 0px 0px; }
-mjx-c.mjx-c22EF { padding: 0.31em 1.172em 0px 0px; }
-mjx-c.mjx-c1D441 { padding: 0.683em 0.888em 0px 0px; }
+mjx-c.mjx-c1D424 { padding: 0.694em 0.607em 0px 0px; }
+mjx-c.mjx-c1D45D { padding: 0.442em 0.503em 0.194em 0px; }
+mjx-c.mjx-c3E { padding: 0.54em 0.778em 0.04em 0px; }
+mjx-c.mjx-c32 { padding: 0.666em 0.5em 0px 0px; }
+mjx-c.mjx-c1D43A { padding: 0.705em 0.786em 0.022em 0px; }
+mjx-c.mjx-c1D447 { padding: 0.677em 0.717em 0px 0px; }
+mjx-c.mjx-c1D45F { padding: 0.442em 0.451em 0.011em 0px; }
 mjx-c.mjx-c2C6 { padding: 0.694em 0.5em 0px 0px; }
 mjx-c.mjx-c1D44D { padding: 0.683em 0.723em 0px 0px; }
+mjx-c.mjx-c28 { padding: 0.75em 0.389em 0.25em 0px; }
 mjx-c.mjx-c1D706 { padding: 0.694em 0.583em 0.012em 0px; }
-mjx-c.mjx-c2218 { padding: 0.444em 0.5em 0px 0px; }
-mjx-c.mjx-c27F6 { padding: 0.511em 1.638em 0.011em 0px; }
-mjx-c.mjx-c1D456 { padding: 0.661em 0.345em 0.011em 0px; }
+mjx-c.mjx-c29 { padding: 0.75em 0.389em 0.25em 0px; }
+mjx-c.mjx-c1D43F { padding: 0.683em 0.681em 0px 0px; }
 mjx-c.mjx-c2265 { padding: 0.636em 0.778em 0.138em 0px; }
+mjx-c.mjx-c31 { padding: 0.666em 0.5em 0px 0px; }
+mjx-c.mjx-c1D434 { padding: 0.716em 0.75em 0px 0px; }
+mjx-c.mjx-c3D { padding: 0.367em 0.778em 0px 0px; }
+mjx-c.mjx-c1D44A { padding: 0.683em 1.048em 0.022em 0px; }
+mjx-c.mjx-c5B { padding: 0.75em 0.278em 0.25em 0px; }
+mjx-c.mjx-c1D700 { padding: 0.452em 0.466em 0.022em 0px; }
+mjx-c.mjx-c5D { padding: 0.75em 0.278em 0.25em 0px; }
+mjx-c.mjx-c2C { padding: 0.121em 0.278em 0.194em 0px; }
+mjx-c.mjx-c1D70B { padding: 0.431em 0.573em 0.011em 0px; }
+mjx-c.mjx-c2212 { padding: 0.583em 0.778em 0.082em 0px; }
+mjx-c.mjx-c1D440 { padding: 0.683em 1.051em 0px 0px; }
+mjx-c.mjx-c30 { padding: 0.666em 0.5em 0.022em 0px; }
+mjx-c.mjx-c39E { padding: 0.677em 0.667em 0px 0px; }
+mjx-c.mjx-c27F6 { padding: 0.511em 1.638em 0.011em 0px; }
+mjx-c.mjx-c22EF { padding: 0.31em 1.172em 0px 0px; }
+mjx-c.mjx-c1D441 { padding: 0.683em 0.888em 0px 0px; }
+mjx-c.mjx-c2E { padding: 0.12em 0.278em 0px 0px; }
+mjx-c.mjx-c1D43D { padding: 0.683em 0.633em 0.022em 0px; }
+mjx-c.mjx-c1D456 { padding: 0.661em 0.345em 0.011em 0px; }
 mjx-c.mjx-c7B { padding: 0.75em 0.5em 0.25em 0px; }
 mjx-c.mjx-c1D45A { padding: 0.442em 0.878em 0.011em 0px; }
-mjx-c.mjx-c1D70B { padding: 0.431em 0.573em 0.011em 0px; }
+mjx-c.mjx-c2208 { padding: 0.54em 0.667em 0.04em 0px; }
+mjx-c.mjx-c3A { padding: 0.43em 0.278em 0px 0px; }
 mjx-c.mjx-c7D { padding: 0.75em 0.5em 0.25em 0px; }
-mjx-c.mjx-c1D43D { padding: 0.683em 0.633em 0.022em 0px; }
-mjx-c.mjx-c55.TEX-C { padding: 0.683em 0.687em 0.028em 0px; }
+mjx-c.mjx-c2B { padding: 0.583em 0.778em 0.082em 0px; }
+mjx-c.mjx-c1D446 { padding: 0.705em 0.645em 0.022em 0px; }
+mjx-c.mjx-c7C { padding: 0.75em 0.278em 0.249em 0px; }
+mjx-c.mjx-c1D45B { padding: 0.442em 0.6em 0.011em 0px; }
+mjx-c.mjx-c2224 { padding: 0.75em 0.3em 0.252em 0px; }
+mjx-c.mjx-c1D439 { padding: 0.68em 0.749em 0px 0px; }
+mjx-c.mjx-c34 { padding: 0.677em 0.5em 0px 0px; }
+mjx-c.mjx-c33 { padding: 0.665em 0.5em 0.022em 0px; }
+mjx-c.mjx-c35 { padding: 0.666em 0.5em 0.022em 0px; }
+mjx-c.mjx-c1D437 { padding: 0.683em 0.828em 0px 0px; }
+mjx-c.mjx-c3B { padding: 0.43em 0.278em 0.194em 0px; }
+mjx-c.mjx-c1D44E { padding: 0.441em 0.529em 0.01em 0px; }
+mjx-c.mjx-c1D451 { padding: 0.694em 0.523em 0.01em 0px; }
+mjx-c.mjx-c2261 { padding: 0.464em 0.778em 0px 0px; }
+mjx-c.mjx-c27E8 { padding: 0.75em 0.389em 0.25em 0px; }
+mjx-c.mjx-c1D712 { padding: 0.442em 0.626em 0.204em 0px; }
+mjx-c.mjx-c1D6FC { padding: 0.442em 0.64em 0.011em 0px; }
+mjx-c.mjx-c27E9 { padding: 0.75em 0.389em 0.25em 0px; }
+mjx-c.mjx-c6D { padding: 0.442em 0.833em 0px 0px; }
+mjx-c.mjx-c6F { padding: 0.448em 0.5em 0.01em 0px; }
+mjx-c.mjx-c64 { padding: 0.694em 0.556em 0.011em 0px; }
+mjx-c.mjx-c1D464 { padding: 0.443em 0.716em 0.011em 0px; }
+mjx-c.mjx-c210E { padding: 0.694em 0.576em 0.011em 0px; }
+mjx-c.mjx-c3C { padding: 0.54em 0.778em 0.04em 0px; }
+mjx-c.mjx-c1D444 { padding: 0.704em 0.791em 0.194em 0px; }
+mjx-mtext { display: inline-block; text-align: left; }
 mjx-munder { display: inline-block; text-align: left; }
 mjx-over { text-align: left; }
 mjx-munder:not([limits="false"]) { display: inline-table; }
 mjx-munder > mjx-row { text-align: left; }
 mjx-under { padding-bottom: 0.1em; }
+mjx-munderover { display: inline-block; text-align: left; }
+mjx-munderover:not([limits="false"]) { padding-top: 0.1em; }
+mjx-munderover:not([limits="false"]) > mjx-over, mjx-munderover:not([limits="false"]) > mjx-box { display: block; }
+mjx-c.mjx-c63 { padding: 0.448em 0.444em 0.011em 0px; }
+mjx-c.mjx-c68 { padding: 0.694em 0.556em 0px 0px; }
+mjx-c.mjx-c61 { padding: 0.448em 0.5em 0.011em 0px; }
+mjx-c.mjx-c72 { padding: 0.442em 0.392em 0px 0px; }
+mjx-c.mjx-c2061 { padding: 0px; }
+mjx-c.mjx-c1D435 { padding: 0.683em 0.759em 0px 0px; }
+mjx-c.mjx-c1D448 { padding: 0.683em 0.767em 0.022em 0px; }
+mjx-c.mjx-c65 { padding: 0.448em 0.444em 0.011em 0px; }
+mjx-c.mjx-c76 { padding: 0.431em 0.528em 0.011em 0px; }
+mjx-c.mjx-c1D44F { padding: 0.694em 0.429em 0.011em 0px; }
+mjx-c.mjx-c394 { padding: 0.716em 0.833em 0px 0px; }
+mjx-c.mjx-c1D465 { padding: 0.442em 0.572em 0.011em 0px; }
+mjx-c.mjx-c2297 { padding: 0.583em 0.778em 0.083em 0px; }
+mjx-c.mjx-c1D445 { padding: 0.683em 0.759em 0.021em 0px; }
+mjx-c.mjx-c2192 { padding: 0.511em 1em 0.011em 0px; }
+mjx-c.mjx-c2F { padding: 0.75em 0.5em 0.25em 0px; }
+mjx-c.mjx-cAF { padding: 0.59em 0.5em 0px 0px; }
+mjx-c.mjx-c1D453 { padding: 0.705em 0.55em 0.205em 0px; }
+mjx-c.mjx-cA0 { padding: 0px 0.25em 0px 0px; }
+mjx-c.mjx-c44 { padding: 0.683em 0.764em 0px 0px; }
+mjx-c.mjx-c69 { padding: 0.669em 0.278em 0px 0px; }
+mjx-c.mjx-c73 { padding: 0.448em 0.394em 0.011em 0px; }
+mjx-c.mjx-c74 { padding: 0.615em 0.389em 0.01em 0px; }
+mjx-c.mjx-c48 { padding: 0.683em 0.75em 0px 0px; }
+mjx-c.mjx-c2295 { padding: 0.583em 0.778em 0.083em 0px; }
+mjx-c.mjx-c2211.TEX-LO { padding: 0.95em 1.444em 0.45em 0px; }
+mjx-c.mjx-c21A6 { padding: 0.511em 1em 0.011em 0px; }
+mjx-c.mjx-c1D44B { padding: 0.683em 0.852em 0px 0px; }
+mjx-c.mjx-c28.TEX-S3 { padding: 1.45em 0.736em 0.949em 0px; }
+mjx-c.mjx-c29.TEX-S3 { padding: 1.45em 0.736em 0.949em 0px; }
+mjx-c.mjx-c2260 { padding: 0.716em 0.778em 0.215em 0px; }
+mjx-c.mjx-c21 { padding: 0.716em 0.278em 0px 0px; }
+mjx-c.mjx-c1D406 { padding: 0.698em 0.904em 0.01em 0px; }
+mjx-c.mjx-c2245 { padding: 0.589em 1em 0px 0px; }
+mjx-c.mjx-cD7 { padding: 0.491em 0.778em 0px 0px; }
+mjx-c.mjx-c2113 { padding: 0.705em 0.417em 0.02em 0px; }
+mjx-c.mjx-c2026 { padding: 0.12em 1.172em 0px 0px; }
+mjx-c.mjx-c1D461 { padding: 0.626em 0.361em 0.011em 0px; }
+mjx-c.mjx-c2A01.TEX-LO { padding: 0.949em 1.511em 0.449em 0px; }
+mjx-c.mjx-c1D707 { padding: 0.442em 0.603em 0.216em 0px; }
+mjx-c.mjx-c2211.TEX-SO { padding: 0.75em 1.056em 0.25em 0px; }
+mjx-c.mjx-c1D467 { padding: 0.442em 0.468em 0.011em 0px; }
+mjx-c.mjx-c1D460 { padding: 0.442em 0.469em 0.01em 0px; }
+mjx-c.mjx-c28.TEX-LO { padding: 1.15em 0.597em 0.649em 0px; }
+mjx-c.mjx-c1D43B { padding: 0.683em 0.888em 0px 0px; }
+mjx-c.mjx-c29.TEX-LO { padding: 1.15em 0.597em 0.649em 0px; }
+mjx-c.mjx-c212D { padding: 0.685em 0.613em 0.024em 0px; }
+mjx-c.mjx-c41 { padding: 0.716em 0.75em 0px 0px; }
+mjx-c.mjx-c2264 { padding: 0.636em 0.778em 0.138em 0px; }
+mjx-c.mjx-c1D452 { padding: 0.442em 0.466em 0.011em 0px; }
+mjx-c.mjx-c1D708 { padding: 0.442em 0.53em 0.002em 0px; }
+mjx-c.mjx-c2115 { padding: 0.683em 0.722em 0.02em 0px; }
+mjx-c.mjx-c1D6FD { padding: 0.705em 0.573em 0.194em 0px; }
+mjx-c.mjx-c2209 { padding: 0.716em 0.667em 0.215em 0px; }
+mjx-c.mjx-c220F.TEX-LO { padding: 0.95em 1.278em 0.45em 0px; }
+mjx-c.mjx-c1D6FE { padding: 0.441em 0.543em 0.216em 0px; }
+mjx-c.mjx-c1D716 { padding: 0.431em 0.406em 0.011em 0px; }
+mjx-c.mjx-c223C { padding: 0.367em 0.778em 0px 0px; }
+mjx-c.mjx-c1D463 { padding: 0.443em 0.485em 0.011em 0px; }
+mjx-c.mjx-c1D462 { padding: 0.442em 0.572em 0.011em 0px; }
+mjx-c.mjx-c1D457 { padding: 0.661em 0.412em 0.204em 0px; }
+mjx-c.mjx-c6B { padding: 0.694em 0.528em 0px 0px; }
 mjx-mtable { display: inline-block; text-align: center; vertical-align: 0.25em; position: relative; box-sizing: border-box; border-spacing: 0px; border-collapse: collapse; }
 mjx-mstyle[size="s"] mjx-mtable { vertical-align: 0.354em; }
 mjx-labels { position: absolute; left: 0px; top: 0px; }
@@ -401,46 +456,21 @@ mjx-mtd[rowalign="center"] { vertical-align: middle; }
 mjx-mtd[rowalign="bottom"] { vertical-align: bottom; }
 mjx-mtd[rowalign="baseline"] { vertical-align: baseline; }
 mjx-mtd[rowalign="axis"] { vertical-align: 0.25em; }
-mjx-mtext { display: inline-block; text-align: left; }
-mjx-c.mjx-c2229 { padding: 0.598em 0.667em 0.022em 0px; }
-mjx-c.mjx-c1D43F { padding: 0.683em 0.681em 0px 0px; }
-mjx-c.mjx-c64 { padding: 0.694em 0.556em 0.011em 0px; }
-mjx-c.mjx-c22C2.TEX-LO { padding: 0.949em 1.111em 0.45em 0px; }
-mjx-c.mjx-c228A { padding: 0.635em 0.778em 0.241em 0px; }
-mjx-c.mjx-cA0 { padding: 0px 0.25em 0px 0px; }
-mjx-stretchy-h.mjx-c2013 > mjx-ext > mjx-spacer { margin-left: -0.25em; letter-spacing: -0.071em; }
-mjx-stretchy-h.mjx-c2013 > mjx-ext { padding: 0.285em 0px 0px; }
-mjx-c.mjx-c394 { padding: 0.716em 0.833em 0px 0px; }
-mjx-c.mjx-c1D52B { padding: 0.475em 0.527em 0.022em 0px; }
-mjx-c.mjx-c2A01.TEX-LO { padding: 0.949em 1.511em 0.449em 0px; }
-mjx-c.mjx-c1D6FC { padding: 0.442em 0.64em 0.011em 0px; }
-mjx-c.mjx-c1D51F { padding: 0.685em 0.513em 0.031em 0px; }
-mjx-c.mjx-c2209 { padding: 0.716em 0.667em 0.215em 0px; }
+mjx-stretchy-v.mjx-c7B > mjx-beg { width: 0.889em; margin: 0.899em auto -0.899em; }
+mjx-stretchy-v.mjx-c7B > mjx-ext > mjx-spacer { margin-top: 0.115em; }
+mjx-stretchy-v.mjx-c7B > mjx-ext { width: 0.889em; line-height: 0.264em; }
+mjx-stretchy-v.mjx-c7B > mjx-end { width: 0.889em; margin: -0.899em auto 0.899em; }
+mjx-stretchy-v.mjx-c7B > mjx-mid { width: 0.889em; margin: 0.25em auto -0.25em; }
+mjx-stretchy-v.mjx-c7B > mjx-ext:first-of-type { height: 50%; border-width: 0.894em 0px 0.895em; }
+mjx-stretchy-v.mjx-c7B > mjx-ext:last-of-type { height: 50%; border-width: 0.895em 0px 0.879em; }
+mjx-c.mjx-c211D { padding: 0.683em 0.722em 0.001em 0px; }
+mjx-c.mjx-c2124 { padding: 0.683em 0.667em 0.001em 0px; }
+mjx-c.mjx-c2216 { padding: 0.75em 0.5em 0.25em 0px; }
 mjx-c.mjx-c2032 { padding: 0.56em 0.275em 0px 0px; }
-mjx-c.mjx-c1D45B { padding: 0.442em 0.6em 0.011em 0px; }
-mjx-c.mjx-c2287 { padding: 0.636em 0.778em 0.138em 0px; }
-mjx-c.mjx-c1D460 { padding: 0.442em 0.469em 0.01em 0px; }
-mjx-c.mjx-c1D461 { padding: 0.626em 0.361em 0.011em 0px; }
-mjx-c.mjx-c1D424 { padding: 0.694em 0.607em 0px 0px; }
-mjx-c.mjx-c1D452 { padding: 0.442em 0.466em 0.011em 0px; }
-mjx-c.mjx-c1D439 { padding: 0.68em 0.749em 0px 0px; }
-mjx-c.mjx-c33 { padding: 0.665em 0.5em 0.022em 0px; }
-mjx-c.mjx-c28.TEX-S3 { padding: 1.45em 0.736em 0.949em 0px; }
-mjx-c.mjx-c29.TEX-S3 { padding: 1.45em 0.736em 0.949em 0px; }
-mjx-c.mjx-c1D457 { padding: 0.661em 0.412em 0.204em 0px; }
-mjx-c.mjx-c2223 { padding: 0.75em 0.278em 0.249em 0px; }
-mjx-c.mjx-c2264 { padding: 0.636em 0.778em 0.138em 0px; }
-mjx-c.mjx-c2013 { padding: 0.285em 0.5em 0px 0px; }
-mjx-c.mjx-c2113 { padding: 0.705em 0.417em 0.02em 0px; }
-mjx-c.mjx-c1D707 { padding: 0.442em 0.603em 0.216em 0px; }
-mjx-c.mjx-c2026 { padding: 0.12em 1.172em 0px 0px; }
-mjx-c.mjx-c1D44B { padding: 0.683em 0.852em 0px 0px; }
-mjx-c.mjx-c2211.TEX-LO { padding: 0.95em 1.444em 0.45em 0px; }
-mjx-c.mjx-c6D { padding: 0.442em 0.833em 0px 0px; }
-mjx-c.mjx-c1D708 { padding: 0.442em 0.53em 0.002em 0px; }
-mjx-munderover { display: inline-block; text-align: left; }
-mjx-munderover:not([limits="false"]) { padding-top: 0.1em; }
-mjx-munderover:not([limits="false"]) > mjx-over, mjx-munderover:not([limits="false"]) > mjx-box { display: block; }
+mjx-c.mjx-c212C { padding: 0.708em 0.928em 0.028em 0px; }
+mjx-c.mjx-c1D711 { padding: 0.442em 0.654em 0.218em 0px; }
+mjx-c.mjx-c1D450 { padding: 0.442em 0.433em 0.011em 0px; }
+mjx-c.mjx-c1D702 { padding: 0.442em 0.503em 0.216em 0px; }
 mjx-menclose { display: inline-block; text-align: left; position: relative; }
 mjx-menclose > mjx-dstrike { display: inline-block; left: 0px; top: 0px; position: absolute; border-top: 0.067em solid; transform-origin: left top; }
 mjx-menclose > mjx-ustrike { display: inline-block; left: 0px; bottom: 0px; position: absolute; border-top: 0.067em solid; transform-origin: left bottom; }
@@ -457,114 +487,97 @@ mjx-menclose > mjx-arrow > mjx-lthead { display: block; position: absolute; box-
 mjx-menclose > mjx-arrow > mjx-lbhead { display: block; position: absolute; box-sizing: border-box; transform: skewX(0.464rad); transform-origin: center top; left: 0px; top: -1px; border-width: 1px 0.268em 0.134em 0px; border-style: solid solid solid none; border-color: transparent currentcolor; }
 mjx-menclose > mjx-dbox-top { position: absolute; top: 0px; bottom: 50%; left: 0px; width: 0.3em; border-width: 0.067em; border-style: solid solid none none; border-radius: 0px 100% 0px 0px; box-sizing: border-box; }
 mjx-menclose > mjx-dbox-bot { position: absolute; top: 50%; bottom: 0px; left: 0px; width: 0.3em; border-width: 0.067em; border-style: none solid solid none; border-radius: 0px 0px 100%; box-sizing: border-box; }
-mjx-c.mjx-c2245 { padding: 0.589em 1em 0px 0px; }
-mjx-c.mjx-c27FA { padding: 0.525em 1.858em 0.024em 0px; }
-mjx-c.mjx-c1D446 { padding: 0.705em 0.645em 0.022em 0px; }
-mjx-c.mjx-c1D43B { padding: 0.683em 0.888em 0px 0px; }
-mjx-c.mjx-c42.TEX-C { padding: 0.705em 0.664em 0.022em 0px; }
-mjx-c.mjx-c210E { padding: 0.694em 0.576em 0.011em 0px; }
-mjx-c.mjx-c1D712 { padding: 0.442em 0.626em 0.204em 0px; }
-mjx-c.mjx-c6B { padding: 0.694em 0.528em 0px 0px; }
-mjx-c.mjx-c1D70C { padding: 0.442em 0.517em 0.216em 0px; }
-mjx-c.mjx-c1D6FD { padding: 0.705em 0.573em 0.194em 0px; }
-mjx-c.mjx-c1D6FE { padding: 0.441em 0.543em 0.216em 0px; }
-mjx-c.mjx-c211A { padding: 0.701em 0.778em 0.181em 0px; }
-mjx-c.mjx-c1D467 { padding: 0.442em 0.468em 0.011em 0px; }
-mjx-c.mjx-c1D711 { padding: 0.442em 0.654em 0.218em 0px; }
-mjx-c.mjx-c1D438 { padding: 0.68em 0.764em 0px 0px; }
-mjx-c.mjx-c74 { padding: 0.615em 0.389em 0.01em 0px; }
-mjx-c.mjx-c6F { padding: 0.448em 0.5em 0.01em 0px; }
-mjx-c.mjx-c70 { padding: 0.442em 0.556em 0.194em 0px; }
-mjx-c.mjx-c49 { padding: 0.683em 0.361em 0px 0px; }
-mjx-c.mjx-c4B { padding: 0.683em 0.778em 0px 0px; }
-mjx-c.mjx-c1D700 { padding: 0.452em 0.466em 0.022em 0px; }
-mjx-c.mjx-c1D464 { padding: 0.443em 0.716em 0.011em 0px; }
-mjx-c.mjx-c1D7CF { padding: 0.655em 0.575em 0px 0px; }
-mjx-c.mjx-c3C { padding: 0.54em 0.778em 0.04em 0px; }
-mjx-c.mjx-c28.TEX-LO { padding: 1.15em 0.597em 0.649em 0px; }
-mjx-c.mjx-c29.TEX-LO { padding: 1.15em 0.597em 0.649em 0px; }
-mjx-c.mjx-c27E8 { padding: 0.75em 0.389em 0.25em 0px; }
-mjx-c.mjx-c27E9 { padding: 0.75em 0.389em 0.25em 0px; }
-mjx-c.mjx-c6C { padding: 0.694em 0.278em 0px 0px; }
+mjx-stretchy-h.mjx-c2013 > mjx-ext > mjx-spacer { margin-left: -0.25em; letter-spacing: -0.071em; }
+mjx-stretchy-h.mjx-c2013 > mjx-ext { padding: 0.285em 0px 0px; }
+mjx-c.mjx-c3A0 { padding: 0.68em 0.75em 0px 0px; }
+mjx-c.mjx-c2229 { padding: 0.598em 0.667em 0.022em 0px; }
+mjx-c.mjx-c1D466 { padding: 0.442em 0.496em 0.205em 0px; }
+mjx-c.mjx-c2203 { padding: 0.694em 0.556em 0px 0px; }
+mjx-c.mjx-c2200 { padding: 0.694em 0.556em 0.022em 0px; }
+mjx-c.mjx-c1D713 { padding: 0.694em 0.651em 0.205em 0px; }
+mjx-c.mjx-c27FC { padding: 0.511em 1.638em 0.011em 0px; }
+mjx-c.mjx-c2DC { padding: 0.668em 0.5em 0px 0px; }
+mjx-c.mjx-c2286 { padding: 0.636em 0.778em 0.138em 0px; }
+mjx-c.mjx-c45 { padding: 0.68em 0.681em 0px 0px; }
 mjx-c.mjx-c6E { padding: 0.442em 0.556em 0px 0px; }
-mjx-c.mjx-c43 { padding: 0.705em 0.722em 0.021em 0px; }
-mjx-c.mjx-c2261 { padding: 0.464em 0.778em 0px 0px; }
-mjx-c.mjx-c50 { padding: 0.683em 0.681em 0px 0px; }
-mjx-c.mjx-c53 { padding: 0.705em 0.556em 0.022em 0px; }
-mjx-c.mjx-c1D462 { padding: 0.442em 0.572em 0.011em 0px; }
-mjx-c.mjx-c1D52C { padding: 0.48em 0.489em 0.028em 0px; }
-mjx-c.mjx-c1D530 { padding: 0.478em 0.443em 0.029em 0px; }
-mjx-c.mjx-c1D52D { padding: 0.541em 0.5em 0.212em 0px; }
-mjx-c.mjx-c34 { padding: 0.677em 0.5em 0px 0px; }
-mjx-c.mjx-c35 { padding: 0.666em 0.5em 0.022em 0px; }
-mjx-c.mjx-c2D { padding: 0.252em 0.333em 0px 0px; }
-mjx-c.mjx-c75 { padding: 0.442em 0.556em 0.011em 0px; }
-mjx-c.mjx-c1D43E { padding: 0.683em 0.889em 0px 0px; }
 mjx-c.mjx-c2217 { padding: 0.465em 0.5em 0px 0px; }
-mjx-c.mjx-c1D437 { padding: 0.683em 0.828em 0px 0px; }
-mjx-c.mjx-c3B { padding: 0.43em 0.278em 0.194em 0px; }
-mjx-c.mjx-c212D { padding: 0.685em 0.613em 0.024em 0px; }
-mjx-c.mjx-c44 { padding: 0.683em 0.764em 0px 0px; }
-mjx-c.mjx-c73 { padding: 0.448em 0.394em 0.011em 0px; }
-mjx-c.mjx-c211D { padding: 0.683em 0.722em 0.001em 0px; }
-mjx-c.mjx-c1D53E { padding: 0.702em 0.778em 0.019em 0px; }
-mjx-c.mjx-c1D436 { padding: 0.705em 0.76em 0.022em 0px; }
-mjx-c.mjx-c1D52A { padding: 0.475em 0.767em 0.026em 0px; }
+mjx-c.mjx-c2013 { padding: 0.285em 0.5em 0px 0px; }
+mjx-c.mjx-c1D704 { padding: 0.442em 0.354em 0.01em 0px; }
+mjx-c.mjx-c1D45E { padding: 0.442em 0.46em 0.194em 0px; }
+mjx-c.mjx-c21AA { padding: 0.511em 1.126em 0.011em 0px; }
+mjx-c.mjx-c36 { padding: 0.666em 0.5em 0.022em 0px; }
+mjx-c.mjx-c37 { padding: 0.676em 0.5em 0.022em 0px; }
+mjx-c.mjx-c38 { padding: 0.666em 0.5em 0.022em 0px; }
+mjx-c.mjx-c22C2.TEX-LO { padding: 0.949em 1.111em 0.45em 0px; }
+mjx-c.mjx-c1D43C { padding: 0.683em 0.504em 0px 0px; }
+mjx-c.mjx-c70 { padding: 0.442em 0.556em 0.194em 0px; }
+mjx-c.mjx-c1D705 { padding: 0.442em 0.576em 0.011em 0px; }
+mjx-c.mjx-c1D70F { padding: 0.431em 0.517em 0.013em 0px; }
+mjx-c.mjx-c1D438 { padding: 0.68em 0.764em 0px 0px; }
+mjx-c.mjx-c78 { padding: 0.431em 0.528em 0px 0px; }
+mjx-c.mjx-c1D70C { padding: 0.442em 0.517em 0.216em 0px; }
+mjx-c.mjx-c43 { padding: 0.705em 0.722em 0.021em 0px; }
+mjx-c.mjx-c1D454 { padding: 0.442em 0.48em 0.205em 0px; }
+mjx-c.mjx-c1D443 { padding: 0.683em 0.751em 0px 0px; }
+mjx-c.mjx-c1D709 { padding: 0.704em 0.443em 0.205em 0px; }
+mjx-c.mjx-c3A6 { padding: 0.683em 0.722em 0px 0px; }
+mjx-c.mjx-c27FA { padding: 0.525em 1.858em 0.024em 0px; }
+mjx-c.mjx-c211A { padding: 0.701em 0.778em 0.181em 0px; }
+mjx-c.mjx-c1D449 { padding: 0.683em 0.769em 0.022em 0px; }
+mjx-c.mjx-c1D524 { padding: 0.47em 0.504em 0.209em 0px; }
+mjx-c.mjx-c2223 { padding: 0.75em 0.278em 0.249em 0px; }
+mjx-c.mjx-c2205.TEX-V { padding: 0.587em 0.778em 0.003em 0px; }
+mjx-c.mjx-c39 { padding: 0.666em 0.5em 0.022em 0px; }
+mjx-c.mjx-c2218 { padding: 0.444em 0.5em 0px 0px; }
+mjx-c.mjx-c53 { padding: 0.705em 0.556em 0.022em 0px; }
 mjx-c.mjx-c4F { padding: 0.705em 0.778em 0.022em 0px; }
-mjx-c.mjx-c48 { padding: 0.683em 0.75em 0px 0px; }
+mjx-c.mjx-c1D458 { padding: 0.694em 0.521em 0.011em 0px; }
+mjx-c.mjx-c2D { padding: 0.252em 0.333em 0px 0px; }
+mjx-c.mjx-c1D53E { padding: 0.702em 0.778em 0.019em 0px; }
+mjx-c.mjx-c1D525 { padding: 0.688em 0.521em 0.205em 0px; }
 mjx-c.mjx-c2A01.TEX-SO { padding: 0.75em 1.111em 0.25em 0px; }
 mjx-c.mjx-c7B.TEX-LO { padding: 1.15em 0.667em 0.649em 0px; }
 mjx-c.mjx-c7D.TEX-LO { padding: 1.15em 0.667em 0.649em 0px; }
 mjx-c.mjx-cB1 { padding: 0.666em 0.778em 0px 0px; }
-mjx-c.mjx-c212C { padding: 0.708em 0.928em 0.028em 0px; }
 mjx-c.mjx-c67 { padding: 0.453em 0.5em 0.206em 0px; }
+mjx-c.mjx-c1D436 { padding: 0.705em 0.76em 0.022em 0px; }
+mjx-c.mjx-c4C { padding: 0.683em 0.625em 0px 0px; }
 mjx-c.mjx-c1D701 { padding: 0.704em 0.471em 0.204em 0px; }
+mjx-c.mjx-c1D43E { padding: 0.683em 0.889em 0px 0px; }
+mjx-c.mjx-c42.TEX-C { padding: 0.705em 0.664em 0.022em 0px; }
 mjx-c.mjx-c50.TEX-C { padding: 0.683em 0.733em 0.057em 0px; }
 mjx-c.mjx-c4C.TEX-C { padding: 0.705em 0.69em 0.022em 0px; }
 mjx-c.mjx-c49.TEX-C { padding: 0.683em 0.642em 0px 0px; }
-mjx-c.mjx-c21A6 { padding: 0.511em 1em 0.011em 0px; }
-mjx-c.mjx-c41 { padding: 0.716em 0.75em 0px 0px; }
-mjx-c.mjx-c27FC { padding: 0.511em 1.638em 0.011em 0px; }
-mjx-c.mjx-c45 { padding: 0.68em 0.681em 0px 0px; }
-mjx-c.mjx-c1D454 { padding: 0.442em 0.48em 0.205em 0px; }
-mjx-c.mjx-c1D704 { padding: 0.442em 0.354em 0.01em 0px; }
-mjx-c.mjx-c2200 { padding: 0.694em 0.556em 0.022em 0px; }
+mjx-c.mjx-c4B { padding: 0.683em 0.778em 0px 0px; }
+mjx-c.mjx-c22C5 { padding: 0.31em 0.278em 0px 0px; }
+mjx-c.mjx-c1D6FF { padding: 0.717em 0.451em 0.01em 0px; }
+mjx-c.mjx-c75 { padding: 0.442em 0.556em 0.011em 0px; }
+mjx-c.mjx-c2287 { padding: 0.636em 0.778em 0.138em 0px; }
+mjx-c.mjx-c228A { padding: 0.635em 0.778em 0.241em 0px; }
 mjx-c.mjx-c27F9 { padding: 0.525em 1.638em 0.024em 0px; }
 mjx-c.mjx-c2283 { padding: 0.54em 0.778em 0.04em 0px; }
 mjx-c.mjx-c2282 { padding: 0.54em 0.778em 0.04em 0px; }
-mjx-c.mjx-c1D445 { padding: 0.683em 0.759em 0.021em 0px; }
 mjx-c.mjx-c46 { padding: 0.68em 0.653em 0px 0px; }
-mjx-c.mjx-c3A6 { padding: 0.683em 0.722em 0px 0px; }
-mjx-c.mjx-c1D444 { padding: 0.704em 0.791em 0.194em 0px; }
-mjx-c.mjx-c36 { padding: 0.666em 0.5em 0.022em 0px; }
-mjx-c.mjx-c39 { padding: 0.666em 0.5em 0.022em 0px; }
-mjx-c.mjx-c38 { padding: 0.666em 0.5em 0.022em 0px; }
-mjx-c.mjx-c37 { padding: 0.676em 0.5em 0.022em 0px; }
-mjx-c.mjx-c21 { padding: 0.716em 0.278em 0px 0px; }
+mjx-c.mjx-c49 { padding: 0.683em 0.361em 0px 0px; }
 mjx-mlabeledtr { display: table-row; text-align: left; }
 mjx-mlabeledtr[rowalign="top"] > mjx-mtd { vertical-align: top; }
 mjx-mlabeledtr[rowalign="center"] > mjx-mtd { vertical-align: middle; }
 mjx-mlabeledtr[rowalign="bottom"] > mjx-mtd { vertical-align: bottom; }
 mjx-mlabeledtr[rowalign="baseline"] > mjx-mtd { vertical-align: baseline; }
 mjx-mlabeledtr[rowalign="axis"] > mjx-mtd { vertical-align: 0.25em; }
-mjx-c.mjx-c1D709 { padding: 0.704em 0.443em 0.205em 0px; }
+mjx-c.mjx-c1D530 { padding: 0.478em 0.443em 0.029em 0px; }
 mjx-c.mjx-c1D529 { padding: 0.685em 0.28em 0.02em 0px; }
-mjx-c.mjx-c2211.TEX-SO { padding: 0.75em 1.056em 0.25em 0px; }
-mjx-c.mjx-c220F.TEX-LO { padding: 0.95em 1.278em 0.45em 0px; }
-mjx-c.mjx-c2260 { padding: 0.716em 0.778em 0.215em 0px; }
+mjx-c.mjx-c1D52C { padding: 0.48em 0.489em 0.028em 0px; }
+mjx-c.mjx-c1D52D { padding: 0.541em 0.5em 0.212em 0px; }
 mjx-c.mjx-c1D45C { padding: 0.441em 0.485em 0.011em 0px; }
 mjx-c.mjx-c220F.TEX-SO { padding: 0.75em 0.944em 0.25em 0px; }
-mjx-c.mjx-c1D43C { padding: 0.683em 0.504em 0px 0px; }
-mjx-c.mjx-c2115 { padding: 0.683em 0.722em 0.02em 0px; }
 mjx-c.mjx-c2243 { padding: 0.464em 0.778em 0px 0px; }
-mjx-c.mjx-c1D443 { padding: 0.683em 0.751em 0px 0px; }
+mjx-c.mjx-c1D52B { padding: 0.475em 0.527em 0.022em 0px; }
+mjx-c.mjx-c6C { padding: 0.694em 0.278em 0px 0px; }
 mjx-c.mjx-c21A0 { padding: 0.417em 1em 0px 0px; }
-mjx-c.mjx-c1D713 { padding: 0.694em 0.651em 0.205em 0px; }
-mjx-c.mjx-c1D702 { padding: 0.442em 0.503em 0.216em 0px; }
 mjx-c.mjx-c7B.TEX-S3 { padding: 1.45em 0.75em 0.949em 0px; }
-mjx-c.mjx-c2216 { padding: 0.75em 0.5em 0.25em 0px; }
+mjx-c.mjx-c55.TEX-C { padding: 0.683em 0.687em 0.028em 0px; }
 mjx-c.mjx-c77 { padding: 0.431em 0.722em 0.011em 0px; }
-mjx-c.mjx-c78 { padding: 0.431em 0.528em 0px 0px; }
 mjx-c.mjx-c2247 { padding: 0.652em 0.778em 0.155em 0px; }
 mjx-stretchy-v.mjx-c28 > mjx-beg { width: 0.875em; margin: 1.154em auto -1.154em; }
 mjx-stretchy-v.mjx-c28 > mjx-ext > mjx-spacer { margin-top: 0.259em; }
@@ -578,10 +591,8 @@ mjx-c.mjx-c27E8.TEX-SO { padding: 0.85em 0.472em 0.35em 0px; }
 mjx-c.mjx-c27E9.TEX-SO { padding: 0.85em 0.472em 0.35em 0px; }
 mjx-c.mjx-c28.TEX-S4 { padding: 1.75em 0.792em 1.249em 0px; }
 mjx-c.mjx-c29.TEX-S4 { padding: 1.75em 0.792em 1.249em 0px; }
-mjx-c.mjx-c223C { padding: 0.367em 0.778em 0px 0px; }
 mjx-c.mjx-c237.TEX-I { padding: 0.442em 0.332em 0.204em 0px; }
 mjx-c.mjx-c1D53D { padding: 0.683em 0.611em 0.001em 0px; }
-mjx-c.mjx-c2203 { padding: 0.694em 0.556em 0px 0px; }
 mjx-c.mjx-c42 { padding: 0.683em 0.708em 0px 0px; }
 mjx-c.mjx-c2262 { padding: 0.716em 0.778em 0.215em 0px; }
 mjx-c.mjx-c2033 { padding: 0.56em 0.55em 0px 0px; }
@@ -590,8 +601,6 @@ mjx-c.mjx-c21D2 { padding: 0.525em 1em 0.024em 0px; }
 mjx-c.mjx-c7D.TEX-S3 { padding: 1.45em 0.75em 0.949em 0px; }
 mjx-c.mjx-c7B.TEX-S4 { padding: 1.75em 0.806em 1.249em 0px; }
 mjx-c.mjx-c7D.TEX-S4 { padding: 1.75em 0.806em 1.249em 0px; }
-mjx-c.mjx-c2224 { padding: 0.75em 0.3em 0.252em 0px; }
-mjx-c.mjx-c21AA { padding: 0.511em 1.126em 0.011em 0px; }
 mjx-c.mjx-c222A { padding: 0.598em 0.667em 0.022em 0px; }
 mjx-c.mjx-c1D703 { padding: 0.705em 0.469em 0.01em 0px; }
 mjx-c.mjx-c23 { padding: 0.694em 0.833em 0.194em 0px; }
@@ -601,30 +610,21 @@ mjx-c.mjx-c39B { padding: 0.716em 0.694em 0px 0px; }
 mjx-c.mjx-c2207 { padding: 0.683em 0.833em 0.033em 0px; }
 mjx-c.mjx-c62 { padding: 0.694em 0.556em 0.011em 0px; }
 mjx-c.mjx-c22C9 { padding: 0.492em 0.778em 0px 0px; }
+mjx-c.mjx-c50 { padding: 0.683em 0.681em 0px 0px; }
 mjx-c.mjx-c1D70E { padding: 0.431em 0.572em 0.011em 0px; }
 mjx-c.mjx-c221E { padding: 0.442em 1em 0.011em 0px; }
-mjx-stretchy-v.mjx-c7B > mjx-beg { width: 0.889em; margin: 0.899em auto -0.899em; }
-mjx-stretchy-v.mjx-c7B > mjx-ext > mjx-spacer { margin-top: 0.115em; }
-mjx-stretchy-v.mjx-c7B > mjx-ext { width: 0.889em; line-height: 0.264em; }
-mjx-stretchy-v.mjx-c7B > mjx-end { width: 0.889em; margin: -0.899em auto 0.899em; }
-mjx-stretchy-v.mjx-c7B > mjx-mid { width: 0.889em; margin: 0.25em auto -0.25em; }
-mjx-stretchy-v.mjx-c7B > mjx-ext:first-of-type { height: 50%; border-width: 0.894em 0px 0.895em; }
-mjx-stretchy-v.mjx-c7B > mjx-ext:last-of-type { height: 50%; border-width: 0.895em 0px 0.879em; }
+mjx-c.mjx-c1D7CF { padding: 0.655em 0.575em 0px 0px; }
 mjx-c.mjx-c2019 { padding: 0.694em 0.278em 0px 0px; }
 mjx-c.mjx-c2219 { padding: 0.444em 0.5em 0px 0px; }
 mjx-c.mjx-c5A { padding: 0.683em 0.611em 0px 0px; }
 mjx-c.mjx-c57 { padding: 0.683em 1.028em 0.022em 0px; }
-mjx-c.mjx-c2205.TEX-V { padding: 0.587em 0.778em 0.003em 0px; }
-mjx-c.mjx-c1D45E { padding: 0.442em 0.46em 0.194em 0px; }
 mjx-c.mjx-c2119 { padding: 0.683em 0.611em 0.001em 0px; }
 mjx-c.mjx-c1D44C { padding: 0.683em 0.763em 0px 0px; }
 mjx-c.mjx-c3A9 { padding: 0.704em 0.722em 0px 0px; }
 mjx-c.mjx-c79 { padding: 0.431em 0.528em 0.204em 0px; }
 mjx-c.mjx-c1D715 { padding: 0.715em 0.566em 0.022em 0px; }
 mjx-c.mjx-c1D714 { padding: 0.443em 0.622em 0.011em 0px; }
-mjx-c.mjx-c1D705 { padding: 0.442em 0.576em 0.011em 0px; }
 mjx-c.mjx-c2194 { padding: 0.511em 1em 0.011em 0px; }
-mjx-c.mjx-c1D70F { padding: 0.431em 0.517em 0.013em 0px; }
 mjx-c.mjx-c4D { padding: 0.683em 0.917em 0px 0px; }
 mjx-c.mjx-c2284 { padding: 0.716em 0.778em 0.215em 0px; }
 mjx-c.mjx-c52 { padding: 0.683em 0.736em 0.022em 0px; }
@@ -632,7 +632,7 @@ mjx-c.mjx-c25C3 { padding: 0.505em 0.5em 0.005em 0px; }
 mjx-c.mjx-c2227 { padding: 0.598em 0.667em 0.022em 0px; }
 mjx-c.mjx-c1D71B { padding: 0.431em 0.828em 0.01em 0px; }
 mjx-c.mjx-c22C3.TEX-LO { padding: 0.95em 1.111em 0.449em 0px; }
-mjx-c.mjx-c2DC { padding: 0.668em 0.5em 0px 0px; }
+mjx-c.mjx-c1D51F { padding: 0.685em 0.513em 0.031em 0px; }
 mjx-stretchy-h.mjx-c23DF > mjx-beg { padding: 0.262em 0.45em 0.142em 0px; margin-right: -0.45em; }
 mjx-stretchy-h.mjx-c23DF > mjx-ext > mjx-spacer { margin-left: -0.2em; }
 mjx-stretchy-h.mjx-c23DF > mjx-ext { padding: 0.262em 0px 0.142em; }
@@ -683,6 +683,7 @@ mjx-c.mjx-c7B.TEX-SO { padding: 0.85em 0.583em 0.349em 0px; }
 mjx-c.mjx-c7D.TEX-SO { padding: 0.85em 0.583em 0.349em 0px; }
 mjx-c.mjx-c1D5CD { padding: 0.571em 0.361em 0.01em 0px; }
 mjx-c.mjx-c4F.TEX-C { padding: 0.705em 0.796em 0.022em 0px; }
+mjx-c.mjx-c1D52A { padding: 0.475em 0.767em 0.026em 0px; }
 mjx-c.mjx-c1D40C { padding: 0.693em 1.092em 0px 0px; }
 mjx-c.mjx-c1D428 { padding: 0.452em 0.575em 0.005em 0px; }
 mjx-c.mjx-c1D41D { padding: 0.694em 0.639em 0.006em 0px; }
@@ -725,7 +726,7 @@ mjx-c.mjx-c1D42A { padding: 0.45em 0.609em 0.194em 0px; }</style><div class="mar
 \text{整除滤过}
 \longrightarrow
 \text{局部长度相加}." display="true" class="TEX-N"><mjx-mtext data-latex="\text{相邻同态}"><mjx-utext variant="normal" style="font-family: MJX-TEX-ZERO, serif;">相邻同态</mjx-utext></mjx-mtext><mjx-mo space="4" data-latex="\longrightarrow"><mjx-c class="mjx-c27F6">⟶</mjx-c></mjx-mo><mjx-mtext space="4" data-latex="\text{参数提升}"><mjx-utext variant="normal" style="font-family: MJX-TEX-ZERO, serif;">参数提升</mjx-utext></mjx-mtext><mjx-mo space="4" data-latex="\longrightarrow"><mjx-c class="mjx-c27F6">⟶</mjx-c></mjx-mo><mjx-mtext space="4" data-latex="\text{泛型可逆复合}"><mjx-utext variant="normal" style="font-family: MJX-TEX-ZERO, serif;">泛型可逆复合</mjx-utext></mjx-mtext><mjx-mo space="4" data-latex="\longrightarrow"><mjx-c class="mjx-c27F6">⟶</mjx-c></mjx-mo><mjx-mtext space="4" data-latex="\text{整除滤过}"><mjx-utext variant="normal" style="font-family: MJX-TEX-ZERO, serif;">整除滤过</mjx-utext></mjx-mtext><mjx-mo space="4" data-latex="\longrightarrow"><mjx-c class="mjx-c27F6">⟶</mjx-c></mjx-mo><mjx-mtext space="4" data-latex="\text{局部长度相加}"><mjx-utext variant="normal" style="font-family: MJX-TEX-ZERO, serif;">局部长度相加</mjx-utext></mjx-mtext><mjx-mo data-latex="."><mjx-c class="mjx-c2E">.</mjx-c></mjx-mo></mjx-math></mjx-container></div></div><div class="el-p"><p dir="auto">但“沿用路线”不等于每一步可以把 <span class="math math-inline is-loaded"><mjx-container class="MathJax" jax="CHTML" overflow="overflow"><mjx-math data-latex="p" class="TEX-N"><mjx-mi data-latex="p"><mjx-c class="mjx-c1D45D">𝑝</mjx-c></mjx-mi></mjx-math></mjx-container></span> 直接替换为 <span class="math math-inline is-loaded"><mjx-container class="MathJax" jax="CHTML" overflow="overflow"><mjx-math data-latex="p^r" class="TEX-N"><mjx-msup data-latex="p^r"><mjx-mi data-latex="p"><mjx-c class="mjx-c1D45D">𝑝</mjx-c></mjx-mi><mjx-script style="vertical-align: 0.363em;"><mjx-mi size="s" data-latex="r"><mjx-c class="mjx-c1D45F">𝑟</mjx-c></mjx-mi></mjx-script></mjx-msup></mjx-math></mjx-container></span>。本章将哪些地方一致、哪些地方需要新构造、哪些更强比较尚未证明分别说清。</p></div><div class="el-h2"><h2 data-heading="21.2 原文的一阶参数与本书的圆分参数" dir="auto" id="21.2_原文的一阶参数与本书的圆分参数_0">21.2 原文的一阶参数与本书的圆分参数</h2></div><div class="el-p"><p dir="auto">Pan–Shu的一阶构造使用等特征局部环<br>
-<span class="math math-block is-loaded"><mjx-container class="MathJax" jax="CHTML" overflow="scroll" display="true" data-editing-suite-math-overflow=""><mjx-math data-latex="\mathbf k[t]_{(t)}." display="true" class="TEX-N"><mjx-texatom data-latex="\mathbf k" texclass="ORD"><mjx-mi data-latex="k"><mjx-c class="mjx-c1D424">𝐤</mjx-c></mjx-mi></mjx-texatom><mjx-mo data-latex="["><mjx-c class="mjx-c5B">[</mjx-c></mjx-mo><mjx-mi data-latex="t"><mjx-c class="mjx-c1D461">𝑡</mjx-c></mjx-mi><mjx-msub data-latex="]_{(t)}"><mjx-mo data-latex="]"><mjx-c class="mjx-c5D">]</mjx-c></mjx-mo><mjx-script style="vertical-align: -0.177em;"><mjx-texatom size="s" data-latex="{(t)}" texclass="ORD"><mjx-mo data-latex="("><mjx-c class="mjx-c28">(</mjx-c></mjx-mo><mjx-mi data-latex="t"><mjx-c class="mjx-c1D461">𝑡</mjx-c></mjx-mi><mjx-mo data-latex=")"><mjx-c class="mjx-c29">)</mjx-c></mjx-mo></mjx-texatom></mjx-script></mjx-msub><mjx-mo data-latex="."><mjx-c class="mjx-c2E">.</mjx-c></mjx-mo></mjx-math></mjx-container></span>在允许Cartan参数移动的包络代数商中，将最高权的Cartan值作线性扰动。偶根除幂的指数低于 <span class="math math-inline is-loaded"><mjx-container class="MathJax" jax="CHTML" overflow="overflow"><mjx-math data-latex="p" class="TEX-N"><mjx-mi data-latex="p"><mjx-c class="mjx-c1D45D">𝑝</mjx-c></mjx-mi></mjx-math></mjx-container></span>，第三类则按奇根与偶倍根的两串成对幂计算。各局部系数包含至多 <span class="math math-inline is-loaded"><mjx-container class="MathJax" jax="CHTML" overflow="overflow"><mjx-math data-latex="p" class="TEX-N"><mjx-mi data-latex="p"><mjx-c class="mjx-c1D45D">𝑝</mjx-c></mjx-mi></mjx-math></mjx-container></span> 个常数项互不相同的线性因子，所以至多有一个零常数项；它在非零扰动下恰消失一次。因此相邻系数的消失阶只有0或1。原文Lemma 5.5及其后说明将这一事实用于余核比较。<sup class="editing-suite-sidenote-reference" data-sidenote-instance="reading-406"><a class="footnote-ref editing-suite-sidenote-reference-link" aria-label="边注 1" tabindex="-1">1</a></sup><span class="editing-suite-sidenote-anchor editing-suite-reading-sidenote-anchor" data-sidenote-instance="reading-406" data-sidenote-number="1"><template class="mathcraft-export-sidenote-template"><aside class="editing-suite-sidenote-margin" data-sidenote-number="1" role="note" aria-label="边注 1" tabindex="-1"><span class="editing-suite-sidenote-number">1</span><div class="editing-suite-sidenote-content">来源：Pan–Shu本地预印本§5.2，Lemma 5.5、Remark 5.6；一般整除滤过见§6.2。</div></aside></template></span></p></div><div class="el-p"><p dir="auto">高阶分布代数还含 <span class="math math-inline is-loaded"><mjx-container class="MathJax" jax="CHTML" overflow="overflow"><mjx-math data-latex="p" class="TEX-N"><mjx-mi data-latex="p"><mjx-c class="mjx-c1D45D">𝑝</mjx-c></mjx-mi></mjx-math></mjx-container></span> 次及更高除幂、Cartan二项分布。前面已说明，保持原有全部Cartan关系而只移动一次微分值，会重新遇到限制关系；一阶做法不能直接按同一代数定义照搬。</p></div><div class="el-p"><p dir="auto">本书使用混合特征圆分环<br>
+<span class="math math-block is-loaded"><mjx-container class="MathJax" jax="CHTML" overflow="scroll" display="true" data-editing-suite-math-overflow=""><mjx-math data-latex="\mathbf k[t]_{(t)}." display="true" class="TEX-N"><mjx-texatom data-latex="\mathbf k" texclass="ORD"><mjx-mi data-latex="k"><mjx-c class="mjx-c1D424">𝐤</mjx-c></mjx-mi></mjx-texatom><mjx-mo data-latex="["><mjx-c class="mjx-c5B">[</mjx-c></mjx-mo><mjx-mi data-latex="t"><mjx-c class="mjx-c1D461">𝑡</mjx-c></mjx-mi><mjx-msub data-latex="]_{(t)}"><mjx-mo data-latex="]"><mjx-c class="mjx-c5D">]</mjx-c></mjx-mo><mjx-script style="vertical-align: -0.177em;"><mjx-texatom size="s" data-latex="{(t)}" texclass="ORD"><mjx-mo data-latex="("><mjx-c class="mjx-c28">(</mjx-c></mjx-mo><mjx-mi data-latex="t"><mjx-c class="mjx-c1D461">𝑡</mjx-c></mjx-mi><mjx-mo data-latex=")"><mjx-c class="mjx-c29">)</mjx-c></mjx-mo></mjx-texatom></mjx-script></mjx-msub><mjx-mo data-latex="."><mjx-c class="mjx-c2E">.</mjx-c></mjx-mo></mjx-math></mjx-container></span>在允许Cartan参数移动的包络代数商中，将最高权的Cartan值作线性扰动。偶根除幂的指数低于 <span class="math math-inline is-loaded"><mjx-container class="MathJax" jax="CHTML" overflow="overflow"><mjx-math data-latex="p" class="TEX-N"><mjx-mi data-latex="p"><mjx-c class="mjx-c1D45D">𝑝</mjx-c></mjx-mi></mjx-math></mjx-container></span>，第三类则按奇根与偶倍根的两串成对幂计算。各局部系数包含至多 <span class="math math-inline is-loaded"><mjx-container class="MathJax" jax="CHTML" overflow="overflow"><mjx-math data-latex="p" class="TEX-N"><mjx-mi data-latex="p"><mjx-c class="mjx-c1D45D">𝑝</mjx-c></mjx-mi></mjx-math></mjx-container></span> 个常数项互不相同的线性因子，所以至多有一个零常数项；它在非零扰动下恰消失一次。因此相邻系数的消失阶只有0或1。原文Lemma 5.5及其后说明将这一事实用于余核比较。<sup class="editing-suite-sidenote-reference" data-sidenote-instance="reading-469"><a class="footnote-ref editing-suite-sidenote-reference-link" aria-label="边注 1" tabindex="-1">1</a></sup><span class="editing-suite-sidenote-anchor editing-suite-reading-sidenote-anchor" data-sidenote-instance="reading-469" data-sidenote-number="1"><template class="mathcraft-export-sidenote-template"><aside class="editing-suite-sidenote-margin" data-sidenote-number="1" role="note" aria-label="边注 1" tabindex="-1"><span class="editing-suite-sidenote-number">1</span><div class="editing-suite-sidenote-content">来源：Pan–Shu本地预印本§5.2，Lemma 5.5、Remark 5.6；一般整除滤过见§6.2。</div></aside></template></span></p></div><div class="el-p"><p dir="auto">高阶分布代数还含 <span class="math math-inline is-loaded"><mjx-container class="MathJax" jax="CHTML" overflow="overflow"><mjx-math data-latex="p" class="TEX-N"><mjx-mi data-latex="p"><mjx-c class="mjx-c1D45D">𝑝</mjx-c></mjx-mi></mjx-math></mjx-container></span> 次及更高除幂、Cartan二项分布。前面已说明，保持原有全部Cartan关系而只移动一次微分值，会重新遇到限制关系；一阶做法不能直接按同一代数定义照搬。</p></div><div class="el-p"><p dir="auto">本书使用混合特征圆分环<br>
 <span class="math math-block is-loaded"><mjx-container class="MathJax" jax="CHTML" overflow="scroll" display="true" data-editing-suite-math-overflow=""><mjx-math data-latex="A=W(\mathbf k)[\varepsilon_r],\qquad\pi=\varepsilon_r-1," display="true" class="TEX-N"><mjx-mi data-latex="A"><mjx-c class="mjx-c1D434">𝐴</mjx-c></mjx-mi><mjx-mo space="4" data-latex="="><mjx-c class="mjx-c3D">=</mjx-c></mjx-mo><mjx-mi space="4" data-latex="W"><mjx-c class="mjx-c1D44A">𝑊</mjx-c></mjx-mi><mjx-mo data-latex="("><mjx-c class="mjx-c28">(</mjx-c></mjx-mo><mjx-texatom data-latex="\mathbf k" texclass="ORD"><mjx-mi data-latex="k"><mjx-c class="mjx-c1D424">𝐤</mjx-c></mjx-mi></mjx-texatom><mjx-mo data-latex=")"><mjx-c class="mjx-c29">)</mjx-c></mjx-mo><mjx-mo data-latex="["><mjx-c class="mjx-c5B">[</mjx-c></mjx-mo><mjx-msub data-latex="\varepsilon_r"><mjx-mi data-latex="\varepsilon"><mjx-c class="mjx-c1D700">𝜀</mjx-c></mjx-mi><mjx-script style="vertical-align: -0.15em;"><mjx-mi size="s" data-latex="r"><mjx-c class="mjx-c1D45F">𝑟</mjx-c></mjx-mi></mjx-script></mjx-msub><mjx-mo data-latex="]"><mjx-c class="mjx-c5D">]</mjx-c></mjx-mo><mjx-mo data-latex=","><mjx-c class="mjx-c2C">,</mjx-c></mjx-mo><mjx-mstyle data-latex="\qquad"><mjx-mspace style="width: 2em;"></mjx-mspace></mjx-mstyle><mjx-mi space="2" data-latex="\pi"><mjx-c class="mjx-c1D70B">𝜋</mjx-c></mjx-mi><mjx-mo space="4" data-latex="="><mjx-c class="mjx-c3D">=</mjx-c></mjx-mo><mjx-msub space="4" data-latex="\varepsilon_r"><mjx-mi data-latex="\varepsilon"><mjx-c class="mjx-c1D700">𝜀</mjx-c></mjx-mi><mjx-script style="vertical-align: -0.15em;"><mjx-mi size="s" data-latex="r"><mjx-c class="mjx-c1D45F">𝑟</mjx-c></mjx-mi></mjx-script></mjx-msub><mjx-mo space="3" data-latex="-"><mjx-c class="mjx-c2212">−</mjx-c></mjx-mo><mjx-mn space="3" data-latex="1"><mjx-c class="mjx-c31">1</mjx-c></mjx-mn><mjx-mo data-latex=","><mjx-c class="mjx-c2C">,</mjx-c></mjx-mo></mjx-math></mjx-container></span>并通过根坐标整格、精确对偶、共同环面和完整根块换序，建立实际共享的参数代数与诱导模。这里较长的整形式论证承担的是“这些参数模确实存在且特殊化正确”的任务，不是和公式本身的一项额外假设。</p></div><div class="el-p"><p dir="auto">因此两条构造使用不同的参数环；不能直接将 <span class="math math-inline is-loaded"><mjx-container class="MathJax" jax="CHTML" overflow="overflow"><mjx-math data-latex="t" class="TEX-N"><mjx-mi data-latex="t"><mjx-c class="mjx-c1D461">𝑡</mjx-c></mjx-mi></mjx-math></mjx-container></span> 与 <span class="math math-inline is-loaded"><mjx-container class="MathJax" jax="CHTML" overflow="overflow"><mjx-math data-latex="\pi" class="TEX-N"><mjx-mi data-latex="\pi"><mjx-c class="mjx-c1D70B">𝜋</mjx-c></mjx-mi></mjx-math></mjx-container></span> 认作同一个变量。</p></div><div class="el-h2"><h2 data-heading="21.3 取一阶时局部长度怎样恢复" dir="auto" id="21.3_取一阶时局部长度怎样恢复_0">21.3 取一阶时局部长度怎样恢复</h2></div><div class="el-p"><p dir="auto">令<br>
 <span class="math math-block is-loaded"><mjx-container class="MathJax" jax="CHTML" overflow="scroll" display="true" data-editing-suite-math-overflow=""><mjx-math data-latex="r=1,\qquad M=2." display="true" class="TEX-N"><mjx-mi data-latex="r"><mjx-c class="mjx-c1D45F">𝑟</mjx-c></mjx-mi><mjx-mo space="4" data-latex="="><mjx-c class="mjx-c3D">=</mjx-c></mjx-mo><mjx-mn space="4" data-latex="1"><mjx-c class="mjx-c31">1</mjx-c></mjx-mn><mjx-mo data-latex=","><mjx-c class="mjx-c2C">,</mjx-c></mjx-mo><mjx-mstyle data-latex="\qquad"><mjx-mspace style="width: 2em;"></mjx-mspace></mjx-mstyle><mjx-mi space="2" data-latex="M"><mjx-c class="mjx-c1D440">𝑀</mjx-c></mjx-mi><mjx-mo space="4" data-latex="="><mjx-c class="mjx-c3D">=</mjx-c></mjx-mo><mjx-mn space="4" data-latex="2."><mjx-c class="mjx-c32" noic="true" style="padding-top: 0.666em;">2</mjx-c><mjx-c class="mjx-c2E" style="padding-top: 0.666em;">.</mjx-c></mjx-mn></mjx-math></mjx-container></span>此时只有一个权重<br>
 <span class="math math-block is-loaded"><mjx-container class="MathJax" jax="CHTML" overflow="scroll" display="true" data-editing-suite-math-overflow=""><mjx-math data-latex="w_1=M-1=1." display="true" class="TEX-N"><mjx-msub data-latex="w_1"><mjx-mi data-latex="w"><mjx-c class="mjx-c1D464">𝑤</mjx-c></mjx-mi><mjx-script style="vertical-align: -0.15em;"><mjx-mn size="s" data-latex="1"><mjx-c class="mjx-c31">1</mjx-c></mjx-mn></mjx-script></mjx-msub><mjx-mo space="4" data-latex="="><mjx-c class="mjx-c3D">=</mjx-c></mjx-mo><mjx-mi space="4" data-latex="M"><mjx-c class="mjx-c1D440">𝑀</mjx-c></mjx-mi><mjx-mo space="3" data-latex="-"><mjx-c class="mjx-c2212">−</mjx-c></mjx-mo><mjx-mn space="3" data-latex="1"><mjx-c class="mjx-c31">1</mjx-c></mjx-mn><mjx-mo space="4" data-latex="="><mjx-c class="mjx-c3D">=</mjx-c></mjx-mo><mjx-mn space="4" data-latex="1."><mjx-c class="mjx-c31" noic="true" style="padding-top: 0.666em;">1</mjx-c><mjx-c class="mjx-c2E" style="padding-top: 0.666em;">.</mjx-c></mjx-mn></mjx-math></mjx-container></span></p></div><div class="el-p"><p dir="auto">普通偶根的局部指数成为</p></div><div class="el-div"><div class="math math-block is-loaded"><mjx-container class="MathJax" jax="CHTML" overflow="scroll" display="true" data-editing-suite-math-overflow=""><mjx-math data-latex="m_\alpha(i)=\mathbf1_{d+i\ge p},
@@ -748,7 +749,7 @@ u_{\beta,1}
 }$}"><mjx-box style="border: 0.067em solid; padding: 0.2em;"><mjx-texatom texclass="ORD"><mjx-mstyle data-latex="\displaystyle{
 u_{\beta,1}
 =m_\beta+p\,\mathbf1_{m_\beta\ \text{偶}}.
-}"><mjx-texatom data-latex="{u_{\beta,1}=m_\beta+p\,\mathbf1_{m_\beta\ \text{偶}}.}" texclass="ORD"><mjx-msub data-latex="u_{\beta,1}"><mjx-mi data-latex="u"><mjx-c class="mjx-c1D462">𝑢</mjx-c></mjx-mi><mjx-script style="vertical-align: -0.15em;"><mjx-texatom size="s" data-latex="{\beta,1}" texclass="ORD"><mjx-mi data-latex="\beta"><mjx-c class="mjx-c1D6FD">𝛽</mjx-c></mjx-mi><mjx-mo data-latex=","><mjx-c class="mjx-c2C">,</mjx-c></mjx-mo><mjx-mn data-latex="1"><mjx-c class="mjx-c31">1</mjx-c></mjx-mn></mjx-texatom></mjx-script></mjx-msub><mjx-mo space="4" data-latex="="><mjx-c class="mjx-c3D">=</mjx-c></mjx-mo><mjx-msub space="4" data-latex="m_\beta"><mjx-mi data-latex="m"><mjx-c class="mjx-c1D45A">𝑚</mjx-c></mjx-mi><mjx-script style="vertical-align: -0.15em;"><mjx-mi size="s" data-latex="\beta"><mjx-c class="mjx-c1D6FD">𝛽</mjx-c></mjx-mi></mjx-script></mjx-msub><mjx-mo space="3" data-latex="+"><mjx-c class="mjx-c2B">+</mjx-c></mjx-mo><mjx-mi space="3" data-latex="p"><mjx-c class="mjx-c1D45D">𝑝</mjx-c></mjx-mi><mjx-mstyle data-latex="\,"><mjx-mspace style="width: 0.167em;"></mjx-mspace></mjx-mstyle><mjx-msub data-latex="\mathbf1_{m_\beta\ \text{偶}}"><mjx-texatom data-latex="\mathbf1" texclass="ORD"><mjx-mn data-latex="1"><mjx-c class="mjx-c1D7CF">𝟏</mjx-c></mjx-mn></mjx-texatom><mjx-script style="vertical-align: -0.177em;"><mjx-texatom size="s" data-latex="{m_\beta\ \text{偶}}" texclass="ORD"><mjx-msub data-latex="m_\beta"><mjx-mi data-latex="m"><mjx-c class="mjx-c1D45A">𝑚</mjx-c></mjx-mi><mjx-script style="vertical-align: -0.15em;"><mjx-mi size="s" data-latex="\beta"><mjx-c class="mjx-c1D6FD">𝛽</mjx-c></mjx-mi></mjx-script></mjx-msub><mjx-mtext data-latex="\ "><mjx-c class="mjx-cA0">&nbsp;</mjx-c></mjx-mtext><mjx-mtext data-latex="\text{偶}"><mjx-utext variant="normal" style="font-family: MJX-TEX-ZERO, serif;">偶</mjx-utext></mjx-mtext></mjx-texatom></mjx-script></mjx-msub><mjx-mo data-latex="."><mjx-c class="mjx-c2E">.</mjx-c></mjx-mo></mjx-texatom></mjx-mstyle></mjx-texatom></mjx-box></mjx-menclose></mjx-math></mjx-container></div></div><div class="el-p"><p dir="auto">给偶代表加一个奇数 <span class="math math-inline is-loaded"><mjx-container class="MathJax" jax="CHTML" overflow="overflow"><mjx-math data-latex="p" class="TEX-N"><mjx-mi data-latex="p"><mjx-c class="mjx-c1D45D">𝑝</mjx-c></mjx-mi></mjx-math></mjx-container></span>，使其成为奇代表；已经为奇数的代表保持不变。</p></div><div class="el-h2"><h2 data-heading="21.5 本地预印本中的一处奇偶指示符" dir="auto" id="21.5_本地预印本中的一处奇偶指示符_0">21.5 本地预印本中的一处奇偶指示符</h2></div><div class="el-p"><p dir="auto">在本项目使用的31页预印本中，Theorem 6.4(1)第三项显示的起点含</p></div><div class="el-div"><div class="math math-block is-loaded"><mjx-container class="MathJax" jax="CHTML" overflow="scroll" display="true" data-editing-suite-math-overflow=""><mjx-math data-latex="m_\beta+p\,\delta_{1,(-1)^{m_\beta-1}}." display="true" class="TEX-N"><mjx-msub data-latex="m_\beta"><mjx-mi data-latex="m"><mjx-c class="mjx-c1D45A">𝑚</mjx-c></mjx-mi><mjx-script style="vertical-align: -0.15em;"><mjx-mi size="s" data-latex="\beta"><mjx-c class="mjx-c1D6FD">𝛽</mjx-c></mjx-mi></mjx-script></mjx-msub><mjx-mo space="3" data-latex="+"><mjx-c class="mjx-c2B">+</mjx-c></mjx-mo><mjx-mi space="3" data-latex="p"><mjx-c class="mjx-c1D45D">𝑝</mjx-c></mjx-mi><mjx-mstyle data-latex="\,"><mjx-mspace style="width: 0.167em;"></mjx-mspace></mjx-mstyle><mjx-msub data-latex="\delta_{1,(-1)^{m_\beta-1}}"><mjx-mi data-latex="\delta"><mjx-c class="mjx-c1D6FF">𝛿</mjx-c></mjx-mi><mjx-script style="vertical-align: -0.33em; margin-left: -0.007em;"><mjx-texatom size="s" data-latex="{1,(-1)^{m_\beta-1}}" texclass="ORD"><mjx-mn data-latex="1"><mjx-c class="mjx-c31">1</mjx-c></mjx-mn><mjx-mo data-latex=","><mjx-c class="mjx-c2C">,</mjx-c></mjx-mo><mjx-mo data-latex="("><mjx-c class="mjx-c28">(</mjx-c></mjx-mo><mjx-mo data-latex="-"><mjx-c class="mjx-c2212">−</mjx-c></mjx-mo><mjx-mn data-latex="1"><mjx-c class="mjx-c31">1</mjx-c></mjx-mn><mjx-msup data-latex=")^{m_\beta-1}"><mjx-mo data-latex=")"><mjx-c class="mjx-c29">)</mjx-c></mjx-mo><mjx-script style="vertical-align: 0.496em;"><mjx-texatom size="s" data-latex="{m_\beta-1}" texclass="ORD"><mjx-msub data-latex="m_\beta"><mjx-mi data-latex="m"><mjx-c class="mjx-c1D45A">𝑚</mjx-c></mjx-mi><mjx-script style="vertical-align: -0.351em;"><mjx-mi data-latex="\beta"><mjx-c class="mjx-c1D6FD">𝛽</mjx-c></mjx-mi></mjx-script></mjx-msub><mjx-mo data-latex="-"><mjx-c class="mjx-c2212">−</mjx-c></mjx-mo><mjx-mn data-latex="1"><mjx-c class="mjx-c31">1</mjx-c></mjx-mn></mjx-texatom></mjx-script></mjx-msup></mjx-texatom></mjx-script></mjx-msub><mjx-mo data-latex="."><mjx-c class="mjx-c2E">.</mjx-c></mjx-mo></mjx-math></mjx-container></div></div><div class="el-p"><p dir="auto">这一指示符在 <span class="math math-inline is-loaded"><mjx-container class="MathJax" jax="CHTML" overflow="overflow"><mjx-math data-latex="m_\beta" class="TEX-N"><mjx-msub data-latex="m_\beta"><mjx-mi data-latex="m"><mjx-c class="mjx-c1D45A">𝑚</mjx-c></mjx-mi><mjx-script style="vertical-align: -0.15em;"><mjx-mi size="s" data-latex="\beta"><mjx-c class="mjx-c1D6FD">𝛽</mjx-c></mjx-mi></mjx-script></mjx-msub></mjx-math></mjx-container></span> 为奇数时取1，因此得到偶起点，与同一稿Lemma 5.3的核起点不相符。这个差异已经对PDF物理页25的实际页面核对，不是仅由文字抽取推测。<sup class="editing-suite-sidenote-reference" data-sidenote-instance="reading-407"><a class="footnote-ref editing-suite-sidenote-reference-link" aria-label="边注 2" tabindex="-1">2</a></sup><span class="editing-suite-sidenote-anchor editing-suite-reading-sidenote-anchor" data-sidenote-instance="reading-407" data-sidenote-number="2"><template class="mathcraft-export-sidenote-template"><aside class="editing-suite-sidenote-margin" data-sidenote-number="2" role="note" aria-label="边注 2" tabindex="-1"><span class="editing-suite-sidenote-number">2</span><div class="editing-suite-sidenote-content">定位：本地《Lei P, Bin S. Jantzen filtration and strong linkage principle for modular Lie superalgebras..pdf》，物理页25，Theorem 6.4(1)第三项；对照物理页17–18的Lemma 5.3及其核基。这里仅指出该本地预印本显示式的差异，不声称已核准所有后续发表版次或作者勘误。</div></aside></template></span></p></div><div class="el-p"><p dir="auto">可以直接用最低参数检查。取一个 <span class="math math-inline is-loaded"><mjx-container class="MathJax" jax="CHTML" overflow="overflow"><mjx-math data-latex="\mathfrak{osp}(1|2)" class="TEX-N"><mjx-texatom data-latex="\mathfrak{osp}" texclass="ORD"><mjx-mi data-latex="osp"><mjx-c class="mjx-c1D52C" noic="true" style="padding-top: 0.541em;">𝔬</mjx-c><mjx-c class="mjx-c1D530" noic="true" style="padding-top: 0.541em;">𝔰</mjx-c><mjx-c class="mjx-c1D52D" style="padding-top: 0.541em;">𝔭</mjx-c></mjx-mi></mjx-texatom><mjx-mo data-latex="("><mjx-c class="mjx-c28">(</mjx-c></mjx-mo><mjx-mn data-latex="1"><mjx-c class="mjx-c31">1</mjx-c></mjx-mn><mjx-mo data-latex="|"><mjx-c class="mjx-c7C">|</mjx-c></mjx-mo><mjx-mn data-latex="2"><mjx-c class="mjx-c32">2</mjx-c></mjx-mn><mjx-mo data-latex=")"><mjx-c class="mjx-c29">)</mjx-c></mjx-mo></mjx-math></mjx-container></span> 根块、<span class="math math-inline is-loaded"><mjx-container class="MathJax" jax="CHTML" overflow="overflow"><mjx-math data-latex="p=3" breakable="true" class="TEX-N"><mjx-mi data-latex="p"><mjx-c class="mjx-c1D45D">𝑝</mjx-c></mjx-mi><mjx-break size="4"> </mjx-break><mjx-mo data-latex="="><mjx-c class="mjx-c3D">=</mjx-c></mjx-mo><mjx-mn space="4" data-latex="3"><mjx-c class="mjx-c33">3</mjx-c></mjx-mn></mjx-math></mjx-container></span>、当前最高配对为0。其完整根串为<br>
+}"><mjx-texatom data-latex="{u_{\beta,1}=m_\beta+p\,\mathbf1_{m_\beta\ \text{偶}}.}" texclass="ORD"><mjx-msub data-latex="u_{\beta,1}"><mjx-mi data-latex="u"><mjx-c class="mjx-c1D462">𝑢</mjx-c></mjx-mi><mjx-script style="vertical-align: -0.15em;"><mjx-texatom size="s" data-latex="{\beta,1}" texclass="ORD"><mjx-mi data-latex="\beta"><mjx-c class="mjx-c1D6FD">𝛽</mjx-c></mjx-mi><mjx-mo data-latex=","><mjx-c class="mjx-c2C">,</mjx-c></mjx-mo><mjx-mn data-latex="1"><mjx-c class="mjx-c31">1</mjx-c></mjx-mn></mjx-texatom></mjx-script></mjx-msub><mjx-mo space="4" data-latex="="><mjx-c class="mjx-c3D">=</mjx-c></mjx-mo><mjx-msub space="4" data-latex="m_\beta"><mjx-mi data-latex="m"><mjx-c class="mjx-c1D45A">𝑚</mjx-c></mjx-mi><mjx-script style="vertical-align: -0.15em;"><mjx-mi size="s" data-latex="\beta"><mjx-c class="mjx-c1D6FD">𝛽</mjx-c></mjx-mi></mjx-script></mjx-msub><mjx-mo space="3" data-latex="+"><mjx-c class="mjx-c2B">+</mjx-c></mjx-mo><mjx-mi space="3" data-latex="p"><mjx-c class="mjx-c1D45D">𝑝</mjx-c></mjx-mi><mjx-mstyle data-latex="\,"><mjx-mspace style="width: 0.167em;"></mjx-mspace></mjx-mstyle><mjx-msub data-latex="\mathbf1_{m_\beta\ \text{偶}}"><mjx-texatom data-latex="\mathbf1" texclass="ORD"><mjx-mn data-latex="1"><mjx-c class="mjx-c1D7CF">𝟏</mjx-c></mjx-mn></mjx-texatom><mjx-script style="vertical-align: -0.177em;"><mjx-texatom size="s" data-latex="{m_\beta\ \text{偶}}" texclass="ORD"><mjx-msub data-latex="m_\beta"><mjx-mi data-latex="m"><mjx-c class="mjx-c1D45A">𝑚</mjx-c></mjx-mi><mjx-script style="vertical-align: -0.15em;"><mjx-mi size="s" data-latex="\beta"><mjx-c class="mjx-c1D6FD">𝛽</mjx-c></mjx-mi></mjx-script></mjx-msub><mjx-mtext data-latex="\ "><mjx-c class="mjx-cA0">&nbsp;</mjx-c></mjx-mtext><mjx-mtext data-latex="\text{偶}"><mjx-utext variant="normal" style="font-family: MJX-TEX-ZERO, serif;">偶</mjx-utext></mjx-mtext></mjx-texatom></mjx-script></mjx-msub><mjx-mo data-latex="."><mjx-c class="mjx-c2E">.</mjx-c></mjx-mo></mjx-texatom></mjx-mstyle></mjx-texatom></mjx-box></mjx-menclose></mjx-math></mjx-container></div></div><div class="el-p"><p dir="auto">给偶代表加一个奇数 <span class="math math-inline is-loaded"><mjx-container class="MathJax" jax="CHTML" overflow="overflow"><mjx-math data-latex="p" class="TEX-N"><mjx-mi data-latex="p"><mjx-c class="mjx-c1D45D">𝑝</mjx-c></mjx-mi></mjx-math></mjx-container></span>，使其成为奇代表；已经为奇数的代表保持不变。</p></div><div class="el-h2"><h2 data-heading="21.5 本地预印本中的一处奇偶指示符" dir="auto" id="21.5_本地预印本中的一处奇偶指示符_0">21.5 本地预印本中的一处奇偶指示符</h2></div><div class="el-p"><p dir="auto">在本项目使用的31页预印本中，Theorem 6.4(1)第三项显示的起点含</p></div><div class="el-div"><div class="math math-block is-loaded"><mjx-container class="MathJax" jax="CHTML" overflow="scroll" display="true" data-editing-suite-math-overflow=""><mjx-math data-latex="m_\beta+p\,\delta_{1,(-1)^{m_\beta-1}}." display="true" class="TEX-N"><mjx-msub data-latex="m_\beta"><mjx-mi data-latex="m"><mjx-c class="mjx-c1D45A">𝑚</mjx-c></mjx-mi><mjx-script style="vertical-align: -0.15em;"><mjx-mi size="s" data-latex="\beta"><mjx-c class="mjx-c1D6FD">𝛽</mjx-c></mjx-mi></mjx-script></mjx-msub><mjx-mo space="3" data-latex="+"><mjx-c class="mjx-c2B">+</mjx-c></mjx-mo><mjx-mi space="3" data-latex="p"><mjx-c class="mjx-c1D45D">𝑝</mjx-c></mjx-mi><mjx-mstyle data-latex="\,"><mjx-mspace style="width: 0.167em;"></mjx-mspace></mjx-mstyle><mjx-msub data-latex="\delta_{1,(-1)^{m_\beta-1}}"><mjx-mi data-latex="\delta"><mjx-c class="mjx-c1D6FF">𝛿</mjx-c></mjx-mi><mjx-script style="vertical-align: -0.33em; margin-left: -0.007em;"><mjx-texatom size="s" data-latex="{1,(-1)^{m_\beta-1}}" texclass="ORD"><mjx-mn data-latex="1"><mjx-c class="mjx-c31">1</mjx-c></mjx-mn><mjx-mo data-latex=","><mjx-c class="mjx-c2C">,</mjx-c></mjx-mo><mjx-mo data-latex="("><mjx-c class="mjx-c28">(</mjx-c></mjx-mo><mjx-mo data-latex="-"><mjx-c class="mjx-c2212">−</mjx-c></mjx-mo><mjx-mn data-latex="1"><mjx-c class="mjx-c31">1</mjx-c></mjx-mn><mjx-msup data-latex=")^{m_\beta-1}"><mjx-mo data-latex=")"><mjx-c class="mjx-c29">)</mjx-c></mjx-mo><mjx-script style="vertical-align: 0.496em;"><mjx-texatom size="s" data-latex="{m_\beta-1}" texclass="ORD"><mjx-msub data-latex="m_\beta"><mjx-mi data-latex="m"><mjx-c class="mjx-c1D45A">𝑚</mjx-c></mjx-mi><mjx-script style="vertical-align: -0.351em;"><mjx-mi data-latex="\beta"><mjx-c class="mjx-c1D6FD">𝛽</mjx-c></mjx-mi></mjx-script></mjx-msub><mjx-mo data-latex="-"><mjx-c class="mjx-c2212">−</mjx-c></mjx-mo><mjx-mn data-latex="1"><mjx-c class="mjx-c31">1</mjx-c></mjx-mn></mjx-texatom></mjx-script></mjx-msup></mjx-texatom></mjx-script></mjx-msub><mjx-mo data-latex="."><mjx-c class="mjx-c2E">.</mjx-c></mjx-mo></mjx-math></mjx-container></div></div><div class="el-p"><p dir="auto">这一指示符在 <span class="math math-inline is-loaded"><mjx-container class="MathJax" jax="CHTML" overflow="overflow"><mjx-math data-latex="m_\beta" class="TEX-N"><mjx-msub data-latex="m_\beta"><mjx-mi data-latex="m"><mjx-c class="mjx-c1D45A">𝑚</mjx-c></mjx-mi><mjx-script style="vertical-align: -0.15em;"><mjx-mi size="s" data-latex="\beta"><mjx-c class="mjx-c1D6FD">𝛽</mjx-c></mjx-mi></mjx-script></mjx-msub></mjx-math></mjx-container></span> 为奇数时取1，因此得到偶起点，与同一稿Lemma 5.3的核起点不相符。这个差异已经对PDF物理页25的实际页面核对，不是仅由文字抽取推测。<sup class="editing-suite-sidenote-reference" data-sidenote-instance="reading-470"><a class="footnote-ref editing-suite-sidenote-reference-link" aria-label="边注 2" tabindex="-1">2</a></sup><span class="editing-suite-sidenote-anchor editing-suite-reading-sidenote-anchor" data-sidenote-instance="reading-470" data-sidenote-number="2"><template class="mathcraft-export-sidenote-template"><aside class="editing-suite-sidenote-margin" data-sidenote-number="2" role="note" aria-label="边注 2" tabindex="-1"><span class="editing-suite-sidenote-number">2</span><div class="editing-suite-sidenote-content">定位：本地《Lei P, Bin S. Jantzen filtration and strong linkage principle for modular Lie superalgebras..pdf》，物理页25，Theorem 6.4(1)第三项；对照物理页17–18的Lemma 5.3及其核基。这里仅指出该本地预印本显示式的差异，不声称已核准所有后续发表版次或作者勘误。</div></aside></template></span></p></div><div class="el-p"><p dir="auto">可以直接用最低参数检查。取一个 <span class="math math-inline is-loaded"><mjx-container class="MathJax" jax="CHTML" overflow="overflow"><mjx-math data-latex="\mathfrak{osp}(1|2)" class="TEX-N"><mjx-texatom data-latex="\mathfrak{osp}" texclass="ORD"><mjx-mi data-latex="osp"><mjx-c class="mjx-c1D52C" noic="true" style="padding-top: 0.541em;">𝔬</mjx-c><mjx-c class="mjx-c1D530" noic="true" style="padding-top: 0.541em;">𝔰</mjx-c><mjx-c class="mjx-c1D52D" style="padding-top: 0.541em;">𝔭</mjx-c></mjx-mi></mjx-texatom><mjx-mo data-latex="("><mjx-c class="mjx-c28">(</mjx-c></mjx-mo><mjx-mn data-latex="1"><mjx-c class="mjx-c31">1</mjx-c></mjx-mn><mjx-mo data-latex="|"><mjx-c class="mjx-c7C">|</mjx-c></mjx-mo><mjx-mn data-latex="2"><mjx-c class="mjx-c32">2</mjx-c></mjx-mn><mjx-mo data-latex=")"><mjx-c class="mjx-c29">)</mjx-c></mjx-mo></mjx-math></mjx-container></span> 根块、<span class="math math-inline is-loaded"><mjx-container class="MathJax" jax="CHTML" overflow="overflow"><mjx-math data-latex="p=3" breakable="true" class="TEX-N"><mjx-mi data-latex="p"><mjx-c class="mjx-c1D45D">𝑝</mjx-c></mjx-mi><mjx-break size="4"> </mjx-break><mjx-mo data-latex="="><mjx-c class="mjx-c3D">=</mjx-c></mjx-mo><mjx-mn space="4" data-latex="3"><mjx-c class="mjx-c33">3</mjx-c></mjx-mn></mjx-math></mjx-container></span>、当前最高配对为0。其完整根串为<br>
 <span class="math math-block is-loaded"><mjx-container class="MathJax" jax="CHTML" overflow="scroll" display="true" data-editing-suite-math-overflow=""><mjx-math data-latex="1+z+z^2+z^3+z^4+z^5." display="true" class="TEX-N"><mjx-mn data-latex="1"><mjx-c class="mjx-c31">1</mjx-c></mjx-mn><mjx-mo space="3" data-latex="+"><mjx-c class="mjx-c2B">+</mjx-c></mjx-mo><mjx-mi space="3" data-latex="z"><mjx-c class="mjx-c1D467">𝑧</mjx-c></mjx-mi><mjx-mo space="3" data-latex="+"><mjx-c class="mjx-c2B">+</mjx-c></mjx-mo><mjx-msup space="3" data-latex="z^2"><mjx-mi data-latex="z"><mjx-c class="mjx-c1D467">𝑧</mjx-c></mjx-mi><mjx-script style="vertical-align: 0.413em; margin-left: 0.05em;"><mjx-mn size="s" data-latex="2"><mjx-c class="mjx-c32">2</mjx-c></mjx-mn></mjx-script></mjx-msup><mjx-mo space="3" data-latex="+"><mjx-c class="mjx-c2B">+</mjx-c></mjx-mo><mjx-msup space="3" data-latex="z^3"><mjx-mi data-latex="z"><mjx-c class="mjx-c1D467">𝑧</mjx-c></mjx-mi><mjx-script style="vertical-align: 0.413em; margin-left: 0.05em;"><mjx-mn size="s" data-latex="3"><mjx-c class="mjx-c33">3</mjx-c></mjx-mn></mjx-script></mjx-msup><mjx-mo space="3" data-latex="+"><mjx-c class="mjx-c2B">+</mjx-c></mjx-mo><mjx-msup space="3" data-latex="z^4"><mjx-mi data-latex="z"><mjx-c class="mjx-c1D467">𝑧</mjx-c></mjx-mi><mjx-script style="vertical-align: 0.413em; margin-left: 0.05em;"><mjx-mn size="s" data-latex="4"><mjx-c class="mjx-c34">4</mjx-c></mjx-mn></mjx-script></mjx-msup><mjx-mo space="3" data-latex="+"><mjx-c class="mjx-c2B">+</mjx-c></mjx-mo><mjx-msup space="3" data-latex="z^5"><mjx-mi data-latex="z"><mjx-c class="mjx-c1D467">𝑧</mjx-c></mjx-mi><mjx-script style="vertical-align: 0.413em; margin-left: 0.05em;"><mjx-mn size="s" data-latex="5"><mjx-c class="mjx-c35">5</mjx-c></mjx-mn></mjx-script></mjx-msup><mjx-mo data-latex="."><mjx-c class="mjx-c2E">.</mjx-c></mjx-mo></mjx-math></mjx-container></span>实际经典核由所有非零根次数组成，特征标为<br>
 <span class="math math-block is-loaded"><mjx-container class="MathJax" jax="CHTML" overflow="scroll" display="true" data-editing-suite-math-overflow=""><mjx-math data-latex="z+z^2+z^3+z^4+z^5." display="true" class="TEX-N"><mjx-mi data-latex="z"><mjx-c class="mjx-c1D467">𝑧</mjx-c></mjx-mi><mjx-mo space="3" data-latex="+"><mjx-c class="mjx-c2B">+</mjx-c></mjx-mo><mjx-msup space="3" data-latex="z^2"><mjx-mi data-latex="z"><mjx-c class="mjx-c1D467">𝑧</mjx-c></mjx-mi><mjx-script style="vertical-align: 0.413em; margin-left: 0.05em;"><mjx-mn size="s" data-latex="2"><mjx-c class="mjx-c32">2</mjx-c></mjx-mn></mjx-script></mjx-msup><mjx-mo space="3" data-latex="+"><mjx-c class="mjx-c2B">+</mjx-c></mjx-mo><mjx-msup space="3" data-latex="z^3"><mjx-mi data-latex="z"><mjx-c class="mjx-c1D467">𝑧</mjx-c></mjx-mi><mjx-script style="vertical-align: 0.413em; margin-left: 0.05em;"><mjx-mn size="s" data-latex="3"><mjx-c class="mjx-c33">3</mjx-c></mjx-mn></mjx-script></mjx-msup><mjx-mo space="3" data-latex="+"><mjx-c class="mjx-c2B">+</mjx-c></mjx-mo><mjx-msup space="3" data-latex="z^4"><mjx-mi data-latex="z"><mjx-c class="mjx-c1D467">𝑧</mjx-c></mjx-mi><mjx-script style="vertical-align: 0.413em; margin-left: 0.05em;"><mjx-mn size="s" data-latex="4"><mjx-c class="mjx-c34">4</mjx-c></mjx-mn></mjx-script></mjx-msup><mjx-mo space="3" data-latex="+"><mjx-c class="mjx-c2B">+</mjx-c></mjx-mo><mjx-msup space="3" data-latex="z^5"><mjx-mi data-latex="z"><mjx-c class="mjx-c1D467">𝑧</mjx-c></mjx-mi><mjx-script style="vertical-align: 0.413em; margin-left: 0.05em;"><mjx-mn size="s" data-latex="5"><mjx-c class="mjx-c35">5</mjx-c></mjx-mn></mjx-script></mjx-msup><mjx-mo data-latex="."><mjx-c class="mjx-c2E">.</mjx-c></mjx-mo></mjx-math></mjx-container></span>此时 <span class="math math-inline is-loaded"><mjx-container class="MathJax" jax="CHTML" overflow="overflow"><mjx-math data-latex="m_\beta=1" breakable="true" class="TEX-N"><mjx-msub data-latex="m_\beta"><mjx-mi data-latex="m"><mjx-c class="mjx-c1D45A">𝑚</mjx-c></mjx-mi><mjx-script style="vertical-align: -0.15em;"><mjx-mi size="s" data-latex="\beta"><mjx-c class="mjx-c1D6FD">𝛽</mjx-c></mjx-mi></mjx-script></mjx-msub><mjx-break size="4"> </mjx-break><mjx-mo data-latex="="><mjx-c class="mjx-c3D">=</mjx-c></mjx-mo><mjx-mn space="4" data-latex="1"><mjx-c class="mjx-c31">1</mjx-c></mjx-mn></mjx-math></mjx-container></span>，本书及Lemma 5.3的奇起点为1，确实得到这五项。</p></div><div class="el-p"><p dir="auto">若把显示式中的起点取成 <span class="math math-inline is-loaded"><mjx-container class="MathJax" jax="CHTML" overflow="overflow"><mjx-math data-latex="1+3=4" breakable="true" class="TEX-N"><mjx-mn data-latex="1"><mjx-c class="mjx-c31">1</mjx-c></mjx-mn><mjx-break size="3"> </mjx-break><mjx-mo data-latex="+"><mjx-c class="mjx-c2B">+</mjx-c></mjx-mo><mjx-mn space="3" data-latex="3"><mjx-c class="mjx-c33">3</mjx-c></mjx-mn><mjx-break size="4"> </mjx-break><mjx-mo data-latex="="><mjx-c class="mjx-c3D">=</mjx-c></mjx-mo><mjx-mn space="4" data-latex="4"><mjx-c class="mjx-c34">4</mjx-c></mjx-mn></mjx-math></mjx-container></span>，相应根串计算只给<br>
 <span class="math math-block is-loaded"><mjx-container class="MathJax" jax="CHTML" overflow="scroll" display="true" data-editing-suite-math-overflow=""><mjx-math data-latex="z^4+z^5," display="true" class="TEX-N"><mjx-msup data-latex="z^4"><mjx-mi data-latex="z"><mjx-c class="mjx-c1D467">𝑧</mjx-c></mjx-mi><mjx-script style="vertical-align: 0.413em; margin-left: 0.05em;"><mjx-mn size="s" data-latex="4"><mjx-c class="mjx-c34">4</mjx-c></mjx-mn></mjx-script></mjx-msup><mjx-mo space="3" data-latex="+"><mjx-c class="mjx-c2B">+</mjx-c></mjx-mo><mjx-msup space="3" data-latex="z^5"><mjx-mi data-latex="z"><mjx-c class="mjx-c1D467">𝑧</mjx-c></mjx-mi><mjx-script style="vertical-align: 0.413em; margin-left: 0.05em;"><mjx-mn size="s" data-latex="5"><mjx-c class="mjx-c35">5</mjx-c></mjx-mn></mjx-script></mjx-msup><mjx-mo data-latex=","><mjx-c class="mjx-c2C">,</mjx-c></mjx-mo></mjx-math></mjx-container></span>与实际核不符。因此一阶兼容应以经过核查的局部映射和Lemma 5.3为准，不能为了逐字复制一个显示式而改变已算出的核。</p></div><div class="el-p"><p dir="auto">这个修正不改变相邻参数方法的总体论证。它说明最终全局写法中的奇偶代表需要独立核对。</p></div><div class="el-h2"><h2 data-heading="21.6 已经证明的一阶兼容程度" dir="auto" id="21.6_已经证明的一阶兼容程度_0">21.6 已经证明的一阶兼容程度</h2></div><div class="el-p"><p dir="auto">在 <span class="math math-inline is-loaded"><mjx-container class="MathJax" jax="CHTML" overflow="overflow"><mjx-math data-latex="r=1,M=2" breakable="true" class="TEX-N"><mjx-mi data-latex="r"><mjx-c class="mjx-c1D45F">𝑟</mjx-c></mjx-mi><mjx-break size="4"> </mjx-break><mjx-mo data-latex="="><mjx-c class="mjx-c3D">=</mjx-c></mjx-mo><mjx-mn space="4" data-latex="1"><mjx-c class="mjx-c31">1</mjx-c></mjx-mn><mjx-mo data-latex=","><mjx-c class="mjx-c2C">,</mjx-c></mjx-mo><mjx-mi space="2" data-latex="M"><mjx-c class="mjx-c1D440">𝑀</mjx-c></mjx-mi><mjx-break size="4"> </mjx-break><mjx-mo data-latex="="><mjx-c class="mjx-c3D">=</mjx-c></mjx-mo><mjx-mn space="4" data-latex="2"><mjx-c class="mjx-c32">2</mjx-c></mjx-mn></mjx-math></mjx-container></span> 且属于本书模型范围时，已经证明：</p></div><div class="el-ul"><ul>
