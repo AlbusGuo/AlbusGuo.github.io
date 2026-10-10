@@ -1,0 +1,698 @@
+<!DOCTYPE html><html lang="zh-CN"><head><title>参考资料</title><base href=".."><meta name="pathname" content="高阶核的变形与滤过/参考资料.html"><meta name="description" content="Pan–Shu 的一阶构造Lei Pan, Bin Shu, Jantzen filtration and strong linkage principle for modular Lie superalgebras。本地只读文件：原文 PDF。项目中的文本提取为 pan-shu.txt。§4.1 建立相容模范畴并讨论最高向量的奇性，§4.1.3 引入参数对象；§5.1 分三类根计算相邻同态与变权正合列；Lemma 5.5 与 Remark 5.6 控制局部参数余核；§6.2"><meta property="og:title" content="参考资料"><meta property="og:description" content="Pan–Shu 的一阶构造Lei Pan, Bin Shu, Jantzen filtration and strong linkage principle for modular Lie superalgebras。本地只读文件：原文 PDF。项目中的文本提取为 pan-shu.txt。§4.1 建立相容模范畴并讨论最高向量的奇性，§4.1.3 引入参数对象；§5.1 分三类根计算相邻同态与变权正合列；Lemma 5.5 与 Remark 5.6 控制局部参数余核；§6.2"><meta property="og:type" content="website"><meta property="og:url" content="高阶核的变形与滤过/参考资料.html"><meta charset="UTF-8"><meta property="og:site_name" content="笔记库"><meta name="viewport" content="width=device-width,initial-scale=1.0,user-scalable=yes,minimum-scale=1.0,maximum-scale=5.0"><script async id="webpage-script" src="site-lib/scripts/webpage.js" onload="this.onload=null;this.setAttribute('loaded','true')"></script><script defer src="site-lib/scripts/notebook-navigation.js"></script><script defer src="site-lib/scripts/editing-suite.js"></script><link rel="stylesheet" href="site-lib/styles/obsidian.css"><link rel="stylesheet" href="site-lib/styles/local-fonts.css"><link rel="stylesheet" href="site-lib/styles/theme.css"><link rel="stylesheet" href="site-lib/styles/export-webpage.css"><link rel="preload" href="site-lib/styles/other-plugins.css" as="style" onload="this.onload=null;this.rel='stylesheet'"><noscript><link rel="stylesheet" href="site-lib/styles/other-plugins.css"></noscript><link rel="preload" href="site-lib/styles/editing-suite.css" as="style" onload="this.onload=null;this.rel='stylesheet'"><noscript><link rel="stylesheet" href="site-lib/styles/editing-suite.css"></noscript><link rel="preload" href="site-lib/styles/snippets.css" as="style" onload="this.onload=null;this.rel='stylesheet'"><noscript><link rel="stylesheet" href="site-lib/styles/snippets.css"></noscript><link rel="preload" href="site-lib/styles/supported-plugins.css" as="style" onload="this.onload=null;this.rel='stylesheet'"><noscript><link rel="stylesheet" href="site-lib/styles/supported-plugins.css"></noscript><link rel="preload" href="site-lib/styles/global-variable-styles.css" as="style" onload="this.onload=null;this.rel='stylesheet'"><noscript><link rel="stylesheet" href="site-lib/styles/global-variable-styles.css"></noscript><link rel="preload" href="site-lib/styles/main-styles.css" as="style" onload="this.onload=null;this.rel='stylesheet'"><noscript><link rel="stylesheet" href="site-lib/styles/main-styles.css"></noscript><link rel="preload" href="site-lib/styles/editing-suite-export.css" as="style" onload="this.onload=null;this.rel='stylesheet'"><noscript><link rel="stylesheet" href="site-lib/styles/editing-suite-export.css"></noscript><script defer>async function loadIncludes()
+{
+	// replace include tags with the contents of the file
+	let includeTags = document.querySelectorAll("link[itemprop='include']");
+	for (const includeTag of includeTags)
+	{
+		let includePath = includeTag.getAttribute("href");
+
+		try
+		{
+			let includeText = "";
+			
+			if (includePath.startsWith("https:") || includePath.startsWith("http:") || window.location.protocol != "file:")
+			{
+				const request = await fetch(includePath);
+				if (!request.ok) 
+				{
+					includeTag?.remove();
+					continue;
+				}
+				
+				includeText = await request.text();
+			}
+			else
+			{
+				const dataEl = document.getElementById(btoa(encodeURI(includePath)));
+				if (dataEl)
+				{
+					const data = JSON.parse(decodeURI(atob(dataEl.getAttribute("value") ?? "")));
+					includeText = data?.data ?? "";
+				}
+			}
+
+
+			let docFrag = document.createRange().createContextualFragment(includeText);
+			includeTag.before(docFrag);
+			includeTag.remove();
+		}
+		catch
+		{
+			includeTag?.remove();
+			continue;
+		}
+	}
+}
+
+document.addEventListener("DOMContentLoaded", () => 
+{
+	loadIncludes();
+});
+
+let isFileProtocol = location.protocol == "file:";
+
+function waitLoadScripts(scriptNames, callback)
+{
+	let scripts = scriptNames.map(name => document.getElementById(name + "-script"));
+
+	function loadNext(index)
+	{
+		let script = scripts[index];
+		let nextIndex = index + 1;
+		if (!script)
+		{
+			if (index < scripts.length)
+				loadNext(nextIndex);
+			else
+			{
+				callback();
+			}
+			return;
+		}
+
+		if (!script || script.getAttribute('loaded') == "true") // if already loaded 
+		{
+			if (index < scripts.length)
+				loadNext(nextIndex);
+		}
+		
+		if (index < scripts.length) 
+		{
+			script.addEventListener("load", () => loadNext(nextIndex));
+		}
+	}
+
+	loadNext(0);
+}
+
+</script></head><body class="publish css-settings-manager styled-scrollbars show-ribbon is-focused mathcraft-active editing-suite-math-enabled editing-suite-seamless-typography-enabled editing-suite-math-margin-enabled editing-suite-math-overflow-enabled editing-suite-table-centered-enabled editing-suite-table-style-rounded-grid editing-suite-link-style-red-outline editing-suite-divider-style-diamond-gradient editing-suite-inline-code-enabled editing-suite-cloze-enabled editing-suite-code-blocks-enabled editing-suite-color-highlights-enabled editing-suite-color-highlight-wave-enabled editing-suite-colored-text-enabled editing-suite-custom-lists-enabled editing-suite-list-marker-text-color editing-suite-sidenotes-enabled editing-suite-focus-indicator-enabled crb-hide-default-actions mathcraft-pdf-no-break"><script defer>let theme = localStorage.getItem("theme") || (window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light");
+if (theme == "dark")
+{
+	document.body.classList.add("theme-dark");
+	document.body.classList.remove("theme-light");
+}
+else
+{
+	document.body.classList.add("theme-light");
+	document.body.classList.remove("theme-dark");
+}
+
+if (window.innerWidth < 480) document.body.classList.add("is-phone");
+else if (window.innerWidth < 768) document.body.classList.add("is-tablet");
+else if (window.innerWidth < 1024) document.body.classList.add("is-small-screen");
+else document.body.classList.add("is-large-screen");
+
+
+</script><div id="main"><div id="navbar"></div><div id="main-horizontal" class="workspace-leaf-content" data-type="markdown"><div id="left-content" class="leaf" style="--sidebar-width:var(--sidebar-width-left)"><div id="left-sidebar" class="sidebar"><div class="sidebar-handle"></div><div class="sidebar-topbar"><div class="topbar-content"><div id="search-container"><div id="search-wrapper"><input enterkeyhint="search" type="search" spellcheck="false" placeholder="搜索..."><div aria-label="清除搜索" id="search-clear-button"></div></div></div></div><button type="button" class="clickable-icon sidebar-collapse-icon" aria-label="切换左侧栏"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="svg-icon sidebar-toggle-button-icon"><rect x="1" y="2" width="22" height="20" rx="4"></rect><rect x="4" y="5" width="2" height="14" rx="2" fill="currentColor" class="sidebar-toggle-icon-inner"></rect></svg></button></div><div class="sidebar-content-wrapper"><div id="left-sidebar-content" class="leaf-content"><link itemprop="include" href="site-lib/html/file-tree.html"></div></div><script defer>const ls=document.querySelector('#left-sidebar');ls.classList.toggle('is-collapsed',innerWidth<768);ls.style.setProperty('--sidebar-width',localStorage.getItem('sidebar-left-width'));</script></div></div><div id="center-content" class="leaf markdown-reading-view"><div class="obsidian-document markdown-preview-view markdown-rendered node-insert-event is-readable-line-width allow-fold-headings allow-fold-lists show-indentation-guide show-properties" data-type="markdown" style="width: 100%; height: 100%;"><style id="MJX-CHTML-styles">mjx-container[overflow="scroll"][display] { overflow: auto clip; min-width: initial !important; }
+mjx-container[overflow="truncate"][display] { overflow: hidden clip; min-width: initial !important; }
+mjx-container[display] { display: block; text-align: center; justify-content: center; margin: 0.7em 0px; padding: 0.3em 2px; }
+mjx-container[display][width="full"] { display: flex; }
+mjx-container[justify="left"] { text-align: left; justify-content: left; }
+mjx-container[justify="right"] { text-align: right; justify-content: right; }
+mjx-container[jax="CHTML"] { white-space: nowrap; }
+mjx-mo > mjx-c, mjx-mi > mjx-c, mjx-mn > mjx-c, mjx-ms > mjx-c, mjx-mtext > mjx-c { clip-path: polygon(-1em -2px, calc(100% + 1em) -2px, calc(100% + 1em) calc(100% + 2px), -1em calc(100% + 2px)) padding-box; }
+mjx-stretchy-h { clip-path: polygon(0px -2px, 100% -2px, 100% calc(100% + 2px), 0px calc(100% + 2px)) padding-box; display: inline-block; }
+mjx-stretchy-v { clip-path: polygon(-2px 0px, calc(100% + 2px) 0px, calc(100% + 2px) 100%, -2px 100%) padding-box; display: inline-block; text-align: center; }
+mjx-container [space="1"] { margin-left: 0.111em; }
+mjx-container [space="2"] { margin-left: 0.167em; }
+mjx-container [space="3"] { margin-left: 0.222em; }
+mjx-container [space="4"] { margin-left: 0.278em; }
+mjx-container [space="5"] { margin-left: 0.333em; }
+mjx-container [rspace="1"] { margin-right: 0.111em; }
+mjx-container [rspace="2"] { margin-right: 0.167em; }
+mjx-container [rspace="3"] { margin-right: 0.222em; }
+mjx-container [rspace="4"] { margin-right: 0.278em; }
+mjx-container [rspace="5"] { margin-right: 0.333em; }
+mjx-container [size="s"] { font-size: 70.7%; }
+mjx-container [size="ss"] { font-size: 50%; }
+mjx-container [size="Tn"] { font-size: 60%; }
+mjx-container [size="sm"] { font-size: 85%; }
+mjx-container [size="lg"] { font-size: 120%; }
+mjx-container [size="Lg"] { font-size: 144%; }
+mjx-container [size="LG"] { font-size: 173%; }
+mjx-container [size="hg"] { font-size: 207%; }
+mjx-container [size="HG"] { font-size: 249%; }
+mjx-container [width="full"] { width: 100%; }
+mjx-box { display: inline-block; }
+mjx-block { display: block; }
+mjx-itable { display: inline-table; }
+mjx-row { display: table-row; }
+mjx-row > mjx-cell, mjx-row > mjx-base, mjx-row > mjx-under, mjx-row > mjx-over, mjx-row > mjx-den { display: table-cell; }
+mjx-container [inline-breaks] { display: inline; }
+mjx-container .mjx-selected { outline: black solid 2px; }
+@media (prefers-color-scheme: dark) {
+  mjx-container .mjx-selected { outline: rgb(200, 200, 200) solid 2px; }
+}
+mjx-mtext { display: inline-block; }
+mjx-mstyle { display: inline-block; }
+mjx-merror { display: inline-block; color: red; background-color: yellow; }
+mjx-mphantom { visibility: hidden; }
+mjx-container[has-speech="true"] { position: relative; cursor: default; }
+mjx-speech { position: absolute; z-index: -1; inset: 0px; }
+mjx-speech:focus { outline: none; }
+mjx-container a[data-mjx-href] { color: linktext; cursor: pointer; }
+mjx-container a[data-mjx-href].mjx-visited { color: visitedtext; }
+mjx-container > mjx-help { display: none; position: absolute; top: -0.3em; right: -0.5em; width: 0.6em; height: 0.6em; cursor: pointer; }
+mjx-container[display="true"] > mjx-help { position: sticky; bottom: 100%; left: 0px; margin: -0.3em -0.5em 0px -0.1em; right: 0px; top: initial; }
+mjx-help > svg { stroke: black; width: 100%; height: 100%; }
+mjx-help > svg > circle { stroke-width: 1.5px; cx: 9px; cy: 9px; r: 9px; fill: white; }
+mjx-help > svg > circle:nth-child(2) { fill: var(--mjx-bg1-color); r: 7px; }
+mjx-help > svg > line { stroke-width: 2.5px; stroke-linecap: round; }
+mjx-help:hover > svg > circle:nth-child(2) { fill: white; }
+mjx-container.mjx-explorer-active > mjx-help { display: inline-flex; align-items: center; }
+@media (prefers-color-scheme: dark) {
+  mjx-help > svg { stroke: rgb(224, 224, 224); }
+  mjx-help > svg > circle { fill: rgb(64, 64, 64); }
+  mjx-help > svg > circle:nth-child(2) { fill: rgba(132, 132, 255, 0.3); }
+  mjx-help:hover > svg > circle:nth-child(2) { stroke: rgb(170, 170, 170); fill: rgb(64, 64, 64); }
+}
+mjx-math { display: inline-block; text-align: left; line-height: 0; text-indent: 0px; font-style: normal; font-weight: normal; font-size: 100%; font-size-adjust: none; letter-spacing: normal; overflow-wrap: normal; word-spacing: normal; direction: ltr; padding: 1px 0px; }
+mjx-container[jax="CHTML"][display="true"] mjx-math { padding: 0px; }
+mjx-math[breakable] { display: inline; }
+mjx-container[jax="CHTML"] mjx-break { white-space: normal; line-height: 0; clip-path: rect(0px 0px 0px 0px); font-family: MJX-BRK !important; }
+mjx-break[size="0"] { letter-spacing: -0.999em; }
+mjx-break[size="1"] { letter-spacing: -0.889em; }
+mjx-break[size="2"] { letter-spacing: -0.833em; }
+mjx-break[size="3"] { letter-spacing: -0.778em; }
+mjx-break[size="4"] { letter-spacing: -0.722em; }
+mjx-break[size="5"] { letter-spacing: -0.667em; }
+mjx-mi { display: inline-block; text-align: left; }
+mjx-c { display: inline-block; width: 0px; text-align: right; }
+mjx-utext { display: inline-block; padding: 0.75em 0px 0.2em; }
+mjx-mo { display: inline-block; text-align: left; }
+mjx-stretchy-h > mjx-beg, mjx-stretchy-h > mjx-ext, mjx-stretchy-h > mjx-end, mjx-stretchy-h > mjx-mid { display: inline-block; width: 0px; text-align: right; }
+mjx-stretchy-h > mjx-ext { clip-path: polygon(0px -1em, 100% -1em, 100% calc(100% + 1em), 0px calc(100% + 1em)) padding-box; width: 100%; border: 0px solid transparent; box-sizing: border-box; text-align: left; }
+mjx-stretchy-v > mjx-beg, mjx-stretchy-v > mjx-ext, mjx-stretchy-v > mjx-end, mjx-stretchy-v > mjx-mid { display: block; height: 0px; margin: 0px auto; }
+mjx-stretchy-v > mjx-ext > mjx-spacer { display: block; }
+mjx-stretchy-v > mjx-ext { clip-path: polygon(-1em 0px, calc(100% + 1em) 0px, calc(100% + 1em) 100%, -1em 100%) padding-box; height: 100%; border: 0.1px solid transparent; box-sizing: border-box; white-space: pre; }
+mjx-mark { display: inline-block; height: 0px; }
+mjx-mn { display: inline-block; text-align: left; }
+mjx-msub { display: inline-block; text-align: left; }
+mjx-msubsup { display: inline-block; text-align: left; }
+mjx-script { display: inline-block; padding-right: 0.05em; padding-left: 0.033em; }
+mjx-script > mjx-spacer { display: block; }
+mjx-texatom { display: inline-block; text-align: left; }
+mjx-mover { display: inline-block; text-align: left; }
+mjx-mover:not([limits="false"]) { padding-top: 0.1em; }
+mjx-mover:not([limits="false"]) > mjx-base, mjx-mover:not([limits="false"]) > mjx-over { display: block; text-align: left; }
+mjx-mspace { display: inline-block; text-align: left; }
+mjx-msup { display: inline-block; text-align: left; }
+mjx-container[jax="CHTML"] > mjx-math.TEX-N[breakable] > * { font-family: MJX-TEX-ZERO, MJX-TEX-N; }
+.TEX-N { font-family: MJX-TEX-ZERO, MJX-TEX-N; }
+.TEX-B { font-family: MJX-TEX-ZERO, MJX-TEX-B; }
+.TEX-I { font-family: MJX-TEX-ZERO, MJX-TEX-I; }
+.TEX-BI { font-family: MJX-TEX-ZERO, MJX-TEX-BI; }
+.TEX-F { font-family: MJX-TEX-ZERO, MJX-TEX-F; }
+.TEX-FB { font-family: MJX-TEX-ZERO, MJX-TEX-FB; }
+.TEX-SS { font-family: MJX-TEX-ZERO, MJX-TEX-SS; }
+.TEX-SSB { font-family: MJX-TEX-ZERO, MJX-TEX-SSB; }
+.TEX-SSI { font-family: MJX-TEX-ZERO, MJX-TEX-SSI; }
+.TEX-M { font-family: MJX-TEX-ZERO, MJX-TEX-M; }
+.TEX-SO { font-family: MJX-TEX-ZERO, MJX-TEX-SO; }
+.TEX-LO { font-family: MJX-TEX-ZERO, MJX-TEX-LO; }
+.TEX-C { font-family: MJX-TEX-ZERO, MJX-TEX-C; }
+.TEX-CB { font-family: MJX-TEX-ZERO, MJX-TEX-CB; }
+.TEX-OS { font-family: MJX-TEX-ZERO, MJX-TEX-OS; }
+.TEX-OB { font-family: MJX-TEX-ZERO, MJX-TEX-OB; }
+.TEX-MI { font-family: MJX-TEX-ZERO, MJX-TEX-MI; }
+.TEX-V { font-family: MJX-TEX-ZERO, MJX-TEX-V; }
+.TEX-S3 { font-family: MJX-TEX-ZERO, MJX-TEX-S3; }
+.TEX-S4 { font-family: MJX-TEX-ZERO, MJX-TEX-S4; }
+.MHC-M { font-family: MJX-TEX-ZERO, MJX-MHC-M; }
+.MHC-N { font-family: MJX-TEX-ZERO, MJX-MHC-N; }
+@font-face { font-family: MJX-MHC-M; src: url("site-lib/fonts/mathjax-2ea308c69f13.woff2") format("woff2"); }
+@font-face { font-family: MJX-MHC-N; src: url("site-lib/fonts/mathjax-f9054e3dd268.woff2") format("woff2"); }
+@font-face { font-family: MJX-TEX-ZERO; src: url("site-lib/fonts/mathjax-2c146f72c9a3.woff2") format("woff2"); }
+@font-face { font-family: MJX-BRK; src: url("site-lib/fonts/mathjax-4f03a0d86ff0.woff2") format("woff2"); }
+@font-face { font-family: MJX-TEX-N; src: url("site-lib/fonts/mathjax-fad3b88ec7aa.woff2") format("woff2"); }
+@font-face { font-family: MJX-TEX-B; src: url("site-lib/fonts/mathjax-69e45ca329dd.woff2") format("woff2"); }
+@font-face { font-family: MJX-TEX-I; src: url("site-lib/fonts/mathjax-82c82a2e0c8b.woff2") format("woff2"); }
+@font-face { font-family: MJX-TEX-BI; src: url("site-lib/fonts/mathjax-d0c95edf7b32.woff2") format("woff2"); }
+@font-face { font-family: MJX-TEX-F; src: url("site-lib/fonts/mathjax-6cb008e93488.woff2") format("woff2"); }
+@font-face { font-family: MJX-TEX-FB; src: url("site-lib/fonts/mathjax-303b28cdca9c.woff2") format("woff2"); }
+@font-face { font-family: MJX-TEX-SS; src: url("site-lib/fonts/mathjax-e0d564a939fc.woff2") format("woff2"); }
+@font-face { font-family: MJX-TEX-SSB; src: url("site-lib/fonts/mathjax-4a2e4827bad8.woff2") format("woff2"); }
+@font-face { font-family: MJX-TEX-SSI; src: url("site-lib/fonts/mathjax-b6dfb310dd7b.woff2") format("woff2"); }
+@font-face { font-family: MJX-TEX-M; src: url("site-lib/fonts/mathjax-82e8abfaecf0.woff2") format("woff2"); }
+@font-face { font-family: MJX-TEX-SO; src: url("site-lib/fonts/mathjax-0e9f0e5baa09.woff2") format("woff2"); }
+@font-face { font-family: MJX-TEX-LO; src: url("site-lib/fonts/mathjax-98b20475232f.woff2") format("woff2"); }
+@font-face { font-family: MJX-TEX-C; src: url("site-lib/fonts/mathjax-1faef92bbe44.woff2") format("woff2"); }
+@font-face { font-family: MJX-TEX-CB; src: url("site-lib/fonts/mathjax-03de6a3467f8.woff2") format("woff2"); }
+@font-face { font-family: MJX-TEX-OS; src: url("site-lib/fonts/mathjax-01bc6e82013d.woff2") format("woff2"); }
+@font-face { font-family: MJX-TEX-OB; src: url("site-lib/fonts/mathjax-62f1a8f7ced5.woff2") format("woff2"); }
+@font-face { font-family: MJX-TEX-MI; src: url("site-lib/fonts/mathjax-4bd1e8cefc7c.woff2") format("woff2"); }
+@font-face { font-family: MJX-TEX-V; src: url("site-lib/fonts/mathjax-bd9d7db0883d.woff2") format("woff2"); }
+@font-face { font-family: MJX-TEX-S3; src: url("site-lib/fonts/mathjax-07165a0e10ae.woff2") format("woff2"); }
+@font-face { font-family: MJX-TEX-S4; src: url("site-lib/fonts/mathjax-b20a0e1b0304.woff2") format("woff2"); }
+mjx-c.mjx-c1D458 { padding: 0.694em 0.521em 0.011em 0px; }
+mjx-c.mjx-c63 { padding: 0.448em 0.444em 0.011em 0px; }
+mjx-c.mjx-c68 { padding: 0.694em 0.556em 0px 0px; }
+mjx-c.mjx-c61 { padding: 0.448em 0.5em 0.011em 0px; }
+mjx-c.mjx-c72 { padding: 0.442em 0.392em 0px 0px; }
+mjx-c.mjx-c2061 { padding: 0px; }
+mjx-c.mjx-c3D { padding: 0.367em 0.778em 0px 0px; }
+mjx-c.mjx-c1D45D { padding: 0.442em 0.503em 0.194em 0px; }
+mjx-c.mjx-c3E { padding: 0.54em 0.778em 0.04em 0px; }
+mjx-c.mjx-c32 { padding: 0.666em 0.5em 0px 0px; }
+mjx-c.mjx-c1D45F { padding: 0.442em 0.451em 0.011em 0px; }
+mjx-c.mjx-c31 { padding: 0.666em 0.5em 0px 0px; }
+mjx-c.mjx-c1D449 { padding: 0.683em 0.769em 0.022em 0px; }
+mjx-c.mjx-cAF { padding: 0.59em 0.5em 0px 0px; }
+mjx-c.mjx-c30 { padding: 0.666em 0.5em 0.022em 0px; }
+mjx-c.mjx-c2295 { padding: 0.583em 0.778em 0.083em 0px; }
+mjx-c.mjx-c1D463 { padding: 0.443em 0.485em 0.011em 0px; }
+mjx-c.mjx-c2208 { padding: 0.54em 0.667em 0.04em 0px; }
+mjx-c.mjx-c1D716 { padding: 0.431em 0.406em 0.011em 0px; }
+mjx-c.mjx-c7C { padding: 0.75em 0.278em 0.249em 0px; }
+mjx-c.mjx-c2124 { padding: 0.683em 0.667em 0.001em 0px; }
+mjx-c.mjx-c1D453 { padding: 0.705em 0.55em 0.205em 0px; }
+mjx-c.mjx-c3A { padding: 0.43em 0.278em 0px 0px; }
+mjx-c.mjx-c2192 { padding: 0.511em 1em 0.011em 0px; }
+mjx-c.mjx-c1D44A { padding: 0.683em 1.048em 0.022em 0px; }
+mjx-c.mjx-c28 { padding: 0.75em 0.389em 0.25em 0px; }
+mjx-c.mjx-c29 { padding: 0.75em 0.389em 0.25em 0px; }
+mjx-c.mjx-c2286 { padding: 0.636em 0.778em 0.138em 0px; }
+mjx-c.mjx-c2E { padding: 0.12em 0.278em 0px 0px; }
+mjx-c.mjx-c1D434 { padding: 0.716em 0.75em 0px 0px; }
+mjx-c.mjx-c1D6FF { padding: 0.717em 0.451em 0.01em 0px; }
+mjx-c.mjx-c2B { padding: 0.583em 0.778em 0.082em 0px; }
+mjx-c.mjx-c1D44E { padding: 0.441em 0.529em 0.01em 0px; }
+mjx-c.mjx-c1D44F { padding: 0.694em 0.429em 0.011em 0px; }
+mjx-c.mjx-c2212 { padding: 0.583em 0.778em 0.082em 0px; }
+mjx-c.mjx-c2C { padding: 0.121em 0.278em 0.194em 0px; }
+mjx-c.mjx-c2297 { padding: 0.583em 0.778em 0.083em 0px; }
+mjx-c.mjx-c1D450 { padding: 0.442em 0.433em 0.011em 0px; }
+mjx-c.mjx-c1D451 { padding: 0.694em 0.523em 0.01em 0px; }
+mjx-c.mjx-c1D524 { padding: 0.47em 0.504em 0.209em 0px; }
+mjx-c.mjx-c5B { padding: 0.75em 0.278em 0.25em 0px; }
+mjx-c.mjx-c1D465 { padding: 0.442em 0.572em 0.011em 0px; }
+mjx-c.mjx-c1D466 { padding: 0.442em 0.496em 0.205em 0px; }
+mjx-c.mjx-c5D { padding: 0.75em 0.278em 0.25em 0px; }
+mjx-c.mjx-c3A0 { padding: 0.68em 0.75em 0px 0px; }
+mjx-c.mjx-c22C5 { padding: 0.31em 0.278em 0px 0px; }
+mjx-c.mjx-c1D43A { padding: 0.705em 0.786em 0.022em 0px; }
+mjx-c.mjx-c65 { padding: 0.448em 0.444em 0.011em 0px; }
+mjx-c.mjx-c76 { padding: 0.431em 0.528em 0.011em 0px; }
+mjx-c.mjx-c2F { padding: 0.75em 0.5em 0.25em 0px; }
+mjx-c.mjx-c1D447 { padding: 0.677em 0.717em 0px 0px; }
+mjx-c.mjx-c1D435 { padding: 0.683em 0.759em 0px 0px; }
+mjx-c.mjx-c1D448 { padding: 0.683em 0.767em 0.022em 0px; }
+mjx-c.mjx-c1D525 { padding: 0.688em 0.521em 0.205em 0px; }
+mjx-c.mjx-c4C { padding: 0.683em 0.625em 0px 0px; }
+mjx-c.mjx-c69 { padding: 0.669em 0.278em 0px 0px; }
+mjx-c.mjx-cD7 { padding: 0.491em 0.778em 0px 0px; }
+mjx-mpadded { display: inline-block; text-align: left; }
+mjx-rbox { display: inline-block; position: relative; }
+mjx-mfrac { display: inline-block; text-align: left; }
+mjx-frac { display: inline-block; vertical-align: 0.17em; padding: 0px 0.22em; }
+mjx-frac[type="d"] { vertical-align: 0.04em; }
+mjx-frac[delims] { padding: 0px 0.1em; }
+mjx-frac[atop] { padding: 0px 0.12em; }
+mjx-frac[atop][delims] { padding: 0px; }
+mjx-dtable { display: inline-table; width: 100%; }
+mjx-dtable > mjx-line, mjx-dtable > mjx-row { font-size: 2000%; }
+mjx-dbox { display: block; font-size: 5%; }
+mjx-num { display: block; text-align: center; }
+mjx-den { display: block; text-align: center; }
+mjx-mfrac[bevelled] > mjx-num { display: inline-block; }
+mjx-mfrac[bevelled] > mjx-den { display: inline-block; }
+mjx-den[align="right"], mjx-num[align="right"] { text-align: right; }
+mjx-den[align="left"], mjx-num[align="left"] { text-align: left; }
+mjx-nstrut { display: inline-block; height: 0.054em; width: 0px; vertical-align: -0.054em; }
+mjx-nstrut[type="d"] { height: 0.217em; vertical-align: -0.217em; }
+mjx-dstrut { display: inline-block; height: 0.505em; width: 0px; }
+mjx-dstrut[type="d"] { height: 0.726em; }
+mjx-line { display: block; box-sizing: border-box; min-height: 1px; height: 0.06em; border-top: 0.075em solid; margin: 0.06em -0.1em; overflow: hidden; }
+mjx-line[type="d"] { margin: 0.18em -0.1em; }
+mjx-mrow { display: inline-block; text-align: left; }
+mjx-linestack, mjx-mrow[break-top] { display: inline-table; width: 100%; }
+mjx-linestack[break-align="bottom"], mjx-mrow[break-top][break-align="bottom"] { display: inline-block; }
+mjx-linestack[break-align="middle"], mjx-mrow[break-top][break-align="middle"] { vertical-align: middle; }
+mjx-linestack[break-align="center"], mjx-mrow[break-top][break-align="center"] { vertical-align: middle; }
+mjx-linestack[breakable] { display: inline; }
+mjx-linestack[breakable] > mjx-linebox { display: inline; }
+mjx-linestack[breakable] > mjx-linebox::before { white-space: pre; content: "\a "; }
+mjx-linestack[breakable] > mjx-linebox::after { white-space: normal; content: " "; letter-spacing: -0.999em; font-family: MJX-BRK; }
+mjx-linestack[breakable] > mjx-linebox:first-of-type::before { display: none; }
+mjx-linestack[breakable] > mjx-linebox:last-of-type::after { display: none; }
+mjx-linebox { display: block; }
+mjx-linebox[align="left"] { text-align: left; }
+mjx-linebox[align="center"] { text-align: center; }
+mjx-linebox[align="right"] { text-align: right; }
+mjx-linestrut { display: inline-block; height: 1em; vertical-align: -0.25em; }
+mjx-stretchy-h.mjx-c2192 > mjx-ext > mjx-spacer { margin-left: -0.305em; }
+mjx-stretchy-h.mjx-c2192 > mjx-ext { padding: 0.431em 0px 0px; border-width: 0px 0.83em 0px 0px; }
+mjx-stretchy-h.mjx-c2192 > mjx-end { padding: 0.431em 0.89em 0px 0px; margin-left: -0.89em; }
+mjx-c.mjx-c1D440 { padding: 0.683em 1.051em 0px 0px; }
+mjx-c.mjx-c39E { padding: 0.677em 0.667em 0px 0px; }
+mjx-c.mjx-c22EF { padding: 0.31em 1.172em 0px 0px; }
+mjx-c.mjx-c1D441 { padding: 0.683em 0.888em 0px 0px; }
+mjx-c.mjx-c2C6 { padding: 0.694em 0.5em 0px 0px; }
+mjx-c.mjx-c1D44D { padding: 0.683em 0.723em 0px 0px; }
+mjx-c.mjx-c1D706 { padding: 0.694em 0.583em 0.012em 0px; }
+mjx-c.mjx-c2218 { padding: 0.444em 0.5em 0px 0px; }
+mjx-c.mjx-c27F6 { padding: 0.511em 1.638em 0.011em 0px; }
+mjx-c.mjx-c1D456 { padding: 0.661em 0.345em 0.011em 0px; }
+mjx-c.mjx-c2265 { padding: 0.636em 0.778em 0.138em 0px; }
+mjx-c.mjx-c7B { padding: 0.75em 0.5em 0.25em 0px; }
+mjx-c.mjx-c1D45A { padding: 0.442em 0.878em 0.011em 0px; }
+mjx-c.mjx-c1D70B { padding: 0.431em 0.573em 0.011em 0px; }
+mjx-c.mjx-c7D { padding: 0.75em 0.5em 0.25em 0px; }
+mjx-c.mjx-c1D43D { padding: 0.683em 0.633em 0.022em 0px; }
+mjx-c.mjx-c55.TEX-C { padding: 0.683em 0.687em 0.028em 0px; }
+mjx-munder { display: inline-block; text-align: left; }
+mjx-over { text-align: left; }
+mjx-munder:not([limits="false"]) { display: inline-table; }
+mjx-munder > mjx-row { text-align: left; }
+mjx-under { padding-bottom: 0.1em; }
+mjx-mtable { display: inline-block; text-align: center; vertical-align: 0.25em; position: relative; box-sizing: border-box; border-spacing: 0px; border-collapse: collapse; }
+mjx-mstyle[size="s"] mjx-mtable { vertical-align: 0.354em; }
+mjx-labels { position: absolute; left: 0px; top: 0px; }
+mjx-table { display: inline-block; vertical-align: -0.5ex; box-sizing: border-box; }
+mjx-table > mjx-itable { vertical-align: middle; text-align: left; box-sizing: border-box; }
+mjx-labels > mjx-itable { position: absolute; top: 0px; }
+mjx-mtable[justify="left"] { text-align: left; }
+mjx-mtable[justify="right"] { text-align: right; }
+mjx-mtable[justify="left"][side="left"] { padding-right: 0px !important; }
+mjx-mtable[justify="left"][side="right"] { padding-left: 0px !important; }
+mjx-mtable[justify="right"][side="left"] { padding-right: 0px !important; }
+mjx-mtable[justify="right"][side="right"] { padding-left: 0px !important; }
+mjx-mtable[align] { vertical-align: baseline; }
+mjx-mtable[align="top"] > mjx-table { vertical-align: top; }
+mjx-mtable[align="bottom"] > mjx-table { vertical-align: bottom; }
+mjx-mtable[side="right"] mjx-labels { min-width: 100%; }
+mjx-mtr { display: table-row; text-align: left; }
+mjx-mtr[rowalign="top"] > mjx-mtd { vertical-align: top; }
+mjx-mtr[rowalign="center"] > mjx-mtd { vertical-align: middle; }
+mjx-mtr[rowalign="bottom"] > mjx-mtd { vertical-align: bottom; }
+mjx-mtr[rowalign="baseline"] > mjx-mtd { vertical-align: baseline; }
+mjx-mtr[rowalign="axis"] > mjx-mtd { vertical-align: 0.25em; }
+mjx-mtd { display: table-cell; text-align: center; padding: 0.215em 0.4em; }
+mjx-mtd:first-child { padding-left: 0px; }
+mjx-mtd:last-child { padding-right: 0px; }
+mjx-mtable > * > mjx-itable > :first-child > mjx-mtd { padding-top: 0px; }
+mjx-mtable > * > mjx-itable > :last-child > mjx-mtd { padding-bottom: 0px; }
+mjx-tstrut { display: inline-block; height: 1em; vertical-align: -0.25em; }
+mjx-labels[align="left"] > mjx-mtr > mjx-mtd { text-align: left; }
+mjx-labels[align="right"] > mjx-mtr > mjx-mtd { text-align: right; }
+mjx-mtd[extra] { padding: 0px; }
+mjx-mtd[rowalign="top"] { vertical-align: top; }
+mjx-mtd[rowalign="center"] { vertical-align: middle; }
+mjx-mtd[rowalign="bottom"] { vertical-align: bottom; }
+mjx-mtd[rowalign="baseline"] { vertical-align: baseline; }
+mjx-mtd[rowalign="axis"] { vertical-align: 0.25em; }
+mjx-mtext { display: inline-block; text-align: left; }
+mjx-c.mjx-c2229 { padding: 0.598em 0.667em 0.022em 0px; }
+mjx-c.mjx-c1D43F { padding: 0.683em 0.681em 0px 0px; }
+mjx-c.mjx-c64 { padding: 0.694em 0.556em 0.011em 0px; }
+mjx-c.mjx-c22C2.TEX-LO { padding: 0.949em 1.111em 0.45em 0px; }
+mjx-c.mjx-c228A { padding: 0.635em 0.778em 0.241em 0px; }
+mjx-c.mjx-cA0 { padding: 0px 0.25em 0px 0px; }
+mjx-stretchy-h.mjx-c2013 > mjx-ext > mjx-spacer { margin-left: -0.25em; letter-spacing: -0.071em; }
+mjx-stretchy-h.mjx-c2013 > mjx-ext { padding: 0.285em 0px 0px; }
+mjx-c.mjx-c394 { padding: 0.716em 0.833em 0px 0px; }
+mjx-c.mjx-c1D52B { padding: 0.475em 0.527em 0.022em 0px; }
+mjx-c.mjx-c2A01.TEX-LO { padding: 0.949em 1.511em 0.449em 0px; }
+mjx-c.mjx-c1D6FC { padding: 0.442em 0.64em 0.011em 0px; }
+mjx-c.mjx-c1D51F { padding: 0.685em 0.513em 0.031em 0px; }
+mjx-c.mjx-c2209 { padding: 0.716em 0.667em 0.215em 0px; }
+mjx-c.mjx-c2032 { padding: 0.56em 0.275em 0px 0px; }
+mjx-c.mjx-c1D45B { padding: 0.442em 0.6em 0.011em 0px; }
+mjx-c.mjx-c2287 { padding: 0.636em 0.778em 0.138em 0px; }
+mjx-c.mjx-c1D460 { padding: 0.442em 0.469em 0.01em 0px; }
+mjx-c.mjx-c1D461 { padding: 0.626em 0.361em 0.011em 0px; }
+mjx-c.mjx-c1D424 { padding: 0.694em 0.607em 0px 0px; }
+mjx-c.mjx-c1D452 { padding: 0.442em 0.466em 0.011em 0px; }
+mjx-c.mjx-c1D439 { padding: 0.68em 0.749em 0px 0px; }
+mjx-c.mjx-c33 { padding: 0.665em 0.5em 0.022em 0px; }
+mjx-c.mjx-c28.TEX-S3 { padding: 1.45em 0.736em 0.949em 0px; }
+mjx-c.mjx-c29.TEX-S3 { padding: 1.45em 0.736em 0.949em 0px; }
+mjx-c.mjx-c1D457 { padding: 0.661em 0.412em 0.204em 0px; }
+mjx-c.mjx-c2223 { padding: 0.75em 0.278em 0.249em 0px; }
+mjx-c.mjx-c2264 { padding: 0.636em 0.778em 0.138em 0px; }
+mjx-c.mjx-c2013 { padding: 0.285em 0.5em 0px 0px; }
+mjx-c.mjx-c2113 { padding: 0.705em 0.417em 0.02em 0px; }
+mjx-c.mjx-c1D707 { padding: 0.442em 0.603em 0.216em 0px; }
+mjx-c.mjx-c2026 { padding: 0.12em 1.172em 0px 0px; }
+mjx-c.mjx-c1D44B { padding: 0.683em 0.852em 0px 0px; }
+mjx-c.mjx-c2211.TEX-LO { padding: 0.95em 1.444em 0.45em 0px; }
+mjx-c.mjx-c6D { padding: 0.442em 0.833em 0px 0px; }
+mjx-c.mjx-c1D708 { padding: 0.442em 0.53em 0.002em 0px; }
+mjx-munderover { display: inline-block; text-align: left; }
+mjx-munderover:not([limits="false"]) { padding-top: 0.1em; }
+mjx-munderover:not([limits="false"]) > mjx-over, mjx-munderover:not([limits="false"]) > mjx-box { display: block; }
+mjx-menclose { display: inline-block; text-align: left; position: relative; }
+mjx-menclose > mjx-dstrike { display: inline-block; left: 0px; top: 0px; position: absolute; border-top: 0.067em solid; transform-origin: left top; }
+mjx-menclose > mjx-ustrike { display: inline-block; left: 0px; bottom: 0px; position: absolute; border-top: 0.067em solid; transform-origin: left bottom; }
+mjx-menclose > mjx-hstrike { border-top: 0.067em solid; position: absolute; left: 0px; right: 0px; bottom: 50%; transform: translateY(0.034em); }
+mjx-menclose > mjx-vstrike { border-left: 0.067em solid; position: absolute; top: 0px; bottom: 0px; right: 50%; transform: translateX(0.034em); }
+mjx-menclose > mjx-rbox { position: absolute; inset: 0px; border: 0.067em solid; border-radius: 0.267em; }
+mjx-menclose > mjx-cbox { position: absolute; inset: 0px; border: 0.067em solid; border-radius: 50%; }
+mjx-menclose > mjx-arrow { position: absolute; left: 0px; bottom: 50%; height: 0px; width: 0px; }
+mjx-menclose > mjx-arrow > mjx-aline { display: block; position: absolute; box-sizing: border-box; transform-origin: center bottom; left: 0px; top: -0.034em; right: 0.201em; height: 0px; border-top: 0.067em solid; border-left: 0px; border-right: 0px; }
+mjx-menclose > mjx-arrow[double] > mjx-aline { display: block; position: absolute; box-sizing: border-box; transform-origin: center bottom; left: 0.201em; height: 0px; border-left: 0.268em solid; border-right: 0px; }
+mjx-menclose > mjx-arrow > mjx-rthead { display: block; position: absolute; box-sizing: border-box; transform-origin: center bottom; transform: skewX(0.464rad); right: 0px; bottom: -1px; border-width: 0.134em 0px 1px 0.268em; border-style: solid none solid solid; border-color: transparent currentcolor; }
+mjx-menclose > mjx-arrow > mjx-rbhead { display: block; position: absolute; box-sizing: border-box; transform: skewX(-0.464rad); transform-origin: center top; right: 0px; top: -1px; border-width: 1px 0px 0.134em 0.268em; border-style: solid none solid solid; border-color: transparent currentcolor; }
+mjx-menclose > mjx-arrow > mjx-lthead { display: block; position: absolute; box-sizing: border-box; transform: skewX(-0.464rad); transform-origin: center bottom; left: 0px; bottom: -1px; border-width: 0.134em 0.268em 1px 0px; border-style: solid solid solid none; border-color: transparent currentcolor; }
+mjx-menclose > mjx-arrow > mjx-lbhead { display: block; position: absolute; box-sizing: border-box; transform: skewX(0.464rad); transform-origin: center top; left: 0px; top: -1px; border-width: 1px 0.268em 0.134em 0px; border-style: solid solid solid none; border-color: transparent currentcolor; }
+mjx-menclose > mjx-dbox-top { position: absolute; top: 0px; bottom: 50%; left: 0px; width: 0.3em; border-width: 0.067em; border-style: solid solid none none; border-radius: 0px 100% 0px 0px; box-sizing: border-box; }
+mjx-menclose > mjx-dbox-bot { position: absolute; top: 50%; bottom: 0px; left: 0px; width: 0.3em; border-width: 0.067em; border-style: none solid solid none; border-radius: 0px 0px 100%; box-sizing: border-box; }
+mjx-c.mjx-c2245 { padding: 0.589em 1em 0px 0px; }
+mjx-c.mjx-c27FA { padding: 0.525em 1.858em 0.024em 0px; }
+mjx-c.mjx-c1D446 { padding: 0.705em 0.645em 0.022em 0px; }
+mjx-c.mjx-c1D43B { padding: 0.683em 0.888em 0px 0px; }
+mjx-c.mjx-c42.TEX-C { padding: 0.705em 0.664em 0.022em 0px; }
+mjx-c.mjx-c210E { padding: 0.694em 0.576em 0.011em 0px; }
+mjx-c.mjx-c1D712 { padding: 0.442em 0.626em 0.204em 0px; }
+mjx-c.mjx-c6B { padding: 0.694em 0.528em 0px 0px; }
+mjx-c.mjx-c1D70C { padding: 0.442em 0.517em 0.216em 0px; }
+mjx-c.mjx-c1D6FD { padding: 0.705em 0.573em 0.194em 0px; }
+mjx-c.mjx-c1D6FE { padding: 0.441em 0.543em 0.216em 0px; }
+mjx-c.mjx-c211A { padding: 0.701em 0.778em 0.181em 0px; }
+mjx-c.mjx-c1D467 { padding: 0.442em 0.468em 0.011em 0px; }
+mjx-c.mjx-c1D711 { padding: 0.442em 0.654em 0.218em 0px; }
+mjx-c.mjx-c1D438 { padding: 0.68em 0.764em 0px 0px; }
+mjx-c.mjx-c74 { padding: 0.615em 0.389em 0.01em 0px; }
+mjx-c.mjx-c6F { padding: 0.448em 0.5em 0.01em 0px; }
+mjx-c.mjx-c70 { padding: 0.442em 0.556em 0.194em 0px; }
+mjx-c.mjx-c49 { padding: 0.683em 0.361em 0px 0px; }
+mjx-c.mjx-c4B { padding: 0.683em 0.778em 0px 0px; }
+mjx-c.mjx-c1D700 { padding: 0.452em 0.466em 0.022em 0px; }
+mjx-c.mjx-c1D464 { padding: 0.443em 0.716em 0.011em 0px; }
+mjx-c.mjx-c1D7CF { padding: 0.655em 0.575em 0px 0px; }
+mjx-c.mjx-c3C { padding: 0.54em 0.778em 0.04em 0px; }
+mjx-c.mjx-c28.TEX-LO { padding: 1.15em 0.597em 0.649em 0px; }
+mjx-c.mjx-c29.TEX-LO { padding: 1.15em 0.597em 0.649em 0px; }
+mjx-c.mjx-c27E8 { padding: 0.75em 0.389em 0.25em 0px; }
+mjx-c.mjx-c27E9 { padding: 0.75em 0.389em 0.25em 0px; }
+mjx-c.mjx-c6C { padding: 0.694em 0.278em 0px 0px; }
+mjx-c.mjx-c6E { padding: 0.442em 0.556em 0px 0px; }
+mjx-c.mjx-c43 { padding: 0.705em 0.722em 0.021em 0px; }
+mjx-c.mjx-c2261 { padding: 0.464em 0.778em 0px 0px; }
+mjx-c.mjx-c50 { padding: 0.683em 0.681em 0px 0px; }
+mjx-c.mjx-c53 { padding: 0.705em 0.556em 0.022em 0px; }
+mjx-c.mjx-c1D462 { padding: 0.442em 0.572em 0.011em 0px; }
+mjx-c.mjx-c1D52C { padding: 0.48em 0.489em 0.028em 0px; }
+mjx-c.mjx-c1D530 { padding: 0.478em 0.443em 0.029em 0px; }
+mjx-c.mjx-c1D52D { padding: 0.541em 0.5em 0.212em 0px; }
+mjx-c.mjx-c34 { padding: 0.677em 0.5em 0px 0px; }
+mjx-c.mjx-c35 { padding: 0.666em 0.5em 0.022em 0px; }
+mjx-c.mjx-c2D { padding: 0.252em 0.333em 0px 0px; }
+mjx-c.mjx-c75 { padding: 0.442em 0.556em 0.011em 0px; }
+mjx-c.mjx-c1D43E { padding: 0.683em 0.889em 0px 0px; }
+mjx-c.mjx-c2217 { padding: 0.465em 0.5em 0px 0px; }
+mjx-c.mjx-c1D437 { padding: 0.683em 0.828em 0px 0px; }
+mjx-c.mjx-c3B { padding: 0.43em 0.278em 0.194em 0px; }
+mjx-c.mjx-c212D { padding: 0.685em 0.613em 0.024em 0px; }
+mjx-c.mjx-c44 { padding: 0.683em 0.764em 0px 0px; }
+mjx-c.mjx-c73 { padding: 0.448em 0.394em 0.011em 0px; }
+mjx-c.mjx-c211D { padding: 0.683em 0.722em 0.001em 0px; }
+mjx-c.mjx-c1D53E { padding: 0.702em 0.778em 0.019em 0px; }
+mjx-c.mjx-c1D436 { padding: 0.705em 0.76em 0.022em 0px; }
+mjx-c.mjx-c1D52A { padding: 0.475em 0.767em 0.026em 0px; }
+mjx-c.mjx-c4F { padding: 0.705em 0.778em 0.022em 0px; }
+mjx-c.mjx-c48 { padding: 0.683em 0.75em 0px 0px; }
+mjx-c.mjx-c2A01.TEX-SO { padding: 0.75em 1.111em 0.25em 0px; }
+mjx-c.mjx-c7B.TEX-LO { padding: 1.15em 0.667em 0.649em 0px; }
+mjx-c.mjx-c7D.TEX-LO { padding: 1.15em 0.667em 0.649em 0px; }
+mjx-c.mjx-cB1 { padding: 0.666em 0.778em 0px 0px; }
+mjx-c.mjx-c212C { padding: 0.708em 0.928em 0.028em 0px; }
+mjx-c.mjx-c67 { padding: 0.453em 0.5em 0.206em 0px; }
+mjx-c.mjx-c1D701 { padding: 0.704em 0.471em 0.204em 0px; }
+mjx-c.mjx-c50.TEX-C { padding: 0.683em 0.733em 0.057em 0px; }
+mjx-c.mjx-c4C.TEX-C { padding: 0.705em 0.69em 0.022em 0px; }
+mjx-c.mjx-c49.TEX-C { padding: 0.683em 0.642em 0px 0px; }
+mjx-c.mjx-c21A6 { padding: 0.511em 1em 0.011em 0px; }
+mjx-c.mjx-c41 { padding: 0.716em 0.75em 0px 0px; }
+mjx-c.mjx-c27FC { padding: 0.511em 1.638em 0.011em 0px; }
+mjx-c.mjx-c45 { padding: 0.68em 0.681em 0px 0px; }
+mjx-c.mjx-c1D454 { padding: 0.442em 0.48em 0.205em 0px; }
+mjx-c.mjx-c1D704 { padding: 0.442em 0.354em 0.01em 0px; }
+mjx-c.mjx-c2200 { padding: 0.694em 0.556em 0.022em 0px; }
+mjx-c.mjx-c27F9 { padding: 0.525em 1.638em 0.024em 0px; }
+mjx-c.mjx-c2283 { padding: 0.54em 0.778em 0.04em 0px; }
+mjx-c.mjx-c2282 { padding: 0.54em 0.778em 0.04em 0px; }
+mjx-c.mjx-c1D445 { padding: 0.683em 0.759em 0.021em 0px; }
+mjx-c.mjx-c46 { padding: 0.68em 0.653em 0px 0px; }
+mjx-c.mjx-c3A6 { padding: 0.683em 0.722em 0px 0px; }
+mjx-c.mjx-c1D444 { padding: 0.704em 0.791em 0.194em 0px; }
+mjx-c.mjx-c36 { padding: 0.666em 0.5em 0.022em 0px; }
+mjx-c.mjx-c39 { padding: 0.666em 0.5em 0.022em 0px; }
+mjx-c.mjx-c38 { padding: 0.666em 0.5em 0.022em 0px; }
+mjx-c.mjx-c37 { padding: 0.676em 0.5em 0.022em 0px; }
+mjx-c.mjx-c21 { padding: 0.716em 0.278em 0px 0px; }
+mjx-mlabeledtr { display: table-row; text-align: left; }
+mjx-mlabeledtr[rowalign="top"] > mjx-mtd { vertical-align: top; }
+mjx-mlabeledtr[rowalign="center"] > mjx-mtd { vertical-align: middle; }
+mjx-mlabeledtr[rowalign="bottom"] > mjx-mtd { vertical-align: bottom; }
+mjx-mlabeledtr[rowalign="baseline"] > mjx-mtd { vertical-align: baseline; }
+mjx-mlabeledtr[rowalign="axis"] > mjx-mtd { vertical-align: 0.25em; }
+mjx-c.mjx-c1D709 { padding: 0.704em 0.443em 0.205em 0px; }
+mjx-c.mjx-c1D529 { padding: 0.685em 0.28em 0.02em 0px; }
+mjx-c.mjx-c2211.TEX-SO { padding: 0.75em 1.056em 0.25em 0px; }
+mjx-c.mjx-c220F.TEX-LO { padding: 0.95em 1.278em 0.45em 0px; }
+mjx-c.mjx-c2260 { padding: 0.716em 0.778em 0.215em 0px; }
+mjx-c.mjx-c1D45C { padding: 0.441em 0.485em 0.011em 0px; }
+mjx-c.mjx-c220F.TEX-SO { padding: 0.75em 0.944em 0.25em 0px; }
+mjx-c.mjx-c1D43C { padding: 0.683em 0.504em 0px 0px; }
+mjx-c.mjx-c2115 { padding: 0.683em 0.722em 0.02em 0px; }
+mjx-c.mjx-c2243 { padding: 0.464em 0.778em 0px 0px; }
+mjx-c.mjx-c1D443 { padding: 0.683em 0.751em 0px 0px; }
+mjx-c.mjx-c21A0 { padding: 0.417em 1em 0px 0px; }
+mjx-c.mjx-c1D713 { padding: 0.694em 0.651em 0.205em 0px; }
+mjx-c.mjx-c1D702 { padding: 0.442em 0.503em 0.216em 0px; }
+mjx-c.mjx-c7B.TEX-S3 { padding: 1.45em 0.75em 0.949em 0px; }
+mjx-c.mjx-c2216 { padding: 0.75em 0.5em 0.25em 0px; }
+mjx-c.mjx-c77 { padding: 0.431em 0.722em 0.011em 0px; }
+mjx-c.mjx-c78 { padding: 0.431em 0.528em 0px 0px; }
+mjx-c.mjx-c2247 { padding: 0.652em 0.778em 0.155em 0px; }
+mjx-stretchy-v.mjx-c28 > mjx-beg { width: 0.875em; margin: 1.154em auto -1.154em; }
+mjx-stretchy-v.mjx-c28 > mjx-ext > mjx-spacer { margin-top: 0.259em; }
+mjx-stretchy-v.mjx-c28 > mjx-ext { width: 0.875em; line-height: 0.562em; border-width: 1.779em 0px; }
+mjx-stretchy-v.mjx-c28 > mjx-end { width: 0.875em; margin: -0.644em auto 0.644em; }
+mjx-stretchy-v.mjx-c29 > mjx-beg { width: 0.875em; margin: 1.154em auto -1.154em; }
+mjx-stretchy-v.mjx-c29 > mjx-ext > mjx-spacer { margin-top: 0.259em; }
+mjx-stretchy-v.mjx-c29 > mjx-ext { width: 0.875em; line-height: 0.562em; border-width: 1.779em 0px; }
+mjx-stretchy-v.mjx-c29 > mjx-end { width: 0.875em; margin: -0.644em auto 0.644em; }
+mjx-c.mjx-c27E8.TEX-SO { padding: 0.85em 0.472em 0.35em 0px; }
+mjx-c.mjx-c27E9.TEX-SO { padding: 0.85em 0.472em 0.35em 0px; }
+mjx-c.mjx-c28.TEX-S4 { padding: 1.75em 0.792em 1.249em 0px; }
+mjx-c.mjx-c29.TEX-S4 { padding: 1.75em 0.792em 1.249em 0px; }
+mjx-c.mjx-c223C { padding: 0.367em 0.778em 0px 0px; }
+mjx-c.mjx-c237.TEX-I { padding: 0.442em 0.332em 0.204em 0px; }
+mjx-c.mjx-c1D53D { padding: 0.683em 0.611em 0.001em 0px; }
+mjx-c.mjx-c2203 { padding: 0.694em 0.556em 0px 0px; }
+mjx-c.mjx-c42 { padding: 0.683em 0.708em 0px 0px; }
+mjx-c.mjx-c2262 { padding: 0.716em 0.778em 0.215em 0px; }
+mjx-c.mjx-c2033 { padding: 0.56em 0.55em 0px 0px; }
+mjx-c.mjx-c54 { padding: 0.677em 0.722em 0px 0px; }
+mjx-c.mjx-c21D2 { padding: 0.525em 1em 0.024em 0px; }
+mjx-c.mjx-c7D.TEX-S3 { padding: 1.45em 0.75em 0.949em 0px; }
+mjx-c.mjx-c7B.TEX-S4 { padding: 1.75em 0.806em 1.249em 0px; }
+mjx-c.mjx-c7D.TEX-S4 { padding: 1.75em 0.806em 1.249em 0px; }
+mjx-c.mjx-c2224 { padding: 0.75em 0.3em 0.252em 0px; }
+mjx-c.mjx-c21AA { padding: 0.511em 1.126em 0.011em 0px; }
+mjx-c.mjx-c222A { padding: 0.598em 0.667em 0.022em 0px; }
+mjx-c.mjx-c1D703 { padding: 0.705em 0.469em 0.01em 0px; }
+mjx-c.mjx-c23 { padding: 0.694em 0.833em 0.194em 0px; }
+mjx-c.mjx-c4A { padding: 0.683em 0.514em 0.022em 0px; }
+mjx-c.mjx-c41.TEX-C { padding: 0.728em 0.819em 0.05em 0px; }
+mjx-c.mjx-c39B { padding: 0.716em 0.694em 0px 0px; }
+mjx-c.mjx-c2207 { padding: 0.683em 0.833em 0.033em 0px; }
+mjx-c.mjx-c62 { padding: 0.694em 0.556em 0.011em 0px; }
+mjx-c.mjx-c22C9 { padding: 0.492em 0.778em 0px 0px; }
+mjx-c.mjx-c1D70E { padding: 0.431em 0.572em 0.011em 0px; }
+mjx-c.mjx-c221E { padding: 0.442em 1em 0.011em 0px; }
+mjx-stretchy-v.mjx-c7B > mjx-beg { width: 0.889em; margin: 0.899em auto -0.899em; }
+mjx-stretchy-v.mjx-c7B > mjx-ext > mjx-spacer { margin-top: 0.115em; }
+mjx-stretchy-v.mjx-c7B > mjx-ext { width: 0.889em; line-height: 0.264em; }
+mjx-stretchy-v.mjx-c7B > mjx-end { width: 0.889em; margin: -0.899em auto 0.899em; }
+mjx-stretchy-v.mjx-c7B > mjx-mid { width: 0.889em; margin: 0.25em auto -0.25em; }
+mjx-stretchy-v.mjx-c7B > mjx-ext:first-of-type { height: 50%; border-width: 0.894em 0px 0.895em; }
+mjx-stretchy-v.mjx-c7B > mjx-ext:last-of-type { height: 50%; border-width: 0.895em 0px 0.879em; }
+mjx-c.mjx-c2019 { padding: 0.694em 0.278em 0px 0px; }
+mjx-c.mjx-c2219 { padding: 0.444em 0.5em 0px 0px; }
+mjx-c.mjx-c5A { padding: 0.683em 0.611em 0px 0px; }
+mjx-c.mjx-c57 { padding: 0.683em 1.028em 0.022em 0px; }
+mjx-c.mjx-c2205.TEX-V { padding: 0.587em 0.778em 0.003em 0px; }
+mjx-c.mjx-c1D45E { padding: 0.442em 0.46em 0.194em 0px; }
+mjx-c.mjx-c2119 { padding: 0.683em 0.611em 0.001em 0px; }
+mjx-c.mjx-c1D44C { padding: 0.683em 0.763em 0px 0px; }
+mjx-c.mjx-c3A9 { padding: 0.704em 0.722em 0px 0px; }
+mjx-c.mjx-c79 { padding: 0.431em 0.528em 0.204em 0px; }
+mjx-c.mjx-c1D715 { padding: 0.715em 0.566em 0.022em 0px; }
+mjx-c.mjx-c1D714 { padding: 0.443em 0.622em 0.011em 0px; }
+mjx-c.mjx-c1D705 { padding: 0.442em 0.576em 0.011em 0px; }
+mjx-c.mjx-c2194 { padding: 0.511em 1em 0.011em 0px; }
+mjx-c.mjx-c1D70F { padding: 0.431em 0.517em 0.013em 0px; }
+mjx-c.mjx-c4D { padding: 0.683em 0.917em 0px 0px; }
+mjx-c.mjx-c2284 { padding: 0.716em 0.778em 0.215em 0px; }
+mjx-c.mjx-c52 { padding: 0.683em 0.736em 0.022em 0px; }
+mjx-c.mjx-c25C3 { padding: 0.505em 0.5em 0.005em 0px; }
+mjx-c.mjx-c2227 { padding: 0.598em 0.667em 0.022em 0px; }
+mjx-c.mjx-c1D71B { padding: 0.431em 0.828em 0.01em 0px; }
+mjx-c.mjx-c22C3.TEX-LO { padding: 0.95em 1.111em 0.449em 0px; }
+mjx-c.mjx-c2DC { padding: 0.668em 0.5em 0px 0px; }
+mjx-stretchy-h.mjx-c23DF > mjx-beg { padding: 0.262em 0.45em 0.142em 0px; margin-right: -0.45em; }
+mjx-stretchy-h.mjx-c23DF > mjx-ext > mjx-spacer { margin-left: -0.2em; }
+mjx-stretchy-h.mjx-c23DF > mjx-ext { padding: 0.262em 0px 0.142em; }
+mjx-stretchy-h.mjx-c23DF > mjx-end { padding: 0.262em 0.45em 0.142em 0px; margin-left: -0.45em; }
+mjx-stretchy-h.mjx-c23DF > mjx-mid { padding: 0.262em 0.9em 0.142em 0px; margin: 0px -0.45em; }
+mjx-stretchy-h.mjx-c23DF > mjx-ext:first-of-type { width: 50%; border-width: 0px 0.42em; }
+mjx-stretchy-h.mjx-c23DF > mjx-ext:last-of-type { width: 50%; border-width: 0px 0.42em; }
+mjx-c.mjx-c2DC.TEX-LO { padding: 0.75em 1em 0px 0px; }
+mjx-c.mjx-c1D433 { padding: 0.444em 0.511em 0px 0px; }
+mjx-c.mjx-c230A.TEX-S3 { padding: 1.45em 0.583em 0.949em 0px; }
+mjx-c.mjx-c230B.TEX-S3 { padding: 1.45em 0.583em 0.949em 0px; }
+mjx-c.mjx-c230A { padding: 0.75em 0.444em 0.25em 0px; }
+mjx-c.mjx-c230B { padding: 0.75em 0.444em 0.25em 0px; }
+mjx-c.mjx-c1D459 { padding: 0.694em 0.298em 0.011em 0px; }
+mjx-c.mjx-c28.TEX-SO { padding: 0.85em 0.458em 0.349em 0px; }
+mjx-c.mjx-c29.TEX-SO { padding: 0.85em 0.458em 0.349em 0px; }
+mjx-c.mjx-c3F { padding: 0.705em 0.472em 0px 0px; }
+mjx-stretchy-v.mjx-c7D > mjx-beg { width: 0.889em; margin: 0.899em auto -0.899em; }
+mjx-stretchy-v.mjx-c7D > mjx-ext > mjx-spacer { margin-top: 0.115em; }
+mjx-stretchy-v.mjx-c7D > mjx-ext { width: 0.889em; line-height: 0.264em; }
+mjx-stretchy-v.mjx-c7D > mjx-end { width: 0.889em; margin: -0.899em auto 0.899em; }
+mjx-stretchy-v.mjx-c7D > mjx-mid { width: 0.889em; margin: 0.25em auto -0.25em; }
+mjx-stretchy-v.mjx-c7D > mjx-ext:first-of-type { height: 50%; border-width: 0.894em 0px 0.895em; }
+mjx-stretchy-v.mjx-c7D > mjx-ext:last-of-type { height: 50%; border-width: 0.895em 0px 0.894em; }
+mjx-c.mjx-c2308 { padding: 0.75em 0.444em 0.25em 0px; }
+mjx-c.mjx-c2309 { padding: 0.75em 0.444em 0.25em 0px; }
+mjx-c.mjx-c2308.TEX-S3 { padding: 1.45em 0.583em 0.949em 0px; }
+mjx-c.mjx-c2309.TEX-S3 { padding: 1.45em 0.583em 0.949em 0px; }
+mjx-c.mjx-c2250 { padding: 0.67em 0.778em 0px 0px; }
+mjx-c.mjx-c52.TEX-C { padding: 0.682em 0.848em 0.022em 0px; }
+mjx-c.mjx-c66 { padding: 0.705em 0.372em 0px 0px; }
+mjx-c.mjx-c5A.TEX-C { padding: 0.683em 0.767em 0px 0px; }
+mjx-c.mjx-c48.TEX-C { padding: 0.683em 0.845em 0.048em 0px; }
+mjx-c.mjx-c2DC.TEX-SO { padding: 0.722em 0.556em 0px 0px; }
+mjx-c.mjx-c5B.TEX-S4 { padding: 1.75em 0.583em 1.249em 0px; }
+mjx-c.mjx-c5D.TEX-S4 { padding: 1.75em 0.583em 1.249em 0px; }
+mjx-c.mjx-c5B.TEX-S3 { padding: 1.45em 0.528em 0.949em 0px; }
+mjx-c.mjx-c5D.TEX-S3 { padding: 1.45em 0.528em 0.949em 0px; }
+mjx-c.mjx-c56.TEX-C { padding: 0.683em 0.658em 0.052em 0px; }
+mjx-c.mjx-c1D51E { padding: 0.47em 0.5em 0.035em 0px; }
+mjx-c.mjx-c27C2 { padding: 0.668em 0.778em 0px 0px; }
+mjx-stretchy-v.mjx-c7C > mjx-ext > mjx-spacer { margin-top: 0.271em; }
+mjx-stretchy-v.mjx-c7C > mjx-ext { width: 0.333em; line-height: 0.572em; }
+mjx-c.mjx-c27F7 { padding: 0.511em 1.859em 0.011em 0px; }
+mjx-c.mjx-c1D4AB { padding: 0.716em 1.031em 0.037em 0px; }
+mjx-c.mjx-c4D.TEX-C { padding: 0.705em 1.201em 0.05em 0px; }
+mjx-c.mjx-c7B.TEX-SO { padding: 0.85em 0.583em 0.349em 0px; }
+mjx-c.mjx-c7D.TEX-SO { padding: 0.85em 0.583em 0.349em 0px; }
+mjx-c.mjx-c1D5CD { padding: 0.571em 0.361em 0.01em 0px; }
+mjx-c.mjx-c4F.TEX-C { padding: 0.705em 0.796em 0.022em 0px; }</style><div class="markdown-preview-sizer markdown-preview-section"><div class="header"><div class="page-title" id="参考资料">参考资料</div><div class="data-bar"></div></div><div class="markdown-preview-pusher" style="width:1px;height:.1px;margin-bottom:0"></div><div class="el-h2"><h2 data-heading="Pan–Shu 的一阶构造" dir="auto" id="Pan–Shu_的一阶构造_0">Pan–Shu 的一阶构造</h2></div><div class="el-p"><p dir="auto">Lei Pan, Bin Shu, <em>Jantzen filtration and strong linkage principle for modular Lie superalgebras</em>。</p></div><div class="el-p"><p dir="auto">本地只读文件：<a data-tooltip-position="top" aria-label="D:/Albus/Attachments/PDFs/Papers/Lei%20P,%20Bin%20S.%20Jantzen%20filtration%20and%20strong%20linkage%20principle%20for%20modular%20Lie%20superalgebras..pdf" rel="noopener nofollow" class="external-link" href="D:/Albus/Attachments/PDFs/Papers/Lei%20P,%20Bin%20S.%20Jantzen%20filtration%20and%20strong%20linkage%20principle%20for%20modular%20Lie%20superalgebras..pdf" target="_blank">原文 PDF</a>。项目中的文本提取为 <a data-tooltip-position="top" aria-label="D:/GitHub/albus-research/.tmp/pdf-text/pan-shu.txt" rel="noopener nofollow" class="external-link" href="D:/GitHub/albus-research/.tmp/pdf-text/pan-shu.txt" target="_blank">pan-shu.txt</a>。</p></div><div class="el-p"><p dir="auto">§4.1 建立相容模范畴并讨论最高向量的奇性，§4.1.3 引入参数对象；§5.1 分三类根计算相邻同态与变权正合列；Lemma 5.5 与 Remark 5.6 控制局部参数余核；§6.2 给出滤过的一般构造，Theorem 6.4 给出一阶滤过及和公式。原文 PDF 第16页的 Lemma 5.2 把各向同性奇根的非平凡核正合列放在 <span class="math math-inline is-loaded"><mjx-container class="MathJax" jax="CHTML" overflow="overflow"><mjx-math data-latex="d=0" breakable="true" class="TEX-N"><mjx-mi data-latex="d"><mjx-c class="mjx-c1D451">𝑑</mjx-c></mjx-mi><mjx-break size="4"> </mjx-break><mjx-mo data-latex="="><mjx-c class="mjx-c3D">=</mjx-c></mjx-mo><mjx-mn space="4" data-latex="0"><mjx-c class="mjx-c30">0</mjx-c></mjx-mn></mjx-math></mjx-container></span> 的条件下。</p></div><div class="el-p"><p dir="auto">该 PDF 第25页 Theorem 6.4 的第三类根位移使用 <span class="math math-inline is-loaded"><mjx-container class="MathJax" jax="CHTML" overflow="overflow"><mjx-math data-latex="\delta_{1,(-1)^{m_\beta-1}}" class="TEX-N"><mjx-msub data-latex="\delta_{1,(-1)^{m_\beta-1}}"><mjx-mi data-latex="\delta"><mjx-c class="mjx-c1D6FF">𝛿</mjx-c></mjx-mi><mjx-script style="vertical-align: -0.33em; margin-left: -0.007em;"><mjx-texatom size="s" data-latex="{1,(-1)^{m_\beta-1}}" texclass="ORD"><mjx-mn data-latex="1"><mjx-c class="mjx-c31">1</mjx-c></mjx-mn><mjx-mo data-latex=","><mjx-c class="mjx-c2C">,</mjx-c></mjx-mo><mjx-mo data-latex="("><mjx-c class="mjx-c28">(</mjx-c></mjx-mo><mjx-mo data-latex="-"><mjx-c class="mjx-c2212">−</mjx-c></mjx-mo><mjx-mn data-latex="1"><mjx-c class="mjx-c31">1</mjx-c></mjx-mn><mjx-msup data-latex=")^{m_\beta-1}"><mjx-mo data-latex=")"><mjx-c class="mjx-c29">)</mjx-c></mjx-mo><mjx-script style="vertical-align: 0.496em;"><mjx-texatom size="s" data-latex="{m_\beta-1}" texclass="ORD"><mjx-msub data-latex="m_\beta"><mjx-mi data-latex="m"><mjx-c class="mjx-c1D45A">𝑚</mjx-c></mjx-mi><mjx-script style="vertical-align: -0.351em;"><mjx-mi data-latex="\beta"><mjx-c class="mjx-c1D6FD">𝛽</mjx-c></mjx-mi></mjx-script></mjx-msub><mjx-mo data-latex="-"><mjx-c class="mjx-c2212">−</mjx-c></mjx-mo><mjx-mn data-latex="1"><mjx-c class="mjx-c31">1</mjx-c></mjx-mn></mjx-texatom></mjx-script></mjx-msup></mjx-texatom></mjx-script></mjx-msub></mjx-math></mjx-container></span>，与第17页 Lemma 5.3 的奇偶分支不一致。由该引理及秩一零权计算，应使用 <span class="math math-inline is-loaded"><mjx-container class="MathJax" jax="CHTML" overflow="overflow"><mjx-math data-latex="\delta_{1,(-1)^{m_\beta}}" class="TEX-N"><mjx-msub data-latex="\delta_{1,(-1)^{m_\beta}}"><mjx-mi data-latex="\delta"><mjx-c class="mjx-c1D6FF">𝛿</mjx-c></mjx-mi><mjx-script style="vertical-align: -0.218em; margin-left: -0.007em;"><mjx-texatom size="s" data-latex="{1,(-1)^{m_\beta}}" texclass="ORD"><mjx-mn data-latex="1"><mjx-c class="mjx-c31">1</mjx-c></mjx-mn><mjx-mo data-latex=","><mjx-c class="mjx-c2C">,</mjx-c></mjx-mo><mjx-mo data-latex="("><mjx-c class="mjx-c28">(</mjx-c></mjx-mo><mjx-mo data-latex="-"><mjx-c class="mjx-c2212">−</mjx-c></mjx-mo><mjx-mn data-latex="1"><mjx-c class="mjx-c31">1</mjx-c></mjx-mn><mjx-msup data-latex=")^{m_\beta}"><mjx-mo data-latex=")"><mjx-c class="mjx-c29">)</mjx-c></mjx-mo><mjx-script style="vertical-align: 0.496em;"><mjx-texatom size="s" data-latex="{m_\beta}" texclass="ORD"><mjx-msub data-latex="m_\beta"><mjx-mi data-latex="m"><mjx-c class="mjx-c1D45A">𝑚</mjx-c></mjx-mi><mjx-script style="vertical-align: -0.351em;"><mjx-mi data-latex="\beta"><mjx-c class="mjx-c1D6FD">𝛽</mjx-c></mjx-mi></mjx-script></mjx-msub></mjx-texatom></mjx-script></mjx-msup></mjx-texatom></mjx-script></mjx-msub></mjx-math></mjx-container></span>；本书《一阶参数同态与滤过》给出具体校验。所作一阶兼容性比较针对实际滤过构造与校正后的位移。arXiv:1710.05821 的当前公开版本为 v1（2017年10月16日）；此处没有据此推断其他出版版本是否已修正。</p></div><div class="el-h2"><h2 data-heading="用户原研究笔记" dir="auto" id="用户原研究笔记_0">用户原研究笔记</h2></div><div class="el-p"><p dir="auto">只读笔记本：<a data-tooltip-position="top" aria-label="D:/Albus/Documents/%E6%95%B0%E5%AD%A6/Chevalley%20%E8%B6%85%E7%BE%A4%E7%9A%84%20r%20%E9%98%B6%20Frobenius%20%E6%A0%B8%E7%9A%84%E8%A1%A8%E7%A4%BA" rel="noopener nofollow" class="external-link" href="D:/Albus/Documents/%E6%95%B0%E5%AD%A6/Chevalley%20%E8%B6%85%E7%BE%A4%E7%9A%84%20r%20%E9%98%B6%20Frobenius%20%E6%A0%B8%E7%9A%84%E8%A1%A8%E7%A4%BA" target="_blank">Chevalley 超群的 r 阶 Frobenius 核的表示</a>。</p></div><div class="el-p"><p dir="auto">当前使用的主要内容是《计算二项式系数的工具》《r 阶情形同态像与核的计算》《r 阶情形同态空间的计算》《r 阶情形的正合列与特征标公式》。引用具体命题时，应保留原文件名和当时已核实的块标识。用户可能通过 MathCraft 调整编号，正文定位应以块标识和实际陈述共同确认。</p></div><div class="el-h2"><h2 data-heading="项目已有研究" dir="auto" id="项目已有研究_0">项目已有研究</h2></div><div class="el-p"><p dir="auto">《高阶核的滤过与和公式》提供共同范畴、相邻同态、三类变权列及限定典型 Steinberg 权族的滤过构造。它没有建立一般高阶参数变形。</p></div><div class="el-p"><p dir="auto">《高阶核表示论》的《反变配对／秩一配对滤过》及《特殊线性超群／配对与和公式》提供环境整模、特殊纤维嵌入和取交滤过的低秩计算。把这些计算推广到一般权空间，需要重新证明整模型输入、嵌入、稳定性及取交公式，不把低秩实验当作一般证明。</p></div><div class="el-h2"><h2 data-heading="高阶变形代数" dir="auto" id="高阶变形代数_0">高阶变形代数</h2></div><div class="el-p"><p dir="auto">Matthew Westaway, <em>Higher Deformations of Lie Algebra Representations I</em>，arXiv:1807.00660；<em>Higher Deformations of Lie Algebra Representations II</em>，arXiv:1904.10860。</p></div><div class="el-p"><p dir="auto">项目已有原文：<a data-tooltip-position="top" aria-label="D:/GitHub/albus-research/%E6%96%87%E7%8C%AE%E8%B5%84%E6%96%99/%E9%A1%B9%E7%9B%AE%E5%86%85%E8%AE%BA%E6%96%87/%E9%AB%98%E9%98%B6%E5%8F%98%E5%BD%A2%E7%90%86%E8%AE%BA%E7%AC%AC%E4%B8%80%E7%AF%87.pdf" rel="noopener nofollow" class="external-link" href="D:/GitHub/albus-research/%E6%96%87%E7%8C%AE%E8%B5%84%E6%96%99/%E9%A1%B9%E7%9B%AE%E5%86%85%E8%AE%BA%E6%96%87/%E9%AB%98%E9%98%B6%E5%8F%98%E5%BD%A2%E7%90%86%E8%AE%BA%E7%AC%AC%E4%B8%80%E7%AF%87.pdf" target="_blank">第一篇</a>、<a data-tooltip-position="top" aria-label="D:/GitHub/albus-research/%E6%96%87%E7%8C%AE%E8%B5%84%E6%96%99/%E9%A1%B9%E7%9B%AE%E5%86%85%E8%AE%BA%E6%96%87/%E9%AB%98%E9%98%B6%E5%8F%98%E5%BD%A2%E7%90%86%E8%AE%BA%E7%AC%AC%E4%BA%8C%E7%AF%87.pdf" rel="noopener nofollow" class="external-link" href="D:/GitHub/albus-research/%E6%96%87%E7%8C%AE%E8%B5%84%E6%96%99/%E9%A1%B9%E7%9B%AE%E5%86%85%E8%AE%BA%E6%96%87/%E9%AB%98%E9%98%B6%E5%8F%98%E5%BD%A2%E7%90%86%E8%AE%BA%E7%AC%AC%E4%BA%8C%E7%AF%87.pdf" target="_blank">第二篇</a>。第一篇 §5.4 讨论高阶 baby Verma 模，§6 的秩一分析说明高阶变形与一阶泛型简单性之间有实质差别。其普通群结论不能直接作为超群构造使用。</p></div><div class="el-p"><p dir="auto">第一篇 Proposition 3.3.3及§3.5用于核对普通群中心元与有限层代数之间的关系；第二篇 Proposition 4.4的证明明确验证这些中心元为本原元。本书《中心子代数》将文献层指标换成 <span class="math math-inline is-loaded"><mjx-container class="MathJax" jax="CHTML" overflow="overflow"><mjx-math data-latex="r-1" breakable="true" class="TEX-N"><mjx-mi data-latex="r"><mjx-c class="mjx-c1D45F">𝑟</mjx-c></mjx-mi><mjx-break size="3"> </mjx-break><mjx-mo data-latex="-"><mjx-c class="mjx-c2212">−</mjx-c></mjx-mo><mjx-mn space="3" data-latex="1"><mjx-c class="mjx-c31">1</mjx-c></mjx-mn></mjx-math></mjx-container></span>，并利用实际偶群对奇格的伴随作用补证完整超代数中的中心性，再由 PBW 单位系数证明中心自由基。</p></div><div class="el-p"><p dir="auto">第二篇 §4.2、Proposition 4.11之前定义从一个固定低阶简单模诱导的 teenage Verma module，并计算其维数。本书《低阶核与商核》参考这一诱导思路，使用低阶根基理想及实际正偶 Borel 作用建立所需商模；文献 §4.1的简单模延拓假设及固定简单模的范畴对应，不能直接替代整个超群参数模的证明。</p></div><div class="el-h2"><h2 data-heading="有限维代数的根基" dir="auto" id="有限维代数的根基_0">有限维代数的根基</h2></div><div class="el-p"><p dir="auto">MIT OpenCourseWare, <em>18.706 Noncommutative Algebra</em>, Spring 2023，授课教师 Roman Bezrukavnikov。Lecture 5、§5.2、Proposition 5.6与Corollaries 5.7–5.8（讲义连续页码15–16）给出Artinian半本原环的结构、根基作用与半单模的关系，以及所用Nakayama引理。<a data-tooltip-position="top" aria-label="https://ocw.mit.edu/courses/18-706-noncommutative-algebra-spring-2023/mit18_706_s23_lec05.pdf" rel="noopener nofollow" class="external-link" href="https://ocw.mit.edu/courses/18-706-noncommutative-algebra-spring-2023/mit18_706_s23_lec05.pdf" target="_blank">原讲义</a>。本书《低阶核与商核》使用这些有限维代数事实，并另证根基在高阶分布作用下的稳定性。</p></div><div class="el-h2"><h2 data-heading="整 Verma 模上的滤过" dir="auto" id="整_Verma_模上的滤过_0">整 Verma 模上的滤过</h2></div><div class="el-p"><p dir="auto">Henning Haahr Andersen, <em>Character formulas in Category <span class="math math-inline is-loaded"><mjx-container class="MathJax" jax="CHTML" overflow="overflow"><mjx-math data-latex="\mathcal O_p" class="TEX-N"><mjx-msub data-latex="\mathcal O_p"><mjx-texatom data-latex="\mathcal O" texclass="ORD"><mjx-mi data-latex="O"><mjx-c class="mjx-c4F TEX-C">O</mjx-c></mjx-mi></mjx-texatom><mjx-script style="vertical-align: -0.15em;"><mjx-mi size="s" data-latex="p"><mjx-c class="mjx-c1D45D">𝑝</mjx-c></mjx-mi></mjx-script></mjx-msub></mjx-math></mjx-container></span></em>，arXiv:2209.02261v2，2022年9月14日版本。<a data-tooltip-position="top" aria-label="https://arxiv.org/pdf/2209.02261" rel="noopener nofollow" class="external-link" href="https://arxiv.org/pdf/2209.02261" target="_blank">原文 PDF</a>。</p></div><div class="el-p"><p dir="auto">§5、Theorem 5.2 讨论普通半单群的反占优 Verma 模的整形式滤过及和公式；Remark 5.3 解释反占优条件与整数同态单射性的关系。本书参考其整数形式路线，但高阶 baby Verma 的取交、超群整模型与一阶兼容性仍由本书分别研究。</p></div><div class="el-h2"><h2 data-heading="特征零配对的行列式" dir="auto" id="特征零配对的行列式_0">特征零配对的行列式</h2></div><div class="el-p"><p dir="auto">Ian Malcolm Musson, <em>Lie Superalgebras and Enveloping Algebras</em>, American Mathematical Society, 2012。<a data-tooltip-position="top" aria-label="D:/Albus/Attachments/PDFs/Books/Ian%20Malcolm%20Musson.%20Lie%20Superalgebras%20and%20Enveloping%20Algebras.%20American%20Mathematical%20Society,%202012..pdf" rel="noopener nofollow" class="external-link" href="D:/Albus/Attachments/PDFs/Books/Ian%20Malcolm%20Musson.%20Lie%20Superalgebras%20and%20Enveloping%20Algebras.%20American%20Mathematical%20Society,%202012..pdf" target="_blank">本地只读书籍</a>。</p></div><div class="el-p"><p dir="auto">§10.1计算最高次数项并限制行列式的因子；§10.2.3、Theorem 10.2.5（书内第230–231页）给出三类根的行列式分解。本书《环境配对与商核》重写所需证明，并另外计算有限层 PBW 基的阶乘常数。原文的“相差非零常数”不能未经处理就作为正特征赋值公式使用。</p></div><div class="el-p"><p dir="auto">Maria Gorelik, <em>The Kac Construction of the Centre of U(g) for Lie Superalgebras</em>, Journal of Nonlinear Mathematical Physics 11(3) (2004), 325–349。<a data-tooltip-position="top" aria-label="https://www.atlantis-press.com/article/573.pdf" rel="noopener nofollow" class="external-link" href="https://www.atlantis-press.com/article/573.pdf" target="_blank">正式原文</a>。§3.1–3.4、Corollary 3（期刊第345页）给出以 Casimir 条件、最高次数项和泛型超平面滤过确定根因子的证明路线。本文使用它核对上述特征零输入，不将其结论说成已经处理了高阶有限商核。</p></div><div class="el-h2"><h2 data-heading="有限层分布代数" dir="auto" id="有限层分布代数_0">有限层分布代数</h2></div><div class="el-p"><p dir="auto">Christine Huyghe、Tobias Schmidt, <em>Algèbres de distributions et D-modules arithmétiques</em>, Rend. Sem. Mat. Univ. Padova 139 (2018), 1–76，DOI 10.4171/RSMUP/139-1。<a data-tooltip-position="top" aria-label="https://www.numdam.org/item/10.4171/RSMUP/139-1.pdf" rel="noopener nofollow" class="external-link" href="https://www.numdam.org/item/10.4171/RSMUP/139-1.pdf" target="_blank">正式原文</a>。</p></div><div class="el-p"><p dir="auto">§4.1 构造普通光滑群的有限层算术分布代数。Proposition 4.1.6 给出坐标基及其与通常分布基的关系，Proposition 4.1.8 给出代数结构，Proposition 4.1.11 给出函子性与乘积相容性，Proposition 4.1.12 处理乘法群，Proposition 4.1.13 给出分次 PBW 结构。本书对奇部分的扩展与参数 Verma 商另外证明；该文的普通群结果不直接承担超群结论。</p></div><div class="el-h2"><h2 data-heading="约化中心的 Poisson 括号" dir="auto" id="约化中心的_Poisson_括号_0">约化中心的 Poisson 括号</h2></div><div class="el-p"><p dir="auto">Akaki Tikaradze, <em>Rigidity of quantum algebras</em>, Journal of the London Mathematical Society 111(3) (2025), e70118。<a data-tooltip-position="top" aria-label="https://londmathsoc.onlinelibrary.wiley.com/doi/full/10.1112/jlms.70118" rel="noopener nofollow" class="external-link" href="https://londmathsoc.onlinelibrary.wiley.com/doi/full/10.1112/jlms.70118" target="_blank">正式原文</a>。</p></div><div class="el-p"><p dir="auto">§1回顾由整提升交换子除以 <span class="math math-inline is-loaded"><mjx-container class="MathJax" jax="CHTML" overflow="overflow"><mjx-math data-latex="p" class="TEX-N"><mjx-mi data-latex="p"><mjx-c class="mjx-c1D45D">𝑝</mjx-c></mjx-mi></mjx-math></mjx-container></span> 定义约化中心 Poisson 括号的标准构造；§2、Lemma 2.1给出普通一阶<span class="math math-inline is-loaded"><mjx-container class="MathJax" jax="CHTML" overflow="overflow"><mjx-math data-latex="p" class="TEX-N"><mjx-mi data-latex="p"><mjx-c class="mjx-c1D45D">𝑝</mjx-c></mjx-mi></mjx-math></mjx-container></span>中心上的负 Lie–Poisson 符号。本书《商核的首层配对》用它核对构造和一阶符号，高阶中心生成空间的封闭性、相反根公式及其对商核配对的作用由正文分别证明。</p></div><div class="el-h2"><h2 data-heading="整形式背景的进一步定位" dir="auto" id="整形式背景的进一步定位_0">整形式背景的进一步定位</h2></div><div class="el-p"><p dir="auto">Akira Masuoka、Taiki Shibata, <em>Algebraic supergroups and Harish-Chandra pairs over a commutative ring</em>, arXiv:1304.0531v8（2016年9月30日）。<a data-tooltip-position="top" aria-label="https://arxiv.org/pdf/1304.0531" rel="noopener nofollow" class="external-link" href="https://arxiv.org/pdf/1304.0531" target="_blank">原文 PDF</a>。Definition 4.4给出所用 Harish–Chandra 对条件，Theorem 4.22给出分裂对象及相应自由性条件下的范畴等价；§6、Theorem 6.1与Proposition 6.2解释可用 Chevalley 整格与偶群作用。含非整数结构参数的对象仍须核对其实际基环，不把“存在整数模型”无条件扩展到任意参数。</p></div><div class="el-p"><p dir="auto">R. Fioresi、F. Gavarini, <em>Chevalley Supergroups</em>，§4.3、Theorem 4.7（书内第28页）给出 Kostant 超代数的整数 PBW 基。该章开头对类型有范围限定，部分特殊类型另行处理，应用时须核对，不能把这一命题无条件用于所有 Lie 超代数。</p></div><div class="el-p"><p dir="auto">一般 Chevalley 超群整形式的反自同构与 Harish–Chandra 投影配对仍须按具体类型核实。另一个首选只读资料为 J. C. Jantzen 的 <em>Representations of Algebraic Groups</em>；尚未核实的精确命题编号不得填入正文。</p></div><div class="el-p"><p dir="auto">Fabio Gavarini, <em>Chevalley Supergroups of type D(2,1;a)</em>，arXiv:1006.0464v2（2012年9月3日）。<a data-tooltip-position="top" aria-label="https://arxiv.org/abs/1006.0464" rel="noopener nofollow" class="external-link" href="https://arxiv.org/abs/1006.0464" target="_blank">原文入口</a>。该文处理包括非整数参数的类型；本书的混合特征模型若使用此类型，仍须核实相应基环与参数提升，不能从普通整数型 PBW 陈述直接略过。</p></div><div class="el-p"><p dir="auto">The Stacks Project，Section 10.160、Lemma 10.160.6：<a data-tooltip-position="top" aria-label="https://stacks.math.columbia.edu/tag/0323" rel="noopener nofollow" class="external-link" href="https://stacks.math.columbia.edu/tag/0323" target="_blank">Cohen 环的存在性</a>。有限层构造用它选择素元为 <span class="math math-inline is-loaded"><mjx-container class="MathJax" jax="CHTML" overflow="overflow"><mjx-math data-latex="p" class="TEX-N"><mjx-mi data-latex="p"><mjx-c class="mjx-c1D45D">𝑝</mjx-c></mjx-mi></mjx-math></mjx-container></span>、剩余域为 <span class="math math-inline is-loaded"><mjx-container class="MathJax" jax="CHTML" overflow="overflow"><mjx-math data-latex="k" class="TEX-N"><mjx-mi data-latex="k"><mjx-c class="mjx-c1D458">𝑘</mjx-c></mjx-mi></mjx-math></mjx-container></span> 的系数环，再作 Eisenstein 分歧扩张。</p></div><div class="el-h2"><h2 data-heading="圆分参数稿的核验与比较" dir="auto" id="圆分参数稿的核验与比较_0">圆分参数稿的核验与比较</h2></div><div class="el-p"><p dir="auto">审核对象为项目中的<a data-tooltip-position="top" aria-label="D:/GitHub/albus-research/%E5%8F%A6%E4%B8%80%E4%BB%BD%E7%BB%93%E6%9E%9C-%E5%AE%8C%E6%95%B4%E7%89%88.pdf" rel="noopener nofollow" class="external-link" href="D:/GitHub/albus-research/%E5%8F%A6%E4%B8%80%E4%BB%BD%E7%BB%93%E6%9E%9C-%E5%AE%8C%E6%95%B4%E7%89%88.pdf" target="_blank">另一份结果：完整版</a>和<a data-tooltip-position="top" aria-label="D:/GitHub/albus-research/%E5%8F%A6%E4%B8%80%E4%BB%BD%E7%BB%93%E6%9E%9C-%E6%80%BB%E7%BB%93.pdf" rel="noopener nofollow" class="external-link" href="D:/GitHub/albus-research/%E5%8F%A6%E4%B8%80%E4%BB%BD%E7%BB%93%E6%9E%9C-%E6%80%BB%E7%BB%93.pdf" target="_blank">另一份结果：总结</a>，分别为110页和12页。下面页码均指这两份 PDF 的物理页码；完整版的印刷页码与之相同。其原始 Markdown、Python 脚本和 JSON 证书没有随稿提供；正文中“独立审查通过”的自述不单独作为本次核验依据。</p></div><div class="el-p"><p dir="auto"><strong>总体判断。</strong> 圆分路线值得优先核验和发展，它在结构上更贴近 Pan–Shu 的相邻同态方法。局部消失阶、合法参数链成立之后的全局长度计算，以及所列部分关键有限根数据，都有实质证明或重算支持，目前未发现能够推翻主体构造的反例。这个判断不等于已经对全部类型、全部整规范作最终数学认证；尤其共同整代数及其完整特殊化仍是定稿前的重点审查对象。不能因稿件长或写有“已独立审查”就把这个审查略去，也不能仅因没附代码就将其结论判错。</p></div><div class="el-p"><p dir="auto">它解决问题的方式与本书不同。对方先构造同一整算子代数上的有限自由参数模</p></div><div class="el-div"><div class="math math-block is-loaded"><mjx-container class="MathJax" jax="CHTML" overflow="scroll" display="true" data-editing-suite-math-overflow=""><mjx-math data-latex="\mathcal M_0\xrightarrow{\Xi_0}\mathcal M_1
+\longrightarrow\cdots\xrightarrow{\Xi_{N-1}}\mathcal M_N," display="true" class="TEX-N"><mjx-msub data-latex="\mathcal M_0"><mjx-texatom data-latex="\mathcal M" texclass="ORD"><mjx-mi data-latex="M"><mjx-c class="mjx-c4D TEX-C">M</mjx-c></mjx-mi></mjx-texatom><mjx-script style="vertical-align: -0.15em;"><mjx-mn size="s" data-latex="0"><mjx-c class="mjx-c30">0</mjx-c></mjx-mn></mjx-script></mjx-msub><mjx-texatom space="4" data-latex="\xrightarrow{\Xi_0}" texclass="REL"><mjx-texatom texclass="undefined"></mjx-texatom><mjx-mover><mjx-over style="padding-bottom: 0.111em;"><mjx-mpadded size="s"><mjx-block style="width: 1.937em; margin: -0.2em 0px 0px; position: relative;"><mjx-rbox style="left: 0.278em; top: 0.2em; max-width: 1.937em;"><mjx-msub data-latex="\Xi_0"><mjx-mi data-latex="\Xi"><mjx-c class="mjx-c39E">Ξ</mjx-c></mjx-mi><mjx-script style="vertical-align: -0.15em;"><mjx-mn size="s" data-latex="0"><mjx-c class="mjx-c30">0</mjx-c></mjx-mn></mjx-script></mjx-msub><mjx-mspace style="height: 0.2em; vertical-align: -0.2em;"></mjx-mspace></mjx-rbox></mjx-block></mjx-mpadded></mjx-over><mjx-base><mjx-mstyle><mjx-mo><mjx-stretchy-h class="mjx-c2192" style="width: 1.369em;"><mjx-ext class="TEX-SO"><mjx-spacer>←←</mjx-spacer></mjx-ext><mjx-end class="TEX-SO">→</mjx-end></mjx-stretchy-h></mjx-mo></mjx-mstyle></mjx-base></mjx-mover></mjx-texatom><mjx-msub space="4" data-latex="\mathcal M_1"><mjx-texatom data-latex="\mathcal M" texclass="ORD"><mjx-mi data-latex="M"><mjx-c class="mjx-c4D TEX-C">M</mjx-c></mjx-mi></mjx-texatom><mjx-script style="vertical-align: -0.15em;"><mjx-mn size="s" data-latex="1"><mjx-c class="mjx-c31">1</mjx-c></mjx-mn></mjx-script></mjx-msub><mjx-mo space="4" data-latex="\longrightarrow"><mjx-c class="mjx-c27F6">⟶</mjx-c></mjx-mo><mjx-mo space="4" data-latex="\cdots"><mjx-c class="mjx-c22EF">⋯</mjx-c></mjx-mo><mjx-texatom space="4" data-latex="\xrightarrow{\Xi_{N-1}}" texclass="REL"><mjx-texatom texclass="undefined"></mjx-texatom><mjx-mover><mjx-over style="padding-bottom: 0.111em;"><mjx-mpadded size="s"><mjx-block style="width: 3.115em; margin: -0.2em 0px 0px; position: relative;"><mjx-rbox style="left: 0.278em; top: 0.2em; max-width: 3.115em;"><mjx-msub data-latex="\Xi_{N-1}"><mjx-mi data-latex="\Xi"><mjx-c class="mjx-c39E">Ξ</mjx-c></mjx-mi><mjx-script style="vertical-align: -0.15em;"><mjx-texatom size="s" data-latex="{N-1}" texclass="ORD"><mjx-mi data-latex="N"><mjx-c class="mjx-c1D441">𝑁</mjx-c></mjx-mi><mjx-mo data-latex="-"><mjx-c class="mjx-c2212">−</mjx-c></mjx-mo><mjx-mn data-latex="1"><mjx-c class="mjx-c31">1</mjx-c></mjx-mn></mjx-texatom></mjx-script></mjx-msub><mjx-mspace style="height: 0.2em; vertical-align: -0.2em;"></mjx-mspace></mjx-rbox></mjx-block></mjx-mpadded></mjx-over><mjx-base><mjx-mstyle><mjx-mo><mjx-stretchy-h class="mjx-c2192" style="width: 2.202em;"><mjx-ext class="TEX-SO"><mjx-spacer>←←←←</mjx-spacer></mjx-ext><mjx-end class="TEX-SO">→</mjx-end></mjx-stretchy-h></mjx-mo></mjx-mstyle></mjx-base></mjx-mover></mjx-texatom><mjx-msub space="4" data-latex="\mathcal M_N"><mjx-texatom data-latex="\mathcal M" texclass="ORD"><mjx-mi data-latex="M"><mjx-c class="mjx-c4D TEX-C">M</mjx-c></mjx-mi></mjx-texatom><mjx-script style="vertical-align: -0.15em;"><mjx-mi size="s" data-latex="N"><mjx-c class="mjx-c1D441">𝑁</mjx-c></mjx-mi></mjx-script></mjx-msub><mjx-mo data-latex=","><mjx-c class="mjx-c2C">,</mjx-c></mjx-mo></mjx-math></mjx-container></div></div><div class="el-p"><p dir="auto">每个特殊纤维恢复对应的 baby Verma 模，每条箭头泛型可逆。于是复合的余核长度可以直接按相邻步骤相加。本书则先构造无限环境整模，再在特殊纤维中取有限商，因而还须减去商核的滤过贡献。两者共享经典相邻同态和 PBW 计算，却在参数对象这一关键步骤分开。</p></div><div class="el-p"><p dir="auto"><strong>圆分参数为什么与高阶截断相配。</strong> 对方取</p></div><div class="el-div"><div class="math math-block is-loaded"><mjx-container class="MathJax" jax="CHTML" overflow="scroll" display="true" data-editing-suite-math-overflow=""><mjx-math data-latex="\mathcal O_r=W(k)[\varepsilon_r],\qquad
+\pi_r=\varepsilon_r-1," display="true" class="TEX-N"><mjx-msub data-latex="\mathcal O_r"><mjx-texatom data-latex="\mathcal O" texclass="ORD"><mjx-mi data-latex="O"><mjx-c class="mjx-c4F TEX-C">O</mjx-c></mjx-mi></mjx-texatom><mjx-script style="vertical-align: -0.15em;"><mjx-mi size="s" data-latex="r"><mjx-c class="mjx-c1D45F">𝑟</mjx-c></mjx-mi></mjx-script></mjx-msub><mjx-mo space="4" data-latex="="><mjx-c class="mjx-c3D">=</mjx-c></mjx-mo><mjx-mi space="4" data-latex="W"><mjx-c class="mjx-c1D44A">𝑊</mjx-c></mjx-mi><mjx-mo data-latex="("><mjx-c class="mjx-c28">(</mjx-c></mjx-mo><mjx-mi data-latex="k"><mjx-c class="mjx-c1D458">𝑘</mjx-c></mjx-mi><mjx-mo data-latex=")"><mjx-c class="mjx-c29">)</mjx-c></mjx-mo><mjx-mo data-latex="["><mjx-c class="mjx-c5B">[</mjx-c></mjx-mo><mjx-msub data-latex="\varepsilon_r"><mjx-mi data-latex="\varepsilon"><mjx-c class="mjx-c1D700">𝜀</mjx-c></mjx-mi><mjx-script style="vertical-align: -0.15em;"><mjx-mi size="s" data-latex="r"><mjx-c class="mjx-c1D45F">𝑟</mjx-c></mjx-mi></mjx-script></mjx-msub><mjx-mo data-latex="]"><mjx-c class="mjx-c5D">]</mjx-c></mjx-mo><mjx-mo data-latex=","><mjx-c class="mjx-c2C">,</mjx-c></mjx-mo><mjx-mstyle data-latex="\qquad"><mjx-mspace style="width: 2em;"></mjx-mspace></mjx-mstyle><mjx-msub space="2" data-latex="\pi_r"><mjx-mi data-latex="\pi"><mjx-c class="mjx-c1D70B">𝜋</mjx-c></mjx-mi><mjx-script style="vertical-align: -0.15em; margin-left: -0.003em;"><mjx-mi size="s" data-latex="r"><mjx-c class="mjx-c1D45F">𝑟</mjx-c></mjx-mi></mjx-script></mjx-msub><mjx-mo space="4" data-latex="="><mjx-c class="mjx-c3D">=</mjx-c></mjx-mo><mjx-msub space="4" data-latex="\varepsilon_r"><mjx-mi data-latex="\varepsilon"><mjx-c class="mjx-c1D700">𝜀</mjx-c></mjx-mi><mjx-script style="vertical-align: -0.15em;"><mjx-mi size="s" data-latex="r"><mjx-c class="mjx-c1D45F">𝑟</mjx-c></mjx-mi></mjx-script></mjx-msub><mjx-mo space="3" data-latex="-"><mjx-c class="mjx-c2212">−</mjx-c></mjx-mo><mjx-mn space="3" data-latex="1"><mjx-c class="mjx-c31">1</mjx-c></mjx-mn><mjx-mo data-latex=","><mjx-c class="mjx-c2C">,</mjx-c></mjx-mo></mjx-math></mjx-container></div></div><div class="el-p"><p dir="auto">其中 <span class="math math-inline is-loaded"><mjx-container class="MathJax" jax="CHTML" overflow="overflow"><mjx-math data-latex="W(k)" class="TEX-N"><mjx-mi data-latex="W"><mjx-c class="mjx-c1D44A">𝑊</mjx-c></mjx-mi><mjx-mo data-latex="("><mjx-c class="mjx-c28">(</mjx-c></mjx-mo><mjx-mi data-latex="k"><mjx-c class="mjx-c1D458">𝑘</mjx-c></mjx-mi><mjx-mo data-latex=")"><mjx-c class="mjx-c29">)</mjx-c></mjx-mo></mjx-math></mjx-container></span> 是剩余域为 <span class="math math-inline is-loaded"><mjx-container class="MathJax" jax="CHTML" overflow="overflow"><mjx-math data-latex="k" class="TEX-N"><mjx-mi data-latex="k"><mjx-c class="mjx-c1D458">𝑘</mjx-c></mjx-mi></mjx-math></mjx-container></span> 的 Witt 向量环，<span class="math math-inline is-loaded"><mjx-container class="MathJax" jax="CHTML" overflow="overflow"><mjx-math data-latex="\varepsilon_r" class="TEX-N"><mjx-msub data-latex="\varepsilon_r"><mjx-mi data-latex="\varepsilon"><mjx-c class="mjx-c1D700">𝜀</mjx-c></mjx-mi><mjx-script style="vertical-align: -0.15em;"><mjx-mi size="s" data-latex="r"><mjx-c class="mjx-c1D45F">𝑟</mjx-c></mjx-mi></mjx-script></mjx-msub></mjx-math></mjx-container></span> 是本原 <span class="math math-inline is-loaded"><mjx-container class="MathJax" jax="CHTML" overflow="overflow"><mjx-math data-latex="p^r" class="TEX-N"><mjx-msup data-latex="p^r"><mjx-mi data-latex="p"><mjx-c class="mjx-c1D45D">𝑝</mjx-c></mjx-mi><mjx-script style="vertical-align: 0.363em;"><mjx-mi size="s" data-latex="r"><mjx-c class="mjx-c1D45F">𝑟</mjx-c></mjx-mi></mjx-script></mjx-msup></mjx-math></mjx-container></span> 次单位根。先在特征零的分式域中构造量子算子，最后模 <span class="math math-inline is-loaded"><mjx-container class="MathJax" jax="CHTML" overflow="overflow"><mjx-math data-latex="\pi_r" class="TEX-N"><mjx-msub data-latex="\pi_r"><mjx-mi data-latex="\pi"><mjx-c class="mjx-c1D70B">𝜋</mjx-c></mjx-mi><mjx-script style="vertical-align: -0.15em; margin-left: -0.003em;"><mjx-mi size="s" data-latex="r"><mjx-c class="mjx-c1D45F">𝑟</mjx-c></mjx-mi></mjx-script></mjx-msub></mjx-math></mjx-container></span> 回到特征 <span class="math math-inline is-loaded"><mjx-container class="MathJax" jax="CHTML" overflow="overflow"><mjx-math data-latex="p" class="TEX-N"><mjx-mi data-latex="p"><mjx-c class="mjx-c1D45D">𝑝</mjx-c></mjx-mi></mjx-math></mjx-container></span>。量子整数在第 <span class="math math-inline is-loaded"><mjx-container class="MathJax" jax="CHTML" overflow="overflow"><mjx-math data-latex="p^r" class="TEX-N"><mjx-msup data-latex="p^r"><mjx-mi data-latex="p"><mjx-c class="mjx-c1D45D">𝑝</mjx-c></mjx-mi><mjx-script style="vertical-align: 0.363em;"><mjx-mi size="s" data-latex="r"><mjx-c class="mjx-c1D45F">𝑟</mjx-c></mjx-mi></mjx-script></mjx-msup></mjx-math></mjx-container></span> 阶第一次出现所需的零，而 <span class="math math-inline is-loaded"><mjx-container class="MathJax" jax="CHTML" overflow="overflow"><mjx-math data-latex="r&gt;1" breakable="true" class="TEX-N"><mjx-mi data-latex="r"><mjx-c class="mjx-c1D45F">𝑟</mjx-c></mjx-mi><mjx-break size="4"> </mjx-break><mjx-mo data-latex="&gt;"><mjx-c class="mjx-c3E">&gt;</mjx-c></mjx-mo><mjx-mn space="4" data-latex="1"><mjx-c class="mjx-c31">1</mjx-c></mjx-mn></mjx-math></mjx-container></span> 时第 <span class="math math-inline is-loaded"><mjx-container class="MathJax" jax="CHTML" overflow="overflow"><mjx-math data-latex="p" class="TEX-N"><mjx-mi data-latex="p"><mjx-c class="mjx-c1D45D">𝑝</mjx-c></mjx-mi></mjx-math></mjx-container></span> 阶尚未归零。这为“保留所有低于 <span class="math math-inline is-loaded"><mjx-container class="MathJax" jax="CHTML" overflow="overflow"><mjx-math data-latex="p^r" class="TEX-N"><mjx-msup data-latex="p^r"><mjx-mi data-latex="p"><mjx-c class="mjx-c1D45D">𝑝</mjx-c></mjx-mi><mjx-script style="vertical-align: 0.363em;"><mjx-mi size="s" data-latex="r"><mjx-c class="mjx-c1D45F">𝑟</mjx-c></mjx-mi></mjx-script></mjx-msup></mjx-math></mjx-container></span> 的除幂、在 <span class="math math-inline is-loaded"><mjx-container class="MathJax" jax="CHTML" overflow="overflow"><mjx-math data-latex="p^r" class="TEX-N"><mjx-msup data-latex="p^r"><mjx-mi data-latex="p"><mjx-c class="mjx-c1D45D">𝑝</mjx-c></mjx-mi><mjx-script style="vertical-align: 0.363em;"><mjx-mi size="s" data-latex="r"><mjx-c class="mjx-c1D45F">𝑟</mjx-c></mjx-mi></mjx-script></mjx-msup></mjx-math></mjx-container></span> 处截断”提供了入口。分母在分式域非零还不够，正文随后必须证明指定格与全部算子整；这正是其构造的主要工作。</p></div><div class="el-p"><p dir="auto">扰动深度记为 <span class="math math-inline is-loaded"><mjx-container class="MathJax" jax="CHTML" overflow="overflow"><mjx-math data-latex="M&gt;p^{r-1}" breakable="true" class="TEX-N"><mjx-mi data-latex="M"><mjx-c class="mjx-c1D440">𝑀</mjx-c></mjx-mi><mjx-break size="4"> </mjx-break><mjx-mo data-latex="&gt;"><mjx-c class="mjx-c3E">&gt;</mjx-c></mjx-mo><mjx-msup space="4" data-latex="p^{r-1}"><mjx-mi data-latex="p"><mjx-c class="mjx-c1D45D">𝑝</mjx-c></mjx-mi><mjx-script style="vertical-align: 0.363em;"><mjx-texatom size="s" data-latex="{r-1}" texclass="ORD"><mjx-mi data-latex="r"><mjx-c class="mjx-c1D45F">𝑟</mjx-c></mjx-mi><mjx-mo data-latex="-"><mjx-c class="mjx-c2212">−</mjx-c></mjx-mo><mjx-mn data-latex="1"><mjx-c class="mjx-c31">1</mjx-c></mjx-mn></mjx-texatom></mjx-script></mjx-msup></mjx-math></mjx-container></span>，其数位权重为</p></div><div class="el-div"><div class="math math-block is-loaded"><mjx-container class="MathJax" jax="CHTML" overflow="scroll" display="true" data-editing-suite-math-overflow=""><mjx-math data-latex="w_h=(p-1)p^{h-1}\quad(1\le h&lt;r),\qquad
+w_r=M-p^{r-1}." display="true" class="TEX-N"><mjx-msub data-latex="w_h"><mjx-mi data-latex="w"><mjx-c class="mjx-c1D464">𝑤</mjx-c></mjx-mi><mjx-script style="vertical-align: -0.15em;"><mjx-mi size="s" data-latex="h"><mjx-c class="mjx-c210E">ℎ</mjx-c></mjx-mi></mjx-script></mjx-msub><mjx-mo space="4" data-latex="="><mjx-c class="mjx-c3D">=</mjx-c></mjx-mo><mjx-mo space="4" data-latex="("><mjx-c class="mjx-c28">(</mjx-c></mjx-mo><mjx-mi data-latex="p"><mjx-c class="mjx-c1D45D">𝑝</mjx-c></mjx-mi><mjx-mo space="3" data-latex="-"><mjx-c class="mjx-c2212">−</mjx-c></mjx-mo><mjx-mn space="3" data-latex="1"><mjx-c class="mjx-c31">1</mjx-c></mjx-mn><mjx-mo data-latex=")"><mjx-c class="mjx-c29">)</mjx-c></mjx-mo><mjx-msup data-latex="p^{h-1}"><mjx-mi data-latex="p"><mjx-c class="mjx-c1D45D">𝑝</mjx-c></mjx-mi><mjx-script style="vertical-align: 0.413em;"><mjx-texatom size="s" data-latex="{h-1}" texclass="ORD"><mjx-mi data-latex="h"><mjx-c class="mjx-c210E">ℎ</mjx-c></mjx-mi><mjx-mo data-latex="-"><mjx-c class="mjx-c2212">−</mjx-c></mjx-mo><mjx-mn data-latex="1"><mjx-c class="mjx-c31">1</mjx-c></mjx-mn></mjx-texatom></mjx-script></mjx-msup><mjx-mstyle data-latex="\quad"><mjx-mspace style="width: 1em;"></mjx-mspace></mjx-mstyle><mjx-mo data-latex="("><mjx-c class="mjx-c28">(</mjx-c></mjx-mo><mjx-mn data-latex="1"><mjx-c class="mjx-c31">1</mjx-c></mjx-mn><mjx-mo space="4" data-latex="\le"><mjx-c class="mjx-c2264">≤</mjx-c></mjx-mo><mjx-mi space="4" data-latex="h"><mjx-c class="mjx-c210E">ℎ</mjx-c></mjx-mi><mjx-mo space="4" data-latex="&lt;"><mjx-c class="mjx-c3C">&lt;</mjx-c></mjx-mo><mjx-mi space="4" data-latex="r"><mjx-c class="mjx-c1D45F">𝑟</mjx-c></mjx-mi><mjx-mo data-latex=")"><mjx-c class="mjx-c29">)</mjx-c></mjx-mo><mjx-mo data-latex=","><mjx-c class="mjx-c2C">,</mjx-c></mjx-mo><mjx-mstyle data-latex="\qquad"><mjx-mspace style="width: 2em;"></mjx-mspace></mjx-mstyle><mjx-msub space="2" data-latex="w_r"><mjx-mi data-latex="w"><mjx-c class="mjx-c1D464">𝑤</mjx-c></mjx-mi><mjx-script style="vertical-align: -0.15em;"><mjx-mi size="s" data-latex="r"><mjx-c class="mjx-c1D45F">𝑟</mjx-c></mjx-mi></mjx-script></mjx-msub><mjx-mo space="4" data-latex="="><mjx-c class="mjx-c3D">=</mjx-c></mjx-mo><mjx-mi space="4" data-latex="M"><mjx-c class="mjx-c1D440">𝑀</mjx-c></mjx-mi><mjx-mo space="3" data-latex="-"><mjx-c class="mjx-c2212">−</mjx-c></mjx-mo><mjx-msup space="3" data-latex="p^{r-1}"><mjx-mi data-latex="p"><mjx-c class="mjx-c1D45D">𝑝</mjx-c></mjx-mi><mjx-script style="vertical-align: 0.413em;"><mjx-texatom size="s" data-latex="{r-1}" texclass="ORD"><mjx-mi data-latex="r"><mjx-c class="mjx-c1D45F">𝑟</mjx-c></mjx-mi><mjx-mo data-latex="-"><mjx-c class="mjx-c2212">−</mjx-c></mjx-mo><mjx-mn data-latex="1"><mjx-c class="mjx-c31">1</mjx-c></mjx-mn></mjx-texatom></mjx-script></mjx-msup><mjx-mo data-latex="."><mjx-c class="mjx-c2E">.</mjx-c></mjx-mo></mjx-math></mjx-container></div></div><div class="el-p"><p dir="auto">这里 <span class="math math-inline is-loaded"><mjx-container class="MathJax" jax="CHTML" overflow="overflow"><mjx-math data-latex="M" class="TEX-N"><mjx-mi data-latex="M"><mjx-c class="mjx-c1D440">𝑀</mjx-c></mjx-mi></mjx-math></mjx-container></span> 是参数深度，本书的 <span class="math math-inline is-loaded"><mjx-container class="MathJax" jax="CHTML" overflow="overflow"><mjx-math data-latex="e" class="TEX-N"><mjx-mi data-latex="e"><mjx-c class="mjx-c1D452">𝑒</mjx-c></mjx-mi></mjx-math></mjx-container></span> 是分歧指数，二者不是同一变量。圆分稿取最小深度 <span class="math math-inline is-loaded"><mjx-container class="MathJax" jax="CHTML" overflow="overflow"><mjx-math data-latex="M=p^{r-1}+1" breakable="true" class="TEX-N"><mjx-mi data-latex="M"><mjx-c class="mjx-c1D440">𝑀</mjx-c></mjx-mi><mjx-break size="4"> </mjx-break><mjx-mo data-latex="="><mjx-c class="mjx-c3D">=</mjx-c></mjx-mo><mjx-msup space="4" data-latex="p^{r-1}"><mjx-mi data-latex="p"><mjx-c class="mjx-c1D45D">𝑝</mjx-c></mjx-mi><mjx-script style="vertical-align: 0.363em;"><mjx-texatom size="s" data-latex="{r-1}" texclass="ORD"><mjx-mi data-latex="r"><mjx-c class="mjx-c1D45F">𝑟</mjx-c></mjx-mi><mjx-mo data-latex="-"><mjx-c class="mjx-c2212">−</mjx-c></mjx-mo><mjx-mn data-latex="1"><mjx-c class="mjx-c31">1</mjx-c></mjx-mn></mjx-texatom></mjx-script></mjx-msup><mjx-break size="3"> </mjx-break><mjx-mo data-latex="+"><mjx-c class="mjx-c2B">+</mjx-c></mjx-mo><mjx-mn space="3" data-latex="1"><mjx-c class="mjx-c31">1</mjx-c></mjx-mn></mjx-math></mjx-container></span> 时，最后一位权重为1；较低数位的权重仍随 <span class="math math-inline is-loaded"><mjx-container class="MathJax" jax="CHTML" overflow="overflow"><mjx-math data-latex="h" class="TEX-N"><mjx-mi data-latex="h"><mjx-c class="mjx-c210E">ℎ</mjx-c></mjx-mi></mjx-math></mjx-container></span> 改变。</p></div><div class="el-p"><p dir="auto"><strong>已经具体核验的部分。</strong></p></div><div class="el-ul"><ul>
+<li data-line="0" dir="auto">完整版第10–12、25–29、100–106页的圆分差赋值、Gaussian 整值性和三类局部指数，可由区间内 <span class="math math-inline is-loaded"><mjx-container class="MathJax" jax="CHTML" overflow="overflow"><mjx-math data-latex="p^h" class="TEX-N"><mjx-msup data-latex="p^h"><mjx-mi data-latex="p"><mjx-c class="mjx-c1D45D">𝑝</mjx-c></mjx-mi><mjx-script style="vertical-align: 0.363em;"><mjx-mi size="s" data-latex="h"><mjx-c class="mjx-c210E">ℎ</mjx-c></mjx-mi></mjx-script></mjx-msup></mjx-math></mjx-container></span> 倍数的计数逐项推出。偶根使用严格越过当前最高权余数的条件；非各向同性奇根的偶、奇两串分别用严格和非严格阈值；各向同性根只有一个可能消失的标量。这三种情况不能合并成同一个 <span class="math math-inline is-loaded"><mjx-container class="MathJax" jax="CHTML" overflow="overflow"><mjx-math data-latex="d" class="TEX-N"><mjx-mi data-latex="d"><mjx-c class="mjx-c1D451">𝑑</mjx-c></mjx-mi></mjx-math></mjx-container></span>。本次另外核对了负整数参数、零值及截断边界，未发现矛盾。</li>
+<li data-line="1" dir="auto">第13–15页从同一参数链得到长度可加和精确末层的推理是有效的。对 <span class="math math-inline is-loaded"><mjx-container class="MathJax" jax="CHTML" overflow="overflow"><mjx-math data-latex="f:M_0\to M_1" breakable="true" class="TEX-N"><mjx-mi data-latex="f"><mjx-c class="mjx-c1D453">𝑓</mjx-c></mjx-mi><mjx-break size="4"> </mjx-break><mjx-mo data-latex=":"><mjx-c class="mjx-c3A">:</mjx-c></mjx-mo><mjx-msub space="4" data-latex="M_0"><mjx-mi data-latex="M"><mjx-c class="mjx-c1D440">𝑀</mjx-c></mjx-mi><mjx-script style="vertical-align: -0.15em; margin-left: -0.081em;"><mjx-mn size="s" data-latex="0"><mjx-c class="mjx-c30">0</mjx-c></mjx-mn></mjx-script></mjx-msub><mjx-break size="4"> </mjx-break><mjx-mo data-latex="\to"><mjx-c class="mjx-c2192">→</mjx-c></mjx-mo><mjx-msub space="4" data-latex="M_1"><mjx-mi data-latex="M"><mjx-c class="mjx-c1D440">𝑀</mjx-c></mjx-mi><mjx-script style="vertical-align: -0.15em; margin-left: -0.081em;"><mjx-mn size="s" data-latex="1"><mjx-c class="mjx-c31">1</mjx-c></mjx-mn></mjx-script></mjx-msub></mjx-math></mjx-container></span>、<span class="math math-inline is-loaded"><mjx-container class="MathJax" jax="CHTML" overflow="overflow"><mjx-math data-latex="g:M_1\to M_2" breakable="true" class="TEX-N"><mjx-mi data-latex="g"><mjx-c class="mjx-c1D454">𝑔</mjx-c></mjx-mi><mjx-break size="4"> </mjx-break><mjx-mo data-latex=":"><mjx-c class="mjx-c3A">:</mjx-c></mjx-mo><mjx-msub space="4" data-latex="M_1"><mjx-mi data-latex="M"><mjx-c class="mjx-c1D440">𝑀</mjx-c></mjx-mi><mjx-script style="vertical-align: -0.15em; margin-left: -0.081em;"><mjx-mn size="s" data-latex="1"><mjx-c class="mjx-c31">1</mjx-c></mjx-mn></mjx-script></mjx-msub><mjx-break size="4"> </mjx-break><mjx-mo data-latex="\to"><mjx-c class="mjx-c2192">→</mjx-c></mjx-mo><mjx-msub space="4" data-latex="M_2"><mjx-mi data-latex="M"><mjx-c class="mjx-c1D440">𝑀</mjx-c></mjx-mi><mjx-script style="vertical-align: -0.15em; margin-left: -0.081em;"><mjx-mn size="s" data-latex="2"><mjx-c class="mjx-c32">2</mjx-c></mjx-mn></mjx-script></mjx-msub></mjx-math></mjx-container></span>，泛型可逆及整格无挠给出真实短正合列
+<div class="math math-block is-loaded"><mjx-container class="MathJax" jax="CHTML" overflow="scroll" display="true" data-editing-suite-math-overflow=""><mjx-math data-latex="0\longrightarrow\operatorname{coker}f
+\longrightarrow\operatorname{coker}(gf)
+\longrightarrow\operatorname{coker}g
+\longrightarrow0." display="true" class="TEX-N"><mjx-mn data-latex="0"><mjx-c class="mjx-c30">0</mjx-c></mjx-mn><mjx-mo space="4" data-latex="\longrightarrow"><mjx-c class="mjx-c27F6">⟶</mjx-c></mjx-mo><mjx-mi space="4" data-latex="\operatorname{coker}"><mjx-c class="mjx-c63" noic="true" style="padding-top: 0.694em;">c</mjx-c><mjx-c class="mjx-c6F" noic="true" style="padding-top: 0.694em;">o</mjx-c><mjx-c class="mjx-c6B" noic="true" style="padding-top: 0.694em;">k</mjx-c><mjx-c class="mjx-c65" noic="true" style="padding-top: 0.694em;">e</mjx-c><mjx-c class="mjx-c72" style="padding-top: 0.694em;">r</mjx-c></mjx-mi><mjx-mo><mjx-c class="mjx-c2061">⁡</mjx-c></mjx-mo><mjx-mi space="2" data-latex="f"><mjx-c class="mjx-c1D453">𝑓</mjx-c></mjx-mi><mjx-mo space="4" data-latex="\longrightarrow"><mjx-c class="mjx-c27F6">⟶</mjx-c></mjx-mo><mjx-mi space="4" data-latex="\operatorname{coker}"><mjx-c class="mjx-c63" noic="true" style="padding-top: 0.694em;">c</mjx-c><mjx-c class="mjx-c6F" noic="true" style="padding-top: 0.694em;">o</mjx-c><mjx-c class="mjx-c6B" noic="true" style="padding-top: 0.694em;">k</mjx-c><mjx-c class="mjx-c65" noic="true" style="padding-top: 0.694em;">e</mjx-c><mjx-c class="mjx-c72" style="padding-top: 0.694em;">r</mjx-c></mjx-mi><mjx-mo><mjx-c class="mjx-c2061">⁡</mjx-c></mjx-mo><mjx-mo data-latex="("><mjx-c class="mjx-c28">(</mjx-c></mjx-mo><mjx-mi data-latex="g"><mjx-c class="mjx-c1D454">𝑔</mjx-c></mjx-mi><mjx-mi data-latex="f"><mjx-c class="mjx-c1D453">𝑓</mjx-c></mjx-mi><mjx-mo data-latex=")"><mjx-c class="mjx-c29">)</mjx-c></mjx-mo><mjx-mo space="4" data-latex="\longrightarrow"><mjx-c class="mjx-c27F6">⟶</mjx-c></mjx-mo><mjx-mi space="4" data-latex="\operatorname{coker}"><mjx-c class="mjx-c63" noic="true" style="padding-top: 0.694em;">c</mjx-c><mjx-c class="mjx-c6F" noic="true" style="padding-top: 0.694em;">o</mjx-c><mjx-c class="mjx-c6B" noic="true" style="padding-top: 0.694em;">k</mjx-c><mjx-c class="mjx-c65" noic="true" style="padding-top: 0.694em;">e</mjx-c><mjx-c class="mjx-c72" style="padding-top: 0.694em;">r</mjx-c></mjx-mi><mjx-mo><mjx-c class="mjx-c2061">⁡</mjx-c></mjx-mo><mjx-mi space="2" data-latex="g"><mjx-c class="mjx-c1D454">𝑔</mjx-c></mjx-mi><mjx-mo space="4" data-latex="\longrightarrow"><mjx-c class="mjx-c27F6">⟶</mjx-c></mjx-mo><mjx-mn space="4" data-latex="0."><mjx-c class="mjx-c30" noic="true" style="padding-top: 0.666em;">0</mjx-c><mjx-c class="mjx-c2E" style="padding-top: 0.666em;">.</mjx-c></mjx-mn></mjx-math></mjx-container></div>
+这一步使用同一个 <span class="math math-inline is-loaded"><mjx-container class="MathJax" jax="CHTML" overflow="overflow"><mjx-math data-latex="M_1" class="TEX-N"><mjx-msub data-latex="M_1"><mjx-mi data-latex="M"><mjx-c class="mjx-c1D440">𝑀</mjx-c></mjx-mi><mjx-script style="vertical-align: -0.15em; margin-left: -0.081em;"><mjx-mn size="s" data-latex="1"><mjx-c class="mjx-c31">1</mjx-c></mjx-mn></mjx-script></mjx-msub></mjx-math></mjx-container></span>，不要求各步 Smith 基相同。正反复合为标量、反链约化非零时，最大 Smith 指数及末层的论证也成立。它计算的是层和与端点，不是全部中间层的组成结构。</li>
+<li data-line="9" dir="auto">第97–103页的共同三角格论证有明确的数学内容。四个反射适应 PBW 分解和完整秩一两向换序一旦成立，确实可推出同一个整代数及共享诱导模，而不是只得到“各个 Borel 分别有一张整基”。第65–76页继续解释了共同坐标格和精确对偶运输的来源。这里需要把一般机制与具体类型输入分开核对，不能把前者的条件直接当成后者已经成立的证明。</li>
+<li data-line="10" dir="auto">第52–56页的例外根有限首项资料已经作了新的重算：从给定根集出发，得到 <span class="math math-inline is-loaded"><mjx-container class="MathJax" jax="CHTML" overflow="overflow"><mjx-math data-latex="F(4)" class="TEX-N"><mjx-mi data-latex="F"><mjx-c class="mjx-c1D439">𝐹</mjx-c></mjx-mi><mjx-mo data-latex="("><mjx-c class="mjx-c28">(</mjx-c></mjx-mo><mjx-mn data-latex="4"><mjx-c class="mjx-c34">4</mjx-c></mjx-mn><mjx-mo data-latex=")"><mjx-c class="mjx-c29">)</mjx-c></mjx-mo></mjx-math></mjx-container></span> 的576个根室、6类代表，以及 <span class="math math-inline is-loaded"><mjx-container class="MathJax" jax="CHTML" overflow="overflow"><mjx-math data-latex="G(3)" class="TEX-N"><mjx-mi data-latex="G"><mjx-c class="mjx-c1D43A">𝐺</mjx-c></mjx-mi><mjx-mo data-latex="("><mjx-c class="mjx-c28">(</mjx-c></mjx-mo><mjx-mn data-latex="3"><mjx-c class="mjx-c33">3</mjx-c></mjx-mn><mjx-mo data-latex=")"><mjx-c class="mjx-c29">)</mjx-c></mjx-mo></mjx-math></mjx-container></span> 的96个根室、4类代表；全部代表的188个约化正根首项（计入 <span class="math math-inline is-loaded"><mjx-container class="MathJax" jax="CHTML" overflow="overflow"><mjx-math data-latex="D(2,1;a)" class="TEX-N"><mjx-mi data-latex="D"><mjx-c class="mjx-c1D437">𝐷</mjx-c></mjx-mi><mjx-mo data-latex="("><mjx-c class="mjx-c28">(</mjx-c></mjx-mo><mjx-mn data-latex="2"><mjx-c class="mjx-c32">2</mjx-c></mjx-mn><mjx-mo data-latex=","><mjx-c class="mjx-c2C">,</mjx-c></mjx-mo><mjx-mn space="2" data-latex="1"><mjx-c class="mjx-c31">1</mjx-c></mjx-mn><mjx-mo data-latex=";"><mjx-c class="mjx-c3B">;</mjx-c></mjx-mo><mjx-mi space="2" data-latex="a"><mjx-c class="mjx-c1D44E">𝑎</mjx-c></mjx-mi><mjx-mo data-latex=")"><mjx-c class="mjx-c29">)</mjx-c></mjx-mo></mjx-math></mjx-container></span> 的4类、28根）符合所需单位因子条件。<span class="math math-inline is-loaded"><mjx-container class="MathJax" jax="CHTML" overflow="overflow"><mjx-math data-latex="D(2,1;a)" class="TEX-N"><mjx-mi data-latex="D"><mjx-c class="mjx-c1D437">𝐷</mjx-c></mjx-mi><mjx-mo data-latex="("><mjx-c class="mjx-c28">(</mjx-c></mjx-mo><mjx-mn data-latex="2"><mjx-c class="mjx-c32">2</mjx-c></mjx-mn><mjx-mo data-latex=","><mjx-c class="mjx-c2C">,</mjx-c></mjx-mo><mjx-mn space="2" data-latex="1"><mjx-c class="mjx-c31">1</mjx-c></mjx-mn><mjx-mo data-latex=";"><mjx-c class="mjx-c3B">;</mjx-c></mjx-mo><mjx-mi space="2" data-latex="a"><mjx-c class="mjx-c1D44E">𝑎</mjx-c></mjx-mi><mjx-mo data-latex=")"><mjx-c class="mjx-c29">)</mjx-c></mjx-mo></mjx-math></mjx-container></span> 的印刷首项多项式在对齐节点排列后亦逐项吻合。这个核验支持有限根数据，不单独证明无限次数的整性或整个参数链。<sup class="editing-suite-sidenote-reference" data-sidenote-instance="reading-249"><a class="footnote-ref editing-suite-sidenote-reference-link" aria-label="边注 1" tabindex="-1">1</a></sup><span class="editing-suite-sidenote-anchor editing-suite-reading-sidenote-anchor" data-sidenote-instance="reading-249" data-sidenote-number="1"><template class="mathcraft-export-sidenote-template"><aside class="editing-suite-sidenote-margin" data-sidenote-number="1" role="note" aria-label="边注 1" tabindex="-1"><span class="editing-suite-sidenote-number">1</span><div class="editing-suite-sidenote-content">【辅助核验】本项目重新编写的<a data-tooltip-position="top" aria-label="D:/GitHub/albus-research/%E8%AE%A1%E7%AE%97%E8%84%9A%E6%9C%AC/%E5%9C%86%E5%88%86%E7%A8%BF%E4%BE%8B%E5%A4%96%E6%A0%B9%E9%A6%96%E9%A1%B9%E6%A0%B8%E9%AA%8C.py" rel="noopener nofollow" class="external-link" href="D:/GitHub/albus-research/%E8%AE%A1%E7%AE%97%E8%84%9A%E6%9C%AC/%E5%9C%86%E5%88%86%E7%A8%BF%E4%BE%8B%E5%A4%96%E6%A0%B9%E9%A6%96%E9%A1%B9%E6%A0%B8%E9%AA%8C.py" target="_blank">圆分稿例外根首项核验.py</a>及<a data-tooltip-position="top" aria-label="D:/GitHub/albus-research/%E8%AE%A1%E7%AE%97%E8%84%9A%E6%9C%AC/%E5%9C%86%E5%88%86%E7%A8%BF%E5%8F%82%E6%95%B0%E5%9E%8B%E9%A6%96%E9%A1%B9%E6%A0%B8%E9%AA%8C.py" rel="noopener nofollow" class="external-link" href="D:/GitHub/albus-research/%E8%AE%A1%E7%AE%97%E8%84%9A%E6%9C%AC/%E5%9C%86%E5%88%86%E7%A8%BF%E5%8F%82%E6%95%B0%E5%9E%8B%E9%A6%96%E9%A1%B9%E6%A0%B8%E9%AA%8C.py" target="_blank">圆分稿参数型首项核验.py</a>不调用对方脚本。参数型使用已证次数界 <span class="math math-inline is-loaded"><mjx-container class="MathJax" jax="CHTML" overflow="overflow"><mjx-math data-latex="\operatorname{ht}(\beta)-1" breakable="true" class="TEX-N"><mjx-mi data-latex="\operatorname{ht}"><mjx-c class="mjx-c68" noic="true" style="padding-top: 0.694em;">h</mjx-c><mjx-c class="mjx-c74" style="padding-top: 0.694em;">t</mjx-c></mjx-mi><mjx-mo><mjx-c class="mjx-c2061">⁡</mjx-c></mjx-mo><mjx-mo data-latex="("><mjx-c class="mjx-c28">(</mjx-c></mjx-mo><mjx-mi data-latex="\beta"><mjx-c class="mjx-c1D6FD">𝛽</mjx-c></mjx-mi><mjx-mo data-latex=")"><mjx-c class="mjx-c29">)</mjx-c></mjx-mo><mjx-break size="3"> </mjx-break><mjx-mo data-latex="-"><mjx-c class="mjx-c2212">−</mjx-c></mjx-mo><mjx-mn space="3" data-latex="1"><mjx-c class="mjx-c31">1</mjx-c></mjx-mn></mjx-math></mjx-container></span> 和足够多个精确有理点作插值，再分解全部首项；不是用有限样本猜一般参数结论。</div></aside></template></span></li>
+</ul></div><div class="el-p"><p dir="auto">标准来源也须按实际约定使用。Angiono–Yamane 的 <em>The R-matrix of quantum doubles of Nichols algebras of diagonal type</em>，<a data-tooltip-position="top" aria-label="https://arxiv.org/html/1304.5752v2" rel="noopener nofollow" class="external-link" href="https://arxiv.org/html/1304.5752v2" target="_blank">arXiv:1304.5752v2</a>，Proposition 4.6给出适应 PBW 基的正交公式；其 Lemma 4.7另写了一个具体根范数符号。圆分稿第72–74页没有直接照抄后者，而是从独立 Cartan 单项式的系数求范数。按两文明确的简单配对约定，长度1根串的四项计算确实支持圆分稿给出的修正。该修正有可检查的论证，不能仅因与文献印刷式不同就否定；同样也不应写成作者已经发布的正式勘误。</p></div><div class="el-p"><p dir="auto"><strong>仍需保留的审查界限。</strong> 主定理 A 的关键依赖是“有限坐标整格—实际 Nichols 商—相邻根部的精确对偶—共同整代数—完整特殊化”。PDF 对这些环节给出了比仅假设参数族存在更充分的证明。当前核验尚未逐型独立复算全部正负换序及全部高阶 Cartan、根算子的特殊化，也没有取得对方所称独立审查的原始记录。因此适当结论是：这是一条有实质证明、值得继续核定的完整候选路线；全范围定理的最终认证仍有具体工作，不能用“所有内容都正确”概括。</p></div><div class="el-p"><p dir="auto">需要特别注意三个范围问题。第一，<span class="math math-inline is-loaded"><mjx-container class="MathJax" jax="CHTML" overflow="overflow"><mjx-math data-latex="F,G" class="TEX-N"><mjx-mi data-latex="F"><mjx-c class="mjx-c1D439">𝐹</mjx-c></mjx-mi><mjx-mo data-latex=","><mjx-c class="mjx-c2C">,</mjx-c></mjx-mo><mjx-mi space="2" data-latex="G"><mjx-c class="mjx-c1D43A">𝐺</mjx-c></mjx-mi></mjx-math></mjx-container></span> 型在该稿采用 <span class="math math-inline is-loaded"><mjx-container class="MathJax" jax="CHTML" overflow="overflow"><mjx-math data-latex="p&gt;15" breakable="true" class="TEX-N"><mjx-mi data-latex="p"><mjx-c class="mjx-c1D45D">𝑝</mjx-c></mjx-mi><mjx-break size="4"> </mjx-break><mjx-mo data-latex="&gt;"><mjx-c class="mjx-c3E">&gt;</mjx-c></mjx-mo><mjx-mn space="4" data-latex="15"><mjx-c class="mjx-c31" noic="true" style="padding-top: 0.666em;">1</mjx-c><mjx-c class="mjx-c35" style="padding-top: 0.666em;">5</mjx-c></mjx-mn></mjx-math></mjx-container></span>，不能只写统一的 <span class="math math-inline is-loaded"><mjx-container class="MathJax" jax="CHTML" overflow="overflow"><mjx-math data-latex="p&gt;2" breakable="true" class="TEX-N"><mjx-mi data-latex="p"><mjx-c class="mjx-c1D45D">𝑝</mjx-c></mjx-mi><mjx-break size="4"> </mjx-break><mjx-mo data-latex="&gt;"><mjx-c class="mjx-c3E">&gt;</mjx-c></mjx-mo><mjx-mn space="4" data-latex="2"><mjx-c class="mjx-c32">2</mjx-c></mjx-mn></mjx-math></mjx-container></span>。第二，<span class="math math-inline is-loaded"><mjx-container class="MathJax" jax="CHTML" overflow="overflow"><mjx-math data-latex="D(2,1;a)" class="TEX-N"><mjx-mi data-latex="D"><mjx-c class="mjx-c1D437">𝐷</mjx-c></mjx-mi><mjx-mo data-latex="("><mjx-c class="mjx-c28">(</mjx-c></mjx-mo><mjx-mn data-latex="2"><mjx-c class="mjx-c32">2</mjx-c></mjx-mn><mjx-mo data-latex=","><mjx-c class="mjx-c2C">,</mjx-c></mjx-mo><mjx-mn space="2" data-latex="1"><mjx-c class="mjx-c31">1</mjx-c></mjx-mn><mjx-mo data-latex=";"><mjx-c class="mjx-c3B">;</mjx-c></mjx-mo><mjx-mi space="2" data-latex="a"><mjx-c class="mjx-c1D44E">𝑎</mjx-c></mjx-mi><mjx-mo data-latex=")"><mjx-c class="mjx-c29">)</mjx-c></mjx-mo></mjx-math></mjx-container></span> 使用已固定的合法整数提升及完整环面识别；它不覆盖任意 <span class="math math-inline is-loaded"><mjx-container class="MathJax" jax="CHTML" overflow="overflow"><mjx-math data-latex="a\in k" breakable="true" class="TEX-N"><mjx-mi data-latex="a"><mjx-c class="mjx-c1D44E">𝑎</mjx-c></mjx-mi><mjx-break size="4"> </mjx-break><mjx-mo data-latex="\in"><mjx-c class="mjx-c2208">∈</mjx-c></mjx-mo><mjx-mi space="4" data-latex="k"><mjx-c class="mjx-c1D458">𝑘</mjx-c></mjx-mi></mjx-math></mjx-container></span>。第104–105页对这一限制有明确说明。第三，<span class="math math-inline is-loaded"><mjx-container class="MathJax" jax="CHTML" overflow="overflow"><mjx-math data-latex="\mathcal L/\pi_r\mathcal L" class="TEX-N"><mjx-texatom data-latex="\mathcal L" texclass="ORD"><mjx-mi data-latex="L"><mjx-c class="mjx-c4C TEX-C">L</mjx-c></mjx-mi></mjx-texatom><mjx-mo data-latex="/"><mjx-c class="mjx-c2F">/</mjx-c></mjx-mo><mjx-msub data-latex="\pi_r"><mjx-mi data-latex="\pi"><mjx-c class="mjx-c1D70B">𝜋</mjx-c></mjx-mi><mjx-script style="vertical-align: -0.15em; margin-left: -0.003em;"><mjx-mi size="s" data-latex="r"><mjx-c class="mjx-c1D45F">𝑟</mjx-c></mjx-mi></mjx-script></mjx-msub><mjx-texatom data-latex="\mathcal L" texclass="ORD"><mjx-mi data-latex="L"><mjx-c class="mjx-c4C TEX-C">L</mjx-c></mjx-mi></mjx-texatom></mjx-math></mjx-container></span> 不必等于 <span class="math math-inline is-loaded"><mjx-container class="MathJax" jax="CHTML" overflow="overflow"><mjx-math data-latex="\operatorname{Dist}(G_r)" class="TEX-N"><mjx-mi data-latex="\operatorname{Dist}"><mjx-c class="mjx-c44" noic="true" style="padding-top: 0.683em;">D</mjx-c><mjx-c class="mjx-c69" noic="true" style="padding-top: 0.683em;">i</mjx-c><mjx-c class="mjx-c73" noic="true" style="padding-top: 0.683em;">s</mjx-c><mjx-c class="mjx-c74" style="padding-top: 0.683em;">t</mjx-c></mjx-mi><mjx-mo><mjx-c class="mjx-c2061">⁡</mjx-c></mjx-mo><mjx-mo data-latex="("><mjx-c class="mjx-c28">(</mjx-c></mjx-mo><mjx-msub data-latex="G_r"><mjx-mi data-latex="G"><mjx-c class="mjx-c1D43A">𝐺</mjx-c></mjx-mi><mjx-script style="vertical-align: -0.15em;"><mjx-mi size="s" data-latex="r"><mjx-c class="mjx-c1D45F">𝑟</mjx-c></mjx-mi></mjx-script></mjx-msub><mjx-mo data-latex=")"><mjx-c class="mjx-c29">)</mjx-c></mjx-mo></mjx-math></mjx-container></span>；真正需要核准的是参数模上全部特殊化作用通过实际分布代数。这一点不是构造本身的错误，也不能以只检查一次 Lie 根算子来代替。</p></div><div class="el-p"><p dir="auto">对方的“共同 radical”通常指相邻 Borel 的共同幺幂根部；本书 <span class="math math-inline is-loaded"><mjx-container class="MathJax" jax="CHTML" overflow="overflow"><mjx-math data-latex="\operatorname{rad}D" class="TEX-N"><mjx-mi data-latex="\operatorname{rad}"><mjx-c class="mjx-c72" noic="true" style="padding-top: 0.694em;">r</mjx-c><mjx-c class="mjx-c61" noic="true" style="padding-top: 0.694em;">a</mjx-c><mjx-c class="mjx-c64" style="padding-top: 0.694em;">d</mjx-c></mjx-mi><mjx-mo><mjx-c class="mjx-c2061">⁡</mjx-c></mjx-mo><mjx-mi space="2" data-latex="D"><mjx-c class="mjx-c1D437">𝐷</mjx-c></mjx-mi></mjx-math></mjx-container></span> 则是有限维代数的 Jacobson 根基。两者含义不同，比较时应分别称“共同补根部”和“低阶代数根基”。</p></div><div class="el-p"><p dir="auto"><strong>一阶兼容性的强弱。</strong> 完整版第110页及总结第12页明确保留了界限：取 <span class="math math-inline is-loaded"><mjx-container class="MathJax" jax="CHTML" overflow="overflow"><mjx-math data-latex="r=1,M=2" breakable="true" class="TEX-N"><mjx-mi data-latex="r"><mjx-c class="mjx-c1D45F">𝑟</mjx-c></mjx-mi><mjx-break size="4"> </mjx-break><mjx-mo data-latex="="><mjx-c class="mjx-c3D">=</mjx-c></mjx-mo><mjx-mn space="4" data-latex="1"><mjx-c class="mjx-c31">1</mjx-c></mjx-mn><mjx-mo data-latex=","><mjx-c class="mjx-c2C">,</mjx-c></mjx-mo><mjx-mi space="2" data-latex="M"><mjx-c class="mjx-c1D440">𝑀</mjx-c></mjx-mi><mjx-break size="4"> </mjx-break><mjx-mo data-latex="="><mjx-c class="mjx-c3D">=</mjx-c></mjx-mo><mjx-mn space="4" data-latex="2"><mjx-c class="mjx-c32">2</mjx-c></mjx-mn></mjx-math></mjx-container></span> 时，局部相邻矩阵、局部0/1滤过、和公式及首末层恢复原文，但没有由此推出两种参数环构造的全局滤过逐层相同。这个表述是谨慎且必要的。若后续目标要求“得到与原文相同的整条一阶子模链”，还须补一个实际比较定理。本书的对应结论使用 <span class="math math-inline is-loaded"><mjx-container class="MathJax" jax="CHTML" overflow="overflow"><mjx-math data-latex="e&gt;N+1" breakable="true" class="TEX-N"><mjx-mi data-latex="e"><mjx-c class="mjx-c1D452">𝑒</mjx-c></mjx-mi><mjx-break size="4"> </mjx-break><mjx-mo data-latex="&gt;"><mjx-c class="mjx-c3E">&gt;</mjx-c></mjx-mo><mjx-mi space="4" data-latex="N"><mjx-c class="mjx-c1D441">𝑁</mjx-c></mjx-mi><mjx-break size="3"> </mjx-break><mjx-mo data-latex="+"><mjx-c class="mjx-c2B">+</mjx-c></mjx-mo><mjx-mn space="3" data-latex="1"><mjx-c class="mjx-c31">1</mjx-c></mjx-mn></mjx-math></mjx-container></span> 的逐精度比较，所证明的正是后一个较强命题；它的适用整模型条件也必须保留。</p></div><div class="el-p"><p dir="auto"><strong>两条高阶滤过通常不是同一条。</strong> 一个偶根方向就能看出差别。取 <span class="math math-inline is-loaded"><mjx-container class="MathJax" jax="CHTML" overflow="overflow"><mjx-math data-latex="p=3,r=3,\lambda(H_\alpha)=0" breakable="true" class="TEX-N"><mjx-mi data-latex="p"><mjx-c class="mjx-c1D45D">𝑝</mjx-c></mjx-mi><mjx-break size="4"> </mjx-break><mjx-mo data-latex="="><mjx-c class="mjx-c3D">=</mjx-c></mjx-mo><mjx-mn space="4" data-latex="3"><mjx-c class="mjx-c33">3</mjx-c></mjx-mn><mjx-mo data-latex=","><mjx-c class="mjx-c2C">,</mjx-c></mjx-mo><mjx-mi space="2" data-latex="r"><mjx-c class="mjx-c1D45F">𝑟</mjx-c></mjx-mi><mjx-break size="4"> </mjx-break><mjx-mo data-latex="="><mjx-c class="mjx-c3D">=</mjx-c></mjx-mo><mjx-mn space="4" data-latex="3"><mjx-c class="mjx-c33">3</mjx-c></mjx-mn><mjx-mo data-latex=","><mjx-c class="mjx-c2C">,</mjx-c></mjx-mo><mjx-mi space="2" data-latex="\lambda"><mjx-c class="mjx-c1D706">𝜆</mjx-c></mjx-mi><mjx-mo data-latex="("><mjx-c class="mjx-c28">(</mjx-c></mjx-mo><mjx-msub data-latex="H_\alpha"><mjx-mi data-latex="H"><mjx-c class="mjx-c1D43B">𝐻</mjx-c></mjx-mi><mjx-script style="vertical-align: -0.15em; margin-left: -0.057em;"><mjx-mi size="s" data-latex="\alpha"><mjx-c class="mjx-c1D6FC">𝛼</mjx-c></mjx-mi></mjx-script></mjx-msub><mjx-mo data-latex=")"><mjx-c class="mjx-c29">)</mjx-c></mjx-mo><mjx-break size="4"> </mjx-break><mjx-mo data-latex="="><mjx-c class="mjx-c3D">=</mjx-c></mjx-mo><mjx-mn space="4" data-latex="0"><mjx-c class="mjx-c30">0</mjx-c></mjx-mn></mjx-math></mjx-container></span>，对方取 <span class="math math-inline is-loaded"><mjx-container class="MathJax" jax="CHTML" overflow="overflow"><mjx-math data-latex="M=10" breakable="true" class="TEX-N"><mjx-mi data-latex="M"><mjx-c class="mjx-c1D440">𝑀</mjx-c></mjx-mi><mjx-break size="4"> </mjx-break><mjx-mo data-latex="="><mjx-c class="mjx-c3D">=</mjx-c></mjx-mo><mjx-mn space="4" data-latex="10"><mjx-c class="mjx-c31" noic="true" style="padding-top: 0.666em;">1</mjx-c><mjx-c class="mjx-c30" style="padding-top: 0.666em;">0</mjx-c></mjx-mn></mjx-math></mjx-container></span>，数位权重为 <span class="math math-inline is-loaded"><mjx-container class="MathJax" jax="CHTML" overflow="overflow"><mjx-math data-latex="(2,6,1)" class="TEX-N"><mjx-mo data-latex="("><mjx-c class="mjx-c28">(</mjx-c></mjx-mo><mjx-mn data-latex="2"><mjx-c class="mjx-c32">2</mjx-c></mjx-mn><mjx-mo data-latex=","><mjx-c class="mjx-c2C">,</mjx-c></mjx-mo><mjx-mn space="2" data-latex="6"><mjx-c class="mjx-c36">6</mjx-c></mjx-mn><mjx-mo data-latex=","><mjx-c class="mjx-c2C">,</mjx-c></mjx-mo><mjx-mn space="2" data-latex="1"><mjx-c class="mjx-c31">1</mjx-c></mjx-mn><mjx-mo data-latex=")"><mjx-c class="mjx-c29">)</mjx-c></mjx-mo></mjx-math></mjx-container></span>。在标准基向量 <span class="math math-inline is-loaded"><mjx-container class="MathJax" jax="CHTML" overflow="overflow"><mjx-math data-latex="v_1,v_3" class="TEX-N"><mjx-msub data-latex="v_1"><mjx-mi data-latex="v"><mjx-c class="mjx-c1D463">𝑣</mjx-c></mjx-mi><mjx-script style="vertical-align: -0.15em;"><mjx-mn size="s" data-latex="1"><mjx-c class="mjx-c31">1</mjx-c></mjx-mn></mjx-script></mjx-msub><mjx-mo data-latex=","><mjx-c class="mjx-c2C">,</mjx-c></mjx-mo><mjx-msub space="2" data-latex="v_3"><mjx-mi data-latex="v"><mjx-c class="mjx-c1D463">𝑣</mjx-c></mjx-mi><mjx-script style="vertical-align: -0.15em;"><mjx-mn size="s" data-latex="3"><mjx-c class="mjx-c33">3</mjx-c></mjx-mn></mjx-script></mjx-msub></mjx-math></mjx-container></span> 上，圆分深度分别为</p></div><div class="el-div"><div class="math math-block is-loaded"><mjx-container class="MathJax" jax="CHTML" overflow="scroll" display="true" data-editing-suite-math-overflow=""><mjx-math data-latex="9,\qquad7." display="true" class="TEX-N"><mjx-mn data-latex="9"><mjx-c class="mjx-c39">9</mjx-c></mjx-mn><mjx-mo data-latex=","><mjx-c class="mjx-c2C">,</mjx-c></mjx-mo><mjx-mstyle data-latex="\qquad"><mjx-mspace style="width: 2em;"></mjx-mspace></mjx-mstyle><mjx-mn space="2" data-latex="7."><mjx-c class="mjx-c37" noic="true" style="padding-top: 0.676em;">7</mjx-c><mjx-c class="mjx-c2E" style="padding-top: 0.676em;">.</mjx-c></mjx-mn></mjx-math></mjx-container></div></div><div class="el-p"><p dir="auto">本书有限层配对在这两个方向的深度分别为</p></div><div class="el-div"><div class="math math-block is-loaded"><mjx-container class="MathJax" jax="CHTML" overflow="scroll" display="true" data-editing-suite-math-overflow=""><mjx-math data-latex="2e+1,\qquad e+1." display="true" class="TEX-N"><mjx-mn data-latex="2"><mjx-c class="mjx-c32">2</mjx-c></mjx-mn><mjx-mi data-latex="e"><mjx-c class="mjx-c1D452">𝑒</mjx-c></mjx-mi><mjx-mo space="3" data-latex="+"><mjx-c class="mjx-c2B">+</mjx-c></mjx-mo><mjx-mn space="3" data-latex="1"><mjx-c class="mjx-c31">1</mjx-c></mjx-mn><mjx-mo data-latex=","><mjx-c class="mjx-c2C">,</mjx-c></mjx-mo><mjx-mstyle data-latex="\qquad"><mjx-mspace style="width: 2em;"></mjx-mspace></mjx-mstyle><mjx-mi space="2" data-latex="e"><mjx-c class="mjx-c1D452">𝑒</mjx-c></mjx-mi><mjx-mo space="3" data-latex="+"><mjx-c class="mjx-c2B">+</mjx-c></mjx-mo><mjx-mn space="3" data-latex="1."><mjx-c class="mjx-c31" noic="true" style="padding-top: 0.666em;">1</mjx-c><mjx-c class="mjx-c2E" style="padding-top: 0.666em;">.</mjx-c></mjx-mn></mjx-math></mjx-container></div></div><div class="el-p"><p dir="auto">前者由 <span class="math math-inline is-loaded"><mjx-container class="MathJax" jax="CHTML" overflow="overflow"><mjx-math data-latex="\binom{p^2\varpi c}{1}" class="TEX-N"><mjx-mrow data-latex="\binom{p^2\varpi c}{1}"><mjx-texatom data-latex="\bigl (" texclass="OPEN"><mjx-mo><mjx-c class="mjx-c28 TEX-LO">(</mjx-c></mjx-mo></mjx-texatom><mjx-mfrac><mjx-frac atop="true" delims="true" style="vertical-align: -0.345em;"><mjx-num style="padding-bottom: 0.181em;"><mjx-mrow size="s" data-latex="p^2 \varpi c"><mjx-msup data-latex="p^2"><mjx-mi data-latex="p"><mjx-c class="mjx-c1D45D">𝑝</mjx-c></mjx-mi><mjx-script style="vertical-align: 0.363em;"><mjx-mn size="s" data-latex="2"><mjx-c class="mjx-c32">2</mjx-c></mjx-mn></mjx-script></mjx-msup><mjx-mi data-latex="\varpi"><mjx-c class="mjx-c1D71B">𝜛</mjx-c></mjx-mi><mjx-mi data-latex="c"><mjx-c class="mjx-c1D450">𝑐</mjx-c></mjx-mi></mjx-mrow></mjx-num><mjx-den><mjx-mn size="s" data-latex="1"><mjx-c class="mjx-c31">1</mjx-c></mjx-mn></mjx-den></mjx-frac></mjx-mfrac><mjx-texatom data-latex="\bigr )" texclass="CLOSE"><mjx-mo><mjx-c class="mjx-c29 TEX-LO">)</mjx-c></mjx-mo></mjx-texatom></mjx-mrow></mjx-math></mjx-container></span> 直接得到；后者的分子有同一个 <span class="math math-inline is-loaded"><mjx-container class="MathJax" jax="CHTML" overflow="overflow"><mjx-math data-latex="p^2\varpi" class="TEX-N"><mjx-msup data-latex="p^2"><mjx-mi data-latex="p"><mjx-c class="mjx-c1D45D">𝑝</mjx-c></mjx-mi><mjx-script style="vertical-align: 0.363em;"><mjx-mn size="s" data-latex="2"><mjx-c class="mjx-c32">2</mjx-c></mjx-mn></mjx-script></mjx-msup><mjx-mi data-latex="\varpi"><mjx-c class="mjx-c1D71B">𝜛</mjx-c></mjx-mi></mjx-math></mjx-container></span> 因子，而分母 <span class="math math-inline is-loaded"><mjx-container class="MathJax" jax="CHTML" overflow="overflow"><mjx-math data-latex="3!" class="TEX-N"><mjx-mn data-latex="3"><mjx-c class="mjx-c33">3</mjx-c></mjx-mn><mjx-mo data-latex="!"><mjx-c class="mjx-c21">!</mjx-c></mjx-mo></mjx-math></mjx-container></span> 扣去一次 <span class="math math-inline is-loaded"><mjx-container class="MathJax" jax="CHTML" overflow="overflow"><mjx-math data-latex="p" class="TEX-N"><mjx-mi data-latex="p"><mjx-c class="mjx-c1D45D">𝑝</mjx-c></mjx-mi></mjx-math></mjx-container></span> 赋值。没有一个 <span class="math math-inline is-loaded"><mjx-container class="MathJax" jax="CHTML" overflow="overflow"><mjx-math data-latex="e" class="TEX-N"><mjx-mi data-latex="e"><mjx-c class="mjx-c1D452">𝑒</mjx-c></mjx-mi></mjx-math></mjx-container></span> 能使两对数字同时相等。因此圆分稿即使完整成立，也不是把本书带未知商核项的公式直接补成了同一个公式。它给出另一种具有更直接局部长度解释的高阶滤过。<sup class="editing-suite-sidenote-reference" data-sidenote-instance="reading-250"><a class="footnote-ref editing-suite-sidenote-reference-link" aria-label="边注 2" tabindex="-1">2</a></sup><span class="editing-suite-sidenote-anchor editing-suite-reading-sidenote-anchor" data-sidenote-instance="reading-250" data-sidenote-number="2"><template class="mathcraft-export-sidenote-template"><aside class="editing-suite-sidenote-margin" data-sidenote-number="2" role="note" aria-label="边注 2" tabindex="-1"><span class="editing-suite-sidenote-number">2</span><div class="editing-suite-sidenote-content">【核验】<a data-tooltip-position="top" aria-label="D:/GitHub/albus-research/%E8%AE%A1%E7%AE%97%E8%84%9A%E6%9C%AC/%E5%9C%86%E5%88%86%E7%A8%BF%E6%95%B0%E4%BD%8D%E5%85%AC%E5%BC%8F%E6%A0%B8%E9%AA%8C.py" rel="noopener nofollow" class="external-link" href="D:/GitHub/albus-research/%E8%AE%A1%E7%AE%97%E8%84%9A%E6%9C%AC/%E5%9C%86%E5%88%86%E7%A8%BF%E6%95%B0%E4%BD%8D%E5%85%AC%E5%BC%8F%E6%A0%B8%E9%AA%8C.py" target="_blank">圆分稿数位公式核验.py</a>核对三类局部指数、反向互补指数及复合标量，共15926个带参数方向；其作用是检查计数与边界，不认证共同整代数。</div></aside></template></span></p></div><div class="el-p"><p dir="auto"><strong>后续重点。</strong> 如果主目标保持为“一般高阶的 Pan–Shu 式滤过及显式和公式”，建议把圆分路线列为优先发展的主线，先核定其共同整代数与完整特殊化，再围绕“参数链存在—局部长度—全局和”整理正式证明。它更直接对应目标，但量子整形式、反射和对偶的技术并不比当前路线初等，不能承诺换路后就无需这些工具。</p></div><div class="el-p"><p dir="auto">本书的有限层商构造保留为独立的比较与辅助路线：它提供一阶实际兼容、精确矩阵计算、最高阶参数族的退化判据及商核前段结构。这些内容有用，但继续追逐所有深层商核修正，未必是得到 Pan–Shu 式显式和公式的最短路径。两条路线的已证结果、参数规范与剩余问题应分别维护，尚未核准的圆分结论不并入本书作为既定定理。</p></div><div class="el-p"><p dir="auto">写作上可学习对方总结的 A—B—C 依赖关系：先说对象是否真正存在，再说哪些局部量算出了，最后说全局结论如何推出。110页完整版中的工作交接文字、英语临时文件名和多重内部编号则不宜搬进正式正文。普通特征标已足以陈述这里的主要比较，保奇性版本可在确有需要处单独说明。</p></div><div class="footer"><div class="data-bar"></div></div></div></div></div><div id="right-content" class="leaf" style="--sidebar-width:var(--sidebar-width-right)"><div id="right-sidebar" class="sidebar"><div class="sidebar-handle"></div><div class="sidebar-topbar"><div class="topbar-content"><label class="theme-toggle-container" for="theme-toggle-input"><input class="theme-toggle-input" type="checkbox" id="theme-toggle-input"><div class="toggle-background"></div></label></div><button type="button" class="clickable-icon sidebar-collapse-icon" aria-label="切换右侧栏"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="svg-icon sidebar-toggle-button-icon"><rect x="1" y="2" width="22" height="20" rx="4"></rect><rect x="4" y="5" width="2" height="14" rx="2" fill="currentColor" class="sidebar-toggle-icon-inner"></rect></svg></button></div><div class="sidebar-content-wrapper"><div id="right-sidebar-content" class="leaf-content"><div id="outline" class="tree-container"><div class="feature-header"><div class="feature-title">目录</div><button class="clickable-icon nav-action-button tree-collapse-all is-collapsed" aria-label="全部折叠"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></svg></button></div><div class="tree-item nav-file" data-depth="2"><a class="tree-item-self is-clickable nav-file-title heading-link" href="#Pan–Shu_的一阶构造_0" data-path="Pan–Shu_的一阶构造_0" heading-name="Pan–Shu 的一阶构造"><div class="tree-item-inner nav-file-title-content">Pan–Shu 的一阶构造</div></a><div class="tree-item-children nav-file-children"></div></div><div class="tree-item nav-file" data-depth="2"><a class="tree-item-self is-clickable nav-file-title heading-link" href="#用户原研究笔记_0" data-path="用户原研究笔记_0" heading-name="用户原研究笔记"><div class="tree-item-inner nav-file-title-content">用户原研究笔记</div></a><div class="tree-item-children nav-file-children"></div></div><div class="tree-item nav-file" data-depth="2"><a class="tree-item-self is-clickable nav-file-title heading-link" href="#项目已有研究_0" data-path="项目已有研究_0" heading-name="项目已有研究"><div class="tree-item-inner nav-file-title-content">项目已有研究</div></a><div class="tree-item-children nav-file-children"></div></div><div class="tree-item nav-file" data-depth="2"><a class="tree-item-self is-clickable nav-file-title heading-link" href="#高阶变形代数_0" data-path="高阶变形代数_0" heading-name="高阶变形代数"><div class="tree-item-inner nav-file-title-content">高阶变形代数</div></a><div class="tree-item-children nav-file-children"></div></div><div class="tree-item nav-file" data-depth="2"><a class="tree-item-self is-clickable nav-file-title heading-link" href="#有限维代数的根基_0" data-path="有限维代数的根基_0" heading-name="有限维代数的根基"><div class="tree-item-inner nav-file-title-content">有限维代数的根基</div></a><div class="tree-item-children nav-file-children"></div></div><div class="tree-item nav-file" data-depth="2"><a class="tree-item-self is-clickable nav-file-title heading-link" href="#整_Verma_模上的滤过_0" data-path="整_Verma_模上的滤过_0" heading-name="整 Verma 模上的滤过"><div class="tree-item-inner nav-file-title-content">整 Verma 模上的滤过</div></a><div class="tree-item-children nav-file-children"></div></div><div class="tree-item nav-file" data-depth="2"><a class="tree-item-self is-clickable nav-file-title heading-link" href="#特征零配对的行列式_0" data-path="特征零配对的行列式_0" heading-name="特征零配对的行列式"><div class="tree-item-inner nav-file-title-content">特征零配对的行列式</div></a><div class="tree-item-children nav-file-children"></div></div><div class="tree-item nav-file" data-depth="2"><a class="tree-item-self is-clickable nav-file-title heading-link" href="#有限层分布代数_0" data-path="有限层分布代数_0" heading-name="有限层分布代数"><div class="tree-item-inner nav-file-title-content">有限层分布代数</div></a><div class="tree-item-children nav-file-children"></div></div><div class="tree-item nav-file" data-depth="2"><a class="tree-item-self is-clickable nav-file-title heading-link" href="#约化中心的_Poisson_括号_0" data-path="约化中心的_Poisson_括号_0" heading-name="约化中心的 Poisson 括号"><div class="tree-item-inner nav-file-title-content">约化中心的 Poisson 括号</div></a><div class="tree-item-children nav-file-children"></div></div><div class="tree-item nav-file" data-depth="2"><a class="tree-item-self is-clickable nav-file-title heading-link" href="#整形式背景的进一步定位_0" data-path="整形式背景的进一步定位_0" heading-name="整形式背景的进一步定位"><div class="tree-item-inner nav-file-title-content">整形式背景的进一步定位</div></a><div class="tree-item-children nav-file-children"></div></div><div class="tree-item nav-file" data-depth="2"><a class="tree-item-self is-clickable nav-file-title heading-link" href="#圆分参数稿的核验与比较_0" data-path="圆分参数稿的核验与比较_0" heading-name="圆分参数稿的核验与比较"><div class="tree-item-inner nav-file-title-content">圆分参数稿的核验与比较</div></a><div class="tree-item-children nav-file-children"></div></div></div></div></div><script defer>const rs=document.querySelector('#right-sidebar');rs.classList.toggle('is-collapsed',innerWidth<768);rs.style.setProperty('--sidebar-width',localStorage.getItem('sidebar-right-width'));</script></div></div></div></div></body></html>
