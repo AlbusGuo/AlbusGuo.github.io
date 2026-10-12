@@ -90,6 +90,74 @@
 .ͼ1 .cm-textfield { vertical-align: middle; color: inherit; font-size: 70%; border: 1px solid silver; padding: 0.2em 0.5em; }
 .ͼ2 .cm-textfield { background-color: white; }
 .ͼ3 .cm-textfield { border: 1px solid rgb(85, 85, 85); background-color: inherit; }
+.ͼ1 .cm-selectionMatch { background-color: rgba(153, 255, 119, 0.5); }
+.ͼ1 .cm-searchMatch .cm-selectionMatch { background-color: transparent; }
+.ͼ1.cm-focused .cm-matchingBracket { background-color: rgba(50, 140, 130, 0.32); }
+.ͼ1.cm-focused .cm-nonmatchingBracket { background-color: rgba(187, 85, 85, 0.267); }
+.ͼr { color: rgb(215, 58, 73); }
+.ͼs { color: var(--text-normal); }
+.ͼt { color: var(--text-accent-hover); }
+.ͼu { color: var(--text-accent); }
+.ͼv { color: var(--text-accent-hover); }
+.ͼw { color: var(--text-accent-hover); }
+.ͼx { color: var(--text-normal); }
+.ͼy { color: rgb(111, 66, 193); }
+.ͼz { color: var(--text-accent-hover); }
+.ͼ10 { color: var(--text-accent-hover); font-style: var(--text-accent-hover); }
+.ͼ11 { color: rgb(215, 58, 73); }
+.ͼ12 { color: var(--text-accent); }
+.ͼ13 { color: var(--text-faint); }
+.ͼ14 { font-weight: bold; }
+.ͼ15 { font-style: italic; }
+.ͼ16 { text-decoration: underline; }
+.ͼ17 { font-weight: bold; color: var(--text-accent-hover); }
+.ͼ18 { color: var(--text-normal); }
+.ͼ19 { color: var(--text-error); }
+.ͼ1a { text-decoration: line-through; }
+.ͼq { color: var(--text-normal); background-color: var(--background-primary); }
+.ͼq .cm-content { caret-color: var(--text-normal); }
+.ͼq.cm-focused .cm-cursor { border-left-color: var(--text-normal); }
+.ͼq.cm-focused .cm-selectionBackground, .ͼq .cm-selectionBackground, .ͼq ::selection { background-color: var(--text-selection); }
+.ͼq .cm-panels { background-color: var(--background-primary); color: var(--text-normal); }
+.ͼq .cm-panels.cm-panels-top { border-bottom: 2px solid black; }
+.ͼq .cm-panels.cm-panels-bottom { border-top: 2px solid black; }
+.ͼq .cm-searchMatch { background-color: var(--background-primary); outline: 1px solid var(--background-modifier-border); }
+.ͼq .cm-searchMatch.cm-searchMatch-selected { background-color: var(--text-selection); }
+.ͼq .cm-activeLine { background-color: var(--background-primary); }
+.ͼq .cm-activeLineGutter { background-color: var(--background-primary); }
+.ͼq .cm-selectionMatch { background-color: var(--text-selection); }
+.ͼq .cm-matchingBracket, .ͼq .cm-nonmatchingBracket { background-color: var(--background-modifier-accent); outline: none; }
+.ͼq .cm-gutters { background-color: var(--background-primary); color: var(--text-faint); border-right: 1px solid var(--background-modifier-border); }
+.ͼq .cm-lineNumbers, .ͼq .cm-gutterElement { color: inherit; }
+.ͼq .cm-foldPlaceholder { background-color: transparent; border-width: medium; border-style: none; border-color: currentcolor; border-image: none; color: var(--text-normal); }
+.ͼq .cm-tooltip { border: 1px solid var(--background-modifier-border); background-color: var(--background-primary); color: var(--text-normal); }
+.ͼq .cm-tooltip.cm-tooltip-autocomplete > ul > li[aria-selected] { background: var(--text-selection); color: var(--text-normal); }
+.ͼq .cm-textfield { background-color: var(--background-primary); color: var(--text-normal); }
+.ͼq .cm-button { background-color: var(--background-primary); color: var(--text-normal); background-image: none; }
+.ͼ5 { color: rgb(64, 71, 64); }
+.ͼ6 { text-decoration: underline; }
+.ͼ7 { text-decoration: underline; font-weight: bold; }
+.ͼ8 { font-style: italic; }
+.ͼ9 { font-weight: bold; }
+.ͼa { text-decoration: line-through; }
+.ͼb { color: rgb(119, 0, 136); }
+.ͼc { color: rgb(34, 17, 153); }
+.ͼd { color: rgb(17, 102, 68); }
+.ͼe { color: rgb(170, 17, 17); }
+.ͼf { color: rgb(238, 68, 0); }
+.ͼg { color: rgb(0, 0, 255); }
+.ͼh { color: rgb(51, 0, 170); }
+.ͼi { color: rgb(0, 136, 85); }
+.ͼj { color: rgb(17, 102, 119); }
+.ͼk { color: rgb(34, 85, 102); }
+.ͼl { color: rgb(0, 0, 204); }
+.ͼm { color: rgb(153, 68, 0); }
+.ͼn { color: rgb(255, 0, 0); }
+.ͼ4 .cm-line ::selection, .ͼ4 .cm-line::selection { background-color: transparent !important; }
+.ͼ4 .cm-line { caret-color: transparent !important; }
+.ͼ4 .cm-content :focus::selection, .ͼ4 .cm-content :focus ::selection { background-color: highlight !important; }
+.ͼ4 .cm-content :focus { caret-color: initial !important; }
+.ͼ4 .cm-content { caret-color: transparent !important; }
 .ͼ1 .cm-foldPlaceholder { background-color: rgb(238, 238, 238); border: 1px solid rgb(221, 221, 221); color: rgb(136, 136, 136); border-radius: 0.2em; margin: 0px 1px; padding: 0px 1px; cursor: pointer; }
 .ͼ1 .cm-foldGutter span { padding: 0px 1px; cursor: pointer; }
 .ͼ1 .latex-suite-error-dollar { color: rgb(255, 0, 0); }
@@ -125,6 +193,37 @@
 .theme-dark .ͼ1 .latex-suite-snippet-placeholder-1, .ͼ1 span.latex-suite-snippet-placeholder-1 span { --placeholder-outline: #ffa5004d; }
 .ͼ1 .latex-suite-snippet-placeholder-2, .ͼ1 span.latex-suite-snippet-placeholder-2 span { --placeholder-bg: #0f02; --placeholder-outline: #00ff0060; }
 .theme-dark .ͼ1 .latex-suite-snippet-placeholder-2, .ͼ1 span.latex-suite-snippet-placeholder-2 span { --placeholder-outline: #00ff003d; }
+.ͼ1 .cm-tooltip.cm-tooltip-autocomplete > ul > li, .ͼ1 .cm-tooltip.cm-tooltip-autocomplete > ul > completion-section { padding: 1px 3px; line-height: 1.2; }
+.ͼ1 .cm-tooltip.cm-tooltip-autocomplete > ul > li { overflow-x: hidden; text-overflow: ellipsis; cursor: pointer; }
+.ͼ1 .cm-tooltip.cm-tooltip-autocomplete > ul > completion-section { display: list-item; border-bottom: 1px solid silver; padding-left: 0.5em; opacity: 0.7; }
+.ͼ1 .cm-tooltip.cm-tooltip-autocomplete > ul { font-family: monospace; white-space: nowrap; overflow: hidden auto; max-width: min(700px, 95vw); min-width: 250px; max-height: 10em; height: 100%; list-style: none; margin: 0px; padding: 0px; }
+.ͼ2 .cm-tooltip-autocomplete ul li[aria-selected] { background: rgb(17, 119, 204); color: white; }
+.ͼ2 .cm-tooltip-autocomplete-disabled ul li[aria-selected] { background: rgb(119, 119, 119); }
+.ͼ3 .cm-tooltip-autocomplete ul li[aria-selected] { background: rgb(51, 68, 119); color: white; }
+.ͼ3 .cm-tooltip-autocomplete-disabled ul li[aria-selected] { background: rgb(68, 68, 68); }
+.ͼ1 .cm-completionListIncompleteTop::before, .ͼ1 .cm-completionListIncompleteBottom::after { content: "···"; opacity: 0.5; display: block; text-align: center; cursor: pointer; }
+.ͼ1 .cm-tooltip.cm-completionInfo { position: absolute; padding: 3px 9px; width: max-content; max-width: 400px; box-sizing: border-box; white-space: pre-line; }
+.ͼ1 .cm-completionInfo.cm-completionInfo-left { right: 100%; }
+.ͼ1 .cm-completionInfo.cm-completionInfo-right { left: 100%; }
+.ͼ1 .cm-completionInfo.cm-completionInfo-left-narrow { right: 30px; }
+.ͼ1 .cm-completionInfo.cm-completionInfo-right-narrow { left: 30px; }
+.ͼ2 .cm-snippetField { background-color: rgba(0, 0, 0, 0.133); }
+.ͼ3 .cm-snippetField { background-color: rgba(255, 255, 255, 0.133); }
+.ͼ1 .cm-snippetFieldPosition { vertical-align: text-top; width: 0px; height: 1.15em; display: inline-block; margin: 0px -0.7px -0.7em; border-left: 1.4px dotted rgb(136, 136, 136); }
+.ͼ1 .cm-completionMatchedText { text-decoration: underline; }
+.ͼ1 .cm-completionDetail { margin-left: 0.5em; font-style: italic; }
+.ͼ1 .cm-completionIcon { font-size: 90%; width: 0.8em; display: inline-block; text-align: center; padding-right: 0.6em; opacity: 0.6; box-sizing: content-box; }
+.ͼ1 .cm-completionIcon-function::after, .ͼ1 .cm-completionIcon-method::after { content: "ƒ"; }
+.ͼ1 .cm-completionIcon-class::after { content: "○"; }
+.ͼ1 .cm-completionIcon-interface::after { content: "◌"; }
+.ͼ1 .cm-completionIcon-variable::after { content: "𝑥"; }
+.ͼ1 .cm-completionIcon-constant::after { content: "𝐶"; }
+.ͼ1 .cm-completionIcon-type::after { content: "𝑡"; }
+.ͼ1 .cm-completionIcon-enum::after { content: "∪"; }
+.ͼ1 .cm-completionIcon-property::after { content: "□"; }
+.ͼ1 .cm-completionIcon-keyword::after { content: "🔑︎"; }
+.ͼ1 .cm-completionIcon-namespace::after { content: "▢"; }
+.ͼ1 .cm-completionIcon-text::after { content: "abc"; font-size: 50%; vertical-align: middle; }
 .ͼ1 .cm-tooltip { z-index: 500; box-sizing: border-box; }
 .ͼ2 .cm-tooltip { border: 1px solid rgb(187, 187, 187); background-color: rgb(245, 245, 245); }
 .ͼ2 .cm-tooltip-section:not(:first-child) { border-top: 1px solid rgb(187, 187, 187); }
@@ -139,15 +238,99 @@
 .ͼ1 .cm-tooltip-arrow { height: 7px; width: 14px; position: absolute; z-index: -1; overflow: hidden; }
 .ͼ3 .cm-tooltip .cm-tooltip-arrow::before { border-top-color: rgb(51, 51, 56); border-bottom-color: rgb(51, 51, 56); }
 .ͼ3 .cm-tooltip .cm-tooltip-arrow::after { border-top-color: transparent; border-bottom-color: transparent; }
-.ͼ1d { min-height: 42px; }
-.ͼ1d .cm-scroller { min-height: 42px; overflow: hidden; padding: 11px 12px; }
-.ͼ1d .cm-content { min-height: 0px; padding: 0px; line-height: 20px; background-color: transparent; }
-.ͼ1d .cm-line { padding: 0px; line-height: 20px; background-color: transparent; }
+.ͼ1s { background-color: transparent; color: rgb(92, 92, 92); font-family: "CMU Serif", 华文中宋, "??", ui-sans-serif, -apple-system, BlinkMacSystemFont, system-ui, "Segoe UI", "Google Sans Flex", Roboto, "Inter Variable", Inter, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", sans-serif; font-size: 12.48px; font-style: normal; font-weight: 400; height: auto; line-height: 16.848px; max-height: none; max-width: 100%; min-width: 0px; width: 100%; }
+.ͼ1s .cm-scroller { background-color: transparent; font-family: "CMU Serif", 华文中宋, "??", ui-sans-serif, -apple-system, BlinkMacSystemFont, system-ui, "Segoe UI", "Google Sans Flex", Roboto, "Inter Variable", Inter, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", sans-serif; font-size: 12.48px; font-style: normal; font-weight: 400; height: auto; line-height: 16.848px; max-height: none; max-width: 100%; min-width: 0px; overflow: visible; width: 100%; }
+.ͼ1s .cm-content { background-color: transparent; font-family: "CMU Serif", 华文中宋, "??", ui-sans-serif, -apple-system, BlinkMacSystemFont, system-ui, "Segoe UI", "Google Sans Flex", Roboto, "Inter Variable", Inter, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", sans-serif; font-size: 12.48px; font-style: normal; font-weight: 400; line-height: 16.848px; max-width: 100%; min-width: 0px; width: 100%; }
+.ͼ1s .cm-line { background-color: transparent; font-family: "CMU Serif", 华文中宋, "??", ui-sans-serif, -apple-system, BlinkMacSystemFont, system-ui, "Segoe UI", "Google Sans Flex", Roboto, "Inter Variable", Inter, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", sans-serif; font-size: 12.48px; font-style: normal; font-weight: 400; line-height: 16.848px; overflow-wrap: anywhere; white-space: pre-wrap; word-break: break-word; }
+.ͼ1s .cm-activeLine { background-color: transparent; }
+.ͼ1r { background-color: transparent; color: rgb(92, 92, 92); font-family: "CMU Serif", 华文中宋, "??", ui-sans-serif, -apple-system, BlinkMacSystemFont, system-ui, "Segoe UI", "Google Sans Flex", Roboto, "Inter Variable", Inter, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", sans-serif; font-size: 12.48px; font-style: normal; font-weight: 400; height: auto; line-height: 16.848px; max-height: none; max-width: 100%; min-width: 0px; width: 100%; }
+.ͼ1r .cm-scroller { background-color: transparent; font-family: "CMU Serif", 华文中宋, "??", ui-sans-serif, -apple-system, BlinkMacSystemFont, system-ui, "Segoe UI", "Google Sans Flex", Roboto, "Inter Variable", Inter, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", sans-serif; font-size: 12.48px; font-style: normal; font-weight: 400; height: auto; line-height: 16.848px; max-height: none; max-width: 100%; min-width: 0px; overflow: visible; width: 100%; }
+.ͼ1r .cm-content { background-color: transparent; font-family: "CMU Serif", 华文中宋, "??", ui-sans-serif, -apple-system, BlinkMacSystemFont, system-ui, "Segoe UI", "Google Sans Flex", Roboto, "Inter Variable", Inter, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", sans-serif; font-size: 12.48px; font-style: normal; font-weight: 400; line-height: 16.848px; max-width: 100%; min-width: 0px; width: 100%; }
+.ͼ1r .cm-line { background-color: transparent; font-family: "CMU Serif", 华文中宋, "??", ui-sans-serif, -apple-system, BlinkMacSystemFont, system-ui, "Segoe UI", "Google Sans Flex", Roboto, "Inter Variable", Inter, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", sans-serif; font-size: 12.48px; font-style: normal; font-weight: 400; line-height: 16.848px; overflow-wrap: anywhere; white-space: pre-wrap; word-break: break-word; }
+.ͼ1r .cm-activeLine { background-color: transparent; }
+.ͼ1q { background-color: transparent; color: rgb(92, 92, 92); font-family: "CMU Serif", 华文中宋, "??", ui-sans-serif, -apple-system, BlinkMacSystemFont, system-ui, "Segoe UI", "Google Sans Flex", Roboto, "Inter Variable", Inter, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", sans-serif; font-size: 12.48px; font-style: normal; font-weight: 400; height: auto; line-height: 16.848px; max-height: none; max-width: 100%; min-width: 0px; width: 100%; }
+.ͼ1q .cm-scroller { background-color: transparent; font-family: "CMU Serif", 华文中宋, "??", ui-sans-serif, -apple-system, BlinkMacSystemFont, system-ui, "Segoe UI", "Google Sans Flex", Roboto, "Inter Variable", Inter, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", sans-serif; font-size: 12.48px; font-style: normal; font-weight: 400; height: auto; line-height: 16.848px; max-height: none; max-width: 100%; min-width: 0px; overflow: visible; width: 100%; }
+.ͼ1q .cm-content { background-color: transparent; font-family: "CMU Serif", 华文中宋, "??", ui-sans-serif, -apple-system, BlinkMacSystemFont, system-ui, "Segoe UI", "Google Sans Flex", Roboto, "Inter Variable", Inter, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", sans-serif; font-size: 12.48px; font-style: normal; font-weight: 400; line-height: 16.848px; max-width: 100%; min-width: 0px; width: 100%; }
+.ͼ1q .cm-line { background-color: transparent; font-family: "CMU Serif", 华文中宋, "??", ui-sans-serif, -apple-system, BlinkMacSystemFont, system-ui, "Segoe UI", "Google Sans Flex", Roboto, "Inter Variable", Inter, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", sans-serif; font-size: 12.48px; font-style: normal; font-weight: 400; line-height: 16.848px; overflow-wrap: anywhere; white-space: pre-wrap; word-break: break-word; }
+.ͼ1q .cm-activeLine { background-color: transparent; }
+.ͼ1p { background-color: transparent; color: rgb(92, 92, 92); font-family: "CMU Serif", 华文中宋, "??", ui-sans-serif, -apple-system, BlinkMacSystemFont, system-ui, "Segoe UI", "Google Sans Flex", Roboto, "Inter Variable", Inter, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", sans-serif; font-size: 12.48px; font-style: normal; font-weight: 400; height: auto; line-height: 16.848px; max-height: none; max-width: 100%; min-width: 0px; width: 100%; }
+.ͼ1p .cm-scroller { background-color: transparent; font-family: "CMU Serif", 华文中宋, "??", ui-sans-serif, -apple-system, BlinkMacSystemFont, system-ui, "Segoe UI", "Google Sans Flex", Roboto, "Inter Variable", Inter, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", sans-serif; font-size: 12.48px; font-style: normal; font-weight: 400; height: auto; line-height: 16.848px; max-height: none; max-width: 100%; min-width: 0px; overflow: visible; width: 100%; }
+.ͼ1p .cm-content { background-color: transparent; font-family: "CMU Serif", 华文中宋, "??", ui-sans-serif, -apple-system, BlinkMacSystemFont, system-ui, "Segoe UI", "Google Sans Flex", Roboto, "Inter Variable", Inter, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", sans-serif; font-size: 12.48px; font-style: normal; font-weight: 400; line-height: 16.848px; max-width: 100%; min-width: 0px; width: 100%; }
+.ͼ1p .cm-line { background-color: transparent; font-family: "CMU Serif", 华文中宋, "??", ui-sans-serif, -apple-system, BlinkMacSystemFont, system-ui, "Segoe UI", "Google Sans Flex", Roboto, "Inter Variable", Inter, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", sans-serif; font-size: 12.48px; font-style: normal; font-weight: 400; line-height: 16.848px; overflow-wrap: anywhere; white-space: pre-wrap; word-break: break-word; }
+.ͼ1p .cm-activeLine { background-color: transparent; }
+.ͼ1o { background-color: transparent; color: rgb(92, 92, 92); font-family: "CMU Serif", 华文中宋, "??", ui-sans-serif, -apple-system, BlinkMacSystemFont, system-ui, "Segoe UI", "Google Sans Flex", Roboto, "Inter Variable", Inter, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", sans-serif; font-size: 12.48px; font-style: normal; font-weight: 400; height: auto; line-height: 16.848px; max-height: none; max-width: 100%; min-width: 0px; width: 100%; }
+.ͼ1o .cm-scroller { background-color: transparent; font-family: "CMU Serif", 华文中宋, "??", ui-sans-serif, -apple-system, BlinkMacSystemFont, system-ui, "Segoe UI", "Google Sans Flex", Roboto, "Inter Variable", Inter, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", sans-serif; font-size: 12.48px; font-style: normal; font-weight: 400; height: auto; line-height: 16.848px; max-height: none; max-width: 100%; min-width: 0px; overflow: visible; width: 100%; }
+.ͼ1o .cm-content { background-color: transparent; font-family: "CMU Serif", 华文中宋, "??", ui-sans-serif, -apple-system, BlinkMacSystemFont, system-ui, "Segoe UI", "Google Sans Flex", Roboto, "Inter Variable", Inter, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", sans-serif; font-size: 12.48px; font-style: normal; font-weight: 400; line-height: 16.848px; max-width: 100%; min-width: 0px; width: 100%; }
+.ͼ1o .cm-line { background-color: transparent; font-family: "CMU Serif", 华文中宋, "??", ui-sans-serif, -apple-system, BlinkMacSystemFont, system-ui, "Segoe UI", "Google Sans Flex", Roboto, "Inter Variable", Inter, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", sans-serif; font-size: 12.48px; font-style: normal; font-weight: 400; line-height: 16.848px; overflow-wrap: anywhere; white-space: pre-wrap; word-break: break-word; }
+.ͼ1o .cm-activeLine { background-color: transparent; }
+.ͼ1n { background-color: transparent; color: rgb(92, 92, 92); font-family: "CMU Serif", 华文中宋, "??", ui-sans-serif, -apple-system, BlinkMacSystemFont, system-ui, "Segoe UI", "Google Sans Flex", Roboto, "Inter Variable", Inter, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", sans-serif; font-size: 12.48px; font-style: normal; font-weight: 400; height: auto; line-height: 16.848px; max-height: none; max-width: 100%; min-width: 0px; width: 100%; }
+.ͼ1n .cm-scroller { background-color: transparent; font-family: "CMU Serif", 华文中宋, "??", ui-sans-serif, -apple-system, BlinkMacSystemFont, system-ui, "Segoe UI", "Google Sans Flex", Roboto, "Inter Variable", Inter, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", sans-serif; font-size: 12.48px; font-style: normal; font-weight: 400; height: auto; line-height: 16.848px; max-height: none; max-width: 100%; min-width: 0px; overflow: visible; width: 100%; }
+.ͼ1n .cm-content { background-color: transparent; font-family: "CMU Serif", 华文中宋, "??", ui-sans-serif, -apple-system, BlinkMacSystemFont, system-ui, "Segoe UI", "Google Sans Flex", Roboto, "Inter Variable", Inter, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", sans-serif; font-size: 12.48px; font-style: normal; font-weight: 400; line-height: 16.848px; max-width: 100%; min-width: 0px; width: 100%; }
+.ͼ1n .cm-line { background-color: transparent; font-family: "CMU Serif", 华文中宋, "??", ui-sans-serif, -apple-system, BlinkMacSystemFont, system-ui, "Segoe UI", "Google Sans Flex", Roboto, "Inter Variable", Inter, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", sans-serif; font-size: 12.48px; font-style: normal; font-weight: 400; line-height: 16.848px; overflow-wrap: anywhere; white-space: pre-wrap; word-break: break-word; }
+.ͼ1n .cm-activeLine { background-color: transparent; }
+.ͼ1m { background-color: transparent; color: rgb(92, 92, 92); font-family: "CMU Serif", 华文中宋, "??", ui-sans-serif, -apple-system, BlinkMacSystemFont, system-ui, "Segoe UI", "Google Sans Flex", Roboto, "Inter Variable", Inter, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", sans-serif; font-size: 12.48px; font-style: normal; font-weight: 400; height: auto; line-height: 16.848px; max-height: none; max-width: 100%; min-width: 0px; width: 100%; }
+.ͼ1m .cm-scroller { background-color: transparent; font-family: "CMU Serif", 华文中宋, "??", ui-sans-serif, -apple-system, BlinkMacSystemFont, system-ui, "Segoe UI", "Google Sans Flex", Roboto, "Inter Variable", Inter, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", sans-serif; font-size: 12.48px; font-style: normal; font-weight: 400; height: auto; line-height: 16.848px; max-height: none; max-width: 100%; min-width: 0px; overflow: visible; width: 100%; }
+.ͼ1m .cm-content { background-color: transparent; font-family: "CMU Serif", 华文中宋, "??", ui-sans-serif, -apple-system, BlinkMacSystemFont, system-ui, "Segoe UI", "Google Sans Flex", Roboto, "Inter Variable", Inter, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", sans-serif; font-size: 12.48px; font-style: normal; font-weight: 400; line-height: 16.848px; max-width: 100%; min-width: 0px; width: 100%; }
+.ͼ1m .cm-line { background-color: transparent; font-family: "CMU Serif", 华文中宋, "??", ui-sans-serif, -apple-system, BlinkMacSystemFont, system-ui, "Segoe UI", "Google Sans Flex", Roboto, "Inter Variable", Inter, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", sans-serif; font-size: 12.48px; font-style: normal; font-weight: 400; line-height: 16.848px; overflow-wrap: anywhere; white-space: pre-wrap; word-break: break-word; }
+.ͼ1m .cm-activeLine { background-color: transparent; }
+.ͼ1l { background-color: transparent; color: rgb(92, 92, 92); font-family: "CMU Serif", 华文中宋, "??", ui-sans-serif, -apple-system, BlinkMacSystemFont, system-ui, "Segoe UI", "Google Sans Flex", Roboto, "Inter Variable", Inter, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", sans-serif; font-size: 12.48px; font-style: normal; font-weight: 400; height: auto; line-height: 16.848px; max-height: none; max-width: 100%; min-width: 0px; width: 100%; }
+.ͼ1l .cm-scroller { background-color: transparent; font-family: "CMU Serif", 华文中宋, "??", ui-sans-serif, -apple-system, BlinkMacSystemFont, system-ui, "Segoe UI", "Google Sans Flex", Roboto, "Inter Variable", Inter, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", sans-serif; font-size: 12.48px; font-style: normal; font-weight: 400; height: auto; line-height: 16.848px; max-height: none; max-width: 100%; min-width: 0px; overflow: visible; width: 100%; }
+.ͼ1l .cm-content { background-color: transparent; font-family: "CMU Serif", 华文中宋, "??", ui-sans-serif, -apple-system, BlinkMacSystemFont, system-ui, "Segoe UI", "Google Sans Flex", Roboto, "Inter Variable", Inter, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", sans-serif; font-size: 12.48px; font-style: normal; font-weight: 400; line-height: 16.848px; max-width: 100%; min-width: 0px; width: 100%; }
+.ͼ1l .cm-line { background-color: transparent; font-family: "CMU Serif", 华文中宋, "??", ui-sans-serif, -apple-system, BlinkMacSystemFont, system-ui, "Segoe UI", "Google Sans Flex", Roboto, "Inter Variable", Inter, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", sans-serif; font-size: 12.48px; font-style: normal; font-weight: 400; line-height: 16.848px; overflow-wrap: anywhere; white-space: pre-wrap; word-break: break-word; }
+.ͼ1l .cm-activeLine { background-color: transparent; }
+.ͼ1k { background-color: transparent; color: rgb(92, 92, 92); font-family: "CMU Serif", 华文中宋, "??", ui-sans-serif, -apple-system, BlinkMacSystemFont, system-ui, "Segoe UI", "Google Sans Flex", Roboto, "Inter Variable", Inter, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", sans-serif; font-size: 12.48px; font-style: normal; font-weight: 400; height: auto; line-height: 16.848px; max-height: none; max-width: 100%; min-width: 0px; width: 100%; }
+.ͼ1k .cm-scroller { background-color: transparent; font-family: "CMU Serif", 华文中宋, "??", ui-sans-serif, -apple-system, BlinkMacSystemFont, system-ui, "Segoe UI", "Google Sans Flex", Roboto, "Inter Variable", Inter, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", sans-serif; font-size: 12.48px; font-style: normal; font-weight: 400; height: auto; line-height: 16.848px; max-height: none; max-width: 100%; min-width: 0px; overflow: visible; width: 100%; }
+.ͼ1k .cm-content { background-color: transparent; font-family: "CMU Serif", 华文中宋, "??", ui-sans-serif, -apple-system, BlinkMacSystemFont, system-ui, "Segoe UI", "Google Sans Flex", Roboto, "Inter Variable", Inter, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", sans-serif; font-size: 12.48px; font-style: normal; font-weight: 400; line-height: 16.848px; max-width: 100%; min-width: 0px; width: 100%; }
+.ͼ1k .cm-line { background-color: transparent; font-family: "CMU Serif", 华文中宋, "??", ui-sans-serif, -apple-system, BlinkMacSystemFont, system-ui, "Segoe UI", "Google Sans Flex", Roboto, "Inter Variable", Inter, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", sans-serif; font-size: 12.48px; font-style: normal; font-weight: 400; line-height: 16.848px; overflow-wrap: anywhere; white-space: pre-wrap; word-break: break-word; }
+.ͼ1k .cm-activeLine { background-color: transparent; }
+.ͼ1j { background-color: transparent; color: rgb(92, 92, 92); font-family: "CMU Serif", 华文中宋, "??", ui-sans-serif, -apple-system, BlinkMacSystemFont, system-ui, "Segoe UI", "Google Sans Flex", Roboto, "Inter Variable", Inter, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", sans-serif; font-size: 12.48px; font-style: normal; font-weight: 400; height: auto; line-height: 16.848px; max-height: none; max-width: 100%; min-width: 0px; width: 100%; }
+.ͼ1j .cm-scroller { background-color: transparent; font-family: "CMU Serif", 华文中宋, "??", ui-sans-serif, -apple-system, BlinkMacSystemFont, system-ui, "Segoe UI", "Google Sans Flex", Roboto, "Inter Variable", Inter, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", sans-serif; font-size: 12.48px; font-style: normal; font-weight: 400; height: auto; line-height: 16.848px; max-height: none; max-width: 100%; min-width: 0px; overflow: visible; width: 100%; }
+.ͼ1j .cm-content { background-color: transparent; font-family: "CMU Serif", 华文中宋, "??", ui-sans-serif, -apple-system, BlinkMacSystemFont, system-ui, "Segoe UI", "Google Sans Flex", Roboto, "Inter Variable", Inter, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", sans-serif; font-size: 12.48px; font-style: normal; font-weight: 400; line-height: 16.848px; max-width: 100%; min-width: 0px; width: 100%; }
+.ͼ1j .cm-line { background-color: transparent; font-family: "CMU Serif", 华文中宋, "??", ui-sans-serif, -apple-system, BlinkMacSystemFont, system-ui, "Segoe UI", "Google Sans Flex", Roboto, "Inter Variable", Inter, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", sans-serif; font-size: 12.48px; font-style: normal; font-weight: 400; line-height: 16.848px; overflow-wrap: anywhere; white-space: pre-wrap; word-break: break-word; }
+.ͼ1j .cm-activeLine { background-color: transparent; }
+.ͼ1i { background-color: transparent; color: rgb(92, 92, 92); font-family: "CMU Serif", 华文中宋, "??", ui-sans-serif, -apple-system, BlinkMacSystemFont, system-ui, "Segoe UI", "Google Sans Flex", Roboto, "Inter Variable", Inter, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", sans-serif; font-size: 12.48px; font-style: normal; font-weight: 400; height: auto; line-height: 16.848px; max-height: none; max-width: 100%; min-width: 0px; width: 100%; }
+.ͼ1i .cm-scroller { background-color: transparent; font-family: "CMU Serif", 华文中宋, "??", ui-sans-serif, -apple-system, BlinkMacSystemFont, system-ui, "Segoe UI", "Google Sans Flex", Roboto, "Inter Variable", Inter, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", sans-serif; font-size: 12.48px; font-style: normal; font-weight: 400; height: auto; line-height: 16.848px; max-height: none; max-width: 100%; min-width: 0px; overflow: visible; width: 100%; }
+.ͼ1i .cm-content { background-color: transparent; font-family: "CMU Serif", 华文中宋, "??", ui-sans-serif, -apple-system, BlinkMacSystemFont, system-ui, "Segoe UI", "Google Sans Flex", Roboto, "Inter Variable", Inter, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", sans-serif; font-size: 12.48px; font-style: normal; font-weight: 400; line-height: 16.848px; max-width: 100%; min-width: 0px; width: 100%; }
+.ͼ1i .cm-line { background-color: transparent; font-family: "CMU Serif", 华文中宋, "??", ui-sans-serif, -apple-system, BlinkMacSystemFont, system-ui, "Segoe UI", "Google Sans Flex", Roboto, "Inter Variable", Inter, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", sans-serif; font-size: 12.48px; font-style: normal; font-weight: 400; line-height: 16.848px; overflow-wrap: anywhere; white-space: pre-wrap; word-break: break-word; }
+.ͼ1i .cm-activeLine { background-color: transparent; }
+.ͼ1h { background-color: transparent; color: rgb(92, 92, 92); font-family: "CMU Serif", 华文中宋, "??", ui-sans-serif, -apple-system, BlinkMacSystemFont, system-ui, "Segoe UI", "Google Sans Flex", Roboto, "Inter Variable", Inter, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", sans-serif; font-size: 12.48px; font-style: normal; font-weight: 400; height: auto; line-height: 16.848px; max-height: none; max-width: 100%; min-width: 0px; width: 100%; }
+.ͼ1h .cm-scroller { background-color: transparent; font-family: "CMU Serif", 华文中宋, "??", ui-sans-serif, -apple-system, BlinkMacSystemFont, system-ui, "Segoe UI", "Google Sans Flex", Roboto, "Inter Variable", Inter, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", sans-serif; font-size: 12.48px; font-style: normal; font-weight: 400; height: auto; line-height: 16.848px; max-height: none; max-width: 100%; min-width: 0px; overflow: visible; width: 100%; }
+.ͼ1h .cm-content { background-color: transparent; font-family: "CMU Serif", 华文中宋, "??", ui-sans-serif, -apple-system, BlinkMacSystemFont, system-ui, "Segoe UI", "Google Sans Flex", Roboto, "Inter Variable", Inter, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", sans-serif; font-size: 12.48px; font-style: normal; font-weight: 400; line-height: 16.848px; max-width: 100%; min-width: 0px; width: 100%; }
+.ͼ1h .cm-line { background-color: transparent; font-family: "CMU Serif", 华文中宋, "??", ui-sans-serif, -apple-system, BlinkMacSystemFont, system-ui, "Segoe UI", "Google Sans Flex", Roboto, "Inter Variable", Inter, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", sans-serif; font-size: 12.48px; font-style: normal; font-weight: 400; line-height: 16.848px; overflow-wrap: anywhere; white-space: pre-wrap; word-break: break-word; }
+.ͼ1h .cm-activeLine { background-color: transparent; }
+.ͼ1g { background-color: transparent; color: rgb(92, 92, 92); font-family: "CMU Serif", 华文中宋, "??", ui-sans-serif, -apple-system, BlinkMacSystemFont, system-ui, "Segoe UI", "Google Sans Flex", Roboto, "Inter Variable", Inter, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", sans-serif; font-size: 12.48px; font-style: normal; font-weight: 400; height: auto; line-height: 16.848px; max-height: none; max-width: 100%; min-width: 0px; width: 100%; }
+.ͼ1g .cm-scroller { background-color: transparent; font-family: "CMU Serif", 华文中宋, "??", ui-sans-serif, -apple-system, BlinkMacSystemFont, system-ui, "Segoe UI", "Google Sans Flex", Roboto, "Inter Variable", Inter, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", sans-serif; font-size: 12.48px; font-style: normal; font-weight: 400; height: auto; line-height: 16.848px; max-height: none; max-width: 100%; min-width: 0px; overflow: visible; width: 100%; }
+.ͼ1g .cm-content { background-color: transparent; font-family: "CMU Serif", 华文中宋, "??", ui-sans-serif, -apple-system, BlinkMacSystemFont, system-ui, "Segoe UI", "Google Sans Flex", Roboto, "Inter Variable", Inter, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", sans-serif; font-size: 12.48px; font-style: normal; font-weight: 400; line-height: 16.848px; max-width: 100%; min-width: 0px; width: 100%; }
+.ͼ1g .cm-line { background-color: transparent; font-family: "CMU Serif", 华文中宋, "??", ui-sans-serif, -apple-system, BlinkMacSystemFont, system-ui, "Segoe UI", "Google Sans Flex", Roboto, "Inter Variable", Inter, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", sans-serif; font-size: 12.48px; font-style: normal; font-weight: 400; line-height: 16.848px; overflow-wrap: anywhere; white-space: pre-wrap; word-break: break-word; }
+.ͼ1g .cm-activeLine { background-color: transparent; }
+.ͼ1f { background-color: transparent; color: rgb(92, 92, 92); font-family: "CMU Serif", 华文中宋, "??", ui-sans-serif, -apple-system, BlinkMacSystemFont, system-ui, "Segoe UI", "Google Sans Flex", Roboto, "Inter Variable", Inter, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", sans-serif; font-size: 12.48px; font-style: normal; font-weight: 400; height: auto; line-height: 16.848px; max-height: none; max-width: 100%; min-width: 0px; width: 100%; }
+.ͼ1f .cm-scroller { background-color: transparent; font-family: "CMU Serif", 华文中宋, "??", ui-sans-serif, -apple-system, BlinkMacSystemFont, system-ui, "Segoe UI", "Google Sans Flex", Roboto, "Inter Variable", Inter, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", sans-serif; font-size: 12.48px; font-style: normal; font-weight: 400; height: auto; line-height: 16.848px; max-height: none; max-width: 100%; min-width: 0px; overflow: visible; width: 100%; }
+.ͼ1f .cm-content { background-color: transparent; font-family: "CMU Serif", 华文中宋, "??", ui-sans-serif, -apple-system, BlinkMacSystemFont, system-ui, "Segoe UI", "Google Sans Flex", Roboto, "Inter Variable", Inter, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", sans-serif; font-size: 12.48px; font-style: normal; font-weight: 400; line-height: 16.848px; max-width: 100%; min-width: 0px; width: 100%; }
+.ͼ1f .cm-line { background-color: transparent; font-family: "CMU Serif", 华文中宋, "??", ui-sans-serif, -apple-system, BlinkMacSystemFont, system-ui, "Segoe UI", "Google Sans Flex", Roboto, "Inter Variable", Inter, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", sans-serif; font-size: 12.48px; font-style: normal; font-weight: 400; line-height: 16.848px; overflow-wrap: anywhere; white-space: pre-wrap; word-break: break-word; }
+.ͼ1f .cm-activeLine { background-color: transparent; }
+.ͼ1e { background-color: transparent; color: rgb(92, 92, 92); font-family: "CMU Serif", 华文中宋, "??", ui-sans-serif, -apple-system, BlinkMacSystemFont, system-ui, "Segoe UI", "Google Sans Flex", Roboto, "Inter Variable", Inter, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", sans-serif; font-size: 12.48px; font-style: normal; font-weight: 400; height: auto; line-height: 16.848px; max-height: none; max-width: 100%; min-width: 0px; width: 100%; }
+.ͼ1e .cm-scroller { background-color: transparent; font-family: "CMU Serif", 华文中宋, "??", ui-sans-serif, -apple-system, BlinkMacSystemFont, system-ui, "Segoe UI", "Google Sans Flex", Roboto, "Inter Variable", Inter, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", sans-serif; font-size: 12.48px; font-style: normal; font-weight: 400; height: auto; line-height: 16.848px; max-height: none; max-width: 100%; min-width: 0px; overflow: visible; width: 100%; }
+.ͼ1e .cm-content { background-color: transparent; font-family: "CMU Serif", 华文中宋, "??", ui-sans-serif, -apple-system, BlinkMacSystemFont, system-ui, "Segoe UI", "Google Sans Flex", Roboto, "Inter Variable", Inter, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", sans-serif; font-size: 12.48px; font-style: normal; font-weight: 400; line-height: 16.848px; max-width: 100%; min-width: 0px; width: 100%; }
+.ͼ1e .cm-line { background-color: transparent; font-family: "CMU Serif", 华文中宋, "??", ui-sans-serif, -apple-system, BlinkMacSystemFont, system-ui, "Segoe UI", "Google Sans Flex", Roboto, "Inter Variable", Inter, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", sans-serif; font-size: 12.48px; font-style: normal; font-weight: 400; line-height: 16.848px; overflow-wrap: anywhere; white-space: pre-wrap; word-break: break-word; }
+.ͼ1e .cm-activeLine { background-color: transparent; }
+.ͼ1d { background-color: transparent; color: rgb(92, 92, 92); font-family: "CMU Serif", 华文中宋, "??", ui-sans-serif, -apple-system, BlinkMacSystemFont, system-ui, "Segoe UI", "Google Sans Flex", Roboto, "Inter Variable", Inter, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", sans-serif; font-size: 12.48px; font-style: normal; font-weight: 400; height: auto; line-height: 16.848px; max-height: none; max-width: 100%; min-width: 0px; width: 100%; }
+.ͼ1d .cm-scroller { background-color: transparent; font-family: "CMU Serif", 华文中宋, "??", ui-sans-serif, -apple-system, BlinkMacSystemFont, system-ui, "Segoe UI", "Google Sans Flex", Roboto, "Inter Variable", Inter, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", sans-serif; font-size: 12.48px; font-style: normal; font-weight: 400; height: auto; line-height: 16.848px; max-height: none; max-width: 100%; min-width: 0px; overflow: visible; width: 100%; }
+.ͼ1d .cm-content { background-color: transparent; font-family: "CMU Serif", 华文中宋, "??", ui-sans-serif, -apple-system, BlinkMacSystemFont, system-ui, "Segoe UI", "Google Sans Flex", Roboto, "Inter Variable", Inter, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", sans-serif; font-size: 12.48px; font-style: normal; font-weight: 400; line-height: 16.848px; max-width: 100%; min-width: 0px; width: 100%; }
+.ͼ1d .cm-line { background-color: transparent; font-family: "CMU Serif", 华文中宋, "??", ui-sans-serif, -apple-system, BlinkMacSystemFont, system-ui, "Segoe UI", "Google Sans Flex", Roboto, "Inter Variable", Inter, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", sans-serif; font-size: 12.48px; font-style: normal; font-weight: 400; line-height: 16.848px; overflow-wrap: anywhere; white-space: pre-wrap; word-break: break-word; }
 .ͼ1d .cm-activeLine { background-color: transparent; }
-.ͼ1d .cm-focused .cm-activeLine { background-color: transparent; }
-.ͼ1d .cm-selectionLayer { display: none; }
-.ͼ1d .cm-selectionBackground { background-color: transparent; }
-.ͼ1d .cm-placeholder { line-height: 20px; color: var(--text-muted); white-space: nowrap; pointer-events: none; }
+.ͼ1b { height: 100%; min-height: 0px; background-color: transparent; }
+.ͼ1b .cm-scroller { height: 100%; min-height: 0px; overflow: hidden auto; padding: var(--input-padding); font-family: var(--font-text); }
+.ͼ1b .cm-content { min-height: 0px; padding: 0px; line-height: var(--line-height-tight); background-color: transparent; caret-color: var(--text-normal); }
+.ͼ1b .cm-sizer { min-width: 0px; border-right: 0px !important; }
+.ͼ1b .cm-line { padding: 0px; background-color: transparent; }
+.ͼ1b .cm-activeLine { background-color: transparent !important; }
+.ͼ1b.cm-focused .cm-activeLine { background-color: transparent !important; }
+.ͼ1b .cm-line.cm-active { background-color: transparent !important; }
+.ͼ1b .cm-placeholder { color: var(--input-placeholder-color); pointer-events: none; }
+.ͼ1b .cm-selectionBackground { background-color: var(--text-selection) !important; }
+.ͼ1b .cm-content ::selection { background-color: var(--text-selection); }
+.ͼ1.cm-focused .cm-matchingBracket { background-color: rgba(50, 140, 130, 0.32); }
+.ͼ1.cm-focused .cm-nonmatchingBracket { background-color: rgba(187, 85, 85, 0.267); }
 :root { --about-blank-logo-image: none; --about-blank-logo-size: 120px; }
 .workspace-split.mod-root .empty-state-action:not(.about-blank-visible), .workspace-split.mod-root .empty-state-title:not(.about-blank-visible) { display: none; }
 .workspace-split.mod-root .empty-state-container.about-blank-managed .empty-state-action[hidden] { display: none !important; }
