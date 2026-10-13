@@ -338,6 +338,7 @@ body, [dir="ltr"] { --direction: 1; --inset-start: left; --inset-end: right; --s
 }
 @media (hover: hover) {
 }
+.view-header-nav-buttons { --icon-size: var(--icon-s); align-items: center; display: flex; }
 @media (hover: hover) {
 }
 @media (hover: hover) {
@@ -633,6 +634,8 @@ select.mod-hidden { display: none; }
 .error-container { align-items: center; display: flex; flex-direction: column; padding: var(--size-4-4); gap: var(--size-4-6); text-align: center; }
 .mod-warning { color: var(--text-warning); }
 .mod-success { color: var(--text-success); }
+.nav-header { padding: var(--size-4-2); }
+.nav-header .search-input-container { margin: 4px auto; padding: 0px; }
 .nav-buttons-container { flex-wrap: wrap; gap: var(--size-2-1); }
 .nav-buttons-container.has-separator { border-bottom: 1px solid var(--background-modifier-border); padding-bottom: var(--size-2-3); margin-bottom: var(--size-4-2); }
 .nav-buttons-container .nav-action-button.is-active { color: var(--icon-color-focused); background-color: var(--background-modifier-hover); }
@@ -698,7 +701,15 @@ body.styled-scrollbars ::-webkit-scrollbar-corner { background: transparent; }
 @supports not selector(::-webkit-scrollbar) {
   body.styled-scrollbars { scrollbar-width: thin; scrollbar-color: var(--scrollbar-thumb-bg) var(--scrollbar-bg); }
 }
+.horizontal-tab-nav-item, .vertical-tab-nav-item { padding: var(--size-4-1) var(--size-4-2); margin-bottom: 0px; user-select: none; cursor: var(--cursor); font-size: var(--font-ui-small); border-radius: var(--radius-m); corner-shape: var(--corner-shape); }
+.vertical-tab-nav-item { display: flex; }
+.vertical-tab-nav-item-chevron { display: none; }
+.vertical-tab-nav-item-icon { display: flex; align-items: center; justify-content: center; border-radius: var(--radius-s); margin-inline-end: var(--size-4-2); flex-shrink: 0; color: var(--text-muted); }
+.vertical-tab-nav-item-title { flex-grow: 1; overflow: hidden; text-overflow: ellipsis; white-space: pre; }
+.vertical-tab-nav-item:focus-visible { box-shadow: 0 0 0 var(--input-border-width-focus) var(--background-modifier-border-focus); outline: none; }
 @media (forced-colors: active) {
+  .horizontal-tab-nav-item, .vertical-tab-nav-item { --interactive-accent: SelectedItem; }
+  .vertical-tab-nav-item:focus-visible { box-shadow: highlight 0px 0px 0px 2px inset; }
 }
 .checkbox-container { app-region: no-drag; cursor: var(--cursor); background-color: var(--background-modifier-border-hover); border-radius: var(--toggle-radius); display: inline-block; flex-shrink: 0; position: relative; user-select: none; box-shadow: rgba(0, 0, 0, 0.07) 0px 4px 10px inset; transition: box-shadow 0.15s ease-in-out, outline 0.15s ease-in-out, border 0.15s ease-in-out, opacity 0.15s ease-in-out; outline: 0 solid var(--background-modifier-border-focus); width: var(--toggle-s-width); height: calc(var(--toggle-s-thumb-height) + var(--toggle-s-border-width) * 2); }
 .checkbox-container input[type="checkbox"] { position: absolute; opacity: 0; left: 0px; }
@@ -1217,6 +1228,9 @@ i, em { font-style: italic; color: var(--italic-color); }
 .embedded-backlinks .backlink-pane > .tree-item-self { font-size: max(var(--font-ui-small),1em); width: fit-content; }
 .embedded-backlinks .backlink-pane > .tree-item-self .tree-item-inner { margin-inline-end: var(--size-2-3); }
 .embedded-backlinks .backlink-pane .tree-item-flair { font-size: max(var(--font-ui-small),var(--font-smallest)); }
+.embedded-backlinks .nav-header { padding: var(--size-4-3) 0 0 0; position: relative; }
+.embedded-backlinks .nav-header > .search-input-container { width: calc(100% - 150px); margin: 0 0 var(--size-4-3) 0; }
+.embedded-backlinks .nav-buttons-container { position: absolute; inset-inline-end: 0px; top: var(--size-4-3); z-index: 1; }
 .bases-view { overflow: auto; flex-grow: 1; padding: var(--bases-view-padding); scrollbar-gutter: stable; }
 .bases-view.is-being-dragged-over { position: relative; }
 .bases-view.is-being-dragged-over::after { content: ""; pointer-events: none; position: absolute; inset: 0px; background: color-mix(in oklch, var(--interactive-accent) 10%, transparent); z-index: var(--layer-cover); }

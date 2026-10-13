@@ -2,235 +2,86 @@
   "version": 2,
   "files": {
     "site-lib/scripts/webpage.js": "91ccb1038c2573388c0249bb948b0ae2733953024c0441cfb0b39f61bb5b0296",
-    "site-lib/scripts/notebook-navigation.js": "e3047008f110f54783cb5e06ed7ed81032b1b6c9b4d6843d98a4150e79f54df2",
+    "site-lib/scripts/notebook-navigation.js": "a4331c822d7f15d093c5b44b4960500ae7915c1a837b867ba625367c7e17c1e9",
     "site-lib/scripts/editing-suite.js": "87df6aa4950e59b2318fe46c03cc15c66b067ee36c688f4488493739d6ba4c10",
-    "site-lib/styles/export-webpage.css": "90738a4d2be2de9ae3489dad6254c95274997260a76b51338f68153fc4510dbd",
-    "site-lib/styles/main-styles.css": "c1442929689120edcac8f91f41b4f4d513e620600bd03ff1cc96e7f086afd0aa",
-    "site-lib/styles/obsidian.css": "8d062167e932613dacdb3e75e1899a2b0536320871ea2b5e240a7b83d38734bf",
+    "site-lib/styles/export-webpage.css": "06abcbfe497310371999c0014bfd726e17df2c6166ccae9e95a9ca8dbbc82c33",
+    "site-lib/styles/main-styles.css": "79648c459e52aa50cc4609fafa7aff011efa8417672860a2e34f9846e4abd4c7",
+    "site-lib/styles/obsidian.css": "8c7db4c4b9c9ab22475fde8cbccf5a3600a1dba731ef08885b184878bd66ed06",
     "site-lib/styles/local-fonts.css": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
     "site-lib/styles/theme.css": "0e446061bba8b1ee44f46b08013f684973ad627663b1532d00e498638ab251a2",
     "site-lib/styles/snippets.css": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
-    "site-lib/styles/other-plugins.css": "7b8eeb35bf75afe95ee9f3887814877ae50c098c6bddcd1a493a9052d2e7a048",
+    "site-lib/styles/other-plugins.css": "4d0098b448f91aa09adb5454cb551002262e794ab9b9f996dae49ff4eeabc765",
     "site-lib/styles/editing-suite.css": "f03a5e141094e2e1d39295c14721e733f69e1f985dedce2411cdc5b2c1244543",
     "site-lib/styles/editing-suite-export.css": "b555d3f9c97e857507988f5b4a7acca1a51e0520707bb2d8ddbe41ddee124427",
     "site-lib/styles/global-variable-styles.css": "d2af45ddcb2b2772c553fb7447d0a3d4fe63c3c931295dc2be59a250eabc2f25",
     "site-lib/styles/supported-plugins.css": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
-    "site-lib/html/file-tree.html": "db8eec0c0f379d09c91e7831c00cda5ba7fd04aaa7f3b296def6cd95c5d35c83",
-    "site-lib/search-index.json": "29114ccfca6e35c1db030a6ed30b5d19988e3e66dd19bc69f2f6b8b994677c69",
-    "site-lib/metadata.json": "ac86c5664317890e47d449d1a9ba9acc37fd8de642742134cfbcf0e0890f8fcf",
-    "index.html": "818593546e89f016f1753e3dc24902b5e37de36d4187ece86c5451a275222a88",
-    "高阶核表示论/前言.html": "9cfe72cc7d62553d811d9af0a1e002f562dc1c47ac8ab4aa334a2b7752f1a917",
-    "高阶核表示论/记号约定.html": "9abd81b6f544a93fb7b7bc377c9b89a2ba05179e681923b398cceef59f838ea3",
-    "高阶核表示论/高阶核的模.html": "33c557c35f8b30cd7edc4575b304311f64f57045f8563f91c2fa7cacdcd1cf3d",
-    "高阶核表示论/模的滤过.html": "60c298423e37b03cd36f5add2dd3029127ca6f77ca9602f3ee4b2b9a5c62dc7e",
-    "高阶核表示论/相邻同态/相邻诱导模.html": "85a75c9689f58c28ff20605354e11cedca3521556f1dcbab9c5b785d5c93569a",
-    "高阶核表示论/相邻同态/核与像.html": "b1ee20397257e0941e7c76a94d6dd13746cd65ccf6b7e12251b8640599e92fda",
-    "高阶核表示论/相邻同态/特征标.html": "dd8afae667877c5b02356c1c7a62f74b1b1ab60f5dd8c1eca2e083ba08730454",
-    "高阶核表示论/相邻同态/权的变形.html": "81ce8acf1d6a69768e8da696571d7ed7ec1f2cbffb50554c83522b20bd2dea90",
-    "高阶核表示论/相邻同态/同调与分辨.html": "d858218dfe5fbba994c58fb790753d7d66259df4a68ac9450257098b50842040",
-    "高阶核表示论/相邻同态/相反正根系.html": "0e14ff5a0e6a44985f32c570793d43c3bc050bc2d8b77bcef7d0de70e1eac1c8",
-    "高阶核表示论/相邻同态/正合诱导.html": "28381cf0269eb3025c70ddd80ed2665af4439319f3a6906d16421d867683d24e",
-    "高阶核表示论/相邻同态/变权正合列.html": "c53ad909d9c22b27c5d787b93639ba5a2866060414279ba2a33e4aefb639c767",
-    "高阶核表示论/相邻同态/相邻核与扩张.html": "121760d082bc641eb6dc5be17453ce90682d35c0dfae877afb80e75b923979da",
-    "高阶核表示论/相邻同态/前言.html": "f4efc067dc6008f96cfe8274c694564d6981927d58cbafd5343c21c194405950",
-    "高阶核表示论/秩一表示/权空间与子模.html": "07bdc910f6fc6e7bc9d1f36a3ff95d4ba839a7155219fca02846f80e28610895",
-    "高阶核表示论/秩一表示/同态与简单模.html": "868d976502c56739d4aa8a6780c85728f941ba769b162730fc414991020a9af2",
-    "高阶核表示论/秩一表示/借位与子模格.html": "3c5042c1410e19a28c03e19855c6019cbce37b476c1c435e1823cffcac73b6b0",
-    "高阶核表示论/秩一表示/零权模.html": "05995c14a3b3c908c8173437b95726783719667a5916f32cc5663024d824cbbf",
-    "高阶核表示论/秩一表示/前言.html": "ff73f5d093aea6a8b2d2e5f5a8ba299a931fbe2b61de28ccad3ca1ad534c5649",
-    "高阶核表示论/反变配对/整格与配对.html": "d69672fef730c6e37ac98e7a7a4fb16fd7efd0f424df1d655d28707e6b28ea9b",
-    "高阶核表示论/反变配对/秩一配对滤过.html": "2a740304da8747b0321995aa01cf95bee2de4713474fac8328fcbead314e133c",
-    "高阶核表示论/反变配对/诱导滤过.html": "643536e850db04d87fbf5bed844daa40d93fbed7eef46b39c37722739895ee8d",
-    "高阶核表示论/反变配对/前言.html": "b1426544a56a2ca874128692701dd27cc3d896edebf4ba212a7323788d67846e",
-    "高阶核表示论/投射模/投射性与滤过.html": "f14e982266c9349693b70dbae4ac670d434016a94e6e8615c9a2c5ea28b777ca",
-    "高阶核表示论/投射模/投射生成元.html": "88b23418745a0a248c18fba270cfc9c8370c14fc67aabeb7b48eee137ba1bdbe",
-    "高阶核表示论/投射模/典型投射模.html": "ec6ba7b08786ff153d596e844c6acb8e2e0727d5c7eda81792ab22d0a3beaa46",
-    "高阶核表示论/投射模/前言.html": "c88761c80c09acbf29ef26b7cbd319406aabd8f6d758c03d9458e5d568bad4da",
-    "高阶核表示论/特殊线性超群/矩阵模型.html": "ba9dbcb5b04ab03eeb1cc55f967b41a7ff94b2b0e9c57c996648dcd4c3084631",
-    "高阶核表示论/特殊线性超群/配对与和公式.html": "1bfc812db4fb8fc6d45fbff3719b1c13d9307ed2a9f8633fcca29dd13938c7fc",
-    "高阶核表示论/特殊线性超群/整提升的选择.html": "a10b8fd016aee8dad9d66445c85e6a7341fec9750b1cf16465975452192fca3f",
-    "高阶核表示论/特殊线性超群/零权子模格.html": "ef490441ca4dda99d8908e29c9eb7e143577a3bb7275b9d68bb1a7e9bfb0242b",
-    "高阶核表示论/特殊线性超群/非典型权的子模.html": "d2ca26a45e58447ecea86c2b71b29f87bc7bb80a6031b2e06aab0ca275b8bb3b",
-    "高阶核表示论/特殊线性超群/投射子商.html": "e6ebbcd64120f3f7fa6f54d33b506889f6d4fd1559118a5ffc4edc12f41af2c3",
-    "高阶核表示论/特殊线性超群/张量分解.html": "047b2e5b02eb5134458c057e6047b26d0fa4d20b46071b671118b21037109b1a",
-    "高阶核表示论/特殊线性超群/根基滤过.html": "7b4c5965e6a8d9ba25a88e746d2f671084a5fc78a78543373e1dafe8f1472713",
-    "高阶核表示论/特殊线性超群/一维模扭转.html": "8cece609a8c01dc3cb23c676d1881ba49b092ee219921f33ff07c1f1bcad008a",
-    "高阶核表示论/特殊线性超群/前言.html": "22f70c4985f2c73009d72c73e99ffe174d2f373ec5d4d5346937e52e932bb8c4",
-    "高阶核表示论/正根系与同态/全旗与正根系.html": "5aaa6ad440c09b72eccfcc8073dc8373c432f138b37272d4ce70eb4ce9464259",
-    "高阶核表示论/正根系与同态/标准正根系的同态.html": "7f9b0bd5321e402757ec856bddc4a5ee11f062bc8910df5dbe6a00371f26c8b8",
-    "高阶核表示论/正根系与同态/同态分类.html": "bf9eda0cdd4877d9080723ef6eb048366862d4ac4d52668a2acb8eaf337b1055",
-    "高阶核表示论/正根系与同态/奇反射后的零权模.html": "ab495f5e5b7d880fb9dc1926e31ba33aa7bf8aecf40e985ad9bbca75ee7dbad2",
-    "高阶核表示论/正根系与同态/奇反射后的滤过.html": "a2bd19fce997969ba7d503dfb4b5ef4ba33cef8b76e1936958cd3827c7d4da00",
-    "高阶核表示论/正根系与同态/奇反射后的根基.html": "20f656cf9ce61b463035576ed5d52324d00b4ba6344669585ecdc474acb2a2ce",
-    "高阶核表示论/正根系与同态/前言.html": "5b212fed5905c732001265d3e090eeabe0faf8536831804bca68060366af3f26",
-    "高阶核表示论/进一步的问题.html": "621b6186ffacd4fb1a06a3337a26fcec5740ec9a025b0edf9f44d2e9bd40dc0c",
-    "高阶核表示论/介绍.html": "b153462925a0e75b38cc66c4110851e19852439cf692cc8bb748819c968f4b89",
-    "高阶核表示论/参考资料.html": "d7d09a45695b7ec4bb087de31e5db4a2c911b3cb949dd7a5d228f17e75d01715",
-    "高阶核的变形与滤过/前言.html": "45f4b38f1573c3c5723abcd517a5b1058bf71d532df42a04fcf183972dc3b0d5",
-    "高阶核的变形与滤过/分布代数与最高权模.html": "0f1b1c16fd64d84a9a9b99b103d608d84ed69d35b809a40501fa57a4e8ad3f08",
-    "高阶核的变形与滤过/相邻同态与反变对偶.html": "fd1cecc924a7a384909b96c698e3cedfa80541e87344a8a3faaa795c28848a27",
-    "高阶核的变形与滤过/三类根的核与像.html": "fd21f32807d59cbb8717214849da3ec69631e3f8d7b7017bfca1c7766a6ab178",
-    "高阶核的变形与滤过/变权列与修正商.html": "e3628982887757b9aa3db88ad531c66eb2d4426353045107cb03aaadf6eb6fd0",
-    "高阶核的变形与滤过/一阶参数同态与滤过.html": "e150e5b967082d79c13cf2fbcc19f2ab5a3c808c0d4baa1b9d01b04ba67bd155",
-    "高阶核的变形与滤过/格与子空间滤过.html": "cc9a7d6d544edd617a0132637a0c2d8f782bd696cabcd683bfcee3d7bb75fea7",
-    "高阶核的变形与滤过/高阶滤过/整形式与参数.html": "66f3303da65002b7020b7e5d0de41fb6d5757196714a1ce17dd6b6140c6ddecb",
-    "高阶核的变形与滤过/高阶滤过/配对与商滤过.html": "c3e86661b63e404b2b7e38ff18f2f8e8f4129fdf68a8f812ceed1953eb1c3fe5",
-    "高阶核的变形与滤过/高阶滤过/一阶兼容与参数选择.html": "3e37d9d235bb3630574234298abf9bdc9e3303ee84b98ca3e51fa8b93620facc",
-    "高阶核的变形与滤过/高阶滤过/商核与低层配对.html": "9966ebfbfbbea979b8ebe8e13b17ceb887bd5034716c27ce0d24b3f6a0f88319",
-    "高阶核的变形与滤过/根方向的赋值.html": "0d55f5a6b9df0118f8edc517e387814a88c2f4333205ee970c64060524c0e4e2",
-    "高阶核的变形与滤过/环境配对与商核.html": "43ed500d990b4c28e2f39d0a2942f90c52a1b853de90ab19e7db3812aaaade2e",
-    "高阶核的变形与滤过/中心子代数.html": "f5a6682ce52fad9f6c71586c93dc3cee4a32ef0d11735beaa6e51d208f6e5923",
-    "高阶核的变形与滤过/商核的首层配对.html": "dec051a86222b74e55325b2e9c75ca033630229a5204074bd5d0c1dacc1df811",
-    "高阶核的变形与滤过/低阶核与商核/辅助参数模.html": "3ec526d384cf722c1a4ff025997d8c04fd03acf3024acbf392455eadb090a605",
-    "高阶核的变形与滤过/低阶核与商核/商核前段滤过.html": "22e76ed9fc120be5a9e102230ef48b2d1177de21f6d73de729006b66de86da62",
-    "高阶核的变形与滤过/整形式的比较.html": "362c5f3600ddebfec396640559be0d0423f2d21cbf0fe5db4920a0ce77e02e52",
-    "高阶核的变形与滤过/参考资料.html": "5b749407050efec424a2afdbca5cae50c28ddee95aaef20182c21a56a3aedf1c",
-    "高阶核的滤过与和公式/前言.html": "9e128fc0b4084e77d3862db7e835a90c0eb917d8f05c03bf7e17fe49d6866560",
-    "高阶核的滤过与和公式/根与分布代数.html": "1e8118f038249b32c4bc292f927091a60f88544cecc41f682da79158db5122f3",
-    "高阶核的滤过与和公式/模范畴与诱导模.html": "a3573d8e73e43dacab5b97428cee31866e5ff76d86fb282a0af0f360f617d3f4",
-    "高阶核的滤过与和公式/正根系与相邻同态.html": "e47197cf98bdb4692cd24047656ad582a904ad27ae401df45ac9f6d5c568b490",
-    "高阶核的滤过与和公式/二项式与根方向作用.html": "16c8645651bbbe4d461f1959f1333e0e1a2e836ddf293ede9e345bdbfb2ec483",
-    "高阶核的滤过与和公式/相邻同态的核与像.html": "18198e7d735497cbbea370c2d234a1cf4ade420fff03a9cca6ded65b175c81ef",
-    "高阶核的滤过与和公式/变权正合列.html": "a915ff614bcb4d1642c11f47e9a78c9a7588f09c80568799a38caa927192be21",
-    "高阶核的滤过与和公式/参数模与变形.html": "7ecfd3245d252326f66b95cade6c41d666b2cb6441a79dcf6407a5f4123d24f0",
-    "高阶核的滤过与和公式/滤过与余核长度.html": "e840f49247b2e947be2ce2b5a470d9e0f5229983895d1adbf2e0c16139157ecc",
-    "高阶核的滤过与和公式/典型权的高阶滤过.html": "5574be89c12d8632f3c8a8131b1abb2308b4b9e88b021a1dfb41625a6a597c0f",
-    "高阶核的滤过与和公式/参考资料.html": "b56847e426cba2c92437c3ba5c055a0c4dc31b2231b622a0fe7af5c80c8358b6",
-    "高阶核的滤过与扩张/前言.html": "581ac15f29f10de4996e7e10a918fd1c49138df4eac0a7cc5b7b4e0c58a4c04a",
-    "高阶核的滤过与扩张/根与分布.html": "f3e167156c341c764896bf6de4779aaa73f1d6b366ed7e2266c1fea533765c80",
-    "高阶核的滤过与扩张/最高权模.html": "7a8b1eae894db72dd1b2efc4f27160a6d260a8b4ca617f4ae19ffd06b1b9e466",
-    "高阶核的滤过与扩张/二项式.html": "7d5501aad0ae5f679943d861ed7b82cdc97ce09394b387a40871ccd3aadaabcd",
-    "高阶核的滤过与扩张/正根系.html": "8c322fbb1fad06b67ac0a5f8fd9cd34ad1878ba049b2e1a5ea1af63539c57c0c",
-    "高阶核的滤过与扩张/相邻同态.html": "2d0c2de23666e00415082a2e02d37a214ae5c420b53fefd2b9d2ad3206269163",
-    "高阶核的滤过与扩张/变权正合列.html": "7879b240a2de82f3689677f5c16f709aab7e2d14a9636b81447268123d800060",
-    "高阶核的滤过与扩张/修正商/模结构.html": "aa46cd33bc226c2c3b05688ba113039d3405f311beee44024e91a1fe9a9c626c",
-    "高阶核的滤过与扩张/修正商/扩张.html": "ea176bdbbf60b3d1d58f73f06aca507d7493e83938a0f70546015925e2ec6af0",
-    "高阶核的滤过与扩张/参数变形.html": "8c8044d06957d45c41f43b3ef5c6a149b104cc1a3553443312dde5bc73f18381",
-    "高阶核的滤过与扩张/圆分环.html": "0965f6c3ab84f604853b39bfaa5b6a190b4acf6e4ad308a9b3cba02e717b74e4",
-    "高阶核的滤过与扩张/整形式/坐标与对偶.html": "5c7fd081184dcc608e50784a39cf67defa93274c5664f955d3cbc408ffda7196",
-    "高阶核的滤过与扩张/整形式/共同根部.html": "6e8593709d9ca640db1621fd86b9a1685de383ba368802d48edfd2ba41346689",
-    "高阶核的滤过与扩张/整形式/根方向换序.html": "f0bd3836dc979c08a0c626cd2a5edb80fa4e0f82ff2e9449b5bd8eea89fb55b7",
-    "高阶核的滤过与扩张/相邻参数模.html": "f7e2aeb65d8918a7a4d618cbc3c9845ab3e36672f559ed919a20da183fbd4e85",
-    "高阶核的滤过与扩张/局部消失阶.html": "691bf35ba57e9d1aec20266acdf0d375d2cd1184c5d8b9130f5956c48fd9a828",
-    "高阶核的滤过与扩张/滤过与和公式.html": "e8b4211197a1c864176a6783f1e05a45d0d9e6d9e50f2c80b78dcad21ea78669",
-    "高阶核的滤过与扩张/根数据.html": "5b68385eb7edbea80c23f1675504c8e8d88335434c9d1ccc54b0d9182301e70d",
-    "高阶核的滤过与扩张/进一步的问题.html": "59c0b3a76d24390c6da63b2a786cd1bd1cf9355d6570e91d87cea133263b04d7",
-    "高阶核的滤过与扩张/参考资料.html": "613ab8a0b79f9b3dcdd4c4aeadd8e73e207957c2e05b02fd1cd08a6f6ca43b9a",
-    "高阶核的修正商与简单性/前言.html": "1188fb8eb5979c03d46b481f9032e59c9f1dd55d60d69515412ffd26cf8d5e47",
-    "高阶核的修正商与简单性/模与最高权.html": "11b1e132b9efae0c6813946af6e7de44a7633f622bf527ce15f74201d6ffee10",
-    "高阶核的修正商与简单性/局部同态/根系与同态.html": "255d34ea1607a19ca3b552ec0b760437cea6e208929b1de96414ac0531b791fa",
-    "高阶核的修正商与简单性/局部同态/偶根的计算.html": "214f1f1d7c7a04720c1f97b51819ed509f0c8deff19a492402ba1dc9185dbdb5",
-    "高阶核的修正商与简单性/局部同态/奇根的计算.html": "61fbe56a93914eb7fe40bb6972cf7c681184d2cc02dee6dd99529554f9a1bee9",
-    "高阶核的修正商与简单性/修正商/自同态.html": "6d5cc41b59267cf03066681f451be62f62dc16fe6233e53424d3d0ffd4643adb",
-    "高阶核的修正商与简单性/修正商/自然非分裂列.html": "42f2799abd849d431e1db838ea2ac3896cb006f2ab8863daf5fd15505ba92b62",
-    "高阶核的修正商与简单性/简单头与简单底.html": "a29efe2be55f68cc038a61aab407add38b2a646abdb77f0c09274b4c6147e8e0",
-    "高阶核的修正商与简单性/相邻同态的复合.html": "313200ad7e683a389130a8d675928421e07c0b0e7cfa68e67761f8ad3761c07a",
-    "高阶核的修正商与简单性/简单性判据.html": "898ba86bb00feb45569d5ca5563e56f31bfc6ed7e34abad32681a8fa46dd5ab7",
-    "高阶核的修正商与简单性/自然扩张空间.html": "fbfc06acbf0594dfca30066bfa149cd128f707395f9e2cff861e86c8188579dd",
-    "高阶核的修正商与简单性/参考资料.html": "b0fd1004bc29d124224f6205cdb0009a96c57004465c248a8adcca05fb302749",
-    "高阶核的jantzen滤过/前言.html": "aac2e70fa4659ba348711594b0a66987ccd3c535a339d0b5ad65928055dc684a",
-    "高阶核的jantzen滤过/最高权模与滤过.html": "e98a64eb8a1d939d2fcfae5aca466f216381112f4d3ff0368893eb1b94ffccea",
-    "高阶核的jantzen滤过/相邻同态的方法.html": "9a7b1c62ccbbd0836f968eb6c7d3fbcb819ed791f0f1fbb1e0072c6864ec4057",
-    "高阶核的jantzen滤过/模的构造与基变换.html": "899a283ac36719e9857fc6d18c580d8da707469ec944d8fd9a8e1a22e522a8f0",
-    "高阶核的jantzen滤过/环面与整数权.html": "4b6b8698220c1b5f3caca73fe41d7a610d58c4289d9c123f140dad44b1b2b6c5",
-    "高阶核的jantzen滤过/超群的坐标代数.html": "b9b61e81e3ff5bfa516ef2472c4f861bc618bd9a02ebbe43324517c85d054f40",
-    "高阶核的jantzen滤过/高阶核的构造.html": "a74f12554d8ae370444730be3349f0854abc7d2605333453f538c58b888c9a43",
-    "高阶核的jantzen滤过/分布代数与根算子.html": "b2919e45bb29fa8b97c7a80a9b8e75eaee72d949deed6df73f8f16f9d1b86c20",
-    "高阶核的jantzen滤过/根参数与pbw基/根参数.html": "2e0662814dd1680b11096037ed43f57724d1e7da57281d8585254b52790e3a81",
-    "高阶核的jantzen滤过/根参数与pbw基/高阶pbw基.html": "ec0e1dc4415afffd64140fa88a26b0245d67fe09b363b69aecff6e51fc0e479d",
-    "高阶核的jantzen滤过/根参数与pbw基/正根与borel子群.html": "ce9221d6e4dd1014f4fa87f955688602a66eaae424dc291e4ee1c2e3bfea2de2",
-    "高阶核的jantzen滤过/最高权模/相容模与诱导.html": "33f24bf4cbc241fe6fda1423babdb6d840ead3236c994fed559e7627aaf7dfd6",
-    "高阶核的jantzen滤过/最高权模/简单商与简单底.html": "b03473aec818368709f48653ee9452e277fb35958e30fadaf23b59f1a43c3d9d",
-    "高阶核的jantzen滤过/最高权模/一阶限制表示.html": "b1791c19df398841d8c8757a20b35159f1e3f22f1329719583c4cf2564acdfd7",
-    "高阶核的jantzen滤过/相邻同态/borel的变化.html": "4e7c5ba480b46ea434a21916daf53f110556b17c3e52f78046123ef63de2865a",
-    "高阶核的jantzen滤过/相邻同态/同态的构造.html": "c3c4cac7bbb34b167b4113b87cd598ddf5eee91558aeb1346331d991cfe0ac06",
-    "高阶核的jantzen滤过/相邻同态/偶根的计算.html": "243abb6d029cd139a60a6359d1979ea97a80bc8856e3d6cf03447f9129c76b83",
-    "高阶核的jantzen滤过/相邻同态/各向同性奇根.html": "ad99fbad0dff7af8d0b119d830593e771e7f10c309f7069fc80eb11bea65e4f4",
-    "高阶核的jantzen滤过/相邻同态/非各向同性奇根.html": "0cdb467944f66898299e721da41bdd60c0d4dc32f07436ba480c9c4b5192b335",
-    "高阶核的jantzen滤过/变权正合列/偶根的变权映射.html": "a53acd95fb40dd860d4ce24239d1f73604059849cdf0d4a1100cad3495bfd16f",
-    "高阶核的jantzen滤过/变权正合列/第三类的变权映射.html": "8db0a8cf2d27601eb2096b2651fa132089ed55fc93007d6c8d9a39fde584a2e6",
-    "高阶核的jantzen滤过/变权正合列/修正商.html": "e80e0decdf6dd165833c05890cc656db02f8a1abca7e71550557ee7b02c920e8",
-    "高阶核的jantzen滤过/参数模/参数环与自由模.html": "a35a4430191d912cf22c80ed125e6d40115886b7505dd52a12e11c71235fa072",
-    "高阶核的jantzen滤过/参数模/一阶变形.html": "78318b1e65b0b2b842c308a34ccedaf947c401c514fb87d6a20cde12f10de871",
-    "高阶核的jantzen滤过/参数模/高阶cartan关系.html": "213803c730b26dc37de7770c1a7913dbd6a72e6894f53ec099185104a33e12ba",
-    "高阶核的jantzen滤过/圆分参数/参数环.html": "11d9de55d302fa82d26331419b1810a826744bfa4e9fc4646e3e8a68d71b5445",
-    "高阶核的jantzen滤过/圆分参数/差因子的消失阶.html": "4bb31344fede93dd01bff9410a417e33ee87e5970db9c0a94fa7b76e9dea4566",
-    "高阶核的jantzen滤过/圆分参数/cartan二项式的评价.html": "a6c6ee0775e44d54bc9ccd41876f837a655f35525439e2f0d6c7e4b2e4a0aa04",
-    "高阶核的jantzen滤过/根坐标整格/整格与特殊化.html": "5d7898fa1f2f5dc735570e935914660477a3f3fbfaaf30b3fbf10392c55f7109",
-    "高阶核的jantzen滤过/根坐标整格/量子词代数.html": "e73d614495c853de6de0cfaf8b3be64bf7a18b5175c38dfa62fdbb62c0903b8f",
-    "高阶核的jantzen滤过/根坐标整格/根向量与坐标.html": "80ed75b528a6dc7a98e25da42f7733c9f1e84cb333df83a1843886be27b59b6b",
-    "高阶核的jantzen滤过/根坐标整格/配对与换序支撑.html": "d09b16f5f327f542066b0d11ac2973c88f63c946e8ff67bed9b2eacf058a7d89",
-    "高阶核的jantzen滤过/根坐标整格/正交辛根的重数.html": "6c1f65f2ef23553c56f39115d1ddfe25454227f5e012ba9808e6814088a1e5a4",
-    "高阶核的jantzen滤过/根坐标整格/经典根的单位首项.html": "b0b66192d0f9de7c2354160c675e88d06146c0e7bb8c06baced8beb60863c174",
-    "高阶核的jantzen滤过/根坐标整格/全次数整性.html": "3a80c2b348375fcbc9b2cd5705783d51e3c514bf4a2445a63660abef4861f3d7",
-    "高阶核的jantzen滤过/根坐标整格/有限坐标商.html": "6ed161ea196932a338821dad41f7aade80668f5018546397f1b7b7aabaf715aa",
-    "高阶核的jantzen滤过/根坐标整格/有限对偶与经典作用.html": "26800779a4f4a8612986bf4df9a5836f7dc9303ec0e80ceb6bdfd1c2a8bae876",
-    "高阶核的jantzen滤过/例外根/根室与根词.html": "fd77d881601a2733529cd4e390bf4401d320956db4b8a688dd02d3c083389c31",
-    "高阶核的jantzen滤过/例外根/例外根表.html": "64797b96f2ff916328cea755016e25804d32364ee66e18145bf2e2d09962748d",
-    "高阶核的jantzen滤过/例外根/参数型根表.html": "8f7c00a9e3af706b5e96be6ddab9054fd02d283957cab15db24cd3afb4dc77f7",
-    "高阶核的jantzen滤过/正负配对/对偶基的经典极限.html": "35bd59496ddb6e73cabd131f89332dd7493be5a882d25cee127a2eb6336066c8",
-    "高阶核的jantzen滤过/正负配对/场上的正负代数.html": "e1ce91cafa14c343989a155ee5f0983e3d19fb192c2b30461394baf0b6d3beda",
-    "高阶核的jantzen滤过/正负配对/正则反射.html": "3267cef66650869a5cf5c25addca78d6db63c99c0334725c4f3c82fcff28a8ac",
-    "高阶核的jantzen滤过/正负配对/共同坐标格.html": "48fd613462c2e319e796bb84bf6abce762e7a0ba8f7b7ea64fdb8e0cca5e2e02",
-    "高阶核的jantzen滤过/正负配对/共同配对与对偶格.html": "0f2e3d8d238726532b96f9a4d15649169819df48ecdc87b9a1b9b033b13806db",
-    "高阶核的jantzen滤过/根块换序/普通偶根.html": "94b25f13687c01da91eeff913425f6b5b0800d0a20a239dc7ed2cf33eab72d3f",
-    "高阶核的jantzen滤过/根块换序/各向同性奇根.html": "900553ff089233e611379b0827e33dd8ec1fb981df283e1929d79e7ca3661913",
-    "高阶核的jantzen滤过/根块换序/奇根块的普通幂.html": "0ac1f75af376470e6b1e0f0578a3a487c72921846f33c3ce9d2b6cdda7d30246",
-    "高阶核的jantzen滤过/根块换序/成对系数的整性.html": "2d826f72cbe26e22e2a3f740cf8bd8f404db44cac64afc1d3fa84dcf1b2cc674",
-    "高阶核的jantzen滤过/根块换序/经典系数.html": "01522dfa978cc2dbbe088ed54fa7c9ec1f742a33912dc83b14a44f97a3cc1d4a",
-    "高阶核的jantzen滤过/相邻参数模/完整环面.html": "7d69b251103dfeb377b61bb64cf247608e0db4e4f466820afe2bee8eb920ac69",
-    "高阶核的jantzen滤过/相邻参数模/共同整代数.html": "234d199c2cb77f6a39269501e5051ea8ff0ed68b8fbbfd78bf91cba97606cd6d",
-    "高阶核的jantzen滤过/相邻参数模/诱导与特殊化.html": "5f1ee89455f47a2e0d3e24cefc0d14f63807c474cc7c6ecb67325e31d22bb971",
-    "高阶核的jantzen滤过/相邻参数模/相邻参数链.html": "e24205ebc6f6c81a2188b0c3fae6ee0362d48b7c513cfdfecf3aa423b2beece0",
-    "高阶核的jantzen滤过/局部长度/长度与特征标.html": "29e3f8b0c929a1ffba2703b1d840b0558d850b855cbdbe52d4c98f832d60a0cd",
-    "高阶核的jantzen滤过/局部长度/偶根的长度.html": "0f4087dce3da9ad76ff19d1226361c4bf7b37d55af9c7a92f30287bc7257dfd4",
-    "高阶核的jantzen滤过/局部长度/各向同性根的长度.html": "31837d201da37d548e243e29343414b8d4beaa41e5565bb0251f755aa16cba8d",
-    "高阶核的jantzen滤过/局部长度/第三类的长度.html": "4e26079021339c31af9c8d1a77f194834d46c424bc7ac3d002adefccba32e2de",
-    "高阶核的jantzen滤过/滤过与和公式/滤过的定义.html": "6379ae0c8a5ffc7c84d06cf6032f2cb242e5b3f1722301dc3f496077bdb205c7",
-    "高阶核的jantzen滤过/滤过与和公式/最高权与根参数.html": "77676ce37c4e6da74b1a9bd09d5c8ad30099f1886a1bafc9f13eeada146ff5ac",
-    "高阶核的jantzen滤过/滤过与和公式/和公式.html": "3c696e240128c2dd2f1cb2713ff1da0d726d4d174bec3a85e0c4360c706a193c",
-    "高阶核的jantzen滤过/滤过与和公式/首末层.html": "9fe62ad8cc69779db7198b3eab4a5ae5d90e3bdba0eac4c0b6a5550db7e91e35",
-    "高阶核的jantzen滤过/一阶比较与适用范围.html": "71efc3fb39586da0aebf75cda674939461c2aae50b3becb3ba065a987d74d35b",
-    "高阶核的jantzen滤过/参考资料.html": "5f121e9f4c031df37f22fe98da9969e1b3b07f7fd0f2ea9f181a62a59e97ca19",
-    "attachments/计算脚本/汇报结论核验.py": "1ba147a6d1c72cf3a0411e1d3649a0a6e4fd896394917ea3ad54aa52ebf66ba8",
-    "attachments/计算脚本/秩一同态核验.py": "fe481a1ebd03f01764dafde328a5146501cc368dd2508e581dc7ac5eeeeb5253",
-    "attachments/计算脚本/变权正合列核验.py": "f5a7a99ea2f122cd30f7c1c4fce02415423fc27212e340e02fd31b390282b996",
-    "attachments/核验数据/变权正合列核验结果.json": "c122a3795425574f453912a47835b5914e32ade5ce0dd28b13b8bff8ac6142c9",
-    "attachments/计算脚本/扩张参数算例核验.py": "b2688d72c405f514f29fa5d50477b4c25da9e13db96eb657f67e8ad913dbeb54",
-    "attachments/核验数据/扩张参数算例核验结果.json": "2e11e25cca87cdeb5ee9de855f020f43f3a7361f2475a64533d96501e5cb6adc",
-    "attachments/计算脚本/三类相邻核与同态核验.py": "f1176995936e35e400f59b7d6e1c4070a77bdbf2c340cb4c94bfca7eb1bebe3a",
-    "attachments/核验数据/三类相邻核与同态核验结果.json": "31e5fbfc51eb36af1703617e6ece827182be996533aaebfcb4feee2f497809d2",
-    "attachments/计算脚本/零权同调核验.py": "04cad3a735d4b1ec1f62440291ac20bf6239e7eb0d575174e055909d1b6f2585",
-    "attachments/核验数据/零权同调核验结果.json": "be37d6c37653a0b2b1655a1fe468feecb1ff69ba135bbf7052f0f43d75d74400",
-    "attachments/计算脚本/特殊线性超群环境配对核验.py": "fc4548fe6d6f95b5b09236ba9dfc5e4bdf99a32988afd12c98362a8d1d821081",
-    "attachments/计算脚本/双零配对根基与底核验.py": "a0cba69c420a0c79d11719a5fcb740f5721c40bf1a2268ca3c537221f8233192",
-    "attachments/计算脚本/双零配对根基卷积核验.py": "1c776b4e0500172eac5b1c513bd8c93cd0ab467760f7e5cbb3d0ff85a6bdc084",
-    "attachments/计算脚本/标准正根系同态核验.py": "bf0ca47178e06046655eb30c875cb8aea02e9be5f03a3abe02368888f9306753",
-    "attachments/计算脚本/六种全旗奇异向量核验.py": "02558b06c74f03ac84ccbed98e76c1a3eaaa2a910429408ea220794b6517604f",
-    "attachments/核验数据/六种全旗奇异向量核验结果.json": "d6daf49eca6fc32c2efbe8e9ba3476f2b9159937594c6633880d573617f902fd",
-    "attachments/计算脚本/六种全旗交织方程核验.py": "4a027b015c141b86d2ac6c24650d3ef6c37229ff601255e77cf40129da1d24c8",
-    "attachments/核验数据/六种全旗交织方程核验结果.json": "5aa6a6e5609f312ce0f615f80eaf58b4307bb7e4c2480a3ada749072ac15cfff",
-    "attachments/核验数据/中间根基层探索数据.json": "9cdc9497ce18679d324e0786a52f930700d0b213b402e238b25f67b8ec11e6e6",
-    "attachments/计算脚本/中间零权族子模格核验.py": "45cfdb43fc7906473cd9d69bfa8b513ec7c0cb200b7a30368fe361f22f1865e9",
-    "attachments/核验数据/中间零权子模格核验结果.json": "ed93c769c684f6a9dc54fe786f412a82a05c11430e5a5c00f7aacd879ddbaef0",
-    "attachments/计算脚本/中间正根系奇根同调核验.py": "89b6d22b9d2e44b39829712c0288ee38e2f45fd1158a91d6bec86fab624be727",
-    "attachments/核验数据/中间奇根同调核验结果.json": "1595380c162b73e6d92162bc1cf651439c20bca08632f8e9ebdd9a9ed6d373e1",
-    "attachments/计算脚本/中间正根系整环境核验.py": "decf849f0c0d11b18b6c16a28eade38c3f140b4c247948a404deb5c322bb0368",
-    "attachments/核验数据/中间整环境核验结果.json": "36dc7682a496e27109244360c71a57622104f88292e06dabcf35cb7e6fa61a98",
-    "attachments/计算脚本/中间正根系第一核专项核验.py": "f44816feaab1ba954a43f7d207f2f83bf8bc968ae74e5f9bdb2c7d8463d57b3a",
-    "attachments/核验数据/中间第一核专项核验结果.json": "9224b164a1c3f9a588007a2c108ec1fd9709864a9c5225e52931a9ca632f217f",
-    "attachments/计算脚本/中间正根系全权根基核验.py": "29edce14a4a0c4bf3edd26c044d8cb00eff29e8dedc2636059a8edacd9539b80",
-    "attachments/核验数据/中间全权根基核验结果.json": "3375e6e7b81e43a6b7fdc1b0cfa6e512055f9a5b22b42e06398c8a618d8d6012",
-    "attachments/文献资料/核心参考文献.bib": "b0d0e4d1b17a4367e4e5f2f0aa2bcd17a1b80e06381e575760be96e5001013ab",
-    "attachments/文献资料/项目内论文/超群高阶核与张量积分解参考论文.pdf": "bab5830dc8fd67dae55ace3168f3a70874cab59f92d78dc53e43e7af1e900862",
-    "attachments/文献资料/项目内论文/典型块理论参考论文.pdf": "2ac826b4bd14f5e56ddf948db3d67cba21a70ceb13a30d53b6ea49ea8de604c6",
-    "attachments/文献资料/项目内论文/高阶变形理论第一篇.pdf": "2df608dbf43bfc84b1634cc6ac546f234eed33f458347bd6cb35bd26dfb3f6f5",
-    "attachments/文献资料/项目内论文/正交辛超群连接原理参考论文.pdf": "b1c1ab2c84f6779e31818c206d548345dc1c8035d4314d672fc11dd1d83ca9c0",
-    "attachments/核验数据/高阶核自足稿复查记录.json": "48e832cb661b0980a12c8fb658418d5b510f3739f295bd9070d88b2c0a596405",
-    "attachments/计算脚本/高阶核自足稿复核.py": "f1502193c78d500344593248ed22e7872b2b1d8ed724f0639838f6f7e1a63b02",
-    "attachments/核验数据/高阶核自足稿数学复核.json": "efa3221436dbd4560f2d1b5db06694eb8236c3968b75ff1baf574e417d35e16d",
-    "attachments/计算脚本/典型权高阶滤过核验.py": "60944ad1a5b17d139f073a0b91ddfdb3e5473e5b2b09c905a13cdcc436610c6e",
-    "attachments/核验数据/典型权高阶滤过核验结果.json": "6dbebb7077bca1074873cff08aa2dd4497d6b0848f0c8b1d34c4b916d60e8537",
+    "site-lib/html/file-tree.html": "322e2ff9f92170f325de69c12d8813f8ec27962ab939c2a60e0b4c3732d7a07c",
+    "site-lib/search-index.json": "274d820ae74963d995308d5b291b02f317d6aea42b5b89bc1f8851334bcf1874",
+    "site-lib/metadata.json": "686e4b016df7a98c341f8f160ed083972806b2a9a24c0644aaba3515371a1e19",
+    "index.html": "669597e1cad24073ac1ad5ad4035a2a2db39dd1f9d7794b564fd3d21b59f6119",
+    "最高权模与滤过.html": "0d649fef1a1cc6a74637c5fd837e546761649d6e02cb9a4c8aee8deebff08b1d",
+    "相邻同态的方法.html": "895d62b6f775c34e397c097b2714e6cf240971f5b0701e8cb3ef7f53c3536f0a",
+    "模的构造与基变换.html": "e3babad0858f61304fecf3f484ac9123401bf15329d3743b21bf6c8f9c30d483",
+    "环面与整数权.html": "6233b4f9008e590e52ac0d801aa7642ebe2a8d4f4846b8d68f67c25fa831336b",
+    "超群的坐标代数.html": "b9432fc0c4db18e07754c214143228acd84a0daa7fe52370635218cc027bba5e",
+    "高阶核的构造.html": "91c873d9acdb404361b3e19034e23265cbd87d949b1ae2cede340401b9763db5",
+    "分布代数与根算子.html": "88f7b00a5d52a8b420b5c1bafb34f3483d90310f06321f0bca65886b39dcea55",
+    "根参数与pbw基/根参数.html": "74da617434714fa2a0bb62b81cc0dfe17fe7480382d8d9de4d912629822e19ee",
+    "根参数与pbw基/高阶pbw基.html": "4a5977bb56f7d86e21264ee0f2f18cc100e330452e373c33d2aef7c7cde5a025",
+    "根参数与pbw基/正根与borel子群.html": "85dcb4539a614efe0e19e0137580ac2135b253f73b48697e008f78cfbff909a1",
+    "最高权模/相容模与诱导.html": "e795898f6f7410816eba2d9e7e7333e7e4e505c5b9f3a313a974ab5ad1261165",
+    "最高权模/简单商与简单底.html": "c2c357cd0b801a2e6144c2d2562c1a4c2d23e09474b6362a818ceb1e2ffa2a46",
+    "最高权模/一阶限制表示.html": "bef4520175fab2f4b25e19b96b45968659735f08495521ee3f2fc2c8fcee089f",
+    "相邻同态/borel的变化.html": "c78a7f61cf31e34ef4d474d8ae84f390e27cb0261e7363035b46fb59b45735d2",
+    "相邻同态/同态的构造.html": "0d128598e6d4f7a6f68d55c87b74e36b46c5ff3a0d5e665f7d056b3341e1e1cf",
+    "相邻同态/偶根的计算.html": "1d3da9b0862fd6cdabb59c77b245fc46dd2fcde36d043ab5e49792b616a27411",
+    "相邻同态/各向同性奇根.html": "b2cc34e2573ea2fe90ca78e5a0e70222599d38ee765225c7317ecaf8aaec3eb2",
+    "相邻同态/非各向同性奇根.html": "f5bc93fffb6de2476ebd0648e21d229b8b95cb78f8b751dda224ea82dc2bc51e",
+    "变权正合列/偶根的变权映射.html": "5782bbaaf538aed905c81064a6b82b47a40a70d82aac04d61c5eb97f33ec6d52",
+    "变权正合列/第三类的变权映射.html": "42f0268e85c5d00686b658cad0c8e73c9ffcb82e999cc90b59713e76d2ef8d4b",
+    "变权正合列/修正商.html": "ad77fbe4cb7cc8c83541ec82fa923f4b244008cb97b1ad80d880ed8f8cba9323",
+    "参数模/参数环与自由模.html": "675efe33c98907f69def0fbca19eaf4a9056f3d8f33b6afe751872467f423ea7",
+    "参数模/一阶变形.html": "81a53c6aa1da0f2609e0b8a5caab033517682a5ef523bc39354a740d1e5825ec",
+    "参数模/高阶cartan关系.html": "399c85bda05a7b75234b6890dbea9704b96e5efae356d857b435febd3060cce2",
+    "圆分参数/参数环.html": "2eb5305066caa88e18e0af591f7b607887eaf820267fdb6c8f5c352f61abf966",
+    "圆分参数/差因子的消失阶.html": "a875ebeabdda93a3d14c9ed0ce1e95aa72d7e7d6c6728210cd09c9c0d925a48f",
+    "圆分参数/cartan二项式的评价.html": "a075597651e93f37426933a7472bf7c02e98b5e4ea80fff58cccb6e2a7bc7ba1",
+    "根坐标整格/整格与特殊化.html": "7240bb0c05cf4af3291a751af72840195bc6387e05787f5d20f2b5176cd8c2de",
+    "根坐标整格/量子词代数.html": "14166976fd762f7d9c33319c0a6cab53027eaa7ca15ab46020fe24cc2ee9571f",
+    "根坐标整格/根向量与坐标.html": "a827d10c02ab226a39182e5da7a30ef179f032c9f501005d2ca86e26e24de734",
+    "根坐标整格/配对与换序支撑.html": "79b7bad2808c99355c0386efc3524e4b82c56727cc1b205b7b4b82f598eec263",
+    "根坐标整格/正交辛根的重数.html": "24d1cfbc1a74ebd85faafd4f841193c8d1547ccd884e8f9c4c2bc49b972e8e52",
+    "根坐标整格/经典根的单位首项.html": "4727c9a2d9e5383e66d054a1c99e9a4c80a8e67549f0bb2585b8e6006d733605",
+    "根坐标整格/全次数整性.html": "cd8b0d9737fbc6316d19433f210268761c703e3e23ac378a214021c4e19f9eb6",
+    "根坐标整格/有限坐标商.html": "f6ac7140a1f67448e5682cd7767393e3267bfa3cb7c35b04578566a50a42ce12",
+    "根坐标整格/有限对偶与经典作用.html": "9b49fc1cebe4692022de68523e29a8607c5f410473c3e92df0c1b77fd3c86028",
+    "例外根/根室与根词.html": "dcbddcf43e4991e33685787c8956a864d2e2348d50290e95234f62401f032d3d",
+    "例外根/例外根表.html": "d69e7fc79f73441b7a53acdb65ce2740b04463645188f196051b348e38a221db",
+    "例外根/参数型根表.html": "a967e859f2b5995aaae798757f904ffe2be6195b97403ef4d837bae233393710",
+    "正负配对/对偶基的经典极限.html": "6f2a32952991c1b7bfe6fa7255f3ae4e867292c1d07510248c2ce2ac2a987fca",
+    "正负配对/场上的正负代数.html": "d33cec7c857d7f07f41d0898e5023e0b12efd9605f8a6c49ff03f8dd4ef71854",
+    "正负配对/正则反射.html": "903fa15eb9d0097cd8046b0cccbb0eab2eec792d2d64d9db5ed0e5b0a40ecdc9",
+    "正负配对/共同坐标格.html": "99ddf9adc4c8173ebb4ce806a0cb47c915f567809d05a380fb55cb2ea0934237",
+    "正负配对/共同配对与对偶格.html": "7b0d2ff5bab5e1bf3d4eecc46af6096073861d84a7d9da2e5e4692e6ba62681a",
+    "根块换序/普通偶根.html": "22294bdb45f0e713230d4406a18d8b9bfcd83a60074ac4622b8a6db60c84673e",
+    "根块换序/各向同性奇根.html": "5197b74f075daff3e3f4a71bcccf0110f23f3a3f580acb3512ad0809ef8916a5",
+    "根块换序/奇根块的普通幂.html": "665988fb02e3a3667655e2fa0c9e7a87fee6b028a2ce309888affdbc8e9be416",
+    "根块换序/成对系数的整性.html": "a3a29e1c86a37503c0330cbdd75f8c97c9be06a3aff43b80ad6a90e6f1b719eb",
+    "根块换序/经典系数.html": "2505a50dd0f3ca54e5dcba343bfa6ec7810305c4fd618d9c304bf8ea5ac04dbc",
+    "相邻参数模/完整环面.html": "ee1d1392dc316a08a645539c9a324516b2ce68dd2bf6e1e0f486ac840ed24cf2",
+    "相邻参数模/共同整代数.html": "f430370924f3ee7854749615aec3e7991ea8584294cf14b90a549a2708528d8a",
+    "相邻参数模/诱导与特殊化.html": "1e916cff0843d3c62a6b20e3a44897d9da6b446d2b69c8bb15a61122f2f955ca",
+    "相邻参数模/相邻参数链.html": "d0fa83b5314065eb13ccd6e7b6391e1f37dbba7145dbead9becbd683eb8c5a64",
+    "局部长度/长度与特征标.html": "3c823a36c64020bd0f48c97a2bf56e2d0705d26a54d1228561690adc30558a88",
+    "局部长度/偶根的长度.html": "c7748cd0761b1aca720b280f769fe375dbc9e706b70f75495cf3200ca8ec0456",
+    "局部长度/各向同性根的长度.html": "45c9d3b8188ab179ea0e1cb88353f9128b382f527fa67e3024a2b2a9b4a0ad2c",
+    "局部长度/第三类的长度.html": "5c4291618892bfc7e7beae779e6f0073a638a95c883781b14632c62808a26cca",
+    "滤过与和公式/滤过的定义.html": "b5747c760962f12d09e76aa62be054737948d0dca34527696f58f9df583c0fa1",
+    "滤过与和公式/最高权与根参数.html": "805a13accb3ae4037de36dac66897c66b3df02217be4c72f41903be26b7ca4f7",
+    "滤过与和公式/和公式.html": "7f4d675d776739a2137b0974d6aa11131f654c063604b0a62661709d0244a60c",
+    "滤过与和公式/首末层.html": "3672c59cfc806173a18bd974d053ba09ba8e0d0337eb2d71d78d352300a31e63",
+    "一阶比较与适用范围.html": "3e201aaa87446d13f2491a196ef3c7681e7b7635a56cb4b74b992f2758b0c0b6",
+    "参考资料.html": "53ac081c555875726bd6f8ffb71c410402c37ff33028d9b7a2464d2292987c88",
     "site-lib/fonts/mathjax-2ea308c69f13.woff2": "2ea308c69f139e9ee7bc452e12a449c13e3b9ce4c08aebc4e86e15df232a26e0",
     "site-lib/fonts/mathjax-f9054e3dd268.woff2": "f9054e3dd268155cb38c708ef7b7c7c03e83ac3723afcb65ae65a37bbb301f4e",
     "site-lib/fonts/mathjax-2c146f72c9a3.woff2": "2c146f72c9a345aa282398a752d03af71d83a011f3d067297b533a31f0c5f5cb",
@@ -255,10 +106,10 @@
     "site-lib/fonts/mathjax-bd9d7db0883d.woff2": "bd9d7db0883dc1adca7ed1c20042609e4e3d1f07f106b6bc8eeeab49d560393b",
     "site-lib/fonts/mathjax-07165a0e10ae.woff2": "07165a0e10ae4b6b24db34b28d0a8c46bd4ac53b4d1682098ee7a3e88d2f1c83",
     "site-lib/fonts/mathjax-b20a0e1b0304.woff2": "b20a0e1b03043ae1a540857bdf1b220297ff0e78b110b1e15554addf91ad0937",
-    "site-lib/media/81d33d08a96d-4bb6ac751d1c5478ff3a.woff2": "81d33d08a96d99034c41b49ac980f63b353175f919db817d74e0405749af03db",
     "site-lib/media/a7c6a118d17f-6155340132a851f6089e.svg": "a7c6a118d17f6a296037b519e9891e08951de59c289fe41ec2596a63c3b28516",
-    "site-lib/media/a44ac4cbf79c-2308ab1944a6bfa5c5b8.svg": "a44ac4cbf79c6765f4bdc3a0dc3fb51b56ed5eb4679177f0a40f04b63b3e3a3c",
     "site-lib/media/6e5dd0494f63-70cc7ff27245e82ad414.ttf": "6e5dd0494f63d85970156cd54b6ac568b82a392d135db08bbf5cc3048d489aa9",
+    "site-lib/media/81d33d08a96d-4bb6ac751d1c5478ff3a.woff2": "81d33d08a96d99034c41b49ac980f63b353175f919db817d74e0405749af03db",
+    "site-lib/media/a44ac4cbf79c-2308ab1944a6bfa5c5b8.svg": "a44ac4cbf79c6765f4bdc3a0dc3fb51b56ed5eb4679177f0a40f04b63b3e3a3c",
     "site-lib/media/ba51b929995b-454577c22304619db035.ttf": "ba51b929995b3088ff1932d9d6835c90ccf304b296a3b8e103d2e95b958109ee",
     "site-lib/media/839f42df29a5-52ac8f3034507f1d9e53.ttf": "839f42df29a5a83470888b9a3aa4064fc1bc35e6616bb542226d89086f019ec5",
     "site-lib/media/a0cfec834df5-05b618077343fbbd92b7.ttf": "a0cfec834df50e21cdb3d15bf93e87ed033d8c26693f9ede6efe24325ae22c9e",
@@ -266,702 +117,262 @@
     "site-lib/media/e564f652916d-01dcbad1bac635f9c9cd.woff2": "e564f652916db6c139570fefb9524a77c4d48f30c92928de9db19b6b5c7a262a"
   },
   "state": {
-    "structureSignature": "84af1bfb628c0b8b3d0ee7b8239c7f60da423a32ae0ea046e716cb58964b9971",
+    "structureSignature": "761a03ee1e3adab02bc5cf6a2a83c3520af4189f787bbef93db53d1acecda8e0",
     "pages": {
-      "笔记库/介绍.md": {
-        "route": "index.html",
-        "signature": "e3df52c3dc10521a9515adfbafe6feb7260ac92143cc4f3998200e7f6e549e41"
-      },
-      "笔记库/高阶核表示论/前言.md": {
-        "route": "高阶核表示论/前言.html",
-        "signature": "342cb60bbedcd94ae64fa39849e554f83b1faf44bb51cd8f83f0dcd72f9d4dce"
-      },
-      "笔记库/高阶核表示论/记号约定.md": {
-        "route": "高阶核表示论/记号约定.html",
-        "signature": "0a59862b4990b09624be09d0cec96cfa6b399019b99f94160f72ded82deb2d92"
-      },
-      "笔记库/高阶核表示论/高阶核的模.md": {
-        "route": "高阶核表示论/高阶核的模.html",
-        "signature": "19b8d367377eead9300856ef96086724eab5268db24b4ee364ff94cfdc8d7383"
-      },
-      "笔记库/高阶核表示论/模的滤过.md": {
-        "route": "高阶核表示论/模的滤过.html",
-        "signature": "efb0dbe140acb93badf1c32df768ba9c9d9b9e66fca926137ec2314195785d61"
-      },
-      "笔记库/高阶核表示论/相邻同态/相邻诱导模.md": {
-        "route": "高阶核表示论/相邻同态/相邻诱导模.html",
-        "signature": "6e94575e2085eaae8eb000f02a9a5400c36292ca14a02a374bee18d0f366ebeb"
-      },
-      "笔记库/高阶核表示论/相邻同态/核与像.md": {
-        "route": "高阶核表示论/相邻同态/核与像.html",
-        "signature": "031947eadf568ebfa606347578f8f132ffbe537bcb80aedbf2845044e876624e"
-      },
-      "笔记库/高阶核表示论/相邻同态/特征标.md": {
-        "route": "高阶核表示论/相邻同态/特征标.html",
-        "signature": "693bfa15a10ded2e886a93dc4c6391127a4f7b76c3adbd0ae8da53c5f7d7c511"
-      },
-      "笔记库/高阶核表示论/相邻同态/权的变形.md": {
-        "route": "高阶核表示论/相邻同态/权的变形.html",
-        "signature": "05f5aff56c748aef499aa69cc6765265f13ce496bbf6393b8d2d8d95bc4fe665"
-      },
-      "笔记库/高阶核表示论/相邻同态/同调与分辨.md": {
-        "route": "高阶核表示论/相邻同态/同调与分辨.html",
-        "signature": "0a130e5ad624b987972c6752e24924a1669ac06282d9fc77f7848bdb7c679837"
-      },
-      "笔记库/高阶核表示论/相邻同态/相反正根系.md": {
-        "route": "高阶核表示论/相邻同态/相反正根系.html",
-        "signature": "c14c31cfc8da043ffd6fff84e54c9113840c7beabe3f49b911b215d22e88f1d9"
-      },
-      "笔记库/高阶核表示论/相邻同态/正合诱导.md": {
-        "route": "高阶核表示论/相邻同态/正合诱导.html",
-        "signature": "816125204dc5f7b0b0d4c74a5d330d655242948556d83e940f36c88e8eb8b5e0"
-      },
-      "笔记库/高阶核表示论/相邻同态/变权正合列.md": {
-        "route": "高阶核表示论/相邻同态/变权正合列.html",
-        "signature": "d3699dc42c225c623aa5323d8909e6665346c4207f458ed03c54c73a03afd1a0"
-      },
-      "笔记库/高阶核表示论/相邻同态/相邻核与扩张.md": {
-        "route": "高阶核表示论/相邻同态/相邻核与扩张.html",
-        "signature": "ab0d70b7520ccd01bb2e90dc6af0a99ca1449c01fea9003d4bc99bf7bfcc980a"
-      },
-      "笔记库/高阶核表示论/相邻同态/前言.md": {
-        "route": "高阶核表示论/相邻同态/前言.html",
-        "signature": "2eb78969bc1fa7ac903a911b4779e7f4cd25f4b4428774cbc99eb7f9779c0366"
-      },
-      "笔记库/高阶核表示论/秩一表示/权空间与子模.md": {
-        "route": "高阶核表示论/秩一表示/权空间与子模.html",
-        "signature": "a2d420c3d63724580b9fdd2c2f6cecab90948c2fb6f5d91c79ba9e6700416713"
-      },
-      "笔记库/高阶核表示论/秩一表示/同态与简单模.md": {
-        "route": "高阶核表示论/秩一表示/同态与简单模.html",
-        "signature": "eea4a6c9d66f06efdf2b0c5452d47172dadb9f6a559020695d9f8e8483c571aa"
-      },
-      "笔记库/高阶核表示论/秩一表示/借位与子模格.md": {
-        "route": "高阶核表示论/秩一表示/借位与子模格.html",
-        "signature": "62550d644f38c3a9c25dce27f674e942d0b5fae4cbc31303ad9331511beda827"
-      },
-      "笔记库/高阶核表示论/秩一表示/零权模.md": {
-        "route": "高阶核表示论/秩一表示/零权模.html",
-        "signature": "3788c005afe6d57b51597b7311cb6efe318d479a1fb4d1e2760c4f7b9f08b9a4"
-      },
-      "笔记库/高阶核表示论/秩一表示/前言.md": {
-        "route": "高阶核表示论/秩一表示/前言.html",
-        "signature": "587f103f4bbacd39498d15b6fe92524465bb26570f208fbeee293427be78d6a3"
-      },
-      "笔记库/高阶核表示论/反变配对/整格与配对.md": {
-        "route": "高阶核表示论/反变配对/整格与配对.html",
-        "signature": "aeda77f98edf248748315f19379042240513b6540901298114af258fb90d54b3"
-      },
-      "笔记库/高阶核表示论/反变配对/秩一配对滤过.md": {
-        "route": "高阶核表示论/反变配对/秩一配对滤过.html",
-        "signature": "6391e3878a86799d597cda2e7f1ab2dd33e11c8538b4f4662d7af1f816d6c799"
-      },
-      "笔记库/高阶核表示论/反变配对/诱导滤过.md": {
-        "route": "高阶核表示论/反变配对/诱导滤过.html",
-        "signature": "fefa61f18fa68dfb7f2b29fe643978cdb6227fdd600a1f7fd5df76b31ccc8a7e"
-      },
-      "笔记库/高阶核表示论/反变配对/前言.md": {
-        "route": "高阶核表示论/反变配对/前言.html",
-        "signature": "0bc1b99c6ad85baf1d72391aa5fbb64801e94def82c4737de92cffc48ab803ec"
-      },
-      "笔记库/高阶核表示论/投射模/投射性与滤过.md": {
-        "route": "高阶核表示论/投射模/投射性与滤过.html",
-        "signature": "eb6c0745ac582d96ecbb8a1c53842b0c76e0e31a389e865eb80e33c362d60d5b"
-      },
-      "笔记库/高阶核表示论/投射模/投射生成元.md": {
-        "route": "高阶核表示论/投射模/投射生成元.html",
-        "signature": "a1c9599db1bfba2374052b2df78a47a280d7d4eedfc9cfebb5bb786e7c0b9656"
-      },
-      "笔记库/高阶核表示论/投射模/典型投射模.md": {
-        "route": "高阶核表示论/投射模/典型投射模.html",
-        "signature": "6bffca2f1e13297a4dcb8443f84d502608ee3830c2b49fceecc328d54fc37eb3"
-      },
-      "笔记库/高阶核表示论/投射模/前言.md": {
-        "route": "高阶核表示论/投射模/前言.html",
-        "signature": "73f1630733a107f8bfc16c4d58cb0f371c2aa102def80dad10205d44d6021087"
-      },
-      "笔记库/高阶核表示论/特殊线性超群/矩阵模型.md": {
-        "route": "高阶核表示论/特殊线性超群/矩阵模型.html",
-        "signature": "24390fa4268aa211eb98cfffe401c7f2001d6b398b166405e00f0c1539a76c3d"
-      },
-      "笔记库/高阶核表示论/特殊线性超群/配对与和公式.md": {
-        "route": "高阶核表示论/特殊线性超群/配对与和公式.html",
-        "signature": "527aca14e49cd3f8ccda0d0e85f1ec2d2268fe78da20e68c491b171c8d02c9a7"
-      },
-      "笔记库/高阶核表示论/特殊线性超群/整提升的选择.md": {
-        "route": "高阶核表示论/特殊线性超群/整提升的选择.html",
-        "signature": "e4a6cb2583bced4a4fd6d90d33fd49bc43e0e823689aefc53bb9a016b85c1915"
-      },
-      "笔记库/高阶核表示论/特殊线性超群/零权子模格.md": {
-        "route": "高阶核表示论/特殊线性超群/零权子模格.html",
-        "signature": "2d2498e5c1d38bfeceb341c3190b947b013ef3317652ce52200b6fdd0822b863"
-      },
-      "笔记库/高阶核表示论/特殊线性超群/非典型权的子模.md": {
-        "route": "高阶核表示论/特殊线性超群/非典型权的子模.html",
-        "signature": "67354b49ad0484f4eb766a2b0e93e0e6e66f47e2c446dfd51a7f11c4257a4eac"
-      },
-      "笔记库/高阶核表示论/特殊线性超群/投射子商.md": {
-        "route": "高阶核表示论/特殊线性超群/投射子商.html",
-        "signature": "fba5dea082e7b1b12dc3bbba36069f88d72f253a1023637845866aff568ff16e"
-      },
-      "笔记库/高阶核表示论/特殊线性超群/张量分解.md": {
-        "route": "高阶核表示论/特殊线性超群/张量分解.html",
-        "signature": "8055a27b2e94719aaa7719155d2a6e5ee6d2fd06fc256610071b27e916b31b36"
-      },
-      "笔记库/高阶核表示论/特殊线性超群/根基滤过.md": {
-        "route": "高阶核表示论/特殊线性超群/根基滤过.html",
-        "signature": "80ff246b9cd80a3e37c0d1f0b049555d53dc297c462cbe711c014fe1a828320f"
-      },
-      "笔记库/高阶核表示论/特殊线性超群/一维模扭转.md": {
-        "route": "高阶核表示论/特殊线性超群/一维模扭转.html",
-        "signature": "f19701291de7819c73445f1a1b05bc29b8fb4d419846581ee2a1db1cc9fd5275"
-      },
-      "笔记库/高阶核表示论/特殊线性超群/前言.md": {
-        "route": "高阶核表示论/特殊线性超群/前言.html",
-        "signature": "5f8596ba4582b29c0c8f8090c5c97ddf1a86fc966c0a4bd59ff90900b4e8f6d9"
-      },
-      "笔记库/高阶核表示论/正根系与同态/全旗与正根系.md": {
-        "route": "高阶核表示论/正根系与同态/全旗与正根系.html",
-        "signature": "bf0f657c29b406ee1490d2996c81c7a1c77f9b30db712b89630d6bf733337ab2"
-      },
-      "笔记库/高阶核表示论/正根系与同态/标准正根系的同态.md": {
-        "route": "高阶核表示论/正根系与同态/标准正根系的同态.html",
-        "signature": "a2ba3f753b1fbc7e332931cf7d85e69794ddd75ce6dd55f156495b29e10735dd"
-      },
-      "笔记库/高阶核表示论/正根系与同态/同态分类.md": {
-        "route": "高阶核表示论/正根系与同态/同态分类.html",
-        "signature": "d0f26579fb971e227214e1e1261967d6ff5d54c130281f28786a64ce13b88e47"
-      },
-      "笔记库/高阶核表示论/正根系与同态/奇反射后的零权模.md": {
-        "route": "高阶核表示论/正根系与同态/奇反射后的零权模.html",
-        "signature": "eb313c2f841b3dfd9c993d2f364f5622b9e35fb93babb67491f5fd39e728eda3"
-      },
-      "笔记库/高阶核表示论/正根系与同态/奇反射后的滤过.md": {
-        "route": "高阶核表示论/正根系与同态/奇反射后的滤过.html",
-        "signature": "349b52a796c1f02f7abf51e9355a405f468dd5f3f3837c8db5ceba004af4b9a2"
-      },
-      "笔记库/高阶核表示论/正根系与同态/奇反射后的根基.md": {
-        "route": "高阶核表示论/正根系与同态/奇反射后的根基.html",
-        "signature": "f38495d214a4be4afc6a03b14cbc6b0cfb84670398b92cd64fd844ea06177555"
-      },
-      "笔记库/高阶核表示论/正根系与同态/前言.md": {
-        "route": "高阶核表示论/正根系与同态/前言.html",
-        "signature": "41c98d964f19edd93a1e9aba2857f09fcb021b87e420660ca54276d399b8fdbc"
-      },
-      "笔记库/高阶核表示论/进一步的问题.md": {
-        "route": "高阶核表示论/进一步的问题.html",
-        "signature": "97a94e23c5f425b1c449d1f899a2a0642a8ea74da22b3d771f3323e7376749af"
-      },
-      "笔记库/高阶核表示论/介绍.md": {
-        "route": "高阶核表示论/介绍.html",
-        "signature": "1e96dc170e805a34c45316c59c18c15b556c1c84094f7685e8eb24318a11ee94"
-      },
-      "笔记库/高阶核表示论/参考资料.md": {
-        "route": "高阶核表示论/参考资料.html",
-        "signature": "72e67e4c9a7d37346f82fa02f09b43fcf143f52d4213a5deb9ffd58c6f15a224"
-      },
-      "笔记库/高阶核的变形与滤过/前言.md": {
-        "route": "高阶核的变形与滤过/前言.html",
-        "signature": "2be5484707fbddafc6fd4fde24dadd3d798572b7697f31e9193f0df8be576b3f"
-      },
-      "笔记库/高阶核的变形与滤过/分布代数与最高权模.md": {
-        "route": "高阶核的变形与滤过/分布代数与最高权模.html",
-        "signature": "4f6df039be454be82ab6fd73e36f26c2c457976d4775db498c7b3a8690e3f2c1"
-      },
-      "笔记库/高阶核的变形与滤过/相邻同态与反变对偶.md": {
-        "route": "高阶核的变形与滤过/相邻同态与反变对偶.html",
-        "signature": "ff2620c6c8fd418de9999e9f68546aff483e67a35bca95b4dd62f75dbccbc2f2"
-      },
-      "笔记库/高阶核的变形与滤过/三类根的核与像.md": {
-        "route": "高阶核的变形与滤过/三类根的核与像.html",
-        "signature": "b98e7ba03d0a66e7866cdd110407a1284872d8be151b6c4e4323ba49938f35b5"
-      },
-      "笔记库/高阶核的变形与滤过/变权列与修正商.md": {
-        "route": "高阶核的变形与滤过/变权列与修正商.html",
-        "signature": "29109a37c709b9952bcdb6639963885c40e0a4dcfb253643c6ca67c715741ffe"
-      },
-      "笔记库/高阶核的变形与滤过/一阶参数同态与滤过.md": {
-        "route": "高阶核的变形与滤过/一阶参数同态与滤过.html",
-        "signature": "650a49b8617a7a69a3ec549c1db06ad764774d806272d153c27f9e0b2cdbf47a"
-      },
-      "笔记库/高阶核的变形与滤过/格与子空间滤过.md": {
-        "route": "高阶核的变形与滤过/格与子空间滤过.html",
-        "signature": "a359fbfc5bc76ad9d13f83abdcf4877dbd2e6d94d9546b29803324d304f86622"
-      },
-      "笔记库/高阶核的变形与滤过/高阶滤过/整形式与参数.md": {
-        "route": "高阶核的变形与滤过/高阶滤过/整形式与参数.html",
-        "signature": "19ccb1b1c5ecf18edc7956ce9c5fa4255a3c120f095cd5b72da2e216227dcd5e"
-      },
-      "笔记库/高阶核的变形与滤过/高阶滤过/配对与商滤过.md": {
-        "route": "高阶核的变形与滤过/高阶滤过/配对与商滤过.html",
-        "signature": "32dad2e79f98fc277e7fb2504993db363b1c5d445a2597c99ea6dae68dbe2048"
-      },
-      "笔记库/高阶核的变形与滤过/高阶滤过/一阶兼容与参数选择.md": {
-        "route": "高阶核的变形与滤过/高阶滤过/一阶兼容与参数选择.html",
-        "signature": "4e3948473bc2ddcb9fdfa1fe6e7c483ba655970cb7493e063b568db61faf2db5"
-      },
-      "笔记库/高阶核的变形与滤过/高阶滤过/商核与低层配对.md": {
-        "route": "高阶核的变形与滤过/高阶滤过/商核与低层配对.html",
-        "signature": "209bbac4cfe4dcffad2caf499467bf26eb7f64c18c2d01f8d1c1074cf41d40f6"
-      },
-      "笔记库/高阶核的变形与滤过/根方向的赋值.md": {
-        "route": "高阶核的变形与滤过/根方向的赋值.html",
-        "signature": "59aebfe84774fdb747bc1efeebc3687fbc1e41bd131a4dc6a261dcde1b925f8e"
-      },
-      "笔记库/高阶核的变形与滤过/环境配对与商核.md": {
-        "route": "高阶核的变形与滤过/环境配对与商核.html",
-        "signature": "69bc85eb670ee7e7d00c81595b570a12926024c047550869526615b3e96331fd"
-      },
-      "笔记库/高阶核的变形与滤过/中心子代数.md": {
-        "route": "高阶核的变形与滤过/中心子代数.html",
-        "signature": "d521acc94bd4d255a0320fe0e7631da5c182f206b1a4ea9e9d21baeef075c39f"
-      },
-      "笔记库/高阶核的变形与滤过/商核的首层配对.md": {
-        "route": "高阶核的变形与滤过/商核的首层配对.html",
-        "signature": "36aacc8e7622a95024c1cbed59e8034fe1b3e941b774701164431ce73305dd27"
-      },
-      "笔记库/高阶核的变形与滤过/低阶核与商核/辅助参数模.md": {
-        "route": "高阶核的变形与滤过/低阶核与商核/辅助参数模.html",
-        "signature": "f098199a87ce38a89a5fc39dca99dd5fec5f87efd3605b50de73cb2dae4ad111"
-      },
-      "笔记库/高阶核的变形与滤过/低阶核与商核/商核前段滤过.md": {
-        "route": "高阶核的变形与滤过/低阶核与商核/商核前段滤过.html",
-        "signature": "d7c56054a36126cc99c0ea5f505af0bca1639be4a10ac804d8620e5b078dbb58"
-      },
-      "笔记库/高阶核的变形与滤过/整形式的比较.md": {
-        "route": "高阶核的变形与滤过/整形式的比较.html",
-        "signature": "314ea24841696fda23c7b4e35ce5d6baab9b4f001f412a31e0f55ed11b796f34"
-      },
-      "笔记库/高阶核的变形与滤过/参考资料.md": {
-        "route": "高阶核的变形与滤过/参考资料.html",
-        "signature": "63c35c067adcea81515c9bce17faa574d568306478575e8dde337d1a13115c56"
-      },
-      "笔记库/高阶核的滤过与和公式/前言.md": {
-        "route": "高阶核的滤过与和公式/前言.html",
-        "signature": "c955adcae578c628764cdcdcff6ae63201ecde93bddd673feb9ad497a99468e5"
-      },
-      "笔记库/高阶核的滤过与和公式/根与分布代数.md": {
-        "route": "高阶核的滤过与和公式/根与分布代数.html",
-        "signature": "bc2e9804ca1ee88fffc00f6a4dfef24ad273fe5a0918b61ab4ed81c198bb7835"
-      },
-      "笔记库/高阶核的滤过与和公式/模范畴与诱导模.md": {
-        "route": "高阶核的滤过与和公式/模范畴与诱导模.html",
-        "signature": "ede321fa46c193863f7b196705db3e7d7dd47268126b42b31cdc02d2fcd2b7b7"
-      },
-      "笔记库/高阶核的滤过与和公式/正根系与相邻同态.md": {
-        "route": "高阶核的滤过与和公式/正根系与相邻同态.html",
-        "signature": "18a77a3121771e666cc86f3c3203272d532ec46e7434e83e6a9200cf2fc9248c"
-      },
-      "笔记库/高阶核的滤过与和公式/二项式与根方向作用.md": {
-        "route": "高阶核的滤过与和公式/二项式与根方向作用.html",
-        "signature": "42432f7aafb023a27944758f2f84772ff365c78fbc0e227bebd09bc6df72ba18"
-      },
-      "笔记库/高阶核的滤过与和公式/相邻同态的核与像.md": {
-        "route": "高阶核的滤过与和公式/相邻同态的核与像.html",
-        "signature": "61ffbadb538154b6e247f77562ff4580928b36818a94cdd24b3477adaec14f36"
-      },
-      "笔记库/高阶核的滤过与和公式/变权正合列.md": {
-        "route": "高阶核的滤过与和公式/变权正合列.html",
-        "signature": "fac9ee2d9ff5cc7e041caf8d82062cb9a555bbba1ad7544752fa307ea7a4009f"
-      },
-      "笔记库/高阶核的滤过与和公式/参数模与变形.md": {
-        "route": "高阶核的滤过与和公式/参数模与变形.html",
-        "signature": "369e3cefed9d7822ddfaf1cc2fd0d7eb65145332f16c756a7c2e884db98d3d87"
-      },
-      "笔记库/高阶核的滤过与和公式/滤过与余核长度.md": {
-        "route": "高阶核的滤过与和公式/滤过与余核长度.html",
-        "signature": "793ae72db7c2676b1c438afe062598e4f09e4bd5531b74fa10c4403dfcf25116"
-      },
-      "笔记库/高阶核的滤过与和公式/典型权的高阶滤过.md": {
-        "route": "高阶核的滤过与和公式/典型权的高阶滤过.html",
-        "signature": "3f0ef5a0d618e3f20ee20d0e85d84924e8275112f95d4c9a286433cff419be9d"
-      },
-      "笔记库/高阶核的滤过与和公式/参考资料.md": {
-        "route": "高阶核的滤过与和公式/参考资料.html",
-        "signature": "181defa935b1c3fbf5dd45d0968af68b972d816b89c33d3bf48e2e829d22a10b"
-      },
-      "笔记库/高阶核的滤过与扩张/前言.md": {
-        "route": "高阶核的滤过与扩张/前言.html",
-        "signature": "292f36dcf4017c4cecdb67481f142ec40e6e32e5337d66158d892fbe19f63a75"
-      },
-      "笔记库/高阶核的滤过与扩张/根与分布.md": {
-        "route": "高阶核的滤过与扩张/根与分布.html",
-        "signature": "dac47fc5cfc46e55b4f32b9f3bb7f35f0163c5f60f85b90abe8d53229ae5f439"
-      },
-      "笔记库/高阶核的滤过与扩张/最高权模.md": {
-        "route": "高阶核的滤过与扩张/最高权模.html",
-        "signature": "fe2917d784d9ac855edd08c14bf0df882117f8b76dd1f5e03a47d2cb358c1c58"
-      },
-      "笔记库/高阶核的滤过与扩张/二项式.md": {
-        "route": "高阶核的滤过与扩张/二项式.html",
-        "signature": "b2146062de4f3de8d906c22c3b5a17f0af701bed817db4b473d8e69e4cf89196"
-      },
-      "笔记库/高阶核的滤过与扩张/正根系.md": {
-        "route": "高阶核的滤过与扩张/正根系.html",
-        "signature": "7fd63a1f1f203d619fd18047d603b26df47842f767978c4810e85df18b34b59d"
-      },
-      "笔记库/高阶核的滤过与扩张/相邻同态.md": {
-        "route": "高阶核的滤过与扩张/相邻同态.html",
-        "signature": "853a23d62613f593b9fe5a57927d3825b0a29ec806b7c251b05ac9f845b361f5"
-      },
-      "笔记库/高阶核的滤过与扩张/变权正合列.md": {
-        "route": "高阶核的滤过与扩张/变权正合列.html",
-        "signature": "fdd3bed39b31b0d2ac6164b310e2ee70615b449a37f036407be43b971263b753"
-      },
-      "笔记库/高阶核的滤过与扩张/修正商/模结构.md": {
-        "route": "高阶核的滤过与扩张/修正商/模结构.html",
-        "signature": "e7a484e3e076647542d85659c4ffa6e77dc5ea0bc6cfe275a6fb3d3aeda6f24f"
-      },
-      "笔记库/高阶核的滤过与扩张/修正商/扩张.md": {
-        "route": "高阶核的滤过与扩张/修正商/扩张.html",
-        "signature": "c3ee5cddd9c192777f4e011b0b27adde1e7fd2e935866cd6199c14a3de1d614c"
-      },
-      "笔记库/高阶核的滤过与扩张/参数变形.md": {
-        "route": "高阶核的滤过与扩张/参数变形.html",
-        "signature": "f6e38893bb83320b3c41bba844ebdddd22b64be99647c788bdbe35deecc09b9d"
-      },
-      "笔记库/高阶核的滤过与扩张/圆分环.md": {
-        "route": "高阶核的滤过与扩张/圆分环.html",
-        "signature": "d78189d2f1ac13b55ca17c31e854ee3c6e18fb3d6583324cd1e0e90d68044966"
-      },
-      "笔记库/高阶核的滤过与扩张/整形式/坐标与对偶.md": {
-        "route": "高阶核的滤过与扩张/整形式/坐标与对偶.html",
-        "signature": "4b0554573f875afda4744ffe9697c06c5e90f8995d43e5b00ddbca631659fbfa"
-      },
-      "笔记库/高阶核的滤过与扩张/整形式/共同根部.md": {
-        "route": "高阶核的滤过与扩张/整形式/共同根部.html",
-        "signature": "569141e4376e4874164d78aff508b20c87c408d22e7f912d9d8dd1e3626c950d"
-      },
-      "笔记库/高阶核的滤过与扩张/整形式/根方向换序.md": {
-        "route": "高阶核的滤过与扩张/整形式/根方向换序.html",
-        "signature": "6e56fd3d972ca35a39b8b5fc2b8ecf2a8b1a4198e4b876384964d093fbf9db41"
-      },
-      "笔记库/高阶核的滤过与扩张/相邻参数模.md": {
-        "route": "高阶核的滤过与扩张/相邻参数模.html",
-        "signature": "50aebcdd1a6808472ce1642f954241b636b4466ea5c53f2c491258e85e37620e"
-      },
-      "笔记库/高阶核的滤过与扩张/局部消失阶.md": {
-        "route": "高阶核的滤过与扩张/局部消失阶.html",
-        "signature": "abd4963c8a678cf8c66b6e31ab3fb870c57db6d895e503a1eb24065ffcd3414c"
-      },
-      "笔记库/高阶核的滤过与扩张/滤过与和公式.md": {
-        "route": "高阶核的滤过与扩张/滤过与和公式.html",
-        "signature": "4e711359cce503e8dadb2f3db3448cbb6c392a88b4c0bf564c83e94bae7d40aa"
-      },
-      "笔记库/高阶核的滤过与扩张/根数据.md": {
-        "route": "高阶核的滤过与扩张/根数据.html",
-        "signature": "8dfc17171c8a4f4ecd60dd9679b5859b9a7c0a1725b9fbfc59f7c466ba3c094f"
-      },
-      "笔记库/高阶核的滤过与扩张/进一步的问题.md": {
-        "route": "高阶核的滤过与扩张/进一步的问题.html",
-        "signature": "ed2961e2637f6c0bcad36980889ce3fd6c0829d98865648cbbdadb8605628ead"
-      },
-      "笔记库/高阶核的滤过与扩张/参考资料.md": {
-        "route": "高阶核的滤过与扩张/参考资料.html",
-        "signature": "dae8f247465b2b99dd2dc2d2622ca3973dbf05a1c2ebe04c33e6a77debdd2a18"
-      },
-      "笔记库/高阶核的修正商与简单性/前言.md": {
-        "route": "高阶核的修正商与简单性/前言.html",
-        "signature": "74272e0f4f825f74eb724da757298d50c64942154ddfd495c4fff70bdcbde615"
-      },
-      "笔记库/高阶核的修正商与简单性/模与最高权.md": {
-        "route": "高阶核的修正商与简单性/模与最高权.html",
-        "signature": "303c23e4468b5e90f1aa2ca1a9dc1ddceaea66157558681b6b94981426c91619"
-      },
-      "笔记库/高阶核的修正商与简单性/局部同态/根系与同态.md": {
-        "route": "高阶核的修正商与简单性/局部同态/根系与同态.html",
-        "signature": "c598009cc8bff7eaae7ff6a9dbe82b3df6f9599244a4c89f1b13c514e9a356ea"
-      },
-      "笔记库/高阶核的修正商与简单性/局部同态/偶根的计算.md": {
-        "route": "高阶核的修正商与简单性/局部同态/偶根的计算.html",
-        "signature": "fd4d188afcfe0dcb8dbacdd779ac8041503b83061014b9840b8c373ed641257e"
-      },
-      "笔记库/高阶核的修正商与简单性/局部同态/奇根的计算.md": {
-        "route": "高阶核的修正商与简单性/局部同态/奇根的计算.html",
-        "signature": "a91f2421189973c5ea5ed4e67d6944f917b45da0fd3038d59435dfb90a089b65"
-      },
-      "笔记库/高阶核的修正商与简单性/修正商/自同态.md": {
-        "route": "高阶核的修正商与简单性/修正商/自同态.html",
-        "signature": "a62b7800e402a2e6cdc1d73f755e92f571d1f5069c4476c75d0cea5704a51238"
-      },
-      "笔记库/高阶核的修正商与简单性/修正商/自然非分裂列.md": {
-        "route": "高阶核的修正商与简单性/修正商/自然非分裂列.html",
-        "signature": "382627003155e42437630a14441f7f5360f911a6cce185b1e9a65c2d62a3c7f8"
-      },
-      "笔记库/高阶核的修正商与简单性/简单头与简单底.md": {
-        "route": "高阶核的修正商与简单性/简单头与简单底.html",
-        "signature": "0f5ba7ba07f52360e03773b8126ed4cc220c71c5c3f923745c57f7d33ec05925"
-      },
-      "笔记库/高阶核的修正商与简单性/相邻同态的复合.md": {
-        "route": "高阶核的修正商与简单性/相邻同态的复合.html",
-        "signature": "79e85f8df70831fdb2a6073bcdab156ed1ad98d1938e247a83dbd32a898b6759"
-      },
-      "笔记库/高阶核的修正商与简单性/简单性判据.md": {
-        "route": "高阶核的修正商与简单性/简单性判据.html",
-        "signature": "371b2d0be9a263a66f03e3d3973913ca33d60cc7102424b50ad163dde0763423"
-      },
-      "笔记库/高阶核的修正商与简单性/自然扩张空间.md": {
-        "route": "高阶核的修正商与简单性/自然扩张空间.html",
-        "signature": "17f3dd378fc30276279a72bca5344c33352e23a0e2e9c9eb8239abafd29ebc6f"
-      },
-      "笔记库/高阶核的修正商与简单性/参考资料.md": {
-        "route": "高阶核的修正商与简单性/参考资料.html",
-        "signature": "6ffb7b88d94ce352965de50598d86874fd6b935feea7f922441e97102806180d"
-      },
       "笔记库/高阶核的Jantzen滤过/前言.md": {
-        "route": "高阶核的jantzen滤过/前言.html",
+        "route": "index.html",
         "signature": "ad2708014474fad94f85f52e2fda8bf976736450e43fedadbee5b2157c3c4901"
       },
       "笔记库/高阶核的Jantzen滤过/最高权模与滤过.md": {
-        "route": "高阶核的jantzen滤过/最高权模与滤过.html",
+        "route": "最高权模与滤过.html",
         "signature": "c5b8337cffd3aa24e1d3dcc5ba40e63481f547ac23a1976b6a682a931af7d856"
       },
       "笔记库/高阶核的Jantzen滤过/相邻同态的方法.md": {
-        "route": "高阶核的jantzen滤过/相邻同态的方法.html",
+        "route": "相邻同态的方法.html",
         "signature": "c13a6aa29c122afb77d560c29be81216ae69d072f1f745395826cc6fd30a2202"
       },
       "笔记库/高阶核的Jantzen滤过/模的构造与基变换.md": {
-        "route": "高阶核的jantzen滤过/模的构造与基变换.html",
+        "route": "模的构造与基变换.html",
         "signature": "4b7ffd3e7bf6b6440f72560d3e72c9ba00a41e126bb51bc7df203abeede8a48d"
       },
       "笔记库/高阶核的Jantzen滤过/环面与整数权.md": {
-        "route": "高阶核的jantzen滤过/环面与整数权.html",
+        "route": "环面与整数权.html",
         "signature": "2708a9a4347da91a91ae833b33bc9799c68016e5fa1645ac5c709679bfc8c0ea"
       },
       "笔记库/高阶核的Jantzen滤过/超群的坐标代数.md": {
-        "route": "高阶核的jantzen滤过/超群的坐标代数.html",
+        "route": "超群的坐标代数.html",
         "signature": "6e6e250407a25fb6f893c162ee7a839272c1bb3fda57d4f07b65197024fec094"
       },
       "笔记库/高阶核的Jantzen滤过/高阶核的构造.md": {
-        "route": "高阶核的jantzen滤过/高阶核的构造.html",
+        "route": "高阶核的构造.html",
         "signature": "9876240a31275f209aaf1e45a7dd5d9eb599c0f4515d18e01f34a84141b9daa0"
       },
       "笔记库/高阶核的Jantzen滤过/分布代数与根算子.md": {
-        "route": "高阶核的jantzen滤过/分布代数与根算子.html",
+        "route": "分布代数与根算子.html",
         "signature": "c70d4d8278fb21077cd50dad9e5aa63ff1c5c95d63b962241887c569ae93f963"
       },
       "笔记库/高阶核的Jantzen滤过/根参数与PBW基/根参数.md": {
-        "route": "高阶核的jantzen滤过/根参数与pbw基/根参数.html",
+        "route": "根参数与pbw基/根参数.html",
         "signature": "2f07cad82e0e8139be0ae8b43ec399520dfcd264149dc0ccade8d3928b93656d"
       },
       "笔记库/高阶核的Jantzen滤过/根参数与PBW基/高阶PBW基.md": {
-        "route": "高阶核的jantzen滤过/根参数与pbw基/高阶pbw基.html",
+        "route": "根参数与pbw基/高阶pbw基.html",
         "signature": "f987a4be2432ff0a1510b0dc63a0d91b1f7fed338cbd7345c6c4d72c24108506"
       },
       "笔记库/高阶核的Jantzen滤过/根参数与PBW基/正根与Borel子群.md": {
-        "route": "高阶核的jantzen滤过/根参数与pbw基/正根与borel子群.html",
+        "route": "根参数与pbw基/正根与borel子群.html",
         "signature": "97e9c594cb3ce30df8678f51e5134d319eb26298046ba5ac4f50dff1455ad3fa"
       },
       "笔记库/高阶核的Jantzen滤过/最高权模/相容模与诱导.md": {
-        "route": "高阶核的jantzen滤过/最高权模/相容模与诱导.html",
+        "route": "最高权模/相容模与诱导.html",
         "signature": "a03943c131575bd58a922243f35f12b2a54dc6ddd9268b7d535b094a3cbef771"
       },
       "笔记库/高阶核的Jantzen滤过/最高权模/简单商与简单底.md": {
-        "route": "高阶核的jantzen滤过/最高权模/简单商与简单底.html",
+        "route": "最高权模/简单商与简单底.html",
         "signature": "a0514f130683ae3cac6c78758f60369e5669620dacb9343fd4bc48360bd8aa3f"
       },
       "笔记库/高阶核的Jantzen滤过/最高权模/一阶限制表示.md": {
-        "route": "高阶核的jantzen滤过/最高权模/一阶限制表示.html",
+        "route": "最高权模/一阶限制表示.html",
         "signature": "0695825995484c348b1e42f58d800186a88af06391e9f951f66019c7be67f67b"
       },
       "笔记库/高阶核的Jantzen滤过/相邻同态/Borel的变化.md": {
-        "route": "高阶核的jantzen滤过/相邻同态/borel的变化.html",
+        "route": "相邻同态/borel的变化.html",
         "signature": "6e24aa314e5034a2774db882b04fd6d7dac3373b743a44dafc4f408ecbbbcfc5"
       },
       "笔记库/高阶核的Jantzen滤过/相邻同态/同态的构造.md": {
-        "route": "高阶核的jantzen滤过/相邻同态/同态的构造.html",
+        "route": "相邻同态/同态的构造.html",
         "signature": "3037392f2f500c9f0bd817f4113e6cc530ef0df417ce300f158b8af8fa3f876d"
       },
       "笔记库/高阶核的Jantzen滤过/相邻同态/偶根的计算.md": {
-        "route": "高阶核的jantzen滤过/相邻同态/偶根的计算.html",
+        "route": "相邻同态/偶根的计算.html",
         "signature": "e7a84ebda6404b73cbec54127e4fc050a988a615b3d648637adcdc11fcb7c141"
       },
       "笔记库/高阶核的Jantzen滤过/相邻同态/各向同性奇根.md": {
-        "route": "高阶核的jantzen滤过/相邻同态/各向同性奇根.html",
+        "route": "相邻同态/各向同性奇根.html",
         "signature": "bdf288c597f03add7ae859881606d13e79703deb808bf53bb7d526c5d9a2b59b"
       },
       "笔记库/高阶核的Jantzen滤过/相邻同态/非各向同性奇根.md": {
-        "route": "高阶核的jantzen滤过/相邻同态/非各向同性奇根.html",
+        "route": "相邻同态/非各向同性奇根.html",
         "signature": "59564dcff9fb38df9acc2c3bff03ead3b12164b25ea28f2bc67ba13182e2b56b"
       },
       "笔记库/高阶核的Jantzen滤过/变权正合列/偶根的变权映射.md": {
-        "route": "高阶核的jantzen滤过/变权正合列/偶根的变权映射.html",
+        "route": "变权正合列/偶根的变权映射.html",
         "signature": "053cdc4889c691de18aca47475bf7cf6d7cddeb1c7bf00359360394987240a09"
       },
       "笔记库/高阶核的Jantzen滤过/变权正合列/第三类的变权映射.md": {
-        "route": "高阶核的jantzen滤过/变权正合列/第三类的变权映射.html",
+        "route": "变权正合列/第三类的变权映射.html",
         "signature": "310e06d0037c67687ef125926c6471b7e5ee5d5b4b5ce8a0473a34a514b3eb2a"
       },
       "笔记库/高阶核的Jantzen滤过/变权正合列/修正商.md": {
-        "route": "高阶核的jantzen滤过/变权正合列/修正商.html",
+        "route": "变权正合列/修正商.html",
         "signature": "9d3eb696528c543dc18f53ef5cd9ed5bd8e6a5351761547b2af46440e55da27c"
       },
       "笔记库/高阶核的Jantzen滤过/参数模/参数环与自由模.md": {
-        "route": "高阶核的jantzen滤过/参数模/参数环与自由模.html",
+        "route": "参数模/参数环与自由模.html",
         "signature": "22f1555cbd4653a896de48b48fa136d265edc3f821a5b1a00a7f4090efca6d79"
       },
       "笔记库/高阶核的Jantzen滤过/参数模/一阶变形.md": {
-        "route": "高阶核的jantzen滤过/参数模/一阶变形.html",
+        "route": "参数模/一阶变形.html",
         "signature": "de2663fa0d151b0887f73baacdc1bfce313880d18f0ab959c11298ae02a1469c"
       },
       "笔记库/高阶核的Jantzen滤过/参数模/高阶Cartan关系.md": {
-        "route": "高阶核的jantzen滤过/参数模/高阶cartan关系.html",
+        "route": "参数模/高阶cartan关系.html",
         "signature": "908f0d2c9aed4f05f3239baa87adbdba54319c05f8b9a34c781a76ad54a4ec1f"
       },
       "笔记库/高阶核的Jantzen滤过/圆分参数/参数环.md": {
-        "route": "高阶核的jantzen滤过/圆分参数/参数环.html",
+        "route": "圆分参数/参数环.html",
         "signature": "ac87f50aacf9f5fa54d45dc306fc7a375c118cb8f54c27d8e32a7f01fb084db7"
       },
       "笔记库/高阶核的Jantzen滤过/圆分参数/差因子的消失阶.md": {
-        "route": "高阶核的jantzen滤过/圆分参数/差因子的消失阶.html",
+        "route": "圆分参数/差因子的消失阶.html",
         "signature": "fc66f5a2c55548b9317ed872f770c2c918b375d94f94c26fa87553dc2d8e73a0"
       },
       "笔记库/高阶核的Jantzen滤过/圆分参数/Cartan二项式的评价.md": {
-        "route": "高阶核的jantzen滤过/圆分参数/cartan二项式的评价.html",
+        "route": "圆分参数/cartan二项式的评价.html",
         "signature": "2e7985fdcdbabef999bb333670ec4cf9f7644dcf07ce013b84687b4f9d4bd9aa"
       },
       "笔记库/高阶核的Jantzen滤过/根坐标整格/整格与特殊化.md": {
-        "route": "高阶核的jantzen滤过/根坐标整格/整格与特殊化.html",
+        "route": "根坐标整格/整格与特殊化.html",
         "signature": "ca3bd028187741cf10f8f2826240b536a5cc0d7346ffbe15cf120f9501f3c7c5"
       },
       "笔记库/高阶核的Jantzen滤过/根坐标整格/量子词代数.md": {
-        "route": "高阶核的jantzen滤过/根坐标整格/量子词代数.html",
+        "route": "根坐标整格/量子词代数.html",
         "signature": "c1770ecd3aff6432a3959403848af2836019b92c4aa55b40c8d02be00c886d0f"
       },
       "笔记库/高阶核的Jantzen滤过/根坐标整格/根向量与坐标.md": {
-        "route": "高阶核的jantzen滤过/根坐标整格/根向量与坐标.html",
+        "route": "根坐标整格/根向量与坐标.html",
         "signature": "815bde213d2f101aab0a2496cf4c6c8d5817c5d208f17bdaf097fd1433cd580b"
       },
       "笔记库/高阶核的Jantzen滤过/根坐标整格/配对与换序支撑.md": {
-        "route": "高阶核的jantzen滤过/根坐标整格/配对与换序支撑.html",
+        "route": "根坐标整格/配对与换序支撑.html",
         "signature": "2eec2bf625bad9edb6a6d2230558bbdc4bf41760b0a9f9c8ae1d0c10e2f366e7"
       },
       "笔记库/高阶核的Jantzen滤过/根坐标整格/正交辛根的重数.md": {
-        "route": "高阶核的jantzen滤过/根坐标整格/正交辛根的重数.html",
+        "route": "根坐标整格/正交辛根的重数.html",
         "signature": "705d704dac89d429a230748d07fdb175df78088597c26d19778933e1748e96e9"
       },
       "笔记库/高阶核的Jantzen滤过/根坐标整格/经典根的单位首项.md": {
-        "route": "高阶核的jantzen滤过/根坐标整格/经典根的单位首项.html",
+        "route": "根坐标整格/经典根的单位首项.html",
         "signature": "9abc5550458f89200f2d5a0fa29d9269d558bb6bd86619534bca88f98935a1b3"
       },
       "笔记库/高阶核的Jantzen滤过/根坐标整格/全次数整性.md": {
-        "route": "高阶核的jantzen滤过/根坐标整格/全次数整性.html",
+        "route": "根坐标整格/全次数整性.html",
         "signature": "3630b682650a077f01100f2249bd683be12c6c4a11080f4283e2ce75206a880c"
       },
       "笔记库/高阶核的Jantzen滤过/根坐标整格/有限坐标商.md": {
-        "route": "高阶核的jantzen滤过/根坐标整格/有限坐标商.html",
+        "route": "根坐标整格/有限坐标商.html",
         "signature": "c66e9fe0f660fec34336ec0fba0274e8a661865f36f4f5a9379c153467098cc4"
       },
       "笔记库/高阶核的Jantzen滤过/根坐标整格/有限对偶与经典作用.md": {
-        "route": "高阶核的jantzen滤过/根坐标整格/有限对偶与经典作用.html",
+        "route": "根坐标整格/有限对偶与经典作用.html",
         "signature": "020f72c4517512054804d9b1b846ed9303fa8910186f3881f007e2626eb1b727"
       },
       "笔记库/高阶核的Jantzen滤过/例外根/根室与根词.md": {
-        "route": "高阶核的jantzen滤过/例外根/根室与根词.html",
+        "route": "例外根/根室与根词.html",
         "signature": "b511bf4e8b789ad6cba63a3891d2614cd3b58a2bdf7099b435198bc6218c842b"
       },
       "笔记库/高阶核的Jantzen滤过/例外根/例外根表.md": {
-        "route": "高阶核的jantzen滤过/例外根/例外根表.html",
+        "route": "例外根/例外根表.html",
         "signature": "3c62887fe4f26acba15c1c98f0dc5ce9dbadb31144e720632609767675bab2dc"
       },
       "笔记库/高阶核的Jantzen滤过/例外根/参数型根表.md": {
-        "route": "高阶核的jantzen滤过/例外根/参数型根表.html",
+        "route": "例外根/参数型根表.html",
         "signature": "f0691ce4fc9022c886616c120d99b93a255752803d2b699a1c17f9aca2735153"
       },
       "笔记库/高阶核的Jantzen滤过/正负配对/对偶基的经典极限.md": {
-        "route": "高阶核的jantzen滤过/正负配对/对偶基的经典极限.html",
+        "route": "正负配对/对偶基的经典极限.html",
         "signature": "f45a87439f95d2c4c7a294573ba9a50ad6239030afc7dec7ec2a43d906207f1e"
       },
       "笔记库/高阶核的Jantzen滤过/正负配对/场上的正负代数.md": {
-        "route": "高阶核的jantzen滤过/正负配对/场上的正负代数.html",
+        "route": "正负配对/场上的正负代数.html",
         "signature": "9dfd883ebd7db57ad01f1b933fdb3566a2d3a451e17cc44bf5c148d7cf5a0bd3"
       },
       "笔记库/高阶核的Jantzen滤过/正负配对/正则反射.md": {
-        "route": "高阶核的jantzen滤过/正负配对/正则反射.html",
+        "route": "正负配对/正则反射.html",
         "signature": "a5327d7786b71cfe4e6201c0e950eda0fe5e3fbc359cc70f8722e0cfc9dc4b28"
       },
       "笔记库/高阶核的Jantzen滤过/正负配对/共同坐标格.md": {
-        "route": "高阶核的jantzen滤过/正负配对/共同坐标格.html",
+        "route": "正负配对/共同坐标格.html",
         "signature": "f7cd6c058a77de7213ffcad9473f67ffd011eb32428de062961997f867435e8b"
       },
       "笔记库/高阶核的Jantzen滤过/正负配对/共同配对与对偶格.md": {
-        "route": "高阶核的jantzen滤过/正负配对/共同配对与对偶格.html",
+        "route": "正负配对/共同配对与对偶格.html",
         "signature": "dd3c6d5dd35f09771d3410f75a90de32c73e13d9af58d32fce6daa8d57340a35"
       },
       "笔记库/高阶核的Jantzen滤过/根块换序/普通偶根.md": {
-        "route": "高阶核的jantzen滤过/根块换序/普通偶根.html",
+        "route": "根块换序/普通偶根.html",
         "signature": "c498c84a4358edc490ad8cda23b8061204e58c61a735c7c9d7fca74876c66b29"
       },
       "笔记库/高阶核的Jantzen滤过/根块换序/各向同性奇根.md": {
-        "route": "高阶核的jantzen滤过/根块换序/各向同性奇根.html",
+        "route": "根块换序/各向同性奇根.html",
         "signature": "db5e7d403d8eaafc90efb501469b0875be9ab37f568ee5c937fb478190dc92a5"
       },
       "笔记库/高阶核的Jantzen滤过/根块换序/奇根块的普通幂.md": {
-        "route": "高阶核的jantzen滤过/根块换序/奇根块的普通幂.html",
+        "route": "根块换序/奇根块的普通幂.html",
         "signature": "0b47462eac75869c3a00c93f1aaa58e867b5232afb133fc2652d61f3a8e3021c"
       },
       "笔记库/高阶核的Jantzen滤过/根块换序/成对系数的整性.md": {
-        "route": "高阶核的jantzen滤过/根块换序/成对系数的整性.html",
+        "route": "根块换序/成对系数的整性.html",
         "signature": "7ce209ca2c145a6a539731579371b467bee40f1adfed078e016afe4a88900af1"
       },
       "笔记库/高阶核的Jantzen滤过/根块换序/经典系数.md": {
-        "route": "高阶核的jantzen滤过/根块换序/经典系数.html",
+        "route": "根块换序/经典系数.html",
         "signature": "7a934a734cf8e17c1f2320acc3db0f20a16fadc02e630cc0fbfb0cf49240a7e1"
       },
       "笔记库/高阶核的Jantzen滤过/相邻参数模/完整环面.md": {
-        "route": "高阶核的jantzen滤过/相邻参数模/完整环面.html",
+        "route": "相邻参数模/完整环面.html",
         "signature": "5f03d3a4a4c7cd6604abaffa0f1ee0cd8078852ef7d4926ac7f0e334057873c0"
       },
       "笔记库/高阶核的Jantzen滤过/相邻参数模/共同整代数.md": {
-        "route": "高阶核的jantzen滤过/相邻参数模/共同整代数.html",
+        "route": "相邻参数模/共同整代数.html",
         "signature": "e1b0cf760b98dcbbbf4e8cc52ec17a3e22bb9bd1d447d75117a71c774e385512"
       },
       "笔记库/高阶核的Jantzen滤过/相邻参数模/诱导与特殊化.md": {
-        "route": "高阶核的jantzen滤过/相邻参数模/诱导与特殊化.html",
+        "route": "相邻参数模/诱导与特殊化.html",
         "signature": "a4f108d4f54852fa755ef5515667c47620a1223d307f45a4c3430ac162a369ce"
       },
       "笔记库/高阶核的Jantzen滤过/相邻参数模/相邻参数链.md": {
-        "route": "高阶核的jantzen滤过/相邻参数模/相邻参数链.html",
+        "route": "相邻参数模/相邻参数链.html",
         "signature": "6dbb30742e3c291f146c81e9c5812d9b8932340183cc7626a903c92173098125"
       },
       "笔记库/高阶核的Jantzen滤过/局部长度/长度与特征标.md": {
-        "route": "高阶核的jantzen滤过/局部长度/长度与特征标.html",
+        "route": "局部长度/长度与特征标.html",
         "signature": "966b54d696faa1d034471a4ddf608bb67f3b6e81a1a9a50389491469ace1a215"
       },
       "笔记库/高阶核的Jantzen滤过/局部长度/偶根的长度.md": {
-        "route": "高阶核的jantzen滤过/局部长度/偶根的长度.html",
+        "route": "局部长度/偶根的长度.html",
         "signature": "739a3d23d622e77c05c490f5bc4312ff55ecb040e7a17a35d1ba609e1285d0e6"
       },
       "笔记库/高阶核的Jantzen滤过/局部长度/各向同性根的长度.md": {
-        "route": "高阶核的jantzen滤过/局部长度/各向同性根的长度.html",
+        "route": "局部长度/各向同性根的长度.html",
         "signature": "443347803d033ba518a45e9d0220eb5856c6a1499a6d21a89c1bba4e88e6438a"
       },
       "笔记库/高阶核的Jantzen滤过/局部长度/第三类的长度.md": {
-        "route": "高阶核的jantzen滤过/局部长度/第三类的长度.html",
+        "route": "局部长度/第三类的长度.html",
         "signature": "cf68277fb3bc07e05463b82bd3b1f6c0bc5ec1e7f27162149b34ccb744aca845"
       },
       "笔记库/高阶核的Jantzen滤过/滤过与和公式/滤过的定义.md": {
-        "route": "高阶核的jantzen滤过/滤过与和公式/滤过的定义.html",
+        "route": "滤过与和公式/滤过的定义.html",
         "signature": "db1845764dbf93ccadce4fe7cc2f490a75602f665bc910541fb84abbfdcd8826"
       },
       "笔记库/高阶核的Jantzen滤过/滤过与和公式/最高权与根参数.md": {
-        "route": "高阶核的jantzen滤过/滤过与和公式/最高权与根参数.html",
+        "route": "滤过与和公式/最高权与根参数.html",
         "signature": "9e037209a8db80bb8021aa71af301c48cf42e59cd7fd1f8f2c63819f6d422da6"
       },
       "笔记库/高阶核的Jantzen滤过/滤过与和公式/和公式.md": {
-        "route": "高阶核的jantzen滤过/滤过与和公式/和公式.html",
+        "route": "滤过与和公式/和公式.html",
         "signature": "3ccf588208e7035ea89c776de6cfaa9202199021dc755b4aa312c469763ffc53"
       },
       "笔记库/高阶核的Jantzen滤过/滤过与和公式/首末层.md": {
-        "route": "高阶核的jantzen滤过/滤过与和公式/首末层.html",
+        "route": "滤过与和公式/首末层.html",
         "signature": "6ebc2ed676acd1ea7f8c8c108cc0dc794156958767e321110fea7a222969b574"
       },
       "笔记库/高阶核的Jantzen滤过/一阶比较与适用范围.md": {
-        "route": "高阶核的jantzen滤过/一阶比较与适用范围.html",
+        "route": "一阶比较与适用范围.html",
         "signature": "78ae2b50c630cf39a826e1f97247dddf5bfa2caae673c4717574241929cfd23e"
       },
       "笔记库/高阶核的Jantzen滤过/参考资料.md": {
-        "route": "高阶核的jantzen滤过/参考资料.html",
+        "route": "参考资料.html",
         "signature": "2a21741b0d15621684372b5e6cb3d99bc84e056c2bd9fd3a5d49bbf3ccb72a01"
       }
     }

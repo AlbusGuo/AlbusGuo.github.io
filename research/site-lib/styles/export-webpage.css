@@ -8,63 +8,63 @@ body {
 
 /*#region Tree */
 
-.tree-icon {
+.tree-icon:where(:not(#file-explorer, #file-explorer *)) {
 	border: 1px solid transparent;
 	margin: 0px 4px 0px 0px;
 	display: flex;
 	align-self: center;
 }
 
-.tree-icon :is(svg, img) {
+.tree-icon :is(svg, img):where(:not(#file-explorer, #file-explorer *)) {
 	width: 1em !important;
 	height: 1em !important;
 }
 
-.tree-icon *:has(svg, img) {
+.tree-icon *:has(svg, img):where(:not(#file-explorer, #file-explorer *)) {
 	display: contents !important;
 }
 
-a.tree-item-self.is-clickable {
+a.tree-item-self.is-clickable:where(:not(#file-explorer, #file-explorer *)) {
 	text-decoration: none !important;
 	text-decoration-line: none !important;
 }
 
-.tree-item-inner>p {
+.tree-item-inner>p:where(:not(#file-explorer, #file-explorer *)) {
 	display: contents !important;
 }
 
 
-.tree-container .feature-title {
+.tree-container .feature-title:where(:not(#file-explorer, #file-explorer *)) {
 	flex-grow: 0 !important;
 	margin-right: .5em !important;
 	font-size: inherit !important;
 	color: var(--text-normal) !important;
 }
 
-.tree-item-children:empty {
+.tree-item-children:empty:where(:not(#file-explorer, #file-explorer *)) {
 	display: none !important;
 }
 
-.tree-item.filtered-out {
+.tree-item.filtered-out:where(:not(#file-explorer, #file-explorer *)) {
 	display: none;
 }
 
-#outline .tree-item[data-depth="1"]:not(.mod-collapsible)>.tree-item-self {
+#outline .tree-item[data-depth="1"]:not(.mod-collapsible)>.tree-item-self:where(:not(#file-explorer, #file-explorer *)) {
 	font-weight: 900;
 	font-size: 1.05em;
 }
 
-.tree-item:not(.mod-collapsible)>.tree-item-self
+.tree-item:not(.mod-collapsible)>.tree-item-self:where(:not(#file-explorer, #file-explorer *))
 {
 	padding-left: calc(var(--nav-item-children-margin-start,var(--nav-item-children-margin-left)) - 0.35em);
 }
 
-.tree-item-self {
+.tree-item-self:where(:not(#file-explorer, #file-explorer *)) {
 	display: flex !important;
 	align-items: center !important;
 }
 
-#file-explorer {
+#file-explorer:where(:not(#file-explorer, #file-explorer *)) {
 	padding: 0 !important;
 }
 
@@ -185,14 +185,14 @@ html>body>#main-horizontal>#center-content>.obsidian-document>.markdown-preview-
 	opacity: 1;
 }
 
-.tree-container {
+.tree-container:where(:not(#file-explorer, #file-explorer *)) {
 	--nav-item-size: 1em;
 	overflow: hidden auto;
 	height: 100%;
 }
 
-.nav-file-title,
-.nav-folder-title {
+.nav-file-title:where(:not(#file-explorer, #file-explorer *)),
+.nav-folder-title:where(:not(#file-explorer, #file-explorer *)) {
 	line-height: var(--tree-vertical-spacing) !important;
 }
 
@@ -666,7 +666,7 @@ body.is-phone {
 	color: var(--nav-item-color-active);
 }
 
-.tree-hint-label {
+.tree-hint-label:where(:not(#file-explorer, #file-explorer *)) {
 	font-size: var(--font-smallest);
 	color: var(--text-accent);
 	width: 100%;
@@ -679,7 +679,7 @@ body.is-phone {
 	text-overflow: ellipsis;
 }
 
-.tree-hint-label.internal-link::before {
+.tree-hint-label.internal-link:where(:not(#file-explorer, #file-explorer *))::before {
 	content: "H";
 	font-size: 1.2em;
 	font-weight: 700;
@@ -690,11 +690,11 @@ body.is-phone {
 	color: var(--nav-item-color);
 }
 
-.tree-hint-label:hover {
+.tree-hint-label:hover:where(:not(#file-explorer, #file-explorer *)) {
 	text-decoration-line: underline;
 }
 
-.tree-hint-container {
+.tree-hint-container:where(:not(#file-explorer, #file-explorer *)) {
 	width: 100%;
 	padding: var(--nav-item-padding);
 	padding-bottom: 0;
@@ -706,11 +706,11 @@ body.is-phone {
 }
 
 /* find hints inside folders with no other folders in them */
-.tree-container .nav-folder:not(:has(.nav-folder)) .nav-file>.tree-link>.tree-hint-container {
+.tree-container .nav-folder:not(:has(.nav-folder)) .nav-file>.tree-link>.tree-hint-container:where(:not(#file-explorer, #file-explorer *)) {
 	padding-left: calc(1em * 2);
 }
 
-a.tree-hint-label:hover {
+a.tree-hint-label:hover:where(:not(#file-explorer, #file-explorer *)) {
 	text-decoration-line: underline;
 }
 
@@ -792,13 +792,13 @@ input[type=search] {
 
 /*#region General */
 
-.nav-folder-children .nav-folder-title-content::before {
+.nav-folder-children .nav-folder-title-content:where(:not(#file-explorer, #file-explorer *))::before {
 	margin-right: 0.5em;
 }
 
-.tree-item-contents:has(.tree-item-icon) .tree-item-title::before,
-.tree-item-contents:has(.tree-item-icon)::before,
-.tree-item:has(.tree-item-contents > .tree-item-icon)::before {
+.tree-item-contents:has(.tree-item-icon) .tree-item-title:where(:not(#file-explorer, #file-explorer *))::before,
+.tree-item-contents:has(.tree-item-icon):where(:not(#file-explorer, #file-explorer *))::before,
+.tree-item:has(.tree-item-contents > .tree-item-icon):where(:not(#file-explorer, #file-explorer *))::before {
 	display: none !important;
 }
 
