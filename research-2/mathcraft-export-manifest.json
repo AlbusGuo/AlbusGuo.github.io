@@ -1,0 +1,210 @@
+{
+  "version": 2,
+  "files": {
+    "site-lib/scripts/webpage.js": "91ccb1038c2573388c0249bb948b0ae2733953024c0441cfb0b39f61bb5b0296",
+    "site-lib/scripts/notebook-navigation.js": "a4331c822d7f15d093c5b44b4960500ae7915c1a837b867ba625367c7e17c1e9",
+    "site-lib/scripts/editing-suite.js": "87df6aa4950e59b2318fe46c03cc15c66b067ee36c688f4488493739d6ba4c10",
+    "site-lib/styles/export-webpage.css": "06abcbfe497310371999c0014bfd726e17df2c6166ccae9e95a9ca8dbbc82c33",
+    "site-lib/styles/main-styles.css": "79648c459e52aa50cc4609fafa7aff011efa8417672860a2e34f9846e4abd4c7",
+    "site-lib/styles/obsidian.css": "8c7db4c4b9c9ab22475fde8cbccf5a3600a1dba731ef08885b184878bd66ed06",
+    "site-lib/styles/local-fonts.css": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "site-lib/styles/theme.css": "0e446061bba8b1ee44f46b08013f684973ad627663b1532d00e498638ab251a2",
+    "site-lib/styles/snippets.css": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "site-lib/styles/other-plugins.css": "4d0098b448f91aa09adb5454cb551002262e794ab9b9f996dae49ff4eeabc765",
+    "site-lib/styles/editing-suite.css": "f03a5e141094e2e1d39295c14721e733f69e1f985dedce2411cdc5b2c1244543",
+    "site-lib/styles/editing-suite-export.css": "b555d3f9c97e857507988f5b4a7acca1a51e0520707bb2d8ddbe41ddee124427",
+    "site-lib/styles/global-variable-styles.css": "d2af45ddcb2b2772c553fb7447d0a3d4fe63c3c931295dc2be59a250eabc2f25",
+    "site-lib/styles/supported-plugins.css": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "site-lib/html/file-tree.html": "942d10174cf0d45de034e44bdd77041bd7faf3185e32d23c4debed1c37a1d669",
+    "site-lib/search-index.json": "ae51ddb273fff8e23b4236d0a658dfb8ba54c0b36f82cf613533f1b395df13fb",
+    "site-lib/metadata.json": "6ae513cf61a619c73b872026a5a9a4968fadde28b1d3329f910b23d0e3572798",
+    "index.html": "8f648cb3f9014bc666971407e0bfef78bd45968e4072225b57f901e1aeb8efc3",
+    "预备知识/模与正合列.html": "e6529e845570901cde81c405fcf75352e46329e212b13cacc506b26ffa1ca145",
+    "预备知识/诱导模与同态.html": "9749466587ca5bd375aa821e5ccdba6f76470e9ee4a8ccd150e1c53799c3eb01",
+    "预备知识/环面与分布.html": "f4d7e6f4f3a3e1be841fa92cc2f5faf2c7b2f5eda9f302aa00d4caf926c984cf",
+    "预备知识/二项式系数.html": "ad2882d0b6f82c9e38c06382d20cfdffa4fd6477229b68df90b2a797c8c8a256",
+    "预备知识/扩张与投射模.html": "a8401df1b80015159d571e3b3f2f51727615e276ace59c35979e73e0bc77fa62",
+    "原文的两个问题/权限制与张量平移.html": "9f4fba242b17644696ec7354def5637a0d275ac32931c2f4e0489b0f6254f30e",
+    "原文的两个问题/简单模的扩张.html": "f53986898b30062a2a623a0e138d62538f995ded6c64e9f5b63e50c74ed8f848",
+    "高阶最高权模/根数据与分布代数.html": "7503d1d0a44b165dcb409794e05254e235cdb2ccacd1a1874421f7af0cdcea32",
+    "高阶最高权模/模范畴与最高权模.html": "27587ae8fde665ff8895f83f4268abad038b14fd42ab6285aba51045d80ac88d",
+    "相邻同态/反射与最高权同态.html": "8eea04708e09060ababb64d9fd1a3a59b211d8193ccc81c76aad8543fcd231d1",
+    "相邻同态/普通偶根.html": "74f16b50daa0b8514c778be39d90c5737e2003c4937811712810c8c1bda5aa01",
+    "相邻同态/各向同性奇根.html": "a37a27c1c62d8c2b846bc48494c77b34e9e63ac2e0607a4c716c7b98125fcd80",
+    "相邻同态/非各向同性奇根.html": "58c4843e5172d9dce1f110427e81668e966641c842f6cfdc910e428f78a70941",
+    "变权正合列与修正商/变权正合列.html": "2aebd0758cbcedcd82bc1c2e5713381f503b521ae6dc5517a0ac9c3e1f3f30db",
+    "变权正合列与修正商/修正商与最高权模.html": "5cce8dae1011a89a05e0c04eddbf5ada4681211266b6b5c70c4760e0be1f4991",
+    "复合同态与单性/超-weyl-群与反射序列.html": "c85538f65366db6379f9fb8f7aeba7fb6b47fdf26778900484b97a6fc1d6db5e",
+    "复合同态与单性/简单底与复合同态.html": "f3a5f337f6de145a30df6670e2a2ac016dab79710a3dc44d147d2b7b7380c220",
+    "复合同态与单性/单性判据.html": "82bafcf6cd1d372ff3e98af59c9c05fb82b428d24cab80f36b6a70a436f8c4b2",
+    "单模的扩张/根基与一阶扩张.html": "dac70b944aaa30d84fbe864bca74d46ea8da93250c587d4182b764c98e020f42",
+    "单模的扩张/普通偶根的扩张.html": "70bce42c3c8cd030317a1c9a9fbd2d27a967cf32d7a72dadbb45f16ac99e7c43",
+    "单模的扩张/奇根的扩张.html": "ce2ffe8567108de4e2cac374157bd829d3bd0cc90fca133734671189ee7b6495",
+    "单模的扩张/一般超群的扩张.html": "cf61ec0272086127fbc70d5e8f1c1ee679d3ef9b037bc6ce6bb1b57c9ce889b8",
+    "组成因子/偶根的组成列.html": "5fdff36076660ddad31d559ad4743e90288f510cde0e54076421fe117b8c428d",
+    "组成因子/奇根的组成列.html": "c80e38d37ec0e1fe3e515ab1166b74320d04efe133f52e754fbca32ab6f2403a",
+    "组成因子/正合诱导与必要条件.html": "f3a68f041c009c26516438af27c37ebe5b99ced9bd082cb259d117f2b5106bdf",
+    "组成因子/充分条件与有限判定.html": "65d192b03685a482a5cb0863fa355e0c33a02a376840b7c398d5dba57d3d5024",
+    "环面作用的限制/简单模与投射盖.html": "865e4ec918b9241262ff774316e3c72a25c0d5f14328ac165b1c022d492cb626",
+    "环面作用的限制/扩张与组成因子的比较.html": "6150c485b0119e1918385b38bbf75384c468929b4213b75158335c5735c501a2",
+    "参考资料.html": "08222889cf01924376f3583809a33288c0a23c7fcb9280925f974f60f25b678c",
+    "site-lib/fonts/mathjax-2ea308c69f13.woff2": "2ea308c69f139e9ee7bc452e12a449c13e3b9ce4c08aebc4e86e15df232a26e0",
+    "site-lib/fonts/mathjax-f9054e3dd268.woff2": "f9054e3dd268155cb38c708ef7b7c7c03e83ac3723afcb65ae65a37bbb301f4e",
+    "site-lib/fonts/mathjax-2c146f72c9a3.woff2": "2c146f72c9a345aa282398a752d03af71d83a011f3d067297b533a31f0c5f5cb",
+    "site-lib/fonts/mathjax-4f03a0d86ff0.woff2": "4f03a0d86ff005f12cbb0ffd162bae0766415e48e07ed3fa5970e685594de15d",
+    "site-lib/fonts/mathjax-fad3b88ec7aa.woff2": "fad3b88ec7aac4959e3de19044931682bd4d1500c72a85d2d113b73b694c4133",
+    "site-lib/fonts/mathjax-69e45ca329dd.woff2": "69e45ca329dd2fcc3671dc20884f2baf29348a43833104266be098eba544fda2",
+    "site-lib/fonts/mathjax-82c82a2e0c8b.woff2": "82c82a2e0c8bc89421ce9cbb4ecea806c8ceec4b4fd0269726b9439ca853b365",
+    "site-lib/fonts/mathjax-d0c95edf7b32.woff2": "d0c95edf7b3223c8e66fcb4b6faaf74fc3376eea59c20f23677f4d54905a356e",
+    "site-lib/fonts/mathjax-6cb008e93488.woff2": "6cb008e934883d1f4652562276469dfc1ade06ee4ceebd6979e79b1c98472b47",
+    "site-lib/fonts/mathjax-303b28cdca9c.woff2": "303b28cdca9c064d93dc1672b843933ab20e28f777adb08b9eafa6f442f074d7",
+    "site-lib/fonts/mathjax-e0d564a939fc.woff2": "e0d564a939fce2e4d0c09a86f0dc936c2a9cdb42e44eb264dbc5ef01d71e179c",
+    "site-lib/fonts/mathjax-4a2e4827bad8.woff2": "4a2e4827bad85a9ae5fe906f179ccfce154bfc29e19115ceb8d7f1f6e8ce31cd",
+    "site-lib/fonts/mathjax-b6dfb310dd7b.woff2": "b6dfb310dd7b5c059e9b748b4766fcdd6fa0005c17d9229f3bb1bd095acfae1a",
+    "site-lib/fonts/mathjax-82e8abfaecf0.woff2": "82e8abfaecf005f639e18b1e7dece8700c56df76eac8ea94e4b5915bedee7567",
+    "site-lib/fonts/mathjax-0e9f0e5baa09.woff2": "0e9f0e5baa090d44c728e2ddaa39b4c465ff15d349e3547488503eb318628a45",
+    "site-lib/fonts/mathjax-98b20475232f.woff2": "98b20475232f47749126ae098177b5c71d3b6512e068efedb3a912c2c8f6ed0f",
+    "site-lib/fonts/mathjax-1faef92bbe44.woff2": "1faef92bbe440c459bcea0b7530044827749507e39bf49248c2203f9eb422bce",
+    "site-lib/fonts/mathjax-03de6a3467f8.woff2": "03de6a3467f88e79425df3505a936e6b336efbc5c0421f40905d1d52fddbe4ed",
+    "site-lib/fonts/mathjax-01bc6e82013d.woff2": "01bc6e82013dca9c1cbb132c353a0f63add97325bb979bba5e619591525c2a6e",
+    "site-lib/fonts/mathjax-62f1a8f7ced5.woff2": "62f1a8f7ced532d6ab1f6af3a5b3363eb6c774fe40d29092bbea27ac95a9f89e",
+    "site-lib/fonts/mathjax-4bd1e8cefc7c.woff2": "4bd1e8cefc7cf1b9aa2f2c6beb01ecef7ebf5d1f81d82f954a9688360a399fc3",
+    "site-lib/fonts/mathjax-bd9d7db0883d.woff2": "bd9d7db0883dc1adca7ed1c20042609e4e3d1f07f106b6bc8eeeab49d560393b",
+    "site-lib/fonts/mathjax-07165a0e10ae.woff2": "07165a0e10ae4b6b24db34b28d0a8c46bd4ac53b4d1682098ee7a3e88d2f1c83",
+    "site-lib/fonts/mathjax-b20a0e1b0304.woff2": "b20a0e1b03043ae1a540857bdf1b220297ff0e78b110b1e15554addf91ad0937",
+    "site-lib/media/81d33d08a96d-4bb6ac751d1c5478ff3a.woff2": "81d33d08a96d99034c41b49ac980f63b353175f919db817d74e0405749af03db",
+    "site-lib/media/a44ac4cbf79c-2308ab1944a6bfa5c5b8.svg": "a44ac4cbf79c6765f4bdc3a0dc3fb51b56ed5eb4679177f0a40f04b63b3e3a3c",
+    "site-lib/media/a7c6a118d17f-6155340132a851f6089e.svg": "a7c6a118d17f6a296037b519e9891e08951de59c289fe41ec2596a63c3b28516",
+    "site-lib/media/6e5dd0494f63-70cc7ff27245e82ad414.ttf": "6e5dd0494f63d85970156cd54b6ac568b82a392d135db08bbf5cc3048d489aa9",
+    "site-lib/media/ba51b929995b-454577c22304619db035.ttf": "ba51b929995b3088ff1932d9d6835c90ccf304b296a3b8e103d2e95b958109ee",
+    "site-lib/media/839f42df29a5-52ac8f3034507f1d9e53.ttf": "839f42df29a5a83470888b9a3aa4064fc1bc35e6616bb542226d89086f019ec5",
+    "site-lib/media/a0cfec834df5-05b618077343fbbd92b7.ttf": "a0cfec834df50e21cdb3d15bf93e87ed033d8c26693f9ede6efe24325ae22c9e",
+    "site-lib/media/e564f652916d-01dcbad1bac635f9c9cd.woff2": "e564f652916db6c139570fefb9524a77c4d48f30c92928de9db19b6b5c7a262a",
+    "site-lib/media/693b77d4f32e-c504db5c06caaf7cdfba.woff2": "693b77d4f32ee9b8bfc995589b5fad5e99adf2832738661f5402f9978429a8e3"
+  },
+  "state": {
+    "structureSignature": "649e0eca0b3194d353c73e13fa8aa1485048f1a4d9c7c784ba773c82e8ba6171",
+    "pages": {
+      "笔记库/高阶 Frobenius 核的扩张与组成因子 v2.0/前言.md": {
+        "route": "index.html",
+        "signature": "bc476f13ea5c58c3a18e06ae46db0dfee34386dea046f092bfd4d6e52c1e94e2"
+      },
+      "笔记库/高阶 Frobenius 核的扩张与组成因子 v2.0/预备知识/模与正合列.md": {
+        "route": "预备知识/模与正合列.html",
+        "signature": "0ca666ee862be3cee3e06d408b0c624310b54761702b1c375a49685edc381193"
+      },
+      "笔记库/高阶 Frobenius 核的扩张与组成因子 v2.0/预备知识/诱导模与同态.md": {
+        "route": "预备知识/诱导模与同态.html",
+        "signature": "3b8a856774cab6754fc786b5b91e00d4c3ec43c3d4f9266076a1092ea8617c1a"
+      },
+      "笔记库/高阶 Frobenius 核的扩张与组成因子 v2.0/预备知识/环面与分布.md": {
+        "route": "预备知识/环面与分布.html",
+        "signature": "11933ad4513dfe4dd0663d4f0d1922d34f2053b27e0491ba59994cdcd533d15d"
+      },
+      "笔记库/高阶 Frobenius 核的扩张与组成因子 v2.0/预备知识/二项式系数.md": {
+        "route": "预备知识/二项式系数.html",
+        "signature": "dd36b323de097ce4d5db0ac2d01f685057c893877c0ed90757ca6cf4acef646e"
+      },
+      "笔记库/高阶 Frobenius 核的扩张与组成因子 v2.0/预备知识/扩张与投射模.md": {
+        "route": "预备知识/扩张与投射模.html",
+        "signature": "83784d2eeab235c5554905943f07223a65263372131d175fe33678f2a32ed419"
+      },
+      "笔记库/高阶 Frobenius 核的扩张与组成因子 v2.0/原文的两个问题/权限制与张量平移.md": {
+        "route": "原文的两个问题/权限制与张量平移.html",
+        "signature": "e0f9d92d043e5ac5faf8ad943647bd3787d48b4c4f1eabcca7092bc40b2a192e"
+      },
+      "笔记库/高阶 Frobenius 核的扩张与组成因子 v2.0/原文的两个问题/简单模的扩张.md": {
+        "route": "原文的两个问题/简单模的扩张.html",
+        "signature": "4d5f7ffbd0260a65fafeb4fed0d8875b5c30a77127630a9ce4f0343bbab7ba1e"
+      },
+      "笔记库/高阶 Frobenius 核的扩张与组成因子 v2.0/高阶最高权模/根数据与分布代数.md": {
+        "route": "高阶最高权模/根数据与分布代数.html",
+        "signature": "3255d2a3e0aba923f30e32dd79838135f073f02a71feafc3da0205aca1b72950"
+      },
+      "笔记库/高阶 Frobenius 核的扩张与组成因子 v2.0/高阶最高权模/模范畴与最高权模.md": {
+        "route": "高阶最高权模/模范畴与最高权模.html",
+        "signature": "5362205750b53ef727c3abc2774fe60731620316b2e0a5e83c087e2397968e93"
+      },
+      "笔记库/高阶 Frobenius 核的扩张与组成因子 v2.0/相邻同态/反射与最高权同态.md": {
+        "route": "相邻同态/反射与最高权同态.html",
+        "signature": "29e7ac3fe583e7c8d24afb5c13c6ae11b9e80b244af70c805a9f66ec38c76ca6"
+      },
+      "笔记库/高阶 Frobenius 核的扩张与组成因子 v2.0/相邻同态/普通偶根.md": {
+        "route": "相邻同态/普通偶根.html",
+        "signature": "fec6373b75592e09fe611b84513411bdfbc5b2220db7a5406f113258618fa125"
+      },
+      "笔记库/高阶 Frobenius 核的扩张与组成因子 v2.0/相邻同态/各向同性奇根.md": {
+        "route": "相邻同态/各向同性奇根.html",
+        "signature": "a1be0e3835b301d2bf645de70d5db6c9988b4c642024c2a287b5e068581428e7"
+      },
+      "笔记库/高阶 Frobenius 核的扩张与组成因子 v2.0/相邻同态/非各向同性奇根.md": {
+        "route": "相邻同态/非各向同性奇根.html",
+        "signature": "039b03a823f00a15bec05ec94520870e61eeceff62ffb55a928d1f0f6ef0a4d0"
+      },
+      "笔记库/高阶 Frobenius 核的扩张与组成因子 v2.0/变权正合列与修正商/变权正合列.md": {
+        "route": "变权正合列与修正商/变权正合列.html",
+        "signature": "217dbaea1bf22339e78197d82cf7cf2947c0c1030fe0a8cc31dd381fb5cbae69"
+      },
+      "笔记库/高阶 Frobenius 核的扩张与组成因子 v2.0/变权正合列与修正商/修正商与最高权模.md": {
+        "route": "变权正合列与修正商/修正商与最高权模.html",
+        "signature": "13578534126625cbc6257cc80653709ea239c5070c7f1481fd2df3c9202f7b96"
+      },
+      "笔记库/高阶 Frobenius 核的扩张与组成因子 v2.0/复合同态与单性/超 Weyl 群与反射序列.md": {
+        "route": "复合同态与单性/超-weyl-群与反射序列.html",
+        "signature": "6cdd46b8183d705f5d02b18e0480d3e6f0a9609b51673db05aae85482c994393"
+      },
+      "笔记库/高阶 Frobenius 核的扩张与组成因子 v2.0/复合同态与单性/简单底与复合同态.md": {
+        "route": "复合同态与单性/简单底与复合同态.html",
+        "signature": "fe869d972bad92ebad1f741b5eb409bfb4b343ccba1eac4f75e36bf8c03428f5"
+      },
+      "笔记库/高阶 Frobenius 核的扩张与组成因子 v2.0/复合同态与单性/单性判据.md": {
+        "route": "复合同态与单性/单性判据.html",
+        "signature": "413efeb29b8febdb3f1a54c715ab14bf17bbf064568ff3aa7cd827ae3f32ab3b"
+      },
+      "笔记库/高阶 Frobenius 核的扩张与组成因子 v2.0/单模的扩张/根基与一阶扩张.md": {
+        "route": "单模的扩张/根基与一阶扩张.html",
+        "signature": "61e16ca643589ba3205bb9be1a5ac4774f15e40fa401cab3d3301ef0e42b6909"
+      },
+      "笔记库/高阶 Frobenius 核的扩张与组成因子 v2.0/单模的扩张/普通偶根的扩张.md": {
+        "route": "单模的扩张/普通偶根的扩张.html",
+        "signature": "22f1c79b84662801ecc394dbc7e4ed2dfe959e85f155e0a76c0f99e8edd1d7f8"
+      },
+      "笔记库/高阶 Frobenius 核的扩张与组成因子 v2.0/单模的扩张/奇根的扩张.md": {
+        "route": "单模的扩张/奇根的扩张.html",
+        "signature": "9fb9e013624f2bb7d22726debbc6a04a6c802b6648a8deeeb53b66ada12faa83"
+      },
+      "笔记库/高阶 Frobenius 核的扩张与组成因子 v2.0/单模的扩张/一般超群的扩张.md": {
+        "route": "单模的扩张/一般超群的扩张.html",
+        "signature": "627f3d45fb40c407a279c3a41bb072e915420e887e7d81b950bae1152f55c8d9"
+      },
+      "笔记库/高阶 Frobenius 核的扩张与组成因子 v2.0/组成因子/偶根的组成列.md": {
+        "route": "组成因子/偶根的组成列.html",
+        "signature": "635a0c2c2e2e75ab59dc2c1411ea96b654d5250f0f5e8da9589889cabd454252"
+      },
+      "笔记库/高阶 Frobenius 核的扩张与组成因子 v2.0/组成因子/奇根的组成列.md": {
+        "route": "组成因子/奇根的组成列.html",
+        "signature": "d0444b63999843fcc59ea965e2b82243665a2656151bc43115225fac6193bdb4"
+      },
+      "笔记库/高阶 Frobenius 核的扩张与组成因子 v2.0/组成因子/正合诱导与必要条件.md": {
+        "route": "组成因子/正合诱导与必要条件.html",
+        "signature": "d7bb48669921aff60708e9df2577b8898b038d84d0e3105eda300903b6e791a8"
+      },
+      "笔记库/高阶 Frobenius 核的扩张与组成因子 v2.0/组成因子/充分条件与有限判定.md": {
+        "route": "组成因子/充分条件与有限判定.html",
+        "signature": "93e3db600e2b8620b32ac96b7538ff6e0786af19b9100214d3723b7549020119"
+      },
+      "笔记库/高阶 Frobenius 核的扩张与组成因子 v2.0/环面作用的限制/简单模与投射盖.md": {
+        "route": "环面作用的限制/简单模与投射盖.html",
+        "signature": "ca05725084a4632cf46c3fac6a670167dae316391d306325f26ad3b5dfe00d6c"
+      },
+      "笔记库/高阶 Frobenius 核的扩张与组成因子 v2.0/环面作用的限制/扩张与组成因子的比较.md": {
+        "route": "环面作用的限制/扩张与组成因子的比较.html",
+        "signature": "c8689fe34f0861eed75e226af29cb3528dcf563697ddddf622e9b861265a380f"
+      },
+      "笔记库/高阶 Frobenius 核的扩张与组成因子 v2.0/参考资料.md": {
+        "route": "参考资料.html",
+        "signature": "871e20c0dd19b5f4d7ba3c57242f04ae1b76efca22e5b4efe55b71108556b4bd"
+      }
+    }
+  }
+}
