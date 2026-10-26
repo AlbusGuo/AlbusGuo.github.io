@@ -1,0 +1,150 @@
+{
+  "version": 2,
+  "files": {
+    "site-lib/scripts/webpage.js": "91ccb1038c2573388c0249bb948b0ae2733953024c0441cfb0b39f61bb5b0296",
+    "site-lib/scripts/notebook-navigation.js": "a4331c822d7f15d093c5b44b4960500ae7915c1a837b867ba625367c7e17c1e9",
+    "site-lib/scripts/editing-suite.js": "87df6aa4950e59b2318fe46c03cc15c66b067ee36c688f4488493739d6ba4c10",
+    "site-lib/styles/export-webpage.css": "06abcbfe497310371999c0014bfd726e17df2c6166ccae9e95a9ca8dbbc82c33",
+    "site-lib/styles/main-styles.css": "79648c459e52aa50cc4609fafa7aff011efa8417672860a2e34f9846e4abd4c7",
+    "site-lib/styles/obsidian.css": "7f6a8384c9baba9dd9d3d7dde6505f235bac96fb7d072230b9f12b5390edf9c6",
+    "site-lib/styles/local-fonts.css": "842d3cd2f9bf943861c23d53097fc0e13f6f5b15edde929a5a39df5eff60d8ca",
+    "site-lib/styles/theme.css": "0e446061bba8b1ee44f46b08013f684973ad627663b1532d00e498638ab251a2",
+    "site-lib/styles/snippets.css": "fbf813835c336244155981e907f37b1a615aab3ff6ed3b80db7a9ca17a533de9",
+    "site-lib/styles/other-plugins.css": "02ed9a6dc95ee6ef452c0c64cc0b2621e08a6d031897b0f585aa1aff9edbf5cd",
+    "site-lib/styles/editing-suite.css": "06a3334bf54814f13cb087ad3ab05aac2a82fa30c9245a3716fca70948c72524",
+    "site-lib/styles/editing-suite-export.css": "b555d3f9c97e857507988f5b4a7acca1a51e0520707bb2d8ddbe41ddee124427",
+    "site-lib/styles/global-variable-styles.css": "c574aa56893881658babbd57c236904160dd97ebda78259afaaf753923a844eb",
+    "site-lib/styles/supported-plugins.css": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "site-lib/html/file-tree.html": "6a0c0ddfa847fcf628faa2647e87c6d63fe74b2faf2398a2e749ddf0ebc2b4c9",
+    "site-lib/search-index.json": "0da7436b2e2d5ef20d28b053f1b639b5658fa3024870f1373c2cfb39ed2687a6",
+    "site-lib/metadata.json": "458a4888ecb9d374f3ceb5211dd51858d48c6864417ec9eaea32c6b921e76526",
+    "index.html": "0f40fc313d4e385fbd81244ca7a7ee113bff686efead4a18476bf0e2f109d730",
+    "预备知识/限制-lie-超代数与-chevalley-超群.html": "e4e651807ac411ec563e70ebda1539763546d77e6acf2b40867968fd9b378ab9",
+    "预备知识/分次结构.html": "44ce427de502590f2e01d3f3ce13bbec0bf514eccf1be9e2d1777cdad4f173cb",
+    "预备知识/frobenius-核与分次代数.html": "b3d40945d5254fda6873a04959b6a5e2b72ef93213fe2eb0cefd9070954e8589",
+    "预备知识/计算二项式系数的工具.html": "25a44b2e2c125f0df89330491c9cf4309425ca51bc5a34737247a0e87e044f4f",
+    "预备知识/超-weyl-群.html": "3e2ec4600734be97446dff482045f344602b46f728e040ce90582653cff90576",
+    "模范畴的建立与-baby-verma-模的构造.html": "1b2d32d210a7558b8f98feb31eb7ec12d1c4c57474bfd7c450ef71711f76267c",
+    "研究对象-问题-思路.html": "7f94f8ea20bee82a5544e4acdf0bc4746f37cabdd51d77fb8e6e3152b3f96b20",
+    "baby-verma-模的同态计算/同态像与核.html": "123b9bf4a30926a69f7d57c442b7b91851d58e264d258108d10242480e275217",
+    "baby-verma-模的同态计算/同态空间.html": "78455abe02a86c9639a1a52f5f4181d06855fb76eb7c92631249aec54dcd6647",
+    "baby-verma-模的同态计算/长正合列与特征标公式.html": "fc0cd68da6127eccfb0bac8db748fd4bee7e1e71a7455853f88684d85762fca5",
+    "baby-verma-模的同态计算/同态序列的复合.html": "a9973c08ce48a0912a4b5b13805dc04c492c19455044c8092d4e6b981ce0df66",
+    "不可约性判别.html": "62a1662eb68d57db19274f2783c6527727ec5f0cd6116a4642a66316e943f61c",
+    "组成因子非零条件.html": "4380012b30efc045490f136d7c991c180c63e5e76bfda6d57792cd1db7d41e35",
+    "不可约模的-1-阶扩张.html": "7c79df8c39582de57e43b49b3f78d77d4155d75160e2f61851b4b88c7ee2786b",
+    "参考资料.html": "c241a7066e95ddf9538382598a46c357b6114118d5b7e77e65b95d3a8280d3e4",
+    "attachments/Attachments/Images/Figures/Mathcraft/TikZCD/gl(1;2) 的 Borel 链.svg": "f44576ad639a2e0d0aa315c2a5a0b2a9842c9b8c7e9e6c038b697438b9400157",
+    "attachments/Attachments/Images/Figures/Mathcraft/TikZCD/扩张等价交换图.svg": "098f0c46ff678a9b90542d34ce057c1b294c8fe808ffd12e851ef45e2274116c",
+    "attachments/Attachments/Images/Figures/Mathcraft/TikZCD/核像互补表.svg": "cec7e39d6d7a5d1cead337aae145d8eb79f01687e9072a529646a8b95c523922",
+    "site-lib/fonts/mathjax-2ea308c69f13.woff2": "2ea308c69f139e9ee7bc452e12a449c13e3b9ce4c08aebc4e86e15df232a26e0",
+    "site-lib/fonts/mathjax-f9054e3dd268.woff2": "f9054e3dd268155cb38c708ef7b7c7c03e83ac3723afcb65ae65a37bbb301f4e",
+    "site-lib/fonts/mathjax-2c146f72c9a3.woff2": "2c146f72c9a345aa282398a752d03af71d83a011f3d067297b533a31f0c5f5cb",
+    "site-lib/fonts/mathjax-4f03a0d86ff0.woff2": "4f03a0d86ff005f12cbb0ffd162bae0766415e48e07ed3fa5970e685594de15d",
+    "site-lib/fonts/mathjax-fad3b88ec7aa.woff2": "fad3b88ec7aac4959e3de19044931682bd4d1500c72a85d2d113b73b694c4133",
+    "site-lib/fonts/mathjax-69e45ca329dd.woff2": "69e45ca329dd2fcc3671dc20884f2baf29348a43833104266be098eba544fda2",
+    "site-lib/fonts/mathjax-82c82a2e0c8b.woff2": "82c82a2e0c8bc89421ce9cbb4ecea806c8ceec4b4fd0269726b9439ca853b365",
+    "site-lib/fonts/mathjax-d0c95edf7b32.woff2": "d0c95edf7b3223c8e66fcb4b6faaf74fc3376eea59c20f23677f4d54905a356e",
+    "site-lib/fonts/mathjax-6cb008e93488.woff2": "6cb008e934883d1f4652562276469dfc1ade06ee4ceebd6979e79b1c98472b47",
+    "site-lib/fonts/mathjax-303b28cdca9c.woff2": "303b28cdca9c064d93dc1672b843933ab20e28f777adb08b9eafa6f442f074d7",
+    "site-lib/fonts/mathjax-e0d564a939fc.woff2": "e0d564a939fce2e4d0c09a86f0dc936c2a9cdb42e44eb264dbc5ef01d71e179c",
+    "site-lib/fonts/mathjax-4a2e4827bad8.woff2": "4a2e4827bad85a9ae5fe906f179ccfce154bfc29e19115ceb8d7f1f6e8ce31cd",
+    "site-lib/fonts/mathjax-b6dfb310dd7b.woff2": "b6dfb310dd7b5c059e9b748b4766fcdd6fa0005c17d9229f3bb1bd095acfae1a",
+    "site-lib/fonts/mathjax-82e8abfaecf0.woff2": "82e8abfaecf005f639e18b1e7dece8700c56df76eac8ea94e4b5915bedee7567",
+    "site-lib/fonts/mathjax-0e9f0e5baa09.woff2": "0e9f0e5baa090d44c728e2ddaa39b4c465ff15d349e3547488503eb318628a45",
+    "site-lib/fonts/mathjax-98b20475232f.woff2": "98b20475232f47749126ae098177b5c71d3b6512e068efedb3a912c2c8f6ed0f",
+    "site-lib/fonts/mathjax-1faef92bbe44.woff2": "1faef92bbe440c459bcea0b7530044827749507e39bf49248c2203f9eb422bce",
+    "site-lib/fonts/mathjax-03de6a3467f8.woff2": "03de6a3467f88e79425df3505a936e6b336efbc5c0421f40905d1d52fddbe4ed",
+    "site-lib/fonts/mathjax-01bc6e82013d.woff2": "01bc6e82013dca9c1cbb132c353a0f63add97325bb979bba5e619591525c2a6e",
+    "site-lib/fonts/mathjax-62f1a8f7ced5.woff2": "62f1a8f7ced532d6ab1f6af3a5b3363eb6c774fe40d29092bbea27ac95a9f89e",
+    "site-lib/fonts/mathjax-4bd1e8cefc7c.woff2": "4bd1e8cefc7cf1b9aa2f2c6beb01ecef7ebf5d1f81d82f954a9688360a399fc3",
+    "site-lib/fonts/mathjax-bd9d7db0883d.woff2": "bd9d7db0883dc1adca7ed1c20042609e4e3d1f07f106b6bc8eeeab49d560393b",
+    "site-lib/fonts/mathjax-07165a0e10ae.woff2": "07165a0e10ae4b6b24db34b28d0a8c46bd4ac53b4d1682098ee7a3e88d2f1c83",
+    "site-lib/fonts/mathjax-b20a0e1b0304.woff2": "b20a0e1b03043ae1a540857bdf1b220297ff0e78b110b1e15554addf91ad0937",
+    "site-lib/media/81d33d08a96d-flow-circular.woff2": "81d33d08a96d99034c41b49ac980f63b353175f919db817d74e0405749af03db",
+    "site-lib/media/a44ac4cbf79c-external-link-rtl.svg": "a44ac4cbf79c6765f4bdc3a0dc3fb51b56ed5eb4679177f0a40f04b63b3e3a3c",
+    "site-lib/media/a7c6a118d17f-external-link.svg": "a7c6a118d17f6a296037b519e9891e08951de59c289fe41ec2596a63c3b28516",
+    "site-lib/media/6e5dd0494f63-SourceCodePro-Regular.ttf": "6e5dd0494f63d85970156cd54b6ac568b82a392d135db08bbf5cc3048d489aa9",
+    "site-lib/media/ba51b929995b-SourceCodePro-Italic.ttf": "ba51b929995b3088ff1932d9d6835c90ccf304b296a3b8e103d2e95b958109ee",
+    "site-lib/media/839f42df29a5-SourceCodePro-Bold.ttf": "839f42df29a5a83470888b9a3aa4064fc1bc35e6616bb542226d89086f019ec5",
+    "site-lib/media/a0cfec834df5-SourceCodePro-BoldItalic.ttf": "a0cfec834df50e21cdb3d15bf93e87ed033d8c26693f9ede6efe24325ae22c9e",
+    "site-lib/media/693b77d4f32e-InterVariable.woff2": "693b77d4f32ee9b8bfc995589b5fad5e99adf2832738661f5402f9978429a8e3",
+    "site-lib/media/e564f652916d-InterVariable-Italic.woff2": "e564f652916db6c139570fefb9524a77c4d48f30c92928de9db19b6b5c7a262a",
+    "site-lib/fonts/CMU-Serif-3deb3c529a46.ttf": "3deb3c529a46d391eaad2e2b896824013d4e1922419c91ab6cb75c40db97c3f2",
+    "site-lib/fonts/CMU-Serif-643afcc8fc9a.ttf": "643afcc8fc9a526cd060f37459f050f03156f0a593779d87b8ad21f937757a31",
+    "site-lib/fonts/CMU-Serif-acd86b280644.ttf": "acd86b2806441b277361e1dfe2d64c26038ba727c6e69fbdfff6ddb8f6446478",
+    "site-lib/fonts/CMU-Serif-570dbbba9377.ttf": "570dbbba9377d7d2fbdf544ae0dfd751614d90446a6229e7cf4b6a4cf97349ab",
+    "site-lib/fonts/CMU-Serif-f4c5e2fba77e.ttf": "f4c5e2fba77eab91e39a80ae7455404654bf3042b85b197e76b253175fe67edf",
+    "site-lib/fonts/CMU-Serif-b962c7b68b9b.ttf": "b962c7b68b9bd4728133c6d45dfa7a6f3248c30d8505fa8606ad5c8cf53c04d2",
+    "site-lib/fonts/华文中宋-e822a3f2859a.ttf": "e822a3f2859a6cc982f04c6ad1eabc18371ce26d6874b710188a30c35dced0f1"
+  },
+  "state": {
+    "structureSignature": "44ecfb1aa26d1aff6f7c18cb805005b228825df0eb121e9e7939ee593c3dd709",
+    "pages": {
+      "Documents/数学/Chevalley 超群的 r 阶 Frobenius 核的表示/前言.md": {
+        "route": "index.html",
+        "signature": "7a2fd9b6ccc6256de7070a7854ff06f92f7eb86d0daffcdc3a73c935aec06549"
+      },
+      "Documents/数学/Chevalley 超群的 r 阶 Frobenius 核的表示/预备知识/限制 Lie 超代数与 Chevalley 超群.md": {
+        "route": "预备知识/限制-lie-超代数与-chevalley-超群.html",
+        "signature": "86e4c5214a519f195ef2105fa4585fd781825a2fca188c6c27b4621327abbc0b"
+      },
+      "Documents/数学/Chevalley 超群的 r 阶 Frobenius 核的表示/预备知识/分次结构.md": {
+        "route": "预备知识/分次结构.html",
+        "signature": "3e4eb3a3d3f146786a79a1b13491507ac370f7610e4a553a9b9f5bb109afaf47"
+      },
+      "Documents/数学/Chevalley 超群的 r 阶 Frobenius 核的表示/预备知识/Frobenius 核与分次代数.md": {
+        "route": "预备知识/frobenius-核与分次代数.html",
+        "signature": "4f1c703c7ff699acf90ca5f5772a7931bbf898dc448588dbeaa1bc5e5f8ffee5"
+      },
+      "Documents/数学/Chevalley 超群的 r 阶 Frobenius 核的表示/预备知识/计算二项式系数的工具.md": {
+        "route": "预备知识/计算二项式系数的工具.html",
+        "signature": "72911920b6343e24688d54f9ffd2b0f039f9ad944d528306e48c1209c7c1823b"
+      },
+      "Documents/数学/Chevalley 超群的 r 阶 Frobenius 核的表示/预备知识/超 Weyl 群.md": {
+        "route": "预备知识/超-weyl-群.html",
+        "signature": "e4d60fe527a5cc466f566ce4840451277d007eaa7186661136409be4c7414c1c"
+      },
+      "Documents/数学/Chevalley 超群的 r 阶 Frobenius 核的表示/模范畴的建立与 baby Verma 模的构造.md": {
+        "route": "模范畴的建立与-baby-verma-模的构造.html",
+        "signature": "44873b0a1d4aab355680312baddb1f5609655a7f0895b55e5551f103d3db68cf"
+      },
+      "Documents/数学/Chevalley 超群的 r 阶 Frobenius 核的表示/研究对象、问题、思路.md": {
+        "route": "研究对象-问题-思路.html",
+        "signature": "139cad9a3a9f95dbad2104a5cbcadcdc5fd019cb7bc326348adb35ce3918fd72"
+      },
+      "Documents/数学/Chevalley 超群的 r 阶 Frobenius 核的表示/Baby Verma 模的同态计算/同态像与核.md": {
+        "route": "baby-verma-模的同态计算/同态像与核.html",
+        "signature": "85d38afb7ebd2d3f2567c7813f0a508544e720a556f11c7a2e0886e13aaa7852"
+      },
+      "Documents/数学/Chevalley 超群的 r 阶 Frobenius 核的表示/Baby Verma 模的同态计算/同态空间.md": {
+        "route": "baby-verma-模的同态计算/同态空间.html",
+        "signature": "eabd2f0459a97d909ca9593786e0edebd991a2f021ddd1e221bf0bb67f4f7ec7"
+      },
+      "Documents/数学/Chevalley 超群的 r 阶 Frobenius 核的表示/Baby Verma 模的同态计算/长正合列与特征标公式.md": {
+        "route": "baby-verma-模的同态计算/长正合列与特征标公式.html",
+        "signature": "78ba659d2faaed19f8d49c6f135d59b3b4aecc323e7a16824a7b13d7ef9c80c0"
+      },
+      "Documents/数学/Chevalley 超群的 r 阶 Frobenius 核的表示/Baby Verma 模的同态计算/同态序列的复合.md": {
+        "route": "baby-verma-模的同态计算/同态序列的复合.html",
+        "signature": "d1e934fec83ed2b65ce89cb2b260d372ef2e0b835549968125867f6322df52a9"
+      },
+      "Documents/数学/Chevalley 超群的 r 阶 Frobenius 核的表示/不可约性判别.md": {
+        "route": "不可约性判别.html",
+        "signature": "14269aa2211bcd631247872ef5d766324782b8f257411e2abcf927e31cab9520"
+      },
+      "Documents/数学/Chevalley 超群的 r 阶 Frobenius 核的表示/组成因子非零条件.md": {
+        "route": "组成因子非零条件.html",
+        "signature": "9e29ff3236f294912acd66fab906464a63361ed9ba16506d3d0881f1072804f1"
+      },
+      "Documents/数学/Chevalley 超群的 r 阶 Frobenius 核的表示/不可约模的 1 阶扩张.md": {
+        "route": "不可约模的-1-阶扩张.html",
+        "signature": "27a05faa6b848fca28421d203356c862c2eabd72017eaa20a8b26fcbf1db45da"
+      },
+      "Documents/数学/Chevalley 超群的 r 阶 Frobenius 核的表示/参考资料.md": {
+        "route": "参考资料.html",
+        "signature": "2475fd817e83723701ac2e219f0e41744d17cd84fe5ea0a7e9489ba880ae0cff"
+      }
+    }
+  }
+}
