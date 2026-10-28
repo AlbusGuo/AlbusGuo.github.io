@@ -1,0 +1,337 @@
+{
+  "version": 2,
+  "files": {
+    "site-lib/scripts/webpage.js": "91ccb1038c2573388c0249bb948b0ae2733953024c0441cfb0b39f61bb5b0296",
+    "site-lib/scripts/notebook-navigation.js": "a4331c822d7f15d093c5b44b4960500ae7915c1a837b867ba625367c7e17c1e9",
+    "site-lib/scripts/editing-suite.js": "87df6aa4950e59b2318fe46c03cc15c66b067ee36c688f4488493739d6ba4c10",
+    "site-lib/styles/export-webpage.css": "06abcbfe497310371999c0014bfd726e17df2c6166ccae9e95a9ca8dbbc82c33",
+    "site-lib/styles/main-styles.css": "79648c459e52aa50cc4609fafa7aff011efa8417672860a2e34f9846e4abd4c7",
+    "site-lib/styles/obsidian.css": "7f6a8384c9baba9dd9d3d7dde6505f235bac96fb7d072230b9f12b5390edf9c6",
+    "site-lib/styles/local-fonts.css": "842d3cd2f9bf943861c23d53097fc0e13f6f5b15edde929a5a39df5eff60d8ca",
+    "site-lib/styles/theme.css": "0e446061bba8b1ee44f46b08013f684973ad627663b1532d00e498638ab251a2",
+    "site-lib/styles/snippets.css": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "site-lib/styles/other-plugins.css": "1597beb42e5e0211542153b95318a83f1841f311b04dffa2aee00fb73432e72d",
+    "site-lib/styles/editing-suite.css": "f03a5e141094e2e1d39295c14721e733f69e1f985dedce2411cdc5b2c1244543",
+    "site-lib/styles/editing-suite-export.css": "b555d3f9c97e857507988f5b4a7acca1a51e0520707bb2d8ddbe41ddee124427",
+    "site-lib/styles/global-variable-styles.css": "3564c4d0b6ff6a3ce18de390d0437c96a1c6d45efe35aa0dd2305eef875dcc6b",
+    "site-lib/styles/supported-plugins.css": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "site-lib/html/file-tree.html": "42e475b15823dd70f760dfe11bf0bfe53ada19b4e0f67eb46d82affee54f61cc",
+    "site-lib/search-index.json": "28ecab7514f7229f9b713d5d78c6db53d7e860681694c685a3302fe13c38d6d9",
+    "site-lib/metadata.json": "26121ebe0d83da7db91b52939874536438729b18db595470e45c41c6986b04dc",
+    "index.html": "14e5e8577a80e14c782f94b5c5e85f8a5f90406195118df1507c482e46e568d5",
+    "单根方向/问题与方法.html": "e6cfe9bd11a98e93e218a602f2465532f987f7b9d75b0d99ee898768bd095cbf",
+    "单根方向/普通偶根.html": "4d7d8c36e4364e070320b33b18d5a7fe55aedac8093ca2f283f204e1833895c6",
+    "单根方向/迷向奇根.html": "4010e5d0a67f631661e2161a6b2410e3c838228e141fa346b75502334b6655a1",
+    "单根方向/非迷向奇根.html": "5602a742b98dafeb162e8dd58b0bfde26f3e8e3397effdc6a2ea108d6c4bf4fc",
+    "单根方向/同态与子商.html": "6ef9c3eab7c693ff0722baabf4cde7be87b809c00db40c44b598bce9e6d47d0c",
+    "权与变换/borel-变换.html": "35a0dc1126f24a38ae8067df85b04e433895c275b6ac9a2486ff548c5075daa7",
+    "权与变换/权面与限制.html": "417ba164579dbc113ab3609550ce0026ca187f7469a2e4d5d65af419571fbd41",
+    "权与变换/权多面体.html": "5862fafa4b9e65f787c97d366cd72caefcf8c1fedbec22a0e31cd418b049ed1f",
+    "权与变换/对偶与-weyl-对称.html": "cf4709d5e1672e6bb5f8498e8f8b33aabc0f3278bb10aa647e087e6b52fecfcc",
+    "权与变换/必要下降条件.html": "6915c3a57b06859324357c96894aa110fbf8959611148c5d657fe641be6b6121",
+    "普通偶群/一阶条件.html": "f4f643243c440fd765cab8818a65e5b18a7e6648cd09db3d5278260b158ba3c6",
+    "普通偶群/高阶条件.html": "091fb7a81154878edfcc95d68bf9510d7c3b16df73b59da19a8fa5a0961605f2",
+    "阶数归约/环面与简单性.html": "c068aa06d85710e0f0191e0e319225a3e3c74f046cf1f0486e7cdc1b3d41c804",
+    "阶数归约/简单模的延拓.html": "337e7b7c1abd20131804b9d31815dfc091c8d576badc55f46de21a3c55d6d04e",
+    "阶数归约/最高权代表.html": "09aa04b75f1ae8925148dcfcef30f8d2d18ab155ca75545dbafbf9fefdce6c94",
+    "阶数归约/中心与权格.html": "ca204b376ff37e5a6c8e9090fe03fefe85b25cd493dafe66ed0169e922a3c771",
+    "阶数归约/递归公式.html": "5515e956973c19108841a3cba82f6a44996067b09a8dab9a5d990ff52f82012d",
+    "阶数归约/稳定区间.html": "3c3d3e96248decd0fd7c0bbb844cca3ae0b600fb108d96eb4f0b1c9848338a05",
+    "阶数归约/单调性.html": "651232ddb5b64cdacbb2dc124fdd871cb7b1dcab4900e11702a28f1a5c6bb6ca",
+    "阶数归约/一阶问题的保留.html": "d426656c532c9902d99f232922f4adb5979cfa158241a6cf284d24f9a5c3d97c",
+    "阶数归约/整数形式与约化.html": "f686ff8d5e79ca480a85b55f75349dc4fc3dd2dba5ac99d8016422477e6dc39d",
+    "抛物归约/诱导模的头与底层.html": "42abba01d06c80667ac6ec9444571f85c898efa621ae6715e069f25e710cfa55",
+    "抛物归约/简单诱导.html": "3604558c590c8bf39841393a49db2045efa11f81451f46408f95c5a6c3352cb4",
+    "抛物归约/一次归约.html": "fbaf0b0ece25feeda4f08d9550a3ed8b4bdf044748dceb3aa1cf65acb19fb60b",
+    "抛物归约/两端条件.html": "58463bb71add1d8518275f6ee92a0298ec7b598520699e6130c69e586edecc0f",
+    "抛物归约/典型权.html": "67eca99e2c7154f37d0621fb7ab09fd7c8bad68bc78e679dfc72be983dff24de",
+    "抛物归约/矩阵块的一次计算.html": "f35fe39a817f4922e386ddb66be16783a66cff584160844458a80274c0cf4e2e",
+    "投射模/投射覆盖与不变量.html": "804309fc335b5e7df76846dc8691cebf0dfd9645d8f88e0dee26d11f800d1ccc",
+    "投射模/非零下界.html": "de6a71c6883e1f3365616a82940bed759c779f399356405c404a0937cabdf712",
+    "投射模/子群限制.html": "b597802181b4a70cf51c4a33dffb100db5a793bc14a77ed5ca4c461dfec734b4",
+    "偶部的-steinberg-权.html": "30d1e9770b15a1f419f594ad1f7eff4cfb561d39e1fe1e60166efa8afddb107c",
+    "特殊类型/源权的归约.html": "a9521b33431f75ddc7a40b53865ecc7bc65af3b654443aee0ca375626845e72d",
+    "特殊类型/小秩一般线性超群.html": "199665481c38d5c533fbca3d9fb6cd067ecd6370f9c85e1e01f49d57c29a00af",
+    "特殊类型/二二型.html": "8dce0f8db0be9a92fe2c1d1b6f854b3e2894a222164d6f77fb03baf4740b7bb9",
+    "特殊类型/二重组成因子.html": "a2c6369a16af8d2b726c8cedf3e70236d94d17c00f953f75f189ea36a5a713af",
+    "特殊类型/正交辛三二型.html": "55d8c1446d27a1e67c7134a3842d0cb7998f3b4f71d14ea7b7cf1351698c03ae",
+    "特殊类型/正交辛二四型.html": "e6d6dc33fdcda9043ac67dc0644de06dd16c93d7d4ceb8462456b9bc48d7d93b",
+    "特殊类型/参数型的模型.html": "49bc839b7edfbb1a641d3ac6c0ee2c649e6b4b2e89346e26c78e1bc1eb431a9b",
+    "特殊类型/参数型例外群.html": "0db83f9c5e164f1ee882d589bba271363385c29340a0fae10a699ff2b0622d53",
+    "特殊类型/特征三的三二型.html": "5064f5c8047cf006612fbcdfb80fd5404bd8a8db67737330616efc65eedb4a0f",
+    "特殊类型/特征三的三三型.html": "18184013c9d094bea25ce8932ea43084a4f8456ffdf2c85b1e44f9aed3958a46",
+    "诱导模结构/正奇根作用.html": "7206d0f6bb5f7648130c7dea752c1487236294a52a21961b06862c6cea203f2d",
+    "诱导模结构/一维偶部的诱导.html": "d6f611f6cfdb702983dec7b62bbb97c05f02a1c85f4e2347b951ae36caaf6794",
+    "诱导模结构/分拆结构.html": "2c438844671f4c5c3d9bf9ba3ccb69ed57ca5f56f701b2a26ef7a30b2f4eb414",
+    "诱导模结构/诱导模的阶数变化.html": "64c00fd8b6bda22fb8b250fdbaba68d15232cdb6bb2c25ab0b401ab8203e3111",
+    "截断超对称幂.html": "721e04d1a3d6859b8cd458b508bc122f518ee34dba91bae58cf27b328e5864bf",
+    "反例/下降关系不能拼接.html": "e525fd624c7d61839b44f3e99bac9ba40175ff6e023e330378fa112b765b993d",
+    "反例/单根限制的不足.html": "54ae519831262fc0fd34214949641f5a30a43ec8f0a7302cd3f4c332cabcf8f6",
+    "反例/偶部限制的不足.html": "c64b140049fc66b8c30207c78d4ee5081ac06e79f6a0fb31413b1f36c232b604",
+    "反例/奇次数商的局限.html": "563fbdea78cb4d0d2a80737f867d698070fda73a455d38c9db62ad97d1ee4157",
+    "反例/平移函子的条件.html": "0a2c263bffe525fb02562bcdd90b502116d9b5698b13834eae4d2f478772face",
+    "一般问题.html": "b45c4319635601718ead57411030802653510fa8bfa79e86aac990c4f5c05107",
+    "参考资料.html": "8513196ac6d728406c7fe6e107716f35ed24ad4d5a2ae617b0aa11efdb9ff82b",
+    "site-lib/fonts/mathjax-2ea308c69f13.woff2": "2ea308c69f139e9ee7bc452e12a449c13e3b9ce4c08aebc4e86e15df232a26e0",
+    "site-lib/fonts/mathjax-f9054e3dd268.woff2": "f9054e3dd268155cb38c708ef7b7c7c03e83ac3723afcb65ae65a37bbb301f4e",
+    "site-lib/fonts/mathjax-2c146f72c9a3.woff2": "2c146f72c9a345aa282398a752d03af71d83a011f3d067297b533a31f0c5f5cb",
+    "site-lib/fonts/mathjax-4f03a0d86ff0.woff2": "4f03a0d86ff005f12cbb0ffd162bae0766415e48e07ed3fa5970e685594de15d",
+    "site-lib/fonts/mathjax-fad3b88ec7aa.woff2": "fad3b88ec7aac4959e3de19044931682bd4d1500c72a85d2d113b73b694c4133",
+    "site-lib/fonts/mathjax-69e45ca329dd.woff2": "69e45ca329dd2fcc3671dc20884f2baf29348a43833104266be098eba544fda2",
+    "site-lib/fonts/mathjax-82c82a2e0c8b.woff2": "82c82a2e0c8bc89421ce9cbb4ecea806c8ceec4b4fd0269726b9439ca853b365",
+    "site-lib/fonts/mathjax-d0c95edf7b32.woff2": "d0c95edf7b3223c8e66fcb4b6faaf74fc3376eea59c20f23677f4d54905a356e",
+    "site-lib/fonts/mathjax-6cb008e93488.woff2": "6cb008e934883d1f4652562276469dfc1ade06ee4ceebd6979e79b1c98472b47",
+    "site-lib/fonts/mathjax-303b28cdca9c.woff2": "303b28cdca9c064d93dc1672b843933ab20e28f777adb08b9eafa6f442f074d7",
+    "site-lib/fonts/mathjax-e0d564a939fc.woff2": "e0d564a939fce2e4d0c09a86f0dc936c2a9cdb42e44eb264dbc5ef01d71e179c",
+    "site-lib/fonts/mathjax-4a2e4827bad8.woff2": "4a2e4827bad85a9ae5fe906f179ccfce154bfc29e19115ceb8d7f1f6e8ce31cd",
+    "site-lib/fonts/mathjax-b6dfb310dd7b.woff2": "b6dfb310dd7b5c059e9b748b4766fcdd6fa0005c17d9229f3bb1bd095acfae1a",
+    "site-lib/fonts/mathjax-82e8abfaecf0.woff2": "82e8abfaecf005f639e18b1e7dece8700c56df76eac8ea94e4b5915bedee7567",
+    "site-lib/fonts/mathjax-0e9f0e5baa09.woff2": "0e9f0e5baa090d44c728e2ddaa39b4c465ff15d349e3547488503eb318628a45",
+    "site-lib/fonts/mathjax-98b20475232f.woff2": "98b20475232f47749126ae098177b5c71d3b6512e068efedb3a912c2c8f6ed0f",
+    "site-lib/fonts/mathjax-1faef92bbe44.woff2": "1faef92bbe440c459bcea0b7530044827749507e39bf49248c2203f9eb422bce",
+    "site-lib/fonts/mathjax-03de6a3467f8.woff2": "03de6a3467f88e79425df3505a936e6b336efbc5c0421f40905d1d52fddbe4ed",
+    "site-lib/fonts/mathjax-01bc6e82013d.woff2": "01bc6e82013dca9c1cbb132c353a0f63add97325bb979bba5e619591525c2a6e",
+    "site-lib/fonts/mathjax-62f1a8f7ced5.woff2": "62f1a8f7ced532d6ab1f6af3a5b3363eb6c774fe40d29092bbea27ac95a9f89e",
+    "site-lib/fonts/mathjax-4bd1e8cefc7c.woff2": "4bd1e8cefc7cf1b9aa2f2c6beb01ecef7ebf5d1f81d82f954a9688360a399fc3",
+    "site-lib/fonts/mathjax-bd9d7db0883d.woff2": "bd9d7db0883dc1adca7ed1c20042609e4e3d1f07f106b6bc8eeeab49d560393b",
+    "site-lib/fonts/mathjax-07165a0e10ae.woff2": "07165a0e10ae4b6b24db34b28d0a8c46bd4ac53b4d1682098ee7a3e88d2f1c83",
+    "site-lib/fonts/mathjax-b20a0e1b0304.woff2": "b20a0e1b03043ae1a540857bdf1b220297ff0e78b110b1e15554addf91ad0937",
+    "site-lib/media/81d33d08a96d-flow-circular.woff2": "81d33d08a96d99034c41b49ac980f63b353175f919db817d74e0405749af03db",
+    "site-lib/media/a7c6a118d17f-external-link.svg": "a7c6a118d17f6a296037b519e9891e08951de59c289fe41ec2596a63c3b28516",
+    "site-lib/media/a44ac4cbf79c-external-link-rtl.svg": "a44ac4cbf79c6765f4bdc3a0dc3fb51b56ed5eb4679177f0a40f04b63b3e3a3c",
+    "site-lib/media/6e5dd0494f63-SourceCodePro-Regular.ttf": "6e5dd0494f63d85970156cd54b6ac568b82a392d135db08bbf5cc3048d489aa9",
+    "site-lib/media/ba51b929995b-SourceCodePro-Italic.ttf": "ba51b929995b3088ff1932d9d6835c90ccf304b296a3b8e103d2e95b958109ee",
+    "site-lib/media/839f42df29a5-SourceCodePro-Bold.ttf": "839f42df29a5a83470888b9a3aa4064fc1bc35e6616bb542226d89086f019ec5",
+    "site-lib/media/a0cfec834df5-SourceCodePro-BoldItalic.ttf": "a0cfec834df50e21cdb3d15bf93e87ed033d8c26693f9ede6efe24325ae22c9e",
+    "site-lib/media/693b77d4f32e-InterVariable.woff2": "693b77d4f32ee9b8bfc995589b5fad5e99adf2832738661f5402f9978429a8e3",
+    "site-lib/media/e564f652916d-InterVariable-Italic.woff2": "e564f652916db6c139570fefb9524a77c4d48f30c92928de9db19b6b5c7a262a",
+    "site-lib/fonts/CMU-Serif-3deb3c529a46.ttf": "3deb3c529a46d391eaad2e2b896824013d4e1922419c91ab6cb75c40db97c3f2",
+    "site-lib/fonts/CMU-Serif-643afcc8fc9a.ttf": "643afcc8fc9a526cd060f37459f050f03156f0a593779d87b8ad21f937757a31",
+    "site-lib/fonts/CMU-Serif-acd86b280644.ttf": "acd86b2806441b277361e1dfe2d64c26038ba727c6e69fbdfff6ddb8f6446478",
+    "site-lib/fonts/CMU-Serif-570dbbba9377.ttf": "570dbbba9377d7d2fbdf544ae0dfd751614d90446a6229e7cf4b6a4cf97349ab",
+    "site-lib/fonts/CMU-Serif-f4c5e2fba77e.ttf": "f4c5e2fba77eab91e39a80ae7455404654bf3042b85b197e76b253175fe67edf",
+    "site-lib/fonts/CMU-Serif-b962c7b68b9b.ttf": "b962c7b68b9bd4728133c6d45dfa7a6f3248c30d8505fa8606ad5c8cf53c04d2",
+    "site-lib/fonts/华文中宋-e822a3f2859a.ttf": "e822a3f2859a6cc982f04c6ad1eabc18371ce26d6874b710188a30c35dced0f1"
+  },
+  "state": {
+    "structureSignature": "181fbff95186e5c160a88dbe8847963afaed6ee8f052626b9e13de69674fef53",
+    "pages": {
+      "笔记库/组成因子的非零条件 3.0/前言.md": {
+        "route": "index.html",
+        "signature": "aa93217b2e40fec742f72635f772461dc4b37fde492e8bdb5bdc4a5d57c2c981"
+      },
+      "笔记库/组成因子的非零条件 3.0/单根方向/问题与方法.md": {
+        "route": "单根方向/问题与方法.html",
+        "signature": "5b1665d25b2326dd160dc4e1eacf1efb935da8ceacda7fd155965432110729bc"
+      },
+      "笔记库/组成因子的非零条件 3.0/单根方向/普通偶根.md": {
+        "route": "单根方向/普通偶根.html",
+        "signature": "47f0d70b87b637f6e6a9c9fe9687ad105637dddace33084b71d75bbd5df8667e"
+      },
+      "笔记库/组成因子的非零条件 3.0/单根方向/迷向奇根.md": {
+        "route": "单根方向/迷向奇根.html",
+        "signature": "5df81a54cfc8a221ce980e8ad6efbc9eebea3daab93fd81c64034af5fd8bdb02"
+      },
+      "笔记库/组成因子的非零条件 3.0/单根方向/非迷向奇根.md": {
+        "route": "单根方向/非迷向奇根.html",
+        "signature": "e781a19fd71da0e08ad94ec51a3889d781e5f439f0bf49d2c5bc2958785928ff"
+      },
+      "笔记库/组成因子的非零条件 3.0/单根方向/同态与子商.md": {
+        "route": "单根方向/同态与子商.html",
+        "signature": "87748f85b11e6198c2ef5a79aa2f3016f235da67da0156da05dbf69c8c2125d6"
+      },
+      "笔记库/组成因子的非零条件 3.0/权与变换/Borel 变换.md": {
+        "route": "权与变换/borel-变换.html",
+        "signature": "c3ff3f9bb6dc0b799c6a4ba5ca68cc4bef082feb5c0ba210e325356ba3ddc20e"
+      },
+      "笔记库/组成因子的非零条件 3.0/权与变换/权面与限制.md": {
+        "route": "权与变换/权面与限制.html",
+        "signature": "d93842af6d201c0fa32b3e8922ff8dbcae62976eba6e68df4338fbd1ece8b555"
+      },
+      "笔记库/组成因子的非零条件 3.0/权与变换/权多面体.md": {
+        "route": "权与变换/权多面体.html",
+        "signature": "e5778b87350223f868f7cfa555c34f563041719aa02ae661d34d94d541e4fb69"
+      },
+      "笔记库/组成因子的非零条件 3.0/权与变换/对偶与 Weyl 对称.md": {
+        "route": "权与变换/对偶与-weyl-对称.html",
+        "signature": "62a096626a17b20551e8a348398724aef31f49b2beac02b8f3b9706be1c231c9"
+      },
+      "笔记库/组成因子的非零条件 3.0/权与变换/必要下降条件.md": {
+        "route": "权与变换/必要下降条件.html",
+        "signature": "15bc2f6b4fcdd957d652fd73d54f08e95f8f4e6af1af0d2dc1236d6d113eb411"
+      },
+      "笔记库/组成因子的非零条件 3.0/普通偶群/一阶条件.md": {
+        "route": "普通偶群/一阶条件.html",
+        "signature": "056925c554452f9055d2157d1bf7c607478d48617d0b03a8699cca29317cd753"
+      },
+      "笔记库/组成因子的非零条件 3.0/普通偶群/高阶条件.md": {
+        "route": "普通偶群/高阶条件.html",
+        "signature": "70fa3e7f7b28c6ea9c436452462c3e777993af2e3483296a9ff469be64e5cd35"
+      },
+      "笔记库/组成因子的非零条件 3.0/阶数归约/环面与简单性.md": {
+        "route": "阶数归约/环面与简单性.html",
+        "signature": "07fd050318358445f0d5ac518e80e682f22ff8361b31176ce976a81d78d80403"
+      },
+      "笔记库/组成因子的非零条件 3.0/阶数归约/简单模的延拓.md": {
+        "route": "阶数归约/简单模的延拓.html",
+        "signature": "08ea9fe1b5770291bacc08c8b0b3ef780e299c5b71b0c2e538e95f7d11e04210"
+      },
+      "笔记库/组成因子的非零条件 3.0/阶数归约/最高权代表.md": {
+        "route": "阶数归约/最高权代表.html",
+        "signature": "4e24f7061ffc9e74e8173571aaddbc3076299dfecfe4f74ae3db27d809a47c7c"
+      },
+      "笔记库/组成因子的非零条件 3.0/阶数归约/中心与权格.md": {
+        "route": "阶数归约/中心与权格.html",
+        "signature": "b64f9ea03a77654886469905ca77cc42911c6185fb1eb47321f98ddebfbb96f4"
+      },
+      "笔记库/组成因子的非零条件 3.0/阶数归约/递归公式.md": {
+        "route": "阶数归约/递归公式.html",
+        "signature": "d1e7fb53ea87c547ad5e0c179cc1b254837f72ac7874cbcfbdbe7e9242346209"
+      },
+      "笔记库/组成因子的非零条件 3.0/阶数归约/稳定区间.md": {
+        "route": "阶数归约/稳定区间.html",
+        "signature": "64ec8f44708b989d3fabe841fc2c7716bc14ef53dd25f25a602ffd821188b858"
+      },
+      "笔记库/组成因子的非零条件 3.0/阶数归约/单调性.md": {
+        "route": "阶数归约/单调性.html",
+        "signature": "e40bc68eb87264352ca26b0c946443ea7c1753fc90ed7b630a5027e702afdb39"
+      },
+      "笔记库/组成因子的非零条件 3.0/阶数归约/一阶问题的保留.md": {
+        "route": "阶数归约/一阶问题的保留.html",
+        "signature": "305bd64698ead8443adfacecacdc796d3bb753ba29a7d558900bd3034a91a70c"
+      },
+      "笔记库/组成因子的非零条件 3.0/阶数归约/整数形式与约化.md": {
+        "route": "阶数归约/整数形式与约化.html",
+        "signature": "5e20ff968867f7d816a3d4b166050430c38a60330ec78ad5ffeb5ed9a1e3635b"
+      },
+      "笔记库/组成因子的非零条件 3.0/抛物归约/诱导模的头与底层.md": {
+        "route": "抛物归约/诱导模的头与底层.html",
+        "signature": "8b0cc0650f3a8e198d6ed9f3fb9f790933966a8939909ab41aabd9424ed045d9"
+      },
+      "笔记库/组成因子的非零条件 3.0/抛物归约/简单诱导.md": {
+        "route": "抛物归约/简单诱导.html",
+        "signature": "adfd5ce685b977dcc156b426d5fb04446633705bbd55abc54d860646a80d15ff"
+      },
+      "笔记库/组成因子的非零条件 3.0/抛物归约/一次归约.md": {
+        "route": "抛物归约/一次归约.html",
+        "signature": "c2ef93f9f63bb2b7ee63422a4bef62ff78a2484817a5bceb462837fce4b91a61"
+      },
+      "笔记库/组成因子的非零条件 3.0/抛物归约/两端条件.md": {
+        "route": "抛物归约/两端条件.html",
+        "signature": "579d338b070b631514b099d2d6601a2a87618fd7106807ae27e7285b16dc43e4"
+      },
+      "笔记库/组成因子的非零条件 3.0/抛物归约/典型权.md": {
+        "route": "抛物归约/典型权.html",
+        "signature": "a67cc8a3f155c81e9aea40b9cfe33377aad371dd780cfb0b208acf346aaf0e41"
+      },
+      "笔记库/组成因子的非零条件 3.0/抛物归约/矩阵块的一次计算.md": {
+        "route": "抛物归约/矩阵块的一次计算.html",
+        "signature": "3acff57b4f09677b5bc0a3d9d732352fed0b328702c40f643cf01b7d918e5b6a"
+      },
+      "笔记库/组成因子的非零条件 3.0/投射模/投射覆盖与不变量.md": {
+        "route": "投射模/投射覆盖与不变量.html",
+        "signature": "c2024edd7b5126793bae01bfb470305cd91e37d5da2ab74e1c4423d6f12f7f4f"
+      },
+      "笔记库/组成因子的非零条件 3.0/投射模/非零下界.md": {
+        "route": "投射模/非零下界.html",
+        "signature": "3730493eebafa1250d0d35cbd1c7f3b5d2372c9393a294e79eea80614d51c3f2"
+      },
+      "笔记库/组成因子的非零条件 3.0/投射模/子群限制.md": {
+        "route": "投射模/子群限制.html",
+        "signature": "3976c67e34e24598748a7eff99be104c72ee3f0846b4cde1861fc5fec2d519ea"
+      },
+      "笔记库/组成因子的非零条件 3.0/偶部的 Steinberg 权.md": {
+        "route": "偶部的-steinberg-权.html",
+        "signature": "2f2ba24b4edaf794c2b5b959a9c58e1f9ac96a035658d858ada09dfd1c3896c9"
+      },
+      "笔记库/组成因子的非零条件 3.0/特殊类型/源权的归约.md": {
+        "route": "特殊类型/源权的归约.html",
+        "signature": "435dc58fb9ad83f656f7e327801c04925e9176a9d7a4d4c7306a95c24a1b8e4f"
+      },
+      "笔记库/组成因子的非零条件 3.0/特殊类型/小秩一般线性超群.md": {
+        "route": "特殊类型/小秩一般线性超群.html",
+        "signature": "4c1f6ddb4ab0c833d0b7a8a28ac3ab1481bb87d08289f96c7470d85b6a628d59"
+      },
+      "笔记库/组成因子的非零条件 3.0/特殊类型/二二型.md": {
+        "route": "特殊类型/二二型.html",
+        "signature": "70692c5b2af87592ce78c6ca1a7264ca533eed1c68313e55cff72a6dab818207"
+      },
+      "笔记库/组成因子的非零条件 3.0/特殊类型/二重组成因子.md": {
+        "route": "特殊类型/二重组成因子.html",
+        "signature": "091f6a9696cdb0a100fc0d9b8030c8ef424cb179e7c76a1e2d2733c5e3a5da28"
+      },
+      "笔记库/组成因子的非零条件 3.0/特殊类型/正交辛三二型.md": {
+        "route": "特殊类型/正交辛三二型.html",
+        "signature": "f396e9cf61fefb11bfe8c3ade0747a6a43b6f88e3c93fddb36086691e2b092d8"
+      },
+      "笔记库/组成因子的非零条件 3.0/特殊类型/正交辛二四型.md": {
+        "route": "特殊类型/正交辛二四型.html",
+        "signature": "c7a7c2bf4be8f5b4088061ca9c1b04759fbd9e00af9c291152173aa911eb5bca"
+      },
+      "笔记库/组成因子的非零条件 3.0/特殊类型/参数型的模型.md": {
+        "route": "特殊类型/参数型的模型.html",
+        "signature": "3a75ee90b3dad78a8e7fb1e126c669257d63d6d1412457ceec1457710d2117c2"
+      },
+      "笔记库/组成因子的非零条件 3.0/特殊类型/参数型例外群.md": {
+        "route": "特殊类型/参数型例外群.html",
+        "signature": "e793ebc806f1e998f6423908f92580b2ea1bc73525fe699f80ee14d470990bf9"
+      },
+      "笔记库/组成因子的非零条件 3.0/特殊类型/特征三的三二型.md": {
+        "route": "特殊类型/特征三的三二型.html",
+        "signature": "6cc8efa6b03004d6d930adf96b1f6a244fa627990c4a2d7c657dfc1d3577be98"
+      },
+      "笔记库/组成因子的非零条件 3.0/特殊类型/特征三的三三型.md": {
+        "route": "特殊类型/特征三的三三型.html",
+        "signature": "7db9a5ef553e11ad7fa85528bee01d5bdbc2b0e553d1ab81659809d6fe31882b"
+      },
+      "笔记库/组成因子的非零条件 3.0/诱导模结构/正奇根作用.md": {
+        "route": "诱导模结构/正奇根作用.html",
+        "signature": "17a84e7acf629dfc47ceb08a50ea420be8ffcdbbca2d85b43d05060d8258049b"
+      },
+      "笔记库/组成因子的非零条件 3.0/诱导模结构/一维偶部的诱导.md": {
+        "route": "诱导模结构/一维偶部的诱导.html",
+        "signature": "734159805a85934f87a14f67d28f333a2b133d415a2c2b7c35af913281977e00"
+      },
+      "笔记库/组成因子的非零条件 3.0/诱导模结构/分拆结构.md": {
+        "route": "诱导模结构/分拆结构.html",
+        "signature": "335f35ea86fa040a5908e9229963e34412d6b548bee130c06feb7bca1254fd3c"
+      },
+      "笔记库/组成因子的非零条件 3.0/诱导模结构/诱导模的阶数变化.md": {
+        "route": "诱导模结构/诱导模的阶数变化.html",
+        "signature": "194651b1d4d01a60bebfdd8b93163b5a9e55254e2414d44acd4676dcf54d747b"
+      },
+      "笔记库/组成因子的非零条件 3.0/截断超对称幂.md": {
+        "route": "截断超对称幂.html",
+        "signature": "dc4759798c8b7f751229f045bab2fae3643454665c017e158199a9321b1940e5"
+      },
+      "笔记库/组成因子的非零条件 3.0/反例/下降关系不能拼接.md": {
+        "route": "反例/下降关系不能拼接.html",
+        "signature": "7470be3d761ab88d67b9023cb4e1798000c01303542f205a5ae75c37f66568f8"
+      },
+      "笔记库/组成因子的非零条件 3.0/反例/单根限制的不足.md": {
+        "route": "反例/单根限制的不足.html",
+        "signature": "77adb6e8dcd91f7b1e972b7240c46bd759a164dbcde3faf873d08c5d25e9c699"
+      },
+      "笔记库/组成因子的非零条件 3.0/反例/偶部限制的不足.md": {
+        "route": "反例/偶部限制的不足.html",
+        "signature": "0c858dea97b6bbadfecf28379f9d253f622a87e03e8256770a6d1b2f4d72e247"
+      },
+      "笔记库/组成因子的非零条件 3.0/反例/奇次数商的局限.md": {
+        "route": "反例/奇次数商的局限.html",
+        "signature": "29dbdb2b2854ed4f700bf76381f1d4da2bd83c9afc3098f4ddb53133d7fbabdc"
+      },
+      "笔记库/组成因子的非零条件 3.0/反例/平移函子的条件.md": {
+        "route": "反例/平移函子的条件.html",
+        "signature": "a635f18485173b675a0cd51b4a0f20594208a9e9eaaa840edd9969e6a70424a3"
+      },
+      "笔记库/组成因子的非零条件 3.0/一般问题.md": {
+        "route": "一般问题.html",
+        "signature": "338dc96f7445ebe0e6f4ecf950aa71cdb65fff53ac87e5adca8e147d01c15128"
+      },
+      "笔记库/组成因子的非零条件 3.0/参考资料.md": {
+        "route": "参考资料.html",
+        "signature": "371ece3684f620cb3b7f79fa416160e26435c1032713681a4bcc9bfd68ed439c"
+      }
+    }
+  }
+}
