@@ -1,0 +1,790 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Albus 个人主页重构预览：Obsidian 插件、独立开发与一只会互动的小猫。">
+  <title>Albus — Homepage Preview</title>
+  <style>
+    :root {
+      color-scheme: light;
+      --paper: #f7f7f3;
+      --ink: #11120f;
+      --muted: #686b64;
+      --faint: #a8aaa3;
+      --rule: #d6d7d0;
+      --accent: #2457ff;
+      --accent-soft: #e3e9ff;
+      --panel: #efefe9;
+      --serif: Georgia, "Times New Roman", "Noto Serif SC", serif;
+      --sans: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", "PingFang SC", "Microsoft YaHei", sans-serif;
+      --mono: "SFMono-Regular", Consolas, "Liberation Mono", monospace;
+    }
+
+    html[data-theme="ink"] {
+      color-scheme: dark;
+      --paper: #11120f;
+      --ink: #f3f3ed;
+      --muted: #a7aaa1;
+      --faint: #696b65;
+      --rule: #353730;
+      --accent: #7898ff;
+      --accent-soft: #202b54;
+      --panel: #191a17;
+    }
+
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; scrollbar-gutter: stable; overflow-x: hidden; }
+    body {
+      margin: 0;
+      min-width: 320px;
+      background: var(--paper);
+      color: var(--ink);
+      font-family: var(--sans);
+      -webkit-font-smoothing: antialiased;
+      transition: background .35s ease, color .35s ease;
+    }
+    body.cat-dragging, body.cat-dragging * { cursor: grabbing !important; user-select: none !important; }
+    a { color: inherit; text-decoration: none; }
+    button { color: inherit; font: inherit; }
+    ::selection { background: var(--accent); color: #fff; }
+    .skip-link {
+      position: fixed; left: 18px; top: 14px; z-index: 100;
+      padding: 10px 14px; background: var(--ink); color: var(--paper);
+      transform: translateY(-180%); transition: transform .2s ease;
+    }
+    .skip-link:focus { transform: translateY(0); }
+
+    .page { width: min(1180px, calc(100% - 96px)); margin-inline: auto; }
+    .site-header {
+      height: 92px; display: flex; align-items: center; justify-content: space-between;
+      border-bottom: 1px solid var(--rule); gap: 30px;
+    }
+    .brand { font: 400 31px/1 var(--serif); letter-spacing: -.04em; }
+    .brand-mark { color: var(--accent); font-size: .72em; vertical-align: super; margin-left: 2px; }
+    .site-nav { display: flex; align-items: center; gap: 34px; }
+    .site-nav a, .theme-toggle {
+      border: 0; background: none; padding: 12px 0; cursor: pointer;
+      color: var(--muted); font-size: 15px;
+    }
+    .site-nav a:hover, .theme-toggle:hover { color: var(--ink); }
+    .site-nav a::after, .theme-toggle::after {
+      content: ""; display: block; width: 0; height: 1px; margin-top: 4px;
+      background: currentColor; transition: width .2s ease;
+    }
+    .site-nav a:hover::after, .theme-toggle:hover::after { width: 100%; }
+
+    .hero {
+      min-height: 610px; display: grid; grid-template-columns: minmax(0, 1fr) 330px;
+      gap: 64px; align-items: center; padding: 78px 0 68px;
+    }
+    .eyebrow { display: flex; align-items: center; gap: 10px; color: var(--accent); font: 700 13px/1 var(--mono); letter-spacing: .12em; text-transform: uppercase; }
+    .eyebrow::before { content: ""; width: 30px; height: 2px; background: currentColor; }
+    h1 { margin: 20px 0 22px; font: 400 clamp(76px, 10.2vw, 144px)/.86 var(--serif); letter-spacing: -.075em; }
+    .hero-note { max-width: 690px; margin: 0; color: var(--muted); font-size: clamp(18px, 2vw, 23px); line-height: 1.55; }
+    .hero-actions { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 34px; }
+    .button {
+      display: inline-flex; align-items: center; gap: 11px; min-height: 48px; padding: 0 18px;
+      border: 1px solid var(--ink); font-size: 15px; transition: .22s ease;
+    }
+    .button.primary { background: var(--ink); color: var(--paper); }
+    .button:hover { transform: translateY(-2px); box-shadow: 4px 4px 0 var(--accent); }
+    .button .arrow { font-size: 19px; line-height: 1; }
+
+    .portrait-wrap { position: relative; width: 330px; aspect-ratio: 1; justify-self: end; }
+    .portrait-orbit { position: absolute; inset: -22px; border: 1px dashed var(--rule); border-radius: 50%; animation: orbit 28s linear infinite; }
+    .portrait-orbit::before { content: ""; position: absolute; width: 10px; height: 10px; left: 44px; top: 13px; border-radius: 50%; background: var(--accent); box-shadow: 0 0 0 7px var(--accent-soft); }
+    @keyframes orbit { to { transform: rotate(360deg); } }
+    .portrait {
+      position: absolute; inset: 0; overflow: hidden; border-radius: 50%;
+      background: var(--panel); border: 1px solid var(--rule); cursor: crosshair;
+      transform: perspective(800px) rotateX(var(--tilt-y, 0deg)) rotateY(var(--tilt-x, 0deg));
+      transition: transform .18s ease-out, background .35s ease;
+    }
+    .portrait::before {
+      content: "A"; position: absolute; right: -4px; bottom: -31px;
+      font: 400 260px/.8 var(--serif); color: var(--accent-soft); pointer-events: none;
+    }
+    .portrait-live {
+      position: absolute; z-index: 2; width: 94%; height: 94%; left: 3%; bottom: -1%;
+      color: var(--ink); overflow: visible; pointer-events: none;
+      filter: drop-shadow(0 12px 24px rgb(0 0 0 / .08));
+      transform: translate(var(--look-x, 0px), var(--look-y, 0px));
+      transition: transform .12s linear;
+    }
+    html[data-theme="ink"] .portrait-live { filter: invert(1) drop-shadow(0 12px 24px rgb(0 0 0 / .2)); }
+    .portrait-pupil { transform: translate(var(--gaze-x, 0px), var(--gaze-y, 0px)); transition: transform .08s linear; }
+    .portrait-blink-cover { opacity: 0; }
+    .portrait.blinking .portrait-pupil { opacity: 0; }
+    .portrait.blinking .portrait-blink-cover { opacity: 1; }
+    .portrait-caption {
+      position: absolute; right: -3px; bottom: -39px; color: var(--muted);
+      font: 12px/1 var(--mono); letter-spacing: .04em;
+    }
+    .portrait-tip {
+      position: absolute; left: -26px; top: 19px; z-index: 4;
+      padding: 8px 11px; border: 1px solid var(--rule); background: var(--paper);
+      color: var(--muted); font: 12px/1 var(--mono); transform: rotate(-4deg);
+      opacity: 0; translate: 0 8px; transition: .25s ease; pointer-events: none;
+    }
+    .portrait-wrap:hover .portrait-tip { opacity: 1; translate: 0 0; }
+
+    .portrait-ear { transform-box: view-box; }
+    .portrait-whiskers { opacity: 0; transition: opacity .45s ease; transform-box: view-box; transform-origin: 835px 1120px; }
+    .portrait-wrap.fused .portrait-whiskers { opacity: 1; animation: whisker 3.2s ease-in-out infinite alternate; }
+    .portrait-wrap.fused .portrait-ear-left { transform-origin: 420px 350px; animation: earLeft 4.7s ease-in-out infinite; }
+    .portrait-wrap.fused .portrait-ear-right { transform-origin: 1450px 350px; animation: earRight 5.9s ease-in-out infinite; }
+    @keyframes earLeft { 0%, 34%, 50%, 100% { transform: rotate(0); } 40% { transform: rotate(-10deg); } 45% { transform: rotate(4deg); } }
+    @keyframes earRight { 0%, 56%, 72%, 100% { transform: rotate(0); } 62% { transform: rotate(9deg); } 67% { transform: rotate(-4deg); } }
+    @keyframes whisker { from { transform: rotate(-1.5deg); } to { transform: rotate(1.5deg); } }
+    .fusion-message {
+      position: absolute; left: 50%; bottom: 24px; z-index: 5; transform: translate(-50%, 10px);
+      padding: 8px 12px; border-radius: 99px; background: var(--ink); color: var(--paper);
+      font: 12px/1 var(--mono); opacity: 0; transition: .3s ease; white-space: nowrap;
+    }
+    .portrait-wrap.fused .fusion-message { opacity: 1; transform: translate(-50%, 0); }
+    .fusion-progress {
+      --fusion-progress: 0deg;
+      position: absolute; z-index: 8; left: 50%; top: 50%; width: 74px; height: 74px;
+      margin: -37px 0 0 -37px; border-radius: 50%; opacity: 0; pointer-events: none;
+      background: conic-gradient(var(--accent) var(--fusion-progress), transparent 0);
+      -webkit-mask: radial-gradient(circle, transparent 58%, #000 60%);
+      mask: radial-gradient(circle, transparent 58%, #000 60%);
+      transition: opacity .2s ease;
+    }
+    .portrait-wrap.cat-target .fusion-progress { opacity: 1; animation: charge 1.6s linear forwards; }
+    .portrait-wrap.cat-target .portrait-orbit { border-color: var(--accent); animation-duration: 4s; }
+    .portrait-wrap.cat-ready .portrait { box-shadow: 0 0 0 8px var(--accent-soft), 0 0 0 9px var(--accent); }
+    @keyframes charge { from { --fusion-progress: 0deg; } to { --fusion-progress: 360deg; } }
+    @property --fusion-progress { syntax: "<angle>"; inherits: false; initial-value: 0deg; }
+
+    .cat-divider { height: 1px; background: var(--rule); position: relative; }
+    .cat-track { position: absolute; inset: 0; }
+    .cat-hint {
+      position: absolute; left: 104px; top: -41px; margin: 0; padding: 6px 9px;
+      background: var(--accent-soft); color: var(--accent); font: 11px/1 var(--mono);
+      opacity: .92; transition: opacity .25s ease;
+    }
+    .cat-hint::after { content: ""; position: absolute; left: 14px; bottom: -5px; width: 9px; height: 9px; background: inherit; transform: rotate(45deg); }
+    .cat-hint.dismissed { opacity: 0; }
+    .cat {
+      --cat-x: 34px; --cat-direction: 1;
+      position: absolute; left: 0; top: -49px; width: 72px; height: 56px; padding: 0;
+      border: 0; background: transparent; cursor: grab; touch-action: none; z-index: 30;
+      transform: translateX(var(--cat-x)); color: var(--ink); -webkit-tap-highlight-color: transparent;
+    }
+    .cat[hidden] { display: none; }
+    .cat:focus-visible { outline: 2px dashed var(--accent); outline-offset: 3px; border-radius: 10px; }
+    .cat svg { display: block; width: 100%; height: 100%; overflow: visible; transform: scaleX(var(--cat-direction)); }
+    .cat .tail { transform-origin: 18px 35px; animation: tail 2.7s ease-in-out infinite; }
+    .cat .eyes { transform-origin: center; animation: catBlink 4.6s steps(1) infinite; }
+    .cat.running .leg-a { animation: legA .18s ease-in-out infinite alternate; }
+    .cat.running .leg-b { animation: legB .18s ease-in-out infinite alternate; }
+    .cat.running .body-rig { animation: catBob .18s ease-in-out infinite alternate; }
+    .cat.dragging .tail { animation-duration: .5s; }
+    .cat.sleeping .body-rig { transform: translateY(6px) scaleY(.78); transform-origin: 44px 42px; }
+    .cat.sleeping .eyes { transform: scaleY(.08); }
+    .cat .sleep-mark { opacity: 0; transform: translateY(4px); }
+    .cat.sleeping .sleep-mark { opacity: 1; animation: sleepMark 2.4s ease-in-out infinite; }
+    .cat[data-grab="tail"] .body-rig { transform: rotate(18deg); transform-origin: 18px 31px; }
+    .cat[data-grab="head"] .body-rig { transform: rotate(-16deg); transform-origin: 76px 25px; }
+    .cat[data-grab="body"] .body-rig { transform: rotate(5deg); transform-origin: 44px 31px; }
+    .cat.looking .body-rig { animation: lookAround .75s ease-in-out 2 alternate; }
+    @keyframes tail { 0%,100% { transform: rotate(-6deg); } 50% { transform: rotate(12deg); } }
+    @keyframes catBlink { 0%, 46%, 50%, 100% { transform: scaleY(1); } 48% { transform: scaleY(.08); } }
+    @keyframes legA { from { transform: rotate(-17deg); } to { transform: rotate(17deg); } }
+    @keyframes legB { from { transform: rotate(17deg); } to { transform: rotate(-17deg); } }
+    @keyframes catBob { to { transform: translateY(-2px); } }
+    @keyframes sleepMark { 0% { opacity: 0; transform: translate(0,5px) scale(.7); } 35% { opacity: 1; } 100% { opacity: 0; transform: translate(8px,-12px) scale(1.15); } }
+    @keyframes lookAround { from { transform: rotate(-3deg); } to { transform: rotate(4deg); } }
+
+    .section-row {
+      display: grid; grid-template-columns: 230px minmax(0, 1fr); gap: 54px;
+      padding: 54px 0; border-bottom: 1px solid var(--rule);
+    }
+    .section-label { margin: 7px 0 0; color: var(--muted); font: 600 13px/1.4 var(--mono); letter-spacing: .12em; text-transform: uppercase; }
+    .section-label span { color: var(--accent); margin-right: 10px; }
+    .statement { max-width: 760px; margin: 0; font: 400 clamp(30px, 4.2vw, 52px)/1.16 var(--serif); letter-spacing: -.035em; }
+    .detail { max-width: 690px; margin: 20px 0 0; color: var(--muted); font-size: 18px; line-height: 1.7; }
+
+    .project-list { border-top: 1px solid var(--rule); }
+    .project {
+      position: relative; display: grid; grid-template-columns: 62px 1fr auto; gap: 26px;
+      align-items: center; min-height: 124px; border-bottom: 1px solid var(--rule);
+      transition: padding .25s ease, background .25s ease;
+    }
+    .project::before { content: ""; position: absolute; inset: 0; z-index: -1; background: var(--accent-soft); transform: scaleY(0); transform-origin: bottom; transition: transform .28s cubic-bezier(.2,.8,.2,1); }
+    .project:hover { padding-inline: 18px; }
+    .project:hover::before { transform: scaleY(1); }
+    .project-number { color: var(--faint); font: 12px/1 var(--mono); }
+    .project h3 { margin: 0 0 8px; font: 400 clamp(25px, 3vw, 34px)/1.05 var(--serif); letter-spacing: -.025em; }
+    .project p { margin: 0; color: var(--muted); font-size: 15px; line-height: 1.5; }
+    .project-arrow { width: 44px; height: 44px; display: grid; place-items: center; border: 1px solid var(--rule); border-radius: 50%; font-size: 21px; transition: .25s ease; }
+    .project:hover .project-arrow { background: var(--accent); color: #fff; border-color: var(--accent); transform: rotate(-35deg); }
+
+    .project-meta { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 13px; }
+    .tag { padding: 4px 7px; border: 1px solid var(--rule); color: var(--muted); font: 11px/1 var(--mono); }
+
+    .closing { padding: 100px 0 94px; display: grid; grid-template-columns: 1fr auto; align-items: end; gap: 40px; }
+    .closing .small { color: var(--accent); font: 12px/1 var(--mono); letter-spacing: .1em; text-transform: uppercase; }
+    .closing h2 { max-width: 800px; margin: 15px 0 0; font: 400 clamp(47px, 7vw, 88px)/.98 var(--serif); letter-spacing: -.055em; }
+    .github-round { width: 112px; aspect-ratio: 1; border-radius: 50%; border: 1px solid var(--ink); display: grid; place-items: center; text-align: center; font: 12px/1.35 var(--mono); transition: .25s ease; }
+    .github-round:hover { color: #fff; background: var(--accent); border-color: var(--accent); transform: rotate(8deg); }
+
+    footer { min-height: 90px; display: flex; align-items: center; justify-content: space-between; gap: 20px; border-top: 1px solid var(--rule); color: var(--muted); font: 13px/1.5 var(--mono); }
+    .status-dot { display: inline-block; width: 7px; height: 7px; margin-right: 8px; border-radius: 50%; background: var(--accent); box-shadow: 0 0 0 4px var(--accent-soft); }
+
+    @media (max-width: 900px) {
+      .page { width: min(100% - 48px, 760px); }
+      .hero { grid-template-columns: 1fr 230px; gap: 30px; min-height: auto; }
+      .portrait-wrap { width: 230px; }
+      .section-row { grid-template-columns: 150px minmax(0, 1fr); gap: 30px; }
+    }
+    @media (max-width: 680px) {
+      .page { width: calc(100% - 36px); }
+      .site-header { height: 76px; }
+      .brand { font-size: 25px; }
+      .site-nav { gap: 14px; }
+      .site-nav a { display: none; }
+      .theme-toggle { font-size: 13px; }
+      .hero { grid-template-columns: 1fr; gap: 35px; padding: 42px 0 58px; }
+      .portrait-wrap { grid-row: 1; width: 152px; justify-self: start; margin-left: 10px; }
+      .portrait-tip, .portrait-caption { display: none; }
+      h1 { font-size: clamp(66px, 23vw, 100px); }
+      .hero-note { font-size: 17px; }
+      .hero-note, .statement, .detail, .project p { overflow-wrap: anywhere; }
+      .button { min-height: 44px; font-size: 14px; }
+      .cat-hint { left: 92px; }
+      .section-row { grid-template-columns: 1fr; gap: 21px; padding: 39px 0; }
+      .section-label { margin: 0; }
+      .statement { font-size: 34px; }
+      .detail { font-size: 16px; }
+      .project { grid-template-columns: 35px 1fr 36px; gap: 12px; min-height: 116px; }
+      .project h3 { font-size: 25px; }
+      .project p { font-size: 13px; }
+      .project-arrow { width: 34px; height: 34px; }
+      .project-meta { display: none; }
+      .closing { grid-template-columns: 1fr; padding: 68px 0; }
+      .github-round { width: 92px; }
+      footer { align-items: flex-start; flex-direction: column; justify-content: center; }
+    }
+    @media (prefers-reduced-motion: reduce) {
+      html { scroll-behavior: auto; }
+      *, *::before, *::after { animation-duration: .01ms !important; animation-iteration-count: 1 !important; transition-duration: .01ms !important; }
+    }
+  </style>
+</head>
+<body>
+  <a class="skip-link" href="#main">跳到主要内容</a>
+  <div class="page">
+    <header class="site-header">
+      <a class="brand" href="#top" aria-label="Albus 首页">Albus<span class="brand-mark">●</span></a>
+      <nav class="site-nav" aria-label="主导航">
+        <a href="#about">关于</a>
+        <a href="#projects">项目</a>
+        <a href="https://github.com/AlbusGuo" target="_blank" rel="noopener">GitHub</a>
+        <button class="theme-toggle" id="themeToggle" type="button" aria-label="切换页面明暗主题">反色 ↗</button>
+      </nav>
+    </header>
+
+    <main id="main">
+      <section class="hero" id="top" aria-labelledby="hero-title">
+        <div class="hero-copy">
+          <div class="eyebrow">Obsidian Plugin Developer</div>
+          <h1 id="hero-title">Albus</h1>
+          <p class="hero-note">把复杂的知识工作，打磨成简单、顺手而漂亮的工具。专注于 Obsidian 插件、数学写作与个人知识管理。</p>
+          <div class="hero-actions">
+            <a class="button primary" href="#projects">浏览项目 <span class="arrow">↘</span></a>
+            <a class="button" href="https://github.com/AlbusGuo" target="_blank" rel="noopener">GitHub / AlbusGuo</a>
+          </div>
+        </div>
+
+        <div class="portrait-wrap" id="portraitWrap">
+          <div class="portrait-orbit" aria-hidden="true"></div>
+          <div class="portrait" id="portrait" role="button" tabindex="0" aria-label="Albus 角色；把小猫拖到这里会触发隐藏互动">
+            <svg class="portrait-live" viewBox="0 0 2048 2048" role="img" aria-label="Albus 原始黑白角色插画">
+              <defs>
+                <mask id="portrait-base-mask" maskUnits="userSpaceOnUse" x="0" y="0" width="2048" height="2048">
+                  <rect width="2048" height="2048" fill="white"/>
+                  <path d="M170 50L855 350L318 638Z" fill="black"/>
+                  <path d="M1180 370L1515 5L1782 650Z" fill="black"/>
+                  <ellipse cx="642" cy="950" rx="66" ry="88" fill="black"/>
+                  <ellipse cx="1052" cy="946" rx="66" ry="88" fill="black"/>
+                </mask>
+                <clipPath id="portrait-ear-left-clip"><path d="M170 50L855 350L318 638Z"/></clipPath>
+                <clipPath id="portrait-ear-right-clip"><path d="M1180 370L1515 5L1782 650Z"/></clipPath>
+                <clipPath id="portrait-eye-left-clip"><ellipse cx="642" cy="950" rx="66" ry="88"/></clipPath>
+                <clipPath id="portrait-eye-right-clip"><ellipse cx="1052" cy="946" rx="66" ry="88"/></clipPath>
+              </defs>
+              <g class="portrait-ear portrait-ear-left" clip-path="url(#portrait-ear-left-clip)">
+                <image href="../albus.svg" width="2048" height="2048"/>
+              </g>
+              <g class="portrait-ear portrait-ear-right" clip-path="url(#portrait-ear-right-clip)">
+                <image href="../albus.svg" width="2048" height="2048"/>
+              </g>
+              <image href="../albus.svg" width="2048" height="2048" mask="url(#portrait-base-mask)"/>
+              <g clip-path="url(#portrait-eye-left-clip)">
+                <ellipse class="portrait-pupil" cx="642" cy="950" rx="66" ry="88" fill="#0b0c09"/>
+              </g>
+              <g clip-path="url(#portrait-eye-right-clip)">
+                <ellipse class="portrait-pupil" cx="1052" cy="946" rx="66" ry="88" fill="#0b0c09"/>
+              </g>
+              <g class="portrait-blink-cover" fill="#fff" stroke="#0b0c09" stroke-width="20" stroke-linecap="round">
+                <path d="M570 952Q642 1010 714 950"/><path d="M980 948Q1052 1006 1124 946"/>
+              </g>
+              <g class="portrait-whiskers" fill="none" stroke="#0b0c09" stroke-width="15" stroke-linecap="round">
+                <path d="M566 1112Q442 1060 340 1090"/><path d="M554 1152Q420 1138 318 1194"/>
+                <path d="M1118 1108Q1244 1058 1350 1094"/><path d="M1130 1148Q1266 1136 1372 1190"/>
+              </g>
+            </svg>
+          </div>
+          <span class="portrait-tip">试试把猫放到这里 ↘</span>
+          <span class="portrait-caption">FIG. 01 / ALBUS</span>
+          <span class="fusion-message">CAT MODE · 点击角色释放</span>
+          <span class="fusion-progress" aria-hidden="true"></span>
+        </div>
+      </section>
+
+      <div class="cat-divider" aria-hidden="false">
+        <div class="cat-track" id="catTrack">
+          <p class="cat-hint" id="catHint">点我，或拖动我</p>
+          <button class="cat" id="cat" type="button" aria-label="互动小猫：点击奔跑，拖到角色上触发彩蛋" title="点击奔跑，或把我拖到角色身上">
+            <svg viewBox="0 0 90 56" aria-hidden="true">
+              <g class="body-rig">
+                <path class="tail" d="M23 36 C5 40 5 24 17 20 C24 18 24 27 18 29" fill="none" stroke="currentColor" stroke-width="4" stroke-linecap="round"/>
+                <ellipse cx="43" cy="33" rx="25" ry="14" fill="currentColor"/>
+                <path d="M62 31 C62 21 67 15 75 16 L80 11 L82 21 C87 25 86 35 78 38 C70 41 63 37 62 31Z" fill="currentColor"/>
+                <path d="M66 20 L68 10 L74 17 Z" fill="currentColor"/>
+                <g class="eyes" fill="var(--paper)"><circle cx="73" cy="27" r="1.6"/><circle cx="80" cy="27" r="1.6"/></g>
+              </g>
+              <g fill="none" stroke="currentColor" stroke-width="4" stroke-linecap="round">
+                <path class="leg-a" style="transform-origin:30px 40px" d="M31 40 L28 51"/>
+                <path class="leg-b" style="transform-origin:43px 41px" d="M43 41 L46 52"/>
+                <path class="leg-b" style="transform-origin:55px 40px" d="M55 40 L52 51"/>
+                <path class="leg-a" style="transform-origin:65px 39px" d="M65 39 L69 49"/>
+              </g>
+              <text class="sleep-mark" x="71" y="10" fill="currentColor" font-family="Georgia,serif" font-size="13" font-style="italic">z</text>
+            </svg>
+          </button>
+        </div>
+      </div>
+
+      <section class="section-row" id="about" aria-labelledby="about-label">
+        <h2 class="section-label" id="about-label"><span>01</span>About</h2>
+        <div>
+          <p class="statement">代码应该安静地工作，界面则应该让人愿意一直使用。</p>
+          <p class="detail">我围绕 Obsidian 打造专注、可靠的效率工具：从数学排版、日程管理，到图片工作流和个性化界面。每个项目都从真实需求出发。</p>
+        </div>
+      </section>
+
+      <section class="section-row" id="projects" aria-labelledby="projects-label">
+        <h2 class="section-label" id="projects-label"><span>02</span>Selected work</h2>
+        <div class="project-list">
+          <a class="project" href="../mathcraft/">
+            <span class="project-number">01</span>
+            <div><h3>MathCraft</h3><p>让数学笔记的编号、引用与绘图自然衔接。</p><div class="project-meta"><span class="tag">MATHEMATICS</span><span class="tag">OBSIDIAN</span><span class="tag">TIKZ</span></div></div>
+            <span class="project-arrow" aria-hidden="true">↗</span>
+          </a>
+          <a class="project" href="../super-daily-notes/">
+            <span class="project-number">02</span>
+            <div><h3>Super Daily Notes</h3><p>把计划、事件、习惯和计时收进每日笔记。</p><div class="project-meta"><span class="tag">PRODUCTIVITY</span><span class="tag">DAILY NOTE</span></div></div>
+            <span class="project-arrow" aria-hidden="true">↗</span>
+          </a>
+          <a class="project" href="https://github.com/AlbusGuo/albus-imagine" target="_blank" rel="noopener">
+            <span class="project-number">03</span>
+            <div><h3>Imagine</h3><p>从浏览、插入到排版，重做 Obsidian 图片工作流。</p><div class="project-meta"><span class="tag">IMAGE</span><span class="tag">WORKFLOW</span></div></div>
+            <span class="project-arrow" aria-hidden="true">↗</span>
+          </a>
+          <a class="project" href="https://github.com/AlbusGuo/albus-status-bar-music" target="_blank" rel="noopener">
+            <span class="project-number">04</span>
+            <div><h3>Status Bar Music</h3><p>藏在状态栏里的黑胶唱片与歌词播放器。</p><div class="project-meta"><span class="tag">MUSIC</span><span class="tag">MICRO UI</span></div></div>
+            <span class="project-arrow" aria-hidden="true">↗</span>
+          </a>
+          <a class="project" href="https://github.com/AlbusGuo/albus-plugins-and-styles-manager" target="_blank" rel="noopener">
+            <span class="project-number">05</span>
+            <div><h3>Plugins &amp; Styles Manager</h3><p>更清晰地分组、搜索与批量管理插件和样式。</p><div class="project-meta"><span class="tag">MANAGEMENT</span><span class="tag">CSS</span></div></div>
+            <span class="project-arrow" aria-hidden="true">↗</span>
+          </a>
+          <a class="project" href="https://github.com/AlbusGuo/albus-custom-buttons" target="_blank" rel="noopener">
+            <span class="project-number">06</span>
+            <div><h3>Custom Buttons</h3><p>自由组织功能区按钮、顺序与图标。</p><div class="project-meta"><span class="tag">CUSTOMIZATION</span><span class="tag">TOOLBAR</span></div></div>
+            <span class="project-arrow" aria-hidden="true">↗</span>
+          </a>
+          <a class="project" href="https://github.com/AlbusGuo/albus-custom-about-blank" target="_blank" rel="noopener">
+            <span class="project-number">07</span>
+            <div><h3>Custom About Blank</h3><p>把新标签页变成真正属于自己的起点。</p><div class="project-meta"><span class="tag">NEW TAB</span><span class="tag">PERSONALIZATION</span></div></div>
+            <span class="project-arrow" aria-hidden="true">↗</span>
+          </a>
+        </div>
+      </section>
+
+      <section class="closing" aria-label="查看 GitHub">
+        <div><span class="small">More experiments, more details</span><h2>继续创造有用，也有趣的东西。</h2></div>
+        <a class="github-round" href="https://github.com/AlbusGuo" target="_blank" rel="noopener">VIEW ALL<br>ON GITHUB ↗</a>
+      </section>
+    </main>
+
+    <footer>
+      <span>© 2026–2027 Albus</span>
+      <span><i class="status-dot"></i>Building from China · for curious minds</span>
+    </footer>
+  </div>
+
+  <script src="homepage-cat-world-v3.js"></script>
+  <script>
+    (() => {
+      const root = document.documentElement;
+      const themeToggle = document.getElementById('themeToggle');
+      const savedTheme = localStorage.getItem('albus-preview-theme');
+      if (savedTheme === 'ink') root.dataset.theme = 'ink';
+      themeToggle.addEventListener('click', () => {
+        root.dataset.theme = root.dataset.theme === 'ink' ? '' : 'ink';
+        localStorage.setItem('albus-preview-theme', root.dataset.theme || 'paper');
+      });
+
+      const portrait = document.getElementById('portrait');
+      const portraitWrap = document.getElementById('portraitWrap');
+      let pointerX = innerWidth / 2;
+      let pointerY = innerHeight / 2;
+      const reduceMotion = matchMedia('(prefers-reduced-motion: reduce)');
+
+      window.addEventListener('pointermove', event => {
+        pointerX = event.clientX;
+        pointerY = event.clientY;
+        const rect = portrait.getBoundingClientRect();
+        const dx = Math.max(-1, Math.min(1, (pointerX - (rect.left + rect.width / 2)) / (innerWidth / 2)));
+        const dy = Math.max(-1, Math.min(1, (pointerY - (rect.top + rect.height / 2)) / (innerHeight / 2)));
+        portrait.style.setProperty('--look-x', `${(dx * 5).toFixed(1)}px`);
+        portrait.style.setProperty('--look-y', `${(dy * 4).toFixed(1)}px`);
+        portrait.style.setProperty('--gaze-x', `${(dx * 4).toFixed(1)}px`);
+        portrait.style.setProperty('--gaze-y', `${(dy * 3).toFixed(1)}px`);
+      }, { passive: true });
+
+      function scheduleBlink() {
+        if (reduceMotion.matches) return;
+        setTimeout(() => {
+          portrait.classList.add('blinking');
+          setTimeout(() => portrait.classList.remove('blinking'), 150);
+          scheduleBlink();
+        }, 2200 + Math.random() * 3600);
+      }
+
+      portrait.addEventListener('pointermove', event => {
+        const rect = portrait.getBoundingClientRect();
+        const x = (event.clientX - rect.left) / rect.width - .5;
+        const y = (event.clientY - rect.top) / rect.height - .5;
+        portrait.style.setProperty('--tilt-x', `${(x * 7).toFixed(2)}deg`);
+        portrait.style.setProperty('--tilt-y', `${(-y * 7).toFixed(2)}deg`);
+      });
+      portrait.addEventListener('pointerleave', () => {
+        portrait.style.setProperty('--tilt-x', '0deg');
+        portrait.style.setProperty('--tilt-y', '0deg');
+      });
+
+      if (!window.AlbusCatWorld) {
+      const cat = document.getElementById('cat');
+      const track = document.getElementById('catTrack');
+      const hint = document.getElementById('catHint');
+      const reduceMotion = matchMedia('(prefers-reduced-motion: reduce)');
+      let catX = 34;
+      let state = 'home';
+      let drag = null;
+      let runAnimation = null;
+      let journeyTimer = null;
+      let fusionTimer = null;
+      let fusionReady = false;
+
+      const setCatX = value => {
+        catX = Math.max(0, Math.min(value, Math.max(0, track.clientWidth - cat.offsetWidth)));
+        cat.style.setProperty('--cat-x', `${catX}px`);
+      };
+
+      function dismissHint() { hint.classList.add('dismissed'); }
+
+      function runTo(destination, thenReturn = true) {
+        if (state === 'fused' || state === 'dragging') return;
+        dismissHint();
+        clearTimeout(journeyTimer);
+        runAnimation?.cancel();
+        const target = Math.max(0, Math.min(destination, track.clientWidth - cat.offsetWidth));
+        cat.style.setProperty('--cat-direction', target < catX ? '-1' : '1');
+        cat.classList.remove('sleeping', 'looking');
+        cat.classList.add('running');
+        state = 'running';
+        const duration = reduceMotion.matches ? 1 : Math.max(420, Math.abs(target - catX) * 2.4);
+        runAnimation = cat.animate([
+          { transform: `translateX(${catX}px)` },
+          { transform: `translateX(${target}px)` }
+        ], { duration, easing: 'cubic-bezier(.3,.05,.2,1)', fill: 'forwards' });
+        runAnimation.onfinish = () => {
+          setCatX(target);
+          runAnimation.cancel();
+          runAnimation = null;
+          cat.classList.remove('running');
+          state = 'home';
+          if (thenReturn && Math.abs(catX - 34) > 4) {
+            setTimeout(() => runTo(34, false), reduceMotion.matches ? 0 : 620);
+          } else {
+            cat.classList.add('sleeping');
+          }
+        };
+      }
+
+      function clearFusionTarget() {
+        clearTimeout(fusionTimer);
+        fusionTimer = null;
+        fusionReady = false;
+        portraitWrap.classList.remove('cat-target', 'cat-ready');
+      }
+
+      function updateFusionTarget(overPortrait) {
+        if (!overPortrait) {
+          clearFusionTarget();
+          return;
+        }
+        if (portraitWrap.classList.contains('cat-target')) return;
+        portraitWrap.classList.add('cat-target');
+        fusionTimer = setTimeout(() => {
+          fusionReady = true;
+          portraitWrap.classList.add('cat-ready');
+        }, reduceMotion.matches ? 0 : 1600);
+      }
+
+      function fuseCat() {
+        state = 'fused';
+        cat.classList.remove('dragging', 'running');
+        cat.removeAttribute('data-grab');
+        cat.hidden = true;
+        clearFusionTarget();
+        portraitWrap.classList.add('fused');
+        portrait.setAttribute('aria-label', 'Albus 猫猫形态；点击释放小猫');
+        document.body.classList.remove('cat-dragging');
+      }
+
+      function finishAtHome() {
+        cat.removeAttribute('style');
+        cat.removeAttribute('data-grab');
+        track.appendChild(cat);
+        cat.classList.remove('running', 'dragging', 'looking');
+        cat.classList.add('sleeping');
+        setCatX(34);
+        state = 'home';
+      }
+
+      function journeyHome() {
+        const trackRect = track.getBoundingClientRect();
+        const catRect = cat.getBoundingClientRect();
+        const dx = trackRect.left + 34 - catRect.left;
+        const dy = trackRect.top - 49 - catRect.top;
+        cat.classList.remove('dragging', 'looking', 'sleeping');
+        cat.classList.add('running');
+        state = 'returning';
+        cat.style.setProperty('--cat-direction', dx < 0 ? '-1' : '1');
+        const animation = cat.animate([
+          { transform: 'translate(0,0) rotate(0deg)' },
+          { transform: `translate(${dx * .22}px, ${dy * .22 - 72}px) rotate(${dx < 0 ? -7 : 7}deg)`, offset: .23 },
+          { transform: `translate(${dx * .42}px, ${dy * .42}px) rotate(0deg)`, offset: .42 },
+          { transform: `translate(${dx * .66}px, ${dy * .66 - 62}px) rotate(${dx < 0 ? -6 : 6}deg)`, offset: .68 },
+          { transform: `translate(${dx * .82}px, ${dy * .82}px) rotate(0deg)`, offset: .83 },
+          { transform: `translate(${dx}px, ${dy}px) rotate(0deg)` }
+        ], { duration: reduceMotion.matches ? 1 : Math.min(1900, Math.max(900, Math.hypot(dx, dy) * 1.1)), easing: 'cubic-bezier(.25,.65,.25,1)', fill: 'forwards' });
+        runAnimation = animation;
+        animation.onfinish = () => {
+          animation.cancel();
+          runAnimation = null;
+          finishAtHome();
+        };
+      }
+
+      function nearbyPlatform(catRect) {
+        const centerX = catRect.left + catRect.width / 2;
+        const pawY = catRect.bottom - 4;
+        const selectors = ['.cat-divider', '.project h3', '.statement', '.section-label', '.site-header'];
+        const candidates = [];
+        document.querySelectorAll(selectors.join(',')).forEach(element => {
+          Array.from(element.getClientRects()).forEach(rect => {
+            if (rect.width < 28 || rect.top < pawY - 8) return;
+            if (centerX < rect.left - 42 || centerX > rect.right + 42) return;
+            candidates.push(rect);
+          });
+        });
+        candidates.sort((a, b) => a.top - b.top);
+        return candidates[0] || null;
+      }
+
+      function landThenReturn() {
+        const catRect = cat.getBoundingClientRect();
+        const platform = nearbyPlatform(catRect);
+        cat.classList.remove('dragging', 'sleeping');
+        cat.removeAttribute('data-grab');
+        if (!platform || platform.top - catRect.top > innerHeight * .7) {
+          journeyHome();
+          return;
+        }
+        const targetLeft = Math.max(platform.left - 12, Math.min(catRect.left, platform.right - catRect.width + 12));
+        const targetTop = platform.top - catRect.height + 7;
+        const dx = targetLeft - catRect.left;
+        const dy = Math.max(0, targetTop - catRect.top);
+        state = 'falling';
+        const fall = cat.animate([
+          { transform: 'translate(0,0) rotate(0deg)' },
+          { transform: `translate(${dx * .45}px, ${Math.min(-18, dy * .15 - 22)}px) rotate(${dx < 0 ? -4 : 4}deg)`, offset: .3 },
+          { transform: `translate(${dx}px, ${dy}px) rotate(0deg)` }
+        ], { duration: reduceMotion.matches ? 1 : Math.max(320, Math.min(720, dy * 1.6)), easing: 'cubic-bezier(.24,.15,.35,1)', fill: 'forwards' });
+        runAnimation = fall;
+        fall.onfinish = () => {
+          fall.cancel();
+          runAnimation = null;
+          cat.style.left = `${targetLeft}px`;
+          cat.style.top = `${targetTop}px`;
+          cat.style.transform = 'none';
+          cat.classList.add('looking');
+          state = 'perched';
+          journeyTimer = setTimeout(journeyHome, reduceMotion.matches ? 0 : 1050);
+        };
+      }
+
+      function perchAndFuse() {
+        const catRect = cat.getBoundingClientRect();
+        const face = portrait.getBoundingClientRect();
+        const dx = face.left + face.width * .5 - catRect.width / 2 - catRect.left;
+        const dy = face.top + face.height * .19 - catRect.height / 2 - catRect.top;
+        cat.classList.remove('dragging', 'sleeping');
+        cat.removeAttribute('data-grab');
+        state = 'fusing';
+        const settle = cat.animate([
+          { transform: 'translate(0,0) scale(1)' },
+          { transform: `translate(${dx * .55}px, ${dy - 38}px) scale(.92)`, offset: .55 },
+          { transform: `translate(${dx}px, ${dy}px) scale(.8)` }
+        ], { duration: reduceMotion.matches ? 1 : 520, easing: 'cubic-bezier(.2,.8,.2,1)', fill: 'forwards' });
+        runAnimation = settle;
+        settle.onfinish = () => {
+          settle.cancel();
+          runAnimation = null;
+          cat.style.left = `${catRect.left + dx}px`;
+          cat.style.top = `${catRect.top + dy}px`;
+          cat.style.transform = 'scale(.8)';
+          cat.classList.add('looking');
+          journeyTimer = setTimeout(fuseCat, reduceMotion.matches ? 0 : 700);
+        };
+      }
+
+      function beginDrag(event) {
+        if (state === 'fused') return;
+        clearTimeout(journeyTimer);
+        runAnimation?.cancel();
+        runAnimation = null;
+        const rect = cat.getBoundingClientRect();
+        const localX = event.clientX - rect.left;
+        const grabPart = localX < rect.width * .28 ? 'tail' : localX > rect.width * .68 ? 'head' : 'body';
+        drag = {
+          id: event.pointerId,
+          startX: event.clientX,
+          startY: event.clientY,
+          offsetX: event.clientX - rect.left,
+          offsetY: event.clientY - rect.top,
+          moved: false,
+          grabPart
+        };
+        cat.classList.remove('sleeping', 'looking');
+        cat.setPointerCapture?.(event.pointerId);
+      }
+
+      cat.addEventListener('pointerdown', event => {
+        event.preventDefault();
+        beginDrag(event);
+      });
+
+      cat.addEventListener('click', event => {
+        if (event.detail !== 0 || state === 'fused') return;
+        const destination = catX < track.clientWidth / 2 ? track.clientWidth - 84 : 10;
+        runTo(destination, true);
+      });
+
+      cat.addEventListener('pointermove', event => {
+        if (!drag || drag.id !== event.pointerId) return;
+        if (!drag.moved && Math.hypot(event.clientX - drag.startX, event.clientY - drag.startY) < 6) return;
+        if (!drag.moved) {
+          const rect = cat.getBoundingClientRect();
+          drag.moved = true;
+          state = 'dragging';
+          dismissHint();
+          document.body.appendChild(cat);
+          cat.classList.add('dragging');
+          cat.dataset.grab = drag.grabPart;
+          document.body.classList.add('cat-dragging');
+          cat.style.position = 'fixed';
+          cat.style.left = `${rect.left}px`;
+          cat.style.top = `${rect.top}px`;
+          cat.style.transform = 'none';
+        }
+        cat.style.left = `${event.clientX - drag.offsetX}px`;
+        cat.style.top = `${event.clientY - drag.offsetY}px`;
+        const portraitRect = portrait.getBoundingClientRect();
+        const overPortrait = event.clientX > portraitRect.left && event.clientX < portraitRect.right && event.clientY > portraitRect.top && event.clientY < portraitRect.bottom;
+        updateFusionTarget(overPortrait);
+      });
+
+      cat.addEventListener('pointerup', event => {
+        if (!drag || drag.id !== event.pointerId) return;
+        const moved = drag.moved;
+        drag = null;
+        document.body.classList.remove('cat-dragging');
+        if (!moved) {
+          const destination = pointerX < innerWidth / 2 ? track.clientWidth - 84 : 10;
+          runTo(destination, true);
+          return;
+        }
+        const catRect = cat.getBoundingClientRect();
+        const portraitRect = portrait.getBoundingClientRect();
+        const catCenterX = catRect.left + catRect.width / 2;
+        const catCenterY = catRect.top + catRect.height / 2;
+        const overPortrait = catCenterX > portraitRect.left && catCenterX < portraitRect.right && catCenterY > portraitRect.top && catCenterY < portraitRect.bottom;
+        if (overPortrait && fusionReady) fuseCat();
+        else if (overPortrait) { clearFusionTarget(); perchAndFuse(); }
+        else { clearFusionTarget(); landThenReturn(); }
+      });
+
+      cat.addEventListener('pointercancel', () => {
+        if (!drag) return;
+        const moved = drag.moved;
+        drag = null;
+        clearFusionTarget();
+        document.body.classList.remove('cat-dragging');
+        if (moved) landThenReturn();
+      });
+
+      function releaseCat() {
+        if (state !== 'fused') return;
+        portraitWrap.classList.remove('fused');
+        portrait.setAttribute('aria-label', 'Albus 角色；把小猫拖到这里会触发隐藏互动');
+        cat.hidden = false;
+        document.body.appendChild(cat);
+        const rect = portrait.getBoundingClientRect();
+        cat.style.position = 'fixed';
+        cat.style.left = `${rect.right - 40}px`;
+        cat.style.top = `${rect.top + rect.height * .34}px`;
+        cat.style.transform = 'none';
+        state = 'dragging';
+        journeyTimer = setTimeout(journeyHome, reduceMotion.matches ? 0 : 180);
+      }
+
+      portrait.addEventListener('click', releaseCat);
+      portrait.addEventListener('keydown', event => {
+        if ((event.key === 'Enter' || event.key === ' ') && state === 'fused') {
+          event.preventDefault();
+          releaseCat();
+        }
+      });
+
+      window.addEventListener('resize', () => {
+        if (state === 'home') setCatX(Math.min(catX, track.clientWidth - cat.offsetWidth));
+      });
+      setCatX(34);
+      cat.classList.add('sleeping');
+      }
+      scheduleBlink();
+    })();
+  </script>
+</body>
+</html>
