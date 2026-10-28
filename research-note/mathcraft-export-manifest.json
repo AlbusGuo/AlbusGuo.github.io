@@ -15,25 +15,25 @@
     "site-lib/styles/editing-suite-export.css": "b555d3f9c97e857507988f5b4a7acca1a51e0520707bb2d8ddbe41ddee124427",
     "site-lib/styles/global-variable-styles.css": "449c7c5c39eeac8afd1f3c9d7a4de93aedf62d1a3f8eea6e190760ba21b8df69",
     "site-lib/styles/supported-plugins.css": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
-    "site-lib/html/file-tree.html": "269136dcc1c8feb759946ef24755a1d57f8359bb8ee05ab472634a2513651604",
-    "site-lib/search-index.json": "fa7999521e6130cc92e662d8931fc3c923bb18bcadb7b5f7bf5e841d08400585",
-    "site-lib/metadata.json": "18b0c3bca411644f180baf8b59f014e89a93bcc01956839b2f68cbced76abe24",
-    "index.html": "dec65ad4bfacb43dfb6aa660519583cf40a11650f32d109b8ea3f5c1ad164615",
-    "预备知识/限制-lie-超代数与-chevalley-超群.html": "40760c45f663a5d8734dc27e6b36d68e3256c898514707a479865bba27adab38",
-    "预备知识/分次结构.html": "cba4ddef708b8230871039d5413ca2c3f1496611a61be6ebc71fb45ee8f1b02d",
-    "预备知识/frobenius-核与分次代数.html": "c586730f147d9f55978240f2e25d66bf23c3661fbda4f961595b665002a4840a",
-    "预备知识/计算二项式系数的工具.html": "b1d525f311ed8c0ee089b3db9e5521e2de312232c0ecd8154526d696fa2fb179",
-    "预备知识/超-weyl-群.html": "722ab7c3dc7ff2d794aed4a8bd21387bfe7f57b2c0b1e08324b2fb655b8a2979",
-    "模范畴的建立与-baby-verma-模的构造.html": "d92f38abc367c9095f7a9768d1e867893f4e28e37d56ba1b3571b14c71ee6480",
-    "研究对象-问题-思路.html": "cb7ff9c424710bd9adbc6c24340cb767c1d9b268c92d6042ed7265363c4d3ee7",
-    "baby-verma-模的同态计算/同态像与核.html": "c362de86769d4a8fe7889ca1d783677dd0afabce2cdbf177b639dc2784eed64c",
-    "baby-verma-模的同态计算/同态空间.html": "040608041ecdc6be8c4fc1c72a7b2aa4aca8b5cf61828f6cea1c48439073c4b5",
-    "baby-verma-模的同态计算/长正合列与特征标公式.html": "a3ef2a5db36ddfdccc8c3425221a7735353b76846bb2ed03702377a66c67727c",
-    "baby-verma-模的同态计算/同态序列的复合.html": "1ffa44cc733bd5ffa7d7b5869b265c64929608ecffeb98f74c21faa60611675d",
-    "不可约性判别.html": "14629b32ed719503a3be6dbf9342ad65bf9e0ef6903ad03e9420e5779959ce26",
-    "组成因子非零条件.html": "43dbba619575ca9c70c6127b998134c0a08c4012326e7dc10800b9f6ac816154",
-    "不可约模的-1-阶扩张.html": "e7431ae815fb110e34b3e26b1bcb6dcb89f87b44542561159539e6edf7df2486",
-    "参考资料.html": "240022e807e64d8c794c735d925e5c81de8eec880465b29d10734736b4ade19c",
+    "site-lib/html/file-tree.html": "75508635166bf955d8c234e0606ec6d3d2fc2ebfebd725c5752a712b4b188b8a",
+    "site-lib/search-index.json": "f7f076fb7af1fae7b7eea30e5caa5989291184758ec1f2b9772318685ad8a258",
+    "site-lib/metadata.json": "58db9f05d7362a92ddcf30a2fb5ef6fd19e074e9ffa9239af69734d490f344bd",
+    "index.html": "5b1f9ffaeeee20712acfacc61d08d635269222643ace094c1e69c1ce44aff5ad",
+    "预备知识/限制-lie-超代数与-chevalley-超群.html": "ad6f0ef994aaaff15a848c3239a3c554f4a27de411788e448063cc2a80ba0f8b",
+    "预备知识/分次结构.html": "1b8a25c5654894efcde6bfb96f86fcd24a921ebbd7760937eb03b3a6a00b7413",
+    "预备知识/frobenius-核与分次代数.html": "160ae93e47e5f932dcd5dc4e4f9c2d2ad194ab56c3649a6720c587e25032ba8f",
+    "预备知识/计算二项式系数的工具.html": "26df40e8cf895581769757de6b8d54b8cf815e1d6a930bb5fe3435d45d0fca05",
+    "预备知识/超-weyl-群.html": "b80ccb6c63ff5985547421406212ebcf886d9a5893531460af4164a0875ac46d",
+    "模范畴的建立与-baby-verma-模的构造.html": "254ea15c32f44838f1d89ee9b466169464c109f706b640558b314547ecba28e1",
+    "研究对象-问题-思路.html": "24ba5fe4dad0f988def477cee5f3499144f71b4561ca0ffe0be68d14d8bf2cb1",
+    "baby-verma-模的同态计算/同态像与核.html": "10967334499b008a40d65e7fa4983819c762d09ae76aabf4f195ba131fdaa3d2",
+    "baby-verma-模的同态计算/同态空间.html": "0b3f2a8b0a685632b45eb4c523b22e99336b146a8279b59c00a2404982bce470",
+    "baby-verma-模的同态计算/长正合列与特征标公式.html": "998bc3b3243b06d438913af5efe1d3d780da4f00218e3be981bca2671d51dc35",
+    "baby-verma-模的同态计算/同态序列的复合.html": "f7c48e458650a03ae85221dea22e8e96f14a7c2340e379f5af68cc0e13e1a324",
+    "不可约性判别.html": "fb4e7804cede3c7cfba1c133499193818a763eeadb4ecb0176f3c851fcc25157",
+    "组成因子重数的非零条件/单根方向的充要条件.html": "83b686c22a4275ad841297098808b2ad6e075ec0a046d7b313117a2996df1bfb",
+    "不可约模的-1-阶扩张.html": "59fcd51a44db24983cc340bf8ce1ed3552f35d969fda6886547a09ddb3e9c3af",
+    "参考资料.html": "849fcb1963568c0250a665942a8bb9f81f551e4c3bc0ad8bcf17e7b0b3559fa1",
     "attachments/Attachments/Images/Figures/Mathcraft/TikZCD/gl(1;2) 的 Borel 链.svg": "f44576ad639a2e0d0aa315c2a5a0b2a9842c9b8c7e9e6c038b697438b9400157",
     "attachments/Attachments/Images/Figures/Mathcraft/TikZCD/扩张等价交换图.svg": "098f0c46ff678a9b90542d34ce057c1b294c8fe808ffd12e851ef45e2274116c",
     "attachments/Attachments/Images/Figures/Mathcraft/TikZCD/核像互补表.svg": "cec7e39d6d7a5d1cead337aae145d8eb79f01687e9072a529646a8b95c523922",
@@ -61,14 +61,14 @@
     "site-lib/fonts/mathjax-bd9d7db0883d.woff2": "bd9d7db0883dc1adca7ed1c20042609e4e3d1f07f106b6bc8eeeab49d560393b",
     "site-lib/fonts/mathjax-07165a0e10ae.woff2": "07165a0e10ae4b6b24db34b28d0a8c46bd4ac53b4d1682098ee7a3e88d2f1c83",
     "site-lib/fonts/mathjax-b20a0e1b0304.woff2": "b20a0e1b03043ae1a540857bdf1b220297ff0e78b110b1e15554addf91ad0937",
-    "site-lib/media/81d33d08a96d-flow-circular.woff2": "81d33d08a96d99034c41b49ac980f63b353175f919db817d74e0405749af03db",
     "site-lib/media/a7c6a118d17f-external-link.svg": "a7c6a118d17f6a296037b519e9891e08951de59c289fe41ec2596a63c3b28516",
     "site-lib/media/a44ac4cbf79c-external-link-rtl.svg": "a44ac4cbf79c6765f4bdc3a0dc3fb51b56ed5eb4679177f0a40f04b63b3e3a3c",
-    "site-lib/media/693b77d4f32e-InterVariable.woff2": "693b77d4f32ee9b8bfc995589b5fad5e99adf2832738661f5402f9978429a8e3",
+    "site-lib/media/81d33d08a96d-flow-circular.woff2": "81d33d08a96d99034c41b49ac980f63b353175f919db817d74e0405749af03db",
+    "site-lib/media/a0cfec834df5-SourceCodePro-BoldItalic.ttf": "a0cfec834df50e21cdb3d15bf93e87ed033d8c26693f9ede6efe24325ae22c9e",
     "site-lib/media/6e5dd0494f63-SourceCodePro-Regular.ttf": "6e5dd0494f63d85970156cd54b6ac568b82a392d135db08bbf5cc3048d489aa9",
     "site-lib/media/ba51b929995b-SourceCodePro-Italic.ttf": "ba51b929995b3088ff1932d9d6835c90ccf304b296a3b8e103d2e95b958109ee",
     "site-lib/media/839f42df29a5-SourceCodePro-Bold.ttf": "839f42df29a5a83470888b9a3aa4064fc1bc35e6616bb542226d89086f019ec5",
-    "site-lib/media/a0cfec834df5-SourceCodePro-BoldItalic.ttf": "a0cfec834df50e21cdb3d15bf93e87ed033d8c26693f9ede6efe24325ae22c9e",
+    "site-lib/media/693b77d4f32e-InterVariable.woff2": "693b77d4f32ee9b8bfc995589b5fad5e99adf2832738661f5402f9978429a8e3",
     "site-lib/media/e564f652916d-InterVariable-Italic.woff2": "e564f652916db6c139570fefb9524a77c4d48f30c92928de9db19b6b5c7a262a",
     "site-lib/fonts/CMU-Serif-3deb3c529a46.ttf": "3deb3c529a46d391eaad2e2b896824013d4e1922419c91ab6cb75c40db97c3f2",
     "site-lib/fonts/CMU-Serif-643afcc8fc9a.ttf": "643afcc8fc9a526cd060f37459f050f03156f0a593779d87b8ad21f937757a31",
@@ -79,7 +79,7 @@
     "site-lib/fonts/华文中宋-e822a3f2859a.ttf": "e822a3f2859a6cc982f04c6ad1eabc18371ce26d6874b710188a30c35dced0f1"
   },
   "state": {
-    "structureSignature": "aa9ca8b9d524a298df00eb3a36e49209e1b8ec27f31f896836ad77492ef3d9a6",
+    "structureSignature": "7f903fa54b6c4a1c6f12f1867b9d03e1c6bb521867a96fe310607926eed6308e",
     "pages": {
       "Documents/数学/Chevalley 超群的 r 阶 Frobenius 核的表示/前言.md": {
         "route": "index.html",
@@ -107,7 +107,7 @@
       },
       "Documents/数学/Chevalley 超群的 r 阶 Frobenius 核的表示/模范畴的建立与 baby Verma 模的构造.md": {
         "route": "模范畴的建立与-baby-verma-模的构造.html",
-        "signature": "44873b0a1d4aab355680312baddb1f5609655a7f0895b55e5551f103d3db68cf"
+        "signature": "07db0c5832367036c3c1c8715ff2a60efb2892b622330b05b25672a650e2578a"
       },
       "Documents/数学/Chevalley 超群的 r 阶 Frobenius 核的表示/研究对象、问题、思路.md": {
         "route": "研究对象-问题-思路.html",
@@ -115,11 +115,11 @@
       },
       "Documents/数学/Chevalley 超群的 r 阶 Frobenius 核的表示/Baby Verma 模的同态计算/同态像与核.md": {
         "route": "baby-verma-模的同态计算/同态像与核.html",
-        "signature": "85d38afb7ebd2d3f2567c7813f0a508544e720a556f11c7a2e0886e13aaa7852"
+        "signature": "041a23ec24eeda387cec5e331ecddae3db820bbcca6975fa2ac783881644d08b"
       },
       "Documents/数学/Chevalley 超群的 r 阶 Frobenius 核的表示/Baby Verma 模的同态计算/同态空间.md": {
         "route": "baby-verma-模的同态计算/同态空间.html",
-        "signature": "eabd2f0459a97d909ca9593786e0edebd991a2f021ddd1e221bf0bb67f4f7ec7"
+        "signature": "7bc6064aee88b86f12b851fbb1a2dc1cfc48d59d6339c4b2e7e3f1adb2262f81"
       },
       "Documents/数学/Chevalley 超群的 r 阶 Frobenius 核的表示/Baby Verma 模的同态计算/长正合列与特征标公式.md": {
         "route": "baby-verma-模的同态计算/长正合列与特征标公式.html",
@@ -133,13 +133,13 @@
         "route": "不可约性判别.html",
         "signature": "14269aa2211bcd631247872ef5d766324782b8f257411e2abcf927e31cab9520"
       },
-      "Documents/数学/Chevalley 超群的 r 阶 Frobenius 核的表示/组成因子非零条件.md": {
-        "route": "组成因子非零条件.html",
-        "signature": "fa3f598ed7380c9b41d5bc12cec852b784e2722dd1fa9cdb5c62959288edf9da"
+      "Documents/数学/Chevalley 超群的 r 阶 Frobenius 核的表示/组成因子重数的非零条件/单根方向的充要条件.md": {
+        "route": "组成因子重数的非零条件/单根方向的充要条件.html",
+        "signature": "780384bd0db84d32d6b874fa844312101de8e1fabbf3111bf81679b94e155bb7"
       },
       "Documents/数学/Chevalley 超群的 r 阶 Frobenius 核的表示/不可约模的 1 阶扩张.md": {
         "route": "不可约模的-1-阶扩张.html",
-        "signature": "27a05faa6b848fca28421d203356c862c2eabd72017eaa20a8b26fcbf1db45da"
+        "signature": "db1ddbc36004f78f0e856110f19161a442deb5fa2e60d4f56b2785905fe0273d"
       },
       "Documents/数学/Chevalley 超群的 r 阶 Frobenius 核的表示/参考资料.md": {
         "route": "参考资料.html",
