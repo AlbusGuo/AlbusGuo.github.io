@@ -1,0 +1,422 @@
+{
+  "version": 2,
+  "files": {
+    "site-lib/scripts/webpage.js": "91ccb1038c2573388c0249bb948b0ae2733953024c0441cfb0b39f61bb5b0296",
+    "site-lib/scripts/notebook-navigation.js": "a4331c822d7f15d093c5b44b4960500ae7915c1a837b867ba625367c7e17c1e9",
+    "site-lib/scripts/editing-suite.js": "87df6aa4950e59b2318fe46c03cc15c66b067ee36c688f4488493739d6ba4c10",
+    "site-lib/styles/export-webpage.css": "06abcbfe497310371999c0014bfd726e17df2c6166ccae9e95a9ca8dbbc82c33",
+    "site-lib/styles/main-styles.css": "79648c459e52aa50cc4609fafa7aff011efa8417672860a2e34f9846e4abd4c7",
+    "site-lib/styles/obsidian.css": "7f6a8384c9baba9dd9d3d7dde6505f235bac96fb7d072230b9f12b5390edf9c6",
+    "site-lib/styles/local-fonts.css": "842d3cd2f9bf943861c23d53097fc0e13f6f5b15edde929a5a39df5eff60d8ca",
+    "site-lib/styles/theme.css": "0e446061bba8b1ee44f46b08013f684973ad627663b1532d00e498638ab251a2",
+    "site-lib/styles/snippets.css": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "site-lib/styles/other-plugins.css": "1597beb42e5e0211542153b95318a83f1841f311b04dffa2aee00fb73432e72d",
+    "site-lib/styles/editing-suite.css": "f03a5e141094e2e1d39295c14721e733f69e1f985dedce2411cdc5b2c1244543",
+    "site-lib/styles/editing-suite-export.css": "b555d3f9c97e857507988f5b4a7acca1a51e0520707bb2d8ddbe41ddee124427",
+    "site-lib/styles/global-variable-styles.css": "3564c4d0b6ff6a3ce18de390d0437c96a1c6d45efe35aa0dd2305eef875dcc6b",
+    "site-lib/styles/supported-plugins.css": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "site-lib/html/file-tree.html": "51bdf8f837e59cdc26aff50b685c220c018f74734be372fbcad242e98bcc4cf3",
+    "site-lib/search-index.json": "a00ec207a85f895800492f49939d86c14d2adcdea1679f6638b172e7c4f2d86a",
+    "site-lib/metadata.json": "443fbfe8363ea5ec2e5480b3dafd1f492fa11e74b2c1edb7aec90f2839571041",
+    "index.html": "1503ed577931df12842044636fa43bd03411db9cca23216c209d65e459d426dc",
+    "pan-shu的方法.html": "fe7a13b82b8233fc38b8c7776790d0a4065078d4a4e45ab3d550f6f7717af0ae",
+    "预备知识/模与张量积.html": "b16bd029d450c7e63c6011aeb86d145f43f937b16997fbf33f02626382fb278b",
+    "预备知识/正合列与扩张.html": "d7a904cc38f54b2a1b734b3444ea7094701b99d45e4f3ee5a1050575c630efe8",
+    "预备知识/滤过与特征标.html": "267e0ef8eadea2d29eb81a8c5f247c46ab553cce5358e9967e95063e5776733b",
+    "预备知识/hopf超代数与超群.html": "17b40010ed8bb457fe019339c98edfc2fcecb298e818b2485855599282a8e9bc",
+    "预备知识/离散赋值环.html": "3bdb5e04e10ade38582cb9438de4ae1be099749c37d857c14f746a3e8f3454a7",
+    "预备知识/二项式系数.html": "f53cb78fcc708901637384e36f23bd0c02ad5bf685f12e55d1e1170e67bffc8a",
+    "预备知识/整格与有限矩阵.html": "ee4e38d49d1ed839e3e42688002da1b981ce5b85f6533be3f6d7db20f27af342",
+    "chevalley超群与分布代数/chevalley超群.html": "8d71e43a559b5d2f7bc3655b59e4f3ebd6f5ecaa300bc2ddffc1aff886a55617",
+    "chevalley超群与分布代数/环面与权格.html": "842c141e484a7f30595e8dc934fd533a897f56f50b6119809a32b35003d8e3a0",
+    "chevalley超群与分布代数/根系与borel子群.html": "40b7732bd3142b188065f44970e8afc105ce71581c1e9abc5dabf49a0065ff5c",
+    "chevalley超群与分布代数/根子群.html": "ce3823ea972897a6db16895c2cabc59f91c9fa77863ff1edd04a9476e9da3bc3",
+    "chevalley超群与分布代数/frobenius核.html": "e0d3fc4c3e40e5a673787313a87982791fb04a668c58b61bd3ace5c833b15a70",
+    "chevalley超群与分布代数/分布代数.html": "34a8c8139cdf194232bef57e36e3f6209be9f93e514f2607b79da42eb1b83f58",
+    "chevalley超群与分布代数/pbw定理.html": "29cae33f362708af9e618b476050225e6c69d67459567b893eccf10a1a60df56",
+    "超weyl群.html": "63f48ac46a55e1937bbbc242e683bba18f866f12b4464fe2c5698f84f03b100f",
+    "最高权模/相容模范畴.html": "7808bbf8620e31e83de41b804d7bda4c6ce2e46314e8bed8a383e60e6fd1c587",
+    "最高权模/同态空间.html": "8576c58bbf0a2f519a84d968925fc6b283f98d5a59e522ca5c15870bb5d76f48",
+    "最高权模/简单头与简单底.html": "bd8cdf005f4abd6009b5f7ca5b1b90c08726e25c363ba0d53f68e85423ac0935",
+    "相邻同态/普通偶根.html": "d0bb0a72656c79dcf039fdf94473f85533f0dd6460c8e2e32ddb338ef1995535",
+    "相邻同态/各向同性奇根.html": "892d1e7a333a22dd0c17cb7ebd779c9002db3c6fdd2f0558412f465edc195097",
+    "相邻同态/非各向同性奇根.html": "14b0a67e5529bc30dec76dd5fd67bbd76bb447fba5f5f21c23afa2bcf0140907",
+    "变权正合列与修正商/偶根正合列.html": "8e019fe471de82d0cdc0ee8fb6eda25092d9a35df70e084e87500c5b3100d950",
+    "变权正合列与修正商/奇根正合列.html": "12c7b1e7a16a6107859cb2b754da467b9ad872d3be106b3a01fa86597078afd6",
+    "变权正合列与修正商/修正项.html": "597863880ed8664c00011f50f71c20f13bcd56093070aac3bf31ee050a412a5f",
+    "变权正合列与修正商/自同态.html": "79c6ae02827cd389f711a369ec21e1e3afcdd395f667e33e9e40a8585a0ca658",
+    "变权正合列与修正商/非分裂扩张.html": "ac3a96493befd6319470477ce8e99469ce678ffe03ec3bf119c8273545fa950c",
+    "变权正合列与修正商/自然扩张空间.html": "305302a5724f0108caf6e16c44c0475e007906c7b9310a4a12b78e5b5707dd15",
+    "简单性判据.html": "8162ebc2878b8789d3d1ac68f43fcdab357d8d3353a91b31c38a3106f403fe5e",
+    "参数变形/cartan关系.html": "03fd765feeb6744fe9e7261ad3b334f9a1a6fbc1a0aece3872f32cfd9c38467a",
+    "参数变形/圆分环.html": "c8d9e69883a782347e945f9d8f5a09ce62cf5eef0e03f4837454378e266e9347",
+    "参数变形/圆分赋值.html": "65602eccc75cf6c5d5f860d3721fad6ded217871b2c57e88ae0864fc42306095",
+    "参数变形/cartan二项式.html": "29353e84bc65c59d86158ee72754eb679f9c2c425d4b08f91ee85a58b2f0f662",
+    "量子整形式/整格与特殊化.html": "d8093489378a9132cffa71e730aeec26353a013c70cb304529f32354b731c02f",
+    "量子整形式/量子词代数.html": "da123b84bd1f67fdd1477df34454dcacdc548e662adc01cdead6d57e98ee3989",
+    "量子整形式/量子根向量.html": "181558f495bd6937770de6b7dee1002af2f528bed721944d87dd84f33e922bec",
+    "量子整形式/pbw配对与换序.html": "30d269081420ed979a2b24788dde90fa30877c63cda4fd6f1b9f6d8d9a1c4c5e",
+    "量子整形式/正交辛根系.html": "8a64cad2b630d5a8c0a55a0e8fcf1686a704e5b995c86426c5132e3da6605232",
+    "量子整形式/经典根的首项.html": "444b463979bc9e40992aadb9038d3bfe9e5e2d57a746a57adec714d4550d9b4b",
+    "量子整形式/例外根系.html": "169df095f3088ee2970b4c1f7a9e066940808dbd891b0ea6b6d495f289acddfc",
+    "量子整形式/例外根表.html": "ee4753e3a1c46e90d5e0671171639e40cddd3dc05c5d4039a8cc688ba2db7149",
+    "量子整形式/参数型根系.html": "1f681a7cb3f0b2a196dc233e03eae5a1fe97a120c87a56be7ff585ceaa8ff11d",
+    "量子整形式/坐标代数的整性.html": "88102894ea4a137f5e90d4d659285ee6e23db7227f34509dd4655eae9867c773",
+    "量子整形式/有限坐标代数.html": "1611a840815a38e4d0fba9efd8ec458dfb92d647768a45f5f23261cb1e15719e",
+    "量子整形式/有限对偶.html": "bccd709588da95aab463f7cf6fd89efc21910043cc4f3d0611232140722e4345",
+    "量子整形式/量子双与反射.html": "89c740f4bae95158393c146ff5cfa64efef5dd617bcfc8b63670d420844ea276",
+    "量子整形式/反射的整性.html": "8c76af292fc2125ff53a5e46a5464cf4b80d52639bcbbda578893a37cd132c08",
+    "量子整形式/经典极限.html": "c94c3efbf84ba9991183e874f9a5283c2625b205623d2cf8a1fd510ffc331b82",
+    "量子整形式/共同坐标格.html": "2e521a94ed9682712d86ac30dd4ba9bad9edbc8acf2b3bb54a8d9a9103396361",
+    "量子整形式/共同分布格.html": "998cbb0f77d4b029c4fa0966e26e7aed2ec5bd864edc5f90d7120f9ad2c776e1",
+    "相邻参数模/偶根换序.html": "f8d28d0aac84e61c427d47d8538b544ee225890c8d2669c3468541013ebc9107",
+    "相邻参数模/各向同性奇根换序.html": "b5b4913da26a34f949698c6fd716702c96034248f46f70044360cf6a66020f2e",
+    "相邻参数模/非各向同性奇根换序.html": "2ff76df04cd2c5bd580b0ae15f88e9dc05724c93eec007df298f8400dee6e1d8",
+    "相邻参数模/成对除幂系数.html": "a3c8aac63925439a84336559946c8ef5bfa200d6a69ba22ce89faac00866d98c",
+    "相邻参数模/换序的经典极限.html": "c24b7238fec268a6d261a74cf8b8bafbe374bd46d5378f37328917d1ca255fef",
+    "相邻参数模/cartan整代数.html": "60171740e2613694e4eafda99f273f9cd12f433e9d4cbff1cb09c49eb89ee4da",
+    "相邻参数模/共同整代数.html": "c0e00e65fe9ec8d4c7f9c1d54e41d446ba0e5505131faad8e65f99343410d9f0",
+    "相邻参数模/诱导参数模.html": "2ff93e48b376e3f4ecb8173c2d2ae0a8e6feb95d6762a1adba6597edac36d752",
+    "相邻参数模/相邻同态.html": "ccda1d9e6f248cfc67af1abb06a37bce3d56dfee8d880b68180e911f33b5ef7d",
+    "jantzen滤过与和公式/局部余核.html": "e9edac3768afe935df31488b9cf0fabd722ba5017a3a76247a76a7beab89608c",
+    "jantzen滤过与和公式/偶根长度.html": "e79ced6b4368cb327dfe72be33c4e218d05d19d301408319910b78102d8a1e61",
+    "jantzen滤过与和公式/各向同性根长度.html": "2f0073df2fd04de92e705bdbde0aebf3ee09a1baaa8b782a6dde4ce196f98c1d",
+    "jantzen滤过与和公式/非各向同性根长度.html": "eb7a8a6945b688e3d5e6f9c80f91e1cfb65efe19490121f18485e1bb1f14ac20",
+    "jantzen滤过与和公式/根参数.html": "03fa6d1abbcce335c9bca9f6a53c6a2d82b031007701ca4a3745d8cd1261dcf7",
+    "jantzen滤过与和公式/全局滤过.html": "f418b563e95700871d77b3c57169108292a5b4da80d4e4a4e1120aa264e42a73",
+    "jantzen滤过与和公式/和公式.html": "3042ff2f8a791b5e63bfbf5ba71ef595d86423dbfc302c5ea46a4a76b1ab799d",
+    "jantzen滤过与和公式/首末层.html": "3feddc122d0133e71408d5d3c01364debb77fe5916da5847a4fa0a51198a88f7",
+    "强链接原理.html": "a70b7f53731f3d17e4a67b0c0121aa71a1035521ba6a7ff58ad3c3afc8f6e8f4",
+    "一阶情形的比较.html": "9a0b0e2a1ee09834b9be99f13c90331e42421a8df3084c0a7248cd47c595f495",
+    "参考资料.html": "533f9ab24fa6841027fd4f7e4e88687ac5af39620a066255ebb8d62af1708d07",
+    "site-lib/fonts/mathjax-2ea308c69f13.woff2": "2ea308c69f139e9ee7bc452e12a449c13e3b9ce4c08aebc4e86e15df232a26e0",
+    "site-lib/fonts/mathjax-f9054e3dd268.woff2": "f9054e3dd268155cb38c708ef7b7c7c03e83ac3723afcb65ae65a37bbb301f4e",
+    "site-lib/fonts/mathjax-2c146f72c9a3.woff2": "2c146f72c9a345aa282398a752d03af71d83a011f3d067297b533a31f0c5f5cb",
+    "site-lib/fonts/mathjax-4f03a0d86ff0.woff2": "4f03a0d86ff005f12cbb0ffd162bae0766415e48e07ed3fa5970e685594de15d",
+    "site-lib/fonts/mathjax-fad3b88ec7aa.woff2": "fad3b88ec7aac4959e3de19044931682bd4d1500c72a85d2d113b73b694c4133",
+    "site-lib/fonts/mathjax-69e45ca329dd.woff2": "69e45ca329dd2fcc3671dc20884f2baf29348a43833104266be098eba544fda2",
+    "site-lib/fonts/mathjax-82c82a2e0c8b.woff2": "82c82a2e0c8bc89421ce9cbb4ecea806c8ceec4b4fd0269726b9439ca853b365",
+    "site-lib/fonts/mathjax-d0c95edf7b32.woff2": "d0c95edf7b3223c8e66fcb4b6faaf74fc3376eea59c20f23677f4d54905a356e",
+    "site-lib/fonts/mathjax-6cb008e93488.woff2": "6cb008e934883d1f4652562276469dfc1ade06ee4ceebd6979e79b1c98472b47",
+    "site-lib/fonts/mathjax-303b28cdca9c.woff2": "303b28cdca9c064d93dc1672b843933ab20e28f777adb08b9eafa6f442f074d7",
+    "site-lib/fonts/mathjax-e0d564a939fc.woff2": "e0d564a939fce2e4d0c09a86f0dc936c2a9cdb42e44eb264dbc5ef01d71e179c",
+    "site-lib/fonts/mathjax-4a2e4827bad8.woff2": "4a2e4827bad85a9ae5fe906f179ccfce154bfc29e19115ceb8d7f1f6e8ce31cd",
+    "site-lib/fonts/mathjax-b6dfb310dd7b.woff2": "b6dfb310dd7b5c059e9b748b4766fcdd6fa0005c17d9229f3bb1bd095acfae1a",
+    "site-lib/fonts/mathjax-82e8abfaecf0.woff2": "82e8abfaecf005f639e18b1e7dece8700c56df76eac8ea94e4b5915bedee7567",
+    "site-lib/fonts/mathjax-0e9f0e5baa09.woff2": "0e9f0e5baa090d44c728e2ddaa39b4c465ff15d349e3547488503eb318628a45",
+    "site-lib/fonts/mathjax-98b20475232f.woff2": "98b20475232f47749126ae098177b5c71d3b6512e068efedb3a912c2c8f6ed0f",
+    "site-lib/fonts/mathjax-1faef92bbe44.woff2": "1faef92bbe440c459bcea0b7530044827749507e39bf49248c2203f9eb422bce",
+    "site-lib/fonts/mathjax-03de6a3467f8.woff2": "03de6a3467f88e79425df3505a936e6b336efbc5c0421f40905d1d52fddbe4ed",
+    "site-lib/fonts/mathjax-01bc6e82013d.woff2": "01bc6e82013dca9c1cbb132c353a0f63add97325bb979bba5e619591525c2a6e",
+    "site-lib/fonts/mathjax-62f1a8f7ced5.woff2": "62f1a8f7ced532d6ab1f6af3a5b3363eb6c774fe40d29092bbea27ac95a9f89e",
+    "site-lib/fonts/mathjax-4bd1e8cefc7c.woff2": "4bd1e8cefc7cf1b9aa2f2c6beb01ecef7ebf5d1f81d82f954a9688360a399fc3",
+    "site-lib/fonts/mathjax-bd9d7db0883d.woff2": "bd9d7db0883dc1adca7ed1c20042609e4e3d1f07f106b6bc8eeeab49d560393b",
+    "site-lib/fonts/mathjax-07165a0e10ae.woff2": "07165a0e10ae4b6b24db34b28d0a8c46bd4ac53b4d1682098ee7a3e88d2f1c83",
+    "site-lib/fonts/mathjax-b20a0e1b0304.woff2": "b20a0e1b03043ae1a540857bdf1b220297ff0e78b110b1e15554addf91ad0937",
+    "site-lib/media/81d33d08a96d-flow-circular.woff2": "81d33d08a96d99034c41b49ac980f63b353175f919db817d74e0405749af03db",
+    "site-lib/media/a7c6a118d17f-external-link.svg": "a7c6a118d17f6a296037b519e9891e08951de59c289fe41ec2596a63c3b28516",
+    "site-lib/media/a44ac4cbf79c-external-link-rtl.svg": "a44ac4cbf79c6765f4bdc3a0dc3fb51b56ed5eb4679177f0a40f04b63b3e3a3c",
+    "site-lib/media/6e5dd0494f63-SourceCodePro-Regular.ttf": "6e5dd0494f63d85970156cd54b6ac568b82a392d135db08bbf5cc3048d489aa9",
+    "site-lib/media/ba51b929995b-SourceCodePro-Italic.ttf": "ba51b929995b3088ff1932d9d6835c90ccf304b296a3b8e103d2e95b958109ee",
+    "site-lib/media/839f42df29a5-SourceCodePro-Bold.ttf": "839f42df29a5a83470888b9a3aa4064fc1bc35e6616bb542226d89086f019ec5",
+    "site-lib/media/a0cfec834df5-SourceCodePro-BoldItalic.ttf": "a0cfec834df50e21cdb3d15bf93e87ed033d8c26693f9ede6efe24325ae22c9e",
+    "site-lib/media/693b77d4f32e-InterVariable.woff2": "693b77d4f32ee9b8bfc995589b5fad5e99adf2832738661f5402f9978429a8e3",
+    "site-lib/media/e564f652916d-InterVariable-Italic.woff2": "e564f652916db6c139570fefb9524a77c4d48f30c92928de9db19b6b5c7a262a",
+    "site-lib/fonts/CMU-Serif-3deb3c529a46.ttf": "3deb3c529a46d391eaad2e2b896824013d4e1922419c91ab6cb75c40db97c3f2",
+    "site-lib/fonts/CMU-Serif-643afcc8fc9a.ttf": "643afcc8fc9a526cd060f37459f050f03156f0a593779d87b8ad21f937757a31",
+    "site-lib/fonts/CMU-Serif-acd86b280644.ttf": "acd86b2806441b277361e1dfe2d64c26038ba727c6e69fbdfff6ddb8f6446478",
+    "site-lib/fonts/CMU-Serif-570dbbba9377.ttf": "570dbbba9377d7d2fbdf544ae0dfd751614d90446a6229e7cf4b6a4cf97349ab",
+    "site-lib/fonts/CMU-Serif-f4c5e2fba77e.ttf": "f4c5e2fba77eab91e39a80ae7455404654bf3042b85b197e76b253175fe67edf",
+    "site-lib/fonts/CMU-Serif-b962c7b68b9b.ttf": "b962c7b68b9bd4728133c6d45dfa7a6f3248c30d8505fa8606ad5c8cf53c04d2",
+    "site-lib/fonts/华文中宋-e822a3f2859a.ttf": "e822a3f2859a6cc982f04c6ad1eabc18371ce26d6874b710188a30c35dced0f1"
+  },
+  "state": {
+    "structureSignature": "73f9046f9eb0c241e502ef3f9eb2127cb25da3cbab7a2b7dbb3ab843083c72e5",
+    "pages": {
+      "笔记库/Chevalley 超群的 r 阶 Frobenius 核的表示 v1.0/前言.md": {
+        "route": "index.html",
+        "signature": "68a8730be05447d7d8e79ea7b3119ad947284e8c5e8e481b00b9a1ec09dc194e"
+      },
+      "笔记库/Chevalley 超群的 r 阶 Frobenius 核的表示 v1.0/Pan–Shu的方法.md": {
+        "route": "pan-shu的方法.html",
+        "signature": "1c9da4cf5cf5111dd01e2db5f9a3b402ebb0bbdb37169718458c31af24f3cb3f"
+      },
+      "笔记库/Chevalley 超群的 r 阶 Frobenius 核的表示 v1.0/预备知识/模与张量积.md": {
+        "route": "预备知识/模与张量积.html",
+        "signature": "1ec5a2c345a3566d8d5f8d306ce839ea44ed3a60e385bcf5f4cd28237a5f7109"
+      },
+      "笔记库/Chevalley 超群的 r 阶 Frobenius 核的表示 v1.0/预备知识/正合列与扩张.md": {
+        "route": "预备知识/正合列与扩张.html",
+        "signature": "310443537c9ebb8984b3df50f2a2d74c712e1b3e53349225ed8af23432f10219"
+      },
+      "笔记库/Chevalley 超群的 r 阶 Frobenius 核的表示 v1.0/预备知识/滤过与特征标.md": {
+        "route": "预备知识/滤过与特征标.html",
+        "signature": "eef4d90d1ba663729f396ce81b1b770db5cd6adaba3f162f19c73db79e49bf3f"
+      },
+      "笔记库/Chevalley 超群的 r 阶 Frobenius 核的表示 v1.0/预备知识/Hopf超代数与超群.md": {
+        "route": "预备知识/hopf超代数与超群.html",
+        "signature": "090341d78bbda216fd9ad240c571a6a22091720bb57d5ec9d3c7488e87189927"
+      },
+      "笔记库/Chevalley 超群的 r 阶 Frobenius 核的表示 v1.0/预备知识/离散赋值环.md": {
+        "route": "预备知识/离散赋值环.html",
+        "signature": "3dcf668ad9183b5a5a383c48d48fd5221fe19738a64402a77f23900faadfc60e"
+      },
+      "笔记库/Chevalley 超群的 r 阶 Frobenius 核的表示 v1.0/预备知识/二项式系数.md": {
+        "route": "预备知识/二项式系数.html",
+        "signature": "f823ea5d5b4c453fc206aaa1784727e18732e6220c437ea6f49ceff08bc59935"
+      },
+      "笔记库/Chevalley 超群的 r 阶 Frobenius 核的表示 v1.0/预备知识/整格与有限矩阵.md": {
+        "route": "预备知识/整格与有限矩阵.html",
+        "signature": "4d314c115304e3dee39c840c8b3e8c1c27343d67a67264f63d607ffe6822f3c1"
+      },
+      "笔记库/Chevalley 超群的 r 阶 Frobenius 核的表示 v1.0/Chevalley超群与分布代数/Chevalley超群.md": {
+        "route": "chevalley超群与分布代数/chevalley超群.html",
+        "signature": "2a310e9c140df98f49a4c9f2603c3301e6ed4e6a96e877941bab463bf1493ba3"
+      },
+      "笔记库/Chevalley 超群的 r 阶 Frobenius 核的表示 v1.0/Chevalley超群与分布代数/环面与权格.md": {
+        "route": "chevalley超群与分布代数/环面与权格.html",
+        "signature": "6830b709b3cfebea5b3c9b6f9eba00b6e7cc49856585918f306430c609a681f8"
+      },
+      "笔记库/Chevalley 超群的 r 阶 Frobenius 核的表示 v1.0/Chevalley超群与分布代数/根系与Borel子群.md": {
+        "route": "chevalley超群与分布代数/根系与borel子群.html",
+        "signature": "6d34b29908cc59a4bf267a8838a83072594861555d1daa4a138c6cb56f98d929"
+      },
+      "笔记库/Chevalley 超群的 r 阶 Frobenius 核的表示 v1.0/Chevalley超群与分布代数/根子群.md": {
+        "route": "chevalley超群与分布代数/根子群.html",
+        "signature": "8c4c22a6d67ed9a843989a0d764e1cf9f35abfc93b98ea26ee4e99574ac179e0"
+      },
+      "笔记库/Chevalley 超群的 r 阶 Frobenius 核的表示 v1.0/Chevalley超群与分布代数/Frobenius核.md": {
+        "route": "chevalley超群与分布代数/frobenius核.html",
+        "signature": "52b30a7f9200a42150a5240a71f9750772d12ff886b3751e92c56ac96c106a74"
+      },
+      "笔记库/Chevalley 超群的 r 阶 Frobenius 核的表示 v1.0/Chevalley超群与分布代数/分布代数.md": {
+        "route": "chevalley超群与分布代数/分布代数.html",
+        "signature": "fb4c98d4674c8b20d419a47230001854c364f99b189434a5fcb117c6506e603b"
+      },
+      "笔记库/Chevalley 超群的 r 阶 Frobenius 核的表示 v1.0/Chevalley超群与分布代数/PBW定理.md": {
+        "route": "chevalley超群与分布代数/pbw定理.html",
+        "signature": "4574e8dfea7fd4fbfb96835becd3f73f036bee5611fe5793e6b9fb09bd973fc7"
+      },
+      "笔记库/Chevalley 超群的 r 阶 Frobenius 核的表示 v1.0/超Weyl群.md": {
+        "route": "超weyl群.html",
+        "signature": "fb1126768a8fedda230ff447e3c1681e843be598a86b218ff4ca69d702e7639e"
+      },
+      "笔记库/Chevalley 超群的 r 阶 Frobenius 核的表示 v1.0/最高权模/相容模范畴.md": {
+        "route": "最高权模/相容模范畴.html",
+        "signature": "ef40ddb1aebab222e615d5b6b3f9d1fb9ad6edfe56a448c83d62e9e575ab6230"
+      },
+      "笔记库/Chevalley 超群的 r 阶 Frobenius 核的表示 v1.0/最高权模/同态空间.md": {
+        "route": "最高权模/同态空间.html",
+        "signature": "4308701556a9e5d2871db518b74499ea5fece2958e5f450e5a6dcd8ba3f309d2"
+      },
+      "笔记库/Chevalley 超群的 r 阶 Frobenius 核的表示 v1.0/最高权模/简单头与简单底.md": {
+        "route": "最高权模/简单头与简单底.html",
+        "signature": "22b5bc535cb6ec9f2fa57b8ad0d92caad731932982809954dc20d0f225aaded4"
+      },
+      "笔记库/Chevalley 超群的 r 阶 Frobenius 核的表示 v1.0/相邻同态/普通偶根.md": {
+        "route": "相邻同态/普通偶根.html",
+        "signature": "35b04a1a10ba1fcb6df0f4ecd4a2f3d6946c31d176432652d92e4d4f086c66b0"
+      },
+      "笔记库/Chevalley 超群的 r 阶 Frobenius 核的表示 v1.0/相邻同态/各向同性奇根.md": {
+        "route": "相邻同态/各向同性奇根.html",
+        "signature": "987904c88f8f58f0e5cffdf2dfeee5225311eaff766c6e141af7bb8b87736689"
+      },
+      "笔记库/Chevalley 超群的 r 阶 Frobenius 核的表示 v1.0/相邻同态/非各向同性奇根.md": {
+        "route": "相邻同态/非各向同性奇根.html",
+        "signature": "9af1d2e609a222efee450e7544f70609932849e5f26f76e248505b69d18160b1"
+      },
+      "笔记库/Chevalley 超群的 r 阶 Frobenius 核的表示 v1.0/变权正合列与修正商/偶根正合列.md": {
+        "route": "变权正合列与修正商/偶根正合列.html",
+        "signature": "d9dce826c9c9d0fab0bbbb8fc74088c4fe1f6a2ebdd17f7548e6ea401ff5d140"
+      },
+      "笔记库/Chevalley 超群的 r 阶 Frobenius 核的表示 v1.0/变权正合列与修正商/奇根正合列.md": {
+        "route": "变权正合列与修正商/奇根正合列.html",
+        "signature": "0f8d3783d5e3a911938546925f53c8b52101673bcad49dd270e11dfcd89069c3"
+      },
+      "笔记库/Chevalley 超群的 r 阶 Frobenius 核的表示 v1.0/变权正合列与修正商/修正项.md": {
+        "route": "变权正合列与修正商/修正项.html",
+        "signature": "516582969f8c6c9f1e1bfbfb3c7b9f7f50e77aa708451cab56f40e013d8a69cb"
+      },
+      "笔记库/Chevalley 超群的 r 阶 Frobenius 核的表示 v1.0/变权正合列与修正商/自同态.md": {
+        "route": "变权正合列与修正商/自同态.html",
+        "signature": "3c4af9a226329c8e2a098ec5ef5ef74c49bfd2d3757f69bd4bcf6b0737769c10"
+      },
+      "笔记库/Chevalley 超群的 r 阶 Frobenius 核的表示 v1.0/变权正合列与修正商/非分裂扩张.md": {
+        "route": "变权正合列与修正商/非分裂扩张.html",
+        "signature": "932a15ac8468f56a121ac6b0e27bc64c7b2fc4e40729001d342209d2000e55d6"
+      },
+      "笔记库/Chevalley 超群的 r 阶 Frobenius 核的表示 v1.0/变权正合列与修正商/自然扩张空间.md": {
+        "route": "变权正合列与修正商/自然扩张空间.html",
+        "signature": "95bb8f9e5203d916bf06317cf49ddb404e43cb254ecab85c81d0669dc87bcf3c"
+      },
+      "笔记库/Chevalley 超群的 r 阶 Frobenius 核的表示 v1.0/简单性判据.md": {
+        "route": "简单性判据.html",
+        "signature": "48e6001f243f7504d5b86ff22ad0da7479624447eab1c908a10475f82f507997"
+      },
+      "笔记库/Chevalley 超群的 r 阶 Frobenius 核的表示 v1.0/参数变形/Cartan关系.md": {
+        "route": "参数变形/cartan关系.html",
+        "signature": "56868c06d9fca809535a64793bfa181286700f909f2875b64f497a3608ad6a01"
+      },
+      "笔记库/Chevalley 超群的 r 阶 Frobenius 核的表示 v1.0/参数变形/圆分环.md": {
+        "route": "参数变形/圆分环.html",
+        "signature": "9c2c048b13e334563fb76a53cd918428388b2b3154ffac56679e601c55043c3b"
+      },
+      "笔记库/Chevalley 超群的 r 阶 Frobenius 核的表示 v1.0/参数变形/圆分赋值.md": {
+        "route": "参数变形/圆分赋值.html",
+        "signature": "d4f38c70d22b9c7b9a2a96a2da0d99107d63e7330025fb81e58df00ba2533b3e"
+      },
+      "笔记库/Chevalley 超群的 r 阶 Frobenius 核的表示 v1.0/参数变形/Cartan二项式.md": {
+        "route": "参数变形/cartan二项式.html",
+        "signature": "5993d24fcc5463a36357caa0990938490bd3c6f6d35f2b589ea4febb21780936"
+      },
+      "笔记库/Chevalley 超群的 r 阶 Frobenius 核的表示 v1.0/量子整形式/整格与特殊化.md": {
+        "route": "量子整形式/整格与特殊化.html",
+        "signature": "1a7438702be03ab7bebc0d1e5bfd65e068cb120dacf8ac99f1f1b8ecfa33081f"
+      },
+      "笔记库/Chevalley 超群的 r 阶 Frobenius 核的表示 v1.0/量子整形式/量子词代数.md": {
+        "route": "量子整形式/量子词代数.html",
+        "signature": "06957bae38aad0d4556020abfbe4b383d418f62fa8cd7dd52c8b43c86f6f3d89"
+      },
+      "笔记库/Chevalley 超群的 r 阶 Frobenius 核的表示 v1.0/量子整形式/量子根向量.md": {
+        "route": "量子整形式/量子根向量.html",
+        "signature": "59a645fa2d49de34f75a79eab332025951e2a4eaeda4c6cffe61c9ebd41e1d9d"
+      },
+      "笔记库/Chevalley 超群的 r 阶 Frobenius 核的表示 v1.0/量子整形式/PBW配对与换序.md": {
+        "route": "量子整形式/pbw配对与换序.html",
+        "signature": "2aeee079de727e17948407de653415bbd7bd8cc8c513af576363e58e9b69183b"
+      },
+      "笔记库/Chevalley 超群的 r 阶 Frobenius 核的表示 v1.0/量子整形式/正交辛根系.md": {
+        "route": "量子整形式/正交辛根系.html",
+        "signature": "3c370fa2cb6a423978cfe55e72a8f36beecf46e14033c2516a879c44b948e3ed"
+      },
+      "笔记库/Chevalley 超群的 r 阶 Frobenius 核的表示 v1.0/量子整形式/经典根的首项.md": {
+        "route": "量子整形式/经典根的首项.html",
+        "signature": "b0339ee3f5498e2217a9d38fbc769ff5d518e2467c200fa3a1911a74ecca0359"
+      },
+      "笔记库/Chevalley 超群的 r 阶 Frobenius 核的表示 v1.0/量子整形式/例外根系.md": {
+        "route": "量子整形式/例外根系.html",
+        "signature": "716f32d1852042f15ea9306b1948942f4191d1a665882079330d658be49ff8b4"
+      },
+      "笔记库/Chevalley 超群的 r 阶 Frobenius 核的表示 v1.0/量子整形式/例外根表.md": {
+        "route": "量子整形式/例外根表.html",
+        "signature": "c768f655ad35f1ac28c81d5905cbf97221e96bd9e38f2243aa1e4c173547b42c"
+      },
+      "笔记库/Chevalley 超群的 r 阶 Frobenius 核的表示 v1.0/量子整形式/参数型根系.md": {
+        "route": "量子整形式/参数型根系.html",
+        "signature": "f1729ab9a9ea88122b2b8044d4e7eceba92adba0bf1c9794341fbb9fe9144ab4"
+      },
+      "笔记库/Chevalley 超群的 r 阶 Frobenius 核的表示 v1.0/量子整形式/坐标代数的整性.md": {
+        "route": "量子整形式/坐标代数的整性.html",
+        "signature": "30c353a9054eec5ae0e9275b2f3568f363f950f39ea14423d2f5c10653df44ea"
+      },
+      "笔记库/Chevalley 超群的 r 阶 Frobenius 核的表示 v1.0/量子整形式/有限坐标代数.md": {
+        "route": "量子整形式/有限坐标代数.html",
+        "signature": "8c50d81825546649ab8c8f3dd13c6f1ce865c0ea40eb1c23292146b4c7098bf6"
+      },
+      "笔记库/Chevalley 超群的 r 阶 Frobenius 核的表示 v1.0/量子整形式/有限对偶.md": {
+        "route": "量子整形式/有限对偶.html",
+        "signature": "0bbfa69db3c4c89e525bf59e050de480b35389035b3ce0742cc9056cda9864d8"
+      },
+      "笔记库/Chevalley 超群的 r 阶 Frobenius 核的表示 v1.0/量子整形式/量子双与反射.md": {
+        "route": "量子整形式/量子双与反射.html",
+        "signature": "b8bc8ca922b21611a8d5675052baa7df3df034c204e9ade9f51105104704bd56"
+      },
+      "笔记库/Chevalley 超群的 r 阶 Frobenius 核的表示 v1.0/量子整形式/反射的整性.md": {
+        "route": "量子整形式/反射的整性.html",
+        "signature": "a7c08687e56bac89a141c0c76c692c2396f2715ff3d1a7418930bc257d99ada1"
+      },
+      "笔记库/Chevalley 超群的 r 阶 Frobenius 核的表示 v1.0/量子整形式/经典极限.md": {
+        "route": "量子整形式/经典极限.html",
+        "signature": "8c907220c6ff13040783fbbbf869baceea46924145b69310a6ff8cd8686232a9"
+      },
+      "笔记库/Chevalley 超群的 r 阶 Frobenius 核的表示 v1.0/量子整形式/共同坐标格.md": {
+        "route": "量子整形式/共同坐标格.html",
+        "signature": "77814022f0207df565dc71a09fd491e3b03a6e72c16a119f5cd7ca1f5e053f19"
+      },
+      "笔记库/Chevalley 超群的 r 阶 Frobenius 核的表示 v1.0/量子整形式/共同分布格.md": {
+        "route": "量子整形式/共同分布格.html",
+        "signature": "77dd504b61b4fac9fd594964f26cb3cd72b3ae1ba2e459c899a3af3a3d1fdeb4"
+      },
+      "笔记库/Chevalley 超群的 r 阶 Frobenius 核的表示 v1.0/相邻参数模/偶根换序.md": {
+        "route": "相邻参数模/偶根换序.html",
+        "signature": "cbc805ef970345bf330a02ed318716664d1cf5a4d86d5b03d4e5434ccbf6ceb7"
+      },
+      "笔记库/Chevalley 超群的 r 阶 Frobenius 核的表示 v1.0/相邻参数模/各向同性奇根换序.md": {
+        "route": "相邻参数模/各向同性奇根换序.html",
+        "signature": "48559032be782d65ae86e173c44ebefd5505f35b2d94de9aa2c69e497f496f20"
+      },
+      "笔记库/Chevalley 超群的 r 阶 Frobenius 核的表示 v1.0/相邻参数模/非各向同性奇根换序.md": {
+        "route": "相邻参数模/非各向同性奇根换序.html",
+        "signature": "308114339025a99d36d8297fe400036e2f51cc5242619cb6ea2f64b4b7f53801"
+      },
+      "笔记库/Chevalley 超群的 r 阶 Frobenius 核的表示 v1.0/相邻参数模/成对除幂系数.md": {
+        "route": "相邻参数模/成对除幂系数.html",
+        "signature": "0931293acc7f4e430e903bc0444a1fd12a60fe7f9453d29b649e56af551d84a9"
+      },
+      "笔记库/Chevalley 超群的 r 阶 Frobenius 核的表示 v1.0/相邻参数模/换序的经典极限.md": {
+        "route": "相邻参数模/换序的经典极限.html",
+        "signature": "2f5b7b7411bbab48b2d405107fb4c53fe9a6483bac9b4e4a0b2a52d97481d8bf"
+      },
+      "笔记库/Chevalley 超群的 r 阶 Frobenius 核的表示 v1.0/相邻参数模/Cartan整代数.md": {
+        "route": "相邻参数模/cartan整代数.html",
+        "signature": "d6046eae0ef042ee2fde0b68d4493386e3dfa869198e5461e9dddc48d7bac72f"
+      },
+      "笔记库/Chevalley 超群的 r 阶 Frobenius 核的表示 v1.0/相邻参数模/共同整代数.md": {
+        "route": "相邻参数模/共同整代数.html",
+        "signature": "31d5460f0e2ac6a503667b583d658f255972a26b37533a457fdd20968f8d0a79"
+      },
+      "笔记库/Chevalley 超群的 r 阶 Frobenius 核的表示 v1.0/相邻参数模/诱导参数模.md": {
+        "route": "相邻参数模/诱导参数模.html",
+        "signature": "22c6726f1faab575775e773e31c82256ece8ccd6507f6360f8373150fb589db6"
+      },
+      "笔记库/Chevalley 超群的 r 阶 Frobenius 核的表示 v1.0/相邻参数模/相邻同态.md": {
+        "route": "相邻参数模/相邻同态.html",
+        "signature": "9588b5273feb6d34be983989cf06cd522136a413ef1437133660cc4ddd86a0fa"
+      },
+      "笔记库/Chevalley 超群的 r 阶 Frobenius 核的表示 v1.0/Jantzen滤过与和公式/局部余核.md": {
+        "route": "jantzen滤过与和公式/局部余核.html",
+        "signature": "b6ddf83597d016b8f4c69cb1b70c1882b9b8efb19a201bcc4c21d18aec749027"
+      },
+      "笔记库/Chevalley 超群的 r 阶 Frobenius 核的表示 v1.0/Jantzen滤过与和公式/偶根长度.md": {
+        "route": "jantzen滤过与和公式/偶根长度.html",
+        "signature": "24c9978a911a345fd1eb4acf74919b6c5ae73eda2f1fa2cf8f98ac229cef0e3f"
+      },
+      "笔记库/Chevalley 超群的 r 阶 Frobenius 核的表示 v1.0/Jantzen滤过与和公式/各向同性根长度.md": {
+        "route": "jantzen滤过与和公式/各向同性根长度.html",
+        "signature": "235c4337616861d352ce7e81fa29d3946875c81264652a5b9b00b8c4fecda2cc"
+      },
+      "笔记库/Chevalley 超群的 r 阶 Frobenius 核的表示 v1.0/Jantzen滤过与和公式/非各向同性根长度.md": {
+        "route": "jantzen滤过与和公式/非各向同性根长度.html",
+        "signature": "1ca46b02e7347277221a45ebe78cc0546bd9e5543a53977d2e2331b78df11022"
+      },
+      "笔记库/Chevalley 超群的 r 阶 Frobenius 核的表示 v1.0/Jantzen滤过与和公式/根参数.md": {
+        "route": "jantzen滤过与和公式/根参数.html",
+        "signature": "8441e32716e5a4d2f475d0a8cdaf192ba7a850412593faad68fcb1817506d112"
+      },
+      "笔记库/Chevalley 超群的 r 阶 Frobenius 核的表示 v1.0/Jantzen滤过与和公式/全局滤过.md": {
+        "route": "jantzen滤过与和公式/全局滤过.html",
+        "signature": "8118227ee07f77afed73706b7138bb9eecc37cf6e8892e9a0dbf139d4503d4d8"
+      },
+      "笔记库/Chevalley 超群的 r 阶 Frobenius 核的表示 v1.0/Jantzen滤过与和公式/和公式.md": {
+        "route": "jantzen滤过与和公式/和公式.html",
+        "signature": "673a163e93053459ccd47095ebb588e7c5ef8461559cd10cc1446ee18c0a6210"
+      },
+      "笔记库/Chevalley 超群的 r 阶 Frobenius 核的表示 v1.0/Jantzen滤过与和公式/首末层.md": {
+        "route": "jantzen滤过与和公式/首末层.html",
+        "signature": "a694572dd3d1e99bb9cd5786f9fc6c02022c4c314fc3c1f20e6f5c927f59abad"
+      },
+      "笔记库/Chevalley 超群的 r 阶 Frobenius 核的表示 v1.0/强链接原理.md": {
+        "route": "强链接原理.html",
+        "signature": "3d50d23facf3800ea76233a6cc185377d3e4295b386869d58e959963b67cd550"
+      },
+      "笔记库/Chevalley 超群的 r 阶 Frobenius 核的表示 v1.0/一阶情形的比较.md": {
+        "route": "一阶情形的比较.html",
+        "signature": "0425a1f5b79f75e3f8d95a74209f13834b0ad77b0268f0b35a91fcdfcac8dbad"
+      },
+      "笔记库/Chevalley 超群的 r 阶 Frobenius 核的表示 v1.0/参考资料.md": {
+        "route": "参考资料.html",
+        "signature": "89a7a0e70ba2175545abe2703f247eee00b6581a0fdfc25c25a6b905aaa046d1"
+      }
+    }
+  }
+}

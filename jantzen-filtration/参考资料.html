@@ -1,0 +1,706 @@
+<!DOCTYPE html><html lang="zh-CN"><head><title>参考资料</title><base href="."><meta name="pathname" content="参考资料.html"><meta name="description" content="【库中原有】 Lei Pan and Bin Shu, Jantzen filtration and strong linkage principle for modular Lie superalgebras, arXiv:1710.05821v1 (2017)。 【库中原有】 Rita Fioresi and Fabio Gavarini, Chevalley Supergroups。 【库中原有】 Jens Carsten Jantzen, Modular repres"><meta property="og:title" content="参考资料"><meta property="og:description" content="【库中原有】 Lei Pan and Bin Shu, Jantzen filtration and strong linkage principle for modular Lie superalgebras, arXiv:1710.05821v1 (2017)。 【库中原有】 Rita Fioresi and Fabio Gavarini, Chevalley Supergroups。 【库中原有】 Jens Carsten Jantzen, Modular repres"><meta property="og:type" content="website"><meta property="og:url" content="参考资料.html"><meta charset="UTF-8"><meta property="og:site_name" content="Chevalley 超群的 r 阶 Frobenius 核的表示 v1.0"><meta name="viewport" content="width=device-width,initial-scale=1.0,user-scalable=yes,minimum-scale=1.0,maximum-scale=5.0"><script async id="webpage-script" src="site-lib/scripts/webpage.js" onload="this.onload=null;this.setAttribute('loaded','true')"></script><script defer src="site-lib/scripts/notebook-navigation.js"></script><script defer src="site-lib/scripts/editing-suite.js"></script><link rel="stylesheet" href="site-lib/styles/obsidian.css"><link rel="stylesheet" href="site-lib/styles/local-fonts.css"><link rel="stylesheet" href="site-lib/styles/theme.css"><link rel="stylesheet" href="site-lib/styles/export-webpage.css"><link rel="preload" href="site-lib/styles/other-plugins.css" as="style" onload="this.onload=null;this.rel='stylesheet'"><noscript><link rel="stylesheet" href="site-lib/styles/other-plugins.css"></noscript><link rel="preload" href="site-lib/styles/editing-suite.css" as="style" onload="this.onload=null;this.rel='stylesheet'"><noscript><link rel="stylesheet" href="site-lib/styles/editing-suite.css"></noscript><link rel="preload" href="site-lib/styles/snippets.css" as="style" onload="this.onload=null;this.rel='stylesheet'"><noscript><link rel="stylesheet" href="site-lib/styles/snippets.css"></noscript><link rel="preload" href="site-lib/styles/supported-plugins.css" as="style" onload="this.onload=null;this.rel='stylesheet'"><noscript><link rel="stylesheet" href="site-lib/styles/supported-plugins.css"></noscript><link rel="preload" href="site-lib/styles/global-variable-styles.css" as="style" onload="this.onload=null;this.rel='stylesheet'"><noscript><link rel="stylesheet" href="site-lib/styles/global-variable-styles.css"></noscript><link rel="preload" href="site-lib/styles/main-styles.css" as="style" onload="this.onload=null;this.rel='stylesheet'"><noscript><link rel="stylesheet" href="site-lib/styles/main-styles.css"></noscript><link rel="preload" href="site-lib/styles/editing-suite-export.css" as="style" onload="this.onload=null;this.rel='stylesheet'"><noscript><link rel="stylesheet" href="site-lib/styles/editing-suite-export.css"></noscript><script defer>async function loadIncludes()
+{
+	// replace include tags with the contents of the file
+	let includeTags = document.querySelectorAll("link[itemprop='include']");
+	for (const includeTag of includeTags)
+	{
+		let includePath = includeTag.getAttribute("href");
+
+		try
+		{
+			let includeText = "";
+			
+			if (includePath.startsWith("https:") || includePath.startsWith("http:") || window.location.protocol != "file:")
+			{
+				const request = await fetch(includePath);
+				if (!request.ok) 
+				{
+					includeTag?.remove();
+					continue;
+				}
+				
+				includeText = await request.text();
+			}
+			else
+			{
+				const dataEl = document.getElementById(btoa(encodeURI(includePath)));
+				if (dataEl)
+				{
+					const data = JSON.parse(decodeURI(atob(dataEl.getAttribute("value") ?? "")));
+					includeText = data?.data ?? "";
+				}
+			}
+
+
+			let docFrag = document.createRange().createContextualFragment(includeText);
+			includeTag.before(docFrag);
+			includeTag.remove();
+		}
+		catch
+		{
+			includeTag?.remove();
+			continue;
+		}
+	}
+}
+
+document.addEventListener("DOMContentLoaded", () => 
+{
+	loadIncludes();
+});
+
+let isFileProtocol = location.protocol == "file:";
+
+function waitLoadScripts(scriptNames, callback)
+{
+	let scripts = scriptNames.map(name => document.getElementById(name + "-script"));
+
+	function loadNext(index)
+	{
+		let script = scripts[index];
+		let nextIndex = index + 1;
+		if (!script)
+		{
+			if (index < scripts.length)
+				loadNext(nextIndex);
+			else
+			{
+				callback();
+			}
+			return;
+		}
+
+		if (!script || script.getAttribute('loaded') == "true") // if already loaded 
+		{
+			if (index < scripts.length)
+				loadNext(nextIndex);
+		}
+		
+		if (index < scripts.length) 
+		{
+			script.addEventListener("load", () => loadNext(nextIndex));
+		}
+	}
+
+	loadNext(0);
+}
+
+</script></head><body class="publish css-settings-manager styled-scrollbars show-ribbon is-focused mathcraft-active editing-suite-math-enabled editing-suite-seamless-typography-enabled editing-suite-math-margin-enabled editing-suite-math-overflow-enabled editing-suite-table-centered-enabled editing-suite-table-style-rounded-grid editing-suite-link-style-red-outline editing-suite-divider-style-diamond-gradient editing-suite-inline-code-enabled editing-suite-cloze-enabled editing-suite-code-blocks-enabled editing-suite-color-highlights-enabled editing-suite-color-highlight-wave-enabled editing-suite-colored-text-enabled editing-suite-custom-lists-enabled editing-suite-list-marker-text-color editing-suite-sidenotes-enabled editing-suite-focus-indicator-enabled crb-hide-default-actions"><script defer>let theme = localStorage.getItem("theme") || (window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light");
+if (theme == "dark")
+{
+	document.body.classList.add("theme-dark");
+	document.body.classList.remove("theme-light");
+}
+else
+{
+	document.body.classList.add("theme-light");
+	document.body.classList.remove("theme-dark");
+}
+
+if (window.innerWidth < 480) document.body.classList.add("is-phone");
+else if (window.innerWidth < 768) document.body.classList.add("is-tablet");
+else if (window.innerWidth < 1024) document.body.classList.add("is-small-screen");
+else document.body.classList.add("is-large-screen");
+
+
+</script><div id="main"><div id="navbar"></div><div id="main-horizontal" class="workspace-leaf-content" data-type="markdown"><div id="left-content" class="leaf" style="--sidebar-width:var(--sidebar-width-left)"><div id="left-sidebar" class="sidebar"><div class="sidebar-handle"></div><div class="sidebar-topbar"><div class="topbar-content"><div id="search-container"><div id="search-wrapper"><input enterkeyhint="search" type="search" spellcheck="false" placeholder="搜索..."><div aria-label="清除搜索" id="search-clear-button"></div></div></div></div><button type="button" class="clickable-icon sidebar-collapse-icon" aria-label="切换左侧栏"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="svg-icon sidebar-toggle-button-icon"><rect x="1" y="2" width="22" height="20" rx="4"></rect><rect x="4" y="5" width="2" height="14" rx="2" fill="currentColor" class="sidebar-toggle-icon-inner"></rect></svg></button></div><div class="sidebar-content-wrapper"><div id="left-sidebar-content" class="leaf-content"><link itemprop="include" href="site-lib/html/file-tree.html"></div></div><script defer>const ls=document.querySelector('#left-sidebar');ls.classList.toggle('is-collapsed',innerWidth<768);ls.style.setProperty('--sidebar-width',localStorage.getItem('sidebar-left-width'));</script></div></div><div id="center-content" class="leaf markdown-reading-view"><div class="obsidian-document markdown-preview-view markdown-rendered node-insert-event is-readable-line-width allow-fold-headings allow-fold-lists show-indentation-guide show-properties" data-type="markdown" style="width: 100%; height: 100%;"><style id="MJX-CHTML-styles">mjx-container[overflow="scroll"][display] { overflow: auto clip; min-width: initial !important; }
+mjx-container[overflow="truncate"][display] { overflow: hidden clip; min-width: initial !important; }
+mjx-container[display] { display: block; text-align: center; justify-content: center; margin: 0.7em 0px; padding: 0.3em 2px; }
+mjx-container[display][width="full"] { display: flex; }
+mjx-container[justify="left"] { text-align: left; justify-content: left; }
+mjx-container[justify="right"] { text-align: right; justify-content: right; }
+mjx-container[jax="CHTML"] { white-space: nowrap; }
+mjx-mo > mjx-c, mjx-mi > mjx-c, mjx-mn > mjx-c, mjx-ms > mjx-c, mjx-mtext > mjx-c { clip-path: polygon(-1em -2px, calc(100% + 1em) -2px, calc(100% + 1em) calc(100% + 2px), -1em calc(100% + 2px)) padding-box; }
+mjx-stretchy-h { clip-path: polygon(0px -2px, 100% -2px, 100% calc(100% + 2px), 0px calc(100% + 2px)) padding-box; display: inline-block; }
+mjx-stretchy-v { clip-path: polygon(-2px 0px, calc(100% + 2px) 0px, calc(100% + 2px) 100%, -2px 100%) padding-box; display: inline-block; text-align: center; }
+mjx-container [space="1"] { margin-left: 0.111em; }
+mjx-container [space="2"] { margin-left: 0.167em; }
+mjx-container [space="3"] { margin-left: 0.222em; }
+mjx-container [space="4"] { margin-left: 0.278em; }
+mjx-container [space="5"] { margin-left: 0.333em; }
+mjx-container [rspace="1"] { margin-right: 0.111em; }
+mjx-container [rspace="2"] { margin-right: 0.167em; }
+mjx-container [rspace="3"] { margin-right: 0.222em; }
+mjx-container [rspace="4"] { margin-right: 0.278em; }
+mjx-container [rspace="5"] { margin-right: 0.333em; }
+mjx-container [size="s"] { font-size: 70.7%; }
+mjx-container [size="ss"] { font-size: 50%; }
+mjx-container [size="Tn"] { font-size: 60%; }
+mjx-container [size="sm"] { font-size: 85%; }
+mjx-container [size="lg"] { font-size: 120%; }
+mjx-container [size="Lg"] { font-size: 144%; }
+mjx-container [size="LG"] { font-size: 173%; }
+mjx-container [size="hg"] { font-size: 207%; }
+mjx-container [size="HG"] { font-size: 249%; }
+mjx-container [width="full"] { width: 100%; }
+mjx-box { display: inline-block; }
+mjx-block { display: block; }
+mjx-itable { display: inline-table; }
+mjx-row { display: table-row; }
+mjx-row > mjx-cell, mjx-row > mjx-base, mjx-row > mjx-under, mjx-row > mjx-over, mjx-row > mjx-den { display: table-cell; }
+mjx-container [inline-breaks] { display: inline; }
+mjx-container .mjx-selected { outline: black solid 2px; }
+@media (prefers-color-scheme: dark) {
+  mjx-container .mjx-selected { outline: rgb(200, 200, 200) solid 2px; }
+}
+mjx-mtext { display: inline-block; text-align: left; }
+mjx-mstyle { display: inline-block; }
+mjx-merror { display: inline-block; color: red; background-color: yellow; }
+mjx-mphantom { visibility: hidden; }
+mjx-container[has-speech="true"] { position: relative; cursor: default; }
+mjx-speech { position: absolute; z-index: -1; inset: 0px; }
+mjx-speech:focus { outline: none; }
+mjx-container a[data-mjx-href] { color: linktext; cursor: pointer; }
+mjx-container a[data-mjx-href].mjx-visited { color: visitedtext; }
+mjx-container > mjx-help { display: none; position: absolute; top: -0.3em; right: -0.5em; width: 0.6em; height: 0.6em; cursor: pointer; }
+mjx-container[display="true"] > mjx-help { position: sticky; bottom: 100%; left: 0px; margin: -0.3em -0.5em 0px -0.1em; right: 0px; top: initial; }
+mjx-help > svg { stroke: black; width: 100%; height: 100%; }
+mjx-help > svg > circle { stroke-width: 1.5px; cx: 9px; cy: 9px; r: 9px; fill: white; }
+mjx-help > svg > circle:nth-child(2) { fill: var(--mjx-bg1-color); r: 7px; }
+mjx-help > svg > line { stroke-width: 2.5px; stroke-linecap: round; }
+mjx-help:hover > svg > circle:nth-child(2) { fill: white; }
+mjx-container.mjx-explorer-active > mjx-help { display: inline-flex; align-items: center; }
+@media (prefers-color-scheme: dark) {
+  mjx-help > svg { stroke: rgb(224, 224, 224); }
+  mjx-help > svg > circle { fill: rgb(64, 64, 64); }
+  mjx-help > svg > circle:nth-child(2) { fill: rgba(132, 132, 255, 0.3); }
+  mjx-help:hover > svg > circle:nth-child(2) { stroke: rgb(170, 170, 170); fill: rgb(64, 64, 64); }
+}
+mjx-math { display: inline-block; text-align: left; line-height: 0; text-indent: 0px; font-style: normal; font-weight: normal; font-size: 100%; font-size-adjust: none; letter-spacing: normal; overflow-wrap: normal; word-spacing: normal; direction: ltr; padding: 1px 0px; }
+mjx-container[jax="CHTML"][display="true"] mjx-math { padding: 0px; }
+mjx-math[breakable] { display: inline; }
+mjx-container[jax="CHTML"] mjx-break { white-space: normal; line-height: 0; clip-path: rect(0px 0px 0px 0px); font-family: MJX-BRK !important; }
+mjx-break[size="0"] { letter-spacing: -0.999em; }
+mjx-break[size="1"] { letter-spacing: -0.889em; }
+mjx-break[size="2"] { letter-spacing: -0.833em; }
+mjx-break[size="3"] { letter-spacing: -0.778em; }
+mjx-break[size="4"] { letter-spacing: -0.722em; }
+mjx-break[size="5"] { letter-spacing: -0.667em; }
+mjx-mi { display: inline-block; text-align: left; }
+mjx-c { display: inline-block; width: 0px; text-align: right; }
+mjx-utext { display: inline-block; padding: 0.75em 0px 0.2em; }
+mjx-mo { display: inline-block; text-align: left; }
+mjx-stretchy-h > mjx-beg, mjx-stretchy-h > mjx-ext, mjx-stretchy-h > mjx-end, mjx-stretchy-h > mjx-mid { display: inline-block; width: 0px; text-align: right; }
+mjx-stretchy-h > mjx-ext { clip-path: polygon(0px -1em, 100% -1em, 100% calc(100% + 1em), 0px calc(100% + 1em)) padding-box; width: 100%; border: 0px solid transparent; box-sizing: border-box; text-align: left; }
+mjx-stretchy-v > mjx-beg, mjx-stretchy-v > mjx-ext, mjx-stretchy-v > mjx-end, mjx-stretchy-v > mjx-mid { display: block; height: 0px; margin: 0px auto; }
+mjx-stretchy-v > mjx-ext > mjx-spacer { display: block; }
+mjx-stretchy-v > mjx-ext { clip-path: polygon(-1em 0px, calc(100% + 1em) 0px, calc(100% + 1em) 100%, -1em 100%) padding-box; height: 100%; border: 0.1px solid transparent; box-sizing: border-box; white-space: pre; }
+mjx-mark { display: inline-block; height: 0px; }
+mjx-msub { display: inline-block; text-align: left; }
+mjx-msubsup { display: inline-block; text-align: left; }
+mjx-script { display: inline-block; padding-right: 0.05em; padding-left: 0.033em; }
+mjx-script > mjx-spacer { display: block; }
+mjx-mn { display: inline-block; text-align: left; }
+mjx-mtable { display: inline-block; text-align: center; vertical-align: 0.25em; position: relative; box-sizing: border-box; border-spacing: 0px; border-collapse: collapse; }
+mjx-mstyle[size="s"] mjx-mtable { vertical-align: 0.354em; }
+mjx-labels { position: absolute; left: 0px; top: 0px; }
+mjx-table { display: inline-block; vertical-align: -0.5ex; box-sizing: border-box; }
+mjx-table > mjx-itable { vertical-align: middle; text-align: left; box-sizing: border-box; }
+mjx-labels > mjx-itable { position: absolute; top: 0px; }
+mjx-mtable[justify="left"] { text-align: left; }
+mjx-mtable[justify="right"] { text-align: right; }
+mjx-mtable[justify="left"][side="left"] { padding-right: 0px !important; }
+mjx-mtable[justify="left"][side="right"] { padding-left: 0px !important; }
+mjx-mtable[justify="right"][side="left"] { padding-right: 0px !important; }
+mjx-mtable[justify="right"][side="right"] { padding-left: 0px !important; }
+mjx-mtable[align] { vertical-align: baseline; }
+mjx-mtable[align="top"] > mjx-table { vertical-align: top; }
+mjx-mtable[align="bottom"] > mjx-table { vertical-align: bottom; }
+mjx-mtable[side="right"] mjx-labels { min-width: 100%; }
+mjx-mtr { display: table-row; text-align: left; }
+mjx-mtr[rowalign="top"] > mjx-mtd { vertical-align: top; }
+mjx-mtr[rowalign="center"] > mjx-mtd { vertical-align: middle; }
+mjx-mtr[rowalign="bottom"] > mjx-mtd { vertical-align: bottom; }
+mjx-mtr[rowalign="baseline"] > mjx-mtd { vertical-align: baseline; }
+mjx-mtr[rowalign="axis"] > mjx-mtd { vertical-align: 0.25em; }
+mjx-mtd { display: table-cell; text-align: center; padding: 0.215em 0.4em; }
+mjx-mtd:first-child { padding-left: 0px; }
+mjx-mtd:last-child { padding-right: 0px; }
+mjx-mtable > * > mjx-itable > :first-child > mjx-mtd { padding-top: 0px; }
+mjx-mtable > * > mjx-itable > :last-child > mjx-mtd { padding-bottom: 0px; }
+mjx-tstrut { display: inline-block; height: 1em; vertical-align: -0.25em; }
+mjx-labels[align="left"] > mjx-mtr > mjx-mtd { text-align: left; }
+mjx-labels[align="right"] > mjx-mtr > mjx-mtd { text-align: right; }
+mjx-mtd[extra] { padding: 0px; }
+mjx-mtd[rowalign="top"] { vertical-align: top; }
+mjx-mtd[rowalign="center"] { vertical-align: middle; }
+mjx-mtd[rowalign="bottom"] { vertical-align: bottom; }
+mjx-mtd[rowalign="baseline"] { vertical-align: baseline; }
+mjx-mtd[rowalign="axis"] { vertical-align: 0.25em; }
+mjx-texatom { display: inline-block; text-align: left; }
+mjx-mover { display: inline-block; text-align: left; }
+mjx-mover:not([limits="false"]) { padding-top: 0.1em; }
+mjx-mover:not([limits="false"]) > mjx-base, mjx-mover:not([limits="false"]) > mjx-over { display: block; text-align: left; }
+mjx-mrow { display: inline-block; text-align: left; }
+mjx-linestack, mjx-mrow[break-top] { display: inline-table; width: 100%; }
+mjx-linestack[break-align="bottom"], mjx-mrow[break-top][break-align="bottom"] { display: inline-block; }
+mjx-linestack[break-align="middle"], mjx-mrow[break-top][break-align="middle"] { vertical-align: middle; }
+mjx-linestack[break-align="center"], mjx-mrow[break-top][break-align="center"] { vertical-align: middle; }
+mjx-linestack[breakable] { display: inline; }
+mjx-linestack[breakable] > mjx-linebox { display: inline; }
+mjx-linestack[breakable] > mjx-linebox::before { white-space: pre; content: "\a "; }
+mjx-linestack[breakable] > mjx-linebox::after { white-space: normal; content: " "; letter-spacing: -0.999em; font-family: MJX-BRK; }
+mjx-linestack[breakable] > mjx-linebox:first-of-type::before { display: none; }
+mjx-linestack[breakable] > mjx-linebox:last-of-type::after { display: none; }
+mjx-linebox { display: block; }
+mjx-linebox[align="left"] { text-align: left; }
+mjx-linebox[align="center"] { text-align: center; }
+mjx-linebox[align="right"] { text-align: right; }
+mjx-linestrut { display: inline-block; height: 1em; vertical-align: -0.25em; }
+mjx-mfrac { display: inline-block; text-align: left; }
+mjx-frac { display: inline-block; vertical-align: 0.17em; padding: 0px 0.22em; }
+mjx-frac[type="d"] { vertical-align: 0.04em; }
+mjx-frac[delims] { padding: 0px 0.1em; }
+mjx-frac[atop] { padding: 0px 0.12em; }
+mjx-frac[atop][delims] { padding: 0px; }
+mjx-dtable { display: inline-table; width: 100%; }
+mjx-dtable > mjx-line, mjx-dtable > mjx-row { font-size: 2000%; }
+mjx-dbox { display: block; font-size: 5%; }
+mjx-num { display: block; text-align: center; }
+mjx-den { display: block; text-align: center; }
+mjx-mfrac[bevelled] > mjx-num { display: inline-block; }
+mjx-mfrac[bevelled] > mjx-den { display: inline-block; }
+mjx-den[align="right"], mjx-num[align="right"] { text-align: right; }
+mjx-den[align="left"], mjx-num[align="left"] { text-align: left; }
+mjx-nstrut { display: inline-block; height: 0.054em; width: 0px; vertical-align: -0.054em; }
+mjx-nstrut[type="d"] { height: 0.217em; vertical-align: -0.217em; }
+mjx-dstrut { display: inline-block; height: 0.505em; width: 0px; }
+mjx-dstrut[type="d"] { height: 0.726em; }
+mjx-line { display: block; box-sizing: border-box; min-height: 1px; height: 0.06em; border-top: 0.075em solid; margin: 0.06em -0.1em; overflow: hidden; }
+mjx-line[type="d"] { margin: 0.18em -0.1em; }
+mjx-mspace { display: inline-block; text-align: left; }
+mjx-msup { display: inline-block; text-align: left; }
+mjx-container[jax="CHTML"] > mjx-math.TEX-N[breakable] > * { font-family: MJX-TEX-ZERO, MJX-TEX-N; }
+.TEX-N { font-family: MJX-TEX-ZERO, MJX-TEX-N; }
+.TEX-B { font-family: MJX-TEX-ZERO, MJX-TEX-B; }
+.TEX-I { font-family: MJX-TEX-ZERO, MJX-TEX-I; }
+.TEX-BI { font-family: MJX-TEX-ZERO, MJX-TEX-BI; }
+.TEX-F { font-family: MJX-TEX-ZERO, MJX-TEX-F; }
+.TEX-FB { font-family: MJX-TEX-ZERO, MJX-TEX-FB; }
+.TEX-SS { font-family: MJX-TEX-ZERO, MJX-TEX-SS; }
+.TEX-SSB { font-family: MJX-TEX-ZERO, MJX-TEX-SSB; }
+.TEX-SSI { font-family: MJX-TEX-ZERO, MJX-TEX-SSI; }
+.TEX-M { font-family: MJX-TEX-ZERO, MJX-TEX-M; }
+.TEX-SO { font-family: MJX-TEX-ZERO, MJX-TEX-SO; }
+.TEX-LO { font-family: MJX-TEX-ZERO, MJX-TEX-LO; }
+.TEX-C { font-family: MJX-TEX-ZERO, MJX-TEX-C; }
+.TEX-CB { font-family: MJX-TEX-ZERO, MJX-TEX-CB; }
+.TEX-OS { font-family: MJX-TEX-ZERO, MJX-TEX-OS; }
+.TEX-OB { font-family: MJX-TEX-ZERO, MJX-TEX-OB; }
+.TEX-MI { font-family: MJX-TEX-ZERO, MJX-TEX-MI; }
+.TEX-V { font-family: MJX-TEX-ZERO, MJX-TEX-V; }
+.TEX-S3 { font-family: MJX-TEX-ZERO, MJX-TEX-S3; }
+.TEX-S4 { font-family: MJX-TEX-ZERO, MJX-TEX-S4; }
+.MHC-M { font-family: MJX-TEX-ZERO, MJX-MHC-M; }
+.MHC-N { font-family: MJX-TEX-ZERO, MJX-MHC-N; }
+@font-face { font-family: MJX-MHC-M; src: url("site-lib/fonts/mathjax-2ea308c69f13.woff2") format("woff2"); }
+@font-face { font-family: MJX-MHC-N; src: url("site-lib/fonts/mathjax-f9054e3dd268.woff2") format("woff2"); }
+@font-face { font-family: MJX-TEX-ZERO; src: url("site-lib/fonts/mathjax-2c146f72c9a3.woff2") format("woff2"); }
+@font-face { font-family: MJX-BRK; src: url("site-lib/fonts/mathjax-4f03a0d86ff0.woff2") format("woff2"); }
+@font-face { font-family: MJX-TEX-N; src: url("site-lib/fonts/mathjax-fad3b88ec7aa.woff2") format("woff2"); }
+@font-face { font-family: MJX-TEX-B; src: url("site-lib/fonts/mathjax-69e45ca329dd.woff2") format("woff2"); }
+@font-face { font-family: MJX-TEX-I; src: url("site-lib/fonts/mathjax-82c82a2e0c8b.woff2") format("woff2"); }
+@font-face { font-family: MJX-TEX-BI; src: url("site-lib/fonts/mathjax-d0c95edf7b32.woff2") format("woff2"); }
+@font-face { font-family: MJX-TEX-F; src: url("site-lib/fonts/mathjax-6cb008e93488.woff2") format("woff2"); }
+@font-face { font-family: MJX-TEX-FB; src: url("site-lib/fonts/mathjax-303b28cdca9c.woff2") format("woff2"); }
+@font-face { font-family: MJX-TEX-SS; src: url("site-lib/fonts/mathjax-e0d564a939fc.woff2") format("woff2"); }
+@font-face { font-family: MJX-TEX-SSB; src: url("site-lib/fonts/mathjax-4a2e4827bad8.woff2") format("woff2"); }
+@font-face { font-family: MJX-TEX-SSI; src: url("site-lib/fonts/mathjax-b6dfb310dd7b.woff2") format("woff2"); }
+@font-face { font-family: MJX-TEX-M; src: url("site-lib/fonts/mathjax-82e8abfaecf0.woff2") format("woff2"); }
+@font-face { font-family: MJX-TEX-SO; src: url("site-lib/fonts/mathjax-0e9f0e5baa09.woff2") format("woff2"); }
+@font-face { font-family: MJX-TEX-LO; src: url("site-lib/fonts/mathjax-98b20475232f.woff2") format("woff2"); }
+@font-face { font-family: MJX-TEX-C; src: url("site-lib/fonts/mathjax-1faef92bbe44.woff2") format("woff2"); }
+@font-face { font-family: MJX-TEX-CB; src: url("site-lib/fonts/mathjax-03de6a3467f8.woff2") format("woff2"); }
+@font-face { font-family: MJX-TEX-OS; src: url("site-lib/fonts/mathjax-01bc6e82013d.woff2") format("woff2"); }
+@font-face { font-family: MJX-TEX-OB; src: url("site-lib/fonts/mathjax-62f1a8f7ced5.woff2") format("woff2"); }
+@font-face { font-family: MJX-TEX-MI; src: url("site-lib/fonts/mathjax-4bd1e8cefc7c.woff2") format("woff2"); }
+@font-face { font-family: MJX-TEX-V; src: url("site-lib/fonts/mathjax-bd9d7db0883d.woff2") format("woff2"); }
+@font-face { font-family: MJX-TEX-S3; src: url("site-lib/fonts/mathjax-07165a0e10ae.woff2") format("woff2"); }
+@font-face { font-family: MJX-TEX-S4; src: url("site-lib/fonts/mathjax-b20a0e1b0304.woff2") format("woff2"); }
+mjx-c.mjx-c1D43A { padding: 0.705em 0.786em 0.022em 0px; }
+mjx-c.mjx-c3D { padding: 0.367em 0.778em 0px 0px; }
+mjx-c.mjx-c1D43F { padding: 0.683em 0.681em 0px 0px; }
+mjx-c.mjx-c33 { padding: 0.665em 0.5em 0.022em 0px; }
+mjx-c.mjx-c1D45D { padding: 0.442em 0.503em 0.194em 0px; }
+mjx-c.mjx-c3E { padding: 0.54em 0.778em 0.04em 0px; }
+mjx-c.mjx-c32 { padding: 0.666em 0.5em 0px 0px; }
+mjx-c.mjx-c1D6FC { padding: 0.442em 0.64em 0.011em 0px; }
+mjx-c.mjx-c2C { padding: 0.121em 0.278em 0.194em 0px; }
+mjx-c.mjx-c1D6FD { padding: 0.705em 0.573em 0.194em 0px; }
+mjx-c.mjx-c31 { padding: 0.666em 0.5em 0px 0px; }
+mjx-c.mjx-c5B { padding: 0.75em 0.278em 0.25em 0px; }
+mjx-c.mjx-c2C6 { padding: 0.694em 0.5em 0px 0px; }
+mjx-c.mjx-c1D44D { padding: 0.683em 0.723em 0px 0px; }
+mjx-c.mjx-c28 { padding: 0.75em 0.389em 0.25em 0px; }
+mjx-c.mjx-c30 { padding: 0.666em 0.5em 0.022em 0px; }
+mjx-c.mjx-c29 { padding: 0.75em 0.389em 0.25em 0px; }
+mjx-c.mjx-c3A { padding: 0.43em 0.278em 0px 0px; }
+mjx-c.mjx-c2212 { padding: 0.583em 0.778em 0.082em 0px; }
+mjx-c.mjx-c5D { padding: 0.75em 0.278em 0.25em 0px; }
+mjx-c.mjx-c2E { padding: 0.12em 0.278em 0px 0px; }
+mjx-c.mjx-c1D451 { padding: 0.694em 0.523em 0.01em 0px; }
+mjx-c.mjx-c2B { padding: 0.583em 0.778em 0.082em 0px; }
+mjx-c.mjx-c1D456 { padding: 0.661em 0.345em 0.011em 0px; }
+mjx-c.mjx-c2264 { padding: 0.636em 0.778em 0.138em 0px; }
+mjx-c.mjx-c3C { padding: 0.54em 0.778em 0.04em 0px; }
+mjx-c.mjx-c28.TEX-LO { padding: 1.15em 0.597em 0.649em 0px; }
+mjx-c.mjx-c1D44E { padding: 0.441em 0.529em 0.01em 0px; }
+mjx-c.mjx-c29.TEX-LO { padding: 1.15em 0.597em 0.649em 0px; }
+mjx-c.mjx-c1D6FE { padding: 0.441em 0.543em 0.216em 0px; }
+mjx-c.mjx-c1D438 { padding: 0.68em 0.764em 0px 0px; }
+mjx-c.mjx-c1D44B { padding: 0.683em 0.852em 0px 0px; }
+mjx-c.mjx-c1D439 { padding: 0.68em 0.749em 0px 0px; }
+mjx-c.mjx-c1D434 { padding: 0.716em 0.75em 0px 0px; }
+mjx-c.mjx-c1D466 { padding: 0.442em 0.496em 0.205em 0px; }
+mjx-c.mjx-c1D463 { padding: 0.443em 0.485em 0.011em 0px; }
+mjx-c.mjx-c2260 { padding: 0.716em 0.778em 0.215em 0px; }
+mjx-c.mjx-c1D700 { padding: 0.452em 0.466em 0.022em 0px; }
+mjx-c.mjx-c1D707 { padding: 0.442em 0.603em 0.216em 0px; }
+mjx-c.mjx-c1D45F { padding: 0.442em 0.451em 0.011em 0px; }
+mjx-c.mjx-c7B.TEX-S3 { padding: 1.45em 0.75em 0.949em 0px; }
+mjx-c.mjx-c2265 { padding: 0.636em 0.778em 0.138em 0px; }
+mjx-c.mjx-c1D447 { padding: 0.677em 0.717em 0px 0px; }
+mjx-c.mjx-c1D708 { padding: 0.442em 0.53em 0.002em 0px; }
+mjx-c.mjx-c1D462 { padding: 0.442em 0.572em 0.011em 0px; }
+mjx-c.mjx-c2208 { padding: 0.54em 0.667em 0.04em 0px; }
+mjx-c.mjx-c2124 { padding: 0.683em 0.667em 0.001em 0px; }
+mjx-c.mjx-c1D702 { padding: 0.442em 0.503em 0.216em 0px; }
+mjx-c.mjx-c1D444 { padding: 0.704em 0.791em 0.194em 0px; }
+mjx-c.mjx-c27E8 { padding: 0.75em 0.389em 0.25em 0px; }
+mjx-c.mjx-c1D712 { padding: 0.442em 0.626em 0.204em 0px; }
+mjx-c.mjx-c27E9 { padding: 0.75em 0.389em 0.25em 0px; }
+mjx-c.mjx-c1D424 { padding: 0.694em 0.607em 0px 0px; }
+mjx-c.mjx-c2295 { padding: 0.583em 0.778em 0.083em 0px; }
+mjx-c.mjx-c1D703 { padding: 0.705em 0.469em 0.01em 0px; }
+mjx-c.mjx-c27F6 { padding: 0.511em 1.638em 0.011em 0px; }
+mjx-c.mjx-c27FC { padding: 0.511em 1.638em 0.011em 0px; }
+mjx-c.mjx-c49 { padding: 0.683em 0.361em 0px 0px; }
+mjx-c.mjx-c6D { padding: 0.442em 0.833em 0px 0px; }
+mjx-c.mjx-c2061 { padding: 0px; }
+mjx-c.mjx-c2F { padding: 0.75em 0.5em 0.25em 0px; }
+mjx-c.mjx-cAF { padding: 0.59em 0.5em 0px 0px; }
+mjx-c.mjx-c7C { padding: 0.75em 0.278em 0.249em 0px; }
+mjx-c.mjx-c1D6FF { padding: 0.717em 0.451em 0.01em 0px; }
+mjx-c.mjx-c1D706 { padding: 0.694em 0.583em 0.012em 0px; }
+mjx-c.mjx-c2223 { padding: 0.75em 0.278em 0.249em 0px; }
+mjx-c.mjx-c50 { padding: 0.683em 0.681em 0px 0px; }
+mjx-c.mjx-c2261 { padding: 0.464em 0.778em 0px 0px; }
+mjx-c.mjx-c6F { padding: 0.448em 0.5em 0.01em 0px; }
+mjx-c.mjx-c64 { padding: 0.694em 0.556em 0.011em 0px; }
+mjx-c.mjx-c1D457 { padding: 0.661em 0.412em 0.204em 0px; }
+mjx-c.mjx-c28.TEX-S3 { padding: 1.45em 0.736em 0.949em 0px; }
+mjx-c.mjx-c29.TEX-S3 { padding: 1.45em 0.736em 0.949em 0px; }
+mjx-mpadded { display: inline-block; text-align: left; }
+mjx-rbox { display: inline-block; position: relative; }
+mjx-menclose { display: inline-block; text-align: left; position: relative; }
+mjx-menclose > mjx-dstrike { display: inline-block; left: 0px; top: 0px; position: absolute; border-top: 0.067em solid; transform-origin: left top; }
+mjx-menclose > mjx-ustrike { display: inline-block; left: 0px; bottom: 0px; position: absolute; border-top: 0.067em solid; transform-origin: left bottom; }
+mjx-menclose > mjx-hstrike { border-top: 0.067em solid; position: absolute; left: 0px; right: 0px; bottom: 50%; transform: translateY(0.034em); }
+mjx-menclose > mjx-vstrike { border-left: 0.067em solid; position: absolute; top: 0px; bottom: 0px; right: 50%; transform: translateX(0.034em); }
+mjx-menclose > mjx-rbox { position: absolute; inset: 0px; border: 0.067em solid; border-radius: 0.267em; }
+mjx-menclose > mjx-cbox { position: absolute; inset: 0px; border: 0.067em solid; border-radius: 50%; }
+mjx-menclose > mjx-arrow { position: absolute; left: 0px; bottom: 50%; height: 0px; width: 0px; }
+mjx-menclose > mjx-arrow > mjx-aline { display: block; position: absolute; box-sizing: border-box; transform-origin: center bottom; left: 0px; top: -0.034em; right: 0.201em; height: 0px; border-top: 0.067em solid; border-left: 0px; border-right: 0px; }
+mjx-menclose > mjx-arrow[double] > mjx-aline { display: block; position: absolute; box-sizing: border-box; transform-origin: center bottom; left: 0.201em; height: 0px; border-left: 0.268em solid; border-right: 0px; }
+mjx-menclose > mjx-arrow > mjx-rthead { display: block; position: absolute; box-sizing: border-box; transform-origin: center bottom; transform: skewX(0.464rad); right: 0px; bottom: -1px; border-width: 0.134em 0px 1px 0.268em; border-style: solid none solid solid; border-color: transparent currentcolor; }
+mjx-menclose > mjx-arrow > mjx-rbhead { display: block; position: absolute; box-sizing: border-box; transform: skewX(-0.464rad); transform-origin: center top; right: 0px; top: -1px; border-width: 1px 0px 0.134em 0.268em; border-style: solid none solid solid; border-color: transparent currentcolor; }
+mjx-menclose > mjx-arrow > mjx-lthead { display: block; position: absolute; box-sizing: border-box; transform: skewX(-0.464rad); transform-origin: center bottom; left: 0px; bottom: -1px; border-width: 0.134em 0.268em 1px 0px; border-style: solid solid solid none; border-color: transparent currentcolor; }
+mjx-menclose > mjx-arrow > mjx-lbhead { display: block; position: absolute; box-sizing: border-box; transform: skewX(0.464rad); transform-origin: center top; left: 0px; top: -1px; border-width: 1px 0.268em 0.134em 0px; border-style: solid solid solid none; border-color: transparent currentcolor; }
+mjx-menclose > mjx-dbox-top { position: absolute; top: 0px; bottom: 50%; left: 0px; width: 0.3em; border-width: 0.067em; border-style: solid solid none none; border-radius: 0px 100% 0px 0px; box-sizing: border-box; }
+mjx-menclose > mjx-dbox-bot { position: absolute; top: 50%; bottom: 0px; left: 0px; width: 0.3em; border-width: 0.067em; border-style: none solid solid none; border-radius: 0px 0px 100%; box-sizing: border-box; }
+mjx-munder { display: inline-block; text-align: left; }
+mjx-over { text-align: left; }
+mjx-munder:not([limits="false"]) { display: inline-table; }
+mjx-munder > mjx-row { text-align: left; }
+mjx-under { padding-bottom: 0.1em; }
+mjx-munderover { display: inline-block; text-align: left; }
+mjx-munderover:not([limits="false"]) { padding-top: 0.1em; }
+mjx-munderover:not([limits="false"]) > mjx-over, mjx-munderover:not([limits="false"]) > mjx-box { display: block; }
+mjx-stretchy-h.mjx-c2192 > mjx-ext > mjx-spacer { margin-left: -0.305em; }
+mjx-stretchy-h.mjx-c2192 > mjx-ext { padding: 0.431em 0px 0px; border-width: 0px 0.83em 0px 0px; }
+mjx-stretchy-h.mjx-c2192 > mjx-end { padding: 0.431em 0.89em 0px 0px; margin-left: -0.89em; }
+mjx-stretchy-h.mjx-c2013 > mjx-ext > mjx-spacer { margin-left: -0.25em; letter-spacing: -0.071em; }
+mjx-stretchy-h.mjx-c2013 > mjx-ext { padding: 0.285em 0px 0px; }
+mjx-c.mjx-c1D440 { padding: 0.683em 1.051em 0px 0px; }
+mjx-c.mjx-c39E { padding: 0.677em 0.667em 0px 0px; }
+mjx-c.mjx-c22EF { padding: 0.31em 1.172em 0px 0px; }
+mjx-c.mjx-c1D441 { padding: 0.683em 0.888em 0px 0px; }
+mjx-c.mjx-c2218 { padding: 0.444em 0.5em 0px 0px; }
+mjx-c.mjx-c7B { padding: 0.75em 0.5em 0.25em 0px; }
+mjx-c.mjx-c1D45A { padding: 0.442em 0.878em 0.011em 0px; }
+mjx-c.mjx-c1D70B { padding: 0.431em 0.573em 0.011em 0px; }
+mjx-c.mjx-c7D { padding: 0.75em 0.5em 0.25em 0px; }
+mjx-c.mjx-c1D43D { padding: 0.683em 0.633em 0.022em 0px; }
+mjx-c.mjx-c1D465 { padding: 0.442em 0.572em 0.011em 0px; }
+mjx-c.mjx-c55.TEX-C { padding: 0.683em 0.687em 0.028em 0px; }
+mjx-c.mjx-c2286 { padding: 0.636em 0.778em 0.138em 0px; }
+mjx-c.mjx-c44 { padding: 0.683em 0.764em 0px 0px; }
+mjx-c.mjx-c69 { padding: 0.669em 0.278em 0px 0px; }
+mjx-c.mjx-c73 { padding: 0.448em 0.394em 0.011em 0px; }
+mjx-c.mjx-c74 { padding: 0.615em 0.389em 0.01em 0px; }
+mjx-c.mjx-c212D { padding: 0.685em 0.613em 0.024em 0px; }
+mjx-c.mjx-c2287 { padding: 0.636em 0.778em 0.138em 0px; }
+mjx-c.mjx-c27FA { padding: 0.525em 1.858em 0.024em 0px; }
+mjx-c.mjx-c4B { padding: 0.683em 0.778em 0px 0px; }
+mjx-c.mjx-c65 { padding: 0.448em 0.444em 0.011em 0px; }
+mjx-c.mjx-c72 { padding: 0.442em 0.392em 0px 0px; }
+mjx-c.mjx-c2032 { padding: 0.56em 0.275em 0px 0px; }
+mjx-c.mjx-c2026 { padding: 0.12em 1.172em 0px 0px; }
+mjx-c.mjx-c1D461 { padding: 0.626em 0.361em 0.011em 0px; }
+mjx-c.mjx-c23 { padding: 0.694em 0.833em 0.194em 0px; }
+mjx-c.mjx-c1D460 { padding: 0.442em 0.469em 0.01em 0px; }
+mjx-c.mjx-c2211.TEX-LO { padding: 0.95em 1.444em 0.45em 0px; }
+mjx-c.mjx-c2113 { padding: 0.705em 0.417em 0.02em 0px; }
+mjx-c.mjx-c43 { padding: 0.705em 0.722em 0.021em 0px; }
+mjx-c.mjx-c6B { padding: 0.694em 0.528em 0px 0px; }
+mjx-c.mjx-c63 { padding: 0.448em 0.444em 0.011em 0px; }
+mjx-c.mjx-c68 { padding: 0.694em 0.556em 0px 0px; }
+mjx-c.mjx-c6C { padding: 0.694em 0.278em 0px 0px; }
+mjx-c.mjx-c6E { padding: 0.442em 0.556em 0px 0px; }
+mjx-c.mjx-c1D453 { padding: 0.705em 0.55em 0.205em 0px; }
+mjx-c.mjx-c2192 { padding: 0.511em 1em 0.011em 0px; }
+mjx-c.mjx-c1D454 { padding: 0.442em 0.48em 0.205em 0px; }
+mjx-c.mjx-c2033 { padding: 0.56em 0.55em 0px 0px; }
+mjx-c.mjx-c21A6 { padding: 0.511em 1em 0.011em 0px; }
+mjx-c.mjx-c1D713 { padding: 0.694em 0.651em 0.205em 0px; }
+mjx-c.mjx-c1D711 { padding: 0.442em 0.654em 0.218em 0px; }
+mjx-stretchy-v.mjx-c28 > mjx-beg { width: 0.875em; margin: 1.154em auto -1.154em; }
+mjx-stretchy-v.mjx-c28 > mjx-ext > mjx-spacer { margin-top: 0.259em; }
+mjx-stretchy-v.mjx-c28 > mjx-ext { width: 0.875em; line-height: 0.562em; border-width: 1.779em 0px; }
+mjx-stretchy-v.mjx-c28 > mjx-end { width: 0.875em; margin: -0.644em auto 0.644em; }
+mjx-stretchy-v.mjx-c29 > mjx-beg { width: 0.875em; margin: 1.154em auto -1.154em; }
+mjx-stretchy-v.mjx-c29 > mjx-ext > mjx-spacer { margin-top: 0.259em; }
+mjx-stretchy-v.mjx-c29 > mjx-ext { width: 0.875em; line-height: 0.562em; border-width: 1.779em 0px; }
+mjx-stretchy-v.mjx-c29 > mjx-end { width: 0.875em; margin: -0.644em auto 0.644em; }
+mjx-c.mjx-c1D452 { padding: 0.442em 0.466em 0.011em 0px; }
+mjx-c.mjx-c1D467 { padding: 0.442em 0.468em 0.011em 0px; }
+mjx-c.mjx-c1D435 { padding: 0.683em 0.759em 0px 0px; }
+mjx-c.mjx-c210E { padding: 0.694em 0.576em 0.011em 0px; }
+mjx-c.mjx-c1D45B { padding: 0.442em 0.6em 0.011em 0px; }
+mjx-c.mjx-c2211.TEX-SO { padding: 0.75em 1.056em 0.25em 0px; }
+mjx-c.mjx-c1D464 { padding: 0.443em 0.716em 0.011em 0px; }
+mjx-c.mjx-c1D44F { padding: 0.694em 0.429em 0.011em 0px; }
+mjx-c.mjx-cA0 { padding: 0px 0.25em 0px 0px; }
+mjx-c.mjx-c28.TEX-S4 { padding: 1.75em 0.792em 1.249em 0px; }
+mjx-c.mjx-c394 { padding: 0.716em 0.833em 0px 0px; }
+mjx-c.mjx-c2216 { padding: 0.75em 0.5em 0.25em 0px; }
+mjx-c.mjx-c29.TEX-S4 { padding: 1.75em 0.792em 1.249em 0px; }
+mjx-c.mjx-c1D459 { padding: 0.694em 0.298em 0.011em 0px; }
+mjx-c.mjx-c1D446 { padding: 0.705em 0.645em 0.022em 0px; }
+mjx-c.mjx-c2224 { padding: 0.75em 0.3em 0.252em 0px; }
+mjx-c.mjx-c34 { padding: 0.677em 0.5em 0px 0px; }
+mjx-c.mjx-c35 { padding: 0.666em 0.5em 0.022em 0px; }
+mjx-c.mjx-c1D437 { padding: 0.683em 0.828em 0px 0px; }
+mjx-c.mjx-c3B { padding: 0.43em 0.278em 0.194em 0px; }
+mjx-c.mjx-c1D44A { padding: 0.683em 1.048em 0.022em 0px; }
+mjx-c.mjx-c1D70C { padding: 0.442em 0.517em 0.216em 0px; }
+mjx-c.mjx-c1D7CF { padding: 0.655em 0.575em 0px 0px; }
+mjx-c.mjx-c2217 { padding: 0.465em 0.5em 0px 0px; }
+mjx-stretchy-v.mjx-c7B > mjx-beg { width: 0.889em; margin: 0.899em auto -0.899em; }
+mjx-stretchy-v.mjx-c7B > mjx-ext > mjx-spacer { margin-top: 0.115em; }
+mjx-stretchy-v.mjx-c7B > mjx-ext { width: 0.889em; line-height: 0.264em; }
+mjx-stretchy-v.mjx-c7B > mjx-end { width: 0.889em; margin: -0.899em auto 0.899em; }
+mjx-stretchy-v.mjx-c7B > mjx-mid { width: 0.889em; margin: 0.25em auto -0.25em; }
+mjx-stretchy-v.mjx-c7B > mjx-ext:first-of-type { height: 50%; border-width: 0.894em 0px 0.895em; }
+mjx-stretchy-v.mjx-c7B > mjx-ext:last-of-type { height: 50%; border-width: 0.895em 0px 0.879em; }
+mjx-c.mjx-c1D524 { padding: 0.47em 0.504em 0.209em 0px; }
+mjx-c.mjx-c1D448 { padding: 0.683em 0.767em 0.022em 0px; }
+mjx-c.mjx-c2297 { padding: 0.583em 0.778em 0.083em 0px; }
+mjx-c.mjx-c2209 { padding: 0.716em 0.667em 0.215em 0px; }
+mjx-c.mjx-c1D525 { padding: 0.688em 0.521em 0.205em 0px; }
+mjx-c.mjx-c1D52B { padding: 0.475em 0.527em 0.022em 0px; }
+mjx-c.mjx-c1D43B { padding: 0.683em 0.888em 0px 0px; }
+mjx-c.mjx-c1D450 { padding: 0.442em 0.433em 0.011em 0px; }
+mjx-c.mjx-c21 { padding: 0.716em 0.278em 0px 0px; }
+mjx-c.mjx-c220F.TEX-LO { padding: 0.95em 1.278em 0.45em 0px; }
+mjx-c.mjx-c61 { padding: 0.448em 0.5em 0.011em 0px; }
+mjx-c.mjx-c2245 { padding: 0.589em 1em 0px 0px; }
+mjx-c.mjx-c27F9 { padding: 0.525em 1.638em 0.024em 0px; }
+mjx-c.mjx-c21D1 { padding: 0.694em 0.611em 0.194em 0px; }
+mjx-c.mjx-cD7 { padding: 0.491em 0.778em 0px 0px; }
+mjx-c.mjx-c48 { padding: 0.683em 0.75em 0px 0px; }
+mjx-c.mjx-c45 { padding: 0.68em 0.681em 0px 0px; }
+mjx-c.mjx-c1D445 { padding: 0.683em 0.759em 0.021em 0px; }
+mjx-c.mjx-c1D43C { padding: 0.683em 0.504em 0px 0px; }
+mjx-c.mjx-c2A01.TEX-LO { padding: 0.949em 1.511em 0.449em 0px; }
+mjx-c.mjx-c2A01.TEX-SO { padding: 0.75em 1.111em 0.25em 0px; }
+mjx-c.mjx-c1D52A { padding: 0.475em 0.767em 0.026em 0px; }
+mjx-c.mjx-c1D443 { padding: 0.683em 0.751em 0px 0px; }
+mjx-c.mjx-c1D704 { padding: 0.442em 0.354em 0.01em 0px; }
+mjx-c.mjx-c78 { padding: 0.431em 0.528em 0px 0px; }
+mjx-c.mjx-c1D45E { padding: 0.442em 0.46em 0.194em 0px; }
+mjx-c.mjx-c1D406 { padding: 0.698em 0.904em 0.01em 0px; }
+mjx-c.mjx-c220F.TEX-SO { padding: 0.75em 0.944em 0.25em 0px; }
+mjx-c.mjx-cB1 { padding: 0.666em 0.778em 0px 0px; }
+mjx-c.mjx-c3A0 { padding: 0.68em 0.75em 0px 0px; }
+mjx-c.mjx-c39B { padding: 0.716em 0.694em 0px 0px; }
+mjx-c.mjx-c1D436 { padding: 0.705em 0.76em 0.022em 0px; }
+mjx-c.mjx-c2D { padding: 0.252em 0.333em 0px 0px; }
+mjx-c.mjx-c67 { padding: 0.453em 0.5em 0.206em 0px; }
+mjx-c.mjx-c1D716 { padding: 0.431em 0.406em 0.011em 0px; }
+mjx-c.mjx-c1D53E { padding: 0.702em 0.778em 0.019em 0px; }
+mjx-c.mjx-c1D701 { padding: 0.704em 0.471em 0.204em 0px; }
+mjx-c.mjx-c76 { padding: 0.431em 0.528em 0.011em 0px; }
+mjx-c.mjx-c1D449 { padding: 0.683em 0.769em 0.022em 0px; }
+mjx-c.mjx-c77 { padding: 0.431em 0.722em 0.011em 0px; }
+mjx-c.mjx-c221E { padding: 0.442em 1em 0.011em 0px; }
+mjx-c.mjx-c1D43E { padding: 0.683em 0.889em 0px 0px; }
+mjx-c.mjx-c46 { padding: 0.68em 0.653em 0px 0px; }
+mjx-c.mjx-c7D.TEX-S3 { padding: 1.45em 0.75em 0.949em 0px; }
+mjx-c.mjx-c1D405 { padding: 0.68em 0.724em 0px 0px; }
+mjx-c.mjx-c22C5 { padding: 0.31em 0.278em 0px 0px; }
+mjx-c.mjx-c70 { padding: 0.442em 0.556em 0.194em 0px; }
+mjx-c.mjx-c2013 { padding: 0.285em 0.5em 0px 0px; }
+mjx-c.mjx-c2229 { padding: 0.598em 0.667em 0.022em 0px; }
+mjx-c.mjx-c230A.TEX-S3 { padding: 1.45em 0.583em 0.949em 0px; }
+mjx-c.mjx-c230B.TEX-S3 { padding: 1.45em 0.583em 0.949em 0px; }
+mjx-c.mjx-c2203 { padding: 0.694em 0.556em 0px 0px; }
+mjx-c.mjx-c230A.TEX-LO { padding: 1.15em 0.528em 0.649em 0px; }
+mjx-c.mjx-c230B.TEX-LO { padding: 1.15em 0.528em 0.649em 0px; }
+mjx-c.mjx-c230A { padding: 0.75em 0.444em 0.25em 0px; }
+mjx-c.mjx-c230B { padding: 0.75em 0.444em 0.25em 0px; }
+mjx-c.mjx-c2228 { padding: 0.598em 0.667em 0.022em 0px; }
+mjx-c.mjx-c47 { padding: 0.705em 0.785em 0.022em 0px; }
+mjx-c.mjx-c4C { padding: 0.683em 0.625em 0px 0px; }
+mjx-c.mjx-c1D51F { padding: 0.685em 0.513em 0.031em 0px; }
+mjx-c.mjx-c211D { padding: 0.683em 0.722em 0.001em 0px; }
+mjx-c.mjx-c41 { padding: 0.716em 0.75em 0px 0px; }
+mjx-c.mjx-c1D51E { padding: 0.47em 0.5em 0.035em 0px; }
+mjx-c.mjx-c1D532 { padding: 0.474em 0.517em 0.023em 0px; }
+mjx-c.mjx-c22C9 { padding: 0.492em 0.778em 0px 0px; }
+mjx-stretchy-h.mjx-c2190 > mjx-beg { padding: 0.431em 0.89em 0px 0px; margin-right: -0.89em; }
+mjx-stretchy-h.mjx-c2190 > mjx-ext > mjx-spacer { margin-left: -0.305em; }
+mjx-stretchy-h.mjx-c2190 > mjx-ext { padding: 0.431em 0px 0px; border-width: 0px 0px 0px 0.83em; }
+mjx-c.mjx-c2C6.TEX-SO { padding: 0.744em 0.564em 0px 0px; }
+mjx-c.mjx-c2C6.TEX-S4 { padding: 0.845em 1.902em 0px 0px; }
+mjx-c.mjx-c222A { padding: 0.598em 0.667em 0.022em 0px; }
+mjx-c.mjx-c1D538 { padding: 0.701em 0.722em 0.001em 0px; }
+mjx-c.mjx-c22C3.TEX-LO { padding: 0.95em 1.111em 0.449em 0px; }
+mjx-c.mjx-c1D44C { padding: 0.683em 0.763em 0px 0px; }
+mjx-c.mjx-c7B.TEX-S4 { padding: 1.75em 0.806em 1.249em 0px; }
+mjx-c.mjx-c42.TEX-C { padding: 0.705em 0.664em 0.022em 0px; }
+mjx-c.mjx-c53 { padding: 0.705em 0.556em 0.022em 0px; }
+mjx-c.mjx-c79 { padding: 0.431em 0.528em 0.204em 0px; }
+mjx-c.mjx-c2DC.TEX-SO { padding: 0.722em 0.556em 0px 0px; }
+mjx-c.mjx-c1D70E { padding: 0.431em 0.572em 0.011em 0px; }
+mjx-c.mjx-c1D529 { padding: 0.685em 0.28em 0.02em 0px; }
+mjx-c.mjx-c36 { padding: 0.666em 0.5em 0.022em 0px; }
+mjx-c.mjx-c212C { padding: 0.708em 0.928em 0.028em 0px; }
+mjx-c.mjx-c228A { padding: 0.635em 0.778em 0.241em 0px; }
+mjx-c.mjx-c2115 { padding: 0.683em 0.722em 0.02em 0px; }
+mjx-c.mjx-c7D.TEX-S4 { padding: 1.75em 0.806em 1.249em 0px; }
+mjx-c.mjx-c1D70F { padding: 0.431em 0.517em 0.013em 0px; }
+mjx-c.mjx-c1D458 { padding: 0.694em 0.521em 0.011em 0px; }
+mjx-c.mjx-c2200 { padding: 0.694em 0.556em 0.022em 0px; }
+mjx-c.mjx-c2DC { padding: 0.668em 0.5em 0px 0px; }
+mjx-c.mjx-c49.TEX-C { padding: 0.683em 0.642em 0px 0px; }
+mjx-c.mjx-c21A0 { padding: 0.417em 1em 0px 0px; }
+mjx-c.mjx-c21AA { padding: 0.511em 1.126em 0.011em 0px; }
+mjx-c.mjx-c37 { padding: 0.676em 0.5em 0.022em 0px; }
+mjx-c.mjx-c38 { padding: 0.666em 0.5em 0.022em 0px; }
+mjx-c.mjx-c1D705 { padding: 0.442em 0.576em 0.011em 0px; }
+mjx-c.mjx-c1D709 { padding: 0.704em 0.443em 0.205em 0px; }
+mjx-c.mjx-c2205.TEX-V { padding: 0.587em 0.778em 0.003em 0px; }
+mjx-c.mjx-c3A6 { padding: 0.683em 0.722em 0px 0px; }
+mjx-c.mjx-c22C2.TEX-LO { padding: 0.949em 1.111em 0.45em 0px; }
+mjx-c.mjx-c39 { padding: 0.666em 0.5em 0.022em 0px; }
+mjx-c.mjx-c5B.TEX-S3 { padding: 1.45em 0.528em 0.949em 0px; }
+mjx-c.mjx-c5D.TEX-S3 { padding: 1.45em 0.528em 0.949em 0px; }
+mjx-c.mjx-c211A { padding: 0.701em 0.778em 0.181em 0px; }
+mjx-c.mjx-c1D53D { padding: 0.683em 0.611em 0.001em 0px; }
+mjx-c.mjx-c7B.TEX-LO { padding: 1.15em 0.667em 0.649em 0px; }
+mjx-c.mjx-c7D.TEX-LO { padding: 1.15em 0.667em 0.649em 0px; }
+mjx-c.mjx-c2282 { padding: 0.54em 0.778em 0.04em 0px; }
+mjx-c.mjx-c1D5B3 { padding: 0.688em 0.681em 0px 0px; }
+mjx-c.mjx-c22C6 { padding: 0.486em 0.5em 0px 0px; }
+mjx-c.mjx-c22C4 { padding: 0.488em 0.5em 0px 0px; }
+mjx-c.mjx-c53.TEX-C { padding: 0.705em 0.642em 0.022em 0px; }
+mjx-c.mjx-c3A8 { padding: 0.683em 0.778em 0px 0px; }
+mjx-c.mjx-c28.TEX-SO { padding: 0.85em 0.458em 0.349em 0px; }
+mjx-c.mjx-c29.TEX-SO { padding: 0.85em 0.458em 0.349em 0px; }
+mjx-c.mjx-c27C2 { padding: 0.668em 0.778em 0px 0px; }
+mjx-stretchy-v.mjx-c7C > mjx-ext > mjx-spacer { margin-top: 0.271em; }
+mjx-stretchy-v.mjx-c7C > mjx-ext { width: 0.333em; line-height: 0.572em; }
+mjx-c.mjx-c75 { padding: 0.442em 0.556em 0.011em 0px; }
+mjx-c.mjx-c7B.TEX-SO { padding: 0.85em 0.583em 0.349em 0px; }
+mjx-c.mjx-c7D.TEX-SO { padding: 0.85em 0.583em 0.349em 0px; }
+mjx-c.mjx-c1D7FA { padding: 0.624em 0.525em 0px 0px; }
+mjx-c.mjx-c1D7F9 { padding: 0.622em 0.525em 0.011em 0px; }
+mjx-c.mjx-c1D7F8 { padding: 0.622em 0.525em 0px 0px; }
+mjx-c.mjx-c1D7F7 { padding: 0.622em 0.525em 0px 0px; }
+mjx-c.mjx-c1D5A4 { padding: 0.691em 0.597em 0px 0px; }
+mjx-c.mjx-c1D5A5 { padding: 0.691em 0.569em 0px 0px; }
+mjx-c.mjx-c223C { padding: 0.367em 0.778em 0px 0px; }
+mjx-c.mjx-c1D42A { padding: 0.45em 0.609em 0.194em 0px; }
+mjx-c.mjx-c2308 { padding: 0.75em 0.444em 0.25em 0px; }
+mjx-c.mjx-c2309 { padding: 0.75em 0.444em 0.25em 0px; }
+mjx-c.mjx-c1D715 { padding: 0.715em 0.566em 0.022em 0px; }
+mjx-c.mjx-c1D530 { padding: 0.478em 0.443em 0.029em 0px; }
+mjx-c.mjx-c1D427 { padding: 0.45em 0.639em 0px 0px; }
+mjx-c.mjx-c393 { padding: 0.68em 0.625em 0px 0px; }
+mjx-c.mjx-c1D717 { padding: 0.705em 0.591em 0.011em 0px; }
+mjx-c.mjx-c1D442 { padding: 0.704em 0.763em 0.022em 0px; }
+mjx-c.mjx-c2194 { padding: 0.511em 1em 0.011em 0px; }
+mjx-c.mjx-c1D52C { padding: 0.48em 0.489em 0.028em 0px; }
+mjx-c.mjx-c1D52D { padding: 0.541em 0.5em 0.212em 0px; }</style><div class="markdown-preview-sizer markdown-preview-section"><div class="header"><div class="page-title" id="参考资料">参考资料</div><div class="data-bar"></div></div><div class="markdown-preview-pusher" style="width:1px;height:.1px;margin-bottom:0"></div><div class="el-ol"><ol>
+<li data-line="0" dir="auto">
+<p><strong>【库中原有】</strong> <a data-tooltip-position="top" aria-label="D:/Albus/Attachments/PDFs/Papers/Lei%20P,%20Bin%20S.%20Jantzen%20filtration%20and%20strong%20linkage%20principle%20for%20modular%20Lie%20superalgebras..pdf" rel="noopener nofollow" class="external-link" href="D:/Albus/Attachments/PDFs/Papers/Lei%20P,%20Bin%20S.%20Jantzen%20filtration%20and%20strong%20linkage%20principle%20for%20modular%20Lie%20superalgebras..pdf" target="_blank">Lei Pan and Bin Shu, Jantzen filtration and strong linkage principle for modular Lie superalgebras, arXiv:1710.05821v1 (2017)</a>。</p>
+</li>
+<li data-line="2" dir="auto">
+<p><strong>【库中原有】</strong> <a data-tooltip-position="top" aria-label="D:/Albus/Attachments/PDFs/Books/R.%20Fioresi,%20F.%20Gavarini.%20Chevalley%20Supergroups.%20Memoirs%20of%20the%20AMS,%202011..pdf" rel="noopener nofollow" class="external-link" href="D:/Albus/Attachments/PDFs/Books/R.%20Fioresi,%20F.%20Gavarini.%20Chevalley%20Supergroups.%20Memoirs%20of%20the%20AMS,%202011..pdf" target="_blank">Rita Fioresi and Fabio Gavarini, Chevalley Supergroups</a>。</p>
+</li>
+<li data-line="4" dir="auto">
+<p><strong>【库中原有】</strong> <a data-tooltip-position="top" aria-label="D:/Albus/Attachments/PDFs/Papers/J.%20C.%20Janzten.%20Modular%20representations%20of%20reductive%20Lie%20algebras..pdf" rel="noopener nofollow" class="external-link" href="D:/Albus/Attachments/PDFs/Papers/J.%20C.%20Janzten.%20Modular%20representations%20of%20reductive%20Lie%20algebras..pdf" target="_blank">Jens Carsten Jantzen, Modular representations of reductive Lie algebras</a>。</p>
+</li>
+<li data-line="6" dir="auto">
+<p><strong>【库中原有】</strong> <a data-tooltip-position="top" aria-label="D:/Albus/Attachments/PDFs/Books/J.%20C.%20Jansten.%20Representations%20of%20Algebraic%20Groups.%202ed.%20AMS,%202003..pdf" rel="noopener nofollow" class="external-link" href="D:/Albus/Attachments/PDFs/Books/J.%20C.%20Jansten.%20Representations%20of%20Algebraic%20Groups.%202ed.%20AMS,%202003..pdf" target="_blank">Jens Carsten Jantzen, Representations of Algebraic Groups, 2nd edition, AMS (2003)</a>。</p>
+</li>
+<li data-line="8" dir="auto">
+<p><strong>【库中原有】</strong> <a data-tooltip-position="top" aria-label="D:/Albus/Attachments/PDFs/Papers/%E6%BD%98%E7%A3%8A.%20%E6%A8%A1%E6%9D%8E%E8%B6%85%E4%BB%A3%E6%95%B0%E7%9A%84Jantzen%E6%BB%A4%E8%BF%87%E5%8F%8A%E5%92%8C%E5%BC%8F..pdf" rel="noopener nofollow" class="external-link" href="D:/Albus/Attachments/PDFs/Papers/%E6%BD%98%E7%A3%8A.%20%E6%A8%A1%E6%9D%8E%E8%B6%85%E4%BB%A3%E6%95%B0%E7%9A%84Jantzen%E6%BB%A4%E8%BF%87%E5%8F%8A%E5%92%8C%E5%BC%8F..pdf" target="_blank">潘磊，模李超代数的Jantzen滤过及和式</a>。</p>
+</li>
+<li data-line="10" dir="auto">
+<p><strong>【库中原有】</strong> <a data-tooltip-position="top" aria-label="D:/Albus/Attachments/PDFs/Books/%E6%9B%B9%E9%94%A1%E5%8D%8E,%20%E7%8E%8B%E5%BB%BA%E7%A3%90.%20%E7%BA%BF%E6%80%A7%E4%BB%A3%E6%95%B0%E7%BE%A4%E8%A1%A8%E7%A4%BA%E5%AF%BC%E8%AE%BA.%20%E7%A7%91%E5%AD%A6%E5%87%BA%E7%89%88%E7%A4%BE,%201987..pdf" rel="noopener nofollow" class="external-link" href="D:/Albus/Attachments/PDFs/Books/%E6%9B%B9%E9%94%A1%E5%8D%8E,%20%E7%8E%8B%E5%BB%BA%E7%A3%90.%20%E7%BA%BF%E6%80%A7%E4%BB%A3%E6%95%B0%E7%BE%A4%E8%A1%A8%E7%A4%BA%E5%AF%BC%E8%AE%BA.%20%E7%A7%91%E5%AD%A6%E5%87%BA%E7%89%88%E7%A4%BE,%201987..pdf" target="_blank">曹锡华、王建磐，线性代数群表示导论，科学出版社 (1987)</a>。</p>
+</li>
+<li data-line="12" dir="auto">
+<p><strong>【项目后续取得】</strong> <a data-tooltip-position="top" aria-label="D:/GitHub/albus-research/%E6%96%87%E7%8C%AE%E8%B5%84%E6%96%99/%E9%A1%B9%E7%9B%AE%E5%86%85%E8%AE%BA%E6%96%87/%E8%B6%85%E7%BE%A4%E9%AB%98%E9%98%B6%E6%A0%B8%E4%B8%8E%E5%BC%A0%E9%87%8F%E7%A7%AF%E5%88%86%E8%A7%A3%E5%8F%82%E8%80%83%E8%AE%BA%E6%96%87.pdf" rel="noopener nofollow" class="external-link" href="D:/GitHub/albus-research/%E6%96%87%E7%8C%AE%E8%B5%84%E6%96%99/%E9%A1%B9%E7%9B%AE%E5%86%85%E8%AE%BA%E6%96%87/%E8%B6%85%E7%BE%A4%E9%AB%98%E9%98%B6%E6%A0%B8%E4%B8%8E%E5%BC%A0%E9%87%8F%E7%A7%AF%E5%88%86%E8%A7%A3%E5%8F%82%E8%80%83%E8%AE%BA%E6%96%87.pdf" target="_blank">Taiki Shibata, Frobenius kernels of algebraic supergroups and Steinberg’s tensor product theorem, arXiv:2206.06000v3</a>。</p>
+</li>
+<li data-line="14" dir="auto">
+<p><strong>【项目后续取得】</strong> <a data-tooltip-position="top" aria-label="D:/GitHub/albus-research/%E6%96%87%E7%8C%AE%E8%B5%84%E6%96%99/%E9%A1%B9%E7%9B%AE%E5%86%85%E8%AE%BA%E6%96%87/%E9%87%8F%E5%AD%90%E4%BA%A4%E9%94%99%E4%B8%8E%E5%9F%BA%E6%9C%AC%E5%9E%8B%E9%87%8F%E5%AD%90%E8%B6%85%E7%BE%A4.pdf" rel="noopener nofollow" class="external-link" href="D:/GitHub/albus-research/%E6%96%87%E7%8C%AE%E8%B5%84%E6%96%99/%E9%A1%B9%E7%9B%AE%E5%86%85%E8%AE%BA%E6%96%87/%E9%87%8F%E5%AD%90%E4%BA%A4%E9%94%99%E4%B8%8E%E5%9F%BA%E6%9C%AC%E5%9E%8B%E9%87%8F%E5%AD%90%E8%B6%85%E7%BE%A4.pdf" target="_blank">Sean Clark, David Hill and Weiqiang Wang, Quantum Shuffles and Quantum Supergroups of Basic Type</a>。</p>
+</li>
+<li data-line="16" dir="auto">
+<p><strong>【尚未下载PDF；在线文献】</strong> <a data-tooltip-position="top" aria-label="https://arxiv.org/html/1304.0531v8" rel="noopener nofollow" class="external-link" href="https://arxiv.org/html/1304.0531v8" target="_blank">Akira Masuoka and Taiki Shibata, Algebraic supergroups and Harish-Chandra pairs over a commutative ring, arXiv:1304.0531v8</a>。</p>
+</li>
+<li data-line="18" dir="auto">
+<p><strong>【尚未下载PDF；在线文献】</strong> <a data-tooltip-position="top" aria-label="https://www.jmilne.org/math/Books/iAG2022.pdf" rel="noopener nofollow" class="external-link" href="https://www.jmilne.org/math/Books/iAG2022.pdf" target="_blank">James S. Milne, Algebraic Groups, online edition (2022)</a>。</p>
+</li>
+<li data-line="20" dir="auto">
+<p><strong>【尚未下载PDF；在线文献】</strong> <a data-tooltip-position="top" aria-label="https://www.math.nagoya-u.ac.jp/~larsh/papers/004/paper.pdf" rel="noopener nofollow" class="external-link" href="https://www.math.nagoya-u.ac.jp/~larsh/papers/004/paper.pdf" target="_blank">Lars Hesselholt and Ib Madsen, On the K-theory of finite algebras over Witt vectors of perfect fields</a>。</p>
+</li>
+<li data-line="22" dir="auto">
+<p><strong>【尚未保存本地副本；在线章节】</strong> <a data-tooltip-position="top" aria-label="https://kskedlaya.org/prismatic/sec_Witt.html" rel="noopener nofollow" class="external-link" href="https://kskedlaya.org/prismatic/sec_Witt.html" target="_blank">Kiran S. Kedlaya, Witt vectors</a>。</p>
+</li>
+<li data-line="24" dir="auto">
+<p><strong>【尚未下载PDF；在线文献】</strong> <a data-tooltip-position="top" aria-label="https://ems.press/content/serial-article-files/32076" rel="noopener nofollow" class="external-link" href="https://ems.press/content/serial-article-files/32076" target="_blank">Iván Angiono, A presentation by generators and relations of Nichols algebras of diagonal type and convex orders on root systems, JEMS 17 (2015), 2643–2671</a>。</p>
+</li>
+<li data-line="26" dir="auto">
+<p><strong>【尚未下载PDF；在线文献】</strong> <a data-tooltip-position="top" aria-label="https://arxiv.org/html/1009.5148v2" rel="noopener nofollow" class="external-link" href="https://arxiv.org/html/1009.5148v2" target="_blank">Nicolás Andruskiewitsch, Iván Angiono and Hiroyuki Yamane, On pointed Hopf superalgebras, arXiv:1009.5148v2</a>。</p>
+</li>
+<li data-line="28" dir="auto">
+<p><strong>【尚未下载PDF；在线文献】</strong> <a data-tooltip-position="top" aria-label="https://arxiv.org/html/0710.4521v2" rel="noopener nofollow" class="external-link" href="https://arxiv.org/html/0710.4521v2" target="_blank">István Heckenberger, Lusztig isomorphisms for Drinfel’d doubles of bosonizations of Nichols algebras of diagonal type, arXiv:0710.4521v2</a>。</p>
+</li>
+<li data-line="30" dir="auto">
+<p><strong>【尚未下载PDF；在线文献】</strong> <a data-tooltip-position="top" aria-label="https://arxiv.org/html/1304.5752v2" rel="noopener nofollow" class="external-link" href="https://arxiv.org/html/1304.5752v2" target="_blank">Iván Angiono and Hiroyuki Yamane, The R-matrix of quantum doubles of Nichols algebras of diagonal type, arXiv:1304.5752v2</a>。</p>
+</li>
+<li data-line="32" dir="auto">
+<p><strong>【尚未下载PDF；在线文献】</strong> <a data-tooltip-position="top" aria-label="https://content.ems.press/assets/public/full-texts/serials/prims/30/1/3718/online/10.2977-prims-1195166275.pdf" rel="noopener nofollow" class="external-link" href="https://content.ems.press/assets/public/full-texts/serials/prims/30/1/3718/online/10.2977-prims-1195166275.pdf" target="_blank">Hiroyuki Yamane, Quantized Enveloping Algebras Associated with Simple Lie Superalgebras and Their Universal R-matrices, PRIMS 30 (1994), 15–87</a>。</p>
+</li>
+<li data-line="34" dir="auto">
+<p><strong>【尚未下载PDF；在线文献】</strong> <a data-tooltip-position="top" aria-label="https://www.numdam.org/item/BSMF_2002__130_2_309_0/" rel="noopener nofollow" class="external-link" href="https://www.numdam.org/item/BSMF_2002__130_2_309_0/" target="_blank">Henrik Thys, R-matrice universelle pour U_h(D(2,1,x)) et invariant d’entrelacs associé, BSMF 130 (2002), 309–336</a>。</p>
+</li>
+<li data-line="36" dir="auto">
+<p><strong>【尚未保存本地副本；在线章节】</strong> <a data-tooltip-position="top" aria-label="https://stacks.math.columbia.edu/tag/010I" rel="noopener nofollow" class="external-link" href="https://stacks.math.columbia.edu/tag/010I" target="_blank">Stacks Project, Extensions, Section 12.6</a>。</p>
+</li>
+<li data-line="38" dir="auto">
+<p><strong>【尚未下载PDF；背景文献】</strong> <a data-tooltip-position="top" aria-label="https://arxiv.org/abs/1006.0464v2" rel="noopener nofollow" class="external-link" href="https://arxiv.org/abs/1006.0464v2" target="_blank">Fabio Gavarini, Chevalley Supergroups of type D(2,1;a), arXiv:1006.0464v2</a>。</p>
+</li>
+</ol></div><div class="el-h2"><h2 data-heading="原始论文与表示论基础" dir="auto" id="原始论文与表示论基础_0">原始论文与表示论基础</h2></div><div class="el-p"><p dir="auto">[1] 是本书方法的主要文献来源。本地PDF为31页预印本：第3节提供超Weyl群及distinguished路径；第4节提供一阶模范畴；第5节计算三类相邻同态；第6节构造滤过与和公式；第7节给强链接必要条件。正文引用页码均指该本地PDF物理页，不与正式发表版页码混用。</p></div><div class="el-p"><p dir="auto">[2] 提供Chevalley基、Kostant整形式和实际超群结构。具体参照Definition 3.3、§4.2、Theorem 4.7及Theorem 5.19附近的根参数分解。本地文件名保留库中的年份标记；使用时以具体版本和定理位置为准。[3]、[4]提供普通约化情形的相邻模、变形与表示论背景；[5]是用户给定的相关学位论文；[6]提供环面、有理表示和代数群的中文基础。</p></div><div class="el-p"><p dir="auto">[7] 的Theorem 2.6、Proposition 3.8、Theorem 3.11用于实际超群高阶核与PBW结构，对应所存PDF物理页8、14、16。相关简单头、底结构见§5.2；本书在当前纯偶Cartan的完整权范畴中写出实际需要的证明。</p></div><div class="el-p"><p dir="auto">[9] 的Definition 4.4、Theorem 4.22用于偶群与奇Lie数据恢复超群及子超群。[10] 的21.20、21.24以及Theorem 21.84、Summary 21.86提供实际偶根SL₂结构和根参数；前者在印刷页431–432，后者在452页。本文用这些结构输入建立具体参数坐标，不把Lie子代数的存在直接当成子超群存在。</p></div><div class="el-h2"><h2 data-heading="Witt环与量子整形式" dir="auto" id="Witt环与量子整形式_0">Witt环与量子整形式</h2></div><div class="el-p"><p dir="auto">[11] 的§2.1、式(2.1.1)–(2.1.4)、Theorem 2.1提供Witt环运算和完美域情形的结构恒等式；[12]是相应辅助说明。圆分商环的自由性、局部性及赋值在正文中另行证明，不涉及[11]的K理论部分。</p></div><div class="el-p"><p dir="auto">[8] 的§3.1、Proposition 3.11提供交错乘法与余乘法规范，§4.2区分两种Lyndon分解，Theorems 5.1、5.5、5.7和§6提供PBW、配对与根词。本文的乘法方向及根向量归一化在正文逐项指定。词序支撑不能直接代替根因子区间支撑；后者还使用[13]的Proposition 4.1、Lemma 4.8，并比较两套场上根规范。</p></div><div class="el-p"><p dir="auto">[14] 的Theorem 2.6、Remark 2.7用于例外交换矩阵的模型识别。[15] 的Propositions 4.3、4.14及Theorem 5.8提供场双和配对；Lemmas 6.6、6.7、Proposition 6.8、Theorem 6.11提供反射与逆映射。[16] 的Proposition 4.6、式(4.5)–(4.6)、Theorem 4.12用于相容PBW配对。场上结论不直接保证整格相同；本文另作实际共同坐标与精确对偶比较。</p></div><div class="el-p"><p dir="auto">[17] 的Theorems 10.5.1、10.5.8，印刷页82–83，提供所处理模型的形式PBW与经典极限。[18] 的§1.3、§3.1–3.2处理固定参数D型关系、根换序和PBW配对。涉及其他Borel的整比较由正文的正则反射证明，不擅自扩大文献的原始范围。[20]说明任意非整数D参数需要单独的整模型处理，它不作为本书放宽参数条件的依据。</p></div><div class="el-p"><p dir="auto">[19]给一阶扩张的标准定义与基本构造。本书在第二章定义拉回、推出，并在修正商章节完整证明具体的Ext消失及一维性。</p></div><div class="el-h2"><h2 data-heading="原研究笔记与项目内资料" dir="auto" id="原研究笔记与项目内资料_0">原研究笔记与项目内资料</h2></div><div class="el-p"><p dir="auto">用户原有笔记本为<a data-tooltip-position="top" aria-label="D:/Albus/Documents/%E6%95%B0%E5%AD%A6/Chevalley%20%E8%B6%85%E7%BE%A4%E7%9A%84%20r%20%E9%98%B6%20Frobenius%20%E6%A0%B8%E7%9A%84%E8%A1%A8%E7%A4%BA" rel="noopener nofollow" class="external-link" href="D:/Albus/Documents/%E6%95%B0%E5%AD%A6/Chevalley%20%E8%B6%85%E7%BE%A4%E7%9A%84%20r%20%E9%98%B6%20Frobenius%20%E6%A0%B8%E7%9A%84%E8%A1%A8%E7%A4%BA" target="_blank">Chevalley 超群的 r 阶 Frobenius 核的表示</a>。其中第9章的相容模、第10章的二项式工具、第11章的全部正反核像、第12章的Hom计算、第13章的变权列与修正项、第15章的超Weyl群及第16章的非零复合与简单性，是本书经典部分的直接来源。具体文件、章号和块号在相应结论旁的边注中标明，正文计算已经在本书展开。</p></div><div class="el-p"><p dir="auto">本书直接重写的项目主稿是<a data-tooltip-position="top" aria-label="D:/GitHub/albus-research/%E7%AC%94%E8%AE%B0%E5%BA%93/%E9%AB%98%E9%98%B6%E6%A0%B8%E7%9A%84Jantzen%E6%BB%A4%E8%BF%87" rel="noopener nofollow" class="external-link" href="D:/GitHub/albus-research/%E7%AC%94%E8%AE%B0%E5%BA%93/%E9%AB%98%E9%98%B6%E6%A0%B8%E7%9A%84Jantzen%E6%BB%A4%E8%BF%87" target="_blank">高阶核的Jantzen滤过</a>。修正商与Ext部分另参考<a data-tooltip-position="top" aria-label="D:/GitHub/albus-research/%E7%AC%94%E8%AE%B0%E5%BA%93/%E9%AB%98%E9%98%B6%E6%A0%B8%E7%9A%84%E4%BF%AE%E6%AD%A3%E5%95%86%E4%B8%8E%E7%AE%80%E5%8D%95%E6%80%A7" rel="noopener nofollow" class="external-link" href="D:/GitHub/albus-research/%E7%AC%94%E8%AE%B0%E5%BA%93/%E9%AB%98%E9%98%B6%E6%A0%B8%E7%9A%84%E4%BF%AE%E6%AD%A3%E5%95%86%E4%B8%8E%E7%AE%80%E5%8D%95%E6%80%A7" target="_blank">高阶核的修正商与简单性</a>及其来源<a data-tooltip-position="top" aria-label="D:/GitHub/albus-research/%E7%AC%94%E8%AE%B0%E5%BA%93/%E9%AB%98%E9%98%B6%E6%A0%B8%E7%9A%84%E6%BB%A4%E8%BF%87%E4%B8%8E%E6%89%A9%E5%BC%A0" rel="noopener nofollow" class="external-link" href="D:/GitHub/albus-research/%E7%AC%94%E8%AE%B0%E5%BA%93/%E9%AB%98%E9%98%B6%E6%A0%B8%E7%9A%84%E6%BB%A4%E8%BF%87%E4%B8%8E%E6%89%A9%E5%BC%A0" target="_blank">高阶核的滤过与扩张</a>。它们是本项目的内部内容来源，不是外部发表文献。</p></div><div class="el-p"><p dir="auto">用户提供的<a data-tooltip-position="top" aria-label="D:/GitHub/albus-research/%E9%9B%B6%E4%B8%80%E4%BB%BD%E7%BB%93%E6%9E%9C2-%E5%AE%8C%E6%95%B4.pdf" rel="noopener nofollow" class="external-link" href="D:/GitHub/albus-research/%E9%9B%B6%E4%B8%80%E4%BB%BD%E7%BB%93%E6%9E%9C2-%E5%AE%8C%E6%95%B4.pdf" target="_blank">零一份结果2-完整</a>与<a data-tooltip-position="top" aria-label="D:/GitHub/albus-research/%E9%9B%B6%E4%B8%80%E4%BB%BD%E7%BB%93%E6%9E%9C2-%E7%B2%BE%E7%AE%80.pdf" rel="noopener nofollow" class="external-link" href="D:/GitHub/albus-research/%E9%9B%B6%E4%B8%80%E4%BB%BD%E7%BB%93%E6%9E%9C2-%E7%B2%BE%E7%AE%80.pdf" target="_blank">零一份结果2-精简</a>为研究稿，分别139、102个PDF物理页；不列作项目自行下载的正式论文。其提及而未提供的脚本和证书，不作为已取得的证明证据。</p></div><div class="el-p"><p dir="auto">用户另提供<a data-tooltip-position="top" aria-label="C:/Users/%E9%83%AD%E9%9B%A8%E9%98%B3/Downloads/chevalley_frobenius_jantzen.md" rel="noopener nofollow" class="external-link" href="C:/Users/%E9%83%AD%E9%9B%A8%E9%98%B3/Downloads/chevalley_frobenius_jantzen.md" target="_blank">Gemini整理稿</a>，用作章节衔接和强链接推导的思路参考。本文的公式、证明和适用范围按实际数学论证确定，不以该稿的结论性评价作为依据。</p></div><div class="el-h2"><h2 data-heading="计算附件的用途" dir="auto" id="计算附件的用途_0">计算附件的用途</h2></div><div class="el-p"><p dir="auto">项目已有的<a data-tooltip-position="top" aria-label="D:/GitHub/albus-research/%E7%A0%94%E7%A9%B6%E9%99%84%E4%BB%B6/%E9%AB%98%E9%98%B6%E6%A0%B8%E7%9A%84Jantzen%E6%BB%A4%E8%BF%87" rel="noopener nofollow" class="external-link" href="D:/GitHub/albus-research/%E7%A0%94%E7%A9%B6%E9%99%84%E4%BB%B6/%E9%AB%98%E9%98%B6%E6%A0%B8%E7%9A%84Jantzen%E6%BB%A4%E8%BF%87" target="_blank">高阶核计算附件</a>保存根表输入、完整Laurent系数、参数型、数位与成对换序的核验程序和结果。它们各自有明确有限输入范围。任意次数的整性、共同参数代数及全局滤过仍须依靠正文的一般证明，不能用运行有限脚本代替。</p></div><div class="footer"><div class="data-bar"></div></div></div></div></div><div id="right-content" class="leaf" style="--sidebar-width:var(--sidebar-width-right)"><div id="right-sidebar" class="sidebar"><div class="sidebar-handle"></div><div class="sidebar-topbar"><div class="topbar-content"><label class="theme-toggle-container" for="theme-toggle-input"><input class="theme-toggle-input" type="checkbox" id="theme-toggle-input"><div class="toggle-background"></div></label></div><button type="button" class="clickable-icon sidebar-collapse-icon" aria-label="切换右侧栏"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="svg-icon sidebar-toggle-button-icon"><rect x="1" y="2" width="22" height="20" rx="4"></rect><rect x="4" y="5" width="2" height="14" rx="2" fill="currentColor" class="sidebar-toggle-icon-inner"></rect></svg></button></div><div class="sidebar-content-wrapper"><div id="right-sidebar-content" class="leaf-content"><div id="outline" class="tree-container"><div class="feature-header"><div class="feature-title">目录</div><button class="clickable-icon nav-action-button tree-collapse-all is-collapsed" aria-label="全部折叠"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></svg></button></div><div class="tree-item nav-file" data-depth="2"><a class="tree-item-self is-clickable nav-file-title heading-link" href="#原始论文与表示论基础_0" data-path="原始论文与表示论基础_0" heading-name="原始论文与表示论基础"><div class="tree-item-inner nav-file-title-content">原始论文与表示论基础</div></a><div class="tree-item-children nav-file-children"></div></div><div class="tree-item nav-file" data-depth="2"><a class="tree-item-self is-clickable nav-file-title heading-link" href="#Witt环与量子整形式_0" data-path="Witt环与量子整形式_0" heading-name="Witt环与量子整形式"><div class="tree-item-inner nav-file-title-content">Witt环与量子整形式</div></a><div class="tree-item-children nav-file-children"></div></div><div class="tree-item nav-file" data-depth="2"><a class="tree-item-self is-clickable nav-file-title heading-link" href="#原研究笔记与项目内资料_0" data-path="原研究笔记与项目内资料_0" heading-name="原研究笔记与项目内资料"><div class="tree-item-inner nav-file-title-content">原研究笔记与项目内资料</div></a><div class="tree-item-children nav-file-children"></div></div><div class="tree-item nav-file" data-depth="2"><a class="tree-item-self is-clickable nav-file-title heading-link" href="#计算附件的用途_0" data-path="计算附件的用途_0" heading-name="计算附件的用途"><div class="tree-item-inner nav-file-title-content">计算附件的用途</div></a><div class="tree-item-children nav-file-children"></div></div></div></div></div><script defer>const rs=document.querySelector('#right-sidebar');rs.classList.toggle('is-collapsed',innerWidth<768);rs.style.setProperty('--sidebar-width',localStorage.getItem('sidebar-right-width'));</script></div></div></div></div></body></html>
